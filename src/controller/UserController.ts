@@ -19,8 +19,16 @@ export class UserController {
     }
 
     async remove(request: Request, response: Response, next: NextFunction) {
-        let userToRemove = await this.userRepository.findOne(request.params.id);
-        await this.userRepository.remove(userToRemove);
+        let userToRemove: User | undefined = await this.userRepository.findOne(request.params.id);
+        try {
+            if (userToRemove) {
+                await this.userRepository.remove(userToRemove);
+            }
+
+        } catch (error) {
+            console.error(error);
+        }
+
     }
 
 }
