@@ -78,7 +78,7 @@
     "typeorm": "0.2.28"
   },
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start-server": "ts-node server/index.ts"
   },
   "husky": {
     "hooks": {

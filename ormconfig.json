@@ -1,22 +1,16 @@
 {
-   "type": "postgres",
-   "host": "localhost",
-   "port": 5432,
-   "database": "studentregistration",
-   "synchronize": true,
-   "logging": false,
-   "entities": [
-      "src/entity/**/*.ts"
-   ],
-   "migrations": [
-      "src/migration/**/*.ts"
-   ],
-   "subscribers": [
-      "src/subscriber/**/*.ts"
-   ],
-   "cli": {
-      "entitiesDir": "src/entity",
-      "migrationsDir": "src/migration",
-      "subscribersDir": "src/subscriber"
-   }
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "database": "studentregistration",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["server/entity/**/*.ts"],
+  "migrations": ["server/migration/**/*.ts"],
+  "subscribers": ["server/subscriber/**/*.ts"],
+  "cli": {
+    "entitiesDir": "server/entity",
+    "migrationsDir": "server/migration",
+    "subscribersDir": "server/subscriber"
+  }
 }
