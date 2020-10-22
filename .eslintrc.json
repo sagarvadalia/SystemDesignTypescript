@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": ["fullstack", "prettier", "prettier/react"],
+  "rules": {
+    "semi": 0,
+
+    "no-empty-function": 1,
+    "no-unused-vars": 1
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  }
+}
