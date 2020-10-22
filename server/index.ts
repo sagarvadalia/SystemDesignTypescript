@@ -4,13 +4,46 @@ import express = require("express");
 import * as bodyParser from "body-parser";
 import {Request, Response} from "express";
 import {Routes} from "./routes";
-import {User} from "./entity/User";
+import { User } from "./entity/User";
+import { ResponseError } from './util/ResponseError';
+import morgan = require("morgan");
+import compression = require("compression");
+import session = require("express-session");
+import path = require("path");
+
+
+
+
+
 
 createConnection().then(async connection => {
 
     // create express app
     const app = express();
     app.use(bodyParser.json());
+    app.use(morgan('dev'));
+    app.use(express.json())
+    app.use(express.urlencoded({ extended: true }));
+    app.use(compression());
+    app.use(session({
+        secret: process.env.SESSION_SECRET || 'no secret yet',
+        resave: false,
+        saveUninitialized: false
+    }));
+    app.use((req, res, next) => {
+        if (path.extname(req.path).length) {
+            const err: ResponseError = new Error('Not Found')
+            err.status = 404
+            next(err)
+        }
+        else {
+            next()
+        }
+    })
+    // index.html ---> we havent made this yet
+    // app.use('*', (req, res) => {
+	// 		res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+    // })
 
     // register express routes from defined application routes
     Routes.forEach(route => {
@@ -27,6 +60,15 @@ createConnection().then(async connection => {
 
     // setup express app here
     // ...
+      	// error handling endware
+	app.use((err, req, res, next) => {
+			console.error(err)
+			console.error(err.stack)
+			res
+				.status(err.status || 500)
+				.send(err.message || 'Internal server error.')
+		})
+
 
     // start express server
     app.listen(3000);
