@@ -1,3 +1,4 @@
+import { Class } from './entity/Class';
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 import express, { Request, Response } from 'express';
@@ -72,12 +73,18 @@ createConnection()
 
 		// start express server
 		app.listen(3000);
-
 		await connection.manager.save(
-			connection.manager.create(Minor, {
-				minorName: 'science',
+			connection.manager.create(Class, {
+				classSection: 'a-24',
+				numOfSeats: 2,
 			}),
 		);
+		// insert new minor for test
+		// await connection.manager.save(
+		// 	connection.manager.create(Minor, {
+		// 		minorName: 'science',
+		// 	}),
+		// );
 
 		// insert new faculty for test
 		// await connection.manager.save(connection.manager.create(Faculty, {

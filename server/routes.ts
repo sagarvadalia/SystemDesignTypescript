@@ -3,6 +3,7 @@ import { DayController } from './controller/DayController';
 import { FacultyController } from './controller/FacultyController';
 import { MinorController } from './controller/MinorController';
 import { PrerequisiteController } from './controller/PrerequisiteController';
+import { ClassController } from './controller/ClassController';
 
 export const Routes = [
 	{
@@ -123,6 +124,31 @@ export const Routes = [
 		method: 'delete',
 		route: '/prerequisites/:id',
 		controller: PrerequisiteController,
+		action: 'remove',
+	},
+	// routes for Classes
+	{
+		method: 'get',
+		route: '/classes',
+		controller: ClassController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/classes/:id',
+		controller: ClassController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/classes',
+		controller: ClassController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/classes/:id',
+		controller: ClassController,
 		action: 'remove',
 	},
 ];
