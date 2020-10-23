@@ -11,6 +11,7 @@ import compression = require('compression');
 import session = require('express-session');
 import path = require('path');
 import { Semester } from './entity/Semester';
+import { Researcher } from './entity/Researcher';
 
 createConnection()
 	.then(async (connection) => {
@@ -78,6 +79,12 @@ createConnection()
 				yearNum: 2019,
 			}),
 		);
+		//await connection.manager.save(
+		//	connection.manager.create(Researcher, {
+		//		researchSalary: 'spring',
+		//		resarchOfficeNum: 12,
+		//	}),
+	//	);
 		// test for creating a room
 		// await connection.manager.save(
 		// 	connection.manager.create(Room, {
