@@ -4,6 +4,7 @@ import express, {Request, Response} from 'express'
 import * as bodyParser from "body-parser";
 import {Routes} from "./routes";
 import { User } from "./entity/User";
+import { Day } from "./entity/Day"
 import { ResponseError } from './util/ResponseError';
 import morgan = require("morgan");
 import compression = require("compression");
@@ -83,12 +84,18 @@ createConnection().then(async connection => {
 
     // insert new users for test
     await connection.manager.save(connection.manager.create(User, {
-        userName: "Timber",
-        userEmail: "Saw@Timber.com",
+        userName: "Timber2",
+        userEmail: "Saw@2.com",
         userPassword: 'abccas',
-        userPhone: 5163444444,
-        userAddress: '123 Main St',
+        userPhone: "5163444443",
+        userAddress: '1243 Main St',
         userType: 'Student'
+    }));
+    await connection.manager.save(connection.manager.create(Day, {
+        dayName: 'Monday'
+    }));
+    await connection.manager.save(connection.manager.create(Day, {
+        dayName: 'Tuesday'
     }));
 
     console.log("Express server has started on port 3000. Open http://localhost:3000/users to see results");
