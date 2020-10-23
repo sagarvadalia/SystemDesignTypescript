@@ -2,8 +2,11 @@ import { UserController } from "./controller/UserController";
 import { DayController } from "./controller/DayController";
 import { FacultyController } from "./controller/FacultyController";
 import { MinorController } from './controller/MinorController';
+import { PrerequisiteController } from "./controller/PrerequisiteController";
 
 export const Routes = [{
+    // Routes for users
+
     method: "get",
     route: "/users",
     controller: UserController,
@@ -19,7 +22,7 @@ export const Routes = [{
     controller: UserController,
     action: "remove"
     },
-
+// Routes for days
     {
     method: "get",
     route: "/days",
@@ -41,7 +44,7 @@ export const Routes = [{
     controller: DayController,
     action: "remove"
     },
-
+// routes for faculties
     {
     method: "get",
     route: "/faculties",
@@ -63,7 +66,7 @@ export const Routes = [{
     controller: FacultyController,
     action: "remove"
     },
-
+// routes for minors
      {
     method: "get",
     route: "/minors",
@@ -85,7 +88,28 @@ export const Routes = [{
     controller: MinorController,
     action: "remove"
     },
-
+// routes for prerequisites
+      {
+    method: "get",
+    route: "/prerequisites",
+    controller: PrerequisiteController,
+    action: "all"
+}, {
+    method: "get",
+    route: "/prerequisites/:id",
+    controller: PrerequisiteController,
+    action: "one"
+}, {
+    method: "post",
+    route: "/prerequisites",
+    controller: PrerequisiteController,
+    action: "save"
+}, {
+    method: "delete",
+    route: "/prerequisites/:id",
+    controller: PrerequisiteController,
+    action: "remove"
+    },
 
 
 
