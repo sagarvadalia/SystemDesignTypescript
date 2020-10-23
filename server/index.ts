@@ -10,6 +10,7 @@ import morgan = require("morgan");
 import compression = require("compression");
 import session = require("express-session");
 import path = require("path");
+import { Faculty } from "./entity/Faculty";
 
 
 
@@ -83,19 +84,22 @@ createConnection().then(async connection => {
 
 
     // insert new users for test
-    await connection.manager.save(connection.manager.create(User, {
-        userName: "Timber2",
-        userEmail: "Saw@2.com",
-        userPassword: 'abccas',
-        userPhone: "5163444443",
-        userAddress: '1243 Main St',
+    await connection.manager.save(connection.manager.create(Faculty, {
+        ftenure: true,
+        fOfficeNumber: 'a-3',
+        isFullTime: false,
+        userName: "Timber23",
+        userEmail: "Saw@23.com",
+        userPassword: 'ab3ccas',
+        userPhone: "51634344443",
+        userAddress: '12433 Main St',
         userType: 'Student'
     }));
     await connection.manager.save(connection.manager.create(Day, {
-        dayName: 'Monday'
+        dayName: 'Monday3'
     }));
     await connection.manager.save(connection.manager.create(Day, {
-        dayName: 'Tuesday'
+        dayName: 'Tuesday3'
     }));
 
     console.log("Express server has started on port 3000. Open http://localhost:3000/users to see results");

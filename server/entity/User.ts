@@ -2,7 +2,7 @@ import { IsEmail, IsMobilePhone, IsNotEmpty } from "class-validator";
 import {Entity, PrimaryGeneratedColumn, Column, BaseEntity} from "typeorm";
 
 @Entity()
-export class User extends BaseEntity {
+export abstract class User extends BaseEntity {
     constructor(...args) {
         super();
         Object.assign(this, User);

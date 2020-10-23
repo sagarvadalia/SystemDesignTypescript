@@ -1,5 +1,6 @@
 import { UserController } from "./controller/UserController";
 import { DayController } from "./controller/DayController";
+import { FacultyController } from "./controller/FacultyController";
 
 export const Routes = [{
     method: "get",
@@ -11,12 +12,7 @@ export const Routes = [{
     route: "/users/:id",
     controller: UserController,
     action: "one"
-}, {
-    method: "post",
-    route: "/users",
-    controller: UserController,
-    action: "save"
-}, {
+},  {
     method: "delete",
     route: "/users/:id",
     controller: UserController,
@@ -42,6 +38,28 @@ export const Routes = [{
     method: "delete",
     route: "/days/:id",
     controller: DayController,
+    action: "remove"
+    },
+
+    {
+    method: "get",
+    route: "/faculty",
+    controller: FacultyController,
+    action: "all"
+}, {
+    method: "get",
+    route: "/faculty/:id",
+    controller: FacultyController,
+    action: "one"
+}, {
+    method: "post",
+    route: "/faculty",
+    controller: FacultyController,
+    action: "save"
+}, {
+    method: "delete",
+    route: "/faculty/:id",
+    controller: FacultyController,
     action: "remove"
     },
 

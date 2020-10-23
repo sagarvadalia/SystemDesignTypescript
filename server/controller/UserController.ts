@@ -15,12 +15,12 @@ export class UserController {
         return this.userRepository.findOne(request.params.id);
     }
 
-    async save(request: Request, response: Response, next: NextFunction) {
-        const user = new User(request.body);
-        const errors = await validate(user)
-        console.log(errors);
-        return this.userRepository.save(request.body);
-    }
+    // async save(request: Request, response: Response, next: NextFunction) {
+    //     const user = new User(request.body);
+    //     const errors = await validate(user)
+    //     console.log(errors);
+    //     return this.userRepository.save(request.body);
+    // }
 
     async remove(request: Request, response: Response, next: NextFunction) {
         let userToRemove: User | undefined = await this.userRepository.findOne(request.params.id);
