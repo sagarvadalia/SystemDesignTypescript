@@ -16,7 +16,6 @@ export abstract class User extends BaseEntity {
 	@Column()
 	@IsEmail({}, { message: 'Please use Email Format' })
 	@IsNotEmpty({ message: 'Email is required' })
-	@Column()
 	userEmail: string;
 	@Column({ type: 'text', nullable: false, width: 20 })
 	@IsNotEmpty({ message: 'Password is required' })
