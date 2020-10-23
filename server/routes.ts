@@ -1,6 +1,7 @@
 import { UserController } from "./controller/UserController";
 import { DayController } from "./controller/DayController";
 import { FacultyController } from "./controller/FacultyController";
+import { MinorController } from './controller/MinorController';
 
 export const Routes = [{
     method: "get",
@@ -60,6 +61,28 @@ export const Routes = [{
     method: "delete",
     route: "/faculty/:id",
     controller: FacultyController,
+    action: "remove"
+    },
+
+     {
+    method: "get",
+    route: "/minor",
+    controller: MinorController,
+    action: "all"
+}, {
+    method: "get",
+    route: "/minor/:id",
+    controller: MinorController,
+    action: "one"
+}, {
+    method: "post",
+    route: "/minor",
+    controller: MinorController,
+    action: "save"
+}, {
+    method: "delete",
+    route: "/minor/:id",
+    controller: MinorController,
     action: "remove"
     },
 

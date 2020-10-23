@@ -4,7 +4,7 @@
   "port": 5432,
   "database": "studentregistration",
   "synchronize": true,
-  "logging": false,
+  "logging": true,
   "entities": ["server/entity/**/*.ts"],
   "migrations": ["server/migration/**/*.ts"],
   "subscribers": ["server/subscriber/**/*.ts"],

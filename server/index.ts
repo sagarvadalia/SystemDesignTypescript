@@ -11,6 +11,7 @@ import compression = require("compression");
 import session = require("express-session");
 import path = require("path");
 import { Faculty } from "./entity/Faculty";
+import { Minor } from "./entity/Minor";
 
 
 
@@ -80,27 +81,30 @@ createConnection().then(async connection => {
     // start express server
     app.listen(3000);
 
+    await connection.manager.save(connection.manager.create(Minor, {
+        minorName: 'science'
+    }))
 
 
-
-    // insert new users for test
-    await connection.manager.save(connection.manager.create(Faculty, {
-        ftenure: true,
-        fOfficeNumber: 'a-3',
-        isFullTime: false,
-        userName: "Timber23",
-        userEmail: "Saw@23.com",
-        userPassword: 'ab3ccas',
-        userPhone: "51634344443",
-        userAddress: '12433 Main St',
-        userType: 'Student'
-    }));
-    await connection.manager.save(connection.manager.create(Day, {
-        dayName: 'Monday3'
-    }));
-    await connection.manager.save(connection.manager.create(Day, {
-        dayName: 'Tuesday3'
-    }));
+    // insert new faculty for test
+    // await connection.manager.save(connection.manager.create(Faculty, {
+    //     ftenure: true,
+    //     fOfficeNumber: 'a-3',
+    //     isFullTime: false,
+    //     userName: "Timber23",
+    //     userEmail: "Saw@23.com",
+    //     userPassword: 'ab3ccas',
+    //     userPhone: "51634344443",
+    //     userAddress: '12433 Main St',
+    //     userType: 'Student'
+    // }));
+    // Insert new days
+    // await connection.manager.save(connection.manager.create(Day, {
+    //     dayName: 'Monday3'
+    // }));
+    // await connection.manager.save(connection.manager.create(Day, {
+    //     dayName: 'Tuesday3'
+    // }));
 
     console.log("Express server has started on port 3000. Open http://localhost:3000/users to see results");
 
