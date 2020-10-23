@@ -1,18 +1,15 @@
-import { Class } from './entity/Class';
+import * as bodyParser from 'body-parser';
+import express, { Request, Response } from 'express';
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import express, { Request, Response } from 'express';
-import * as bodyParser from 'body-parser';
+import { Class } from './entity/Class';
 import { Routes } from './routes';
-import { User } from './entity/User';
-import { Day } from './entity/Day';
 import { ResponseError } from './util/ResponseError';
+import { Room } from './entity/Room';
 import morgan = require('morgan');
 import compression = require('compression');
 import session = require('express-session');
 import path = require('path');
-import { Faculty } from './entity/Faculty';
-import { Minor } from './entity/Minor';
 
 createConnection()
 	.then(async (connection) => {
@@ -45,7 +42,7 @@ createConnection()
 			}
 		});
 
-		// index.html ---> we havent made this yet
+		// TODO: index.html ---> we havent made this yet
 		// app.use('*', (req, res) => {
 		// 		res.sendFile(path.join(__dirname, '..', 'public/index.html'))
 		// })
@@ -73,6 +70,13 @@ createConnection()
 
 		// start express server
 		app.listen(3000);
+		await connection.manager.save(
+			connection.manager.create(Room, {
+				roomNum: 32,
+				capacity: 2,
+				roomType: 'lecture',
+			}),
+		);
 		await connection.manager.save(
 			connection.manager.create(Class, {
 				classSection: 'a-24',

@@ -1,9 +1,10 @@
-import { UserController } from './controller/UserController';
+import { ClassController } from './controller/ClassController';
 import { DayController } from './controller/DayController';
 import { FacultyController } from './controller/FacultyController';
 import { MinorController } from './controller/MinorController';
 import { PrerequisiteController } from './controller/PrerequisiteController';
-import { ClassController } from './controller/ClassController';
+import { RoomController } from './controller/RoomController';
+import { UserController } from './controller/UserController';
 
 export const Routes = [
 	{
@@ -149,6 +150,31 @@ export const Routes = [
 		method: 'delete',
 		route: '/classes/:id',
 		controller: ClassController,
+		action: 'remove',
+	},
+	// routes for Rooms
+	{
+		method: 'get',
+		route: '/rooms',
+		controller: RoomController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/rooms/:id',
+		controller: RoomController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/rooms',
+		controller: RoomController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/rooms/:id',
+		controller: RoomController,
 		action: 'remove',
 	},
 ];

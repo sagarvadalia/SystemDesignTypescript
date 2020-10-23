@@ -14,7 +14,7 @@ export class ClassController {
 		return this.classRepository.findOne(request.params.id);
 	}
 
-  async save(request: Request, response: Response, next: NextFunction) {
+	async save(request: Request, response: Response, next: NextFunction) {
 		const errors = await validate(new Class(request.body));
 		console.log(errors);
 		return this.classRepository.save(request.body);
