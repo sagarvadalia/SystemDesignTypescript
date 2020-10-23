@@ -11,7 +11,7 @@ import compression = require("compression");
 import session = require("express-session");
 import path = require("path");
 import { Faculty } from "./entity/Faculty";
-import { Minor } from "./entity/Faculty";
+import { Minor } from "./entity/Minor";
 
 
 

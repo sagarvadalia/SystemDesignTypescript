@@ -44,44 +44,44 @@ export const Routes = [{
 
     {
     method: "get",
-    route: "/faculty",
+    route: "/faculties",
     controller: FacultyController,
     action: "all"
 }, {
     method: "get",
-    route: "/faculty/:id",
+    route: "/faculties/:id",
     controller: FacultyController,
     action: "one"
 }, {
     method: "post",
-    route: "/faculty",
+    route: "/faculties",
     controller: FacultyController,
     action: "save"
 }, {
     method: "delete",
-    route: "/faculty/:id",
+    route: "/faculties/:id",
     controller: FacultyController,
     action: "remove"
     },
 
      {
     method: "get",
-    route: "/minor",
+    route: "/minors",
     controller: MinorController,
     action: "all"
 }, {
     method: "get",
-    route: "/minor/:id",
+    route: "/minors/:id",
     controller: MinorController,
     action: "one"
 }, {
     method: "post",
-    route: "/minor",
+    route: "/minors",
     controller: MinorController,
     action: "save"
 }, {
     method: "delete",
-    route: "/minor/:id",
+    route: "/minors/:id",
     controller: MinorController,
     action: "remove"
     },
