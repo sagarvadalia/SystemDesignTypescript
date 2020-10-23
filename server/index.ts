@@ -72,6 +72,15 @@ createConnection()
 
 		// start express server
 		app.listen(3000);
+		const semester = [
+			{ semesterName: 'spring', yearNum: 2019 },
+			{ semesterName: 'fall', yearNum: 2020 },
+		];
+
+		for (let i = 0; i < semester.length; i++) {
+			await connection.manager.save(connection.manager.create(Semester, semester[i]));
+		}
+
 
 		await connection.manager.save(
 			connection.manager.create(Semester, {
@@ -85,6 +94,7 @@ createConnection()
 		//		resarchOfficeNum: 12,
 		//	}),
 	//	);
+
 		// test for creating a room
 		// await connection.manager.save(
 		// 	connection.manager.create(Room, {
