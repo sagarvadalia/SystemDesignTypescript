@@ -6,6 +6,9 @@ import { MinorController } from './controller/MinorController';
 import { PrerequisiteController } from './controller/PrerequisiteController';
 import { RoomController } from './controller/RoomController';
 import { UserController } from './controller/UserController';
+import { ResearchController } from './controller/ResearcherController';
+import { AdministratorController } from './controller/AdministratorController';
+import { BuildingController } from './controller/BuildingController';
 
 export const Routes = [
 	{
@@ -203,4 +206,80 @@ export const Routes = [
 		controller: SemesterController,
 		action: 'remove',
 	},
+	// crud Routes for researchers
+	{
+		method: 'get',
+		route: '/researchers',
+		controller: ResearchController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/researchers/:id',
+		controller: ResearchController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/researchers',
+		controller: ResearchController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/researchers/:id',
+		controller: ResearchController,
+		action: 'remove',
+	},
+	// crud Routes for administrators
+	{
+		method: 'get',
+		route: '/administrators',
+		controller: AdministratorController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/administrators/:id',
+		controller: AdministratorController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/administrators',
+		controller: AdministratorController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/administrators/:id',
+		controller: AdministratorController,
+		action: 'remove',
+	},
+	// crud Routes for buildings
+	{
+		method: 'get',
+		route: '/buildings',
+		controller: BuildingController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/buildings/:id',
+		controller: BuildingController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/buildings',
+		controller: BuildingController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/buildings/:id',
+		controller: BuildingController,
+		action: 'remove',
+	},
+	
 ];
