@@ -10,6 +10,7 @@ import morgan = require('morgan');
 import compression = require('compression');
 import session = require('express-session');
 import path = require('path');
+import { Semester } from './entity/Semester';
 
 createConnection()
 	.then(async (connection) => {
@@ -70,19 +71,28 @@ createConnection()
 
 		// start express server
 		app.listen(3000);
+
 		await connection.manager.save(
-			connection.manager.create(Room, {
-				roomNum: 32,
-				capacity: 2,
-				roomType: 'lecture',
+			connection.manager.create(Semester, {
+				semesterName: 'spring',
+				yearNum: 2019,
 			}),
 		);
-		await connection.manager.save(
-			connection.manager.create(Class, {
-				classSection: 'a-24',
-				numOfSeats: 2,
-			}),
-		);
+		// test for creating a room
+		// await connection.manager.save(
+		// 	connection.manager.create(Room, {
+		// 		roomNum: 32,
+		// 		capacity: 2,
+		// 		roomType: 'lecture',
+		// 	}),
+		// );
+		// test for creating a class
+		// await connection.manager.save(
+		// 	connection.manager.create(Class, {
+		// 		classSection: 'a-24',
+		// 		numOfSeats: 2,
+		// 	}),
+		// );
 		// insert new minor for test
 		// await connection.manager.save(
 		// 	connection.manager.create(Minor, {

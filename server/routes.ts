@@ -1,3 +1,4 @@
+import { SemesterController } from './controller/SemesterController';
 import { ClassController } from './controller/ClassController';
 import { DayController } from './controller/DayController';
 import { FacultyController } from './controller/FacultyController';
@@ -8,7 +9,7 @@ import { UserController } from './controller/UserController';
 
 export const Routes = [
 	{
-		// Routes for users
+		// crud Routes for users
 
 		method: 'get',
 		route: '/users',
@@ -27,7 +28,7 @@ export const Routes = [
 		controller: UserController,
 		action: 'remove',
 	},
-	// Routes for days
+	// crud Routes for days
 	{
 		method: 'get',
 		route: '/days',
@@ -52,7 +53,7 @@ export const Routes = [
 		controller: DayController,
 		action: 'remove',
 	},
-	// routes for faculties
+	// crud routes for faculties
 	{
 		method: 'get',
 		route: '/faculties',
@@ -77,7 +78,7 @@ export const Routes = [
 		controller: FacultyController,
 		action: 'remove',
 	},
-	// routes for minors
+	// crud routes for minors
 	{
 		method: 'get',
 		route: '/minors',
@@ -102,7 +103,7 @@ export const Routes = [
 		controller: MinorController,
 		action: 'remove',
 	},
-	// routes for prerequisites
+	// crud routes for prerequisites
 	{
 		method: 'get',
 		route: '/prerequisites',
@@ -127,7 +128,7 @@ export const Routes = [
 		controller: PrerequisiteController,
 		action: 'remove',
 	},
-	// routes for Classes
+	// crud routes for Classes
 	{
 		method: 'get',
 		route: '/classes',
@@ -152,7 +153,7 @@ export const Routes = [
 		controller: ClassController,
 		action: 'remove',
 	},
-	// routes for Rooms
+	// crud routes for Rooms
 	{
 		method: 'get',
 		route: '/rooms',
@@ -175,6 +176,31 @@ export const Routes = [
 		method: 'delete',
 		route: '/rooms/:id',
 		controller: RoomController,
+		action: 'remove',
+	},
+	// crud routes for semesters
+	{
+		method: 'get',
+		route: '/semesters',
+		controller: SemesterController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/semesters/:id',
+		controller: SemesterController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/semesters',
+		controller: SemesterController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/semesters/:id',
+		controller: SemesterController,
 		action: 'remove',
 	},
 ];
