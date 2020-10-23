@@ -1,6 +1,7 @@
 import {getRepository} from "typeorm";
 import {NextFunction, Request, Response} from "express";
-import {User} from "../entity/User";
+import { User } from "../entity/User";
+import {validate, validateOrReject} from 'class-validator'
 
 export class UserController {
 
@@ -15,6 +16,9 @@ export class UserController {
     }
 
     async save(request: Request, response: Response, next: NextFunction) {
+        const user = new User(request.body);
+        const errors = await validate(user)
+        console.log(errors);
         return this.userRepository.save(request.body);
     }
 

@@ -1,8 +1,7 @@
 import "reflect-metadata";
 import {createConnection} from "typeorm";
-import express = require("express");
+import express, {Request, Response} from 'express'
 import * as bodyParser from "body-parser";
-import {Request, Response} from "express";
 import {Routes} from "./routes";
 import { User } from "./entity/User";
 import { ResponseError } from './util/ResponseError';
@@ -30,6 +29,11 @@ createConnection().then(async connection => {
         resave: false,
         saveUninitialized: false
     }));
+
+    //TODO: Will worry about this when we are working on the client side of things
+	// static file-serving middleware
+	// app.use(express.static(path.join(__dirname, '..', 'public')))
+
     app.use((req, res, next) => {
         if (path.extname(req.path).length) {
             const err: ResponseError = new Error('Not Found')
@@ -40,6 +44,7 @@ createConnection().then(async connection => {
             next()
         }
     })
+
     // index.html ---> we havent made this yet
     // app.use('*', (req, res) => {
 	// 		res.sendFile(path.join(__dirname, '..', 'public/index.html'))
@@ -73,16 +78,17 @@ createConnection().then(async connection => {
     // start express server
     app.listen(3000);
 
+
+
+
     // insert new users for test
     await connection.manager.save(connection.manager.create(User, {
-        firstName: "Timber",
-        lastName: "Saw",
-        age: 27
-    }));
-    await connection.manager.save(connection.manager.create(User, {
-        firstName: "Phantom",
-        lastName: "Assassin",
-        age: 24
+        userName: "Timber",
+        userEmail: "Saw@Timber.com",
+        userPassword: 'abccas',
+        userPhone: 5163444444,
+        userAddress: '123 Main St',
+        userType: 'Student'
     }));
 
     console.log("Express server has started on port 3000. Open http://localhost:3000/users to see results");
