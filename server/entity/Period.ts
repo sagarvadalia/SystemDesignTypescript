@@ -2,7 +2,7 @@ import { IsNotEmpty } from 'class-validator';
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export abstract class Period extends BaseEntity {
+export class Period extends BaseEntity {
     constructor(...args) {
         super();
         Object.assign(this, Period);

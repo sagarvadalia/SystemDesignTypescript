@@ -3,7 +3,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { User } from './User';
 
 @Entity()
-export abstract class Student extends User {
+export class Student extends User {
     constructor(...args) {
         super();
         Object.assign(this, Student);

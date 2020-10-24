@@ -2,7 +2,7 @@ import { IsNotEmpty } from 'class-validator';
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export abstract class Course extends BaseEntity {
+export class Course extends BaseEntity {
     constructor(...args) {
         super();
         Object.assign(this, Course);
