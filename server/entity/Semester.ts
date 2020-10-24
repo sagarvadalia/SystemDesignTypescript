@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 
 // Need to handle the association with course
 @Entity()
@@ -9,7 +9,7 @@ export class Semester extends BaseEntity {
 		Object.assign(this, Semester);
 	}
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	semesterID: number;
 
 	@Column({ type: 'text', nullable: false })

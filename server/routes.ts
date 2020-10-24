@@ -21,6 +21,16 @@ import { GraduateController } from './controller/GraduateController';
 import { UnderGraduateController } from './controller/UnderGraduateController';
 import { FacultyPartTimeController } from './controller/FacultyPartTime';
 import { FacultyFullTimeController } from './controller/FacultyFullTimeController';
+import { StudentHistoryController } from './controller/StudentHistoryController';
+import { AttendanceController } from './controller/AttendanceController';
+import { FacultyHistoryController } from './controller/FacultyHistoryController';
+import { UnderGraduateFullTimeController } from './controller/UnderGraduateFullTimeController';
+import { UnderGraduatePartTimeController } from './controller/UnderGraduatePartTimeController';
+import { GraduatePartTimeController } from './controller/GraduatePartTimeController';
+import { GraduateFullTimeController } from './controller/GraduateFullTimeController';
+import { LabController } from './controller/LabController';
+import { LectureController } from './controller/LectureController';
+import { OfficeController } from './controller/OfficeController';
 export const Routes = [
 
 	// crud Routes for users
@@ -628,5 +638,256 @@ export const Routes = [
 		controller: FacultyFullTimeController,
 		action: 'remove',
 	},
+	// crud Routes for studentHistory
+	{
+		method: 'get',
+		route: '/studenthistory',
+		controller: StudentHistoryController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/studenthistory/:id',
+		controller: StudentHistoryController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/studenthistory',
+		controller: StudentHistoryController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/studenthistory/:id',
+		controller: StudentHistoryController,
+		action: 'remove',
+	},
+	// crud Routes for attendance
+	{
+		method: 'get',
+		route: '/attendances',
+		controller: AttendanceController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/attendances/:id',
+		controller: AttendanceController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/attendances',
+		controller: AttendanceController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/attendances/:id',
+		controller: AttendanceController,
+		action: 'remove',
+	},
+	// crud Routes for facultyHistory
+	{
+		method: 'get',
+		route: '/facultyhistory',
+		controller: FacultyHistoryController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/facultyhistory/:id',
+		controller: FacultyHistoryController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/facultyhistory',
+		controller: FacultyHistoryController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/facultyhistory/:id',
+		controller: FacultyHistoryController,
+		action: 'remove',
+	},
+	// crud Routes for undergradFullTime
+	{
+		method: 'get',
+		route: '/undergraduatefulltime',
+		controller: UnderGraduateFullTimeController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/undergraduatefulltime/:id',
+		controller: UnderGraduateFullTimeController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/undergraduatefulltime',
+		controller: UnderGraduateFullTimeController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/undergraduatefulltime/:id',
+		controller: UnderGraduateFullTimeController,
+		action: 'remove',
+	},
+	// crud Routes for undergradPartTime
+	{
+		method: 'get',
+		route: '/undergraduateparttime',
+		controller: UnderGraduatePartTimeController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/undergraduateparttime/:id',
+		controller: UnderGraduatePartTimeController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/undergraduateparttime',
+		controller: UnderGraduatePartTimeController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/undergraduateparttime/:id',
+		controller: UnderGraduatePartTimeController,
+		action: 'remove',
+	},
+	// crud Routes for gradPartTime
+	{
+		method: 'get',
+		route: '/graduateparttime',
+		controller: GraduatePartTimeController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/graduateparttime/:id',
+		controller: GraduatePartTimeController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/graduateparttime',
+		controller: GraduatePartTimeController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/graduateparttime/:id',
+		controller: GraduatePartTimeController,
+		action: 'remove',
+	},
+	// crud Routes for gradFullTime
+	{
+		method: 'get',
+		route: '/graduatefulltime',
+		controller: GraduateFullTimeController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/graduatefulltime/:id',
+		controller: GraduateFullTimeController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/graduatefulltime',
+		controller: GraduateFullTimeController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/graduatefulltime/:id',
+		controller: GraduateFullTimeController,
+		action: 'remove',
+	},
+	// crud Routes for lab
+	{
+		method: 'get',
+		route: '/labs',
+		controller: LabController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/labs/:id',
+		controller: LabController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/labs',
+		controller: LabController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/labs/:id',
+		controller: LabController,
+		action: 'remove',
+	},
+	// crud Routes for lecture
+	{
+		method: 'get',
+		route: '/lectures',
+		controller: LectureController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/lectures/:id',
+		controller: LectureController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/lectures',
+		controller: LectureController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/lectures/:id',
+		controller: LectureController,
+		action: 'remove',
+	},
+	// crud Routes for office
+	{
+		method: 'get',
+		route: '/offices',
+		controller: OfficeController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/offices/:id',
+		controller: OfficeController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/offices',
+		controller: OfficeController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/offices/:id',
+		controller: OfficeController,
+		action: 'remove',
+	},
+
 
 ];
