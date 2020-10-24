@@ -9,6 +9,8 @@ import { UserController } from './controller/UserController';
 import { ResearchController } from './controller/ResearcherController';
 import { AdministratorController } from './controller/AdministratorController';
 import { BuildingController } from './controller/BuildingController';
+import { TimeSlotController } from './controller/TimeSlotController';
+import { MajorController } from './controller/MajorController';
 
 export const Routes = [
 	{
@@ -279,6 +281,106 @@ export const Routes = [
 		method: 'delete',
 		route: '/buildings/:id',
 		controller: BuildingController,
+		action: 'remove',
+	},
+	// crud Routes for researchers
+	{
+		method: 'get',
+		route: '/researchers',
+		controller: ResearchController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/researchers/:id',
+		controller: ResearchController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/researchers',
+		controller: ResearchController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/researchers/:id',
+		controller: ResearchController,
+		action: 'remove',
+	},
+	// crud Routes for administrators
+	{
+		method: 'get',
+		route: '/administrators',
+		controller: AdministratorController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/administrators/:id',
+		controller: AdministratorController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/administrators',
+		controller: AdministratorController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/administrators/:id',
+		controller: AdministratorController,
+		action: 'remove',
+	},
+	// crud Routes for timeslot
+	{
+		method: 'get',
+		route: '/timeslots',
+		controller: TimeSlotController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/timeslots/:id',
+		controller: TimeSlotController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/timeslots',
+		controller: TimeSlotController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/timeslots/:id',
+		controller: TimeSlotController,
+		action: 'remove',
+	},
+	// crud Routes for Major
+	{
+		method: 'get',
+		route: '/majors',
+		controller: MajorController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/majors/:id',
+		controller: MajorController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/majors',
+		controller: MajorController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/majors/:id',
+		controller: MajorController,
 		action: 'remove',
 	},
 	
