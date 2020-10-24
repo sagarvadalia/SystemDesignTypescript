@@ -7,8 +7,10 @@ export class Minor extends BaseEntity {
 		super();
 		Object.assign(this, Minor);
 	}
+
 	@PrimaryColumn()
 	minorID: number;
+
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Name must be provided' })
 	minorName: string;

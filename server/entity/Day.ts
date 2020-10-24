@@ -1,5 +1,4 @@
-import { IsEmail, IsMobilePhone, IsNotEmpty } from 'class-validator';
-import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity()
 export class Day extends BaseEntity {
@@ -7,8 +6,10 @@ export class Day extends BaseEntity {
 		super();
 		Object.assign(this, Day);
 	}
+
 	@PrimaryColumn()
 	dayID: number;
+
 	@Column({ type: 'text', nullable: false })
 	dayName: string;
 }

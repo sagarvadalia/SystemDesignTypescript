@@ -8,13 +8,17 @@ export class Room extends BaseEntity {
 		super();
 		Object.assign(this, Room);
 	}
+
 	@PrimaryColumn()
 	roomID: number;
+
 	@Column({ type: 'integer', nullable: false })
 	@IsNotEmpty({ message: 'room number is required' })
 	roomNum: number;
+
 	@Column({ type: 'text', nullable: false })
 	roomType: string;
+
 	@Column({ type: 'integer', nullable: false })
 	capacity: number;
 }

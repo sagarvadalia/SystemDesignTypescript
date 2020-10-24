@@ -1,5 +1,5 @@
-import { IsEmail, IsMobilePhone, IsNotEmpty } from 'class-validator';
-import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
+import { IsEmail, IsNotEmpty } from 'class-validator';
+import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity()
 export class Department extends BaseEntity {
