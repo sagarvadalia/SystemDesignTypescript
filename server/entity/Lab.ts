@@ -5,7 +5,6 @@ import { Graduate } from './Graduate';
 import { Room } from './Room';
 import { UnderGraduate } from './UnderGraduate';
 
-// Need to handle the association with course
 @Entity()
 export class Lab extends Room {
 	constructor(...args) {
