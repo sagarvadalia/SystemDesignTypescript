@@ -9,7 +9,7 @@ export class StudentHistory extends BaseEntity {
     }
 
     @PrimaryColumn()
-    courseID: number;
+    classCRN: number;
 
     @Column({ type: 'integer', nullable: false })
     @IsNotEmpty({message: 'sID must be provided '})
