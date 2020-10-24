@@ -1,6 +1,6 @@
 import { validate } from 'class-validator';
 import { NextFunction, Request, Response } from 'express';
-import { Catalog } from 'server/entity/Catalog';
+import { Catalog } from '../entity/Catalog';
 import { getRepository } from 'typeorm';
 
 
