@@ -13,7 +13,7 @@ import { CatalogController } from './controller/CatalogController';
 import { PeriodController } from './controller/PeriodController';
 import { StudentController } from './controller/StudentController';
 import { DepartmentController } from './controller/DepartmentController';
-import { CourseController } from './controller/CourseControlller';
+import { CourseController } from './controller/CourseController';
 import { TimeSlotController } from './controller/TimeSlotController';
 import { MajorController } from './controller/MajorController';
 import { StudentMinorController } from './controller/StudentMinorController';
@@ -232,52 +232,25 @@ export const Routes = [
 	{
 		method: 'get',
 		route: '/researchers',
-		controller: ResearchController,
+		controller: ResearcherController,
 		action: 'all',
 	},
 	{
 		method: 'get',
 		route: '/researchers/:id',
-		controller: ResearchController,
+		controller: ResearcherController,
 		action: 'one',
 	},
 	{
 		method: 'post',
 		route: '/researchers',
-		controller: ResearchController,
+		controller: ResearcherController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
 		route: '/researchers/:id',
-		controller: ResearchController,
-		action: 'remove',
-	},
-
-
-	// crud Routes for administrators
-	{
-		method: 'get',
-		route: '/administrators',
-		controller: AdministratorController,
-		action: 'all',
-	},
-	{
-		method: 'get',
-		route: '/administrators/:id',
-		controller: AdministratorController,
-		action: 'one',
-	},
-	{
-		method: 'post',
-		route: '/administrators',
-		controller: AdministratorController,
-		action: 'save',
-	},
-	{
-		method: 'delete',
-		route: '/administrators/:id',
-		controller: AdministratorController,
+		controller: ResearcherController,
 		action: 'remove',
 	},
 
@@ -444,33 +417,6 @@ export const Routes = [
 	},
 
 
-	// crud Routes for Researcher
-	{
-		method: 'get',
-		route: '/researchers',
-		controller: ResearcherController,
-		action: 'all',
-	},
-	{
-		method: 'get',
-		route: '/researchers/:id',
-		controller: ResearcherController,
-		action: 'one',
-	},
-	{
-		method: 'post',
-		route: '/researchers',
-		controller: ResearcherController,
-		action: 'save',
-	},
-	{
-		method: 'delete',
-		route: '/researchers/:id',
-		controller: ResearcherController,
-		action: 'remove',
-	},
-
-
 	// crud Routes for Administrator
 	{
 		method: 'get',
@@ -551,7 +497,7 @@ export const Routes = [
 		action: 'remove',
 	},
 
-	
+
 	// crud Routes for StudentMinor
 	{
 		method: 'get',
