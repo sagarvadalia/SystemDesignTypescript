@@ -18,6 +18,7 @@ import { TimeSlotController } from './controller/TimeSlotController';
 import { MajorController } from './controller/MajorController';
 import { StudentMinorController } from './controller/StudentMinorController';
 export const Routes = [
+
 	// crud Routes for users
 	{
 		method: 'get',
