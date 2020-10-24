@@ -10,8 +10,12 @@ export class Faculty extends User {
 	}
 
 	@Column({ nullable: false })
-	@IsNotEmpty({ message: 'Faculty Tenure must be provided' })
-	ftenure: boolean;
+	@IsNotEmpty({ message: 'Department ID must be provided' })
+	deptID: number;
+
+	@Column({ nullable: false })
+	@IsNotEmpty({ message: 'Faculty rank must be provided' })
+	fRank: number;
 
 	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Faculty Office Number must be provided' })

@@ -12,6 +12,9 @@ import session = require('express-session');
 import path = require('path');
 import { Semester } from './entity/Semester';
 import { Researcher } from './entity/Researcher';
+import { Advisor } from './entity/Advisor';
+import { Student } from './entity/Student';
+import { Faculty } from './entity/Faculty';
 
 createConnection()
 	.then(async (connection) => {
@@ -29,6 +32,7 @@ createConnection()
 				saveUninitialized: false,
 			}),
 		);
+
 
 		//TODO: Will worry about this when we are working on the client side of things
 		// static file-serving middleware
@@ -85,15 +89,62 @@ createConnection()
 		await connection.manager.save(
 			connection.manager.create(Semester, {
 				semesterName: 'spring',
-				yearNum: 2019,
+				yearNum: 2020,
 			}),
 		);
+
+		//The following comment is a test including a tuple for each: Student, Faculty, Advisor (THIS IS BROKEN AFTER FACULTY SCHEMA REVISION)
+		/* 		await connection.manager.save(
+					connection.manager.create(Student, {
+						userID: 700505,
+						userName: "Tyler Heinsohn",
+						userEmail: "tjheinzo@aol.com",
+						userPassword: "password",
+						userPhone: '2',
+						userAddress: "239 lanelane lane lane",
+						userType: "Student",
+						sGPA: 4.0,
+						sGradYear: 2021,
+						sDOB: "10/19/1996",
+						totalCredits: 1003,
+						studentType: "undergrad",
+					}),
+				);
+		
+				await connection.manager.save(
+					connection.manager.create(Faculty, {
+						userID: 10034,
+						userName: "Tyler Heinsohn",
+						userEmail: "tjheinzo@aol.com",
+						userPassword: "password",
+						userPhone: '2',
+						userAddress: "239 lanelane lane lane",
+						userType: "Faculty",
+						fTenure: false,
+						fOfficeNumber: "2021",
+						isFullTime: true,
+					}),
+				);
+		
+				await connection.manager.save(
+					connection.manager.create(Advisor, {
+						sID: 700505,
+						fID: 10034,
+						dateAssigned: "1/1/1111",
+					}),
+				); */
+
+
+
+
+
+
 		//await connection.manager.save(
 		//	connection.manager.create(Researcher, {
 		//		researchSalary: 'spring',
 		//		resarchOfficeNum: 12,
 		//	}),
-	//	);
+		//	);
 
 		// test for creating a room
 		// await connection.manager.save(
