@@ -6,7 +6,7 @@ import { MinorController } from './controller/MinorController';
 import { PrerequisiteController } from './controller/PrerequisiteController';
 import { RoomController } from './controller/RoomController';
 import { UserController } from './controller/UserController';
-import { ResearchController } from './controller/ResearcherController';
+import { ResearcherController } from './controller/ResearcherController';
 import { AdministratorController } from './controller/AdministratorController';
 import { BuildingController } from './controller/BuildingController';
 import { CatalogController } from './controller/CatalogController';
@@ -14,7 +14,9 @@ import { PeriodController } from './controller/PeriodController';
 import { StudentController } from './controller/StudentController';
 import { DepartmentController } from './controller/DepartmentController';
 import { CourseController } from './controller/CourseControlller';
-
+import { TimeSlotController } from './controller/TimeSlotController';
+import { MajorController } from './controller/MajorController';
+import { StudentMinorController } from './controller/StudentMinorController';
 export const Routes = [
 	// crud Routes for users
 	{
@@ -441,5 +443,139 @@ export const Routes = [
 		action: 'remove',
 	},
 
+
+	// crud Routes for Researcher
+	{
+		method: 'get',
+		route: '/researchers',
+		controller: ResearcherController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/researchers/:id',
+		controller: ResearcherController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/researchers',
+		controller: ResearcherController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/researchers/:id',
+		controller: ResearcherController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for Administrator
+	{
+		method: 'get',
+		route: '/administrators',
+		controller: AdministratorController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/administrators/:id',
+		controller: AdministratorController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/administrators',
+		controller: AdministratorController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/administrators/:id',
+		controller: AdministratorController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for TimeSlot
+	{
+		method: 'get',
+		route: '/timeslots',
+		controller: TimeSlotController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/timeslots/:id',
+		controller: TimeSlotController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/timeslots',
+		controller: TimeSlotController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/timeslots/:id',
+		controller: TimeSlotController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for Major
+	{
+		method: 'get',
+		route: '/majors',
+		controller: MajorController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/majors/:id',
+		controller: MajorController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/majors',
+		controller: MajorController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/majors/:id',
+		controller: MajorController,
+		action: 'remove',
+	},
+
+	
+	// crud Routes for StudentMinor
+	{
+		method: 'get',
+		route: '/studentminors',
+		controller: StudentMinorController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/studentminors/:id',
+		controller: StudentMinorController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/studentminors',
+		controller: StudentMinorController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/studentminors/:id',
+		controller: StudentMinorController,
+		action: 'remove',
+	},
 
 ];

@@ -3,7 +3,7 @@ import { NextFunction, Request, Response } from 'express';
 import { Researcher } from '../entity/Researcher';
 import { validate, validateOrReject } from 'class-validator';
 
-export class ResearchController {
+export class ResearcherController {
 	private researcherRepository = getRepository(Researcher);
 
 	async all(request: Request, response: Response, next: NextFunction) {
