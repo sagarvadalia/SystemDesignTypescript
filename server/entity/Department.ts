@@ -1,5 +1,5 @@
 import { IsEmail, IsMobilePhone, IsNotEmpty } from 'class-validator';
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
+import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
 
 @Entity()
 export class Department extends BaseEntity {
@@ -7,7 +7,7 @@ export class Department extends BaseEntity {
         super();
         Object.assign(this, Department);
     }
-    @PrimaryGeneratedColumn({ type: 'integer' })
+    @PrimaryColumn({ type: 'integer' })
     deptID: number;
 
     @Column({ type: 'text', nullable: false, width: 50, unique: true })

@@ -1,5 +1,5 @@
 import { IsEmail, IsMobilePhone, IsNotEmpty } from 'class-validator';
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
+import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
 // Need to handle the association with course
 @Entity()
 export class Prerequisite extends BaseEntity {
@@ -7,7 +7,7 @@ export class Prerequisite extends BaseEntity {
 		super();
 		Object.assign(this, Prerequisite);
 	}
-	@PrimaryGeneratedColumn()
+	@PrimaryColumn()
 	prereqCRN: number;
 	@Column({ type: 'text', nullable: false })
 	gradeRequired: string;

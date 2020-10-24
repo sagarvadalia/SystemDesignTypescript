@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
 
 // Need to handle the association with course
 @Entity()
@@ -8,7 +8,7 @@ export class Room extends BaseEntity {
 		super();
 		Object.assign(this, Room);
 	}
-	@PrimaryGeneratedColumn()
+	@PrimaryColumn()
 	roomID: number;
 	@Column({ type: 'integer', nullable: false })
 	@IsNotEmpty({ message: 'room number is required' })
