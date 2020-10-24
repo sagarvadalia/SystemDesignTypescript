@@ -9,14 +9,17 @@ import { UserController } from './controller/UserController';
 import { ResearcherController } from './controller/ResearcherController';
 import { AdministratorController } from './controller/AdministratorController';
 import { BuildingController } from './controller/BuildingController';
+import { CatalogController } from './controller/CatalogController';
+import { PeriodController } from './controller/PeriodController';
+import { StudentController } from './controller/StudentController';
+import { DepartmentController } from './controller/DepartmentController';
+import { CourseController } from './controller/CourseControlller';
 import { TimeSlotController } from './controller/TimeSlotController';
 import { MajorController } from './controller/MajorController';
 import { StudentMinorController } from './controller/StudentMinorController';
-
 export const Routes = [
+	// crud Routes for users
 	{
-		// crud Routes for users
-
 		method: 'get',
 		route: '/users',
 		controller: UserController,
@@ -34,6 +37,8 @@ export const Routes = [
 		controller: UserController,
 		action: 'remove',
 	},
+
+
 	// crud Routes for days
 	{
 		method: 'get',
@@ -59,6 +64,8 @@ export const Routes = [
 		controller: DayController,
 		action: 'remove',
 	},
+
+
 	// crud routes for faculties
 	{
 		method: 'get',
@@ -84,6 +91,8 @@ export const Routes = [
 		controller: FacultyController,
 		action: 'remove',
 	},
+
+
 	// crud routes for minors
 	{
 		method: 'get',
@@ -109,6 +118,8 @@ export const Routes = [
 		controller: MinorController,
 		action: 'remove',
 	},
+
+
 	// crud routes for prerequisites
 	{
 		method: 'get',
@@ -134,6 +145,8 @@ export const Routes = [
 		controller: PrerequisiteController,
 		action: 'remove',
 	},
+
+
 	// crud routes for Classes
 	{
 		method: 'get',
@@ -159,6 +172,8 @@ export const Routes = [
 		controller: ClassController,
 		action: 'remove',
 	},
+
+
 	// crud routes for Rooms
 	{
 		method: 'get',
@@ -184,6 +199,8 @@ export const Routes = [
 		controller: RoomController,
 		action: 'remove',
 	},
+
+
 	// crud routes for semesters
 	{
 		method: 'get',
@@ -209,31 +226,35 @@ export const Routes = [
 		controller: SemesterController,
 		action: 'remove',
 	},
+
+
 	// crud Routes for researchers
 	{
 		method: 'get',
 		route: '/researchers',
-		controller: ResearcherController,
+		controller: ResearchController,
 		action: 'all',
 	},
 	{
 		method: 'get',
 		route: '/researchers/:id',
-		controller: ResearcherController,
+		controller: ResearchController,
 		action: 'one',
 	},
 	{
 		method: 'post',
 		route: '/researchers',
-		controller: ResearcherController,
+		controller: ResearchController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
 		route: '/researchers/:id',
-		controller: ResearcherController,
+		controller: ResearchController,
 		action: 'remove',
 	},
+
+
 	// crud Routes for administrators
 	{
 		method: 'get',
@@ -259,6 +280,8 @@ export const Routes = [
 		controller: AdministratorController,
 		action: 'remove',
 	},
+
+
 	// crud Routes for buildings
 	{
 		method: 'get',
@@ -284,7 +307,144 @@ export const Routes = [
 		controller: BuildingController,
 		action: 'remove',
 	},
-	// crud Routes for researchers
+
+
+	// crud Routes for Catalog
+	{
+		method: 'get',
+		route: '/catalogs',
+		controller: CatalogController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/catalogs/:id',
+		controller: CatalogController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/catalogs',
+		controller: CatalogController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/catalogs/:id',
+		controller: CatalogController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for Period
+	{
+		method: 'get',
+		route: '/periods',
+		controller: PeriodController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/periods/:id',
+		controller: PeriodController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/periods',
+		controller: PeriodController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/periods/:id',
+		controller: PeriodController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for Student
+	{
+		method: 'get',
+		route: '/students',
+		controller: StudentController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/students/:id',
+		controller: StudentController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/students',
+		controller: StudentController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/students/:id',
+		controller: StudentController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for Department
+	{
+		method: 'get',
+		route: '/departments',
+		controller: DepartmentController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/departments/:id',
+		controller: DepartmentController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/departments',
+		controller: DepartmentController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/departments/:id',
+		controller: DepartmentController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for Course
+	{
+		method: 'get',
+		route: '/courses',
+		controller: CourseController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/courses/:id',
+		controller: CourseController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/courses',
+		controller: CourseController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/courses/:id',
+		controller: CourseController,
+		action: 'remove',
+	},
+
+
+	// crud Routes for Researcher
 	{
 		method: 'get',
 		route: '/researchers',
@@ -309,7 +469,9 @@ export const Routes = [
 		controller: ResearcherController,
 		action: 'remove',
 	},
-	// crud Routes for administrators
+
+
+	// crud Routes for Administrator
 	{
 		method: 'get',
 		route: '/administrators',
@@ -334,7 +496,9 @@ export const Routes = [
 		controller: AdministratorController,
 		action: 'remove',
 	},
-	// crud Routes for timeslot
+
+
+	// crud Routes for TimeSlot
 	{
 		method: 'get',
 		route: '/timeslots',
@@ -359,6 +523,8 @@ export const Routes = [
 		controller: TimeSlotController,
 		action: 'remove',
 	},
+
+
 	// crud Routes for Major
 	{
 		method: 'get',
@@ -384,6 +550,8 @@ export const Routes = [
 		controller: MajorController,
 		action: 'remove',
 	},
+
+	
 	// crud Routes for StudentMinor
 	{
 		method: 'get',
@@ -399,7 +567,7 @@ export const Routes = [
 	},
 	{
 		method: 'post',
-		route: '/studenminors',
+		route: '/studentminors',
 		controller: StudentMinorController,
 		action: 'save',
 	},
@@ -409,4 +577,5 @@ export const Routes = [
 		controller: StudentMinorController,
 		action: 'remove',
 	},
+
 ];
