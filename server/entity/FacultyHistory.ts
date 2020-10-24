@@ -9,7 +9,7 @@ export class FacultyHistory extends BaseEntity {
     }
 
     @PrimaryColumn()
-    courseID: number;
+    fID: number;
 
     @PrimaryColumn()
     classCRN: number;
