@@ -9,7 +9,7 @@ export class Attendance extends BaseEntity {
     }
 
     @PrimaryColumn()
-    courseID: number;
+    classCRN: number;
 
     @PrimaryColumn()
     sID: number;
