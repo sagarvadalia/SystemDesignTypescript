@@ -8,7 +8,6 @@ export class Student extends User {
         super();
         Object.assign(this, Student);
     }
-    @PrimaryGeneratedColumn({ type: 'integer' })
 
     @Column()
     @IsNotEmpty({ message: 'GPA is required' })

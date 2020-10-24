@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity()
 export class Major extends BaseEntity {
@@ -7,7 +7,7 @@ export class Major extends BaseEntity {
 		super();
 		Object.assign(this, Major);
 	}
-	@PrimaryGeneratedColumn()
+	@PrimaryColumn()
 	majorID: number;
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Name must be provided' })

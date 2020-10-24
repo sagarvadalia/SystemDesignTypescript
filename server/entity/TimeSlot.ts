@@ -1,5 +1,5 @@
 import { IsEmail, IsMobilePhone, IsNotEmpty } from 'class-validator';
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
+import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
 
 @Entity()
 export class TimeSlot extends BaseEntity {
@@ -7,7 +7,7 @@ export class TimeSlot extends BaseEntity {
 		super();
 		Object.assign(this, TimeSlot);
 	}
-	@PrimaryGeneratedColumn()
+	@PrimaryColumn()
 	slotID: number;
-	
+
 }
