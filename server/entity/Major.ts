@@ -7,8 +7,10 @@ export class Major extends BaseEntity {
 		super();
 		Object.assign(this, Major);
 	}
+
 	@PrimaryColumn()
 	majorID: number;
+
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Name must be provided' })
 	majorName: string;

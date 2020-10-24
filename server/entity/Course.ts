@@ -7,6 +7,7 @@ export class Course extends BaseEntity {
         super();
         Object.assign(this, Course);
     }
+
     @PrimaryColumn({ type: 'integer' })
     courseID: number;
 

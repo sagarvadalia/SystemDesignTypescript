@@ -1,6 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
 import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
-import { User } from './User';
 
 @Entity()
 export class Building extends BaseEntity {
@@ -8,8 +7,10 @@ export class Building extends BaseEntity {
     super();
     Object.assign(this, Building);
   }
+
   @PrimaryColumn()
   buildingID: number;
+
   @Column({ type: 'text', nullable: false })
   @IsNotEmpty({ message: 'buildingType must be provided' })
   buildingType: string;

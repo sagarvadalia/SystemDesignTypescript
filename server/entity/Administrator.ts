@@ -8,9 +8,11 @@ export class Administrator extends User {
 		super();
 		Object.assign(this, Administrator);
 	}
+
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Admin salary must be provided' })
 	adminSalary: string;
+
 	@Column({ nullable: false, type: 'integer' })
 	@IsNotEmpty({ message: 'Admin Office Number must be provided' })
 	adminOfficeNum: number;

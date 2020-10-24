@@ -1,5 +1,6 @@
-import { IsEmail, IsMobilePhone, IsNotEmpty } from 'class-validator';
-import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
+import { IsNotEmpty } from 'class-validator';
+import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+
 // Need to handle the association with course
 @Entity()
 export class Class extends BaseEntity {
@@ -7,11 +8,14 @@ export class Class extends BaseEntity {
 		super();
 		Object.assign(this, Class);
 	}
+
 	@PrimaryColumn()
 	classID: number;
+
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'section is required' })
 	classSection: string;
+
 	@Column({ type: 'integer', nullable: false })
 	numOfSeats: number;
 }

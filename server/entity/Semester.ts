@@ -8,11 +8,14 @@ export class Semester extends BaseEntity {
 		super();
 		Object.assign(this, Semester);
 	}
+
 	@PrimaryColumn()
 	semesterID: number;
+
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'semester name is required' })
 	semesterName: string;
+
 	@Column({ type: 'integer', nullable: false })
 	yearNum: number;
 }
