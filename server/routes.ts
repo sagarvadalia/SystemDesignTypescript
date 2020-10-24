@@ -17,6 +17,10 @@ import { CourseController } from './controller/CourseController';
 import { TimeSlotController } from './controller/TimeSlotController';
 import { MajorController } from './controller/MajorController';
 import { StudentMinorController } from './controller/StudentMinorController';
+import { GraduateController } from './controller/GraduateController';
+import { UnderGraduateController } from './controller/UnderGraduateController';
+import { FacultyPartTimeController } from './controller/FacultyPartTime';
+import { FacultyFullTimeController } from './controller/FacultyFullTimeController';
 export const Routes = [
 
 	// crud Routes for users
@@ -522,6 +526,106 @@ export const Routes = [
 		method: 'delete',
 		route: '/studentminors/:id',
 		controller: StudentMinorController,
+		action: 'remove',
+	},
+	// crud Routes for Graduate
+	{
+		method: 'get',
+		route: '/graduates',
+		controller: GraduateController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/graduates/:id',
+		controller: GraduateController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/graduates',
+		controller: GraduateController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/graduates/:id',
+		controller: GraduateController,
+		action: 'remove',
+	},
+	// crud Routes for UnderGraduate
+	{
+		method: 'get',
+		route: '/undergraduates',
+		controller: UnderGraduateController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/undergraduates/:id',
+		controller: UnderGraduateController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/undergraduates',
+		controller: UnderGraduateController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/undergraduates/:id',
+		controller: UnderGraduateController,
+		action: 'remove',
+	},
+	// crud Routes for FacultyPartTime
+	{
+		method: 'get',
+		route: '/facultyparttime',
+		controller: FacultyPartTimeController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/facultyparttime/:id',
+		controller: FacultyPartTimeController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/facultyparttime',
+		controller: FacultyPartTimeController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/facultyparttime/:id',
+		controller: FacultyPartTimeController,
+		action: 'remove',
+	},
+	// crud Routes for FacultyFullTime
+	{
+		method: 'get',
+		route: '/facultyfulltime',
+		controller: FacultyFullTimeController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/facultyfulltime/:id',
+		controller: FacultyFullTimeController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/facultyfulltime',
+		controller: FacultyFullTimeController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/facultyfulltime/:id',
+		controller: FacultyFullTimeController,
 		action: 'remove',
 	},
 
