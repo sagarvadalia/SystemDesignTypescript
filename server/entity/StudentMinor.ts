@@ -11,6 +11,9 @@ export class StudentMinor extends BaseEntity {
 	@PrimaryColumn()
 	minorID: number;
 
+	@PrimaryColumn()
+	sID: number;
+
 	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Date Declared must be provided' })
 	dateDeclared: string;

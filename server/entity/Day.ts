@@ -7,9 +7,6 @@ export class Day extends BaseEntity {
 		Object.assign(this, Day);
 	}
 
-	@PrimaryColumn()
-	dayID: number;
-
-	@Column({ type: 'text', nullable: false })
+	@PrimaryColumn({ type: 'text', nullable: false })
 	dayName: string;
 }

@@ -8,13 +8,14 @@ export class StudentMajor extends BaseEntity {
         Object.assign(this, StudentMajor);
     }
 
+
     @PrimaryColumn()
-    buildingID: number;
+    majorID: number;
 
-    @Column({ type: 'text', nullable: false })
-    @IsNotEmpty({ message: 'buildingType must be provided' })
-    buildingType: string;
+    @PrimaryColumn()
+    sID: number;
 
-    @Column({ type: 'text', nullable: false })
+    @Column({ nullable: false, type: 'text' })
+    @IsNotEmpty({ message: 'Date Declared must be provided' })
     dateDeclared: string;
 }
