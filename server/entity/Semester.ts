@@ -1,6 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
+
 // Need to handle the association with course
 @Entity()
 export class Semester extends BaseEntity {
