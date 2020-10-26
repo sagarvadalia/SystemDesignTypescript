@@ -32,7 +32,6 @@ import { LabController } from './controller/LabController';
 import { LectureController } from './controller/LectureController';
 import { OfficeController } from './controller/OfficeController';
 export const Routes = [
-
 	// crud Routes for users
 	{
 		method: 'get',
@@ -52,7 +51,6 @@ export const Routes = [
 		controller: UserController,
 		action: 'remove',
 	},
-
 
 	// crud Routes for days
 	{
@@ -80,7 +78,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud routes for faculties
 	{
 		method: 'get',
@@ -106,7 +103,6 @@ export const Routes = [
 		controller: FacultyController,
 		action: 'remove',
 	},
-
 
 	// crud routes for minors
 	{
@@ -134,7 +130,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud routes for prerequisites
 	{
 		method: 'get',
@@ -160,7 +155,6 @@ export const Routes = [
 		controller: PrerequisiteController,
 		action: 'remove',
 	},
-
 
 	// crud routes for Classes
 	{
@@ -188,7 +182,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud routes for Rooms
 	{
 		method: 'get',
@@ -214,7 +207,6 @@ export const Routes = [
 		controller: RoomController,
 		action: 'remove',
 	},
-
 
 	// crud routes for semesters
 	{
@@ -242,7 +234,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud Routes for researchers
 	{
 		method: 'get',
@@ -268,7 +259,6 @@ export const Routes = [
 		controller: ResearcherController,
 		action: 'remove',
 	},
-
 
 	// crud Routes for buildings
 	{
@@ -296,7 +286,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud Routes for Catalog
 	{
 		method: 'get',
@@ -322,7 +311,6 @@ export const Routes = [
 		controller: CatalogController,
 		action: 'remove',
 	},
-
 
 	// crud Routes for Period
 	{
@@ -350,7 +338,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud Routes for Student
 	{
 		method: 'get',
@@ -376,7 +363,6 @@ export const Routes = [
 		controller: StudentController,
 		action: 'remove',
 	},
-
 
 	// crud Routes for Department
 	{
@@ -404,7 +390,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud Routes for Course
 	{
 		method: 'get',
@@ -430,7 +415,6 @@ export const Routes = [
 		controller: CourseController,
 		action: 'remove',
 	},
-
 
 	// crud Routes for Administrator
 	{
@@ -458,7 +442,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud Routes for TimeSlot
 	{
 		method: 'get',
@@ -485,7 +468,6 @@ export const Routes = [
 		action: 'remove',
 	},
 
-
 	// crud Routes for Major
 	{
 		method: 'get',
@@ -511,7 +493,6 @@ export const Routes = [
 		controller: MajorController,
 		action: 'remove',
 	},
-
 
 	// crud Routes for StudentMinor
 	{
@@ -888,6 +869,4 @@ export const Routes = [
 		controller: OfficeController,
 		action: 'remove',
 	},
-
-
 ];

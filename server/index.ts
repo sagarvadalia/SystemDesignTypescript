@@ -33,7 +33,6 @@ createConnection()
 			}),
 		);
 
-
 		//TODO: Will worry about this when we are working on the client side of things
 		// static file-serving middleware
 		// app.use(express.static(path.join(__dirname, '..', 'public')))
@@ -85,7 +84,6 @@ createConnection()
 			await connection.manager.save(connection.manager.create(Semester, semester[i]));
 		}
 
-
 		await connection.manager.save(
 			connection.manager.create(Semester, {
 				semesterName: 'spring',
@@ -110,7 +108,7 @@ createConnection()
 						studentType: "undergrad",
 					}),
 				);
-		
+
 				await connection.manager.save(
 					connection.manager.create(Faculty, {
 						userID: 10034,
@@ -125,7 +123,7 @@ createConnection()
 						isFullTime: true,
 					}),
 				);
-		
+
 				await connection.manager.save(
 					connection.manager.create(Advisor, {
 						sID: 700505,
@@ -133,11 +131,6 @@ createConnection()
 						dateAssigned: "1/1/1111",
 					}),
 				); */
-
-
-
-
-
 
 		//await connection.manager.save(
 		//	connection.manager.create(Researcher, {
