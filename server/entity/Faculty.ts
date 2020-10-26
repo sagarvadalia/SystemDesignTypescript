@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
+import { Advisor } from './Advisor';
 import { User } from './User';
 
 @Entity()
@@ -8,6 +9,10 @@ export class Faculty extends User {
 		super();
 		Object.assign(this, Faculty);
 	}
+	// This sets an association between faculty and advisors
+	// set to cascade so that you can create a faculty and fill in the join table with one query
+	@OneToMany(() => Advisor, (advisor) => advisor.faculty, { cascade: true })
+	public advisors!: Advisor[];
 
 	@Column({ nullable: false })
 	@IsNotEmpty({ message: 'Department ID must be provided' })
