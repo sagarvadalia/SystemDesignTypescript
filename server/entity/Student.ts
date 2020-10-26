@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
+import { Advisor } from './Advisor';
 import { User } from './User';
 
 @Entity()
@@ -8,7 +9,10 @@ export class Student extends User {
 		super();
 		Object.assign(this, Student);
 	}
-
+	// association between students and advisors so that you can retrieve all advisors from a student query
+	// set to cascade so that when a student is inserted, that information also populates the advisor table
+	@OneToMany(() => Advisor, (advisor) => advisor.student, { cascade: true })
+	public advisors!: Advisor[];
 	@Column()
 	@IsNotEmpty({ message: 'GPA is required' })
 	sGPA: string;

@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn } from 'typeorm';
 import { Faculty } from '../entity/Faculty';
 import { Student } from '../entity/Student';
 
@@ -9,16 +9,13 @@ export class Advisor extends BaseEntity {
 		super();
 		Object.assign(this, Advisor);
 	}
+	// This is to for setting up the jointable entity between students and faculty
 
-	@OneToOne(() => Student)
-	@JoinColumn()
-	@PrimaryColumn()
-	sID: number;
+	@ManyToOne(() => Faculty, (faculty) => faculty.advisors, { primary: true })
+	public faculty!: Faculty;
 
-	@OneToOne(() => Faculty)
-	@JoinColumn()
-	@PrimaryColumn()
-	fID: number;
+	@ManyToOne(() => Student, (student) => student.advisors, { primary: true })
+	public student!: Student;
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Date assigned must be provided' })
