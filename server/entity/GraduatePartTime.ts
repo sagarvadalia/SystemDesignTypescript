@@ -12,21 +12,19 @@ export class GraduatePartTime extends Graduate {
 		Object.assign(this, GraduatePartTime);
 	}
 
-	
-
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'semester name is required' })
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })
-    hasMeanPlan: boolean;
+	hasMeanPlan: boolean;
 
-    @Column({ type: 'integer', nullable: false })
-    maxCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
-    minCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
+	@Column({ type: 'integer', nullable: false })
+	maxCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
+	minCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
 	currentCredits: number;
 }

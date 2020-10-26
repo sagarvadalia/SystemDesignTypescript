@@ -10,21 +10,19 @@ export class UnderGraduatePartTime extends UnderGraduate {
 		Object.assign(this, UnderGraduatePartTime);
 	}
 
-	
-
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'semester name is required' })
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })
-    hasMeanPlan: boolean;
-    
-    @Column({ type: 'integer', nullable: false })
-    maxCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
-    minCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
+	hasMeanPlan: boolean;
+
+	@Column({ type: 'integer', nullable: false })
+	maxCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
+	minCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
 	currentCredits: number;
 }

@@ -24,7 +24,9 @@ export class FacultyHistoryController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const facultyHistoryToRemove: FacultyHistory | undefined = await this.facultyHistoryRepository.findOne(request.params.id);
+		const facultyHistoryToRemove: FacultyHistory | undefined = await this.facultyHistoryRepository.findOne(
+			request.params.id,
+		);
 		try {
 			if (facultyHistoryToRemove) {
 				await this.facultyHistoryRepository.remove(facultyHistoryToRemove);

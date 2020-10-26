@@ -12,11 +12,9 @@ export class Lab extends Room {
 		Object.assign(this, Lab);
 	}
 
-    @PrimaryColumn()
-    roomID: number;
+	@PrimaryColumn()
+	roomID: number;
 
-    @Column({ type: 'integer', nullable: false})
-    numOfComputers: number;
-
-	
+	@Column({ type: 'integer', nullable: false })
+	numOfComputers: number;
 }

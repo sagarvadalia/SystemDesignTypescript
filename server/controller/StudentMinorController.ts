@@ -24,7 +24,9 @@ export class StudentMinorController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const studentMinorToRemove: StudentMinor | undefined = await this.StudentMinorRepository.findOne(request.params.id);
+		const studentMinorToRemove: StudentMinor | undefined = await this.StudentMinorRepository.findOne(
+			request.params.id,
+		);
 		try {
 			if (studentMinorToRemove) {
 				await this.StudentMinorRepository.remove(studentMinorToRemove);
@@ -32,5 +34,5 @@ export class StudentMinorController {
 		} catch (error) {
 			console.error(error);
 		}
-    }
+	}
 }

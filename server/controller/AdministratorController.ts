@@ -22,7 +22,9 @@ export class AdministratorController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const administratorToRemove: Administrator | undefined = await this.administratorRepository.findOne(request.params.id);
+		const administratorToRemove: Administrator | undefined = await this.administratorRepository.findOne(
+			request.params.id,
+		);
 		try {
 			if (administratorToRemove) {
 				await this.administratorRepository.remove(administratorToRemove);

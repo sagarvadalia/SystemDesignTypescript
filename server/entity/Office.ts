@@ -12,11 +12,9 @@ export class Office extends Room {
 		Object.assign(this, Office);
 	}
 
-    @PrimaryColumn()
-    roomID: number;
+	@PrimaryColumn()
+	roomID: number;
 
-    @Column({ type: 'text', nullable: false})
-    secretaryName: string;
-
-	
+	@Column({ type: 'text', nullable: false })
+	secretaryName: string;
 }

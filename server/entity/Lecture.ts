@@ -12,11 +12,9 @@ export class Lecture extends Room {
 		Object.assign(this, Lecture);
 	}
 
-    @PrimaryColumn()
-    roomID: number;
+	@PrimaryColumn()
+	roomID: number;
 
-    @Column({ type: 'integer', nullable: false})
-    numOfSeats: number;
-
-	
+	@Column({ type: 'integer', nullable: false })
+	numOfSeats: number;
 }

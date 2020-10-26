@@ -22,7 +22,9 @@ export class GraduatePartTimeController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const GraduatePartTimeToRemove: GraduatePartTime | undefined = await this.GraduatePartTimeRepository.findOne(request.params.id);
+		const GraduatePartTimeToRemove: GraduatePartTime | undefined = await this.GraduatePartTimeRepository.findOne(
+			request.params.id,
+		);
 		try {
 			if (GraduatePartTimeToRemove) {
 				await this.GraduatePartTimeRepository.remove(GraduatePartTimeToRemove);

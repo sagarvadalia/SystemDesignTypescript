@@ -12,24 +12,22 @@ export class GraduateFullTime extends Graduate {
 		Object.assign(this, GraduateFullTime);
 	}
 
-	
-
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'semester name is required' })
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })
-    hasMeanPlan: boolean;
+	hasMeanPlan: boolean;
 
-    @Column({type: 'boolean', nullable: false})
-    isDorming: boolean;
-    
-    @Column({ type: 'integer', nullable: false })
-    maxCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
-    minCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
+	@Column({ type: 'boolean', nullable: false })
+	isDorming: boolean;
+
+	@Column({ type: 'integer', nullable: false })
+	maxCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
+	minCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
 	currentCredits: number;
 }

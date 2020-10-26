@@ -24,7 +24,9 @@ export class StudentHistoryController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const studentHistoryToRemove: StudentHistory | undefined = await this.StudentHistoryRepository.findOne(request.params.id);
+		const studentHistoryToRemove: StudentHistory | undefined = await this.StudentHistoryRepository.findOne(
+			request.params.id,
+		);
 		try {
 			if (studentHistoryToRemove) {
 				await this.StudentHistoryRepository.remove(studentHistoryToRemove);

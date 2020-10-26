@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { UnderGraduate} from '../entity/UnderGraduate';
+import { UnderGraduate } from '../entity/UnderGraduate';
 import { validate, validateOrReject } from 'class-validator';
 
 export class UnderGraduateController {
@@ -24,7 +24,9 @@ export class UnderGraduateController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const UnderGraduateToRemove: UnderGraduate | undefined = await this.UnderGraduateRepository.findOne(request.params.id);
+		const UnderGraduateToRemove: UnderGraduate | undefined = await this.UnderGraduateRepository.findOne(
+			request.params.id,
+		);
 		try {
 			if (UnderGraduateToRemove) {
 				await this.UnderGraduateRepository.remove(UnderGraduateToRemove);

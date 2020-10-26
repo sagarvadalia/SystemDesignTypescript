@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { FacultyFullTime} from '../entity/FacultyFullTime';
+import { FacultyFullTime } from '../entity/FacultyFullTime';
 import { validate, validateOrReject } from 'class-validator';
 
 export class FacultyFullTimeController {
@@ -24,7 +24,9 @@ export class FacultyFullTimeController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const FacultyFullTimeToRemove: FacultyFullTime | undefined = await this.FacultyFullTimeRepository.findOne(request.params.id);
+		const FacultyFullTimeToRemove: FacultyFullTime | undefined = await this.FacultyFullTimeRepository.findOne(
+			request.params.id,
+		);
 		try {
 			if (FacultyFullTimeToRemove) {
 				await this.FacultyFullTimeRepository.remove(FacultyFullTimeToRemove);

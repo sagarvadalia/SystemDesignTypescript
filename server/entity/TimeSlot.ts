@@ -9,5 +9,4 @@ export class TimeSlot extends BaseEntity {
 
 	@PrimaryColumn()
 	slotID: number;
-
 }

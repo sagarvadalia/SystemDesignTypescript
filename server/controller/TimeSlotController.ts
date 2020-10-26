@@ -32,5 +32,5 @@ export class TimeSlotController {
 		} catch (error) {
 			console.error(error);
 		}
-    }
+	}
 }

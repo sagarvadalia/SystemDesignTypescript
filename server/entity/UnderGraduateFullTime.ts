@@ -10,24 +10,22 @@ export class UnderGraduateFullTime extends UnderGraduate {
 		Object.assign(this, UnderGraduateFullTime);
 	}
 
-	
-
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'semester name is required' })
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })
-    hasMeanPlan: boolean;
+	hasMeanPlan: boolean;
 
-    @Column({ type: 'boolean', nullable: false})
-    isDorming: boolean;
-    
-    @Column({ type: 'integer', nullable: false })
-    maxCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
-    minCreditsAllowed: number;
-    
-    @Column({ type: 'integer', nullable: false })
+	@Column({ type: 'boolean', nullable: false })
+	isDorming: boolean;
+
+	@Column({ type: 'integer', nullable: false })
+	maxCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
+	minCreditsAllowed: number;
+
+	@Column({ type: 'integer', nullable: false })
 	currentCredits: number;
 }
