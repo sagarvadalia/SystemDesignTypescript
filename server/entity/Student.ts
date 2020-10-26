@@ -11,7 +11,7 @@ export class Student extends User {
 
     @Column()
     @IsNotEmpty({ message: 'GPA is required' })
-    sGPA: number;
+    sGPA: string;
 
     @Column()
     @IsNotEmpty({ message: 'Grad year is required' })
