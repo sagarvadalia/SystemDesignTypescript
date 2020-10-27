@@ -32,7 +32,7 @@ export class Advisor extends BaseEntity {
 	@IsNotEmpty({ message: 'Date assigned must be provided' })
 	dateAssigned: string;
 	@CreateDateColumn()
-	createdAt: string;
+	createdAt: Date;
 	@UpdateDateColumn()
-	updatedAt: string;
+	updatedAt: Date;
 }

@@ -1,5 +1,6 @@
 import { IsEmail, IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, CreateDateColumn, Entity, OneToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { FacultyDepartment } from './FacultyDepartment';
 
 @Entity()
 export class Department extends BaseEntity {
@@ -7,6 +8,10 @@ export class Department extends BaseEntity {
 		super();
 		Object.assign(this, Department);
 	}
+	// This sets an association between Departments and FacultyDepartments
+	// set to cascade so that you can create a faculty and fill in the join table with one query
+	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
+	public FacultyDepartment!: FacultyDepartment[];
 	@PrimaryColumn({ type: 'integer' })
 	deptID: number;
 
@@ -26,4 +31,8 @@ export class Department extends BaseEntity {
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Department managers name is required' })
 	deptManager: string;
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }
