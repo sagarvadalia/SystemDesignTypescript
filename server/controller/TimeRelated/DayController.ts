@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Day } from '../../TimeRelated/Day';
+import { Day } from '../../entity/TimeRelated/Day';
 import { validate, validateOrReject } from 'class-validator';
 
 export class DayController {

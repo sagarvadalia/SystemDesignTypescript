@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 import { Routes } from './routes';
-import { Semester } from './TimeRelated/Semester';
+import { Semester } from './entity/TimeRelated/Semester';
 import { ResponseError } from './util/ResponseError';
 import morgan = require('morgan');
 import compression = require('compression');
