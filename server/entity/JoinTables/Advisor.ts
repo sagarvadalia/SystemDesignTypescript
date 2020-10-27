@@ -1,15 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	CreateDateColumn,
-	Entity,
-	JoinColumn,
-	ManyToOne,
-	OneToOne,
-	PrimaryColumn,
-	UpdateDateColumn,
-} from 'typeorm';
+import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, UpdateDateColumn } from 'typeorm';
 import { Faculty } from '../Users/Faculty';
 import { Student } from '../Users/Student';
 
@@ -28,9 +18,9 @@ export class Advisor extends BaseEntity {
 	@JoinColumn({ name: 'sid' })
 	public student!: Student;
 
-	@Column({ type: 'text', nullable: false })
+	@Column({ type: 'date' })
 	@IsNotEmpty({ message: 'Date assigned must be provided' })
-	dateAssigned: string;
+	dateAssigned: Date;
 	@CreateDateColumn()
 	createdAt: Date;
 	@UpdateDateColumn()

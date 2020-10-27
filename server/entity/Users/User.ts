@@ -1,5 +1,5 @@
 import { IsEmail, IsMobilePhone, IsNotEmpty } from 'class-validator';
-import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
+import { Entity, PrimaryColumn, Column, BaseEntity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export abstract class User extends BaseEntity {
@@ -7,7 +7,7 @@ export abstract class User extends BaseEntity {
 		super();
 		Object.assign(this, User);
 	}
-	@PrimaryColumn({ type: 'integer' })
+	@PrimaryGeneratedColumn({ type: 'integer' })
 	userID: number;
 
 	@Column({ type: 'text', nullable: false, width: 50, unique: true })

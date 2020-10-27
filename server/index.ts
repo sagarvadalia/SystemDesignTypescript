@@ -9,6 +9,9 @@ import morgan = require('morgan');
 import compression = require('compression');
 import session = require('express-session');
 import path = require('path');
+import { Student } from './entity/Users/Student';
+import { Advisor } from './entity/JoinTables/Advisor';
+import { Faculty } from './entity/Users/Faculty';
 
 createConnection()
 	.then(async (connection) => {
@@ -69,10 +72,40 @@ createConnection()
 
 		// start express server
 		app.listen(3000);
-		const semester = [
-			{ semesterName: 'spring', yearNum: 2019 },
-			{ semesterName: 'fall', yearNum: 2020 },
-		];
+
+		const faculty = await connection.manager.create(Faculty, {
+			userName: 'gupta',
+			isFullTime: true,
+			deptID: 5,
+			fRank: 5,
+			fOfficeNumber: 'ab',
+			userEmail: 'gupta@email',
+			userPassword: 'asdaksd',
+			userPhone: '5155155155',
+			userAddress: '123 Main St',
+			userType: 'faculty',
+		});
+		await connection.manager.save(faculty);
+		const student = await connection.manager.create(Student, {
+			userName: 'sagar',
+			userEmail: 'sagar@gmail.com',
+			userPhone: '5165165161',
+			userAddress: '156 main street',
+			userType: 'student',
+			userPassword: 'asdasd',
+			sGPA: '5.0',
+			totalCredits: 50,
+			sDOB: '05-12-3123',
+			sGradYear: 2020,
+			studentType: 'undergrad',
+		});
+		await connection.manager.save(student);
+		const advisor = await connection.manager.create(Advisor, {
+			student: student,
+			faculty: faculty,
+			dateAssigned: new Date(),
+		});
+		await connection.manager.save(advisor);
 
 		console.log('Express server has started on port 3000. Open http://localhost:3000/users to see results');
 	})
