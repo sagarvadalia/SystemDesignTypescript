@@ -1,5 +1,16 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	CreateDateColumn,
+	Entity,
+	JoinColumn,
+	ManyToOne,
+	OneToOne,
+	PrimaryColumn,
+	UpdateDateColumn,
+	OneToMany,
+} from 'typeorm';
 import { Faculty } from '../Users/Faculty';
 import { TimeSlot } from '../TimeRelated/TimeSlot';
 import { Course } from './Course';
@@ -15,7 +26,7 @@ export class Class extends BaseEntity {
 		Object.assign(this, Class);
 	}
 
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, {cascade: true})
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true })
 	public enrollment!: Enrollment;
 	@PrimaryColumn()
 	classCRN: number;
