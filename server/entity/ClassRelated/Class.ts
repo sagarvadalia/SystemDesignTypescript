@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { Enrollment } from '../JoinTables/Enrollment';
 
 // Need to handle the association with course
 @Entity()
@@ -9,8 +10,10 @@ export class Class extends BaseEntity {
 		Object.assign(this, Class);
 	}
 
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, {cascade: true})
+	public enrollment!: Enrollment;
 	@PrimaryColumn()
-	classID: number;
+	classCRN: number;
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'section is required' })
