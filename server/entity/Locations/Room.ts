@@ -11,7 +11,7 @@ export class Room extends BaseEntity {
 	}
 
 	//Relationship to Class
-	@OneToMany(() => Class, (classes) => classes.faculty, {})
+	@OneToMany(() => Class, (classes) => classes.room, {})
 	public classes!: Class[];
 
 	@PrimaryColumn()
