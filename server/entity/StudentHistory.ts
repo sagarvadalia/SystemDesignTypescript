@@ -19,11 +19,11 @@ export class StudentHistory extends BaseEntity {
 		Object.assign(this, StudentHistory);
 	}
 
-	@OneToOne(() => Enrollment, (enrollment) => enrollment.student.userID)
+	@OneToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
 	@JoinColumn({ name: 'sID' })
 	public enrollment!: Enrollment;
 
-	@OneToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN)
+	@OneToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
 	@JoinColumn({ name: 'classCRN' })
 	public enrollments!: Enrollment;
 
