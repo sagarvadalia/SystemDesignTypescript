@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Researcher } from '../entity/Researcher';
+import { Researcher } from '../entity/Users/Researcher';
 import { validate, validateOrReject } from 'class-validator';
 
 export class ResearcherController {

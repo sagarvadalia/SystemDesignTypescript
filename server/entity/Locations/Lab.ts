@@ -1,20 +1,20 @@
 import { IsNotEmpty } from 'class-validator';
 import { Col } from 'sequelize/types/lib/utils';
 import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
-import { Graduate } from './Graduate';
-import { Room } from './Room';
-import { UnderGraduate } from './UnderGraduate';
+import { Graduate } from '../Users/Graduate';
+import { Room } from '../Room';
+import { UnderGraduate } from '../UnderGraduate';
 
 @Entity()
-export class Lecture extends Room {
+export class Lab extends Room {
 	constructor(...args) {
 		super();
-		Object.assign(this, Lecture);
+		Object.assign(this, Lab);
 	}
 
 	@PrimaryColumn()
 	roomID: number;
 
 	@Column({ type: 'integer', nullable: false })
-	numOfSeats: number;
+	numOfComputers: number;
 }

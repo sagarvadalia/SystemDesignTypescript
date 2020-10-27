@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Faculty } from '../entity/Faculty';
+import { Faculty } from '../entity/Users/Faculty';
 import { validate, validateOrReject } from 'class-validator';
 
 export class FacultyController {

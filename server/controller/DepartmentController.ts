@@ -1,7 +1,7 @@
 import { validate } from 'class-validator';
 import { NextFunction, Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import { Department } from '../entity/Department';
+import { Department } from '../entity/Locations/Department';
 
 export class DepartmentController {
 	private departmentRepository = getRepository(Department);

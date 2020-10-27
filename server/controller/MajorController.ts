@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Major } from '../entity/Major';
+import { Major } from '../entity/ClassRelated/Major';
 import { validate, validateOrReject } from 'class-validator';
 
 export class MajorController {

@@ -1,8 +1,8 @@
 import { IsNotEmpty } from 'class-validator';
 import { Column, CreateDateColumn, Entity, OneToMany, UpdateDateColumn } from 'typeorm';
 import { Advisor } from './Advisor';
-import { FacultyDepartment } from './FacultyDepartment';
-import { User } from './User';
+import { FacultyDepartment } from '../FacultyDepartment';
+import { User } from '../User';
 
 @Entity()
 export class Faculty extends User {

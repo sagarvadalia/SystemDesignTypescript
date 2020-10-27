@@ -1,6 +1,6 @@
 import { IsEmail, IsNotEmpty } from 'class-validator';
 import { BaseEntity, Column, CreateDateColumn, Entity, OneToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
-import { FacultyDepartment } from './FacultyDepartment';
+import { FacultyDepartment } from '../FacultyDepartment';
 
 @Entity()
 export class Department extends BaseEntity {

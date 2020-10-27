@@ -10,8 +10,8 @@ import {
 	PrimaryColumn,
 	UpdateDateColumn,
 } from 'typeorm';
-import { Faculty } from '../entity/Faculty';
-import { Student } from '../entity/Student';
+import { Faculty } from './Faculty';
+import { Student } from './Student';
 
 @Entity()
 export class Advisor extends BaseEntity {

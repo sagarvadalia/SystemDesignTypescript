@@ -2,7 +2,7 @@ import * as bodyParser from 'body-parser';
 import express, { Request, Response } from 'express';
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import { Class } from './entity/Class';
+import { Class } from './entity/ClassRelated/Class';
 import { Routes } from './routes';
 import { ResponseError } from './util/ResponseError';
 import { Room } from './entity/Room';
@@ -11,10 +11,10 @@ import compression = require('compression');
 import session = require('express-session');
 import path = require('path');
 import { Semester } from './entity/Semester';
-import { Researcher } from './entity/Researcher';
-import { Advisor } from './entity/Advisor';
-import { Student } from './entity/Student';
-import { Faculty } from './entity/Faculty';
+import { Researcher } from './entity/Users/Researcher';
+import { Advisor } from './entity/Users/Advisor';
+import { Student } from './entity/Users/Student';
+import { Faculty } from './entity/Users/Faculty';
 
 createConnection()
 	.then(async (connection) => {

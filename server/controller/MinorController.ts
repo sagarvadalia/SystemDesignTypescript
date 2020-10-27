@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Minor } from '../entity/Minor';
+import { Minor } from '../entity/ClassRelated/Minor';
 import { validate, validateOrReject } from 'class-validator';
 
 export class MinorController {

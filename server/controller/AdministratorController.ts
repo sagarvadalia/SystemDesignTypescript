@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Administrator } from '../entity/Administrator';
+import { Administrator } from '../entity/Users/Administrator';
 import { validate, validateOrReject } from 'class-validator';
 
 export class AdministratorController {

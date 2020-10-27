@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Advisor } from '../entity/Advisor';
+import { Advisor } from '../entity/Users/Advisor';
 import { validate, validateOrReject } from 'class-validator';
 
 export class AdvisorController {

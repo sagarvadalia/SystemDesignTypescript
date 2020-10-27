@@ -1,7 +1,7 @@
 import { validate } from 'class-validator';
 import { NextFunction, Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import { Office } from '../entity/Office';
+import { Office } from '../entity/Locations/Office';
 
 export class OfficeController {
 	private officeRepository = getRepository(Office);

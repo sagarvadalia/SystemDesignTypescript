@@ -1,7 +1,7 @@
 import { validate } from 'class-validator';
 import { NextFunction, Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import { Course } from '../entity/Course';
+import { Course } from '../entity/ClassRelated/Course';
 
 export class CourseController {
 	private courseRepository = getRepository(Course);
