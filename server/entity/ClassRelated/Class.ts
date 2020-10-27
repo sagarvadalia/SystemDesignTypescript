@@ -10,7 +10,7 @@ export class Class extends BaseEntity {
 		Object.assign(this, Class);
 	}
 
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, {cascade: true})
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true })
 	public enrollment!: Enrollment;
 	@PrimaryColumn()
 	classCRN: number;

@@ -12,13 +12,13 @@ export class Enrollment extends BaseEntity {
 		Object.assign(this, Enrollment);
 	}
 
-    @ManyToOne(() => Class, (classes) => classes.enrollment, {primary: true})
-    @JoinColumn({name: 'classCRN'})
-    public class!: Class;
+	@ManyToOne(() => Class, (classes) => classes.enrollment, { primary: true })
+	@JoinColumn({ name: 'classCRN' })
+	public class!: Class;
 
-    @ManyToOne(() => Student, (student) => student.userID, {primary: true})
-    @JoinColumn({name: 'sID'})
-    public student!: Student;
+	@ManyToOne(() => Student, (student) => student.userID, { primary: true })
+	@JoinColumn({ name: 'sID' })
+	public student!: Student;
 
 	@Column({ type: 'date', nullable: false })
 	@IsNotEmpty({ message: 'enrollDate must be provided ' })
