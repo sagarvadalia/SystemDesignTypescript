@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { Class } from './Class';
 
 @Entity()
 export class Course extends BaseEntity {
@@ -7,6 +8,10 @@ export class Course extends BaseEntity {
 		super();
 		Object.assign(this, Course);
 	}
+
+	//Association with Class
+	@OneToMany(() => Class, (classes) => classes.courses)
+	public classes!: Class[];
 
 	@PrimaryColumn({ type: 'integer' })
 	courseID: number;

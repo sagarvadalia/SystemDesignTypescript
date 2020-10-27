@@ -1,8 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { Col } from 'sequelize/types/lib/utils';
-import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { Graduate } from './Graduate';
-import { UnderGraduate } from './UnderGraduate';
 
 // Need to handle the association with course
 @Entity()
@@ -13,7 +11,7 @@ export class GraduateFullTime extends Graduate {
 	}
 
 	@Column({ type: 'text', nullable: false })
-	@IsNotEmpty({ message: 'semester name is required' })
+	@IsNotEmpty({ message: 'Tuition is required' })
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })

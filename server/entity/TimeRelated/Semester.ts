@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Class } from '../ClassRelated/Class';
+import { BaseEntity, Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 
 // Need to handle the association with course
 @Entity()
@@ -8,6 +9,10 @@ export class Semester extends BaseEntity {
 		super();
 		Object.assign(this, Semester);
 	}
+
+	//Relationship to Class
+	@OneToMany(() => Class, (classes) => classes.semester, {})
+	public classes!: Class[];
 
 	@PrimaryGeneratedColumn()
 	semesterID: number;
@@ -18,4 +23,9 @@ export class Semester extends BaseEntity {
 
 	@Column({ type: 'integer', nullable: false })
 	yearNum: number;
+
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }
