@@ -5,6 +5,7 @@ import { TimeSlot } from '../TimeRelated/TimeSlot';
 import { Course } from './Course';
 import { Room } from '../Locations/Room';
 import { Semester } from '../TimeRelated/Semester';
+import { Enrollment } from '../JoinTables/Enrollment';
 
 // Need to handle the association with course
 @Entity()
@@ -14,6 +15,8 @@ export class Class extends BaseEntity {
 		Object.assign(this, Class);
 	}
 
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, {cascade: true})
+	public enrollment!: Enrollment;
 	@PrimaryColumn()
 	classCRN: number;
 

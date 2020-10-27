@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { Column, CreateDateColumn, Entity, UpdateDateColumn } from 'typeorm';
 import { User } from './User';
 
 @Entity()
@@ -13,7 +13,11 @@ export class Administrator extends User {
 	@IsNotEmpty({ message: 'Admin salary must be provided' })
 	adminSalary: string;
 
-	@Column({ nullable: false, type: 'integer' })
+	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Admin Office Number must be provided' })
-	adminOfficeNum: number;
+	adminOfficeNum: string;
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }

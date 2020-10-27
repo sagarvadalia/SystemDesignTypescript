@@ -1,6 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity, JoinColumn, OneToMany } from 'typeorm';
+import { Column, CreateDateColumn, Entity, JoinColumn, OneToMany, UpdateDateColumn } from 'typeorm';
 import { Advisor } from '../JoinTables/Advisor';
+import { Enrollment } from '../JoinTables/Enrollment';
 import { User } from './User';
 
 @Entity()
@@ -13,6 +14,8 @@ export class Student extends User {
 	// set to cascade so that when a student is inserted, that information also populates the advisor table
 	@OneToMany(() => Advisor, (advisor) => advisor.student, { cascade: true })
 	public advisors!: Advisor[];
+	@OneToMany(()=> Enrollment, (enrollment) => enrollment.student, {cascade: true})
+	public enrollment!: Enrollment[];
 	@Column()
 	@IsNotEmpty({ message: 'GPA is required' })
 	sGPA: string;
@@ -32,4 +35,8 @@ export class Student extends User {
 	@Column()
 	@IsNotEmpty({ message: 'Type of student is required' })
 	studentType: string;
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }

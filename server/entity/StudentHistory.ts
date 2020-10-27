@@ -1,5 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { ENOPROTOOPT } from 'constants';
+import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, OneToOne, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { Enrollment } from './JoinTables/Enrollment';
 
 @Entity()
 export class StudentHistory extends BaseEntity {
@@ -8,13 +10,18 @@ export class StudentHistory extends BaseEntity {
 		Object.assign(this, StudentHistory);
 	}
 
-	@PrimaryColumn()
-	classCRN: number;
+	
+	@OneToOne(() => Enrollment, enrollment => enrollment.student.userID)
+	@JoinColumn({name: 'sID'})
+	public enrollment!: Enrollment;
+	
+	@OneToOne(() => Enrollment, enrollment => enrollment.class.classCRN)
+	@JoinColumn({name: 'classCRN'})
+	public enrollments!: Enrollment;
 
-	@Column({ type: 'integer', nullable: false })
-	@IsNotEmpty({ message: 'sID must be provided ' })
-	sID: number;
 
+
+	
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'grade received must be provided' })
 	gradeReceived: string;
@@ -22,4 +29,8 @@ export class StudentHistory extends BaseEntity {
 	@Column({ type: 'integer', nullable: false })
 	@IsNotEmpty({ message: 'semester ID must be provided ' })
 	semesterID: number;
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }

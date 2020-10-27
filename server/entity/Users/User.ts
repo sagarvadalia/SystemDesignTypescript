@@ -7,7 +7,7 @@ export abstract class User extends BaseEntity {
 		super();
 		Object.assign(this, User);
 	}
-	@PrimaryColumn({ type: 'integer' })
+	@PrimaryGeneratedColumn({ type: 'integer' })
 	userID: number;
 
 	@Column({ type: 'text', nullable: false, width: 50, unique: true })
