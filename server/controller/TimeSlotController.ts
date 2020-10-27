@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { TimeSlot } from '../entity/TimeSlot';
+import { TimeSlot } from '../TimeRelated/TimeSlot';
 import { validate, validateOrReject } from 'class-validator';
 
 export class TimeSlotController {

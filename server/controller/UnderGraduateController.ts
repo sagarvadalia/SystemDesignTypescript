@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { UnderGraduate } from '../entity/UnderGraduate';
+import { UnderGraduate } from '../entity/Users/UnderGraduate';
 import { validate, validateOrReject } from 'class-validator';
 
 export class UnderGraduateController {

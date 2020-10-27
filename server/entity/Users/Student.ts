@@ -1,7 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
 import { Column, Entity, JoinColumn, OneToMany } from 'typeorm';
 import { Advisor } from './Advisor';
-import { User } from '../User';
+import { User } from './User';
 
 @Entity()
 export class Student extends User {

@@ -1,6 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
 import { Column, Entity } from 'typeorm';
-import { Student } from './Users/Student';
+import { Student } from './Student';
 
 @Entity()
 export class UnderGraduate extends Student {

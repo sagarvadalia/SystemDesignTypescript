@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Prerequisite } from '../entity/Prerequisite';
+import { Prerequisite } from '../entity/ClassRelated/Prerequisite';
 import { validate, validateOrReject } from 'class-validator';
 
 export class PrerequisiteController {

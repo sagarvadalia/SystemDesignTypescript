@@ -2,7 +2,7 @@ import { IsNotEmpty } from 'class-validator';
 import { Col } from 'sequelize/types/lib/utils';
 import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 import { Graduate } from './Graduate';
-import { UnderGraduate } from '../UnderGraduate';
+import { UnderGraduate } from './UnderGraduate';
 
 // Need to handle the association with course
 @Entity()

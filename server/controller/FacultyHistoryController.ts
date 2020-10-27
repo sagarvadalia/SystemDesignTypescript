@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { FacultyHistory } from '../entity/FacultyHistory';
+import { FacultyHistory } from '../entity/JoinTables/FacultyHistory';
 import { validate, validateOrReject } from 'class-validator';
 
 export class FacultyHistoryController {

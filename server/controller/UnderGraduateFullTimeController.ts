@@ -1,7 +1,7 @@
 import { validate } from 'class-validator';
 import { NextFunction, Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import { UnderGraduateFullTime } from '../entity/UnderGraduateFullTime';
+import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
 
 export class UnderGraduateFullTimeController {
 	private UnderGraduateFullTimeRepository = getRepository(UnderGraduateFullTime);

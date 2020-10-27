@@ -1,7 +1,7 @@
 import { validate } from 'class-validator';
 import { NextFunction, Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import { Period } from '../entity/Period';
+import { Period } from '../TimeRelated/Period';
 
 export class PeriodController {
 	private periodRepository = getRepository(Period);

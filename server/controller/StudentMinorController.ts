@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { StudentMinor } from '../entity/StudentMinor';
+import { StudentMinor } from '../entity/JoinTables/StudentMinor';
 import { validate, validateOrReject } from 'class-validator';
 
 export class StudentMinorController {

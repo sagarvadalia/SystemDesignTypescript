@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { Attendance } from '../entity/ClassRelated/Attendance';
+import { Attendance } from '../entity/JoinTables/Attendance';
 import { validate, validateOrReject } from 'class-validator';
 
 export class AttendanceController {

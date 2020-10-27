@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import { User } from '../entity/User';
+import { User } from '../entity/Users/User';
 
 export class UserController {
 	private userRepository = getRepository(User);
