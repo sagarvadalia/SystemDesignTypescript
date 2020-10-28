@@ -1,5 +1,13 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	CreateDateColumn,
+	Entity,
+	PrimaryColumn,
+	PrimaryGeneratedColumn,
+	UpdateDateColumn,
+} from 'typeorm';
 import { UnderGraduate } from './UnderGraduate';
 
 // Need to handle the association with course
@@ -28,4 +36,9 @@ export class UnderGraduateFullTime extends UnderGraduate {
 
 	@Column({ type: 'integer', nullable: false })
 	currentCredits: number;
+
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }

@@ -73,15 +73,16 @@ createConnection()
 
 		// start express server
 		// Example of creating an Advisor
-		/*app.listen(3000);
+
+		app.listen(3000);
 
 		const faculty = await connection.manager.create(Faculty, {
-			userName: 'gupta',
+			userName: 'guptaa',
 			isFullTime: true,
 			deptID: 5,
 			fRank: 5,
 			fOfficeNumber: 'ab',
-			userEmail: 'gupta@email',
+			userEmail: 'guptaa@email',
 			userPassword: 'asdaksd',
 			userPhone: '5155155155',
 			userAddress: '123 Main St',
@@ -107,14 +108,15 @@ createConnection()
 			faculty: faculty,
 			dateAssigned: new Date(),
 		});
-		await connection.manager.save(advisor);*/
+		await connection.manager.save(advisor);
 
 		// TESTING Enrollment
-		// const enrollment = await connection.create(Enrollment, {
-		// 	enrollDate: new Date(),
-		// 	grade: 'A',
-		// 	student: student,
-		// });
+		const enrollment = await connection.manager.create(Enrollment, {
+			enrollDate: new Date(),
+			grade: 'A',
+			student: student,
+		});
+		await connection.manager.save(enrollment);
 
 		console.log('Express server has started on port 3000. Open http://localhost:3000/users to see results');
 	})
