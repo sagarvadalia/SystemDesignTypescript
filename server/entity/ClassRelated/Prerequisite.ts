@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
 export class Prerequisite extends BaseEntity {
@@ -15,4 +15,8 @@ export class Prerequisite extends BaseEntity {
 
 	@Column()
 	yearCreated: number;
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }
