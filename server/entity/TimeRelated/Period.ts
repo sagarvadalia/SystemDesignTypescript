@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, CreateDateColumn, Entity, OneToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { TimeSlotPeriod } from '../JoinTables/TimeslotPeriod';
 
 @Entity()
 export class Period extends BaseEntity {
@@ -7,6 +8,10 @@ export class Period extends BaseEntity {
 		super();
 		Object.assign(this, Period);
 	}
+	// This sets an association between Period and Timeslot
+
+	@OneToMany(() => TimeSlotPeriod, (timeSlotPeriod) => timeSlotPeriod.period, { cascade: true })
+	public timeSlotPeriod: TimeSlotPeriod[];
 
 	@PrimaryColumn({ type: 'integer' })
 	periodID: number;
@@ -18,4 +23,8 @@ export class Period extends BaseEntity {
 	@Column({ type: 'text', nullable: false, width: 10, unique: false })
 	@IsNotEmpty({ message: 'End Time is required' })
 	endTime: string;
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
 }
