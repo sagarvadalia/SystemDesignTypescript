@@ -26,6 +26,17 @@ export class Class extends BaseEntity {
 		Object.assign(this, Class);
 	}
 
+	@Column({ type: 'text', nullable: false })
+	@IsNotEmpty({ message: 'section is required' })
+	classSection: string;
+	@Column({ type: 'integer', nullable: false })
+	numOfSeats: number;
+
+	@CreateDateColumn()
+	createdAt: Date;
+	@UpdateDateColumn()
+	updatedAt: Date;
+
 	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true })
 	public enrollment!: Enrollment;
 	@PrimaryColumn()
@@ -38,13 +49,8 @@ export class Class extends BaseEntity {
 
 	//FK from Faculty
 	@OneToOne(() => Faculty)
-	@JoinColumn()
+	@JoinColumn({ name: 'fid' })
 	public faculty!: Faculty;
-
-	@Column({ type: 'text', nullable: false })
-	@IsNotEmpty({ message: 'section is required' })
-	classSection: string;
-
 	//FK from TimeSlot
 	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes)
 	@JoinColumn({ name: 'slotID' })
@@ -55,16 +61,8 @@ export class Class extends BaseEntity {
 	@JoinColumn({ name: 'roomID' })
 	public room!: Room;
 
-	@Column({ type: 'integer', nullable: false })
-	numOfSeats: number;
-
 	//FK from Semester
 	@ManyToOne(() => Semester, (semester) => semester.classes)
 	@JoinColumn({ name: 'semesterID' })
 	public semester!: Semester;
-
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 }
