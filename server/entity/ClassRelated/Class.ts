@@ -25,43 +25,41 @@ export class Class extends BaseEntity {
 		super();
 		Object.assign(this, Class);
 	}
+	@PrimaryColumn()
+	classCRN: number;
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'section is required' })
 	classSection: string;
+
 	@Column({ type: 'integer', nullable: false })
 	numOfSeats: number;
 
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
-
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true })
+	// One Class has many enrollments
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true, eager: true })
 	public enrollment!: Enrollment;
-	@PrimaryColumn()
-	classCRN: number;
 
-	//FK from Course
+	//Many Classes belong to one Course
 	@ManyToOne(() => Course, (course) => course.classes)
 	@JoinColumn({ name: 'courseID' })
 	public courses!: Course;
 
-	//FK from Faculty
+	//One class has one faculty
 	@OneToOne(() => Faculty)
 	@JoinColumn({ name: 'fid' })
 	public faculty!: Faculty;
-	//FK from TimeSlot
+
+	//Many classes belong to one timeslot
 	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes)
 	@JoinColumn({ name: 'slotID' })
 	public timeslots!: TimeSlot;
 
-	//FK from Room
+	//Many Classes belong to one Room
 	@ManyToOne(() => Room, (room) => room.classes)
 	@JoinColumn({ name: 'roomID' })
 	public room!: Room;
 
-	//FK from Semester
+	//Many Classes belong to one semester
 	@ManyToOne(() => Semester, (semester) => semester.classes)
 	@JoinColumn({ name: 'semesterID' })
 	public semester!: Semester;
