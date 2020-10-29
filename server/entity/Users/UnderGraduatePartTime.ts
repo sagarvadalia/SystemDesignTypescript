@@ -1,12 +1,8 @@
 import { IsNotEmpty } from 'class-validator';
 import {
-	BaseEntity,
 	Column,
-	CreateDateColumn,
-	Entity,
-	PrimaryColumn,
-	PrimaryGeneratedColumn,
-	UpdateDateColumn,
+
+	Entity
 } from 'typeorm';
 import { UnderGraduate } from './UnderGraduate';
 
@@ -33,8 +29,4 @@ export class UnderGraduatePartTime extends UnderGraduate {
 
 	@Column({ type: 'integer', nullable: false })
 	currentCredits: number;
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 }

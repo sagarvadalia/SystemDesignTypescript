@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { Room } from './Room';
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Building extends BaseEntity {
@@ -8,10 +9,14 @@ export class Building extends BaseEntity {
 		Object.assign(this, Building);
 	}
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	buildingID: number;
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'buildingType must be provided' })
 	buildingType: string;
+
+	//Relationship to Room
+	@OneToMany(() => Room, (rooms) => rooms.buildings, {})
+	public rooms!: Room[];
 }

@@ -17,21 +17,20 @@ export class Prerequisite extends BaseEntity {
 		super();
 		Object.assign(this, Prerequisite);
 	}
-	// Prerequisite grabs course id and prereqID from a many to one assoc. with Courses
-	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
-	@JoinColumn({ name: 'courseID' })
-	public course!: Course;
-	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
-	@JoinColumn({ name: 'prereqID' })
-	public prereq!: Course;
 
 	@Column({ type: 'text', nullable: false })
 	gradeRequired: string;
 
 	@Column()
 	yearCreated: number;
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
+
+	// One Course has many Prerequisites
+	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
+	@JoinColumn({ name: 'courseID' })
+	public course!: Course;
+
+	//One Prerequisite has many courses
+	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
+	@JoinColumn({ name: 'prereqID' })
+	public prereq!: Course;
 }
