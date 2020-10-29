@@ -17,7 +17,7 @@ export class Enrollment extends BaseEntity {
 	public class!: Class;
 
 	@ManyToOne(() => Student, (student) => student.userID, { primary: true })
-	@JoinColumn({ name: 'sID' })
+	@JoinColumn({ name: 'sID'})
 	public student!: Student;
 
 	@Column({ type: 'date', nullable: false })

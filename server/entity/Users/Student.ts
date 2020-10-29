@@ -2,6 +2,7 @@ import { IsNotEmpty } from 'class-validator';
 import { Column, CreateDateColumn, Entity, JoinColumn, OneToMany, UpdateDateColumn } from 'typeorm';
 import { Advisor } from '../JoinTables/Advisor';
 import { Enrollment } from '../JoinTables/Enrollment';
+import { StudentMinor } from '../JoinTables/StudentMinor';
 import { User } from './User';
 
 @Entity()
@@ -16,6 +17,9 @@ export class Student extends User {
 	public advisors!: Advisor[];
 	@OneToMany(()=> Enrollment, (enrollment) => enrollment.student, {cascade: true})
 	public enrollment!: Enrollment[];
+	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.sID, {cascade: true})
+	public studentMinors!: StudentMinor[];
+	
 	@Column()
 	@IsNotEmpty({ message: 'GPA is required' })
 	sGPA: string;
