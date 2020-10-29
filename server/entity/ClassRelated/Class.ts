@@ -1,22 +1,11 @@
 import { IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	CreateDateColumn,
-	Entity,
-	JoinColumn,
-	ManyToOne,
-	OneToOne,
-	PrimaryColumn,
-	UpdateDateColumn,
-	OneToMany,
-} from 'typeorm';
-import { Faculty } from '../Users/Faculty';
-import { TimeSlot } from '../TimeRelated/TimeSlot';
-import { Course } from './Course';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
+import { Enrollment } from '../JoinTables/Enrollment';
 import { Room } from '../Locations/Room';
 import { Semester } from '../TimeRelated/Semester';
-import { Enrollment } from '../JoinTables/Enrollment';
+import { TimeSlot } from '../TimeRelated/TimeSlot';
+import { Faculty } from '../Users/Faculty';
+import { Course } from './Course';
 
 // Need to handle the association with course
 @Entity()
