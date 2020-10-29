@@ -31,11 +31,11 @@ export class StudentHistory extends BaseEntity {
 	
 	// One student History belongs to one enrollment
 	@OneToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
-	@JoinColumn({name: 'sID', referencedColumnName: 'sID'})
+	@JoinColumn({name: 'sID', referencedColumnName: 'student'})
 	public sID!: number;
 
 	@OneToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
-	@JoinColumn({name: 'classCRN', referencedColumnName: 'classCRN'})
+	@JoinColumn({name: 'classCRN', referencedColumnName: 'class'})
 	public classCRN!: number;
 	
 }

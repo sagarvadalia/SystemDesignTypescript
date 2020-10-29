@@ -1,5 +1,6 @@
 import { Class } from '../ClassRelated/Class';
 import { BaseEntity, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { TimeSlotDay } from '../JoinTables/TimeSlotDay';
 
 @Entity()
 export class TimeSlot extends BaseEntity {
@@ -11,6 +12,9 @@ export class TimeSlot extends BaseEntity {
 	//Relationship to Class
 	@OneToMany(() => Class, (classes) => classes.faculty, { cascade: true })
 	public classes!: Class[];
+
+	@OneToMany(() => TimeSlotDay, (timeSlotDay) => timeSlotDay.slotID, {cascade: true})
+	public timeSlotDay!: TimeSlotDay[];
 
 	@PrimaryColumn()
 	slotID: number;

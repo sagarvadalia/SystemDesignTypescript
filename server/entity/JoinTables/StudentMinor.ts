@@ -1,5 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from 'typeorm';
+import { Minor } from '../ClassRelated/Minor';
+import { Student } from '../Users/Student';
 
 @Entity()
 export class StudentMinor extends BaseEntity {
@@ -8,13 +10,15 @@ export class StudentMinor extends BaseEntity {
 		Object.assign(this, StudentMinor);
 	}
 
-	@PrimaryColumn()
-	minorID: number;
+	@ManyToOne(() => Minor, (minors) => minors.minorID, {primary: true})
+	@JoinColumn({name: 'minorID', referencedColumnName: 'minorID'})
+	public minorID!: number;
 
-	@PrimaryColumn()
-	sID: number;
+	@ManyToOne(() => Student, (students) => students.userID, {primary: true})
+	@JoinColumn({name: 'sID', referencedColumnName: 'sID'})
+	public sID!: number;
 
-	@Column({ nullable: false, type: 'text' })
+	@Column({ nullable: false, type: 'date' })
 	@IsNotEmpty({ message: 'Date Declared must be provided' })
-	dateDeclared: string;
+	dateDeclared: Date;
 }
