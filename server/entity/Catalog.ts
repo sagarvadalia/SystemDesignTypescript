@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 
 // Need to handle the association with course
 @Entity()
@@ -8,7 +8,7 @@ export class Catalog extends BaseEntity {
 		Object.assign(this, Catalog);
 	}
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	catalogID: number;
 
 	@Column({ type: 'text', nullable: false })
