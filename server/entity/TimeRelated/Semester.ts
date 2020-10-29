@@ -23,9 +23,4 @@ export class Semester extends BaseEntity {
 
 	@Column({ type: 'integer', nullable: false })
 	yearNum: number;
-
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 }

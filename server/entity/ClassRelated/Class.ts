@@ -24,6 +24,7 @@ export class Class extends BaseEntity {
 	@Column({ type: 'integer', nullable: false })
 	numOfSeats: number;
 
+
 	// One Class has many enrollments
 	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true, eager: true })
 	public enrollment!: Enrollment[];
@@ -37,6 +38,7 @@ export class Class extends BaseEntity {
 	@OneToOne(() => Faculty)
 	@JoinColumn({ name: 'fid' })
 	public faculty!: Faculty;
+
 
 	//Many classes belong to one timeslot
 	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes)

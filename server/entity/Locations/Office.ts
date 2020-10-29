@@ -1,5 +1,4 @@
 import { Column, Entity } from 'typeorm';
-
 import { Room } from './Room';
 
 @Entity()

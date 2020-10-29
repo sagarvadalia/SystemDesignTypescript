@@ -9,5 +9,5 @@ export class Lecture extends Room {
 	}
 
 	@Column({ type: 'integer', nullable: false })
-	numOfSeats: number;
+	numSeats: number;
 }

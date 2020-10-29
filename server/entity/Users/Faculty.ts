@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, CreateDateColumn, Entity, OneToMany, UpdateDateColumn } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { Advisor } from '../JoinTables/Advisor';
 import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
 import { User } from './User';
