@@ -76,47 +76,47 @@ createConnection()
 
 		app.listen(3000);
 
-		const faculty = await connection.manager.create(Faculty, {
-			userName: 'guptaa',
-			isFullTime: true,
-			deptID: 5,
-			fRank: 5,
-			fOfficeNumber: 'ab',
-			userEmail: 'guptaa@email',
-			userPassword: 'asdaksd',
-			userPhone: '5155155155',
-			userAddress: '123 Main St',
-			userType: 'faculty',
-		});
-		await connection.manager.save(faculty);
-		const student = await connection.manager.create(Student, {
-			userName: 'sagar',
-			userEmail: 'sagar@gmail.com',
-			userPhone: '5165165161',
-			userAddress: '156 main street',
-			userType: 'student',
-			userPassword: 'asdasd',
-			sGPA: '5.0',
-			totalCredits: 50,
-			sDOB: '05-12-3123',
-			sGradYear: 2020,
-			studentType: 'undergrad',
-		});
-		await connection.manager.save(student);
-		const advisor = await connection.manager.create(Advisor, {
-			student: student,
-			faculty: faculty,
-			dateAssigned: new Date(),
-		});
-		await connection.manager.save(advisor);
+		// const faculty = await connection.manager.create(Faculty, {
+		// 	userName: 'guptaa',
+		// 	isFullTime: true,
+		// 	deptID: 5,
+		// 	fRank: 5,
+		// 	fOfficeNumber: 'ab',
+		// 	userEmail: 'guptaa@email',
+		// 	userPassword: 'asdaksd',
+		// 	userPhone: '5155155155',
+		// 	userAddress: '123 Main St',
+		// 	userType: 'faculty',
+		// });
+		// await connection.manager.save(faculty);
+		// const student = await connection.manager.create(Student, {
+		// 	userName: 'sagar',
+		// 	userEmail: 'sagar@gmail.com',
+		// 	userPhone: '5165165161',
+		// 	userAddress: '156 main street',
+		// 	userType: 'student',
+		// 	userPassword: 'asdasd',
+		// 	sGPA: '5.0',
+		// 	totalCredits: 50,
+		// 	sDOB: '05-12-3123',
+		// 	sGradYear: 2020,
+		// 	studentType: 'undergrad',
+		// });
+		// await connection.manager.save(student);
+		// const advisor = await connection.manager.create(Advisor, {
+		// 	student: student,
+		// 	faculty: faculty,
+		// 	dateAssigned: new Date(),
+		// });
+		// await connection.manager.save(advisor);
 
-		// TESTING Enrollment
-		const enrollment = await connection.manager.create(Enrollment, {
-			enrollDate: new Date(),
-			grade: 'A',
-			student: student,
-		});
-		await connection.manager.save(enrollment);
+		// // TESTING Enrollment
+		// const enrollment = await connection.manager.create(Enrollment, {
+		// 	enrollDate: new Date(),
+		// 	grade: 'A',
+		// 	student: student,
+		// });
+		// await connection.manager.save(enrollment);
 
 		console.log('Express server has started on port 3000. Open http://localhost:3000/users to see results');
 	})

@@ -1,5 +1,17 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	CreateDateColumn,
+	Entity,
+	PrimaryColumn,
+	UpdateDateColumn,
+	OneToOne,
+	JoinColumn,
+	OneToMany,
+} from 'typeorm';
+import { Class } from '../ClassRelated/Class';
+import { Faculty } from '../Users/Faculty';
 
 @Entity()
 export class FacultyHistory extends BaseEntity {
@@ -7,14 +19,13 @@ export class FacultyHistory extends BaseEntity {
 		super();
 		Object.assign(this, FacultyHistory);
 	}
-
-	@PrimaryColumn()
-	fID: number;
-
-	@PrimaryColumn()
-	classCRN: number;
-
-	@Column({ type: 'integer', nullable: false })
-	@IsNotEmpty({ message: ' semesterID must be provided' })
-	semesterID: number;
+	@OneToOne(() => Class, (classes) => classes.classCRN, { primary: true, cascade: true, eager: true })
+	@JoinColumn([{ name: 'classCRN', referencedColumnName: 'classCRN' }])
+	classCRN!: number;
+	@OneToOne(() => Class, (classes) => classes.faculty, { primary: true, cascade: true, eager: true })
+	@JoinColumn([{ name: 'fid' }])
+	fid!: number;
+	@OneToOne(() => Class, (classes) => classes.semester, { cascade: true, eager: true })
+	@JoinColumn([{ name: 'semesterID' }])
+	semesterID!: number;
 }
