@@ -1,17 +1,5 @@
-import { IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	CreateDateColumn,
-	Entity,
-	PrimaryColumn,
-	UpdateDateColumn,
-	OneToOne,
-	JoinColumn,
-	OneToMany,
-} from 'typeorm';
+import { BaseEntity, Entity, JoinColumn, OneToOne } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
-import { Faculty } from '../Users/Faculty';
 
 @Entity()
 export class FacultyHistory extends BaseEntity {

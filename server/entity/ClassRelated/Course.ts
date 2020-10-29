@@ -1,7 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 import { Class } from './Class';
-import { Prerequisite } from './Prerequisite';
 
 @Entity()
 export class Course extends BaseEntity {
@@ -9,11 +8,6 @@ export class Course extends BaseEntity {
 		super();
 		Object.assign(this, Course);
 	}
-
-	//Association with Class
-	@OneToMany(() => Class, (classes) => classes.courses)
-	public classes!: Class[];
-
 	@PrimaryColumn({ type: 'integer' })
 	courseID: number;
 
@@ -28,4 +22,8 @@ export class Course extends BaseEntity {
 	@Column()
 	@IsNotEmpty({ message: 'Number of credits is required' })
 	numOfCredits: number;
+
+	//One Course has many Classes
+	@OneToMany(() => Class, (classes) => classes.courses)
+	public classes!: Class[];
 }
