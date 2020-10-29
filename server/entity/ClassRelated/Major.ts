@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from 'typeorm';
 import { Department } from '../Locations/Department';
 
 @Entity()
@@ -12,16 +12,12 @@ export class Major extends BaseEntity {
 	@PrimaryColumn()
 	majorID: number;
 
-	@ManyToOne(() => Department, (department) => department.majors, {})
-	@JoinColumn({ name: 'deptID' })
-	public departments!: Department;
-
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Name must be provided' })
 	majorName: string;
 
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
+	// One Department has many majors
+	@ManyToOne(() => Department, (department) => department.majors, {})
+	@JoinColumn({ name: 'deptID' })
+	public departments!: Department;
 }
