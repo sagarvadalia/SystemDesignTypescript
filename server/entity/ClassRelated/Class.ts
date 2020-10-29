@@ -26,7 +26,7 @@ export class Class extends BaseEntity {
 
 	// One Class has many enrollments
 	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true, eager: true })
-	public enrollment!: Enrollment;
+	public enrollment!: Enrollment[];
 
 	//Many Classes belong to one Course
 	@ManyToOne(() => Course, (course) => course.classes)

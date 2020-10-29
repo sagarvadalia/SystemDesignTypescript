@@ -3,16 +3,12 @@ import express, { Request, Response } from 'express';
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 import { Routes } from './routes';
-import { Semester } from './entity/TimeRelated/Semester';
 import { ResponseError } from './util/ResponseError';
-import morgan = require('morgan');
+
 import compression = require('compression');
 import session = require('express-session');
+import morgan = require('morgan');
 import path = require('path');
-import { Student } from './entity/Users/Student';
-import { Advisor } from './entity/JoinTables/Advisor';
-import { Faculty } from './entity/Users/Faculty';
-import { Enrollment } from './entity/JoinTables/Enrollment';
 
 createConnection()
 	.then(async (connection) => {
