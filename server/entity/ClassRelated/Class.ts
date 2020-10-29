@@ -1,22 +1,11 @@
 import { IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	CreateDateColumn,
-	Entity,
-	JoinColumn,
-	ManyToOne,
-	OneToOne,
-	PrimaryColumn,
-	UpdateDateColumn,
-	OneToMany,
-} from 'typeorm';
-import { Faculty } from '../Users/Faculty';
-import { TimeSlot } from '../TimeRelated/TimeSlot';
-import { Course } from './Course';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
+import { Enrollment } from '../JoinTables/Enrollment';
 import { Room } from '../Locations/Room';
 import { Semester } from '../TimeRelated/Semester';
-import { Enrollment } from '../JoinTables/Enrollment';
+import { TimeSlot } from '../TimeRelated/TimeSlot';
+import { Faculty } from '../Users/Faculty';
+import { Course } from './Course';
 
 // Need to handle the association with course
 @Entity()
@@ -25,6 +14,8 @@ export class Class extends BaseEntity {
 		super();
 		Object.assign(this, Class);
 	}
+	@PrimaryColumn()
+	classCRN: number;
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'section is required' })
@@ -33,32 +24,33 @@ export class Class extends BaseEntity {
 	@Column({ type: 'integer', nullable: false })
 	numOfSeats: number;
 
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true })
-	public enrollment!: Enrollment;
-	@PrimaryColumn()
-	classCRN: number;
 
-	//FK from Course
+	// One Class has many enrollments
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true, eager: true })
+	public enrollment!: Enrollment;
+
+	//Many Classes belong to one Course
 	@ManyToOne(() => Course, (course) => course.classes)
 	@JoinColumn({ name: 'courseID' })
 	public courses!: Course;
 
-	//FK from Faculty
+	//One class has one faculty
 	@OneToOne(() => Faculty)
 	@JoinColumn({ name: 'fid' })
 	public faculty!: Faculty;
 
-	//FK from TimeSlot
+
+	//Many classes belong to one timeslot
 	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes)
 	@JoinColumn({ name: 'slotID' })
 	public timeslots!: TimeSlot;
 
-	//FK from Room
+	//Many Classes belong to one Room
 	@ManyToOne(() => Room, (room) => room.classes)
 	@JoinColumn({ name: 'roomID' })
 	public room!: Room;
 
-	//FK from Semester
+	//Many Classes belong to one semester
 	@ManyToOne(() => Semester, (semester) => semester.classes)
 	@JoinColumn({ name: 'semesterID' })
 	public semester!: Semester;

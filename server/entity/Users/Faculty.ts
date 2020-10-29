@@ -10,22 +10,14 @@ export class Faculty extends User {
 		super();
 		Object.assign(this, Faculty);
 	}
-	// This sets an association between faculty and advisors
-	// set to cascade so that you can create a faculty and fill in the join table with one query
-	@OneToMany(() => Advisor, (advisor) => advisor.faculty, { cascade: true })
-	public advisors!: Advisor[];
-	// This sets an association between faculty and departments
-	// set to cascade so that you can create a faculty and fill in the join table with one query
-	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
-	public FacultyDepartment!: FacultyDepartment[];
 
 	@Column({ nullable: false })
 	@IsNotEmpty({ message: 'Department ID must be provided' })
 	deptID: number;
 
-	@Column({ nullable: false })
+	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Faculty rank must be provided' })
-	fRank: number;
+	fRank: string;
 
 	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Faculty Office Number must be provided' })
@@ -34,4 +26,12 @@ export class Faculty extends User {
 	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Faculty status must be provided' })
 	isFullTime: boolean;
+
+	// One Faculty is many advisors
+	@OneToMany(() => Advisor, (advisor) => advisor.faculty, { cascade: true })
+	public advisors!: Advisor[];
+
+	// One Faculty belongs to many Departments
+	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
+	public FacultyDepartment!: FacultyDepartment[];
 }

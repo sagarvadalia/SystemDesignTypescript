@@ -11,18 +11,6 @@ export class Department extends BaseEntity {
 		super();
 		Object.assign(this, Department);
 	}
-	// This sets an association between Departments and FacultyDepartments
-	// set to cascade so that you can create a faculty and fill in the join table with one query
-	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
-	public FacultyDepartment!: FacultyDepartment[];
-
-	//Association with Major
-	@OneToMany(() => Major, (major) => major.departments, { cascade: true })
-	public majors!: Major[];
-
-	//Association with Minor
-	@OneToMany(() => Minor, (minor) => minor.departments, { cascade: true })
-	public minors!: Minor[];
 
 	@PrimaryColumn({ type: 'integer' })
 	deptID: number;
@@ -47,4 +35,18 @@ export class Department extends BaseEntity {
 	@OneToOne(() => Room)
 	@JoinColumn({ name: 'roomID' })
 	public rooms!: Room;
+
+  // This sets an association between Departments and FacultyDepartments
+	// set to cascade so that you can create a faculty and fill in the join table with one query
+	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
+	@JoinColumn({ name: 'deptHeadID' })
+	public FacultyDepartment!: FacultyDepartment[];
+
+	//One Department has many Majors
+	@OneToMany(() => Major, (major) => major.departments, { cascade: true })
+	public majors!: Major[];
+
+	//One Department has many Minors
+	@OneToMany(() => Minor, (minor) => minor.departments, { cascade: true })
+	public minors!: Minor[];
 }

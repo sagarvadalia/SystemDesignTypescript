@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, CreateDateColumn, Entity, UpdateDateColumn } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { Student } from './Student';
 
 @Entity()
@@ -16,4 +16,4 @@ export class Graduate extends Student {
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'MasterOrPHD option is required' })
 	mastersOrPHD: string;
-} 
+}

@@ -1,6 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 import { Room } from './Room';
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Building extends BaseEntity {
@@ -9,7 +9,7 @@ export class Building extends BaseEntity {
 		Object.assign(this, Building);
 	}
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	buildingID: number;
 
 	@Column({ type: 'text', nullable: false })

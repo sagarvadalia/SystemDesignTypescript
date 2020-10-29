@@ -13,10 +13,6 @@ export class Minor extends BaseEntity {
 	@PrimaryColumn()
 	minorID: number;
 
-	@ManyToOne(() => Department, (department) => department.minors, {})
-	@JoinColumn({ name: 'deptID' })
-	public departments!: Department;
-
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Name must be provided' })
 	minorName: string;
@@ -25,3 +21,10 @@ export class Minor extends BaseEntity {
 	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.minor)
 	public minorrequirement!: MinorRequirement;
 }
+
+	// One Department has many minors
+	@ManyToOne(() => Department, (department) => department.minors, {})
+	@JoinColumn({ name: 'deptID' })
+	public departments!: Department;
+}
+

@@ -12,19 +12,21 @@ export class Attendance extends BaseEntity {
 	@PrimaryColumn()
 	classCRN: number;
 
-	@ManyToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
-	@JoinColumn({ name: 'classCRN' })
-	public enrollment!: Enrollment;
-
-	@ManyToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
-	@JoinColumn({ name: 'sid' })
-	public enrollments!: Enrollment;
-
 	@Column({ type: 'boolean', nullable: false })
 	@IsNotEmpty({ message: 'isPresent must be provided ' })
 	isPresent: boolean;
 
-	@Column({ type: 'text', nullable: false })
+	@Column({ type: 'date', nullable: false })
 	@IsNotEmpty({ message: 'date must be provided' })
-	date: string;
+	date: Date;
+
+	// One enrollment has many attendances
+	// this grabs the classCRN
+	@ManyToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
+	@JoinColumn({ name: 'classCRN', referencedColumnName: 'class' })
+	public enrollment!: Enrollment;
+	// This grabs the SID
+	@ManyToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
+	@JoinColumn({ name: 'sid', referencedColumnName: 'student' })
+	public enrollments!: Enrollment;
 }
