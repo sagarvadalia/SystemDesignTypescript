@@ -16,9 +16,4 @@ export class Graduate extends Student {
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'MasterOrPHD option is required' })
 	mastersOrPHD: string;
-
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
-}
+} 

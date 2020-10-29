@@ -1,6 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
 import { Department } from '../Locations/Department';
+import { MinorRequirement } from './MinorRequirement';
 
 @Entity()
 export class Minor extends BaseEntity {
@@ -20,8 +21,7 @@ export class Minor extends BaseEntity {
 	@IsNotEmpty({ message: 'Name must be provided' })
 	minorName: string;
 
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
+	//Relationship to MinorRequirement
+	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.minor)
+	public minorrequirement!: MinorRequirement;
 }

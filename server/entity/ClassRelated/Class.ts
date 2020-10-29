@@ -29,13 +29,9 @@ export class Class extends BaseEntity {
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'section is required' })
 	classSection: string;
+
 	@Column({ type: 'integer', nullable: false })
 	numOfSeats: number;
-
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 
 	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true })
 	public enrollment!: Enrollment;
@@ -51,6 +47,7 @@ export class Class extends BaseEntity {
 	@OneToOne(() => Faculty)
 	@JoinColumn({ name: 'fid' })
 	public faculty!: Faculty;
+
 	//FK from TimeSlot
 	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes)
 	@JoinColumn({ name: 'slotID' })

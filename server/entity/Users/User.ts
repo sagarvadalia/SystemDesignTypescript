@@ -2,11 +2,8 @@ import { IsEmail, IsNotEmpty } from 'class-validator';
 import {
 	BaseEntity,
 	Column,
-	CreateDateColumn,
 	Entity,
-	PrimaryColumn,
-	UpdateDateColumn,
-	PrimaryGeneratedColumn,
+	PrimaryGeneratedColumn
 } from 'typeorm';
 
 @Entity()
@@ -39,9 +36,4 @@ export abstract class User extends BaseEntity {
 
 	@Column({ type: 'text' })
 	userType: string;
-
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 }
