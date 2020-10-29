@@ -19,13 +19,7 @@ export class StudentHistory extends BaseEntity {
 		Object.assign(this, StudentHistory);
 	}
 
-	@OneToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
-	@PrimaryColumn()
-	public enrollment!: number;
-
-	@OneToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
-	@PrimaryColumn()
-	public enrollments!: number;
+	
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'grade received must be provided' })
@@ -34,8 +28,14 @@ export class StudentHistory extends BaseEntity {
 	@Column({ type: 'integer', nullable: false })
 	@IsNotEmpty({ message: 'semester ID must be provided ' })
 	semesterID: number;
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
+	
+	// One student History belongs to one enrollment
+	@OneToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
+	@JoinColumn({name: 'sID', referencedColumnName: 'sID'})
+	public sID!: number;
+
+	@OneToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
+	@JoinColumn({name: 'classCRN', referencedColumnName: 'classCRN'})
+	public classCRN!: number;
+	
 }
