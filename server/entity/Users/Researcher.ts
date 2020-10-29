@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, CreateDateColumn, Entity, UpdateDateColumn } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { User } from './User';
 
 @Entity()
@@ -16,9 +16,4 @@ export class Researcher extends User {
 	@Column({ nullable: false, type: 'integer' })
 	@IsNotEmpty({ message: 'Research Office Number must be provided' })
 	resarchOfficeNum: number;
-
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 }

@@ -1,6 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
+import { Building } from './Building';
 
 // Need to handle the association with course
 @Entity()
@@ -9,10 +10,6 @@ export class Room extends BaseEntity {
 		super();
 		Object.assign(this, Room);
 	}
-
-	//Relationship to Class
-	@OneToMany(() => Class, (classes) => classes.room, {})
-	public classes!: Class[];
 
 	@PrimaryColumn()
 	roomID: number;
@@ -26,4 +23,13 @@ export class Room extends BaseEntity {
 
 	@Column({ type: 'integer', nullable: false })
 	capacity: number;
+
+	//Relationship to Class
+	@OneToMany(() => Class, (classes) => classes.room, {})
+	public classes!: Class[];
+
+	//Relationship to Building
+	@ManyToOne(() => Building, (buildings) => buildings.rooms, {})
+	@JoinColumn()
+	public buildings!: Building[];
 }

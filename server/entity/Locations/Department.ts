@@ -1,17 +1,9 @@
 import { IsEmail, IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	CreateDateColumn,
-	Entity,
-	JoinColumn,
-	OneToMany,
-	PrimaryColumn,
-	UpdateDateColumn,
-} from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
 import { Major } from '../ClassRelated/Major';
 import { Minor } from '../ClassRelated/Minor';
 import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
+import { Room } from './Room';
 
 @Entity()
 export class Department extends BaseEntity {
@@ -40,7 +32,11 @@ export class Department extends BaseEntity {
 	@IsNotEmpty({ message: 'Department managers name is required' })
 	deptManager: string;
 
-	// This sets an association between Departments and FacultyDepartments
+	@OneToOne(() => Room)
+	@JoinColumn({ name: 'roomID' })
+	public rooms!: Room;
+
+  // This sets an association between Departments and FacultyDepartments
 	// set to cascade so that you can create a faculty and fill in the join table with one query
 	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
 	@JoinColumn({ name: 'deptHeadID' })
