@@ -36,7 +36,7 @@ export class Department extends BaseEntity {
 	@JoinColumn({ name: 'roomID' })
 	public rooms!: Room;
 
-  // This sets an association between Departments and FacultyDepartments
+	// This sets an association between Departments and FacultyDepartments
 	// set to cascade so that you can create a faculty and fill in the join table with one query
 	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
 	@JoinColumn({ name: 'deptHeadID' })

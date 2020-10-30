@@ -1,6 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
 import { Room } from './Room';
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 
 @Entity()
 export class Building extends BaseEntity {
