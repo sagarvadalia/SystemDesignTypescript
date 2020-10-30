@@ -1,15 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { ENOPROTOOPT } from 'constants';
-import {
-	BaseEntity,
-	Column,
-	CreateDateColumn,
-	Entity,
-	JoinColumn,
-	OneToOne,
-	PrimaryColumn,
-	UpdateDateColumn,
-} from 'typeorm';
+import { Col } from 'sequelize/types/lib/utils';
+import { BaseEntity, Column, Entity, JoinColumn, OneToOne } from 'typeorm';
 import { Enrollment } from './JoinTables/Enrollment';
 
 @Entity()
@@ -19,23 +10,16 @@ export class StudentHistory extends BaseEntity {
 		Object.assign(this, StudentHistory);
 	}
 
-	
-
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'grade received must be provided' })
 	gradeReceived: string;
 
-	@Column({ type: 'integer', nullable: false })
-	@IsNotEmpty({ message: 'semester ID must be provided ' })
-	semesterID: number;
-	
 	// One student History belongs to one enrollment
-	@OneToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
-	@JoinColumn({name: 'sID', referencedColumnName: 'student'})
-	public sID!: number;
-
-	@OneToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
-	@JoinColumn({name: 'classCRN', referencedColumnName: 'class'})
-	public classCRN!: number;
-	
+	@OneToOne(() => Enrollment, (enrollment) => enrollment.classCRN, {
+		primary: true,
+		cascade: true,
+		eager: true,
+	})
+	@JoinColumn()
+	public enrollment;
 }

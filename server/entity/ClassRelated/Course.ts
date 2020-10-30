@@ -5,7 +5,6 @@ import { MajorRequirement } from './MajorRequirement';
 import { MinorRequirement } from './MinorRequirement';
 import { Prerequisite } from './Prerequisite';
 
-
 @Entity()
 export class Course extends BaseEntity {
 	constructor(...args) {

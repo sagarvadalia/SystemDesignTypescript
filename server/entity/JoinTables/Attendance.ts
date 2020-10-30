@@ -9,9 +9,6 @@ export class Attendance extends BaseEntity {
 		Object.assign(this, Attendance);
 	}
 
-	@PrimaryColumn()
-	classCRN: number;
-
 	@Column({ type: 'boolean', nullable: false })
 	@IsNotEmpty({ message: 'isPresent must be provided ' })
 	isPresent: boolean;
@@ -22,11 +19,8 @@ export class Attendance extends BaseEntity {
 
 	// One enrollment has many attendances
 	// this grabs the classCRN
-	@ManyToOne(() => Enrollment, (enrollment) => enrollment.class.classCRN, { primary: true })
-	@JoinColumn({ name: 'classCRN', referencedColumnName: 'class' })
-	public enrollment!: Enrollment;
-	// This grabs the SID
-	@ManyToOne(() => Enrollment, (enrollment) => enrollment.student.userID, { primary: true })
-	@JoinColumn({ name: 'sid', referencedColumnName: 'student' })
-	public enrollments!: Enrollment;
+	@PrimaryColumn()
+	@ManyToOne(() => Enrollment, (enrollment) => enrollment.attendances, { primary: true })
+	@JoinColumn({ name: 'classCRN' })
+	public classCRN!: number;
 }

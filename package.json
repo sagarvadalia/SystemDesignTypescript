@@ -44,7 +44,7 @@
 		"redux-mock-store": "^1.5.4",
 		"simple-git": "^1.132.0",
 		"supertest": "^4.0.2",
-		"ts-node": "3.3.0",
+		"ts-node": "^3.3.0",
 		"typescript": "3.3.3333",
 		"webpack": "^4.44.2",
 		"webpack-cli": "^3.3.12",
@@ -90,7 +90,10 @@
 	"scripts": {
 		"start-server": "ts-node server/index.ts",
 		"lint-fix": "npm run lint -- --fix",
-		"lint": "eslint ./ --ignore-path .gitignore"
+		"lint": "eslint ./ --ignore-path .gitignore",
+		"typeorm-migration-generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n MigrationName",
+		"typeorm-migration-run": "ts-node ./node_modules/typeorm/cli.js migration:run",
+		"typeorm-migration-revert": "ts-node ./node_modules/typeorm/cli.js migration:revert"
 	},
 	"husky": {
 		"hooks": {

@@ -10,12 +10,12 @@ export class StudentMinor extends BaseEntity {
 		Object.assign(this, StudentMinor);
 	}
 
-	@ManyToOne(() => Minor, (minors) => minors.minorID, {primary: true})
-	@JoinColumn({name: 'minorID', referencedColumnName: 'minorID'})
+	@ManyToOne(() => Minor, (minors) => minors.minorID, { primary: true })
+	@JoinColumn({ name: 'minorID', referencedColumnName: 'minorID' })
 	public minorID!: number;
 
-	@ManyToOne(() => Student, (students) => students.userID, {primary: true})
-	@JoinColumn({name: 'sID', referencedColumnName: 'sID'})
+	@ManyToOne(() => Student, (students) => students.userID, { primary: true })
+	@JoinColumn({ name: 'sID' })
 	public sID!: number;
 
 	@Column({ nullable: false, type: 'date' })
