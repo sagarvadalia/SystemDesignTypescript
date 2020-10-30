@@ -14,14 +14,12 @@ export class StudentHistory extends BaseEntity {
 	@IsNotEmpty({ message: 'grade received must be provided' })
 	gradeReceived: string;
 
-	@Column({ nullable: true, primary: true })
-	sID: number;
 	// One student History belongs to one enrollment
-	@OneToOne(() => Enrollment, (enrollment) => enrollment.class, {
+	@OneToOne(() => Enrollment, (enrollment) => enrollment.classCRN, {
 		primary: true,
 		cascade: true,
 		eager: true,
 	})
-	@JoinColumn([{ name: 'sid' })
-	classCRN!: number;
+	@JoinColumn()
+	public enrollment;
 }
