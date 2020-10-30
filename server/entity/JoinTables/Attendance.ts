@@ -20,9 +20,7 @@ export class Attendance extends BaseEntity {
 	// One enrollment has many attendances
 	// this grabs the classCRN
 	@PrimaryColumn()
-	@ManyToOne(() => Enrollment, (enrollment) => enrollment.class, { primary: true })
+	@ManyToOne(() => Enrollment, (enrollment) => enrollment.attendances, { primary: true })
 	@JoinColumn({ name: 'classCRN' })
 	public classCRN!: number;
-	@JoinColumn()
-	public sID!: number;
 }
