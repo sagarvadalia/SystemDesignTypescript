@@ -17,7 +17,6 @@ export class Major extends BaseEntity {
 	@IsNotEmpty({ message: 'Name must be provided' })
 	majorName: string;
 
-
 	//Relationship to MajorRequirement
 	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.major)
 	public majorrequirement!: MajorRequirement;

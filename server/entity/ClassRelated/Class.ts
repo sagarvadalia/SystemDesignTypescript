@@ -1,5 +1,15 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	Entity,
+	JoinColumn,
+	ManyToOne,
+	OneToMany,
+	OneToOne,
+	PrimaryColumn,
+	PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Enrollment } from '../JoinTables/Enrollment';
 import { Room } from '../Locations/Room';
 import { Semester } from '../TimeRelated/Semester';
@@ -14,7 +24,7 @@ export class Class extends BaseEntity {
 		super();
 		Object.assign(this, Class);
 	}
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	classCRN: number;
 
 	@Column({ type: 'text', nullable: false })
@@ -25,7 +35,7 @@ export class Class extends BaseEntity {
 	numOfSeats: number;
 
 	// One Class has many enrollments
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.class, { cascade: true, eager: true })
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.classCRN, { cascade: true, eager: true })
 	public enrollment!: Enrollment[];
 
 	//Many Classes belong to one Course

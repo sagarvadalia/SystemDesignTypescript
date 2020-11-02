@@ -15,11 +15,11 @@ export class Student extends User {
 	// set to cascade so that when a student is inserted, that information also populates the advisor table
 	@OneToMany(() => Advisor, (advisor) => advisor.student, { cascade: true })
 	public advisors!: Advisor[];
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.student, { cascade: true })
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.sID, { cascade: true })
 	public enrollment!: Enrollment[];
-	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.sID, {cascade: true})
+	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.sID, { cascade: true })
 	public studentMinors!: StudentMinor[];
-	
+
 	@Column()
 	@IsNotEmpty({ message: 'GPA is required' })
 	sGPA: string;

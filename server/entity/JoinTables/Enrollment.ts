@@ -21,13 +21,10 @@ export class Enrollment extends BaseEntity {
 	grade: string;
 
 	@ManyToOne(() => Class, (classes: Class) => classes.enrollment, { primary: true })
-	@JoinColumn({ name: 'classCRN' })
+	@JoinColumn({ name: 'classCRN', referencedColumnName: 'classCRN' })
 	public classCRN!: Class;
 
 	@ManyToOne(() => Student, (student: Student) => student.enrollment, { primary: true })
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
-
-	@OneToMany(() => Attendance, (attendance: Attendance) => attendance.classCRN)
-	attendances: Attendance[];
 }
