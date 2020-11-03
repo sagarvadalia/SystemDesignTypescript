@@ -1,13 +1,8 @@
 import {
 	BaseEntity,
 	Column,
-	CreateDateColumn,
 	Entity,
-	OneToMany,
-	PrimaryColumn,
-	UpdateDateColumn,
-	ManyToOne,
-	JoinColumn,
+	JoinColumn, ManyToOne
 } from 'typeorm';
 import { Course } from './Course';
 

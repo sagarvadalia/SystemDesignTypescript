@@ -7,8 +7,7 @@ import {
 	ManyToOne,
 	OneToMany,
 	OneToOne,
-	PrimaryColumn,
-	PrimaryGeneratedColumn,
+	PrimaryGeneratedColumn
 } from 'typeorm';
 import { Enrollment } from '../JoinTables/Enrollment';
 import { Room } from '../Locations/Room';
@@ -44,8 +43,8 @@ export class Class extends BaseEntity {
 	public courses!: Course;
 
 	//One class has one faculty
-	@OneToOne(() => Faculty)
-	@JoinColumn({ name: 'fid' })
+	@ManyToOne(() => Faculty)
+	@JoinColumn({ name: 'fID' })
 	public faculty!: Faculty;
 
 	//Many classes belong to one timeslot

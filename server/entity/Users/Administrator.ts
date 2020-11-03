@@ -16,8 +16,4 @@ export class Administrator extends User {
 	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Admin Office Number must be provided' })
 	adminOfficeNum: string;
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 }

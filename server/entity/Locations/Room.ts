@@ -30,6 +30,6 @@ export class Room extends BaseEntity {
 
 	//Relationship to Building
 	@ManyToOne(() => Building, (buildings) => buildings.rooms, {})
-	@JoinColumn()
+	@JoinColumn({ name: 'buildingID' })
 	public buildings!: Building[];
 }

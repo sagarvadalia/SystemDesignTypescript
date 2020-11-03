@@ -1,6 +1,5 @@
-import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 import { TimeSlotDay } from '../JoinTables/TimeSlotDay';
-import { TimeSlot } from './TimeSlot';
 
 @Entity()
 export class Day extends BaseEntity {

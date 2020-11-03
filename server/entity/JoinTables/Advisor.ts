@@ -14,6 +14,7 @@ export class Advisor extends BaseEntity {
 	@ManyToOne(() => Faculty, (faculty) => faculty.advisors, { primary: true })
 	@JoinColumn({ name: 'fid' })
 	public faculty!: Faculty;
+
 	@ManyToOne(() => Student, (student) => student.advisors, { primary: true })
 	@JoinColumn({ name: 'sid' })
 	public student!: Student;
@@ -21,8 +22,4 @@ export class Advisor extends BaseEntity {
 	@Column({ type: 'date' })
 	@IsNotEmpty({ message: 'Date assigned must be provided' })
 	dateAssigned: Date;
-	@CreateDateColumn()
-	createdAt: Date;
-	@UpdateDateColumn()
-	updatedAt: Date;
 }

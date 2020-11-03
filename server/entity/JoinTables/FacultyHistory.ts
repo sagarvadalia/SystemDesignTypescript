@@ -9,11 +9,14 @@ export class FacultyHistory extends BaseEntity {
 	}
 
 	@PrimaryColumn({ nullable: false })
-	fid: number;
+	fID: number;
+
 	@Column({ nullable: false })
 	sID: number;
+
 	@Column({ nullable: false })
 	semesterID: number;
+
 	@OneToOne(() => Class, (classes) => classes.classCRN, { primary: true, cascade: true, eager: true })
 	@JoinColumn({ name: 'classCRN' })
 	classCRN: number;

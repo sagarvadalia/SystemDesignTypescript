@@ -1,14 +1,12 @@
 import { IsNotEmpty } from 'class-validator';
-import { Class } from '../ClassRelated/Class';
 import {
 	BaseEntity,
 	Column,
-	CreateDateColumn,
 	Entity,
 	OneToMany,
-	PrimaryGeneratedColumn,
-	UpdateDateColumn,
+	PrimaryGeneratedColumn
 } from 'typeorm';
+import { Class } from '../ClassRelated/Class';
 
 // Need to handle the association with course
 @Entity()
