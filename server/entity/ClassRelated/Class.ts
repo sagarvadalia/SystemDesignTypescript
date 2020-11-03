@@ -7,7 +7,7 @@ import {
 	ManyToOne,
 	OneToMany,
 	OneToOne,
-	PrimaryGeneratedColumn
+	PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Enrollment } from '../JoinTables/Enrollment';
 import { Room } from '../Locations/Room';

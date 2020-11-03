@@ -9,6 +9,9 @@ import compression = require('compression');
 import session = require('express-session');
 import morgan = require('morgan');
 import path = require('path');
+import seeds = require('./seed/index');
+import { FacultyPartTime } from './entity/Users/FacultyPartTime';
+import { partTimeFacultySeed } from './seed/index';
 
 createConnection()
 	.then(async (connection) => {
@@ -71,6 +74,15 @@ createConnection()
 		// Example of creating an Advisor
 
 		app.listen(3000);
+		const partTimeFaculty = partTimeFacultySeed.partTimeFaculty.default;
+
+		for (let i = 0; i < partTimeFaculty.length; i++) {
+			const person = partTimeFaculty[i];
+			if (person) {
+				const faculty = await connection.manager.create(FacultyPartTime, partTimeFaculty[i]);
+				await connection.manager.save(faculty);
+			}
+		}
 
 		// const faculty = await connection.manager.create(Faculty, {
 		// 	userName: 'guptaa',
