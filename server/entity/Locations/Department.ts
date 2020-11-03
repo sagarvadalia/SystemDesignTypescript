@@ -4,6 +4,7 @@ import { Major } from '../ClassRelated/Major';
 import { Minor } from '../ClassRelated/Minor';
 import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
 import { Room } from './Room';
+import { Course } from '../ClassRelated/Course';
 
 @Entity()
 export class Department extends BaseEntity {
@@ -32,6 +33,7 @@ export class Department extends BaseEntity {
 	@IsNotEmpty({ message: 'Department managers name is required' })
 	deptManager: string;
 
+	//One Department is in one room
 	@OneToOne(() => Room)
 	@JoinColumn({ name: 'roomID' })
 	public rooms!: Room;
@@ -49,4 +51,8 @@ export class Department extends BaseEntity {
 	//One Department has many Minors
 	@OneToMany(() => Minor, (minor) => minor.departments, { cascade: true })
 	public minors!: Minor[];
+
+	//One Department has many courses
+	@OneToMany(() => Course, (course) => course.department)
+	public courses!: Course[];
 }
