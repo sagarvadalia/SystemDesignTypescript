@@ -12,8 +12,6 @@ export class Day extends BaseEntity {
 	@PrimaryColumn({ type: 'text', nullable: false })
 	nameOfDay: string;
 
-	@OneToMany(() => TimeSlotDay, (timeSlotDay) => timeSlotDay.nameOfDay, {cascade: true})
+	@OneToMany(() => TimeSlotDay, (timeSlotDay) => timeSlotDay.nameOfDay, { cascade: true })
 	public timeSlotDay!: TimeSlotDay[];
-
-	
 }

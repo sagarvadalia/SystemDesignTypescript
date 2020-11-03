@@ -13,7 +13,7 @@ export class TimeSlot extends BaseEntity {
 	@OneToMany(() => Class, (classes) => classes.faculty, { cascade: true })
 	public classes!: Class[];
 
-	@OneToMany(() => TimeSlotDay, (timeSlotDay) => timeSlotDay.slotID, {cascade: true})
+	@OneToMany(() => TimeSlotDay, (timeSlotDay) => timeSlotDay.slotID, { cascade: true })
 	public timeSlotDay!: TimeSlotDay[];
 
 	@PrimaryColumn()

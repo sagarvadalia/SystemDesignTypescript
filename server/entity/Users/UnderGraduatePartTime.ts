@@ -1,9 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import {
-	Column,
-
-	Entity
-} from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { UnderGraduate } from './UnderGraduate';
 
 // Need to handle the association with course

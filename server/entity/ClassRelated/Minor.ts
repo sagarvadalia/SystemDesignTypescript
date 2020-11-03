@@ -1,5 +1,15 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn, UpdateDateColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	CreateDateColumn,
+	Entity,
+	JoinColumn,
+	ManyToOne,
+	OneToMany,
+	PrimaryColumn,
+	UpdateDateColumn,
+} from 'typeorm';
 import { StudentMinor } from '../JoinTables/StudentMinor';
 import { TimeSlotDay } from '../JoinTables/TimeSlotDay';
 import { Department } from '../Locations/Department';
@@ -19,7 +29,7 @@ export class Minor extends BaseEntity {
 	@IsNotEmpty({ message: 'Name must be provided' })
 	minorName: string;
 
-	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.minorID, {cascade: true})
+	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.minorID, { cascade: true })
 	public studentMinors!: TimeSlotDay[];
 
 	//Relationship to MinorRequirement

@@ -1,10 +1,5 @@
 import { IsEmail, IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	Entity,
-	PrimaryGeneratedColumn
-} from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export abstract class User extends BaseEntity {
