@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 import { Student } from '../Users/Student';
 
@@ -9,7 +9,8 @@ export class Enrollment extends BaseEntity {
 		super();
 		Object.assign(this, Enrollment);
 	}
-
+	@PrimaryGeneratedColumn()
+	enrollmentID: number;
 	@Column({ type: 'date', nullable: false })
 	@IsNotEmpty({ message: 'enrollDate must be provided ' })
 	enrollDate: Date;
@@ -18,11 +19,11 @@ export class Enrollment extends BaseEntity {
 	@IsNotEmpty({ message: 'grade must be provided' })
 	grade: string;
 
-	@ManyToOne(() => Class, (classes: Class) => classes.enrollment, { primary: true })
+	@ManyToOne(() => Class, (classes: Class) => classes.enrollment)
 	@JoinColumn({ name: 'classCRN', referencedColumnName: 'classCRN' })
 	public classCRN!: Class;
 
-	@ManyToOne(() => Student, (student: Student) => student.enrollment, { primary: true })
+	@ManyToOne(() => Student, (student: Student) => student.enrollment)
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
 }
