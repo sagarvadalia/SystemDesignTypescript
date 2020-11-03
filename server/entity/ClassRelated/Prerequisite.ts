@@ -1,9 +1,4 @@
-import {
-	BaseEntity,
-	Column,
-	Entity,
-	JoinColumn, ManyToOne
-} from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { Course } from './Course';
 
 @Entity()
