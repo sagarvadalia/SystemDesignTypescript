@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 
 @Entity()
@@ -8,16 +8,7 @@ export class FacultyHistory extends BaseEntity {
 		Object.assign(this, FacultyHistory);
 	}
 
-	@PrimaryColumn({ nullable: false })
-	fID: number;
-
-	@Column({ nullable: false })
-	sID: number;
-
-	@Column({ nullable: false })
-	semesterID: number;
-
 	@OneToOne(() => Class, (classes) => classes.classCRN, { primary: true, cascade: true, eager: true })
-	@JoinColumn({ name: 'classCRN' })
+	@JoinColumn({ name: 'classCRN', referencedColumnName: 'classCRN' })
 	classCRN: number;
 }

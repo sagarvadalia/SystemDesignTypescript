@@ -1,5 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
+import { Department } from '../Locations/Department';
 import { Class } from './Class';
 import { MajorRequirement } from './MajorRequirement';
 import { MinorRequirement } from './MinorRequirement';
@@ -25,6 +26,11 @@ export class Course extends BaseEntity {
 	@Column()
 	@IsNotEmpty({ message: 'Number of credits is required' })
 	numOfCredits: number;
+
+	//relationship to department
+	@ManyToOne(() => Department, (department: Department) => department.courses)
+	@JoinColumn({ name: 'deptID' })
+	public department!: Department;
 
 	//Relationship to MajorRequirement
 	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.course)
