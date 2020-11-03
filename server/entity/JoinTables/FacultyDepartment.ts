@@ -22,6 +22,6 @@ export class FacultyDepartment extends BaseEntity {
 
 	//One Department belongs to many faculty
 	@ManyToOne(() => Department, (department) => department.FacultyDepartment, { primary: true })
-	@JoinColumn({ name: 'dID' })
+	@JoinColumn({ name: 'deptID' })
 	public department!: Department;
 }

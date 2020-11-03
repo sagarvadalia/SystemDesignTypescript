@@ -17,12 +17,12 @@ export class Attendance extends BaseEntity {
 	@IsNotEmpty({ message: 'date must be provided' })
 	date: Date;
 
+	// One enrollment has many attendances
+	// this grabs the classCRN
 	@ManyToOne(() => Enrollment, (enrollment) => enrollment.classCRN, { primary: true })
 	@JoinColumn([
 		{ name: 'classCRN', referencedColumnName: 'classCRN' },
 		{ name: 'sID', referencedColumnName: 'sID' },
 	])
 	public attendance!: Enrollment;
-	// One enrollment has many attendances
-	// this grabs the classCRN
 }

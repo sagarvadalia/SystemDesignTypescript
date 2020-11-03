@@ -1,6 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Col } from 'sequelize/types/lib/utils';
-import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, OneToOne } from 'typeorm';
 import { Enrollment } from './JoinTables/Enrollment';
 
 @Entity()
