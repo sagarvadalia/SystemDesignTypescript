@@ -1,6 +1,6 @@
 import { IsNotEmpty } from 'class-validator';
 import { BaseEntity, Column, Entity, JoinColumn, OneToOne } from 'typeorm';
-import { Enrollment } from './JoinTables/Enrollment';
+import { Enrollment } from '../JoinTables/Enrollment';
 
 @Entity()
 export class StudentHistory extends BaseEntity {

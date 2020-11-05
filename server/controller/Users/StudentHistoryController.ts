@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
-import { StudentHistory } from '../../entity/StudentHistory';
+import { StudentHistory } from '../../entity/StudentRelated/StudentHistory';
 import { validate, validateOrReject } from 'class-validator';
 
 export class StudentHistoryController {
