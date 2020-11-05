@@ -15,7 +15,7 @@ export class GraduateFullTime extends Graduate {
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })
-	hasMeanPlan: boolean;
+	hasMealPlan: boolean;
 
 	@Column({ type: 'boolean', nullable: false })
 	isDorming: boolean;

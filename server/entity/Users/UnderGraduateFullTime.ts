@@ -15,7 +15,7 @@ export class UnderGraduateFullTime extends UnderGraduate {
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })
-	hasMeanPlan: boolean;
+	hasMealPlan: boolean;
 
 	@Column({ type: 'boolean', nullable: false })
 	isDorming: boolean;
