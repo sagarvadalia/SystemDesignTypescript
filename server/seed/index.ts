@@ -1,3 +1,3 @@
 import partTimeFaculty = require('./partTimeFaculty');
-
-export const partTimeFacultySeed = { partTimeFaculty };
+import fullTimeFaculty = require('./fullTimeFaculty');
+export const seeds = { partTimeFaculty, fullTimeFaculty };
