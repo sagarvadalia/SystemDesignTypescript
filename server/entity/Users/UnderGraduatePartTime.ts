@@ -15,7 +15,7 @@ export class UnderGraduatePartTime extends UnderGraduate {
 	tutionCost: string;
 
 	@Column({ type: 'boolean', nullable: false })
-	hasMeanPlan: boolean;
+	hasMealPlan: boolean;
 
 	@Column({ type: 'integer', nullable: false })
 	maxCreditsAllowed: number;

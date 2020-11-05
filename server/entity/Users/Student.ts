@@ -22,9 +22,9 @@ export class Student extends User {
 	public studentMinors!: StudentMinor[];
 	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.students, { cascade: true })
 	public studentHolds!: StudentHold[];
-	@Column()
+	@Column({ type: 'decimal' })
 	@IsNotEmpty({ message: 'GPA is required' })
-	sGPA: string;
+	sGPA: number;
 
 	@Column()
 	@IsNotEmpty({ message: 'Grad year is required' })
