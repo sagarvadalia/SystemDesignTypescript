@@ -4,6 +4,7 @@ import { Advisor } from '../JoinTables/Advisor';
 import { Enrollment } from '../JoinTables/Enrollment';
 import { StudentMinor } from '../JoinTables/StudentMinor';
 import { User } from './User';
+import { StudentHold } from '../JoinTables/StudentHold';
 
 @Entity()
 export class Student extends User {
@@ -19,7 +20,8 @@ export class Student extends User {
 	public enrollment!: Enrollment[];
 	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.sID, { cascade: true })
 	public studentMinors!: StudentMinor[];
-
+	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.students, { cascade: true })
+	public studentHolds!: StudentHold[];
 	@Column()
 	@IsNotEmpty({ message: 'GPA is required' })
 	sGPA: string;
