@@ -1,18 +1,15 @@
-import * as bodyParser from 'body-parser';
-import express, { Request, Response } from 'express';
 import 'reflect-metadata';
-import { createConnection } from 'typeorm';
-import { Routes } from './routes';
-import { ResponseError } from './util/ResponseError';
 
+import * as bodyParser from 'body-parser';
 import compression = require('compression');
+import express, { Request, Response } from 'express';
 import session = require('express-session');
 import morgan = require('morgan');
 import path = require('path');
+import { createConnection } from 'typeorm';
 
-import { FacultyPartTime } from './entity/Users/FacultyPartTime';
-import { seeds } from './seed/index';
-import { FacultyFullTime } from './entity/Users/FacultyFullTime';
+import { Routes } from './routes';
+import { ResponseError } from './util/ResponseError';
 
 createConnection()
 	.then(async (connection) => {
@@ -75,24 +72,6 @@ createConnection()
 		// Example of creating an Advisor
 
 		app.listen(3000);
-		// Part time Faculty seed
-		const partTimeFaculty = seeds.partTimeFaculty.default;
-
-		for (let i = 0; i < partTimeFaculty.length; i++) {
-			if (partTimeFaculty[i]) {
-				const faculty = await connection.manager.create(FacultyPartTime, partTimeFaculty[i]);
-				await connection.manager.save(faculty);
-			}
-		}
-		// Full Time Faculty Seed
-		const fullTimeFaculty = seeds.fullTimeFaculty.default;
-
-		for (let i = 0; i < fullTimeFaculty.length; i++) {
-			if (fullTimeFaculty[i]) {
-				const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
-				await connection.manager.save(faculty);
-			}
-		}
 
 		console.log('Express server has started on port 3000. Open http://localhost:3000/users to see results');
 	})
