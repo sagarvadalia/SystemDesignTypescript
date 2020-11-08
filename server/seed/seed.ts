@@ -5,7 +5,7 @@ import { createConnection } from 'typeorm';
 import { seeds } from './index';
 import { GraduateFullTime } from '../entity/Users/GraduateFullTime';
 import { GraduatePartTime } from '../entity/Users/GraduatePartTime';
-import { UnderGraduatePartTime } from '../entity/Users/UnderGraduatePartTime';
+import undergraduatePartTime from './undergraduatePartTime';
 
 createConnection()
 	.then(async (connection) => {
@@ -16,6 +16,7 @@ createConnection()
 		// 		await connection.manager.save(faculty);
 		// 	}
 		// }
+		//
 		// const fullTimeFaculty = seeds.fullTimeFaculty.default;
 
 		// for (let i = 0; i < fullTimeFaculty.length; i++) {
@@ -32,10 +33,18 @@ createConnection()
 		// 	}
 		// }
 
-		const undergraduatePartTime = seeds.undergraduatePartTime.default;
-		for (let i = 0; i < undergraduatePartTime.length; i++) {
-			if (undergraduatePartTime[i]) {
-				const student = await connection.manager.create(UnderGraduatePartTime, undergraduatePartTime[i]);
+		// const undergraduatePartTime = seeds.undergraduatePartTime.default;
+		// for (let i = 0; i < undergraduatePartTime.length; i++) {
+		// 	if (undergraduatePartTime[i]) {
+		// 		const student = await connection.manager.create(UnderGraduatePartTime, undergraduatePartTime[i]);
+		// 		await connection.manager.save(student);
+		// 	}
+		// }
+
+		const graduatePartTime = seeds.graduatePartTime.default;
+		for (let i = 0; i < graduatePartTime.length; i++) {
+			if (graduatePartTime[i]) {
+				const student = await connection.manager.create(GraduatePartTime, graduatePartTime[i]);
 				await connection.manager.save(student);
 			}
 		}
