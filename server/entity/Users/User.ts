@@ -1,6 +1,15 @@
 import { IsEmail, IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-
+import {
+	AfterInsert,
+	AfterUpdate,
+	BaseEntity,
+	BeforeInsert,
+	BeforeUpdate,
+	Column,
+	Entity,
+	PrimaryGeneratedColumn,
+} from 'typeorm';
+import * as argon2 from 'argon2';
 @Entity()
 export abstract class User extends BaseEntity {
 	constructor(...args) {
@@ -31,4 +40,32 @@ export abstract class User extends BaseEntity {
 
 	@Column({ type: 'text' })
 	userType: string;
+	// hashes psw whenever a user is inserted
+	@BeforeInsert()
+	async hashPassword(): Promise<void> {
+		this.userPassword = await argon2.hash(this.userPassword);
+	}
+	// hashes psw everytime the user is updated
+	//TODO: gotta change this so it only updates when psw is changed
+	@BeforeUpdate()
+	async hashPasswordUpdate(): Promise<void> {
+		this.userPassword = await argon2.hash(this.userPassword);
+	}
+	//TODO: not sure what the return type should be here
+	// class function that checks the password and returns an object with isMatch being the bool and message being the explanation
+	async comparePassword(password: string, attemptCount: number): Promise<any> {
+		if (attemptCount < 3) {
+			try {
+				if (await argon2.verify(password, this.userPassword)) {
+					return { isMatch: true, message: 'passwords match!' };
+				} else {
+					return { isMatch: false, message: 'wrong password' };
+				}
+			} catch (error) {
+				console.error(error);
+				return { isMatch: false, message: error };
+			}
+		}
+		return { isMatch: false, message: 'too many attempts' };
+	}
 }
