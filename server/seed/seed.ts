@@ -5,40 +5,65 @@ import { createConnection } from 'typeorm';
 import { seeds } from './index';
 import { GraduateFullTime } from '../entity/Users/GraduateFullTime';
 import { GraduatePartTime } from '../entity/Users/GraduatePartTime';
+import undergraduatePartTime from './undergraduatePartTime';
 import { UnderGraduatePartTime } from '../entity/Users/UnderGraduatePartTime';
+import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
 
 createConnection()
 	.then(async (connection) => {
-		// const partTimeFaculty = seeds.partTimeFaculty.default;
-		// for (let i = 0; i < partTimeFaculty.length; i++) {
-		// 	if (partTimeFaculty[i]) {
-		// 		const faculty = await connection.manager.create(FacultyPartTime, partTimeFaculty[i]);
-		// 		await connection.manager.save(faculty);
-		// 	}
-		// }
-		// const fullTimeFaculty = seeds.fullTimeFaculty.default;
+		const fullTimeFaculty = seeds.fullTimeFaculty.default;
+		for (let i = 0; i < fullTimeFaculty.length; i++) {
+			try {
+				const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
+				await connection.manager.save(faculty);
+			} catch (error) {
+				console.error(error);
+			}
+		}
 
-		// for (let i = 0; i < fullTimeFaculty.length; i++) {
-		// 	if (fullTimeFaculty[i]) {
-		// 		const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
-		// 		await connection.manager.save(faculty);
-		// 	}
-		// }
-		// const graduateFullTime = seeds.graduateFullTime.default;
-		// for (let i = 0; i < graduateFullTime.length; i++) {
-		// 	if (graduateFullTime[i]) {
-		// 		const student = await connection.manager.create(GraduateFullTime, graduateFullTime[i]);
-		// 		await connection.manager.save(student);
-		// 	}
-		// }
+		const partTimeFaculty = seeds.partTimeFaculty.default;
+		for (let i = 0; i < partTimeFaculty.length; i++) {
+			try {
+				const faculty = await connection.manager.create(FacultyPartTime, partTimeFaculty[i]);
+				await connection.manager.save(faculty);
+			} catch (error) {
+				console.error(error);
+			}
+		}
+		const graduateFullTime = seeds.graduateFullTime.default;
+		for (let i = 0; i < graduateFullTime.length; i++) {
+			try {
+				const student = await connection.manager.create(GraduateFullTime, graduateFullTime[i]);
+				await connection.manager.save(student);
+			} catch (error) {}
+		}
+		const graduatePartTime = seeds.graduatePartTime.default;
+		for (let i = 0; i < graduatePartTime.length; i++) {
+			try {
+				const student = await connection.manager.create(GraduatePartTime, graduatePartTime[i]);
+				await connection.manager.save(student);
+			} catch (error) {
+				console.error(error);
+			}
+		}
 
+		const undergraduateFullTime = seeds.undergraduateFullTime.default;
+		for (let i = 0; i < undergraduateFullTime.length; i++) {
+			try {
+				const student = await connection.manager.create(UnderGraduateFullTime, undergraduateFullTime[i]);
+				await connection.manager.save(student);
+			} catch (error) {
+				console.error(error);
+			}
+		}
 		const undergraduatePartTime = seeds.undergraduatePartTime.default;
 		for (let i = 0; i < undergraduatePartTime.length; i++) {
-			if (undergraduatePartTime[i]) {
+			try {
 				const student = await connection.manager.create(UnderGraduatePartTime, undergraduatePartTime[i]);
 				await connection.manager.save(student);
+			} catch (error) {
+				console.error(error);
 			}
 		}
 	})
-
 	.catch((error) => console.log(error));
