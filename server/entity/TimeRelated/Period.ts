@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Period extends BaseEntity {
@@ -8,7 +8,7 @@ export class Period extends BaseEntity {
 		Object.assign(this, Period);
 	}
 
-	@PrimaryColumn({ type: 'integer' })
+	@PrimaryGeneratedColumn({ type: 'integer' })
 	periodID: number;
 
 	@Column({ type: 'text', nullable: false, width: 10, unique: false })

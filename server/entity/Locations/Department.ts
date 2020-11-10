@@ -1,5 +1,14 @@
 import { IsEmail, IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	Entity,
+	JoinColumn,
+	OneToMany,
+	OneToOne,
+	PrimaryColumn,
+	PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Major } from '../ClassRelated/Major';
 import { Minor } from '../ClassRelated/Minor';
 import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
@@ -13,7 +22,7 @@ export class Department extends BaseEntity {
 		Object.assign(this, Department);
 	}
 
-	@PrimaryColumn({ type: 'integer' })
+	@PrimaryGeneratedColumn({ type: 'integer' })
 	deptID: number;
 
 	@Column({ type: 'text', nullable: false, width: 50, unique: true })

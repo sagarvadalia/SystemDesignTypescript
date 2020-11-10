@@ -8,6 +8,7 @@ import { GraduatePartTime } from '../entity/Users/GraduatePartTime';
 import { UnderGraduatePartTime } from '../entity/Users/UnderGraduatePartTime';
 import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
 import { Semester } from '../entity/TimeRelated/Semester';
+import { Researcher } from '../entity/Users/Researcher';
 
 createConnection()
 	.then(async (connection) => {
@@ -71,6 +72,15 @@ createConnection()
 			try {
 				const semester = await connection.manager.create(Semester, semesters[i]);
 				await connection.manager.save(semester);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+		const researcher = seeds.researcher.default;
+		for (let i = 0; i < researcher.length; i++) {
+			try {
+				const researchers = await connection.manager.create(Researcher, researcher[i]);
+				await connection.manager.save(researchers);
 			} catch (error) {
 				// console.error(error);
 			}
