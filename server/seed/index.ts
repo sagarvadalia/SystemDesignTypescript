@@ -10,7 +10,11 @@ import researcher = require('./researcher');
 import period = require('./period');
 
 import course = require('./course');
+
+import administrator = require('./administrator');
+
 import administrator = require('./administrator')
+
 
 export const seeds = {
 	partTimeFaculty,
