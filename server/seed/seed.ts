@@ -9,8 +9,13 @@ import { UnderGraduatePartTime } from '../entity/Users/UnderGraduatePartTime';
 import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
 import { Semester } from '../entity/TimeRelated/Semester';
 import { Researcher } from '../entity/Users/Researcher';
-import { Course } from 'server/entity/ClassRelated/Course';
-import { Administrator } from 'server/entity/Users/Administrator';
+import { Course } from '../entity/ClassRelated/Course';
+import { Administrator } from '../entity/Users/Administrator';
+import { Building } from '../entity/Locations/Building';
+import { Department } from '../entity/Locations/Department';
+import { Major } from '../entity/ClassRelated/Major';
+import { Minor } from '../entity/ClassRelated/Minor';
+import { Day } from '../entity/TimeRelated/Day';
 
 createConnection()
 	.then(async (connection) => {
@@ -107,6 +112,56 @@ createConnection()
 				// console.error(error);
 			}
 		}
+
+		const building = seeds.building.default;
+		for (let i = 0; i < building.length; i++) {
+			try {
+				const buildings = await connection.manager.create(Building, building[i]);
+				await connection.manager.save(buildings);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 		
+		const department = seeds.department.default;
+		for (let i = 0; i < department.length; i++) {
+			try {
+				const departments = await connection.manager.create(Department, department[i]);
+				await connection.manager.save(departments);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
+		const major = seeds.major.default;
+		for (let i = 0; i < major.length; i++) {
+			try {
+				const majors = await connection.manager.create(Major, major[i]);
+				await connection.manager.save(majors);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
+		const minor = seeds.minor.default;
+		for (let i = 0; i < minor.length; i++) {
+			try {
+				const minors = await connection.manager.create(Minor, minor[i]);
+				await connection.manager.save(minors);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
+		const day = seeds.day.default;
+		for (let i = 0; i < day.length; i++) {
+			try {
+				const days = await connection.manager.create(Day, day[i]);
+				await connection.manager.save(days);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
 	})
 	.catch((error) => console.log(error));
