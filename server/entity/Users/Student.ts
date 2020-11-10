@@ -3,13 +3,14 @@ import { Column, Entity, OneToMany } from 'typeorm';
 import { Advisor } from '../JoinTables/Advisor';
 import { Enrollment } from '../JoinTables/Enrollment';
 import { StudentMinor } from '../JoinTables/StudentMinor';
-import { User } from './User';
+import { Users } from './Users';
 import { StudentHold } from '../JoinTables/StudentHold';
 
 @Entity()
-export class Student extends User {
+export class Student extends Users {
 	constructor(...args) {
 		super();
+		Object.assign(this, Users);
 		Object.assign(this, Student);
 	}
 	// association between students and advisors so that you can retrieve all advisors from a student query
