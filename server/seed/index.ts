@@ -7,6 +7,7 @@ import undergraduateFullTime = require('./undergraduateFullTime');
 import semester = require('./semester');
 import researcher = require('./researcher');
 import course = require('./course');
+import administrator = require('./administrator')
 export const seeds = {
 	partTimeFaculty,
 	fullTimeFaculty,
@@ -17,4 +18,5 @@ export const seeds = {
 	semester,
 	researcher,
 	course,
+	administrator,
 };

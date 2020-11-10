@@ -10,6 +10,7 @@ import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
 import { Semester } from '../entity/TimeRelated/Semester';
 import { Researcher } from '../entity/Users/Researcher';
 import { Course } from 'server/entity/ClassRelated/Course';
+import { Administrator } from 'server/entity/Users/Administrator';
 
 createConnection()
 	.then(async (connection) => {
@@ -92,6 +93,16 @@ createConnection()
 			try {
 				const courses = await connection.manager.create(Course, course[i]);
 				await connection.manager.save(courses);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
+		const administrator = seeds.administrator.default;
+		for (let i = 0; i < administrator.length; i++) {
+			try {
+				const administrators = await connection.manager.create(Administrator, administrator[i]);
+				await connection.manager.save(administrators);
 			} catch (error) {
 				// console.error(error);
 			}
