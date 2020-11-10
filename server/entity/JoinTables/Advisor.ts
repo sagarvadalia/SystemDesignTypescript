@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, UpdateDateColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { Faculty } from '../Users/Faculty';
 import { Student } from '../Users/Student';
 
