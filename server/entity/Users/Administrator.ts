@@ -1,11 +1,12 @@
 import { IsNotEmpty } from 'class-validator';
 import { Column, CreateDateColumn, Entity, UpdateDateColumn } from 'typeorm';
-import { User } from './User';
+import { Users } from './Users';
 
 @Entity()
-export class Administrator extends User {
+export class Administrator extends Users {
 	constructor(...args) {
 		super();
+		Object.assign(this, Users);
 		Object.assign(this, Administrator);
 	}
 

@@ -7,16 +7,17 @@ import {
 	BeforeUpdate,
 	Column,
 	Entity,
+	PrimaryColumn,
 	PrimaryGeneratedColumn,
 } from 'typeorm';
 import * as argon2 from 'argon2';
 @Entity()
-export abstract class User extends BaseEntity {
+export abstract class Users extends BaseEntity {
 	constructor(...args) {
 		super();
-		Object.assign(this, User);
+		Object.assign(this, Users);
 	}
-	@PrimaryGeneratedColumn({ type: 'integer' })
+	@PrimaryColumn({ type: 'integer' })
 	userID: number;
 
 	@Column({ type: 'text', nullable: false, width: 50, unique: true })
