@@ -17,7 +17,7 @@ createConnection()
 				const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
 				await connection.manager.save(faculty);
 			} catch (error) {
-				console.error(error);
+				// console.error(error);
 			}
 		}
 
@@ -27,7 +27,7 @@ createConnection()
 				const faculty = await connection.manager.create(FacultyPartTime, partTimeFaculty[i]);
 				await connection.manager.save(faculty);
 			} catch (error) {
-				console.error(error);
+				// console.error(error);
 			}
 		}
 		const graduateFullTime = seeds.graduateFullTime.default;
@@ -43,7 +43,7 @@ createConnection()
 				const student = await connection.manager.create(GraduatePartTime, graduatePartTime[i]);
 				await connection.manager.save(student);
 			} catch (error) {
-				console.error(error);
+				// console.error(error);
 			}
 		}
 
@@ -53,7 +53,7 @@ createConnection()
 				const student = await connection.manager.create(UnderGraduateFullTime, undergraduateFullTime[i]);
 				await connection.manager.save(student);
 			} catch (error) {
-				console.error(error);
+				// console.error(error);
 			}
 		}
 		const undergraduatePartTime = seeds.undergraduatePartTime.default;
@@ -62,7 +62,7 @@ createConnection()
 				const student = await connection.manager.create(UnderGraduatePartTime, undergraduatePartTime[i]);
 				await connection.manager.save(student);
 			} catch (error) {
-				console.error(error);
+				// console.error(error);
 			}
 		}
 
@@ -72,7 +72,7 @@ createConnection()
 				const semester = await connection.manager.create(Semester, semesters[i]);
 				await connection.manager.save(semester);
 			} catch (error) {
-				console.error(error);
+				// console.error(error);
 			}
 		}
 	})
