@@ -1,14 +1,15 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity, OneToMany } from 'typeorm';
+import { BeforeInsert, Column, Entity, OneToMany } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 import { Advisor } from '../JoinTables/Advisor';
 import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
-import { User } from './User';
+import { Users } from './Users';
 
 @Entity()
-export class Faculty extends User {
+export class Faculty extends Users {
 	constructor(...args) {
 		super();
+		Object.assign(this, Users);
 		Object.assign(this, Faculty);
 	}
 

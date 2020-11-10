@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { BeforeInsert, Column, Entity } from 'typeorm';
 import { Graduate } from './Graduate';
 
 // Need to handle the association with course
@@ -7,6 +7,7 @@ import { Graduate } from './Graduate';
 export class GraduateFullTime extends Graduate {
 	constructor(...args) {
 		super();
+		Object.assign(this, Graduate);
 		Object.assign(this, GraduateFullTime);
 	}
 

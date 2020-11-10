@@ -8,7 +8,7 @@ export class Hold extends BaseEntity {
 		Object.assign(this, Hold);
 	}
 
-	@PrimaryGeneratedColumn()
+	@PrimaryColumn()
 	holdID: number;
 	@Column({ type: 'text', nullable: false })
 	holdType: string;
