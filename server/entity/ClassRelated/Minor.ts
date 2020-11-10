@@ -8,6 +8,7 @@ import {
 	ManyToOne,
 	OneToMany,
 	PrimaryColumn,
+	PrimaryGeneratedColumn,
 	UpdateDateColumn,
 } from 'typeorm';
 import { StudentMinor } from '../JoinTables/StudentMinor';
@@ -22,7 +23,7 @@ export class Minor extends BaseEntity {
 		Object.assign(this, Minor);
 	}
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	minorID: number;
 
 	@Column({ type: 'text', nullable: false })

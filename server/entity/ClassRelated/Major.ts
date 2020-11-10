@@ -1,5 +1,14 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	Entity,
+	JoinColumn,
+	ManyToOne,
+	OneToMany,
+	PrimaryColumn,
+	PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Department } from '../Locations/Department';
 import { MajorRequirement } from './MajorRequirement';
 
@@ -10,7 +19,7 @@ export class Major extends BaseEntity {
 		Object.assign(this, Major);
 	}
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	majorID: number;
 
 	@Column({ type: 'text', nullable: false })
