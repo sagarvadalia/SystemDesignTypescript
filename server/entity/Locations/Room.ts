@@ -1,5 +1,14 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
+import {
+	BaseEntity,
+	Column,
+	Entity,
+	JoinColumn,
+	ManyToOne,
+	OneToMany,
+	PrimaryColumn,
+	PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 import { Building } from './Building';
 
@@ -11,7 +20,7 @@ export class Room extends BaseEntity {
 		Object.assign(this, Room);
 	}
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	roomID: number;
 
 	@Column({ type: 'integer', nullable: false })

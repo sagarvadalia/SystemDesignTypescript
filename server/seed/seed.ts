@@ -8,6 +8,8 @@ import { GraduatePartTime } from '../entity/Users/GraduatePartTime';
 import { UnderGraduatePartTime } from '../entity/Users/UnderGraduatePartTime';
 import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
 import { Semester } from '../entity/TimeRelated/Semester';
+import { Researcher } from '../entity/Users/Researcher';
+import { Course } from 'server/entity/ClassRelated/Course';
 
 createConnection()
 	.then(async (connection) => {
@@ -75,5 +77,25 @@ createConnection()
 				// console.error(error);
 			}
 		}
+		const researcher = seeds.researcher.default;
+		for (let i = 0; i < researcher.length; i++) {
+			try {
+				const researchers = await connection.manager.create(Researcher, researcher[i]);
+				await connection.manager.save(researchers);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
+		const course = seeds.course.default;
+		for (let i = 0; i < course.length; i++) {
+			try {
+				const courses = await connection.manager.create(Course, course[i]);
+				await connection.manager.save(courses);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+		
 	})
 	.catch((error) => console.log(error));

@@ -1,5 +1,5 @@
 import { BaseEntity, Entity, OneToMany, PrimaryColumn } from 'typeorm';
-import { TimeSlotDay } from '../JoinTables/TimeSlotDay';
+import { DayAndPeriod } from '../JoinTables/DayAndPeriod';
 
 @Entity()
 export class Day extends BaseEntity {
@@ -11,6 +11,6 @@ export class Day extends BaseEntity {
 	@PrimaryColumn({ type: 'text', nullable: false })
 	nameOfDay: string;
 
-	@OneToMany(() => TimeSlotDay, (timeSlotDay) => timeSlotDay.nameOfDay, { cascade: true })
-	public timeSlotDay!: TimeSlotDay[];
+	@OneToMany(() => DayAndPeriod, (dayAndPeriod) => dayAndPeriod.nameOfDay, { cascade: true })
+	public dayAndPeriod!: DayAndPeriod[];
 }
