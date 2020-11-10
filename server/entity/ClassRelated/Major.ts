@@ -1,14 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	Entity,
-	JoinColumn,
-	ManyToOne,
-	OneToMany,
-	PrimaryColumn,
-	PrimaryGeneratedColumn,
-} from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Department } from '../Locations/Department';
 import { MajorRequirement } from './MajorRequirement';
 

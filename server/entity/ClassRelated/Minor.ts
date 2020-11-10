@@ -1,18 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
-import {
-	BaseEntity,
-	Column,
-	CreateDateColumn,
-	Entity,
-	JoinColumn,
-	ManyToOne,
-	OneToMany,
-	PrimaryColumn,
-	PrimaryGeneratedColumn,
-	UpdateDateColumn,
-} from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { StudentMinor } from '../JoinTables/StudentMinor';
-import { TimeSlotDay } from '../JoinTables/TimeSlotDay';
+
 import { Department } from '../Locations/Department';
 import { MinorRequirement } from './MinorRequirement';
 
@@ -31,7 +20,7 @@ export class Minor extends BaseEntity {
 	minorName: string;
 
 	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.minorID, { cascade: true })
-	public studentMinors!: TimeSlotDay[];
+	public studentMinors!: StudentMinor[];
 
 	//Relationship to MinorRequirement
 	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.minor)
