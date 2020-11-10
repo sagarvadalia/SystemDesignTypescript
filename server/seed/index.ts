@@ -12,8 +12,17 @@ import period = require('./period');
 import course = require('./course');
 
 import administrator = require('./administrator');
+import building = require('./building');
+import department = require('./department');
+import major = require('./major');
+import minor = require('./minor');
+import day = require('./day');
+
+
+import administrator = require('./administrator');
 
 import administrator = require('./administrator')
+
 
 
 export const seeds = {
@@ -30,5 +39,13 @@ export const seeds = {
 
 	course,
 	administrator,
+
+	building,
+	department,
+	major,	
+	minor,
+	day,
+
+
 
 };
