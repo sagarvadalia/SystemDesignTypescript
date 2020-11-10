@@ -9,7 +9,12 @@ import { UnderGraduatePartTime } from '../entity/Users/UnderGraduatePartTime';
 import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
 import { Semester } from '../entity/TimeRelated/Semester';
 import { Researcher } from '../entity/Users/Researcher';
+
 import { Period } from '../entity/TimeRelated/Period';
+
+import { Course } from 'server/entity/ClassRelated/Course';
+import { Administrator } from 'server/entity/Users/Administrator';
+
 
 createConnection()
 	.then(async (connection) => {
@@ -97,5 +102,26 @@ createConnection()
 				// console.error(error);
 			}
 		}
+
+		const course = seeds.course.default;
+		for (let i = 0; i < course.length; i++) {
+			try {
+				const courses = await connection.manager.create(Course, course[i]);
+				await connection.manager.save(courses);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
+		const administrator = seeds.administrator.default;
+		for (let i = 0; i < administrator.length; i++) {
+			try {
+				const administrators = await connection.manager.create(Administrator, administrator[i]);
+				await connection.manager.save(administrators);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+		
 	})
 	.catch((error) => console.log(error));
