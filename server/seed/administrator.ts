@@ -53,6 +53,5 @@ const administrator = [
 {"userName":"Tyler Heinsohn","userEmail":"tjheinzo@gmail.com","userPassword": "wfGwfgrdadtK","userPhone":"(516) 123456","userAddress":"69 Cheesy Drive","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"SJP957"},
 {"userName":"Sagar Vadalia","userEmail":"sagarvadalia@gmail.com","userPassword":"zXGpj1YcSl92","userPhone":"(516) 3570627","userAddress":"45 Upsidedown Court","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"SJP951"},
 
-
 ];
 export default administrator
