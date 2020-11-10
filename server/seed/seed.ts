@@ -5,9 +5,9 @@ import { createConnection } from 'typeorm';
 import { seeds } from './index';
 import { GraduateFullTime } from '../entity/Users/GraduateFullTime';
 import { GraduatePartTime } from '../entity/Users/GraduatePartTime';
-import undergraduatePartTime from './undergraduatePartTime';
 import { UnderGraduatePartTime } from '../entity/Users/UnderGraduatePartTime';
 import { UnderGraduateFullTime } from '../entity/Users/UnderGraduateFullTime';
+import { Semester } from '../entity/TimeRelated/Semester';
 
 createConnection()
 	.then(async (connection) => {
@@ -61,6 +61,16 @@ createConnection()
 			try {
 				const student = await connection.manager.create(UnderGraduatePartTime, undergraduatePartTime[i]);
 				await connection.manager.save(student);
+			} catch (error) {
+				console.error(error);
+			}
+		}
+
+		const semesters = seeds.semester.default;
+		for (let i = 0; i < semesters.length; i++) {
+			try {
+				const semester = await connection.manager.create(Semester, semesters[i]);
+				await connection.manager.save(semester);
 			} catch (error) {
 				console.error(error);
 			}
