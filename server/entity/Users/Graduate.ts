@@ -1,11 +1,12 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { BeforeInsert, Column, Entity } from 'typeorm';
 import { Student } from './Student';
 
 @Entity()
 export class Graduate extends Student {
 	constructor(...args) {
 		super();
+		Object.assign(this, Student);
 		Object.assign(this, Graduate);
 	}
 

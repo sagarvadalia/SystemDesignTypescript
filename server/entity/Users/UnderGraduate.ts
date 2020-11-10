@@ -6,6 +6,7 @@ import { Student } from './Student';
 export class UnderGraduate extends Student {
 	constructor(...args) {
 		super();
+		Object.assign(this, Student);
 		Object.assign(this, UnderGraduate);
 	}
 

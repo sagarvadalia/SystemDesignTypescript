@@ -20,7 +20,7 @@ export class Room extends BaseEntity {
 		Object.assign(this, Room);
 	}
 
-	@PrimaryGeneratedColumn()
+	@PrimaryColumn()
 	roomID: number;
 
 	@Column({ type: 'integer', nullable: false })
