@@ -16,6 +16,9 @@ export class Building extends BaseEntity {
 	@IsNotEmpty({ message: 'buildingType must be provided' })
 	buildingType: string;
 
+	@Column({ type: 'text', nullable: false })
+	buildingName: string;
+
 	//Relationship to Room
 	@OneToMany(() => Room, (rooms) => rooms.buildings, {})
 	public rooms!: Room[];
