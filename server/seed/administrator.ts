@@ -49,6 +49,9 @@ const administrator = [
 {"userName":"Ethan Rearden","userEmail":"erearden1b@topsy.com","userPassword":"vfDPv0KNjLau","userPhone":"(490) 3196165","userAddress":"37 Jackson Point","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"GVA320"},
 {"userName":"Erek Munton","userEmail":"emunton1c@slashdot.org","userPassword":"w9HPw2QpY","userPhone":"(104) 3301111","userAddress":"52 Fairview Circle","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"oEH417"},
 {"userName":"Noni Ianilli","userEmail":"nianilli1d@rambler.ru","userPassword":"zXGpj1YcSl94","userPhone":"(497) 6570627","userAddress":"04286 Prentice Way","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"SJP959"},
+{"userName":"Erich Heisler","userEmail":"eheiseler@gmail.com","userPassword":"u765tirupert","userPhone":"(516) 8884569","userAddress":"4 Malverne Avenue","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"SJP956"},
+{"userName":"Tyler Heinsohn","userEmail":"tjheinzo@gmail.com","userPassword": "wfGwfgrdadtK","userPhone":"(516) 123456","userAddress":"69 Cheesy Drive","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"SJP957"},
+{"userName":"Sagar Vadalia","userEmail":"sagarvadalia@gmail.com","userPassword":"zXGpj1YcSl92","userPhone":"(516) 3570627","userAddress":"45 Upsidedown Court","userType":"Administrator","adminSalary":"$125000","adminOfficeNum":"SJP951"},
 
 ];
 export default administrator
