@@ -160,19 +160,7 @@ const course = [
 		numOfCredits: 4,
 		deptID: 1,
 	},
-	{
-		courseName: 'History of Mass Media',
-		courseDesc: 'Learn the history of the mass media',
-		numOfCredits: 4,
-		deptID: 1,
-	},
-	{
-		courseName: 'Politics of Media',
-		courseDesc:
-			'Using a broad definition of politics –not only the world of elections or of governance, but of power relations in everyday life',
-		numOfCredits: 4,
-		deptID: 1,
-	},
+
 	{
 		courseName: 'Documentary Media Studies',
 		courseDesc:
@@ -194,13 +182,7 @@ const course = [
 		numOfCredits: 4,
 		deptID: 1,
 	},
-	{
-		courseName: 'Music and Media',
-		courseDesc:
-			'A history of American popular music: Follow changes in American musical culture from work songs and parlor pianos to auto-tune and streaming media.',
-		numOfCredits: 4,
-		deptID: 1,
-	},
+
 	{
 		courseName: 'Public Relations and Society',
 		courseDesc:
@@ -885,36 +867,14 @@ const course = [
 		numOfCredits: 4,
 		deptID: 5,
 	},
-	{
-		courseName: 'African American History I',
-		courseDesc: 'The beginning of African American History',
-		numOfCredits: 4,
-		deptID: 5,
-	},
-	{
-		courseName: 'Historical Geography of Latin America',
-		courseDesc: 'Study of Geography of latin America',
-		numOfCredits: 4,
-		deptID: 5,
-	},
-	{
-		courseName: 'African American History II',
-		courseDesc: 'A continuation of African American history I',
-		numOfCredits: 4,
-		deptID: 5,
-	},
+
 	{
 		courseName: 'U.S. Latina/o History',
 		courseDesc: "History of Latino/Latina's in the U.S",
 		numOfCredits: 4,
 		deptID: 5,
 	},
-	{
-		courseName: 'Urban History',
-		courseDesc: 'History about the urban society.',
-		numOfCredits: 4,
-		deptID: 5,
-	},
+
 	{
 		courseName: 'Women, Work, and Careers',
 		courseDesc: 'The study of women their jobs and how they made their way into Careers',
@@ -1041,20 +1001,7 @@ const course = [
 		numOfCredits: 4,
 		deptID: 8,
 	},
-	{
-		courseName: 'Documentary Media Studies',
-		courseDesc:
-			'What is reality? Can truth be captured and represented? Learn about documentary film, photography and new media projects from the birth of photography to today.',
-		numOfCredits: 4,
-		deptID: 8,
-	},
-	{
-		courseName: 'Myths and Images in Film',
-		courseDesc:
-			'This course examines the movies in terms of social myths and social values. It looks at representative films from the United States, Europe, Latin America and Africa',
-		numOfCredits: 4,
-		deptID: 8,
-	},
+
 	{
 		courseName: 'Feminine and Masculine in Film',
 		courseDesc: 'Differences between feminine and masculine in films',
@@ -1068,29 +1015,9 @@ const course = [
 		numOfCredits: 4,
 		deptID: 8,
 	},
+
 	{
-		courseName: 'Public Relations and Society',
-		courseDesc:
-			'The course examines the role of public relations in the media, corporate culture, politics and society. T',
-		numOfCredits: 4,
-		deptID: 8,
-	},
-	{
-		courseName: 'African-Americans and the Mass Media',
-		courseDesc:
-			'Examines the participation of African-Americans in the development of mass media in the U.S. by looking at newspapers, magazines, books, radio, records, movies',
-		numOfCredits: 4,
-		deptID: 8,
-	},
-	{
-		courseName: 'Women and the Media',
-		courseDesc:
-			'This course explores the ways women are depicted by the mass media and how that depiction has changed over time',
-		numOfCredits: 4,
-		deptID: 8,
-	},
-	{
-		courseName: 'Special Topics in Media Studies',
+		courseName: 'Special Topics in History Studies',
 		courseDesc:
 			'This course addresses a special topic in the history, society and/or culture of the U.S. The specific topic will be announced by the Department when offered.',
 		numOfCredits: 4,
@@ -1439,20 +1366,7 @@ const course = [
 		numOfCredits: 4,
 		deptID: 10,
 	},
-	{
-		courseName: 'Social Problems',
-		courseDesc:
-			'Examines the historical and contemporary roots of critical social problems such as poverty, unemployment, eco-logical despoliation, delinquency, population growth,',
-		numOfCredits: 4,
-		deptID: 10,
-	},
-	{
-		courseName: 'Social Deviance',
-		courseDesc:
-			'Examines the patterns of deviant behavior in American society. Concentrates on the social construction of devi-ance:',
-		numOfCredits: 4,
-		deptID: 10,
-	},
+
 	{
 		courseName: 'Race, Class, Gender and Sexuality',
 		courseDesc:
