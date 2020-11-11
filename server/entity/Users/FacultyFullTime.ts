@@ -3,6 +3,7 @@ import { BeforeInsert, Column, Entity, JoinColumn, OneToOne } from 'typeorm';
 import { Room } from '../Locations/Room';
 import { Faculty } from './Faculty';
 import { Lecture } from '../Locations/Lecture';
+import { Office } from '../Locations/Office';
 
 @Entity()
 export class FacultyFullTime extends Faculty {
@@ -13,9 +14,9 @@ export class FacultyFullTime extends Faculty {
 	}
 
 	//One Department is in one room
-	@OneToOne(() => Lecture, (lecture) => lecture.roomID,)
+	@OneToOne(() => Office, (office) => office.roomID, { eager: true })
 	@JoinColumn({ name: 'roomID', referencedColumnName: 'roomID' })
-	public roomID!: Room;
+	public roomID!: Office;
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Faculty Salary is required' })

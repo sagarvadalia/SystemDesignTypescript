@@ -51,15 +51,15 @@ createConnection()
 
 
 		// //OFFICE
-		// const offices = seeds.office.default;
-		// for (let i = 0; i < offices.length; i++) {
-		// 	try {
-		// 		const office = await connection.manager.create(Office, offices[i]);
-		// 		await connection.manager.save(office);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		const offices = seeds.office.default;
+		for (let i = 0; i < offices.length; i++) {
+			try {
+				const office = await connection.manager.create(Office, offices[i]);
+				await connection.manager.save(office);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		//FACULTY FT
@@ -67,11 +67,19 @@ createConnection()
 		for (let i = 0; i < fullTimeFaculty.length; i++) {
 			try {
 				const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
-				await connection.manager.save(faculty);
+				let room = await connection.manager.findOne(Office, fullTimeFaculty[i].roomIDNum)
+				if (room) {
+					faculty.roomID = room;
+					await connection.manager.save(faculty);
+					// let facCheck = await connection.manager.findOne(FacultyFullTime, faculty.userID)
+					// console.log(facCheck);
+				}
+
 			} catch (error) {
 				console.error(error);
 			}
 		}
+
 
 
 		// //FACULTY PT

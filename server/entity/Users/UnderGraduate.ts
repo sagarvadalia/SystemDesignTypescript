@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { Column, createConnection, Entity } from 'typeorm';
 import { Student } from './Student';
 
 @Entity()
@@ -13,4 +13,5 @@ export class UnderGraduate extends Student {
 	@Column({ type: 'boolean', nullable: false })
 	@IsNotEmpty({ message: ' isFullTime option is required' })
 	isFullTime: boolean;
+
 }
