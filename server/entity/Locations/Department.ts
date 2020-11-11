@@ -45,7 +45,7 @@ export class Department extends BaseEntity {
 	//One Department is in one room
 	@OneToOne(() => Room)
 	@JoinColumn({ name: 'roomID' })
-	public rooms!: Room;
+	public roomID!: number;
 
 	// This sets an association between Departments and FacultyDepartments
 	// set to cascade so that you can create a faculty and fill in the join table with one query

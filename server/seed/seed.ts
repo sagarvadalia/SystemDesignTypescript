@@ -20,47 +20,40 @@ import { Lab } from '../entity/Locations/Lab';
 import { Lecture } from '../entity/Locations/Lecture';
 import { Office } from '../entity/Locations/Office';
 
-
-
-
-
 createConnection()
 	.then(async (connection) => {
 		// //LAB
-		// const labs = seeds.lab.default;
-		// for (let i = 0; i < labs.length; i++) {
-		// 	try {
-		// 		const lab = await connection.manager.create(Lab, labs[i]);
-		// 		await connection.manager.save(lab);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
-
+		const labs = seeds.lab.default;
+		for (let i = 0; i < labs.length; i++) {
+			try {
+				const lab = await connection.manager.create(Lab, labs[i]);
+				await connection.manager.save(lab);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 		// //LECTURE
-		// const lectures = seeds.lecture.default;
-		// for (let i = 0; i < lectures.length; i++) {
-		// 	try {
-		// 		const lecture = await connection.manager.create(Lecture, lectures[i]);
-		// 		await connection.manager.save(lecture);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
-
+		const lectures = seeds.lecture.default;
+		for (let i = 0; i < lectures.length; i++) {
+			try {
+				const lecture = await connection.manager.create(Lecture, lectures[i]);
+				await connection.manager.save(lecture);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 		// //OFFICE
-		// const offices = seeds.office.default;
-		// for (let i = 0; i < offices.length; i++) {
-		// 	try {
-		// 		const office = await connection.manager.create(Office, offices[i]);
-		// 		await connection.manager.save(office);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
-
+		const offices = seeds.office.default;
+		for (let i = 0; i < offices.length; i++) {
+			try {
+				const office = await connection.manager.create(Office, offices[i]);
+				await connection.manager.save(office);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 		//FACULTY FT
 		const fullTimeFaculty = seeds.fullTimeFaculty.default;
@@ -73,7 +66,6 @@ createConnection()
 			}
 		}
 
-
 		// //FACULTY PT
 		// const partTimeFaculty = seeds.partTimeFaculty.default;
 		// for (let i = 0; i < partTimeFaculty.length; i++) {
@@ -85,7 +77,6 @@ createConnection()
 		// 	}
 		// }
 
-
 		// //STUDENT G FT
 		// const graduateFullTime = seeds.graduateFullTime.default;
 		// for (let i = 0; i < graduateFullTime.length; i++) {
@@ -94,8 +85,6 @@ createConnection()
 		// 		await connection.manager.save(student);
 		// 	} catch (error) { }
 		// }
-
-
 
 		// //STUDENT G PT
 		// const graduatePartTime = seeds.graduatePartTime.default;
@@ -108,8 +97,6 @@ createConnection()
 		// 	}
 		// }
 
-
-
 		// //STUDENT UG FT
 		// const undergraduateFullTime = seeds.undergraduateFullTime.default;
 		// for (let i = 0; i < undergraduateFullTime.length; i++) {
@@ -120,7 +107,6 @@ createConnection()
 		// 		// console.error(error);
 		// 	}
 		// }
-
 
 		// //STUDENT UG PT
 		// const undergraduatePartTime = seeds.undergraduatePartTime.default;
@@ -133,7 +119,6 @@ createConnection()
 		// 	}
 		// }
 
-
 		// //SEMESTER
 		// const semesters = seeds.semester.default;
 		// for (let i = 0; i < semesters.length; i++) {
@@ -144,7 +129,6 @@ createConnection()
 		// 		// console.error(error);
 		// 	}
 		// }
-
 
 		// //RESEARCHER
 		// const researcher = seeds.researcher.default;
@@ -157,7 +141,6 @@ createConnection()
 		// 	}
 		// }
 
-
 		// //PERIOD
 		// const period = seeds.period.default;
 		// for (let i = 0; i < period.length; i++) {
@@ -168,7 +151,6 @@ createConnection()
 		// 		// console.error(error);
 		// 	}
 		// }
-
 
 		// //COURSE
 		// const course = seeds.course.default;
@@ -181,18 +163,16 @@ createConnection()
 		// 	}
 		// }
 
-
 		// //BUILDING
-		// const building = seeds.building.default;
-		// for (let i = 0; i < building.length; i++) {
-		// 	try {
-		// 		const buildings = await connection.manager.create(Building, building[i]);
-		// 		await connection.manager.save(buildings);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
-
+		const building = seeds.building.default;
+		for (let i = 0; i < building.length; i++) {
+			try {
+				const buildings = await connection.manager.create(Building, building[i]);
+				await connection.manager.save(buildings);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 		// //DEPARTMENT
 		// const department = seeds.department.default;
@@ -205,7 +185,6 @@ createConnection()
 		// 	}
 		// }
 
-
 		// //MAJOR
 		// const major = seeds.major.default;
 		// for (let i = 0; i < major.length; i++) {
@@ -216,7 +195,6 @@ createConnection()
 		// 		// console.error(error);
 		// 	}
 		// }
-
 
 		// //MINOR
 		// const minor = seeds.minor.default;
@@ -229,7 +207,6 @@ createConnection()
 		// 	}
 		// }
 
-
 		// //DAY
 		// const day = seeds.day.default;
 		// for (let i = 0; i < day.length; i++) {
@@ -241,7 +218,6 @@ createConnection()
 		// 	}
 		// }
 
-
 		// //ADMINISTRATOR
 		// const administrator = seeds.administrator.default;
 		// for (let i = 0; i < administrator.length; i++) {
@@ -252,6 +228,5 @@ createConnection()
 		// 		// console.error(error);
 		// 	}
 		// }
-
 	})
 	.catch((error) => console.log(error));

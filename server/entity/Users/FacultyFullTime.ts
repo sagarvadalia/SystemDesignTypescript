@@ -12,9 +12,9 @@ export class FacultyFullTime extends Faculty {
 	}
 
 	//One Department is in one room
-	@OneToOne(() => Room, (room) => room.roomID,)
-	@JoinColumn({ name: 'fOfficeNum', referencedColumnName: 'roomID' })
-	public rooms!: Room;
+	@OneToOne(() => Room, (room) => room.roomID)
+	@JoinColumn({ name: 'roomID', referencedColumnName: 'roomID' })
+	public roomID!: number;
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'Faculty Salary is required' })
