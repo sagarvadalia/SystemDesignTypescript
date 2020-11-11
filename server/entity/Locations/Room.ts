@@ -32,9 +32,6 @@ export class Room extends BaseEntity {
 	@Column({ type: 'integer', nullable: false })
 	capacity: number;
 
-	//Relationship to Class
-	@OneToMany(() => Class, (classes) => classes.room, {})
-	public classes!: Class[];
 
 	//Relationship to Building
 	@ManyToOne(() => Building, (buildings) => buildings.rooms, {})

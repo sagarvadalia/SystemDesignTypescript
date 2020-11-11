@@ -21,5 +21,5 @@ export class Attendance extends BaseEntity {
 	// this grabs the classCRN
 	@ManyToOne(() => Enrollment, (enrollment) => enrollment.enrollmentID, { primary: true })
 	@JoinColumn({ name: 'enrollmentID', referencedColumnName: 'enrollmentID' })
-	public attendance!: Enrollment;
+	public enrollmentID!: Enrollment;
 }

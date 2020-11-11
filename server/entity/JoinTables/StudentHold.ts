@@ -8,10 +8,12 @@ export class StudentHold extends BaseEntity {
 		super();
 		Object.assign(this, StudentHold);
 	}
+
 	@ManyToOne(() => Student, (student) => student.studentHolds, { primary: true })
 	@JoinColumn({ name: 'sID' })
-	public students: Student;
+	public sID: Student;
+
 	@ManyToOne(() => Hold, (hold) => hold.studentHolds, { primary: true })
 	@JoinColumn({ name: 'holdID' })
-	public holds: Hold;
+	public holdID: Hold;
 }

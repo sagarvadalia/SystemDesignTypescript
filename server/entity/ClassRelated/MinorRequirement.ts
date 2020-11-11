@@ -11,12 +11,12 @@ export class MinorRequirement extends BaseEntity {
 	//Relationship to Course
 	@ManyToOne(() => Course, (course) => course.minorrequirement, { primary: true })
 	@JoinColumn({ name: 'courseID' })
-	public course!: Course;
+	public courseID!: Course;
 
 	//Relationship to Minor
 	@ManyToOne(() => Minor, (minor) => minor.minorrequirement, { primary: true })
 	@JoinColumn({ name: 'minorID' })
-	public minor!: Minor;
+	public minorID!: Minor;
 
 	@Column()
 	gradeRequired: string;

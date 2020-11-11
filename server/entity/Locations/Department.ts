@@ -14,6 +14,7 @@ import { Minor } from '../ClassRelated/Minor';
 import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
 import { Room } from './Room';
 import { Course } from '../ClassRelated/Course';
+import { Lecture } from './Lecture';
 
 @Entity()
 export class Department extends BaseEntity {
@@ -43,25 +44,25 @@ export class Department extends BaseEntity {
 	deptManager: string;
 
 	//One Department is in one room
-	@OneToOne(() => Room)
+	@OneToOne(() => Lecture)
 	@JoinColumn({ name: 'roomID' })
-	public rooms!: Room;
+	public roomID!: Lecture;
 
 	// This sets an association between Departments and FacultyDepartments
 	// set to cascade so that you can create a faculty and fill in the join table with one query
-	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
+	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.fID, { cascade: true })
 	@JoinColumn({ name: 'deptHeadID' })
-	public FacultyDepartment!: FacultyDepartment[];
+	public deptHeadID!: FacultyDepartment[];
 
 	//One Department has many Majors
-	@OneToMany(() => Major, (major) => major.departments, { cascade: true })
+	@OneToMany(() => Major, (major) => major.deptID, { cascade: true })
 	public majors!: Major[];
 
 	//One Department has many Minors
-	@OneToMany(() => Minor, (minor) => minor.departments, { cascade: true })
+	@OneToMany(() => Minor, (minor) => minor.deptID, { cascade: true })
 	public minors!: Minor[];
 
 	//One Department has many courses
-	@OneToMany(() => Course, (course) => course.department)
+	@OneToMany(() => Course, (course) => course.deptID)
 	public courses!: Course[];
 }

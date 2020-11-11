@@ -13,16 +13,7 @@ export class Student extends Users {
 		Object.assign(this, Users);
 		Object.assign(this, Student);
 	}
-	// association between students and advisors so that you can retrieve all advisors from a student query
-	// set to cascade so that when a student is inserted, that information also populates the advisor table
-	@OneToMany(() => Advisor, (advisor) => advisor.student, { cascade: true })
-	public advisors!: Advisor[];
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.sID, { cascade: true })
-	public enrollment!: Enrollment[];
-	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.sID, { cascade: true })
-	public studentMinors!: StudentMinor[];
-	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.students, { cascade: true })
-	public studentHolds!: StudentHold[];
+
 	@Column({ type: 'decimal' })
 	@IsNotEmpty({ message: 'GPA is required' })
 	sGPA: number;
@@ -42,4 +33,18 @@ export class Student extends Users {
 	@Column()
 	@IsNotEmpty({ message: 'Type of student is required' })
 	studentType: string;
+
+	// association between students and advisors so that you can retrieve all advisors from a student query
+	// set to cascade so that when a student is inserted, that information also populates the advisor table
+	@OneToMany(() => Advisor, (advisor) => advisor.sID, { cascade: true })
+	public advisors!: Advisor[];
+
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.sID, { cascade: true })
+	public enrollment!: Enrollment[];
+
+	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.sID, { cascade: true })
+	public studentMinors!: StudentMinor[];
+
+	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.sID, { cascade: true })
+	public studentHolds!: StudentHold[];
 }

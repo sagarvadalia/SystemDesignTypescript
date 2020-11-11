@@ -29,17 +29,17 @@ export class Course extends BaseEntity {
 	//relationship to department
 	@ManyToOne(() => Department, (department: Department) => department.courses)
 	@JoinColumn({ name: 'deptID' })
-	public department!: Department;
+	public deptID!: Department;
 
 	//Relationship to MajorRequirement
-	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.course)
-	public majorrequirement!: MajorRequirement;
+	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.courseID)
+	public majorrequirement!: MajorRequirement[];
 
 	//Relationship to MinorRequirement
-	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.course)
-	public minorrequirement!: MinorRequirement;
+	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.courseID)
+	public minorrequirement!: MinorRequirement[];
 
 	//One Course has many Classes
-	@OneToMany(() => Class, (classes) => classes.courses)
+	@OneToMany(() => Class, (classes) => classes.courseID)
 	public classes!: Class[];
 }

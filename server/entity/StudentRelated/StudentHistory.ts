@@ -16,5 +16,5 @@ export class StudentHistory extends BaseEntity {
 	// One student History belongs to one enrollment
 	@OneToOne(() => Enrollment, (enrollment) => enrollment.enrollmentID, { primary: true })
 	@JoinColumn({ name: 'enrollmentID', referencedColumnName: 'enrollmentID' })
-	public attendance!: Enrollment;
+	public enrollmentID!: Enrollment;
 }
