@@ -23,11 +23,11 @@ export class Minor extends BaseEntity {
 	public studentMinors!: StudentMinor[];
 
 	//Relationship to MinorRequirement
-	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.minor)
-	public minorrequirement!: MinorRequirement;
+	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.minorID)
+	public minorrequirement!: MinorRequirement[];
 
 	// One Department has many minors
 	@ManyToOne(() => Department, (department) => department.minors, {})
 	@JoinColumn({ name: 'deptID' })
-	public departments!: Department;
+	public deptID!: Department;
 }

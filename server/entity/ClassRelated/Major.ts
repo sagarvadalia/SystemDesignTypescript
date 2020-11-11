@@ -18,11 +18,11 @@ export class Major extends BaseEntity {
 	majorName: string;
 
 	//Relationship to MajorRequirement
-	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.major)
-	public majorrequirement!: MajorRequirement;
+	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.majorID)
+	public majorrequirement!: MajorRequirement[];
 
 	// One Department has many majors
 	@ManyToOne(() => Department, (department) => department.majors, {})
 	@JoinColumn({ name: 'deptID' })
-	public departments!: Department;
+	public deptID!: Department;
 }

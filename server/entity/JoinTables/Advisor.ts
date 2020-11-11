@@ -12,12 +12,12 @@ export class Advisor extends BaseEntity {
 	// This is to for setting up the jointable entity between students and faculty
 
 	@ManyToOne(() => Faculty, (faculty) => faculty.advisors, { primary: true })
-	@JoinColumn({ name: 'fid' })
-	public faculty!: Faculty;
+	@JoinColumn({ name: 'fID' })
+	public fID!: Faculty;
 
 	@ManyToOne(() => Student, (student) => student.advisors, { primary: true })
-	@JoinColumn({ name: 'sid' })
-	public student!: Student;
+	@JoinColumn({ name: 'sID' })
+	public sID!: Student;
 
 	@Column({ type: 'date' })
 	@IsNotEmpty({ message: 'Date assigned must be provided' })

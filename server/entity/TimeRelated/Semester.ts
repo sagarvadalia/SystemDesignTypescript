@@ -11,7 +11,7 @@ export class Semester extends BaseEntity {
 	}
 
 	//Relationship to Class
-	@OneToMany(() => Class, (classes) => classes.semester, {})
+	@OneToMany(() => Class, (classes) => classes.semesterID, {})
 	public classes!: Class[];
 
 	@PrimaryGeneratedColumn()

@@ -17,10 +17,10 @@ export class Prerequisite extends BaseEntity {
 	// One Course has many Prerequisites
 	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
 	@JoinColumn({ name: 'courseID' })
-	public course!: Course;
+	public courseID!: Course;
 
 	//One Prerequisite has many courses
 	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
 	@JoinColumn({ name: 'prereqID' })
-	public prereq!: Course;
+	public prereqID!: Course;
 }

@@ -14,6 +14,6 @@ export class Hold extends BaseEntity {
 	holdType: string;
 	@Column({ type: 'text', nullable: false })
 	holdDescription: string;
-	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.holds, { cascade: true })
+	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.holdID, { cascade: true })
 	public studentHolds!: StudentHold[];
 }

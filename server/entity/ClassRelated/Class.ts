@@ -1,7 +1,7 @@
 import { IsNotEmpty } from 'class-validator';
 import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Enrollment } from '../JoinTables/Enrollment';
-import { Room } from '../Locations/Room';
+import { Lecture } from '../Locations/Lecture';
 import { Semester } from '../TimeRelated/Semester';
 import { TimeSlot } from '../TimeRelated/TimeSlot';
 import { Faculty } from '../Users/Faculty';
@@ -31,25 +31,25 @@ export class Class extends BaseEntity {
 	//Many Classes belong to one Course
 	@ManyToOne(() => Course, (course) => course.classes)
 	@JoinColumn({ name: 'courseID' })
-	public courses!: Course;
+	public courseID!: Course;
 
 	//One class has one faculty
 	@ManyToOne(() => Faculty)
 	@JoinColumn({ name: 'fID' })
-	public faculty!: Faculty;
+	public fID!: Faculty;
 
 	//Many classes belong to one timeslot
 	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes)
 	@JoinColumn({ name: 'slotID' })
-	public timeslots!: TimeSlot;
+	public slotID!: TimeSlot;
 
 	//Many Classes belong to one Room
-	@ManyToOne(() => Room, (room) => room.classes)
+	@ManyToOne(() => Lecture, (lecture) => lecture.classes)
 	@JoinColumn({ name: 'roomID' })
-	public room!: Room;
+	public roomID!: Lecture;
 
 	//Many Classes belong to one semester
 	@ManyToOne(() => Semester, (semester) => semester.classes)
 	@JoinColumn({ name: 'semesterID' })
-	public semester!: Semester;
+	public semesterID!: Semester;
 }

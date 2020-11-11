@@ -23,15 +23,15 @@ export class Faculty extends Users {
 	isFullTime: boolean;
 
 	// One Faculty is many advisors
-	@OneToMany(() => Advisor, (advisor) => advisor.faculty, { cascade: true })
+	@OneToMany(() => Advisor, (advisor) => advisor.fID, { cascade: true })
 	public advisors!: Advisor[];
 
 	// One Faculty belongs to many Departments
-	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.faculty, { cascade: true })
+	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.fID, { cascade: true })
 	public FacultyDepartment!: FacultyDepartment[];
 
 	//One faculty has many classes
-	@OneToMany(() => Class, (classes) => classes.faculty, { cascade: true })
+	@OneToMany(() => Class, (classes) => classes.fID, { cascade: true })
 	public classes!: Class[];
 
 
