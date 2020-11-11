@@ -6,8 +6,8 @@ const researcher = [
 		"userPhone": "(528) 2497575",
 		"userAddress": "75 Mcguire Place",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "CbF770",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 190,
 		"userID": 9500
 	},
 	{
@@ -17,8 +17,8 @@ const researcher = [
 		"userPhone": "(979) 7364450",
 		"userAddress": "7487 Spaight Point",
 		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "OWd966",
+		"researchSalary": "$75,000 ",
+		"researchOfficeNum": 190,
 		"userID": 9501
 	},
 	{
@@ -28,8 +28,8 @@ const researcher = [
 		"userPhone": "(402) 5091845",
 		"userAddress": "95274 Fieldstone Parkway",
 		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "Kla389",
+		"researchSalary": "$75,000 ",
+		"researchOfficeNum": 191,
 		"userID": 9502
 	},
 	{
@@ -39,8 +39,8 @@ const researcher = [
 		"userPhone": "(196) 9980810",
 		"userAddress": "40167 Mariners Cove Junction",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "unB976",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 191,
 		"userID": 9503
 	},
 	{
@@ -50,8 +50,8 @@ const researcher = [
 		"userPhone": "(815) 5441431",
 		"userAddress": "8 Northfield Plaza",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "AoW975",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 192,
 		"userID": 9504
 	},
 	{
@@ -61,8 +61,8 @@ const researcher = [
 		"userPhone": "(756) 9309824",
 		"userAddress": "9 Scofield Way",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "Tse470",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 192,
 		"userID": 9505
 	},
 	{
@@ -72,8 +72,8 @@ const researcher = [
 		"userPhone": "(581) 2910043",
 		"userAddress": "7015 Beilfuss Alley",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "EeN010",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 193,
 		"userID": 9506
 	},
 	{
@@ -83,8 +83,8 @@ const researcher = [
 		"userPhone": "(466) 7452209",
 		"userAddress": "8 Spohn Place",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "EyL751",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 193,
 		"userID": 9507
 	},
 	{
@@ -94,8 +94,8 @@ const researcher = [
 		"userPhone": "(190) 8594361",
 		"userAddress": "01384 Monica Alley",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "pyS227",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 194,
 		"userID": 9508
 	},
 	{
@@ -105,8 +105,8 @@ const researcher = [
 		"userPhone": "(313) 7966342",
 		"userAddress": "4972 Fairview Hill",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "vOh448",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 194,
 		"userID": 9509
 	},
 	{
@@ -116,8 +116,8 @@ const researcher = [
 		"userPhone": "(925) 7367362",
 		"userAddress": "311 Memorial Point",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "RpI677",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 195,
 		"userID": 9510
 	},
 	{
@@ -127,8 +127,8 @@ const researcher = [
 		"userPhone": "(140) 7223990",
 		"userAddress": "986 Ronald Regan Circle",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "LsQ276",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 195,
 		"userID": 9511
 	},
 	{
@@ -138,8 +138,8 @@ const researcher = [
 		"userPhone": "(168) 5902494",
 		"userAddress": "63450 Talmadge Park",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "xeP995",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 196,
 		"userID": 9512
 	},
 	{
@@ -149,8 +149,8 @@ const researcher = [
 		"userPhone": "(104) 9776308",
 		"userAddress": "60332 Summerview Way",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "RkB510",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 196,
 		"userID": 9513
 	},
 	{
@@ -160,8 +160,8 @@ const researcher = [
 		"userPhone": "(821) 2287291",
 		"userAddress": "41929 Ryan Circle",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "YRf422",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 197,
 		"userID": 9514
 	},
 	{
@@ -171,8 +171,8 @@ const researcher = [
 		"userPhone": "(886) 9531073",
 		"userAddress": "3 Vera Trail",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "dnE280",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 197,
 		"userID": 9515
 	},
 	{
@@ -182,8 +182,8 @@ const researcher = [
 		"userPhone": "(194) 2581616",
 		"userAddress": "34969 Maple Terrace",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "OVK770",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 198,
 		"userID": 9516
 	},
 	{
@@ -193,8 +193,8 @@ const researcher = [
 		"userPhone": "(255) 7009219",
 		"userAddress": "02658 Prentice Terrace",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "mJW675",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 198,
 		"userID": 9517
 	},
 	{
@@ -204,8 +204,8 @@ const researcher = [
 		"userPhone": "(101) 5322051",
 		"userAddress": "88935 Carberry Avenue",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "juN648",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 199,
 		"userID": 9518
 	},
 	{
@@ -215,8 +215,8 @@ const researcher = [
 		"userPhone": "(729) 8965731",
 		"userAddress": "33093 Rutledge Place",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "dXt454",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 199,
 		"userID": 9519
 	},
 	{
@@ -226,8 +226,8 @@ const researcher = [
 		"userPhone": "(205) 9333072",
 		"userAddress": "20 Gateway Trail",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "XKz661",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 200,
 		"userID": 9520
 	},
 	{
@@ -237,8 +237,8 @@ const researcher = [
 		"userPhone": "(754) 2909860",
 		"userAddress": "97 Fisk Terrace",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "IVd632",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 200,
 		"userID": 9521
 	},
 	{
@@ -248,8 +248,8 @@ const researcher = [
 		"userPhone": "(104) 1129748",
 		"userAddress": "7 Grim Parkway",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "xNM165",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 201,
 		"userID": 9522
 	},
 	{
@@ -259,8 +259,8 @@ const researcher = [
 		"userPhone": "(355) 7860471",
 		"userAddress": "4224 Tennessee Place",
 		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "GYe383",
+		"researchSalary": "$120,000 ",
+		"researchOfficeNum": 201,
 		"userID": 9523
 	},
 	{
@@ -270,284 +270,9 @@ const researcher = [
 		"userPhone": "(228) 7170620",
 		"userAddress": "7 Manufacturers Pass",
 		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "xyp369",
+		"researchSalary": "$75,000 ",
+		"researchOfficeNum": 201,
 		"userID": 9524
-	},
-	{
-		"userName": "Hall Maccrae",
-		"userEmail": "hmaccraep@vimeo.com",
-		"userPassword": "YypTGUc",
-		"userPhone": "(418) 7461521",
-		"userAddress": "824 Browning Road",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "CnI847",
-		"userID": 9525
-	},
-	{
-		"userName": "Darlene Fynan",
-		"userEmail": "dfynanq@360.cn",
-		"userPassword": "SDJClQrvItd6",
-		"userPhone": "(463) 3813203",
-		"userAddress": "650 Gale Terrace",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "mJs476",
-		"userID": 9526
-	},
-	{
-		"userName": "Octavia Luker",
-		"userEmail": "olukerr@bigcartel.com",
-		"userPassword": "whw6192YAlW",
-		"userPhone": "(543) 4038151",
-		"userAddress": "232 Lindbergh Place",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "lks110",
-		"userID": 9527
-	},
-	{
-		"userName": "Maribeth Leeson",
-		"userEmail": "mleesons@theatlantic.com",
-		"userPassword": "aieQWuI9vjoO",
-		"userPhone": "(180) 4205872",
-		"userAddress": "34 Autumn Leaf Junction",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "qiL275",
-		"userID": 9528
-	},
-	{
-		"userName": "Evelina Yegorov",
-		"userEmail": "eyegorovt@tiny.cc",
-		"userPassword": "CBnNLIKdFUhx",
-		"userPhone": "(771) 1763020",
-		"userAddress": "87559 Magdeline Pass",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "yUC025",
-		"userID": 9529
-	},
-	{
-		"userName": "Maggee Ledley",
-		"userEmail": "mledleyu@mediafire.com",
-		"userPassword": "QUeKEvPK6",
-		"userPhone": "(513) 9028466",
-		"userAddress": "19021 Loomis Park",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "TnP678",
-		"userID": 9530
-	},
-	{
-		"userName": "Christye Borzoni",
-		"userEmail": "cborzoniv@ning.com",
-		"userPassword": "X583Wx",
-		"userPhone": "(366) 4034947",
-		"userAddress": "51160 Village Court",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "gYO595",
-		"userID": 9531
-	},
-	{
-		"userName": "Egan Lakenden",
-		"userEmail": "elakendenw@360.cn",
-		"userPassword": "lI2kRElSXo",
-		"userPhone": "(226) 8703364",
-		"userAddress": "4271 Bobwhite Street",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "PCb345",
-		"userID": 9532
-	},
-	{
-		"userName": "Orin Deinhardt",
-		"userEmail": "odeinhardtx@51.la",
-		"userPassword": "L9L4E9bwo",
-		"userPhone": "(400) 6532228",
-		"userAddress": "67 Stuart Parkway",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "Uja609",
-		"userID": 9533
-	},
-	{
-		"userName": "Myrwyn Baldwin",
-		"userEmail": "mbaldwiny@google.co.uk",
-		"userPassword": "xyGJcxY",
-		"userPhone": "(533) 9849684",
-		"userAddress": "5 Monument Place",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "wLj241",
-		"userID": 9534
-	},
-	{
-		"userName": "Nara Nornasell",
-		"userEmail": "nnornasellz@npr.org",
-		"userPassword": "o2vULgZ",
-		"userPhone": "(690) 8548918",
-		"userAddress": "23711 Artisan Avenue",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "wPI360",
-		"userID": 9535
-	},
-	{
-		"userName": "Sunny Raccio",
-		"userEmail": "sraccio10@wufoo.com",
-		"userPassword": "b5CtCA9",
-		"userPhone": "(306) 8163552",
-		"userAddress": "40633 West Road",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "aNR813",
-		"userID": 9536
-	},
-	{
-		"userName": "Claudie Mohun",
-		"userEmail": "cmohun11@mapy.cz",
-		"userPassword": "YRYhv7LCh1h",
-		"userPhone": "(827) 2139087",
-		"userAddress": "85 Mesta Trail",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "QJC721",
-		"userID": 9537
-	},
-	{
-		"userName": "Alicia McJury",
-		"userEmail": "amcjury12@berkeley.edu",
-		"userPassword": "PsOLwrD",
-		"userPhone": "(761) 5887472",
-		"userAddress": "0232 Thierer Alley",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "iaK935",
-		"userID": 9538
-	},
-	{
-		"userName": "Bambi Gildea",
-		"userEmail": "bgildea13@vimeo.com",
-		"userPassword": "MrVQDrl6",
-		"userPhone": "(257) 4442441",
-		"userAddress": "048 Reinke Pass",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "RQE414",
-		"userID": 9539
-	},
-	{
-		"userName": "Ileana Bretherick",
-		"userEmail": "ibretherick14@cornell.edu",
-		"userPassword": "8LjEMHsm6l",
-		"userPhone": "(640) 2969703",
-		"userAddress": "94 Gulseth Center",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "GNK488",
-		"userID": 9540
-	},
-	{
-		"userName": "Penelope Wastall",
-		"userEmail": "pwastall15@spotify.com",
-		"userPassword": "4dZeh7ArqIW",
-		"userPhone": "(575) 1218502",
-		"userAddress": "97954 Raven Drive",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "EyS147",
-		"userID": 9541
-	},
-	{
-		"userName": "Nicolle de Quesne",
-		"userEmail": "nde16@nasa.gov",
-		"userPassword": "MhEgBfZA",
-		"userPhone": "(736) 6921278",
-		"userAddress": "786 Nevada Drive",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "JNY609",
-		"userID": 9542
-	},
-	{
-		"userName": "Mamie Dobbinson",
-		"userEmail": "mdobbinson17@wordpress.org",
-		"userPassword": "vqTQmEqtcWF",
-		"userPhone": "(674) 8556873",
-		"userAddress": "9640 Westridge Park",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "Igk861",
-		"userID": 9543
-	},
-	{
-		"userName": "Jayson Checkley",
-		"userEmail": "jcheckley18@bloglines.com",
-		"userPassword": "B9sNoRb7fcm",
-		"userPhone": "(606) 4347726",
-		"userAddress": "1 Kedzie Way",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "Gyk548",
-		"userID": 9544
-	},
-	{
-		"userName": "Lynelle Hay",
-		"userEmail": "lhay19@cloudflare.com",
-		"userPassword": "8T0T3p2c",
-		"userPhone": "(381) 7453472",
-		"userAddress": "51725 Reinke Pass",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "CEW300",
-		"userID": 9545
-	},
-	{
-		"userName": "Aura Markwell",
-		"userEmail": "amarkwell1a@gizmodo.com",
-		"userPassword": "gtUpow",
-		"userPhone": "(506) 5578922",
-		"userAddress": "7036 Swallow Plaza",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "Uce932",
-		"userID": 9546
-	},
-	{
-		"userName": "Kimberley Tolossi",
-		"userEmail": "ktolossi1b@wikimedia.org",
-		"userPassword": "IfabKN",
-		"userPhone": "(659) 9580687",
-		"userAddress": "659 Becker Street",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "jri037",
-		"userID": 9547
-	},
-	{
-		"userName": "Sadye Bischoff",
-		"userEmail": "sbischoff1c@amazon.co.uk",
-		"userPassword": "fGfZdeONC",
-		"userPhone": "(929) 5651163",
-		"userAddress": "4 Sachs Avenue",
-		"userType": "Researcher",
-		"researchSalary": "$120,000",
-		"researchOfficeNum": "MDd042",
-		"userID": 9548
-	},
-	{
-		"userName": "Jeremias Issacoff",
-		"userEmail": "jissacoff1d@skype.com",
-		"userPassword": "rKrY0klZS",
-		"userPhone": "(723) 4025917",
-		"userAddress": "74 Mockingbird Parkway",
-		"userType": "Researcher",
-		"researchSalary": "$75,000",
-		"researchOfficeNum": "Udq284",
-		"userID": 9549
 	}
 ];
 export default researcher;

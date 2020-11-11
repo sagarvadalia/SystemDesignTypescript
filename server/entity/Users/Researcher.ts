@@ -16,5 +16,5 @@ export class Researcher extends Users {
 
 	@Column({ nullable: false })
 	@IsNotEmpty({ message: 'Research Office Number must be provided' })
-	researchOfficeNum: string;
+	researchOfficeNum: number;
 }
