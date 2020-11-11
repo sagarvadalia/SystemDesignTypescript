@@ -14,9 +14,9 @@ export class DayAndPeriod extends BaseEntity {
 	@JoinColumn({ name: 'slotID', referencedColumnName: 'slotID' })
 	public slotID!: number;
 
-	@ManyToOne(() => Day, (days) => days.nameOfDay, { primary: true })
-	@JoinColumn({ name: 'nameOfDay', referencedColumnName: 'nameOfDay' })
-	public nameOfDay!: Day;
+	@ManyToOne(() => Day, (days) => days.dayID, { primary: true })
+	@JoinColumn({ name: 'dayID', referencedColumnName: 'dayID' })
+	public dayID!: Day;
 
 	@ManyToOne(() => Period, (period) => period.periodID, { primary: true })
 	@JoinColumn({ name: 'periodID', referencedColumnName: 'periodID' })

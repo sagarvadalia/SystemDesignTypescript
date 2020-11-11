@@ -6,23 +6,17 @@ import graduateFullTime = require('./graduateFullTime');
 import undergraduateFullTime = require('./undergraduateFullTime');
 import semester = require('./semester');
 import researcher = require('./researcher');
-
 import period = require('./period');
-
 import course = require('./course');
-
 import administrator = require('./administrator');
 import building = require('./building');
 import department = require('./department');
 import major = require('./major');
 import minor = require('./minor');
 import day = require('./day');
-
-
-import administrator = require('./administrator');
-
-import administrator = require('./administrator')
-
+import lecture = require('./lecture')
+import lab = require('./lab')
+import office = require('./office');
 
 
 export const seeds = {
@@ -34,18 +28,16 @@ export const seeds = {
 	undergraduateFullTime,
 	semester,
 	researcher,
-
 	period,
-
 	course,
 	administrator,
-
 	building,
 	department,
-	major,	
+	major,
 	minor,
 	day,
-
-
+	lecture,
+	lab,
+	office
 
 };

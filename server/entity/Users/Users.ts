@@ -1,16 +1,13 @@
+import * as argon2 from 'argon2';
 import { IsEmail, IsNotEmpty } from 'class-validator';
 import {
-	AfterInsert,
-	AfterUpdate,
 	BaseEntity,
 	BeforeInsert,
 	BeforeUpdate,
 	Column,
 	Entity,
-	PrimaryColumn,
-	PrimaryGeneratedColumn,
+	PrimaryColumn
 } from 'typeorm';
-import * as argon2 from 'argon2';
 @Entity()
 export abstract class Users extends BaseEntity {
 	constructor(...args) {

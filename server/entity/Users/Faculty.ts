@@ -1,8 +1,9 @@
 import { IsNotEmpty } from 'class-validator';
-import { BeforeInsert, Column, Entity, OneToMany } from 'typeorm';
+import { BeforeInsert, Column, Entity, JoinColumn, OneToMany, OneToOne } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 import { Advisor } from '../JoinTables/Advisor';
 import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
+import { Room } from '../Locations/Room';
 import { Users } from './Users';
 
 @Entity()
@@ -13,17 +14,9 @@ export class Faculty extends Users {
 		Object.assign(this, Faculty);
 	}
 
-	@Column({ nullable: false })
-	@IsNotEmpty({ message: 'Department ID must be provided' })
-	deptID: number;
-
 	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Faculty rank must be provided' })
 	fRank: string;
-
-	@Column({ nullable: false, type: 'text' })
-	@IsNotEmpty({ message: 'Faculty Office Number must be provided' })
-	fOfficeNumber: string;
 
 	@Column({ nullable: false })
 	@IsNotEmpty({ message: 'Faculty status must be provided' })
@@ -40,4 +33,6 @@ export class Faculty extends Users {
 	//One faculty has many classes
 	@OneToMany(() => Class, (classes) => classes.faculty, { cascade: true })
 	public classes!: Class[];
+
+
 }
