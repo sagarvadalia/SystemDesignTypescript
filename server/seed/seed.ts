@@ -26,40 +26,40 @@ import { Office } from '../entity/Locations/Office';
 
 createConnection()
 	.then(async (connection) => {
-		// //LAB
-		// const labs = seeds.lab.default;
-		// for (let i = 0; i < labs.length; i++) {
-		// 	try {
-		// 		const lab = await connection.manager.create(Lab, labs[i]);
-		// 		await connection.manager.save(lab);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		//LAB
+		const labs = seeds.lab.default;
+		for (let i = 0; i < labs.length; i++) {
+			try {
+				const lab = await connection.manager.create(Lab, labs[i]);
+				await connection.manager.save(lab);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
-		// //LECTURE
-		// const lectures = seeds.lecture.default;
-		// for (let i = 0; i < lectures.length; i++) {
-		// 	try {
-		// 		const lecture = await connection.manager.create(Lecture, lectures[i]);
-		// 		await connection.manager.save(lecture);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		//LECTURE
+		const lectures = seeds.lecture.default;
+		for (let i = 0; i < lectures.length; i++) {
+			try {
+				const lecture = await connection.manager.create(Lecture, lectures[i]);
+				await connection.manager.save(lecture);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
-		// //OFFICE
-		// const offices = seeds.office.default;
-		// for (let i = 0; i < offices.length; i++) {
-		// 	try {
-		// 		const office = await connection.manager.create(Office, offices[i]);
-		// 		await connection.manager.save(office);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		//OFFICE
+		const offices = seeds.office.default;
+		for (let i = 0; i < offices.length; i++) {
+			try {
+				const office = await connection.manager.create(Office, offices[i]);
+				await connection.manager.save(office);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		//FACULTY FT
