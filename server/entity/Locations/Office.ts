@@ -8,6 +8,6 @@ export class Office extends Room {
 		Object.assign(this, Office);
 	}
 
-	@Column({ type: 'text', nullable: false })
-	secretaryName: string;
+	@Column()
+	phoneExt: number;
 }

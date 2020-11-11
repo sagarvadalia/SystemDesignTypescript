@@ -14,7 +14,7 @@ export class Administrator extends Users {
 	@IsNotEmpty({ message: 'Admin salary must be provided' })
 	adminSalary: string;
 
-	@Column({ nullable: false, type: 'text' })
+	@Column({ nullable: false })
 	@IsNotEmpty({ message: 'Admin Office Number must be provided' })
-	adminOfficeNum: string;
+	adminOfficeNum: number;
 }

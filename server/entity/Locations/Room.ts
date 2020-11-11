@@ -11,8 +11,7 @@ import {
 } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 import { Building } from './Building';
-
-// Need to handle the association with course
+import { Department } from './Department';
 @Entity()
 export class Room extends BaseEntity {
 	constructor(...args) {

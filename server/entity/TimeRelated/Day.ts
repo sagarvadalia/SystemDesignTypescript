@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { DayAndPeriod } from '../JoinTables/DayAndPeriod';
 
 @Entity()
@@ -8,9 +8,12 @@ export class Day extends BaseEntity {
 		Object.assign(this, Day);
 	}
 
-	@PrimaryColumn({ type: 'text', nullable: false })
+	@PrimaryGeneratedColumn()
+	dayID: number;
+
+	@Column()
 	nameOfDay: string;
 
-	@OneToMany(() => DayAndPeriod, (dayAndPeriod) => dayAndPeriod.nameOfDay, { cascade: true })
+	@OneToMany(() => DayAndPeriod, (dayAndPeriod) => dayAndPeriod.dayID, { cascade: true })
 	public dayAndPeriod!: DayAndPeriod[];
 }
