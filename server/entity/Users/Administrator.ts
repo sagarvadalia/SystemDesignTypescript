@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, CreateDateColumn, Entity, UpdateDateColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, UpdateDateColumn, createConnection } from 'typeorm';
 import { Users } from './Users';
 
 @Entity()
@@ -17,4 +17,5 @@ export class Administrator extends Users {
 	@Column({ nullable: false })
 	@IsNotEmpty({ message: 'Admin Office Number must be provided' })
 	adminOfficeNum: number;
+
 }

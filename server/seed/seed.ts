@@ -67,11 +67,19 @@ createConnection()
 		for (let i = 0; i < fullTimeFaculty.length; i++) {
 			try {
 				const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
-				await connection.manager.save(faculty);
+				let room = await connection.manager.findOne(Office, fullTimeFaculty[i].roomIDNum)
+				if (room) {
+					faculty.roomID = room;
+					await connection.manager.save(faculty);
+					// let facCheck = await connection.manager.findOne(FacultyFullTime, faculty.userID)
+					// console.log(facCheck);
+				}
+
 			} catch (error) {
 				console.error(error);
 			}
 		}
+
 
 
 		// //FACULTY PT

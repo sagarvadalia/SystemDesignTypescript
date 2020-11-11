@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { Column, Entity, OneToMany } from 'typeorm';
+import { AfterInsert, Column, createConnection, Entity, OneToMany } from 'typeorm';
 import { Advisor } from '../JoinTables/Advisor';
 import { Enrollment } from '../JoinTables/Enrollment';
 import { StudentMinor } from '../JoinTables/StudentMinor';
@@ -47,4 +47,5 @@ export class Student extends Users {
 
 	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.sID, { cascade: true })
 	public studentHolds!: StudentHold[];
+
 }
