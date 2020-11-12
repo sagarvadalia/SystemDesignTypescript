@@ -26,6 +26,8 @@ import { Graduate } from '../entity/Users/Graduate';
 import { Student } from '../entity/Users/Student';
 import { UnderGraduate } from '../entity/Users/UnderGraduate';
 import { FacultyDepartment } from '../entity/JoinTables/FacultyDepartment';
+import { Hold } from '../entity/StudentRelated/Hold';
+import { TimeSlot } from '../entity/TimeRelated/TimeSlot';
 
 
 
@@ -379,17 +381,31 @@ createConnection()
 		// 	}
 		// }
 
-
-		//ADMINISTRATOR
-		const administrator = seeds.administrator.default;
-		for (let i = 0; i < administrator.length; i++) {
+		// //ADMINISTRATOR
+		// const administrator = seeds.administrator.default;
+		// for (let i = 0; i < administrator.length; i++) {
+		// 	try {
+		// 		const administrators = await connection.manager.create(Administrator, administrator[i]);
+		// 		await connection.manager.save(administrators);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
+		const holds = seeds.holds.default
+		for (let i = 0; i < holds.length; i++) {
 			try {
-				const user = await connection.manager.create(Users, administrator[i]);
-				const administrators = await connection.manager.create(Administrator, administrator[i]);
-				await connection.manager.save(user);
-				await connection.manager.save(administrators);
+				const hold = await connection.manager.create(Hold, holds[i])
+				await connection.manager.save(hold)
 			} catch (error) {
-				// console.error(error);
+
+			}
+		}
+		const timeslots = seeds.timeslots.default
+		for (let i = 0; i < timeslots.length; i++) {
+			try {
+				const timeslot = await connection.manager.create(TimeSlot, timeslots[i])
+				await connection.manager.save(timeslot)
+			} catch (error) {
 			}
 		}
 
