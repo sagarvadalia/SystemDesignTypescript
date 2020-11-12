@@ -12,11 +12,11 @@ export class StudentMinor extends BaseEntity {
 
 	@ManyToOne(() => Minor, (minors) => minors.minorID, { primary: true })
 	@JoinColumn({ name: 'minorID', referencedColumnName: 'minorID' })
-	public minorID!: number;
+	public minorID!: Minor;
 
 	@ManyToOne(() => Student, (students) => students.userID, { primary: true })
 	@JoinColumn({ name: 'sID' })
-	public sID!: number;
+	public sID!: Student;
 
 	@Column({ nullable: false, type: 'date' })
 	@IsNotEmpty({ message: 'Date Declared must be provided' })
