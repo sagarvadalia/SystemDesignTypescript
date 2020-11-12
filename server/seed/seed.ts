@@ -19,6 +19,9 @@ import { Period } from '../entity/TimeRelated/Period';
 import { Lab } from '../entity/Locations/Lab';
 import { Lecture } from '../entity/Locations/Lecture';
 import { Office } from '../entity/Locations/Office';
+import { Faculty } from '../entity/Users/Faculty';
+import { Room } from 'server/entity/Locations/Room';
+import { Users } from 'server/entity/Users/Users';
 
 
 
@@ -26,51 +29,62 @@ import { Office } from '../entity/Locations/Office';
 
 createConnection()
 	.then(async (connection) => {
-		//LAB
-		const labs = seeds.lab.default;
-		for (let i = 0; i < labs.length; i++) {
-			try {
-				const lab = await connection.manager.create(Lab, labs[i]);
-				await connection.manager.save(lab);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// //BUILDING
+		// const building = seeds.building.default;
+		// for (let i = 0; i < building.length; i++) {
+		// 	try {
+		// 		const buildings = await connection.manager.create(Building, building[i]);
+		// 		await connection.manager.save(buildings);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
+		// //LAB
+		// const labs = seeds.lab.default;
+		// for (let i = 0; i < labs.length; i++) {
+		// 	try {
+		// 		const lab = await connection.manager.create(Lab, labs[i]);
+		// 		await connection.manager.save(lab);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
 
-		//LECTURE
-		const lectures = seeds.lecture.default;
-		for (let i = 0; i < lectures.length; i++) {
-			try {
-				const lecture = await connection.manager.create(Lecture, lectures[i]);
-				await connection.manager.save(lecture);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// //LECTURE
+		// const lectures = seeds.lecture.default;
+		// for (let i = 0; i < lectures.length; i++) {
+		// 	try {
+		// 		const lecture = await connection.manager.create(Lecture, lectures[i]);
+		// 		await connection.manager.save(lecture);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
 
-		//OFFICE
-		const offices = seeds.office.default;
-		for (let i = 0; i < offices.length; i++) {
-			try {
-				const office = await connection.manager.create(Office, offices[i]);
-				await connection.manager.save(office);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// //OFFICE
+		// const offices = seeds.office.default;
+		// for (let i = 0; i < offices.length; i++) {
+		// 	try {
+		// 		const office = await connection.manager.create(Office, offices[i]);
+		// 		await connection.manager.save(office);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
 
-		//FACULTY FT
+		// //FACULTY FT
 		const fullTimeFaculty = seeds.fullTimeFaculty.default;
 		for (let i = 0; i < fullTimeFaculty.length; i++) {
 			try {
+				const user = await connection.manager.create(Faculty, fullTimeFaculty[i]);
 				const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
 				let room = await connection.manager.findOne(Office, fullTimeFaculty[i].roomIDNum)
 				if (room) {
 					faculty.roomID = room;
-					await connection.manager.save(faculty);
+					await connection.manager.save(user);
 					// let facCheck = await connection.manager.findOne(FacultyFullTime, faculty.userID)
 					// console.log(facCheck);
 				}
@@ -154,7 +168,7 @@ createConnection()
 		// }
 
 
-		// //RESEARCHER
+		// // //RESEARCHER
 		// const researcher = seeds.researcher.default;
 		// for (let i = 0; i < researcher.length; i++) {
 		// 	try {
@@ -166,7 +180,7 @@ createConnection()
 		// }
 
 
-		// //PERIOD
+		// // //PERIOD
 		// const period = seeds.period.default;
 		// for (let i = 0; i < period.length; i++) {
 		// 	try {
@@ -178,7 +192,7 @@ createConnection()
 		// }
 
 
-		// //COURSE
+		//COURSE
 		// const course = seeds.course.default;
 		// for (let i = 0; i < course.length; i++) {
 		// 	try {
@@ -188,30 +202,42 @@ createConnection()
 		// 		// console.error(error);
 		// 	}
 		// }
-
-
-		// //BUILDING
-		// const building = seeds.building.default;
-		// for (let i = 0; i < building.length; i++) {
-		// 	try {
-		// 		const buildings = await connection.manager.create(Building, building[i]);
-		// 		await connection.manager.save(buildings);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
+		// try {
+		// 	const facultyOne = await connection.manager.findOne(Faculty, 6000);
+		// 	console.log(facultyOne)
+		// } catch (error) {
+		// 	console.error(error)
 		// }
 
+		// DEPARTMENT
+		const department = seeds.department.default;
+		for (let i = 0; i < department.length; i++) {
+			try {
+				const departments = await connection.manager.create(Department, department[i]);
+				try {
+					console.log(department[i].deptHeadIDNum)
+					// const faculty = await connection.manager.findOne(Faculty, department[i].deptHeadIDNum)
+					const faculty2 = await connection.manager.findOne(FacultyFullTime, department[i].deptHeadIDNum)
+					// const faculty3 = await connection.manager.findOne(FacultyPartTime, department[i].deptHeadIDNum)
+					const room = await connection.manager.findOne(Office, department[i].roomIDNum)
+					// console.log(faculty);
+					console.log(faculty2);
+					// console.log(faculty3);
+					// console.log(room)
+					if (room && faculty2) {
+						departments.roomID = room;
+						departments.deptHeadID = faculty2;
+						let dept = await connection.manager.save(departments);
+						console.log(dept)
+					}
+				} catch (error) {
 
-		// //DEPARTMENT
-		// const department = seeds.department.default;
-		// for (let i = 0; i < department.length; i++) {
-		// 	try {
-		// 		const departments = await connection.manager.create(Department, department[i]);
-		// 		await connection.manager.save(departments);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+				}
+
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		// //MAJOR

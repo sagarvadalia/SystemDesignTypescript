@@ -15,6 +15,10 @@ import { FacultyDepartment } from '../JoinTables/FacultyDepartment';
 import { Room } from './Room';
 import { Course } from '../ClassRelated/Course';
 import { Lecture } from './Lecture';
+import { Office } from './Office';
+import { Faculty } from '../Users/Faculty';
+import { FacultyPartTime } from '../Users/FacultyPartTime';
+import { FacultyFullTime } from '../Users/FacultyFullTime';
 
 @Entity()
 export class Department extends BaseEntity {
@@ -44,15 +48,18 @@ export class Department extends BaseEntity {
 	deptManager: string;
 
 	//One Department is in one room
-	@OneToOne(() => Lecture)
+	@OneToOne(() => Office)
 	@JoinColumn({ name: 'roomID' })
-	public roomID!: Lecture;
+	public roomID!: Office;
 
+	//One Department is in one room
+	@OneToOne(() => Faculty, { eager: true })
+	@JoinColumn({ name: 'deptHeadID' })
+	public deptHeadID!: Faculty | FacultyPartTime | FacultyFullTime;
 	// This sets an association between Departments and FacultyDepartments
 	// set to cascade so that you can create a faculty and fill in the join table with one query
-	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.fID, { cascade: true })
-	@JoinColumn({ name: 'deptHeadID' })
-	public deptHeadID!: FacultyDepartment[];
+	@OneToMany(() => FacultyDepartment, (FacultyDepartment) => FacultyDepartment.fID,)
+	public Faculties!: FacultyDepartment[];
 
 	//One Department has many Majors
 	@OneToMany(() => Major, (major) => major.deptID, { cascade: true })
