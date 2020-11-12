@@ -20,8 +20,8 @@ import { Lab } from '../entity/Locations/Lab';
 import { Lecture } from '../entity/Locations/Lecture';
 import { Office } from '../entity/Locations/Office';
 import { Faculty } from '../entity/Users/Faculty';
-import { Room } from 'server/entity/Locations/Room';
-import { Users } from 'server/entity/Users/Users';
+import { Room } from '../entity/Locations/Room';
+import { Users } from '../entity/Users/Users';
 
 
 
@@ -79,12 +79,16 @@ createConnection()
 		const fullTimeFaculty = seeds.fullTimeFaculty.default;
 		for (let i = 0; i < fullTimeFaculty.length; i++) {
 			try {
-				const user = await connection.manager.create(Faculty, fullTimeFaculty[i]);
-				const faculty = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
+				const user = await connection.manager.create(Users, fullTimeFaculty[i]);
+				const fac = await connection.manager.create(Faculty, fullTimeFaculty[i]);
+				const fullTimeFac = await connection.manager.create(FacultyFullTime, fullTimeFaculty[i]);
 				let room = await connection.manager.findOne(Office, fullTimeFaculty[i].roomIDNum)
 				if (room) {
-					faculty.roomID = room;
+					fullTimeFac.roomID = room;
+
 					await connection.manager.save(user);
+					await connection.manager.save(fac);
+					await connection.manager.save(fullTimeFac);
 					// let facCheck = await connection.manager.findOne(FacultyFullTime, faculty.userID)
 					// console.log(facCheck);
 				}
