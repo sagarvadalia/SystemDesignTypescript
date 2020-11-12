@@ -28,6 +28,7 @@ import { UnderGraduate } from '../entity/Users/UnderGraduate';
 import { FacultyDepartment } from '../entity/JoinTables/FacultyDepartment';
 import { Hold } from '../entity/StudentRelated/Hold';
 import { TimeSlot } from '../entity/TimeRelated/TimeSlot';
+import { DayAndPeriod } from 'server/entity/JoinTables/DayAndPeriod';
 
 
 
@@ -398,6 +399,18 @@ createConnection()
 
 			}
 		}
-
+		const periods = await connection.manager.find(Period);
+		const days = await connection.manager.find(Day);
+		let timeslotCnt = 1;
+		for (let i = 0; i < periods.length; i++) {
+			for (let j = 0; j < days.length; j++) {
+				const dayAndPeriod = await connection.manager.create(DayAndPeriod, {
+					periodID: periods[i],
+					dayID: days[i],
+					slotID: timeslotCnt
+				})
+				timeslotCnt++;
+			}
+		}
 	})
 	.catch((error) => console.log(error));
