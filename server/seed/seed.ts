@@ -25,6 +25,7 @@ import { Users } from '../entity/Users/Users';
 import { Graduate } from '../entity/Users/Graduate';
 import { Student } from '../entity/Users/Student';
 import { UnderGraduate } from '../entity/Users/UnderGraduate';
+import { FacultyDepartment } from '../entity/JoinTables/FacultyDepartment';
 
 
 
@@ -43,7 +44,7 @@ createConnection()
 				// console.error(error);
 			}
 		}
-		//LAB
+		// LAB
 		const labs = seeds.lab.default;
 		for (let i = 0; i < labs.length; i++) {
 			try {
@@ -131,19 +132,19 @@ createConnection()
 
 
 		//STUDENT G FT
-		const graduateFullTime = seeds.graduateFullTime.default;
-		for (let i = 0; i < graduateFullTime.length; i++) {
-			try {
-				const user = await connection.manager.create(Users, graduateFullTime[i])
-				const student = await connection.manager.create(Student, graduateFullTime[i])
-				const grad = await connection.manager.create(Graduate, graduateFullTime[i])
-				const fullTimeGrad = await connection.manager.create(GraduateFullTime, graduateFullTime[i]);
-				await connection.manager.save(user);
-				await connection.manager.save(student);
-				await connection.manager.save(grad);
-				await connection.manager.save(fullTimeGrad);
-			} catch (error) { }
-		}
+		// const graduateFullTime = seeds.graduateFullTime.default;
+		// for (let i = 0; i < graduateFullTime.length; i++) {
+		// 	try {
+		// 		const user = await connection.manager.create(Users, graduateFullTime[i])
+		// 		const student = await connection.manager.create(Student, graduateFullTime[i])
+		// 		const grad = await connection.manager.create(Graduate, graduateFullTime[i])
+		// 		const fullTimeGrad = await connection.manager.create(GraduateFullTime, graduateFullTime[i]);
+		// 		await connection.manager.save(user);
+		// 		await connection.manager.save(student);
+		// 		await connection.manager.save(grad);
+		// 		await connection.manager.save(fullTimeGrad);
+		// 	} catch (error) { }
+		// }
 
 
 
@@ -163,7 +164,6 @@ createConnection()
 				// console.error(error);
 			}
 		}
-
 
 
 		//STUDENT UG FT
@@ -288,29 +288,84 @@ createConnection()
 			}
 		}
 
+		const departments = await connection.manager.find(Department)
+		const faculty = await connection.manager.find(Faculty)
 
+		for (let i = 0; i < departments.length; i++) {
+			try {
+				const head = departments[i].deptHeadID
+				const deptHead = await connection.manager.findOne(Faculty, head)
+				if (deptHead) {
+					const facDep = await connection.manager.create(FacultyDepartment, {
+						fID: deptHead,
+						deptID: departments[i],
+						percentOfTime: '100%',
+						dateAppointed: new Date('November 12, 2020 04:28:00')
+
+					})
+					await connection.manager.save(facDep)
+				}
+
+			} catch (error) {
+				console.error(error)
+			}
+
+		}
+		let iter = 1;
+		for (let i = 0; i < faculty.length; i++) {
+			try {
+				if (iter = 16) {
+					iter = 1;
+				}
+
+				const dept = await connection.manager.findOne(Department, iter)
+				if (dept) {
+					const facDep = await connection.manager.create(FacultyDepartment, {
+						fID: faculty[i],
+						deptID: dept,
+						percentOfTime: '100%',
+						dateAppointed: new Date('November 12, 2020 04:28:00')
+
+					})
+
+					await connection.manager.save(facDep)
+				}
+				else {
+					console.log('------------------------------------------------', iter, 'couldnt find dept')
+				}
+				iter++;
+			} catch (error) {
+				console.error(error)
+			}
+
+
+		}
 		// //MAJOR
-		// const major = seeds.major.default;
-		// for (let i = 0; i < major.length; i++) {
-		// 	try {
-		// 		const majors = await connection.manager.create(Major, major[i]);
-		// 		await connection.manager.save(majors);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		const major = seeds.major.default;
+		for (let i = 0; i < major.length; i++) {
+			try {
+				const majors = await connection.manager.create(Major, major[i]);
+				const dept = await connection.manager.findOne(Department, major[i].deptID)
+				dept ? majors.department = dept : console.log('no department found')
+				await connection.manager.save(majors);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		// //MINOR
-		// const minor = seeds.minor.default;
-		// for (let i = 0; i < minor.length; i++) {
-		// 	try {
-		// 		const minors = await connection.manager.create(Minor, minor[i]);
-		// 		await connection.manager.save(minors);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		const minor = seeds.minor.default;
+		for (let i = 0; i < minor.length; i++) {
+			try {
+				const minors = await connection.manager.create(Minor, minor[i]);
+				const dept = await connection.manager.findOne(Department, minor[i].deptID)
+				dept ? minors.department = dept : console.log('no department found')
+				await connection.manager.save(minors);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		// //DAY
