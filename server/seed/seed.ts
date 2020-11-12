@@ -24,6 +24,7 @@ import { Room } from '../entity/Locations/Room';
 import { Users } from '../entity/Users/Users';
 import { Graduate } from '../entity/Users/Graduate';
 import { Student } from '../entity/Users/Student';
+import { UnderGraduate } from '../entity/Users/UnderGraduate';
 
 
 
@@ -161,7 +162,7 @@ createConnection()
 			try {
 				const user = await connection.manager.create(Users, undergraduateFullTime[i])
 				const student = await connection.manager.create(Student, undergraduateFullTime[i])
-				const undergrad = await connection.manager.create(Graduate, undergraduateFullTime[i])
+				const undergrad = await connection.manager.create(UnderGraduate, undergraduateFullTime[i])
 				const undergradFullTime = await connection.manager.create(GraduateFullTime, undergraduateFullTime[i]);
 				await connection.manager.save(user);
 				await connection.manager.save(student);
@@ -179,7 +180,7 @@ createConnection()
 			try {
 				const user = await connection.manager.create(Users, undergraduatePartTime[i])
 				const student = await connection.manager.create(Student, undergraduatePartTime[i])
-				const undergrad = await connection.manager.create(Graduate, undergraduatePartTime[i])
+				const undergrad = await connection.manager.create(UnderGraduate, undergraduatePartTime[i])
 				const undergradPartTime = await connection.manager.create(GraduateFullTime, undergraduatePartTime[i]);
 				await connection.manager.save(user);
 				await connection.manager.save(student);
