@@ -363,15 +363,15 @@ createConnection()
 		const minors = await connection.manager.find(Minor)
 		const students = await connection.manager.find(Student)
 		const majors = await connection.manager.find(Major)
-		let alt = 1;
+		let index = 1;
 		let majorNum = 1;
 		let minorNum = 1;
 		for (let i = 0; i < students.length; i++) {
 			majorNum > majors.length - 1 ? majorNum = 1 : null
 			minorNum > minors.length - 1 ? minorNum = 1 : null
-			alt > 3 ? alt = 1 : null
+			index > 3 ? index = 1 : null
 
-			if (alt === 1) {
+			if (index === 1) {
 				let major = await connection.manager.findOne(Major, majorNum)
 				if (major) {
 					const studentMajor = await connection.manager.create(StudentMajor, {
@@ -381,11 +381,11 @@ createConnection()
 					})
 					await connection.manager.save(studentMajor);
 					majorNum++;
-					alt++;
+					index++;
 				}
 
 			}
-			if (alt === 2) {
+			if (index === 2) {
 				let major = await connection.manager.findOne(Major, majorNum)
 				if (major) {
 					const studentMajor = await connection.manager.create(StudentMajor, {
@@ -408,12 +408,12 @@ createConnection()
 					await connection.manager.save(studentMinor);
 					majorNum++;
 					minorNum++;
-					alt++;
+					index++;
 				}
 
 			}
 
-			if (alt === 3) {
+			if (index === 3) {
 				let major = await connection.manager.findOne(Major, majorNum)
 				if (major) {
 					const studentMajor = await connection.manager.create(StudentMajor, {
@@ -423,7 +423,7 @@ createConnection()
 					})
 					await connection.manager.save(studentMajor);
 					majorNum++;
-					alt++;
+					index++;
 				}
 				majorNum++;
 				let major2 = await connection.manager.findOne(Major, majorNum)
@@ -436,7 +436,7 @@ createConnection()
 					await connection.manager.save(studentMajor2);
 					majorNum++;
 					minorNum++;
-					alt++;
+					index++;
 				}
 
 			}
