@@ -24,5 +24,5 @@ export class Major extends BaseEntity {
 	// One Department has many majors
 	@ManyToOne(() => Department, (department) => department.majors, {})
 	@JoinColumn({ name: 'deptID' })
-	public deptID!: Department;
+	public department!: Department;
 }

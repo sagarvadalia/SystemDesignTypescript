@@ -329,27 +329,31 @@ createConnection()
 
 		}
 		// //MAJOR
-		// const major = seeds.major.default;
-		// for (let i = 0; i < major.length; i++) {
-		// 	try {
-		// 		const majors = await connection.manager.create(Major, major[i]);
-		// 		await connection.manager.save(majors);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		const major = seeds.major.default;
+		for (let i = 0; i < major.length; i++) {
+			try {
+				const majors = await connection.manager.create(Major, major[i]);
+				const dept = await connection.manager.findOne(Department, major[i].deptID)
+				dept ? majors.department = dept : console.log('no department found')
+				await connection.manager.save(majors);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		// //MINOR
-		// const minor = seeds.minor.default;
-		// for (let i = 0; i < minor.length; i++) {
-		// 	try {
-		// 		const minors = await connection.manager.create(Minor, minor[i]);
-		// 		await connection.manager.save(minors);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+		const minor = seeds.minor.default;
+		for (let i = 0; i < minor.length; i++) {
+			try {
+				const minors = await connection.manager.create(Minor, minor[i]);
+				const dept = await connection.manager.findOne(Department, minor[i].deptID)
+				dept ? minors.department = dept : console.log('no department found')
+				await connection.manager.save(minors);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		// //DAY
