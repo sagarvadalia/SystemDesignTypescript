@@ -35,6 +35,6 @@ export class Room extends BaseEntity {
 
 	//Relationship to Building
 	@ManyToOne(() => Building, (buildings) => buildings.rooms, { eager: true, cascade: true })
-	@JoinColumn({ name: 'buildingID' })
-	public buildings!: Building[];
+	@JoinColumn()
+	public buildings!: Building;
 }
