@@ -395,7 +395,7 @@ createConnection()
 					})
 					await connection.manager.save(studentMajor);
 					majorNum++;
-					alt++;
+					index++;
 				}
 
 				let minor = await connection.manager.findOne(Minor, minorNum)
