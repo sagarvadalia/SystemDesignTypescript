@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 import { DayAndPeriod } from '../JoinTables/DayAndPeriod';
 
@@ -16,6 +16,6 @@ export class TimeSlot extends BaseEntity {
 	@OneToMany(() => DayAndPeriod, (dayAndPeriod) => dayAndPeriod.slotID, { cascade: true })
 	public dayAndPeriod!: DayAndPeriod[];
 
-	@PrimaryGeneratedColumn()
+	@PrimaryColumn()
 	slotID: number;
 }

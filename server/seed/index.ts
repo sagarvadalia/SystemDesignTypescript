@@ -17,6 +17,8 @@ import day = require('./day');
 import lecture = require('./lecture')
 import lab = require('./lab')
 import office = require('./office');
+import timeslots = require('./timeslot');
+import holds = require('./hold');
 
 
 export const seeds = {
@@ -38,6 +40,8 @@ export const seeds = {
 	day,
 	lecture,
 	lab,
-	office
+	office,
+	holds,
+	timeslots
 
 };
