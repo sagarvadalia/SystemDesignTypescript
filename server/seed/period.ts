@@ -28,7 +28,6 @@ const period = [
 		endTime: '8:40 PM',
 	},
 	{
-		periodID: 8,
 		startTime: '8:50 PM',
 		endTime: '10:20 PM',
 	},
