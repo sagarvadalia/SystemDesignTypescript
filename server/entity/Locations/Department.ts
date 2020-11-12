@@ -62,11 +62,11 @@ export class Department extends BaseEntity {
 	public Faculties!: FacultyDepartment[];
 
 	//One Department has many Majors
-	@OneToMany(() => Major, (major) => major.deptID, { cascade: true })
+	@OneToMany(() => Major, (major) => major.department, { cascade: true })
 	public majors!: Major[];
 
 	//One Department has many Minors
-	@OneToMany(() => Minor, (minor) => minor.deptID, { cascade: true })
+	@OneToMany(() => Minor, (minor) => minor.department, { cascade: true })
 	public minors!: Minor[];
 
 	//One Department has many courses
