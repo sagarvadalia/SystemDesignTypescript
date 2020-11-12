@@ -10,15 +10,15 @@ export class StudentMajor extends BaseEntity {
 		Object.assign(this, StudentMajor);
 	}
 
-	@ManyToOne(() => Major, (majors) => majors.majorID, { primary: true })
+	@ManyToOne(() => Major, (majors) => majors.majorID, { primary: true, eager: true })
 	@JoinColumn({ name: 'majorID', referencedColumnName: 'majorID' })
-	public majorID!: number;
+	public majorID!: Major;
 
 	@ManyToOne(() => Student, (students) => students.userID, { primary: true })
 	@JoinColumn({ name: 'sID' })
-	public sID!: number;
+	public sID!: Student;
 
 	@Column({ nullable: false, type: 'text' })
 	@IsNotEmpty({ message: 'Date Declared must be provided' })
-	dateDeclared: string;
+	dateDeclared: Date;
 }

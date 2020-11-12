@@ -29,6 +29,8 @@ import { FacultyDepartment } from '../entity/JoinTables/FacultyDepartment';
 import { Hold } from '../entity/StudentRelated/Hold';
 import { TimeSlot } from '../entity/TimeRelated/TimeSlot';
 import { DayAndPeriod } from 'server/entity/JoinTables/DayAndPeriod';
+import { StudentMajor } from '../entity/JoinTables/StudentMajor';
+import { StudentMinor } from '../entity/JoinTables/StudentMinor';
 
 
 
@@ -358,6 +360,89 @@ createConnection()
 			}
 		}
 
+		const minors = await connection.manager.find(Minor)
+		const students = await connection.manager.find(Student)
+		const majors = await connection.manager.find(Major)
+		let alt = 1;
+		let majorNum = 1;
+		let minorNum = 1;
+		for (let i = 0; i < students.length; i++) {
+			majorNum > majors.length - 1 ? majorNum = 1 : null
+			minorNum > minors.length - 1 ? minorNum = 1 : null
+			alt > 3 ? alt = 1 : null
+
+			if (alt === 1) {
+				let major = await connection.manager.findOne(Major, majorNum)
+				if (major) {
+					const studentMajor = await connection.manager.create(StudentMajor, {
+						majorID: major,
+						sID: students[i],
+						dateDeclared: new Date("November 12 2020")
+					})
+					await connection.manager.save(studentMajor);
+					majorNum++;
+					alt++;
+				}
+
+			}
+			if (alt === 2) {
+				let major = await connection.manager.findOne(Major, majorNum)
+				if (major) {
+					const studentMajor = await connection.manager.create(StudentMajor, {
+						majorID: major,
+						sID: students[i],
+						dateDeclared: new Date("November 12 2020")
+					})
+					await connection.manager.save(studentMajor);
+					majorNum++;
+					alt++;
+				}
+
+				let minor = await connection.manager.findOne(Minor, minorNum)
+				if (minor) {
+					const studentMinor = await connection.manager.create(StudentMinor, {
+						minorID: minor,
+						sID: students[i],
+						dateDeclared: new Date("November 12 2020")
+					})
+					await connection.manager.save(studentMinor);
+					majorNum++;
+					minorNum++;
+					alt++;
+				}
+
+			}
+
+			if (alt === 3) {
+				let major = await connection.manager.findOne(Major, majorNum)
+				if (major) {
+					const studentMajor = await connection.manager.create(StudentMajor, {
+						majorID: major,
+						sID: students[i],
+						dateDeclared: new Date("November 12 2020")
+					})
+					await connection.manager.save(studentMajor);
+					majorNum++;
+					alt++;
+				}
+				majorNum++;
+				let major2 = await connection.manager.findOne(Major, majorNum)
+				if (major2) {
+					const studentMajor2 = await connection.manager.create(StudentMajor, {
+						majorID: major2,
+						sID: students[i],
+						dateDeclared: new Date("November 12 2020")
+					})
+					await connection.manager.save(studentMajor2);
+					majorNum++;
+					minorNum++;
+					alt++;
+				}
+
+			}
+		}
+
+
 
 		// //DAY
 		// const day = seeds.day.default;
@@ -412,5 +497,6 @@ createConnection()
 				timeslotCnt++;
 			}
 		}
+
 	})
 	.catch((error) => console.log(error));
