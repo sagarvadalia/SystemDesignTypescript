@@ -1,7 +1,7 @@
 const undergraduateFullTime = [
 	{
-		"userName": "Glyn Temblett",
-		"userEmail": "gtemblett0@godaddy.com",
+		"userName": "Ethelind Lascell",
+		"userEmail": "ELascell@GuptaUni.edu",
 		"userPassword": "ciUjGU1kk",
 		"userPhone": "(327) 9007544",
 		"userAddress": "9 Stuart Alley",
@@ -12,7 +12,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -21,8 +21,8 @@ const undergraduateFullTime = [
 		"userID": 4000
 	},
 	{
-		"userName": "Tildy Kinzett",
-		"userEmail": "tkinzett1@typepad.com",
+		"userName": "Biddy Cassel",
+		"userEmail": "BCassel@GuptaUni.edu",
 		"userPassword": "ImbMpikD",
 		"userPhone": "(650) 2128847",
 		"userAddress": "19011 Mesta Drive",
@@ -33,7 +33,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -42,8 +42,8 @@ const undergraduateFullTime = [
 		"userID": 4001
 	},
 	{
-		"userName": "Gardner Cruickshank",
-		"userEmail": "gcruickshank2@phpbb.com",
+		"userName": "Alexina Parratt",
+		"userEmail": "AParratt@GuptaUni.edu",
 		"userPassword": "2S849ZSM9r",
 		"userPhone": "(749) 2914081",
 		"userAddress": "2549 Killdeer Park",
@@ -54,7 +54,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -63,8 +63,8 @@ const undergraduateFullTime = [
 		"userID": 4002
 	},
 	{
-		"userName": "Grayce Athy",
-		"userEmail": "gathy3@multiply.com",
+		"userName": "Brian Haysey",
+		"userEmail": "BHaysey@GuptaUni.edu",
 		"userPassword": "nazx5PYt6A",
 		"userPhone": "(517) 8583078",
 		"userAddress": "87415 Welch Drive",
@@ -75,7 +75,7 @@ const undergraduateFullTime = [
 		"totalCredits": 40,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -84,8 +84,8 @@ const undergraduateFullTime = [
 		"userID": 4003
 	},
 	{
-		"userName": "Ginevra Eves",
-		"userEmail": "geves4@blogger.com",
+		"userName": "Tirrell Cressar",
+		"userEmail": "TCressar@GuptaUni.edu",
 		"userPassword": "m57wUjDkD",
 		"userPhone": "(953) 8225967",
 		"userAddress": "386 Crowley Alley",
@@ -96,7 +96,7 @@ const undergraduateFullTime = [
 		"totalCredits": 84,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -105,8 +105,8 @@ const undergraduateFullTime = [
 		"userID": 4004
 	},
 	{
-		"userName": "Bree Elvin",
-		"userEmail": "belvin5@dyndns.org",
+		"userName": "Alberik Eldin",
+		"userEmail": "AEldin@GuptaUni.edu",
 		"userPassword": "JJKBWHyu",
 		"userPhone": "(878) 4158253",
 		"userAddress": "28453 Comanche Pass",
@@ -117,7 +117,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -126,8 +126,8 @@ const undergraduateFullTime = [
 		"userID": 4005
 	},
 	{
-		"userName": "Jaimie Fader",
-		"userEmail": "jfader6@ebay.co.uk",
+		"userName": "Elisha Eley",
+		"userEmail": "EEley@GuptaUni.edu",
 		"userPassword": "QwS1cPFc6UW",
 		"userPhone": "(938) 1307797",
 		"userAddress": "0 Cambridge Road",
@@ -138,7 +138,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -147,8 +147,8 @@ const undergraduateFullTime = [
 		"userID": 4006
 	},
 	{
-		"userName": "Aindrea Cawsby",
-		"userEmail": "acawsby7@tumblr.com",
+		"userName": "Alain Goldup",
+		"userEmail": "AGoldup@GuptaUni.edu",
 		"userPassword": "Q20SNKnK1",
 		"userPhone": "(288) 5944649",
 		"userAddress": "8696 Mallard Junction",
@@ -159,7 +159,7 @@ const undergraduateFullTime = [
 		"totalCredits": 120,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -168,8 +168,8 @@ const undergraduateFullTime = [
 		"userID": 4007
 	},
 	{
-		"userName": "Rance Dollard",
-		"userEmail": "rdollard8@chicagotribune.com",
+		"userName": "Hall Snibson",
+		"userEmail": "HSnibson@GuptaUni.edu",
 		"userPassword": "7RGmkVDhT",
 		"userPhone": "(567) 3669040",
 		"userAddress": "49 Hudson Center",
@@ -180,7 +180,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -189,8 +189,8 @@ const undergraduateFullTime = [
 		"userID": 4008
 	},
 	{
-		"userName": "Darda McCulley",
-		"userEmail": "dmcculley9@japanpost.jp",
+		"userName": "Cathrin Persse",
+		"userEmail": "CPersse@GuptaUni.edu",
 		"userPassword": "NbotFcRs",
 		"userPhone": "(722) 7585109",
 		"userAddress": "64 Burning Wood Center",
@@ -201,7 +201,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -210,8 +210,8 @@ const undergraduateFullTime = [
 		"userID": 4009
 	},
 	{
-		"userName": "Dory Eliot",
-		"userEmail": "deliota@cpanel.net",
+		"userName": "Almire Presser",
+		"userEmail": "APresser@GuptaUni.edu",
 		"userPassword": "fSeOA8",
 		"userPhone": "(588) 8744815",
 		"userAddress": "77123 Jenna Lane",
@@ -222,7 +222,7 @@ const undergraduateFullTime = [
 		"totalCredits": 60,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -231,8 +231,8 @@ const undergraduateFullTime = [
 		"userID": 4010
 	},
 	{
-		"userName": "Tamera Abade",
-		"userEmail": "tabadeb@walmart.com",
+		"userName": "Aristotle MacColgan",
+		"userEmail": "AMacColg@GuptaUni.edu",
 		"userPassword": "HDBYaayrsEeg",
 		"userPhone": "(731) 8639968",
 		"userAddress": "916 North Place",
@@ -243,7 +243,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -252,8 +252,8 @@ const undergraduateFullTime = [
 		"userID": 4011
 	},
 	{
-		"userName": "Robena Sparshett",
-		"userEmail": "rsparshettc@microsoft.com",
+		"userName": "Gaylord Helsdon",
+		"userEmail": "GHelsdon@GuptaUni.edu",
 		"userPassword": "z7ALllwqE",
 		"userPhone": "(869) 2450721",
 		"userAddress": "98 Ryan Plaza",
@@ -264,7 +264,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -273,8 +273,8 @@ const undergraduateFullTime = [
 		"userID": 4012
 	},
 	{
-		"userName": "Horst Wagenen",
-		"userEmail": "hwagenend@mac.com",
+		"userName": "Berkie Lacheze",
+		"userEmail": "BLacheze@GuptaUni.edu",
 		"userPassword": "vBr4VD",
 		"userPhone": "(167) 8909748",
 		"userAddress": "93 Eagan Street",
@@ -285,7 +285,7 @@ const undergraduateFullTime = [
 		"totalCredits": 36,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -294,8 +294,8 @@ const undergraduateFullTime = [
 		"userID": 4013
 	},
 	{
-		"userName": "Codie Gleed",
-		"userEmail": "cgleede@paginegialle.it",
+		"userName": "Peg Alderwick",
+		"userEmail": "PAlderwi@GuptaUni.edu",
 		"userPassword": "o5h3CtA6",
 		"userPhone": "(643) 7573684",
 		"userAddress": "77 Corry Lane",
@@ -306,7 +306,7 @@ const undergraduateFullTime = [
 		"totalCredits": 120,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -315,8 +315,8 @@ const undergraduateFullTime = [
 		"userID": 4014
 	},
 	{
-		"userName": "Dionysus Ollington",
-		"userEmail": "dollingtonf@opera.com",
+		"userName": "Meredeth Cicchillo",
+		"userEmail": "MCicchil@GuptaUni.edu",
 		"userPassword": "nivBIlA",
 		"userPhone": "(336) 3210161",
 		"userAddress": "5 Graceland Place",
@@ -327,7 +327,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -336,8 +336,8 @@ const undergraduateFullTime = [
 		"userID": 4015
 	},
 	{
-		"userName": "Janeta Fransson",
-		"userEmail": "jfranssong@marketwatch.com",
+		"userName": "Rebecka Emmines",
+		"userEmail": "REmmines@GuptaUni.edu",
 		"userPassword": "Rdred10fmXXc",
 		"userPhone": "(938) 4917833",
 		"userAddress": "6 Debra Junction",
@@ -348,7 +348,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -357,8 +357,8 @@ const undergraduateFullTime = [
 		"userID": 4016
 	},
 	{
-		"userName": "Bonita Mylechreest",
-		"userEmail": "bmylechreesth@aol.com",
+		"userName": "Shelton Raggles",
+		"userEmail": "SRaggles@GuptaUni.edu",
 		"userPassword": "BuPsgfkGtmD",
 		"userPhone": "(800) 8999178",
 		"userAddress": "2355 Farragut Plaza",
@@ -369,7 +369,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -378,8 +378,8 @@ const undergraduateFullTime = [
 		"userID": 4017
 	},
 	{
-		"userName": "Bobbie Saladine",
-		"userEmail": "bsaladinei@booking.com",
+		"userName": "Terri-jo Mitford",
+		"userEmail": "TMitford@GuptaUni.edu",
 		"userPassword": "xhZq1JY8Q",
 		"userPhone": "(738) 2032518",
 		"userAddress": "861 7th Avenue",
@@ -390,7 +390,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -399,8 +399,8 @@ const undergraduateFullTime = [
 		"userID": 4018
 	},
 	{
-		"userName": "Stanley Cringle",
-		"userEmail": "scringlej@arizona.edu",
+		"userName": "Dominga Seabert",
+		"userEmail": "DSeabert@GuptaUni.edu",
 		"userPassword": "hSp9Ka",
 		"userPhone": "(315) 2051682",
 		"userAddress": "3 Kim Trail",
@@ -411,7 +411,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -420,8 +420,8 @@ const undergraduateFullTime = [
 		"userID": 4019
 	},
 	{
-		"userName": "Geraldine Rearie",
-		"userEmail": "greariek@technorati.com",
+		"userName": "Natalina Antonognoli",
+		"userEmail": "NAntonog@GuptaUni.edu",
 		"userPassword": "BPYEsX",
 		"userPhone": "(180) 8974287",
 		"userAddress": "5229 Petterle Point",
@@ -432,7 +432,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -441,8 +441,8 @@ const undergraduateFullTime = [
 		"userID": 4020
 	},
 	{
-		"userName": "Conney Pinwell",
-		"userEmail": "cpinwelll@bing.com",
+		"userName": "Cordie Questier",
+		"userEmail": "CQuestie@GuptaUni.edu",
 		"userPassword": "Azkb1dn9QF",
 		"userPhone": "(114) 7000306",
 		"userAddress": "4539 Swallow Park",
@@ -453,7 +453,7 @@ const undergraduateFullTime = [
 		"totalCredits": 12,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -462,8 +462,8 @@ const undergraduateFullTime = [
 		"userID": 4021
 	},
 	{
-		"userName": "Phillida Ramage",
-		"userEmail": "pramagem@freewebs.com",
+		"userName": "Tad Muttitt",
+		"userEmail": "TMuttitt@GuptaUni.edu",
 		"userPassword": "WCNRxuR9bYJ",
 		"userPhone": "(628) 1571330",
 		"userAddress": "74 Union Lane",
@@ -474,7 +474,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -483,8 +483,8 @@ const undergraduateFullTime = [
 		"userID": 4022
 	},
 	{
-		"userName": "Moyna Ottery",
-		"userEmail": "motteryn@com.com",
+		"userName": "Elsworth Juleff",
+		"userEmail": "EJuleff@GuptaUni.edu",
 		"userPassword": "7AfYcL4a3",
 		"userPhone": "(295) 1541640",
 		"userAddress": "2643 Drewry Plaza",
@@ -495,7 +495,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -504,8 +504,8 @@ const undergraduateFullTime = [
 		"userID": 4023
 	},
 	{
-		"userName": "Marja Purslow",
-		"userEmail": "mpurslowo@youku.com",
+		"userName": "Den Benadette",
+		"userEmail": "DBenadet@GuptaUni.edu",
 		"userPassword": "haUtadO",
 		"userPhone": "(800) 6221731",
 		"userAddress": "340 Badeau Terrace",
@@ -516,7 +516,7 @@ const undergraduateFullTime = [
 		"totalCredits": 120,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -525,8 +525,8 @@ const undergraduateFullTime = [
 		"userID": 4024
 	},
 	{
-		"userName": "Margi Muxworthy",
-		"userEmail": "mmuxworthyp@nyu.edu",
+		"userName": "Lennie France",
+		"userEmail": "LFrance@GuptaUni.edu",
 		"userPassword": "GywX7Mbtes",
 		"userPhone": "(760) 5254791",
 		"userAddress": "1512 Pine View Hill",
@@ -537,7 +537,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -546,8 +546,8 @@ const undergraduateFullTime = [
 		"userID": 4025
 	},
 	{
-		"userName": "Esdras Fireman",
-		"userEmail": "efiremanq@squidoo.com",
+		"userName": "Humbert Whitecross",
+		"userEmail": "HWhitecr@GuptaUni.edu",
 		"userPassword": "pIawjvKzNlJj",
 		"userPhone": "(771) 5371673",
 		"userAddress": "7782 Grim Avenue",
@@ -558,7 +558,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -567,8 +567,8 @@ const undergraduateFullTime = [
 		"userID": 4026
 	},
 	{
-		"userName": "Osbert Outridge",
-		"userEmail": "ooutridger@wp.com",
+		"userName": "Gelya Hulke",
+		"userEmail": "GHulke@GuptaUni.edu",
 		"userPassword": "sjUeuNUudKo",
 		"userPhone": "(931) 1230805",
 		"userAddress": "11926 Maryland Court",
@@ -579,7 +579,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -588,8 +588,8 @@ const undergraduateFullTime = [
 		"userID": 4027
 	},
 	{
-		"userName": "Candide Flaws",
-		"userEmail": "cflawss@ucoz.ru",
+		"userName": "Quincey Burgne",
+		"userEmail": "QBurgne@GuptaUni.edu",
 		"userPassword": "sRj2WV1YYlLN",
 		"userPhone": "(246) 1822729",
 		"userAddress": "33694 Scott Trail",
@@ -600,7 +600,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -609,8 +609,8 @@ const undergraduateFullTime = [
 		"userID": 4028
 	},
 	{
-		"userName": "Howie Dwire",
-		"userEmail": "hdwiret@shop-pro.jp",
+		"userName": "Alejandrina Bradly",
+		"userEmail": "ABradly@GuptaUni.edu",
 		"userPassword": "4TWtsXKo97",
 		"userPhone": "(406) 1682324",
 		"userAddress": "9059 Del Mar Junction",
@@ -621,7 +621,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -630,8 +630,8 @@ const undergraduateFullTime = [
 		"userID": 4029
 	},
 	{
-		"userName": "Riordan McKinney",
-		"userEmail": "rmckinneyu@hao123.com",
+		"userName": "Bill Callington",
+		"userEmail": "BCalling@GuptaUni.edu",
 		"userPassword": "lhRSE98Nn31",
 		"userPhone": "(322) 4354149",
 		"userAddress": "644 Farwell Drive",
@@ -642,7 +642,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -651,8 +651,8 @@ const undergraduateFullTime = [
 		"userID": 4030
 	},
 	{
-		"userName": "Virgie Cradduck",
-		"userEmail": "vcradduckv@squarespace.com",
+		"userName": "Major Fells",
+		"userEmail": "MFells@GuptaUni.edu",
 		"userPassword": "8PNpLl",
 		"userPhone": "(544) 9770286",
 		"userAddress": "035 Hanson Point",
@@ -663,7 +663,7 @@ const undergraduateFullTime = [
 		"totalCredits": 112,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -672,8 +672,8 @@ const undergraduateFullTime = [
 		"userID": 4031
 	},
 	{
-		"userName": "Evy Darco",
-		"userEmail": "edarcow@infoseek.co.jp",
+		"userName": "Trumann Merrell",
+		"userEmail": "TMerrell@GuptaUni.edu",
 		"userPassword": "7BmoksCzod",
 		"userPhone": "(823) 9701292",
 		"userAddress": "686 Katie Center",
@@ -684,7 +684,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -693,8 +693,8 @@ const undergraduateFullTime = [
 		"userID": 4032
 	},
 	{
-		"userName": "Rodger Laweles",
-		"userEmail": "rlawelesx@unicef.org",
+		"userName": "Delbert Olyet",
+		"userEmail": "DOlyet@GuptaUni.edu",
 		"userPassword": "x23KcO7XsCBm",
 		"userPhone": "(967) 6913739",
 		"userAddress": "98693 Bartelt Drive",
@@ -705,7 +705,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -714,8 +714,8 @@ const undergraduateFullTime = [
 		"userID": 4033
 	},
 	{
-		"userName": "Clayson Sibery",
-		"userEmail": "csiberyy@disqus.com",
+		"userName": "Gayleen Beatson",
+		"userEmail": "GBeatson@GuptaUni.edu",
 		"userPassword": "PflYjWE",
 		"userPhone": "(433) 3974758",
 		"userAddress": "823 Bultman Place",
@@ -726,7 +726,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -735,8 +735,8 @@ const undergraduateFullTime = [
 		"userID": 4034
 	},
 	{
-		"userName": "Chalmers Elman",
-		"userEmail": "celmanz@hugedomains.com",
+		"userName": "Ermin Slimings",
+		"userEmail": "ESliming@GuptaUni.edu",
 		"userPassword": "cr7YYS5",
 		"userPhone": "(261) 2257087",
 		"userAddress": "14638 Eastlawn Avenue",
@@ -747,7 +747,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -756,8 +756,8 @@ const undergraduateFullTime = [
 		"userID": 4035
 	},
 	{
-		"userName": "Grayce Yeend",
-		"userEmail": "gyeend10@themeforest.net",
+		"userName": "Casar Dood",
+		"userEmail": "CDood@GuptaUni.edu",
 		"userPassword": "fwchmP",
 		"userPhone": "(278) 7587802",
 		"userAddress": "4358 Sachtjen Parkway",
@@ -768,7 +768,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -777,8 +777,8 @@ const undergraduateFullTime = [
 		"userID": 4036
 	},
 	{
-		"userName": "Lurleen Buttner",
-		"userEmail": "lbuttner11@home.pl",
+		"userName": "Tera Guerriero",
+		"userEmail": "TGuerrie@GuptaUni.edu",
 		"userPassword": "JFhWSs6qoL",
 		"userPhone": "(582) 1898607",
 		"userAddress": "74593 Charing Cross Trail",
@@ -789,7 +789,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -798,8 +798,8 @@ const undergraduateFullTime = [
 		"userID": 4037
 	},
 	{
-		"userName": "Christie Mattheissen",
-		"userEmail": "cmattheissen12@amazon.de",
+		"userName": "Sancho Riping",
+		"userEmail": "SRiping@GuptaUni.edu",
 		"userPassword": "rzimUBp",
 		"userPhone": "(725) 2943211",
 		"userAddress": "385 Bartelt Street",
@@ -810,7 +810,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -819,8 +819,8 @@ const undergraduateFullTime = [
 		"userID": 4038
 	},
 	{
-		"userName": "Dora Apted",
-		"userEmail": "dapted13@sogou.com",
+		"userName": "Ivor Boughen",
+		"userEmail": "IBoughen@GuptaUni.edu",
 		"userPassword": "iiUgl2r",
 		"userPhone": "(391) 8669659",
 		"userAddress": "90381 Arrowood Way",
@@ -831,7 +831,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -840,8 +840,8 @@ const undergraduateFullTime = [
 		"userID": 4039
 	},
 	{
-		"userName": "Kendricks Onele",
-		"userEmail": "konele14@marketwatch.com",
+		"userName": "Derrek Haile",
+		"userEmail": "DHaile@GuptaUni.edu",
 		"userPassword": "6xUcHWv",
 		"userPhone": "(984) 7848648",
 		"userAddress": "829 Farmco Pass",
@@ -852,7 +852,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -861,8 +861,8 @@ const undergraduateFullTime = [
 		"userID": 4040
 	},
 	{
-		"userName": "Blanch Eudall",
-		"userEmail": "beudall15@cocolog-nifty.com",
+		"userName": "Cathee Pardew",
+		"userEmail": "CPardew@GuptaUni.edu",
 		"userPassword": "bbIBJ7",
 		"userPhone": "(282) 7019096",
 		"userAddress": "2 Melrose Terrace",
@@ -873,7 +873,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -882,8 +882,8 @@ const undergraduateFullTime = [
 		"userID": 4041
 	},
 	{
-		"userName": "Athene Oret",
-		"userEmail": "aoret16@reference.com",
+		"userName": "Colby O' Flaherty",
+		"userEmail": "CO' Flah@GuptaUni.edu",
 		"userPassword": "b7dLorY",
 		"userPhone": "(331) 4903836",
 		"userAddress": "2 Sloan Avenue",
@@ -894,7 +894,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -903,8 +903,8 @@ const undergraduateFullTime = [
 		"userID": 4042
 	},
 	{
-		"userName": "Patrick Goldthorp",
-		"userEmail": "pgoldthorp17@zdnet.com",
+		"userName": "Minta Clues",
+		"userEmail": "MClues@GuptaUni.edu",
 		"userPassword": "ruYWD4Wr",
 		"userPhone": "(612) 3255488",
 		"userAddress": "134 Hagan Avenue",
@@ -915,7 +915,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -924,8 +924,8 @@ const undergraduateFullTime = [
 		"userID": 4043
 	},
 	{
-		"userName": "Stormy Greenhead",
-		"userEmail": "sgreenhead18@squidoo.com",
+		"userName": "Ariadne Botton",
+		"userEmail": "ABotton@GuptaUni.edu",
 		"userPassword": "FchNizd",
 		"userPhone": "(374) 8147085",
 		"userAddress": "4 Pleasure Avenue",
@@ -936,7 +936,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -945,8 +945,8 @@ const undergraduateFullTime = [
 		"userID": 4044
 	},
 	{
-		"userName": "Jillie Jozefowicz",
-		"userEmail": "jjozefowicz19@amazon.co.jp",
+		"userName": "Devora Trenear",
+		"userEmail": "DTrenear@GuptaUni.edu",
 		"userPassword": "4UQ6vet",
 		"userPhone": "(368) 2444121",
 		"userAddress": "8100 Heath Plaza",
@@ -957,7 +957,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -966,8 +966,8 @@ const undergraduateFullTime = [
 		"userID": 4045
 	},
 	{
-		"userName": "Wallie Sutty",
-		"userEmail": "wsutty1a@istockphoto.com",
+		"userName": "Florida Harmeston",
+		"userEmail": "FHarmest@GuptaUni.edu",
 		"userPassword": "57JePzl3htE",
 		"userPhone": "(905) 7230591",
 		"userAddress": "6751 4th Park",
@@ -978,7 +978,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -987,8 +987,8 @@ const undergraduateFullTime = [
 		"userID": 4046
 	},
 	{
-		"userName": "Clair Cattemull",
-		"userEmail": "ccattemull1b@clickbank.net",
+		"userName": "Jodie Jelphs",
+		"userEmail": "JJelphs@GuptaUni.edu",
 		"userPassword": "lOYhfB",
 		"userPhone": "(218) 8482278",
 		"userAddress": "35 Hazelcrest Pass",
@@ -999,7 +999,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1008,8 +1008,8 @@ const undergraduateFullTime = [
 		"userID": 4047
 	},
 	{
-		"userName": "Spenser Rowlatt",
-		"userEmail": "srowlatt1c@elegantthemes.com",
+		"userName": "Nanete Schaumaker",
+		"userEmail": "NSchauma@GuptaUni.edu",
 		"userPassword": "VGx1Q770rE8",
 		"userPhone": "(546) 6010343",
 		"userAddress": "48 1st Plaza",
@@ -1020,7 +1020,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1029,8 +1029,8 @@ const undergraduateFullTime = [
 		"userID": 4048
 	},
 	{
-		"userName": "Jenine Sackur",
-		"userEmail": "jsackur1d@redcross.org",
+		"userName": "Rawley Mitchelmore",
+		"userEmail": "RMitchel@GuptaUni.edu",
 		"userPassword": "7fxFYa",
 		"userPhone": "(681) 5598852",
 		"userAddress": "124 Mitchell Point",
@@ -1041,7 +1041,7 @@ const undergraduateFullTime = [
 		"totalCredits": 100,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1050,8 +1050,8 @@ const undergraduateFullTime = [
 		"userID": 4049
 	},
 	{
-		"userName": "Rodrigo Milesop",
-		"userEmail": "rmilesop1e@squarespace.com",
+		"userName": "Alvinia Coleridge",
+		"userEmail": "AColerid@GuptaUni.edu",
 		"userPassword": "DkAaC77U",
 		"userPhone": "(205) 2884838",
 		"userAddress": "893 South Plaza",
@@ -1062,7 +1062,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1071,8 +1071,8 @@ const undergraduateFullTime = [
 		"userID": 4050
 	},
 	{
-		"userName": "Orton Hesse",
-		"userEmail": "ohesse1f@ox.ac.uk",
+		"userName": "Winston Frontczak",
+		"userEmail": "WFrontcz@GuptaUni.edu",
 		"userPassword": "w5hwOBaSU",
 		"userPhone": "(480) 7581021",
 		"userAddress": "2 Farragut Pass",
@@ -1083,7 +1083,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1092,8 +1092,8 @@ const undergraduateFullTime = [
 		"userID": 4051
 	},
 	{
-		"userName": "Julius Gosnall",
-		"userEmail": "jgosnall1g@usa.gov",
+		"userName": "Easter Anfusso",
+		"userEmail": "EAnfusso@GuptaUni.edu",
 		"userPassword": "WDWVL6DXtfO",
 		"userPhone": "(256) 1334408",
 		"userAddress": "54 Maple Street",
@@ -1104,7 +1104,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1113,8 +1113,8 @@ const undergraduateFullTime = [
 		"userID": 4052
 	},
 	{
-		"userName": "Sherry Thomerson",
-		"userEmail": "sthomerson1h@mac.com",
+		"userName": "Ethe Kiloh",
+		"userEmail": "EKiloh@GuptaUni.edu",
 		"userPassword": "JEDiQBbrR",
 		"userPhone": "(339) 4726048",
 		"userAddress": "64839 Raven Alley",
@@ -1125,7 +1125,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -1134,8 +1134,8 @@ const undergraduateFullTime = [
 		"userID": 4053
 	},
 	{
-		"userName": "Jacquelin Sweetnam",
-		"userEmail": "jsweetnam1i@hibu.com",
+		"userName": "Sibbie Kulic",
+		"userEmail": "SKulic@GuptaUni.edu",
 		"userPassword": "Qr3iiRT",
 		"userPhone": "(751) 5658179",
 		"userAddress": "121 Havey Junction",
@@ -1146,7 +1146,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1155,8 +1155,8 @@ const undergraduateFullTime = [
 		"userID": 4054
 	},
 	{
-		"userName": "Stefan Frankcom",
-		"userEmail": "sfrankcom1j@constantcontact.com",
+		"userName": "Huntlee Goodlake",
+		"userEmail": "HGoodlak@GuptaUni.edu",
 		"userPassword": "oBcgcO",
 		"userPhone": "(809) 9392457",
 		"userAddress": "86159 Pankratz Parkway",
@@ -1167,7 +1167,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1176,8 +1176,8 @@ const undergraduateFullTime = [
 		"userID": 4055
 	},
 	{
-		"userName": "Zonnya Reightley",
-		"userEmail": "zreightley1k@joomla.org",
+		"userName": "Glyn Jacox",
+		"userEmail": "GJacox@GuptaUni.edu",
 		"userPassword": "0SYbmwWstB",
 		"userPhone": "(401) 6308667",
 		"userAddress": "81159 West Avenue",
@@ -1188,7 +1188,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1197,8 +1197,8 @@ const undergraduateFullTime = [
 		"userID": 4056
 	},
 	{
-		"userName": "Heda Georges",
-		"userEmail": "hgeorges1l@storify.com",
+		"userName": "Sabina Kwietek",
+		"userEmail": "SKwietek@GuptaUni.edu",
 		"userPassword": "ZOFCFVgWON",
 		"userPhone": "(165) 7119436",
 		"userAddress": "09910 Karstens Way",
@@ -1209,7 +1209,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1218,8 +1218,8 @@ const undergraduateFullTime = [
 		"userID": 4057
 	},
 	{
-		"userName": "Kristoforo Leathes",
-		"userEmail": "kleathes1m@dion.ne.jp",
+		"userName": "Elsey Keenlyside",
+		"userEmail": "EKeenlys@GuptaUni.edu",
 		"userPassword": "SUHyufBn",
 		"userPhone": "(605) 4713071",
 		"userAddress": "36 Marcy Street",
@@ -1230,7 +1230,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1239,8 +1239,8 @@ const undergraduateFullTime = [
 		"userID": 4058
 	},
 	{
-		"userName": "Birdie Triner",
-		"userEmail": "btriner1n@odnoklassniki.ru",
+		"userName": "Garner Raddon",
+		"userEmail": "GRaddon@GuptaUni.edu",
 		"userPassword": "kItGrqpRm",
 		"userPhone": "(204) 1473724",
 		"userAddress": "3 Anhalt Terrace",
@@ -1251,7 +1251,7 @@ const undergraduateFullTime = [
 		"totalCredits": 112,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1260,8 +1260,8 @@ const undergraduateFullTime = [
 		"userID": 4059
 	},
 	{
-		"userName": "Ellerey Erangy",
-		"userEmail": "eerangy1o@guardian.co.uk",
+		"userName": "Amy Boustead",
+		"userEmail": "ABoustea@GuptaUni.edu",
 		"userPassword": "wYb4AXR",
 		"userPhone": "(570) 6450906",
 		"userAddress": "4967 Lerdahl Pass",
@@ -1272,7 +1272,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1281,8 +1281,8 @@ const undergraduateFullTime = [
 		"userID": 4060
 	},
 	{
-		"userName": "Hyatt Turn",
-		"userEmail": "hturn1p@vistaprint.com",
+		"userName": "Katleen Wood",
+		"userEmail": "KWood@GuptaUni.edu",
 		"userPassword": "KcaB3qTS0a",
 		"userPhone": "(871) 3806531",
 		"userAddress": "229 Ohio Alley",
@@ -1293,7 +1293,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1302,8 +1302,8 @@ const undergraduateFullTime = [
 		"userID": 4061
 	},
 	{
-		"userName": "Axe Streight",
-		"userEmail": "astreight1q@tripadvisor.com",
+		"userName": "Lynnea Lempel",
+		"userEmail": "LLempel@GuptaUni.edu",
 		"userPassword": "oIutxsqTJfm5",
 		"userPhone": "(747) 6342840",
 		"userAddress": "6745 Towne Parkway",
@@ -1314,7 +1314,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1323,8 +1323,8 @@ const undergraduateFullTime = [
 		"userID": 4062
 	},
 	{
-		"userName": "Orly Beddoes",
-		"userEmail": "obeddoes1r@reference.com",
+		"userName": "Marjy Potte",
+		"userEmail": "MPotte@GuptaUni.edu",
 		"userPassword": "DfX8O1FaW94",
 		"userPhone": "(756) 2599044",
 		"userAddress": "66 Eliot Plaza",
@@ -1335,7 +1335,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1344,8 +1344,8 @@ const undergraduateFullTime = [
 		"userID": 4063
 	},
 	{
-		"userName": "Reade Zamboniari",
-		"userEmail": "rzamboniari1s@squidoo.com",
+		"userName": "Brook Hamner",
+		"userEmail": "BHamner@GuptaUni.edu",
 		"userPassword": "872YTfHqYRQ",
 		"userPhone": "(987) 4460399",
 		"userAddress": "699 Northland Terrace",
@@ -1356,7 +1356,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1365,8 +1365,8 @@ const undergraduateFullTime = [
 		"userID": 4064
 	},
 	{
-		"userName": "Maynard Jenicke",
-		"userEmail": "mjenicke1t@etsy.com",
+		"userName": "Darla Rustman",
+		"userEmail": "DRustman@GuptaUni.edu",
 		"userPassword": "0qog21Pe",
 		"userPhone": "(554) 3927782",
 		"userAddress": "463 Sundown Plaza",
@@ -1377,7 +1377,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1386,8 +1386,8 @@ const undergraduateFullTime = [
 		"userID": 4065
 	},
 	{
-		"userName": "Rafferty Shipman",
-		"userEmail": "rshipman1u@dot.gov",
+		"userName": "Leese Burdass",
+		"userEmail": "LBurdass@GuptaUni.edu",
 		"userPassword": "S71fMPAfgB",
 		"userPhone": "(976) 4991720",
 		"userAddress": "75234 Sunbrook Court",
@@ -1398,7 +1398,7 @@ const undergraduateFullTime = [
 		"totalCredits": 84,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -1407,8 +1407,8 @@ const undergraduateFullTime = [
 		"userID": 4066
 	},
 	{
-		"userName": "Park Colcutt",
-		"userEmail": "pcolcutt1v@ezinearticles.com",
+		"userName": "Gradey Standering",
+		"userEmail": "GStander@GuptaUni.edu",
 		"userPassword": "CZUYSPSK",
 		"userPhone": "(263) 5872622",
 		"userAddress": "6983 Hintze Park",
@@ -1419,7 +1419,7 @@ const undergraduateFullTime = [
 		"totalCredits": 88,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1428,8 +1428,8 @@ const undergraduateFullTime = [
 		"userID": 4067
 	},
 	{
-		"userName": "Kenton Giorgiutti",
-		"userEmail": "kgiorgiutti1w@studiopress.com",
+		"userName": "Oralee Abelov",
+		"userEmail": "OAbelov@GuptaUni.edu",
 		"userPassword": "BYS4gYFJ16KA",
 		"userPhone": "(621) 7456785",
 		"userAddress": "55 Parkside Point",
@@ -1440,7 +1440,7 @@ const undergraduateFullTime = [
 		"totalCredits": 88,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -1449,8 +1449,8 @@ const undergraduateFullTime = [
 		"userID": 4068
 	},
 	{
-		"userName": "Aldus Miners",
-		"userEmail": "aminers1x@amazon.co.uk",
+		"userName": "Cal Brade",
+		"userEmail": "CBrade@GuptaUni.edu",
 		"userPassword": "Mwigfvf0s",
 		"userPhone": "(965) 9983439",
 		"userAddress": "1 Miller Place",
@@ -1461,7 +1461,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1470,8 +1470,8 @@ const undergraduateFullTime = [
 		"userID": 4069
 	},
 	{
-		"userName": "Whitney Trubshaw",
-		"userEmail": "wtrubshaw1y@stanford.edu",
+		"userName": "Em Traut",
+		"userEmail": "ETraut@GuptaUni.edu",
 		"userPassword": "4E0hQi",
 		"userPhone": "(283) 4385376",
 		"userAddress": "05 Sommers Junction",
@@ -1482,7 +1482,7 @@ const undergraduateFullTime = [
 		"totalCredits": 12,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1491,8 +1491,8 @@ const undergraduateFullTime = [
 		"userID": 4070
 	},
 	{
-		"userName": "Dorelia O'Duane",
-		"userEmail": "doduane1z@hostgator.com",
+		"userName": "Cazzie Ilchuk",
+		"userEmail": "CIlchuk@GuptaUni.edu",
 		"userPassword": "5s2vN0",
 		"userPhone": "(746) 4754650",
 		"userAddress": "438 Lotheville Pass",
@@ -1503,7 +1503,7 @@ const undergraduateFullTime = [
 		"totalCredits": 40,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1512,8 +1512,8 @@ const undergraduateFullTime = [
 		"userID": 4071
 	},
 	{
-		"userName": "Datha Duny",
-		"userEmail": "dduny20@slideshare.net",
+		"userName": "Verena Szymon",
+		"userEmail": "VSzymon@GuptaUni.edu",
 		"userPassword": "piUsk3NL",
 		"userPhone": "(722) 8081060",
 		"userAddress": "77 High Crossing Park",
@@ -1524,7 +1524,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -1533,8 +1533,8 @@ const undergraduateFullTime = [
 		"userID": 4072
 	},
 	{
-		"userName": "Jocelin Tilson",
-		"userEmail": "jtilson21@wordpress.com",
+		"userName": "Marven Jakeman",
+		"userEmail": "MJakeman@GuptaUni.edu",
 		"userPassword": "2tSod3DKPz",
 		"userPhone": "(278) 2396466",
 		"userAddress": "4234 Emmet Point",
@@ -1545,7 +1545,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1554,8 +1554,8 @@ const undergraduateFullTime = [
 		"userID": 4073
 	},
 	{
-		"userName": "Nicolea Belsey",
-		"userEmail": "nbelsey22@about.me",
+		"userName": "Cobb Ethelston",
+		"userEmail": "CEthelst@GuptaUni.edu",
 		"userPassword": "cS0Msi",
 		"userPhone": "(954) 2184713",
 		"userAddress": "88683 Hazelcrest Avenue",
@@ -1566,7 +1566,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1575,8 +1575,8 @@ const undergraduateFullTime = [
 		"userID": 4074
 	},
 	{
-		"userName": "Micaela Rizzotto",
-		"userEmail": "mrizzotto23@go.com",
+		"userName": "Bertie Fitchett",
+		"userEmail": "BFitchet@GuptaUni.edu",
 		"userPassword": "35RQJNOQOR",
 		"userPhone": "(585) 9507024",
 		"userAddress": "0367 Randy Lane",
@@ -1587,7 +1587,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1596,8 +1596,8 @@ const undergraduateFullTime = [
 		"userID": 4075
 	},
 	{
-		"userName": "Pancho Labitt",
-		"userEmail": "plabitt24@house.gov",
+		"userName": "Justin Dymick",
+		"userEmail": "JDymick@GuptaUni.edu",
 		"userPassword": "7dhQbY",
 		"userPhone": "(480) 4546271",
 		"userAddress": "928 Corry Avenue",
@@ -1608,7 +1608,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1617,8 +1617,8 @@ const undergraduateFullTime = [
 		"userID": 4076
 	},
 	{
-		"userName": "Salaidh Spriggin",
-		"userEmail": "sspriggin25@businesswire.com",
+		"userName": "Penelopa Arrighetti",
+		"userEmail": "PArrighe@GuptaUni.edu",
 		"userPassword": "YGAbMsRZ",
 		"userPhone": "(691) 8104883",
 		"userAddress": "924 Stang Plaza",
@@ -1629,7 +1629,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1638,8 +1638,8 @@ const undergraduateFullTime = [
 		"userID": 4077
 	},
 	{
-		"userName": "Ariadne Gaitskill",
-		"userEmail": "agaitskill26@toplist.cz",
+		"userName": "Vasily Risbridger",
+		"userEmail": "VRisbrid@GuptaUni.edu",
 		"userPassword": "OO5AzvSqyTmg",
 		"userPhone": "(975) 3078235",
 		"userAddress": "235 Columbus Junction",
@@ -1650,7 +1650,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1659,8 +1659,8 @@ const undergraduateFullTime = [
 		"userID": 4078
 	},
 	{
-		"userName": "Minta Claringbold",
-		"userEmail": "mclaringbold27@topsy.com",
+		"userName": "Sheryl Scotcher",
+		"userEmail": "SScotche@GuptaUni.edu",
 		"userPassword": "7GA8d4rf",
 		"userPhone": "(569) 8067793",
 		"userAddress": "53558 Merrick Alley",
@@ -1671,7 +1671,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -1680,8 +1680,8 @@ const undergraduateFullTime = [
 		"userID": 4079
 	},
 	{
-		"userName": "Nelli Gensavage",
-		"userEmail": "ngensavage28@vistaprint.com",
+		"userName": "Alverta Tollerfield",
+		"userEmail": "ATollerf@GuptaUni.edu",
 		"userPassword": "SZeat2QJqXb",
 		"userPhone": "(486) 8742246",
 		"userAddress": "4 Forster Parkway",
@@ -1692,7 +1692,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1701,8 +1701,8 @@ const undergraduateFullTime = [
 		"userID": 4080
 	},
 	{
-		"userName": "Desiree Reichartz",
-		"userEmail": "dreichartz29@tumblr.com",
+		"userName": "Caye Pulsford",
+		"userEmail": "CPulsfor@GuptaUni.edu",
 		"userPassword": "5L8WtRyf",
 		"userPhone": "(630) 2308896",
 		"userAddress": "8059 Shelley Way",
@@ -1713,7 +1713,7 @@ const undergraduateFullTime = [
 		"totalCredits": 60,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1722,8 +1722,8 @@ const undergraduateFullTime = [
 		"userID": 4081
 	},
 	{
-		"userName": "Solly Siemianowicz",
-		"userEmail": "ssiemianowicz2a@sfgate.com",
+		"userName": "Jacenta Gladden",
+		"userEmail": "JGladden@GuptaUni.edu",
 		"userPassword": "VNk5DDGUXP",
 		"userPhone": "(670) 8980938",
 		"userAddress": "6 Scofield Place",
@@ -1734,7 +1734,7 @@ const undergraduateFullTime = [
 		"totalCredits": 120,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1743,8 +1743,8 @@ const undergraduateFullTime = [
 		"userID": 4082
 	},
 	{
-		"userName": "Alard Dammarell",
-		"userEmail": "adammarell2b@scribd.com",
+		"userName": "Julie Lanham",
+		"userEmail": "JLanham@GuptaUni.edu",
 		"userPassword": "yROI4Dl",
 		"userPhone": "(377) 1405792",
 		"userAddress": "701 Carpenter Way",
@@ -1755,7 +1755,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -1764,8 +1764,8 @@ const undergraduateFullTime = [
 		"userID": 4083
 	},
 	{
-		"userName": "Heath Buckle",
-		"userEmail": "hbuckle2c@nymag.com",
+		"userName": "Jacquelin Goodee",
+		"userEmail": "JGoodee@GuptaUni.edu",
 		"userPassword": "pUDdTKvf",
 		"userPhone": "(493) 7964616",
 		"userAddress": "6292 Towne Place",
@@ -1776,7 +1776,7 @@ const undergraduateFullTime = [
 		"totalCredits": 36,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1785,8 +1785,8 @@ const undergraduateFullTime = [
 		"userID": 4084
 	},
 	{
-		"userName": "Calida Asbury",
-		"userEmail": "casbury2d@cocolog-nifty.com",
+		"userName": "Rafaelita Ridge",
+		"userEmail": "RRidge@GuptaUni.edu",
 		"userPassword": "gVjrd10",
 		"userPhone": "(506) 9054426",
 		"userAddress": "07289 Glendale Drive",
@@ -1797,7 +1797,7 @@ const undergraduateFullTime = [
 		"totalCredits": 96,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1806,8 +1806,8 @@ const undergraduateFullTime = [
 		"userID": 4085
 	},
 	{
-		"userName": "Fredek Pirkis",
-		"userEmail": "fpirkis2e@privacy.gov.au",
+		"userName": "Hali Nixon",
+		"userEmail": "HNixon@GuptaUni.edu",
 		"userPassword": "tHRMcPACa",
 		"userPhone": "(674) 7732805",
 		"userAddress": "09508 Heffernan Place",
@@ -1818,7 +1818,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1827,8 +1827,8 @@ const undergraduateFullTime = [
 		"userID": 4086
 	},
 	{
-		"userName": "Ophelia Westcar",
-		"userEmail": "owestcar2f@unesco.org",
+		"userName": "Adelaida Tilford",
+		"userEmail": "ATilford@GuptaUni.edu",
 		"userPassword": "Gpz6xGO",
 		"userPhone": "(343) 4618103",
 		"userAddress": "63226 Lotheville Drive",
@@ -1839,7 +1839,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1848,8 +1848,8 @@ const undergraduateFullTime = [
 		"userID": 4087
 	},
 	{
-		"userName": "Gottfried Gerrish",
-		"userEmail": "ggerrish2g@usda.gov",
+		"userName": "Binni Ors",
+		"userEmail": "BOrs@GuptaUni.edu",
 		"userPassword": "S9vNyxct0XGB",
 		"userPhone": "(241) 8796949",
 		"userAddress": "7023 Milwaukee Street",
@@ -1860,7 +1860,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1869,8 +1869,8 @@ const undergraduateFullTime = [
 		"userID": 4088
 	},
 	{
-		"userName": "Jacquette McInulty",
-		"userEmail": "jmcinulty2h@accuweather.com",
+		"userName": "Roch Hince",
+		"userEmail": "RHince@GuptaUni.edu",
 		"userPassword": "SSXIaARz",
 		"userPhone": "(345) 5273713",
 		"userAddress": "0 Towne Drive",
@@ -1881,7 +1881,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1890,8 +1890,8 @@ const undergraduateFullTime = [
 		"userID": 4089
 	},
 	{
-		"userName": "Rayna Lomen",
-		"userEmail": "rlomen2i@howstuffworks.com",
+		"userName": "Rickey Maffia",
+		"userEmail": "RMaffia@GuptaUni.edu",
 		"userPassword": "XMXyk8VDnHRw",
 		"userPhone": "(791) 9646995",
 		"userAddress": "894 Anniversary Lane",
@@ -1902,7 +1902,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1911,8 +1911,8 @@ const undergraduateFullTime = [
 		"userID": 4090
 	},
 	{
-		"userName": "Geri Lonie",
-		"userEmail": "glonie2j@mediafire.com",
+		"userName": "Avrit Halsworth",
+		"userEmail": "AHalswor@GuptaUni.edu",
 		"userPassword": "qzITn8vDkB6k",
 		"userPhone": "(607) 2400121",
 		"userAddress": "1822 Magdeline Street",
@@ -1923,7 +1923,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1932,8 +1932,8 @@ const undergraduateFullTime = [
 		"userID": 4091
 	},
 	{
-		"userName": "Jewel Scoterbosh",
-		"userEmail": "jscoterbosh2k@google.com.hk",
+		"userName": "Martainn Eate",
+		"userEmail": "MEate@GuptaUni.edu",
 		"userPassword": "hKda3D",
 		"userPhone": "(774) 1944874",
 		"userAddress": "2 Wayridge Place",
@@ -1944,7 +1944,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1953,8 +1953,8 @@ const undergraduateFullTime = [
 		"userID": 4092
 	},
 	{
-		"userName": "Raven Murray",
-		"userEmail": "rmurray2l@mediafire.com",
+		"userName": "Cleopatra Yeliashev",
+		"userEmail": "CYeliash@GuptaUni.edu",
 		"userPassword": "AVulrdMp1CW7",
 		"userPhone": "(187) 9106125",
 		"userAddress": "00 Warbler Junction",
@@ -1965,7 +1965,7 @@ const undergraduateFullTime = [
 		"totalCredits": 60,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -1974,8 +1974,8 @@ const undergraduateFullTime = [
 		"userID": 4093
 	},
 	{
-		"userName": "Phillip Mannock",
-		"userEmail": "pmannock2m@state.gov",
+		"userName": "Averil Kennea",
+		"userEmail": "AKennea@GuptaUni.edu",
 		"userPassword": "CDO9ruvI",
 		"userPhone": "(733) 9038765",
 		"userAddress": "67732 Tony Pass",
@@ -1986,7 +1986,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -1995,8 +1995,8 @@ const undergraduateFullTime = [
 		"userID": 4094
 	},
 	{
-		"userName": "Bernardine Winney",
-		"userEmail": "bwinney2n@pcworld.com",
+		"userName": "Ryan Whyteman",
+		"userEmail": "RWhytema@GuptaUni.edu",
 		"userPassword": "JY5zrTZ",
 		"userPhone": "(476) 6896231",
 		"userAddress": "8468 Coolidge Court",
@@ -2007,7 +2007,7 @@ const undergraduateFullTime = [
 		"totalCredits": 88,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2016,8 +2016,8 @@ const undergraduateFullTime = [
 		"userID": 4095
 	},
 	{
-		"userName": "Lotte Pirdue",
-		"userEmail": "lpirdue2o@ed.gov",
+		"userName": "Vonnie Puttock",
+		"userEmail": "VPuttock@GuptaUni.edu",
 		"userPassword": "geuYfl9",
 		"userPhone": "(426) 4895238",
 		"userAddress": "1 Warrior Crossing",
@@ -2028,7 +2028,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2037,8 +2037,8 @@ const undergraduateFullTime = [
 		"userID": 4096
 	},
 	{
-		"userName": "Lezlie Sealy",
-		"userEmail": "lsealy2p@blogtalkradio.com",
+		"userName": "Rochester Bendle",
+		"userEmail": "RBendle@GuptaUni.edu",
 		"userPassword": "6QOcezxM7",
 		"userPhone": "(944) 6357894",
 		"userAddress": "5305 Transport Drive",
@@ -2049,7 +2049,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2058,8 +2058,8 @@ const undergraduateFullTime = [
 		"userID": 4097
 	},
 	{
-		"userName": "Sibelle Durbann",
-		"userEmail": "sdurbann2q@netvibes.com",
+		"userName": "Temple Royson",
+		"userEmail": "TRoyson@GuptaUni.edu",
 		"userPassword": "Q1CeTm3C0gVW",
 		"userPhone": "(731) 2846295",
 		"userAddress": "56 North Avenue",
@@ -2070,7 +2070,7 @@ const undergraduateFullTime = [
 		"totalCredits": 120,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -2079,8 +2079,8 @@ const undergraduateFullTime = [
 		"userID": 4098
 	},
 	{
-		"userName": "Joelly McLemon",
-		"userEmail": "jmclemon2r@smugmug.com",
+		"userName": "Cale Jacques",
+		"userEmail": "CJacques@GuptaUni.edu",
 		"userPassword": "fTrVOzR",
 		"userPhone": "(207) 6327657",
 		"userAddress": "975 Norway Maple Pass",
@@ -2091,7 +2091,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2100,8 +2100,8 @@ const undergraduateFullTime = [
 		"userID": 4099
 	},
 	{
-		"userName": "Dane Murton",
-		"userEmail": "dmurton2s@tamu.edu",
+		"userName": "Ann Leetham",
+		"userEmail": "ALeetham@GuptaUni.edu",
 		"userPassword": "dwsnOzUPgwry",
 		"userPhone": "(676) 5573479",
 		"userAddress": "822 Barby Center",
@@ -2112,7 +2112,7 @@ const undergraduateFullTime = [
 		"totalCredits": 60,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2121,8 +2121,8 @@ const undergraduateFullTime = [
 		"userID": 4100
 	},
 	{
-		"userName": "Tammie Whiston",
-		"userEmail": "twhiston2t@whitehouse.gov",
+		"userName": "Sukey Riceards",
+		"userEmail": "SRiceard@GuptaUni.edu",
 		"userPassword": "mcSY63Fcwe",
 		"userPhone": "(424) 7895280",
 		"userAddress": "8 Haas Circle",
@@ -2133,7 +2133,7 @@ const undergraduateFullTime = [
 		"totalCredits": 60,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2142,8 +2142,8 @@ const undergraduateFullTime = [
 		"userID": 4101
 	},
 	{
-		"userName": "Brantley Manston",
-		"userEmail": "bmanston2u@webs.com",
+		"userName": "Valina Bofield",
+		"userEmail": "VBofield@GuptaUni.edu",
 		"userPassword": "Dkfb93",
 		"userPhone": "(180) 5049098",
 		"userAddress": "08 Esch Center",
@@ -2154,7 +2154,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2163,8 +2163,8 @@ const undergraduateFullTime = [
 		"userID": 4102
 	},
 	{
-		"userName": "Hubie Lowson",
-		"userEmail": "hlowson2v@boston.com",
+		"userName": "Elaine Sherbrook",
+		"userEmail": "ESherbro@GuptaUni.edu",
 		"userPassword": "KoFkQWZ2",
 		"userPhone": "(702) 8025708",
 		"userAddress": "18 Thierer Center",
@@ -2175,7 +2175,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2184,8 +2184,8 @@ const undergraduateFullTime = [
 		"userID": 4103
 	},
 	{
-		"userName": "Irita Ritmeier",
-		"userEmail": "iritmeier2w@flavors.me",
+		"userName": "Lilia Harbron",
+		"userEmail": "LHarbron@GuptaUni.edu",
 		"userPassword": "ZE2YaMVO3",
 		"userPhone": "(333) 7958469",
 		"userAddress": "6396 Rusk Crossing",
@@ -2196,7 +2196,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2205,8 +2205,8 @@ const undergraduateFullTime = [
 		"userID": 4104
 	},
 	{
-		"userName": "Lorie Terrett",
-		"userEmail": "lterrett2x@chronoengine.com",
+		"userName": "Eleonore Faltin",
+		"userEmail": "EFaltin@GuptaUni.edu",
 		"userPassword": "JiOcal",
 		"userPhone": "(937) 9289165",
 		"userAddress": "6421 Mallard Street",
@@ -2217,7 +2217,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2226,8 +2226,8 @@ const undergraduateFullTime = [
 		"userID": 4105
 	},
 	{
-		"userName": "Joyann Gianneschi",
-		"userEmail": "jgianneschi2y@deliciousdays.com",
+		"userName": "Claire Gummow",
+		"userEmail": "CGummow@GuptaUni.edu",
 		"userPassword": "Pw0ix2fsXiGN",
 		"userPhone": "(327) 2366592",
 		"userAddress": "25 Sutteridge Parkway",
@@ -2238,7 +2238,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2247,8 +2247,8 @@ const undergraduateFullTime = [
 		"userID": 4106
 	},
 	{
-		"userName": "Eadie McAmish",
-		"userEmail": "emcamish2z@istockphoto.com",
+		"userName": "Andee Geindre",
+		"userEmail": "AGeindre@GuptaUni.edu",
 		"userPassword": "q6yhKO",
 		"userPhone": "(695) 6375357",
 		"userAddress": "7 Maple Wood Point",
@@ -2259,7 +2259,7 @@ const undergraduateFullTime = [
 		"totalCredits": 60,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2268,8 +2268,8 @@ const undergraduateFullTime = [
 		"userID": 4107
 	},
 	{
-		"userName": "Lorelle Gartenfeld",
-		"userEmail": "lgartenfeld30@dion.ne.jp",
+		"userName": "Trixi Vescovini",
+		"userEmail": "TVescovi@GuptaUni.edu",
 		"userPassword": "NZHf22jXG",
 		"userPhone": "(757) 6360757",
 		"userAddress": "10911 Anderson Avenue",
@@ -2280,7 +2280,7 @@ const undergraduateFullTime = [
 		"totalCredits": 84,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2289,8 +2289,8 @@ const undergraduateFullTime = [
 		"userID": 4108
 	},
 	{
-		"userName": "Fredek Albasiny",
-		"userEmail": "falbasiny31@de.vu",
+		"userName": "Pam Offield",
+		"userEmail": "POffield@GuptaUni.edu",
 		"userPassword": "vhoFvqQesGB",
 		"userPhone": "(896) 5337301",
 		"userAddress": "77800 Lien Court",
@@ -2301,7 +2301,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2310,8 +2310,8 @@ const undergraduateFullTime = [
 		"userID": 4109
 	},
 	{
-		"userName": "Webb Evered",
-		"userEmail": "wevered32@oracle.com",
+		"userName": "Jonathan Millom",
+		"userEmail": "JMillom@GuptaUni.edu",
 		"userPassword": "1lGaUPjTCef",
 		"userPhone": "(660) 8671756",
 		"userAddress": "7 Sachtjen Parkway",
@@ -2322,7 +2322,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2331,8 +2331,8 @@ const undergraduateFullTime = [
 		"userID": 4110
 	},
 	{
-		"userName": "Elane Posselt",
-		"userEmail": "eposselt33@cmu.edu",
+		"userName": "Porty Fallows",
+		"userEmail": "PFallows@GuptaUni.edu",
 		"userPassword": "eryTJa",
 		"userPhone": "(625) 2663837",
 		"userAddress": "16 Lawn Plaza",
@@ -2343,7 +2343,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2352,8 +2352,8 @@ const undergraduateFullTime = [
 		"userID": 4111
 	},
 	{
-		"userName": "Luise MacBarron",
-		"userEmail": "lmacbarron34@simplemachines.org",
+		"userName": "Adelina Cleaveland",
+		"userEmail": "ACleavel@GuptaUni.edu",
 		"userPassword": "f7C0CUL0",
 		"userPhone": "(793) 8631150",
 		"userAddress": "1302 Moulton Place",
@@ -2364,7 +2364,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2373,8 +2373,8 @@ const undergraduateFullTime = [
 		"userID": 4112
 	},
 	{
-		"userName": "Briana Weekly",
-		"userEmail": "bweekly35@cisco.com",
+		"userName": "Dode Morkham",
+		"userEmail": "DMorkham@GuptaUni.edu",
 		"userPassword": "akGCTY4",
 		"userPhone": "(694) 1160439",
 		"userAddress": "82 Forest Drive",
@@ -2385,7 +2385,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -2394,8 +2394,8 @@ const undergraduateFullTime = [
 		"userID": 4113
 	},
 	{
-		"userName": "Ofelia Peckett",
-		"userEmail": "opeckett36@dagondesign.com",
+		"userName": "Elberta Askam",
+		"userEmail": "EAskam@GuptaUni.edu",
 		"userPassword": "Q3NztbxF",
 		"userPhone": "(235) 4034251",
 		"userAddress": "4715 Saint Paul Terrace",
@@ -2406,7 +2406,7 @@ const undergraduateFullTime = [
 		"totalCredits": 40,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -2415,8 +2415,8 @@ const undergraduateFullTime = [
 		"userID": 4114
 	},
 	{
-		"userName": "Dare Rolls",
-		"userEmail": "drolls37@a8.net",
+		"userName": "Sharyl Hancox",
+		"userEmail": "SHancox@GuptaUni.edu",
 		"userPassword": "uyk2VxPLOA",
 		"userPhone": "(478) 2378947",
 		"userAddress": "314 Fairview Point",
@@ -2427,7 +2427,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2436,8 +2436,8 @@ const undergraduateFullTime = [
 		"userID": 4115
 	},
 	{
-		"userName": "Maxie Woolf",
-		"userEmail": "mwoolf38@photobucket.com",
+		"userName": "Yance Schild",
+		"userEmail": "YSchild@GuptaUni.edu",
 		"userPassword": "ctxgBX",
 		"userPhone": "(738) 9056846",
 		"userAddress": "4446 Warbler Court",
@@ -2448,7 +2448,7 @@ const undergraduateFullTime = [
 		"totalCredits": 96,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2457,8 +2457,8 @@ const undergraduateFullTime = [
 		"userID": 4116
 	},
 	{
-		"userName": "Jenny McCroft",
-		"userEmail": "jmccroft39@ucoz.ru",
+		"userName": "Anestassia Bachelor",
+		"userEmail": "ABachelo@GuptaUni.edu",
 		"userPassword": "sKhRV6Ukjzm",
 		"userPhone": "(377) 1639078",
 		"userAddress": "8430 Morningstar Terrace",
@@ -2469,7 +2469,7 @@ const undergraduateFullTime = [
 		"totalCredits": 88,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2478,8 +2478,8 @@ const undergraduateFullTime = [
 		"userID": 4117
 	},
 	{
-		"userName": "Pearce Cranney",
-		"userEmail": "pcranney3a@ucsd.edu",
+		"userName": "Ericha Hayley",
+		"userEmail": "EHayley@GuptaUni.edu",
 		"userPassword": "Y7JQEvHhNphq",
 		"userPhone": "(160) 5989867",
 		"userAddress": "9 Thackeray Road",
@@ -2490,7 +2490,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2499,8 +2499,8 @@ const undergraduateFullTime = [
 		"userID": 4118
 	},
 	{
-		"userName": "Whitney Dimbleby",
-		"userEmail": "wdimbleby3b@nydailynews.com",
+		"userName": "Jamima MacEveley",
+		"userEmail": "JMacEvel@GuptaUni.edu",
 		"userPassword": "u3CMn4JTBxW",
 		"userPhone": "(423) 9412403",
 		"userAddress": "1053 Onsgard Court",
@@ -2511,7 +2511,7 @@ const undergraduateFullTime = [
 		"totalCredits": 32,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -2520,8 +2520,8 @@ const undergraduateFullTime = [
 		"userID": 4119
 	},
 	{
-		"userName": "Buddy Zecchetti",
-		"userEmail": "bzecchetti3c@slideshare.net",
+		"userName": "Glenden Dracey",
+		"userEmail": "GDracey@GuptaUni.edu",
 		"userPassword": "dyo1eWTVRAQ5",
 		"userPhone": "(144) 9299023",
 		"userAddress": "43629 Sugar Alley",
@@ -2532,7 +2532,7 @@ const undergraduateFullTime = [
 		"totalCredits": 96,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -2541,8 +2541,8 @@ const undergraduateFullTime = [
 		"userID": 4120
 	},
 	{
-		"userName": "Caryl Fetters",
-		"userEmail": "cfetters3d@cam.ac.uk",
+		"userName": "Kaitlynn Colthard",
+		"userEmail": "KColthar@GuptaUni.edu",
 		"userPassword": "EQLKnXTYCoIr",
 		"userPhone": "(924) 8498295",
 		"userAddress": "761 Jana Point",
@@ -2553,7 +2553,7 @@ const undergraduateFullTime = [
 		"totalCredits": 112,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2562,8 +2562,8 @@ const undergraduateFullTime = [
 		"userID": 4121
 	},
 	{
-		"userName": "Dominick Haylor",
-		"userEmail": "dhaylor3e@utexas.edu",
+		"userName": "Marena Koop",
+		"userEmail": "MKoop@GuptaUni.edu",
 		"userPassword": "ZS0RFb",
 		"userPhone": "(783) 7532140",
 		"userAddress": "1908 Bluestem Drive",
@@ -2574,7 +2574,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2583,8 +2583,8 @@ const undergraduateFullTime = [
 		"userID": 4122
 	},
 	{
-		"userName": "Nady Primett",
-		"userEmail": "nprimett3f@google.de",
+		"userName": "Adda Peckham",
+		"userEmail": "APeckham@GuptaUni.edu",
 		"userPassword": "5cpOb4cRUbB",
 		"userPhone": "(646) 5167973",
 		"userAddress": "00 Di Loreto Point",
@@ -2595,7 +2595,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2604,8 +2604,8 @@ const undergraduateFullTime = [
 		"userID": 4123
 	},
 	{
-		"userName": "Collette Alldre",
-		"userEmail": "calldre3g@tamu.edu",
+		"userName": "Rosalinde Matyatin",
+		"userEmail": "RMatyati@GuptaUni.edu",
 		"userPassword": "MhqRNnFpj5AO",
 		"userPhone": "(764) 3473940",
 		"userAddress": "2007 Tennessee Center",
@@ -2616,7 +2616,7 @@ const undergraduateFullTime = [
 		"totalCredits": 88,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2625,8 +2625,8 @@ const undergraduateFullTime = [
 		"userID": 4124
 	},
 	{
-		"userName": "Franciska Gaunson",
-		"userEmail": "fgaunson3h@disqus.com",
+		"userName": "Eddy Larsen",
+		"userEmail": "ELarsen@GuptaUni.edu",
 		"userPassword": "FFwb99684ZH",
 		"userPhone": "(327) 1883005",
 		"userAddress": "09921 Kropf Junction",
@@ -2637,7 +2637,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -2646,8 +2646,8 @@ const undergraduateFullTime = [
 		"userID": 4125
 	},
 	{
-		"userName": "Zea MacKenney",
-		"userEmail": "zmackenney3i@ifeng.com",
+		"userName": "Tomlin Da Costa",
+		"userEmail": "TDa Cost@GuptaUni.edu",
 		"userPassword": "MNTbJi8T",
 		"userPhone": "(290) 9526213",
 		"userAddress": "7 Menomonie Drive",
@@ -2658,7 +2658,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2667,8 +2667,8 @@ const undergraduateFullTime = [
 		"userID": 4126
 	},
 	{
-		"userName": "Joni Clowton",
-		"userEmail": "jclowton3j@guardian.co.uk",
+		"userName": "Cherie Duferie",
+		"userEmail": "CDuferie@GuptaUni.edu",
 		"userPassword": "7Rod6txndJd",
 		"userPhone": "(881) 2023851",
 		"userAddress": "5297 Mayer Plaza",
@@ -2679,7 +2679,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2688,8 +2688,8 @@ const undergraduateFullTime = [
 		"userID": 4127
 	},
 	{
-		"userName": "Cherlyn Norridge",
-		"userEmail": "cnorridge3k@marketwatch.com",
+		"userName": "Alexina Bachanski",
+		"userEmail": "ABachans@GuptaUni.edu",
 		"userPassword": "8EekUO6",
 		"userPhone": "(243) 2875754",
 		"userAddress": "88759 Redwing Avenue",
@@ -2700,7 +2700,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2709,8 +2709,8 @@ const undergraduateFullTime = [
 		"userID": 4128
 	},
 	{
-		"userName": "Desmond Goodburn",
-		"userEmail": "dgoodburn3l@google.com.hk",
+		"userName": "Coriss Prendeville",
+		"userEmail": "CPrendev@GuptaUni.edu",
 		"userPassword": "FA29UkNG",
 		"userPhone": "(879) 2120971",
 		"userAddress": "8200 Sheridan Alley",
@@ -2721,7 +2721,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2730,8 +2730,8 @@ const undergraduateFullTime = [
 		"userID": 4129
 	},
 	{
-		"userName": "Gonzales Kenion",
-		"userEmail": "gkenion3m@wordpress.com",
+		"userName": "Jaquelyn Diter",
+		"userEmail": "JDiter@GuptaUni.edu",
 		"userPassword": "MVxHad",
 		"userPhone": "(736) 8321055",
 		"userAddress": "4391 Washington Drive",
@@ -2742,7 +2742,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2751,8 +2751,8 @@ const undergraduateFullTime = [
 		"userID": 4130
 	},
 	{
-		"userName": "Elka Bugby",
-		"userEmail": "ebugby3n@illinois.edu",
+		"userName": "Leeann Epdell",
+		"userEmail": "LEpdell@GuptaUni.edu",
 		"userPassword": "pQYSW1u",
 		"userPhone": "(652) 8796145",
 		"userAddress": "88 Waubesa Lane",
@@ -2763,7 +2763,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2772,8 +2772,8 @@ const undergraduateFullTime = [
 		"userID": 4131
 	},
 	{
-		"userName": "Rollo Clitheroe",
-		"userEmail": "rclitheroe3o@time.com",
+		"userName": "Morganica Grute",
+		"userEmail": "MGrute@GuptaUni.edu",
 		"userPassword": "9s0SLfN",
 		"userPhone": "(128) 4883361",
 		"userAddress": "4 Maple Crossing",
@@ -2784,7 +2784,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2793,8 +2793,8 @@ const undergraduateFullTime = [
 		"userID": 4132
 	},
 	{
-		"userName": "Gelya Cuerdall",
-		"userEmail": "gcuerdall3p@utexas.edu",
+		"userName": "Port Ciciotti",
+		"userEmail": "PCiciott@GuptaUni.edu",
 		"userPassword": "K3whiYeOFcrC",
 		"userPhone": "(460) 5964784",
 		"userAddress": "737 Shoshone Center",
@@ -2805,7 +2805,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2814,8 +2814,8 @@ const undergraduateFullTime = [
 		"userID": 4133
 	},
 	{
-		"userName": "Anthe Hindmoor",
-		"userEmail": "ahindmoor3q@soup.io",
+		"userName": "Dennet Kitchin",
+		"userEmail": "DKitchin@GuptaUni.edu",
 		"userPassword": "3cWT4Cp",
 		"userPhone": "(717) 8845514",
 		"userAddress": "57414 Welch Center",
@@ -2826,7 +2826,7 @@ const undergraduateFullTime = [
 		"totalCredits": 88,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2835,8 +2835,8 @@ const undergraduateFullTime = [
 		"userID": 4134
 	},
 	{
-		"userName": "Addison Isaac",
-		"userEmail": "aisaac3r@nature.com",
+		"userName": "Gian Mccaull",
+		"userEmail": "GMccaull@GuptaUni.edu",
 		"userPassword": "wy5ZMPC8",
 		"userPhone": "(204) 6044109",
 		"userAddress": "4 Bunting Lane",
@@ -2847,7 +2847,7 @@ const undergraduateFullTime = [
 		"totalCredits": 100,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2856,8 +2856,8 @@ const undergraduateFullTime = [
 		"userID": 4135
 	},
 	{
-		"userName": "Taddeusz Hickenbottom",
-		"userEmail": "thickenbottom3s@t.co",
+		"userName": "Rodge Stanfield",
+		"userEmail": "RStanfie@GuptaUni.edu",
 		"userPassword": "DSkkTU0lna",
 		"userPhone": "(214) 5621229",
 		"userAddress": "19 Melvin Junction",
@@ -2868,7 +2868,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2877,8 +2877,8 @@ const undergraduateFullTime = [
 		"userID": 4136
 	},
 	{
-		"userName": "Philomena Cumbers",
-		"userEmail": "pcumbers3t@facebook.com",
+		"userName": "Kristian Gerriet",
+		"userEmail": "KGerriet@GuptaUni.edu",
 		"userPassword": "HMevZ50",
 		"userPhone": "(138) 6808023",
 		"userAddress": "10 Nobel Lane",
@@ -2889,7 +2889,7 @@ const undergraduateFullTime = [
 		"totalCredits": 40,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2898,8 +2898,8 @@ const undergraduateFullTime = [
 		"userID": 4137
 	},
 	{
-		"userName": "Elsbeth Mattholie",
-		"userEmail": "emattholie3u@salon.com",
+		"userName": "Valma Callard",
+		"userEmail": "VCallard@GuptaUni.edu",
 		"userPassword": "tan0ZV8Zd1",
 		"userPhone": "(246) 5679001",
 		"userAddress": "1 Hallows Crossing",
@@ -2910,7 +2910,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2919,8 +2919,8 @@ const undergraduateFullTime = [
 		"userID": 4138
 	},
 	{
-		"userName": "Glennis Tollett",
-		"userEmail": "gtollett3v@economist.com",
+		"userName": "Arabel McLane",
+		"userEmail": "AMcLane@GuptaUni.edu",
 		"userPassword": "nfLjzDCqJjw",
 		"userPhone": "(619) 7543003",
 		"userAddress": "4618 La Follette Place",
@@ -2931,7 +2931,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2940,8 +2940,8 @@ const undergraduateFullTime = [
 		"userID": 4139
 	},
 	{
-		"userName": "Oliver Bandt",
-		"userEmail": "obandt3w@e-recht24.de",
+		"userName": "Muffin Hellen",
+		"userEmail": "MHellen@GuptaUni.edu",
 		"userPassword": "8zkQruQr3GMH",
 		"userPhone": "(148) 1526098",
 		"userAddress": "21 Pankratz Pass",
@@ -2952,7 +2952,7 @@ const undergraduateFullTime = [
 		"totalCredits": 32,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2961,8 +2961,8 @@ const undergraduateFullTime = [
 		"userID": 4140
 	},
 	{
-		"userName": "Mordecai Haughton",
-		"userEmail": "mhaughton3x@harvard.edu",
+		"userName": "Genny Schulze",
+		"userEmail": "GSchulze@GuptaUni.edu",
 		"userPassword": "PujDc0H",
 		"userPhone": "(409) 9360374",
 		"userAddress": "10804 Mariners Cove Crossing",
@@ -2973,7 +2973,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -2982,8 +2982,8 @@ const undergraduateFullTime = [
 		"userID": 4141
 	},
 	{
-		"userName": "Goran Rousell",
-		"userEmail": "grousell3y@reverbnation.com",
+		"userName": "Deb Lukianovich",
+		"userEmail": "DLukiano@GuptaUni.edu",
 		"userPassword": "XhnlYEAID",
 		"userPhone": "(195) 2391672",
 		"userAddress": "634 Portage Crossing",
@@ -2994,7 +2994,7 @@ const undergraduateFullTime = [
 		"totalCredits": 96,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3003,8 +3003,8 @@ const undergraduateFullTime = [
 		"userID": 4142
 	},
 	{
-		"userName": "Candie Leal",
-		"userEmail": "cleal3z@narod.ru",
+		"userName": "Rafi Cutmere",
+		"userEmail": "RCutmere@GuptaUni.edu",
 		"userPassword": "ha4WpaY0ST",
 		"userPhone": "(532) 2786377",
 		"userAddress": "3 Hanover Crossing",
@@ -3015,7 +3015,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3024,8 +3024,8 @@ const undergraduateFullTime = [
 		"userID": 4143
 	},
 	{
-		"userName": "Matthaeus Heineken",
-		"userEmail": "mheineken40@seesaa.net",
+		"userName": "Timofei Lesor",
+		"userEmail": "TLesor@GuptaUni.edu",
 		"userPassword": "mcTHFg",
 		"userPhone": "(379) 9240482",
 		"userAddress": "9228 Prentice Point",
@@ -3036,7 +3036,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3045,8 +3045,8 @@ const undergraduateFullTime = [
 		"userID": 4144
 	},
 	{
-		"userName": "Donal Etherson",
-		"userEmail": "detherson41@yellowpages.com",
+		"userName": "Bev McGorman",
+		"userEmail": "BMcGorma@GuptaUni.edu",
 		"userPassword": "5he5qBW",
 		"userPhone": "(872) 5462249",
 		"userAddress": "46 Doe Crossing Point",
@@ -3057,7 +3057,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3066,8 +3066,8 @@ const undergraduateFullTime = [
 		"userID": 4145
 	},
 	{
-		"userName": "Wait Brett",
-		"userEmail": "wbrett42@elegantthemes.com",
+		"userName": "Eydie Britch",
+		"userEmail": "EBritch@GuptaUni.edu",
 		"userPassword": "lreTOc",
 		"userPhone": "(333) 7075912",
 		"userAddress": "4 International Trail",
@@ -3078,7 +3078,7 @@ const undergraduateFullTime = [
 		"totalCredits": 12,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3087,8 +3087,8 @@ const undergraduateFullTime = [
 		"userID": 4146
 	},
 	{
-		"userName": "Jacklyn Broxholme",
-		"userEmail": "jbroxholme43@ca.gov",
+		"userName": "Seumas Debney",
+		"userEmail": "SDebney@GuptaUni.edu",
 		"userPassword": "LRv2Igv",
 		"userPhone": "(307) 9507578",
 		"userAddress": "36 Farragut Plaza",
@@ -3099,7 +3099,7 @@ const undergraduateFullTime = [
 		"totalCredits": 12,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3108,8 +3108,8 @@ const undergraduateFullTime = [
 		"userID": 4147
 	},
 	{
-		"userName": "Hillier Klaassens",
-		"userEmail": "hklaassens44@admin.ch",
+		"userName": "Irvine Boni",
+		"userEmail": "IBoni@GuptaUni.edu",
 		"userPassword": "pFQHAwhbiqC",
 		"userPhone": "(649) 3201903",
 		"userAddress": "552 Troy Pass",
@@ -3120,7 +3120,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3129,8 +3129,8 @@ const undergraduateFullTime = [
 		"userID": 4148
 	},
 	{
-		"userName": "Maurise Eschelle",
-		"userEmail": "meschelle45@walmart.com",
+		"userName": "Zebedee Seabrooke",
+		"userEmail": "ZSeabroo@GuptaUni.edu",
 		"userPassword": "GH68CqtkWQZ",
 		"userPhone": "(990) 1178415",
 		"userAddress": "5298 Birchwood Court",
@@ -3141,7 +3141,7 @@ const undergraduateFullTime = [
 		"totalCredits": 112,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3150,8 +3150,8 @@ const undergraduateFullTime = [
 		"userID": 4149
 	},
 	{
-		"userName": "Odilia Garoghan",
-		"userEmail": "ogaroghan46@wired.com",
+		"userName": "Idelle Snelman",
+		"userEmail": "ISnelman@GuptaUni.edu",
 		"userPassword": "qF3VQrXkQDgN",
 		"userPhone": "(917) 6314952",
 		"userAddress": "8 Scofield Plaza",
@@ -3162,7 +3162,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3171,8 +3171,8 @@ const undergraduateFullTime = [
 		"userID": 4150
 	},
 	{
-		"userName": "Hadleigh Tregenna",
-		"userEmail": "htregenna47@ning.com",
+		"userName": "Boote Swaffield",
+		"userEmail": "BSwaffie@GuptaUni.edu",
 		"userPassword": "8pd1B57D7CAY",
 		"userPhone": "(161) 3281244",
 		"userAddress": "3922 Nancy Avenue",
@@ -3183,7 +3183,7 @@ const undergraduateFullTime = [
 		"totalCredits": 32,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3192,8 +3192,8 @@ const undergraduateFullTime = [
 		"userID": 4151
 	},
 	{
-		"userName": "Becky Garforth",
-		"userEmail": "bgarforth48@friendfeed.com",
+		"userName": "Dolley Goldstone",
+		"userEmail": "DGoldsto@GuptaUni.edu",
 		"userPassword": "ZSk35TKal7il",
 		"userPhone": "(358) 8995937",
 		"userAddress": "420 Monica Hill",
@@ -3204,7 +3204,7 @@ const undergraduateFullTime = [
 		"totalCredits": 36,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3213,8 +3213,8 @@ const undergraduateFullTime = [
 		"userID": 4152
 	},
 	{
-		"userName": "Juanita Kiley",
-		"userEmail": "jkiley49@amazonaws.com",
+		"userName": "Eve Thwaite",
+		"userEmail": "EThwaite@GuptaUni.edu",
 		"userPassword": "wqujQjTD",
 		"userPhone": "(819) 6099081",
 		"userAddress": "4 Mosinee Point",
@@ -3225,7 +3225,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3234,8 +3234,8 @@ const undergraduateFullTime = [
 		"userID": 4153
 	},
 	{
-		"userName": "Randie Benes",
-		"userEmail": "rbenes4a@army.mil",
+		"userName": "Benedicta Folliss",
+		"userEmail": "BFolliss@GuptaUni.edu",
 		"userPassword": "5MGMhlldjSo",
 		"userPhone": "(235) 4929614",
 		"userAddress": "60920 1st Pass",
@@ -3246,7 +3246,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3255,8 +3255,8 @@ const undergraduateFullTime = [
 		"userID": 4154
 	},
 	{
-		"userName": "Bruis Gynni",
-		"userEmail": "bgynni4b@gnu.org",
+		"userName": "Andriette Whaites",
+		"userEmail": "AWhaites@GuptaUni.edu",
 		"userPassword": "vCxbJtlg",
 		"userPhone": "(621) 8655475",
 		"userAddress": "8904 Weeping Birch Center",
@@ -3267,7 +3267,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3276,8 +3276,8 @@ const undergraduateFullTime = [
 		"userID": 4155
 	},
 	{
-		"userName": "Joni Kubiak",
-		"userEmail": "jkubiak4c@stanford.edu",
+		"userName": "Marysa Blewitt",
+		"userEmail": "MBlewitt@GuptaUni.edu",
 		"userPassword": "3T2ubcV1Tr",
 		"userPhone": "(276) 6287533",
 		"userAddress": "09 Jenifer Junction",
@@ -3288,7 +3288,7 @@ const undergraduateFullTime = [
 		"totalCredits": 60,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3297,8 +3297,8 @@ const undergraduateFullTime = [
 		"userID": 4156
 	},
 	{
-		"userName": "Dore Tillett",
-		"userEmail": "dtillett4d@unicef.org",
+		"userName": "Cobbie Sommerscales",
+		"userEmail": "CSommers@GuptaUni.edu",
 		"userPassword": "zYahCet0a",
 		"userPhone": "(449) 4218322",
 		"userAddress": "55852 Bonner Street",
@@ -3309,7 +3309,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3318,8 +3318,8 @@ const undergraduateFullTime = [
 		"userID": 4157
 	},
 	{
-		"userName": "Kalli Friatt",
-		"userEmail": "kfriatt4e@goodreads.com",
+		"userName": "Kippy Maciak",
+		"userEmail": "KMaciak@GuptaUni.edu",
 		"userPassword": "RQFavCnv",
 		"userPhone": "(957) 2196416",
 		"userAddress": "459 La Follette Hill",
@@ -3330,7 +3330,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3339,8 +3339,8 @@ const undergraduateFullTime = [
 		"userID": 4158
 	},
 	{
-		"userName": "Ty Cordero",
-		"userEmail": "tcordero4f@discovery.com",
+		"userName": "Julie Kurten",
+		"userEmail": "JKurten@GuptaUni.edu",
 		"userPassword": "tliCCMZjk",
 		"userPhone": "(617) 3570557",
 		"userAddress": "6 Raven Street",
@@ -3351,7 +3351,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3360,8 +3360,8 @@ const undergraduateFullTime = [
 		"userID": 4159
 	},
 	{
-		"userName": "Giavani Handy",
-		"userEmail": "ghandy4g@blog.com",
+		"userName": "Sonni McSkin",
+		"userEmail": "SMcSkin@GuptaUni.edu",
 		"userPassword": "vATdK16",
 		"userPhone": "(752) 5789874",
 		"userAddress": "43100 Nevada Parkway",
@@ -3372,7 +3372,7 @@ const undergraduateFullTime = [
 		"totalCredits": 100,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3381,8 +3381,8 @@ const undergraduateFullTime = [
 		"userID": 4160
 	},
 	{
-		"userName": "Jeremie Moyse",
-		"userEmail": "jmoyse4h@e-recht24.de",
+		"userName": "Darell Honsch",
+		"userEmail": "DHonsch@GuptaUni.edu",
 		"userPassword": "GsyVTO63R3b",
 		"userPhone": "(982) 5731841",
 		"userAddress": "4 Laurel Alley",
@@ -3393,7 +3393,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3402,8 +3402,8 @@ const undergraduateFullTime = [
 		"userID": 4161
 	},
 	{
-		"userName": "Layne Dillon",
-		"userEmail": "ldillon4i@marriott.com",
+		"userName": "Michael Sangwine",
+		"userEmail": "MSangwin@GuptaUni.edu",
 		"userPassword": "wtP4Y0zE5O1",
 		"userPhone": "(893) 7200563",
 		"userAddress": "311 Maple Wood Avenue",
@@ -3414,7 +3414,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3423,8 +3423,8 @@ const undergraduateFullTime = [
 		"userID": 4162
 	},
 	{
-		"userName": "Mariska Mackieson",
-		"userEmail": "mmackieson4j@bluehost.com",
+		"userName": "Alexis Tildesley",
+		"userEmail": "ATildesl@GuptaUni.edu",
 		"userPassword": "Js8ApG",
 		"userPhone": "(291) 7597238",
 		"userAddress": "1590 Gulseth Parkway",
@@ -3435,7 +3435,7 @@ const undergraduateFullTime = [
 		"totalCredits": 32,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3444,8 +3444,8 @@ const undergraduateFullTime = [
 		"userID": 4163
 	},
 	{
-		"userName": "Matilda Leif",
-		"userEmail": "mleif4k@answers.com",
+		"userName": "Tedman Haggerstone",
+		"userEmail": "THaggers@GuptaUni.edu",
 		"userPassword": "L79VZf",
 		"userPhone": "(716) 3013485",
 		"userAddress": "34 Northridge Point",
@@ -3456,7 +3456,7 @@ const undergraduateFullTime = [
 		"totalCredits": 76,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3465,8 +3465,8 @@ const undergraduateFullTime = [
 		"userID": 4164
 	},
 	{
-		"userName": "Cal Duplain",
-		"userEmail": "cduplain4l@1688.com",
+		"userName": "Lanna Meagher",
+		"userEmail": "LMeagher@GuptaUni.edu",
 		"userPassword": "5kCihsi",
 		"userPhone": "(501) 3179717",
 		"userAddress": "2 Mandrake Court",
@@ -3477,7 +3477,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3486,8 +3486,8 @@ const undergraduateFullTime = [
 		"userID": 4165
 	},
 	{
-		"userName": "Jerry Twoohy",
-		"userEmail": "jtwoohy4m@google.cn",
+		"userName": "Georgeta Danes",
+		"userEmail": "GDanes@GuptaUni.edu",
 		"userPassword": "w8pWTWu",
 		"userPhone": "(545) 5989434",
 		"userAddress": "455 Texas Junction",
@@ -3498,7 +3498,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3507,8 +3507,8 @@ const undergraduateFullTime = [
 		"userID": 4166
 	},
 	{
-		"userName": "Vincents Arnson",
-		"userEmail": "varnson4n@soup.io",
+		"userName": "Ermin Savoury",
+		"userEmail": "ESavoury@GuptaUni.edu",
 		"userPassword": "6OYMhGCm1PT",
 		"userPhone": "(755) 7310880",
 		"userAddress": "52489 Autumn Leaf Park",
@@ -3519,7 +3519,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3528,8 +3528,8 @@ const undergraduateFullTime = [
 		"userID": 4167
 	},
 	{
-		"userName": "Gav Spratling",
-		"userEmail": "gspratling4o@ehow.com",
+		"userName": "Linnet Fenty",
+		"userEmail": "LFenty@GuptaUni.edu",
 		"userPassword": "CpWiGK9IBzIG",
 		"userPhone": "(335) 3648768",
 		"userAddress": "0 Bay Lane",
@@ -3540,7 +3540,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3549,8 +3549,8 @@ const undergraduateFullTime = [
 		"userID": 4168
 	},
 	{
-		"userName": "Corinne Hoonahan",
-		"userEmail": "choonahan4p@intel.com",
+		"userName": "Petra Listone",
+		"userEmail": "PListone@GuptaUni.edu",
 		"userPassword": "9Zsb6ghikDd",
 		"userPhone": "(902) 4279845",
 		"userAddress": "20212 Trailsway Plaza",
@@ -3561,7 +3561,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3570,8 +3570,8 @@ const undergraduateFullTime = [
 		"userID": 4169
 	},
 	{
-		"userName": "Jandy Chopin",
-		"userEmail": "jchopin4q@springer.com",
+		"userName": "Lorianna Sowley",
+		"userEmail": "LSowley@GuptaUni.edu",
 		"userPassword": "eyBrIPS55",
 		"userPhone": "(416) 8254402",
 		"userAddress": "267 Forest Dale Circle",
@@ -3582,7 +3582,7 @@ const undergraduateFullTime = [
 		"totalCredits": 4,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3591,8 +3591,8 @@ const undergraduateFullTime = [
 		"userID": 4170
 	},
 	{
-		"userName": "Buddie Bifield",
-		"userEmail": "bbifield4r@hp.com",
+		"userName": "Crystal Klaffs",
+		"userEmail": "CKlaffs@GuptaUni.edu",
 		"userPassword": "DjBbeGh9pWw",
 		"userPhone": "(727) 7388751",
 		"userAddress": "1402 Spaight Drive",
@@ -3603,7 +3603,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3612,8 +3612,8 @@ const undergraduateFullTime = [
 		"userID": 4171
 	},
 	{
-		"userName": "Earle Reboul",
-		"userEmail": "ereboul4s@cornell.edu",
+		"userName": "Dyanna Boorer",
+		"userEmail": "DBoorer@GuptaUni.edu",
 		"userPassword": "AKu5FOwJSWZC",
 		"userPhone": "(175) 8792315",
 		"userAddress": "30266 Hoepker Lane",
@@ -3624,7 +3624,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3633,8 +3633,8 @@ const undergraduateFullTime = [
 		"userID": 4172
 	},
 	{
-		"userName": "Tam Ingre",
-		"userEmail": "tingre4t@weebly.com",
+		"userName": "Thorn Bastistini",
+		"userEmail": "TBastist@GuptaUni.edu",
 		"userPassword": "JMPXbERHtw",
 		"userPhone": "(722) 6058293",
 		"userAddress": "92735 Fairfield Avenue",
@@ -3645,7 +3645,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3654,8 +3654,8 @@ const undergraduateFullTime = [
 		"userID": 4173
 	},
 	{
-		"userName": "Elset Bullivent",
-		"userEmail": "ebullivent4u@instagram.com",
+		"userName": "Frasier Guiducci",
+		"userEmail": "FGuiducc@GuptaUni.edu",
 		"userPassword": "te1Wg5J",
 		"userPhone": "(589) 6434377",
 		"userAddress": "19821 Forest Parkway",
@@ -3666,7 +3666,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3675,8 +3675,8 @@ const undergraduateFullTime = [
 		"userID": 4174
 	},
 	{
-		"userName": "Claude Dyter",
-		"userEmail": "cdyter4v@blogtalkradio.com",
+		"userName": "Morgan Howey",
+		"userEmail": "MHowey@GuptaUni.edu",
 		"userPassword": "q9KBIceELUvx",
 		"userPhone": "(370) 2975496",
 		"userAddress": "1011 Corry Junction",
@@ -3687,7 +3687,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3696,8 +3696,8 @@ const undergraduateFullTime = [
 		"userID": 4175
 	},
 	{
-		"userName": "Cherish Degli Abbati",
-		"userEmail": "cdegli4w@rambler.ru",
+		"userName": "Kaine Creek",
+		"userEmail": "KCreek@GuptaUni.edu",
 		"userPassword": "97o0uqGH0aBX",
 		"userPhone": "(900) 3332328",
 		"userAddress": "8275 Marquette Way",
@@ -3708,7 +3708,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3717,8 +3717,8 @@ const undergraduateFullTime = [
 		"userID": 4176
 	},
 	{
-		"userName": "Aloise Kalb",
-		"userEmail": "akalb4x@com.com",
+		"userName": "Paulo Jakaway",
+		"userEmail": "PJakaway@GuptaUni.edu",
 		"userPassword": "gu0WdBlgc",
 		"userPhone": "(167) 5697116",
 		"userAddress": "45 Golf View Avenue",
@@ -3729,7 +3729,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3738,8 +3738,8 @@ const undergraduateFullTime = [
 		"userID": 4177
 	},
 	{
-		"userName": "Josephina Amsberger",
-		"userEmail": "jamsberger4y@ca.gov",
+		"userName": "Burch Roistone",
+		"userEmail": "BRoiston@GuptaUni.edu",
 		"userPassword": "f0mIbtkFQj3t",
 		"userPhone": "(213) 7652311",
 		"userAddress": "67 Meadow Vale Street",
@@ -3750,7 +3750,7 @@ const undergraduateFullTime = [
 		"totalCredits": 32,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3759,8 +3759,8 @@ const undergraduateFullTime = [
 		"userID": 4178
 	},
 	{
-		"userName": "Evita Babin",
-		"userEmail": "ebabin4z@gnu.org",
+		"userName": "Pavel Dole",
+		"userEmail": "PDole@GuptaUni.edu",
 		"userPassword": "VTlsLPaNC",
 		"userPhone": "(268) 2522910",
 		"userAddress": "2 Kennedy Parkway",
@@ -3771,7 +3771,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3780,8 +3780,8 @@ const undergraduateFullTime = [
 		"userID": 4179
 	},
 	{
-		"userName": "Sheelah Sharrock",
-		"userEmail": "ssharrock50@psu.edu",
+		"userName": "Brenden Viggars",
+		"userEmail": "BViggars@GuptaUni.edu",
 		"userPassword": "VJRuXMsPT",
 		"userPhone": "(390) 4370442",
 		"userAddress": "3102 8th Terrace",
@@ -3792,7 +3792,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3801,8 +3801,8 @@ const undergraduateFullTime = [
 		"userID": 4180
 	},
 	{
-		"userName": "Dayna Raspin",
-		"userEmail": "draspin51@yellowbook.com",
+		"userName": "Jaye Gomar",
+		"userEmail": "JGomar@GuptaUni.edu",
 		"userPassword": "Swwe0OE5pRxd",
 		"userPhone": "(221) 7520326",
 		"userAddress": "5372 South Junction",
@@ -3813,7 +3813,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3822,8 +3822,8 @@ const undergraduateFullTime = [
 		"userID": 4181
 	},
 	{
-		"userName": "Pearl Riccard",
-		"userEmail": "priccard52@plala.or.jp",
+		"userName": "Marco Fuggle",
+		"userEmail": "MFuggle@GuptaUni.edu",
 		"userPassword": "Kkp6AJCRKw",
 		"userPhone": "(100) 7316366",
 		"userAddress": "70 Anthes Trail",
@@ -3834,7 +3834,7 @@ const undergraduateFullTime = [
 		"totalCredits": 32,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3843,8 +3843,8 @@ const undergraduateFullTime = [
 		"userID": 4182
 	},
 	{
-		"userName": "Husain Heyfield",
-		"userEmail": "hheyfield53@quantcast.com",
+		"userName": "Annamaria Edworthye",
+		"userEmail": "AEdworth@GuptaUni.edu",
 		"userPassword": "S38DF7FZD05",
 		"userPhone": "(925) 4878316",
 		"userAddress": "35 Chinook Terrace",
@@ -3855,7 +3855,7 @@ const undergraduateFullTime = [
 		"totalCredits": 32,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -3864,8 +3864,8 @@ const undergraduateFullTime = [
 		"userID": 4183
 	},
 	{
-		"userName": "Milton Sollner",
-		"userEmail": "msollner54@xrea.com",
+		"userName": "Annelise Perigoe",
+		"userEmail": "APerigoe@GuptaUni.edu",
 		"userPassword": "5zrqQLDr14",
 		"userPhone": "(633) 9349452",
 		"userAddress": "11 Iowa Court",
@@ -3876,7 +3876,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3885,8 +3885,8 @@ const undergraduateFullTime = [
 		"userID": 4184
 	},
 	{
-		"userName": "Pru Brocklesby",
-		"userEmail": "pbrocklesby55@cafepress.com",
+		"userName": "June Collick",
+		"userEmail": "JCollick@GuptaUni.edu",
 		"userPassword": "Vhz8PehjGH7u",
 		"userPhone": "(572) 8630656",
 		"userAddress": "9 Armistice Pass",
@@ -3897,7 +3897,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3906,8 +3906,8 @@ const undergraduateFullTime = [
 		"userID": 4185
 	},
 	{
-		"userName": "Ara Landa",
-		"userEmail": "alanda56@tmall.com",
+		"userName": "Dallon Janton",
+		"userEmail": "DJanton@GuptaUni.edu",
 		"userPassword": "NexTvIju",
 		"userPhone": "(888) 8569475",
 		"userAddress": "47 Kings Road",
@@ -3918,7 +3918,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3927,8 +3927,8 @@ const undergraduateFullTime = [
 		"userID": 4186
 	},
 	{
-		"userName": "Renato Absolom",
-		"userEmail": "rabsolom57@businesswire.com",
+		"userName": "Gregoor Plevin",
+		"userEmail": "GPlevin@GuptaUni.edu",
 		"userPassword": "BYJiN9Wr",
 		"userPhone": "(726) 8938832",
 		"userAddress": "090 Redwing Way",
@@ -3939,7 +3939,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3948,8 +3948,8 @@ const undergraduateFullTime = [
 		"userID": 4187
 	},
 	{
-		"userName": "Viva Hansom",
-		"userEmail": "vhansom58@intel.com",
+		"userName": "Bliss Colleck",
+		"userEmail": "BColleck@GuptaUni.edu",
 		"userPassword": "z6faCkJvB",
 		"userPhone": "(123) 3811469",
 		"userAddress": "76675 Fieldstone Junction",
@@ -3960,7 +3960,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3969,8 +3969,8 @@ const undergraduateFullTime = [
 		"userID": 4188
 	},
 	{
-		"userName": "Cly Mc Grath",
-		"userEmail": "cmc59@go.com",
+		"userName": "Savina Halling",
+		"userEmail": "SHalling@GuptaUni.edu",
 		"userPassword": "8YQzHOj2",
 		"userPhone": "(816) 4068441",
 		"userAddress": "8 Bluejay Drive",
@@ -3981,7 +3981,7 @@ const undergraduateFullTime = [
 		"totalCredits": 40,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -3990,8 +3990,8 @@ const undergraduateFullTime = [
 		"userID": 4189
 	},
 	{
-		"userName": "Sibyl Polk",
-		"userEmail": "spolk5a@nymag.com",
+		"userName": "Janet Pitman",
+		"userEmail": "JPitman@GuptaUni.edu",
 		"userPassword": "OsEJoNGfMhI",
 		"userPhone": "(722) 4393104",
 		"userAddress": "4616 Corry Place",
@@ -4002,7 +4002,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4011,8 +4011,8 @@ const undergraduateFullTime = [
 		"userID": 4190
 	},
 	{
-		"userName": "Susan Wenzel",
-		"userEmail": "swenzel5b@friendfeed.com",
+		"userName": "Gwen Jenkison",
+		"userEmail": "GJenkiso@GuptaUni.edu",
 		"userPassword": "dJ5qN3Y",
 		"userPhone": "(212) 8969437",
 		"userAddress": "1 Spohn Junction",
@@ -4023,7 +4023,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4032,8 +4032,8 @@ const undergraduateFullTime = [
 		"userID": 4191
 	},
 	{
-		"userName": "Chad Prosek",
-		"userEmail": "cprosek5c@mapquest.com",
+		"userName": "Jemmy Hoyt",
+		"userEmail": "JHoyt@GuptaUni.edu",
 		"userPassword": "BNWf9JW",
 		"userPhone": "(846) 4420876",
 		"userAddress": "8166 Warner Drive",
@@ -4044,7 +4044,7 @@ const undergraduateFullTime = [
 		"totalCredits": 36,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4053,8 +4053,8 @@ const undergraduateFullTime = [
 		"userID": 4192
 	},
 	{
-		"userName": "Ansell Hackin",
-		"userEmail": "ahackin5d@technorati.com",
+		"userName": "Kelcy Uebel",
+		"userEmail": "KUebel@GuptaUni.edu",
 		"userPassword": "irvz4ytN6af",
 		"userPhone": "(277) 8446942",
 		"userAddress": "1851 Cherokee Crossing",
@@ -4065,7 +4065,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4074,8 +4074,8 @@ const undergraduateFullTime = [
 		"userID": 4193
 	},
 	{
-		"userName": "Ozzie Capener",
-		"userEmail": "ocapener5e@ning.com",
+		"userName": "Barrie Fancy",
+		"userEmail": "BFancy@GuptaUni.edu",
 		"userPassword": "jQsreSUyRvP",
 		"userPhone": "(671) 7063057",
 		"userAddress": "693 Kropf Lane",
@@ -4086,7 +4086,7 @@ const undergraduateFullTime = [
 		"totalCredits": 96,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4095,8 +4095,8 @@ const undergraduateFullTime = [
 		"userID": 4194
 	},
 	{
-		"userName": "Casey Josskoviz",
-		"userEmail": "cjosskoviz5f@msu.edu",
+		"userName": "Giavani Redmille",
+		"userEmail": "GRedmill@GuptaUni.edu",
 		"userPassword": "DM7ti0G",
 		"userPhone": "(820) 6129252",
 		"userAddress": "817 Bunker Hill Crossing",
@@ -4107,7 +4107,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4116,8 +4116,8 @@ const undergraduateFullTime = [
 		"userID": 4195
 	},
 	{
-		"userName": "Andy Weeden",
-		"userEmail": "aweeden5g@techcrunch.com",
+		"userName": "Fidelia Gabala",
+		"userEmail": "FGabala@GuptaUni.edu",
 		"userPassword": "VXEssUYN",
 		"userPhone": "(224) 2383853",
 		"userAddress": "80998 Banding Point",
@@ -4128,7 +4128,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4137,8 +4137,8 @@ const undergraduateFullTime = [
 		"userID": 4196
 	},
 	{
-		"userName": "Desi Cadney",
-		"userEmail": "dcadney5h@usda.gov",
+		"userName": "Dominique Domingues",
+		"userEmail": "DDomingu@GuptaUni.edu",
 		"userPassword": "HSEuSJXW5O",
 		"userPhone": "(356) 8232485",
 		"userAddress": "5 Lotheville Court",
@@ -4149,7 +4149,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4158,8 +4158,8 @@ const undergraduateFullTime = [
 		"userID": 4197
 	},
 	{
-		"userName": "Susannah MacUchadair",
-		"userEmail": "smacuchadair5i@imgur.com",
+		"userName": "Daffi Pree",
+		"userEmail": "DPree@GuptaUni.edu",
 		"userPassword": "lbSne45L",
 		"userPhone": "(388) 9808309",
 		"userAddress": "864 American Street",
@@ -4170,7 +4170,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4179,8 +4179,8 @@ const undergraduateFullTime = [
 		"userID": 4198
 	},
 	{
-		"userName": "Laurie Goodier",
-		"userEmail": "lgoodier5j@cocolog-nifty.com",
+		"userName": "Danna Gate",
+		"userEmail": "DGate@GuptaUni.edu",
 		"userPassword": "rBHdp1",
 		"userPhone": "(267) 3795155",
 		"userAddress": "99 Nancy Lane",
@@ -4191,7 +4191,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4200,8 +4200,8 @@ const undergraduateFullTime = [
 		"userID": 4199
 	},
 	{
-		"userName": "Mikael Peat",
-		"userEmail": "mpeat5k@discovery.com",
+		"userName": "Carver Caslin",
+		"userEmail": "CCaslin@GuptaUni.edu",
 		"userPassword": "qXPA6LaWZ",
 		"userPhone": "(950) 8207203",
 		"userAddress": "416 Crownhardt Plaza",
@@ -4212,7 +4212,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4221,8 +4221,8 @@ const undergraduateFullTime = [
 		"userID": 4200
 	},
 	{
-		"userName": "Ammamaria Oliphant",
-		"userEmail": "aoliphant5l@berkeley.edu",
+		"userName": "Sande Carter",
+		"userEmail": "SCarter@GuptaUni.edu",
 		"userPassword": "18fgaKrdLHvo",
 		"userPhone": "(457) 9845405",
 		"userAddress": "6 Farwell Lane",
@@ -4233,7 +4233,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4242,8 +4242,8 @@ const undergraduateFullTime = [
 		"userID": 4201
 	},
 	{
-		"userName": "Titus Flament",
-		"userEmail": "tflament5m@flavors.me",
+		"userName": "Seline Symondson",
+		"userEmail": "SSymonds@GuptaUni.edu",
 		"userPassword": "9O4vFEExfO",
 		"userPhone": "(636) 9615609",
 		"userAddress": "58 Moulton Point",
@@ -4254,7 +4254,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4263,8 +4263,8 @@ const undergraduateFullTime = [
 		"userID": 4202
 	},
 	{
-		"userName": "Yanaton Dunmuir",
-		"userEmail": "ydunmuir5n@twitter.com",
+		"userName": "Tracie Rangell",
+		"userEmail": "TRangell@GuptaUni.edu",
 		"userPassword": "wz53HFTRdaP",
 		"userPhone": "(567) 4976527",
 		"userAddress": "556 Loeprich Center",
@@ -4275,7 +4275,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4284,8 +4284,8 @@ const undergraduateFullTime = [
 		"userID": 4203
 	},
 	{
-		"userName": "Port Farnin",
-		"userEmail": "pfarnin5o@typepad.com",
+		"userName": "Felita Soreau",
+		"userEmail": "FSoreau@GuptaUni.edu",
 		"userPassword": "STDwVpGxn",
 		"userPhone": "(951) 1013310",
 		"userAddress": "68 Novick Court",
@@ -4296,7 +4296,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4305,8 +4305,8 @@ const undergraduateFullTime = [
 		"userID": 4204
 	},
 	{
-		"userName": "Artemus Mathe",
-		"userEmail": "amathe5p@dell.com",
+		"userName": "Murial Edbrooke",
+		"userEmail": "MEdbrook@GuptaUni.edu",
 		"userPassword": "7RLJlWEjQ",
 		"userPhone": "(160) 5026542",
 		"userAddress": "79332 Ridgeway Point",
@@ -4317,7 +4317,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -4326,8 +4326,8 @@ const undergraduateFullTime = [
 		"userID": 4205
 	},
 	{
-		"userName": "Arlan Jepp",
-		"userEmail": "ajepp5q@gmpg.org",
+		"userName": "Denis Millar",
+		"userEmail": "DMillar@GuptaUni.edu",
 		"userPassword": "bWVyBdRd",
 		"userPhone": "(702) 2472878",
 		"userAddress": "76736 Moulton Circle",
@@ -4338,7 +4338,7 @@ const undergraduateFullTime = [
 		"totalCredits": 96,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -4347,8 +4347,8 @@ const undergraduateFullTime = [
 		"userID": 4206
 	},
 	{
-		"userName": "Antony Happer",
-		"userEmail": "ahapper5r@tumblr.com",
+		"userName": "Link Corsham",
+		"userEmail": "LCorsham@GuptaUni.edu",
 		"userPassword": "ZteREMs3S8dA",
 		"userPhone": "(718) 6662377",
 		"userAddress": "090 Doe Crossing Street",
@@ -4359,7 +4359,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4368,8 +4368,8 @@ const undergraduateFullTime = [
 		"userID": 4207
 	},
 	{
-		"userName": "Emelia Povall",
-		"userEmail": "epovall5s@about.me",
+		"userName": "Quintina Warrick",
+		"userEmail": "QWarrick@GuptaUni.edu",
 		"userPassword": "LcqrR7PP8T",
 		"userPhone": "(146) 5761062",
 		"userAddress": "12868 Wayridge Trail",
@@ -4380,7 +4380,7 @@ const undergraduateFullTime = [
 		"totalCredits": 68,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4389,8 +4389,8 @@ const undergraduateFullTime = [
 		"userID": 4208
 	},
 	{
-		"userName": "Gerianne Featherstonhaugh",
-		"userEmail": "gfeatherstonhaugh5t@hao123.com",
+		"userName": "Jacobo Critchlow",
+		"userEmail": "JCritchl@GuptaUni.edu",
 		"userPassword": "qWDpqPktjv",
 		"userPhone": "(770) 8927156",
 		"userAddress": "8 Roth Center",
@@ -4401,7 +4401,7 @@ const undergraduateFullTime = [
 		"totalCredits": 104,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4410,8 +4410,8 @@ const undergraduateFullTime = [
 		"userID": 4209
 	},
 	{
-		"userName": "Meg Tabbernor",
-		"userEmail": "mtabbernor5u@vistaprint.com",
+		"userName": "Northrop Kimbley",
+		"userEmail": "NKimbley@GuptaUni.edu",
 		"userPassword": "qPsPZ9UF2Iur",
 		"userPhone": "(569) 1624907",
 		"userAddress": "9 Bluestem Center",
@@ -4422,7 +4422,7 @@ const undergraduateFullTime = [
 		"totalCredits": 20,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4431,8 +4431,8 @@ const undergraduateFullTime = [
 		"userID": 4210
 	},
 	{
-		"userName": "Karil Tavner",
-		"userEmail": "ktavner5v@webs.com",
+		"userName": "Luca Fedorski",
+		"userEmail": "LFedorsk@GuptaUni.edu",
 		"userPassword": "Y05YSXW8",
 		"userPhone": "(558) 1186321",
 		"userAddress": "813 Waubesa Center",
@@ -4443,7 +4443,7 @@ const undergraduateFullTime = [
 		"totalCredits": 72,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4452,8 +4452,8 @@ const undergraduateFullTime = [
 		"userID": 4211
 	},
 	{
-		"userName": "Jannelle Whiten",
-		"userEmail": "jwhiten5w@usatoday.com",
+		"userName": "Carrissa Godman",
+		"userEmail": "CGodman@GuptaUni.edu",
 		"userPassword": "bcRTul",
 		"userPhone": "(485) 4520389",
 		"userAddress": "2483 Caliangt Circle",
@@ -4464,7 +4464,7 @@ const undergraduateFullTime = [
 		"totalCredits": 96,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4473,8 +4473,8 @@ const undergraduateFullTime = [
 		"userID": 4212
 	},
 	{
-		"userName": "Oralie Kernes",
-		"userEmail": "okernes5x@fema.gov",
+		"userName": "Valentine Osbourne",
+		"userEmail": "VOsbourn@GuptaUni.edu",
 		"userPassword": "F9wKZwOHzuk",
 		"userPhone": "(522) 9908900",
 		"userAddress": "40 Del Sol Avenue",
@@ -4485,7 +4485,7 @@ const undergraduateFullTime = [
 		"totalCredits": 120,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4494,8 +4494,8 @@ const undergraduateFullTime = [
 		"userID": 4213
 	},
 	{
-		"userName": "Tanney Iglesias",
-		"userEmail": "tiglesias5y@delicious.com",
+		"userName": "Ludovico Willerton",
+		"userEmail": "LWillert@GuptaUni.edu",
 		"userPassword": "0pnO2trmq1iv",
 		"userPhone": "(921) 8963908",
 		"userAddress": "01391 Oakridge Place",
@@ -4506,7 +4506,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4515,8 +4515,8 @@ const undergraduateFullTime = [
 		"userID": 4214
 	},
 	{
-		"userName": "Jobie Cessford",
-		"userEmail": "jcessford5z@eventbrite.com",
+		"userName": "Kirk Mooney",
+		"userEmail": "KMooney@GuptaUni.edu",
 		"userPassword": "qbeTLPD",
 		"userPhone": "(853) 2053224",
 		"userAddress": "7398 Golf View Park",
@@ -4527,7 +4527,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4536,8 +4536,8 @@ const undergraduateFullTime = [
 		"userID": 4215
 	},
 	{
-		"userName": "Agatha Coghlan",
-		"userEmail": "acoghlan60@uol.com.br",
+		"userName": "Gideon Paling",
+		"userEmail": "GPaling@GuptaUni.edu",
 		"userPassword": "gV1BNDeeY",
 		"userPhone": "(319) 5981189",
 		"userAddress": "437 Ilene Junction",
@@ -4548,7 +4548,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4557,8 +4557,8 @@ const undergraduateFullTime = [
 		"userID": 4216
 	},
 	{
-		"userName": "Odessa Cullinane",
-		"userEmail": "ocullinane61@archive.org",
+		"userName": "Esme Fernanando",
+		"userEmail": "EFernana@GuptaUni.edu",
 		"userPassword": "DG4M4F44jzwG",
 		"userPhone": "(136) 9928442",
 		"userAddress": "6860 Hooker Point",
@@ -4569,7 +4569,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4578,8 +4578,8 @@ const undergraduateFullTime = [
 		"userID": 4217
 	},
 	{
-		"userName": "Finn Rosindill",
-		"userEmail": "frosindill62@illinois.edu",
+		"userName": "Bernie Hakonsson",
+		"userEmail": "BHakonss@GuptaUni.edu",
 		"userPassword": "AOD5UM5",
 		"userPhone": "(533) 4878509",
 		"userAddress": "593 Express Alley",
@@ -4590,7 +4590,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4599,8 +4599,8 @@ const undergraduateFullTime = [
 		"userID": 4218
 	},
 	{
-		"userName": "Lucila Jackes",
-		"userEmail": "ljackes63@sitemeter.com",
+		"userName": "Martita Bernardos",
+		"userEmail": "MBernard@GuptaUni.edu",
 		"userPassword": "5dxbylXv",
 		"userPhone": "(448) 2749401",
 		"userAddress": "34586 Leroy Way",
@@ -4611,7 +4611,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4620,8 +4620,8 @@ const undergraduateFullTime = [
 		"userID": 4219
 	},
 	{
-		"userName": "Ashby Jaycocks",
-		"userEmail": "ajaycocks64@reuters.com",
+		"userName": "Gussi Spinnace",
+		"userEmail": "GSpinnac@GuptaUni.edu",
 		"userPassword": "pywYPtGsIn",
 		"userPhone": "(728) 5091300",
 		"userAddress": "44804 Milwaukee Court",
@@ -4632,7 +4632,7 @@ const undergraduateFullTime = [
 		"totalCredits": 56,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4641,8 +4641,8 @@ const undergraduateFullTime = [
 		"userID": 4220
 	},
 	{
-		"userName": "Lana Bernot",
-		"userEmail": "lbernot65@nba.com",
+		"userName": "Frants Feltoe",
+		"userEmail": "FFeltoe@GuptaUni.edu",
 		"userPassword": "YDCEldOPiU",
 		"userPhone": "(372) 7903381",
 		"userAddress": "8 Sage Way",
@@ -4653,7 +4653,7 @@ const undergraduateFullTime = [
 		"totalCredits": 40,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4662,8 +4662,8 @@ const undergraduateFullTime = [
 		"userID": 4221
 	},
 	{
-		"userName": "Millicent Renish",
-		"userEmail": "mrenish66@hao123.com",
+		"userName": "Dasie Huetson",
+		"userEmail": "DHuetson@GuptaUni.edu",
 		"userPassword": "7T2lxku5sc3",
 		"userPhone": "(561) 5998695",
 		"userAddress": "5 Bellgrove Circle",
@@ -4674,7 +4674,7 @@ const undergraduateFullTime = [
 		"totalCredits": 52,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4683,8 +4683,8 @@ const undergraduateFullTime = [
 		"userID": 4222
 	},
 	{
-		"userName": "Modestine Zorn",
-		"userEmail": "mzorn67@e-recht24.de",
+		"userName": "Eleonora Catterson",
+		"userEmail": "ECatters@GuptaUni.edu",
 		"userPassword": "LjPa5JPGl7Na",
 		"userPhone": "(983) 9725400",
 		"userAddress": "3825 Golf Junction",
@@ -4695,7 +4695,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4704,8 +4704,8 @@ const undergraduateFullTime = [
 		"userID": 4223
 	},
 	{
-		"userName": "Jesse Kaine",
-		"userEmail": "jkaine68@ihg.com",
+		"userName": "Fredia Bricket",
+		"userEmail": "FBricket@GuptaUni.edu",
 		"userPassword": "KKx7ozkk",
 		"userPhone": "(534) 1713525",
 		"userAddress": "8 Stang Drive",
@@ -4716,7 +4716,7 @@ const undergraduateFullTime = [
 		"totalCredits": 80,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -4725,8 +4725,8 @@ const undergraduateFullTime = [
 		"userID": 4224
 	},
 	{
-		"userName": "Veronique Ingham",
-		"userEmail": "vingham69@github.com",
+		"userName": "Lance Pauletto",
+		"userEmail": "LPaulett@GuptaUni.edu",
 		"userPassword": "ftDcSxxOD",
 		"userPhone": "(145) 6524045",
 		"userAddress": "2828 Westerfield Pass",
@@ -4737,7 +4737,7 @@ const undergraduateFullTime = [
 		"totalCredits": 92,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4746,8 +4746,8 @@ const undergraduateFullTime = [
 		"userID": 4225
 	},
 	{
-		"userName": "Odey Alp",
-		"userEmail": "oalp6a@answers.com",
+		"userName": "Danny Wallis",
+		"userEmail": "DWallis@GuptaUni.edu",
 		"userPassword": "RdpZdaQbTXP",
 		"userPhone": "(307) 6561062",
 		"userAddress": "5584 Carpenter Lane",
@@ -4758,7 +4758,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4767,8 +4767,8 @@ const undergraduateFullTime = [
 		"userID": 4226
 	},
 	{
-		"userName": "Tiler Leonarde",
-		"userEmail": "tleonarde6b@youtu.be",
+		"userName": "Willow Santori",
+		"userEmail": "WSantori@GuptaUni.edu",
 		"userPassword": "2mvkGlQ1qPc",
 		"userPhone": "(609) 8450161",
 		"userAddress": "581 Farragut Lane",
@@ -4779,7 +4779,7 @@ const undergraduateFullTime = [
 		"totalCredits": 100,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4788,8 +4788,8 @@ const undergraduateFullTime = [
 		"userID": 4227
 	},
 	{
-		"userName": "Min Crewe",
-		"userEmail": "mcrewe6c@ucoz.com",
+		"userName": "Angelita Cawsy",
+		"userEmail": "ACawsy@GuptaUni.edu",
 		"userPassword": "EetEOdjY4",
 		"userPhone": "(346) 4046940",
 		"userAddress": "99828 Warrior Center",
@@ -4800,7 +4800,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -4809,8 +4809,8 @@ const undergraduateFullTime = [
 		"userID": 4228
 	},
 	{
-		"userName": "Euell Gaddas",
-		"userEmail": "egaddas6d@4shared.com",
+		"userName": "Dredi McElhinney",
+		"userEmail": "DMcElhin@GuptaUni.edu",
 		"userPassword": "wFlx9mfLvWzY",
 		"userPhone": "(970) 2622129",
 		"userAddress": "674 Stuart Center",
@@ -4821,7 +4821,7 @@ const undergraduateFullTime = [
 		"totalCredits": 108,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4830,8 +4830,8 @@ const undergraduateFullTime = [
 		"userID": 4229
 	},
 	{
-		"userName": "Gunther Fawdrey",
-		"userEmail": "gfawdrey6e@tiny.cc",
+		"userName": "Vivie Pinchbeck",
+		"userEmail": "VPinchbe@GuptaUni.edu",
 		"userPassword": "Fh087PyPq",
 		"userPhone": "(378) 6433608",
 		"userAddress": "54 Roxbury Way",
@@ -4842,7 +4842,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4851,8 +4851,8 @@ const undergraduateFullTime = [
 		"userID": 4230
 	},
 	{
-		"userName": "Helyn Carpe",
-		"userEmail": "hcarpe6f@narod.ru",
+		"userName": "Cam Dolton",
+		"userEmail": "CDolton@GuptaUni.edu",
 		"userPassword": "5ji3sfY",
 		"userPhone": "(641) 2370966",
 		"userAddress": "1192 Oakridge Circle",
@@ -4863,7 +4863,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4872,8 +4872,8 @@ const undergraduateFullTime = [
 		"userID": 4231
 	},
 	{
-		"userName": "Pauli Edards",
-		"userEmail": "pedards6g@jalbum.net",
+		"userName": "Tony Kelberman",
+		"userEmail": "TKelberm@GuptaUni.edu",
 		"userPassword": "EyKOE36IbsE",
 		"userPhone": "(252) 7726047",
 		"userAddress": "40237 Arrowood Lane",
@@ -4884,7 +4884,7 @@ const undergraduateFullTime = [
 		"totalCredits": 12,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4893,8 +4893,8 @@ const undergraduateFullTime = [
 		"userID": 4232
 	},
 	{
-		"userName": "Fanny Swanwick",
-		"userEmail": "fswanwick6h@shinystat.com",
+		"userName": "Bronny Patise",
+		"userEmail": "BPatise@GuptaUni.edu",
 		"userPassword": "VuP0MBO",
 		"userPhone": "(715) 9818864",
 		"userAddress": "07 West Hill",
@@ -4905,7 +4905,7 @@ const undergraduateFullTime = [
 		"totalCredits": 84,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4914,8 +4914,8 @@ const undergraduateFullTime = [
 		"userID": 4233
 	},
 	{
-		"userName": "Denney Sorbie",
-		"userEmail": "dsorbie6i@tripod.com",
+		"userName": "Malissia Madrell",
+		"userEmail": "MMadrell@GuptaUni.edu",
 		"userPassword": "Al05ms",
 		"userPhone": "(565) 6816184",
 		"userAddress": "98446 Surrey Hill",
@@ -4926,7 +4926,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4935,8 +4935,8 @@ const undergraduateFullTime = [
 		"userID": 4234
 	},
 	{
-		"userName": "Alfonse Higounet",
-		"userEmail": "ahigounet6j@cyberchimps.com",
+		"userName": "Paige Pedycan",
+		"userEmail": "PPedycan@GuptaUni.edu",
 		"userPassword": "vMbh3zmkAX1",
 		"userPhone": "(539) 6433731",
 		"userAddress": "37 Rusk Court",
@@ -4947,7 +4947,7 @@ const undergraduateFullTime = [
 		"totalCredits": 64,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4956,8 +4956,8 @@ const undergraduateFullTime = [
 		"userID": 4235
 	},
 	{
-		"userName": "Joanie Atter",
-		"userEmail": "jatter6k@rediff.com",
+		"userName": "Elnore William",
+		"userEmail": "EWilliam@GuptaUni.edu",
 		"userPassword": "S6S68X",
 		"userPhone": "(284) 7667775",
 		"userAddress": "38407 Coleman Way",
@@ -4968,7 +4968,7 @@ const undergraduateFullTime = [
 		"totalCredits": 28,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4977,8 +4977,8 @@ const undergraduateFullTime = [
 		"userID": 4236
 	},
 	{
-		"userName": "Stanwood Maxstead",
-		"userEmail": "smaxstead6l@plala.or.jp",
+		"userName": "Kacie Dewane",
+		"userEmail": "KDewane@GuptaUni.edu",
 		"userPassword": "Zgmh8jCp8",
 		"userPhone": "(134) 9579721",
 		"userAddress": "8921 Namekagon Street",
@@ -4989,7 +4989,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -4998,8 +4998,8 @@ const undergraduateFullTime = [
 		"userID": 4237
 	},
 	{
-		"userName": "Livvyy Zieme",
-		"userEmail": "lzieme6m@va.gov",
+		"userName": "Rosamund Lemmers",
+		"userEmail": "RLemmers@GuptaUni.edu",
 		"userPassword": "cJkiVpE0v0L",
 		"userPhone": "(938) 4298190",
 		"userAddress": "087 Kedzie Lane",
@@ -5010,7 +5010,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5019,8 +5019,8 @@ const undergraduateFullTime = [
 		"userID": 4238
 	},
 	{
-		"userName": "Irene Quan",
-		"userEmail": "iquan6n@diigo.com",
+		"userName": "Marsiella Pollack",
+		"userEmail": "MPollack@GuptaUni.edu",
 		"userPassword": "F3T53mMUhG",
 		"userPhone": "(487) 4276855",
 		"userAddress": "03 Maple Lane",
@@ -5031,7 +5031,7 @@ const undergraduateFullTime = [
 		"totalCredits": 116,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5040,8 +5040,8 @@ const undergraduateFullTime = [
 		"userID": 4239
 	},
 	{
-		"userName": "Porty Creswell",
-		"userEmail": "pcreswell6o@google.cn",
+		"userName": "Pen Baudasso",
+		"userEmail": "PBaudass@GuptaUni.edu",
 		"userPassword": "aalj8h",
 		"userPhone": "(425) 3206141",
 		"userAddress": "20221 Upham Hill",
@@ -5052,7 +5052,7 @@ const undergraduateFullTime = [
 		"totalCredits": 4,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5061,8 +5061,8 @@ const undergraduateFullTime = [
 		"userID": 4240
 	},
 	{
-		"userName": "Mortie Trippett",
-		"userEmail": "mtrippett6p@hp.com",
+		"userName": "Edee McKinie",
+		"userEmail": "EMcKinie@GuptaUni.edu",
 		"userPassword": "JMTwipfvBxa",
 		"userPhone": "(479) 4080139",
 		"userAddress": "07 Vera Terrace",
@@ -5073,7 +5073,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": true,
 		"maxCreditsAllowed": 16,
@@ -5082,8 +5082,8 @@ const undergraduateFullTime = [
 		"userID": 4241
 	},
 	{
-		"userName": "Marc Manser",
-		"userEmail": "mmanser6q@example.com",
+		"userName": "Atlanta Trewett",
+		"userEmail": "ATrewett@GuptaUni.edu",
 		"userPassword": "qh9SPAjRSYC",
 		"userPhone": "(359) 5474423",
 		"userAddress": "5 Farragut Plaza",
@@ -5094,7 +5094,7 @@ const undergraduateFullTime = [
 		"totalCredits": 8,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5103,8 +5103,8 @@ const undergraduateFullTime = [
 		"userID": 4242
 	},
 	{
-		"userName": "Debor Threadgall",
-		"userEmail": "dthreadgall6r@huffingtonpost.com",
+		"userName": "Bordie Chase",
+		"userEmail": "BChase@GuptaUni.edu",
 		"userPassword": "jGQCU2nv1",
 		"userPhone": "(820) 1529767",
 		"userAddress": "4 International Parkway",
@@ -5115,7 +5115,7 @@ const undergraduateFullTime = [
 		"totalCredits": 16,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": true,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5124,8 +5124,8 @@ const undergraduateFullTime = [
 		"userID": 4243
 	},
 	{
-		"userName": "Salvatore Harlin",
-		"userEmail": "sharlin6s@multiply.com",
+		"userName": "Cosette Caldwell",
+		"userEmail": "CCaldwel@GuptaUni.edu",
 		"userPassword": "Xc2pEnIPi",
 		"userPhone": "(964) 7030263",
 		"userAddress": "4 Loeprich Center",
@@ -5136,7 +5136,7 @@ const undergraduateFullTime = [
 		"totalCredits": 24,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5145,8 +5145,8 @@ const undergraduateFullTime = [
 		"userID": 4244
 	},
 	{
-		"userName": "Alexis Woolbrook",
-		"userEmail": "awoolbrook6t@woothemes.com",
+		"userName": "Mathew Leggett",
+		"userEmail": "MLeggett@GuptaUni.edu",
 		"userPassword": "W6aFty3x",
 		"userPhone": "(986) 4222616",
 		"userAddress": "0 Maple Wood Road",
@@ -5157,7 +5157,7 @@ const undergraduateFullTime = [
 		"totalCredits": 36,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5166,8 +5166,8 @@ const undergraduateFullTime = [
 		"userID": 4245
 	},
 	{
-		"userName": "Alfons Rasp",
-		"userEmail": "arasp6u@linkedin.com",
+		"userName": "Hill Hurburt",
+		"userEmail": "HHurburt@GuptaUni.edu",
 		"userPassword": "iBfyyPXYS",
 		"userPhone": "(813) 4598416",
 		"userAddress": "713 High Crossing Pass",
@@ -5178,7 +5178,7 @@ const undergraduateFullTime = [
 		"totalCredits": 36,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5187,8 +5187,8 @@ const undergraduateFullTime = [
 		"userID": 4246
 	},
 	{
-		"userName": "Marlena Trammel",
-		"userEmail": "mtrammel6v@topsy.com",
+		"userName": "Judi Zapatero",
+		"userEmail": "JZapater@GuptaUni.edu",
 		"userPassword": "RUHS1ps9tzT",
 		"userPhone": "(273) 8580685",
 		"userAddress": "87 Annamark Alley",
@@ -5199,7 +5199,7 @@ const undergraduateFullTime = [
 		"totalCredits": 44,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5208,8 +5208,8 @@ const undergraduateFullTime = [
 		"userID": 4247
 	},
 	{
-		"userName": "Shelden Ginnaly",
-		"userEmail": "sginnaly6w@wikimedia.org",
+		"userName": "Marget Dickerline",
+		"userEmail": "MDickerl@GuptaUni.edu",
 		"userPassword": "4m5n2h9jqMT",
 		"userPhone": "(474) 7207615",
 		"userAddress": "59 Dayton Park",
@@ -5220,7 +5220,7 @@ const undergraduateFullTime = [
 		"totalCredits": 48,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,
@@ -5229,8 +5229,8 @@ const undergraduateFullTime = [
 		"userID": 4248
 	},
 	{
-		"userName": "Barnabas Maidstone",
-		"userEmail": "bmaidstone6x@china.com.cn",
+		"userName": "Theodoric Eakly",
+		"userEmail": "TEakly@GuptaUni.edu",
 		"userPassword": "yvJTZP",
 		"userPhone": "(285) 7133552",
 		"userAddress": "70601 Waubesa Road",
@@ -5241,7 +5241,7 @@ const undergraduateFullTime = [
 		"totalCredits": 36,
 		"studentType": "undergraduate",
 		"isFullTime": true,
-		"tutionCost": "$4,000",
+		"tutionCost": "$4,000 ",
 		"hasMealPlan": false,
 		"isDorming": false,
 		"maxCreditsAllowed": 16,

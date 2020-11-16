@@ -1,7 +1,7 @@
 const graduatePartTime = [
 	{
-		"userName": "Angil Champney",
-		"userEmail": "achampney0@buzzfeed.com",
+		"userName": "Claribel Tither",
+		"userEmail": "CTither@GuptaUni.edu",
 		"userPassword": "eFie82f",
 		"userPhone": "(711) 4118387",
 		"userAddress": "06201 Banding Circle",
@@ -13,7 +13,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -21,8 +21,8 @@ const graduatePartTime = [
 		"userID": 1000
 	},
 	{
-		"userName": "Liva Gatecliff",
-		"userEmail": "lgatecliff1@plala.or.jp",
+		"userName": "Hewitt Serrels",
+		"userEmail": "HSerrels@GuptaUni.edu",
 		"userPassword": "l3CeEmV",
 		"userPhone": "(624) 6757176",
 		"userAddress": "4 Calypso Plaza",
@@ -34,7 +34,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -42,8 +42,8 @@ const graduatePartTime = [
 		"userID": 1001
 	},
 	{
-		"userName": "Robb Duffield",
-		"userEmail": "rduffield2@huffingtonpost.com",
+		"userName": "Torrie Hackly",
+		"userEmail": "THackly@GuptaUni.edu",
 		"userPassword": "LxitIEU9ez0",
 		"userPhone": "(119) 6677817",
 		"userAddress": "9391 Mayer Avenue",
@@ -55,7 +55,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -63,8 +63,8 @@ const graduatePartTime = [
 		"userID": 1002
 	},
 	{
-		"userName": "Rip Engelbrecht",
-		"userEmail": "rengelbrecht3@virginia.edu",
+		"userName": "Micheil Isaac",
+		"userEmail": "MIsaac@GuptaUni.edu",
 		"userPassword": "hxuuVhAmr2DV",
 		"userPhone": "(468) 8834273",
 		"userAddress": "1123 Forest Dale Road",
@@ -76,7 +76,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -84,8 +84,8 @@ const graduatePartTime = [
 		"userID": 1003
 	},
 	{
-		"userName": "Celeste Comino",
-		"userEmail": "ccomino4@issuu.com",
+		"userName": "Averyl McConachie",
+		"userEmail": "AMcConac@GuptaUni.edu",
 		"userPassword": "qZNTpaZg",
 		"userPhone": "(649) 3257321",
 		"userAddress": "09280 Browning Plaza",
@@ -97,7 +97,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -105,8 +105,8 @@ const graduatePartTime = [
 		"userID": 1004
 	},
 	{
-		"userName": "Pavel Sanpher",
-		"userEmail": "psanpher5@sciencedirect.com",
+		"userName": "Lauren Tomczykiewicz",
+		"userEmail": "LTomczyk@GuptaUni.edu",
 		"userPassword": "ONud0OP",
 		"userPhone": "(140) 7686605",
 		"userAddress": "054 Spaight Trail",
@@ -118,7 +118,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -126,8 +126,8 @@ const graduatePartTime = [
 		"userID": 1005
 	},
 	{
-		"userName": "Raynor Rolston",
-		"userEmail": "rrolston6@weather.com",
+		"userName": "Berk Bwye",
+		"userEmail": "BBwye@GuptaUni.edu",
 		"userPassword": "MKqM90p",
 		"userPhone": "(412) 9368120",
 		"userAddress": "5 Manley Avenue",
@@ -139,7 +139,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -147,8 +147,8 @@ const graduatePartTime = [
 		"userID": 1006
 	},
 	{
-		"userName": "Veradis Berwick",
-		"userEmail": "vberwick7@netscape.com",
+		"userName": "Orv Castagnier",
+		"userEmail": "OCastagn@GuptaUni.edu",
 		"userPassword": "H36wVM",
 		"userPhone": "(632) 2352461",
 		"userAddress": "90 Amoth Trail",
@@ -160,7 +160,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -168,8 +168,8 @@ const graduatePartTime = [
 		"userID": 1007
 	},
 	{
-		"userName": "Tanner Yearne",
-		"userEmail": "tyearne8@globo.com",
+		"userName": "Aloise Dimmack",
+		"userEmail": "ADimmack@GuptaUni.edu",
 		"userPassword": "MMAwky3sTA38",
 		"userPhone": "(264) 4571938",
 		"userAddress": "90 Alpine Road",
@@ -181,7 +181,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -189,8 +189,8 @@ const graduatePartTime = [
 		"userID": 1008
 	},
 	{
-		"userName": "Mandy Swaffield",
-		"userEmail": "mswaffield9@biblegateway.com",
+		"userName": "Sebastiano Glyde",
+		"userEmail": "SGlyde@GuptaUni.edu",
 		"userPassword": "tlvrgWDSn6wO",
 		"userPhone": "(309) 1161511",
 		"userAddress": "676 Kings Crossing",
@@ -202,7 +202,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -210,8 +210,8 @@ const graduatePartTime = [
 		"userID": 1009
 	},
 	{
-		"userName": "Walliw Sheryn",
-		"userEmail": "wsheryna@paginegialle.it",
+		"userName": "Mac Gladden",
+		"userEmail": "MGladden@GuptaUni.edu",
 		"userPassword": "QmG8KV",
 		"userPhone": "(138) 3309901",
 		"userAddress": "248 Bartillon Alley",
@@ -223,7 +223,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -231,8 +231,8 @@ const graduatePartTime = [
 		"userID": 1010
 	},
 	{
-		"userName": "Abbye Brigge",
-		"userEmail": "abriggeb@1188.com",
+		"userName": "Jaclyn Linsay",
+		"userEmail": "JLinsay@GuptaUni.edu",
 		"userPassword": "DS9yJ5L",
 		"userPhone": "(181) 4640717",
 		"userAddress": "809 Iowa Terrace",
@@ -244,7 +244,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -252,8 +252,8 @@ const graduatePartTime = [
 		"userID": 1011
 	},
 	{
-		"userName": "Bryon Dmitr",
-		"userEmail": "bdmitrc@feedburner.com",
+		"userName": "Cody Southworth",
+		"userEmail": "CSouthwo@GuptaUni.edu",
 		"userPassword": "oEaNSQq",
 		"userPhone": "(556) 5362730",
 		"userAddress": "84426 Duke Crossing",
@@ -265,7 +265,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -273,8 +273,8 @@ const graduatePartTime = [
 		"userID": 1012
 	},
 	{
-		"userName": "Myrtice Gainsburgh",
-		"userEmail": "mgainsburghd@squidoo.com",
+		"userName": "Coretta Tickle",
+		"userEmail": "CTickle@GuptaUni.edu",
 		"userPassword": "FnnDDqkjk",
 		"userPhone": "(915) 8543465",
 		"userAddress": "79 Bonner Circle",
@@ -286,7 +286,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -294,8 +294,8 @@ const graduatePartTime = [
 		"userID": 1013
 	},
 	{
-		"userName": "Merry Tafani",
-		"userEmail": "mtafanie@economist.com",
+		"userName": "Nancee Judron",
+		"userEmail": "NJudron@GuptaUni.edu",
 		"userPassword": "dD1nsdF",
 		"userPhone": "(235) 2872710",
 		"userAddress": "4 Vernon Parkway",
@@ -307,7 +307,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -315,8 +315,8 @@ const graduatePartTime = [
 		"userID": 1014
 	},
 	{
-		"userName": "Roberto Eckels",
-		"userEmail": "reckelsf@bbc.co.uk",
+		"userName": "Collete Chung",
+		"userEmail": "CChung@GuptaUni.edu",
 		"userPassword": "VrMj9gKdt",
 		"userPhone": "(577) 4235810",
 		"userAddress": "71 Hallows Crossing",
@@ -328,7 +328,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -336,8 +336,8 @@ const graduatePartTime = [
 		"userID": 1015
 	},
 	{
-		"userName": "Waite Keyworth",
-		"userEmail": "wkeyworthg@loc.gov",
+		"userName": "Rorke Quesne",
+		"userEmail": "RQuesne@GuptaUni.edu",
 		"userPassword": "Hyppx2E",
 		"userPhone": "(420) 5449023",
 		"userAddress": "7 Susan Drive",
@@ -349,7 +349,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -357,8 +357,8 @@ const graduatePartTime = [
 		"userID": 1016
 	},
 	{
-		"userName": "Meara Eunson",
-		"userEmail": "meunsonh@t.co",
+		"userName": "Florry Ogilvie",
+		"userEmail": "FOgilvie@GuptaUni.edu",
 		"userPassword": "1wINrChPU0",
 		"userPhone": "(513) 5764967",
 		"userAddress": "54 North Pass",
@@ -370,7 +370,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -378,8 +378,8 @@ const graduatePartTime = [
 		"userID": 1017
 	},
 	{
-		"userName": "Vilma Angell",
-		"userEmail": "vangelli@globo.com",
+		"userName": "Farrel Vobes",
+		"userEmail": "FVobes@GuptaUni.edu",
 		"userPassword": "bltuW90Ok",
 		"userPhone": "(507) 9647953",
 		"userAddress": "84712 Reindahl Plaza",
@@ -391,7 +391,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -399,8 +399,8 @@ const graduatePartTime = [
 		"userID": 1018
 	},
 	{
-		"userName": "Avery Rupke",
-		"userEmail": "arupkej@weebly.com",
+		"userName": "Marlowe Cockayme",
+		"userEmail": "MCockaym@GuptaUni.edu",
 		"userPassword": "OXKWAAk",
 		"userPhone": "(969) 9849350",
 		"userAddress": "8 Evergreen Pass",
@@ -412,7 +412,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -420,8 +420,8 @@ const graduatePartTime = [
 		"userID": 1019
 	},
 	{
-		"userName": "Kata Inchan",
-		"userEmail": "kinchank@icq.com",
+		"userName": "Mimi Blades",
+		"userEmail": "MBlades@GuptaUni.edu",
 		"userPassword": "rwCT4r",
 		"userPhone": "(372) 9862947",
 		"userAddress": "10082 Springview Court",
@@ -433,7 +433,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -441,8 +441,8 @@ const graduatePartTime = [
 		"userID": 1020
 	},
 	{
-		"userName": "Bethina Milkins",
-		"userEmail": "bmilkinsl@washington.edu",
+		"userName": "Ambrose Tollet",
+		"userEmail": "ATollet@GuptaUni.edu",
 		"userPassword": "yAZBE5g09IK",
 		"userPhone": "(486) 2629846",
 		"userAddress": "51 Village Green Trail",
@@ -454,7 +454,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -462,8 +462,8 @@ const graduatePartTime = [
 		"userID": 1021
 	},
 	{
-		"userName": "Vanessa Marchment",
-		"userEmail": "vmarchmentm@newyorker.com",
+		"userName": "Bernardina Rosengren",
+		"userEmail": "BRosengr@GuptaUni.edu",
 		"userPassword": "zqRrV2s",
 		"userPhone": "(594) 9191991",
 		"userAddress": "873 Cherokee Alley",
@@ -475,7 +475,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -483,8 +483,8 @@ const graduatePartTime = [
 		"userID": 1022
 	},
 	{
-		"userName": "Viki Belford",
-		"userEmail": "vbelfordn@cdbaby.com",
+		"userName": "Viola Dumper",
+		"userEmail": "VDumper@GuptaUni.edu",
 		"userPassword": "nvJYXVq2uz",
 		"userPhone": "(993) 9294082",
 		"userAddress": "25 Lakewood Gardens Alley",
@@ -496,7 +496,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -504,8 +504,8 @@ const graduatePartTime = [
 		"userID": 1023
 	},
 	{
-		"userName": "Lanny Newell",
-		"userEmail": "lnewello@sogou.com",
+		"userName": "Giselbert Banfill",
+		"userEmail": "GBanfill@GuptaUni.edu",
 		"userPassword": "zUjwXayd",
 		"userPhone": "(941) 8575993",
 		"userAddress": "03 Butterfield Avenue",
@@ -517,7 +517,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -525,8 +525,8 @@ const graduatePartTime = [
 		"userID": 1024
 	},
 	{
-		"userName": "Hendrika Goshawk",
-		"userEmail": "hgoshawkp@sfgate.com",
+		"userName": "Wilow Coggon",
+		"userEmail": "WCoggon@GuptaUni.edu",
 		"userPassword": "yYCm7nQI",
 		"userPhone": "(461) 4943298",
 		"userAddress": "0548 Mariners Cove Center",
@@ -538,7 +538,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -546,8 +546,8 @@ const graduatePartTime = [
 		"userID": 1025
 	},
 	{
-		"userName": "Suellen Jessel",
-		"userEmail": "sjesselq@deviantart.com",
+		"userName": "Izabel Dumelow",
+		"userEmail": "IDumelow@GuptaUni.edu",
 		"userPassword": "SUtPeTC2RL",
 		"userPhone": "(117) 1099062",
 		"userAddress": "64288 4th Place",
@@ -559,7 +559,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -567,8 +567,8 @@ const graduatePartTime = [
 		"userID": 1026
 	},
 	{
-		"userName": "Datha Trevains",
-		"userEmail": "dtrevainsr@cpanel.net",
+		"userName": "Halli Aynold",
+		"userEmail": "HAynold@GuptaUni.edu",
 		"userPassword": "XRUXnbjmWneL",
 		"userPhone": "(987) 8228945",
 		"userAddress": "6539 Florence Center",
@@ -580,7 +580,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -588,8 +588,8 @@ const graduatePartTime = [
 		"userID": 1027
 	},
 	{
-		"userName": "Tracie Charpin",
-		"userEmail": "tcharpins@senate.gov",
+		"userName": "Deanne Barth",
+		"userEmail": "DBarth@GuptaUni.edu",
 		"userPassword": "KGe6tgFKQ",
 		"userPhone": "(799) 2776846",
 		"userAddress": "458 Eastlawn Lane",
@@ -601,7 +601,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -609,8 +609,8 @@ const graduatePartTime = [
 		"userID": 1028
 	},
 	{
-		"userName": "Erie Heckle",
-		"userEmail": "ehecklet@yahoo.com",
+		"userName": "Ikey Crunkhurn",
+		"userEmail": "ICrunkhu@GuptaUni.edu",
 		"userPassword": "oemmClgyFWo",
 		"userPhone": "(663) 4035249",
 		"userAddress": "62882 Charing Cross Alley",
@@ -622,7 +622,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -630,8 +630,8 @@ const graduatePartTime = [
 		"userID": 1029
 	},
 	{
-		"userName": "Terry Ruste",
-		"userEmail": "trusteu@jigsy.com",
+		"userName": "Patrizia Taffurelli",
+		"userEmail": "PTaffure@GuptaUni.edu",
 		"userPassword": "zIJMmCh",
 		"userPhone": "(421) 9802445",
 		"userAddress": "778 Londonderry Point",
@@ -643,7 +643,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -651,8 +651,8 @@ const graduatePartTime = [
 		"userID": 1030
 	},
 	{
-		"userName": "Westley Dahlen",
-		"userEmail": "wdahlenv@unesco.org",
+		"userName": "Rowena Jesse",
+		"userEmail": "RJesse@GuptaUni.edu",
 		"userPassword": "AQEsgwFKp",
 		"userPhone": "(280) 6238373",
 		"userAddress": "98 Holy Cross Court",
@@ -664,7 +664,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -672,8 +672,8 @@ const graduatePartTime = [
 		"userID": 1031
 	},
 	{
-		"userName": "Sydelle Twallin",
-		"userEmail": "stwallinw@mashable.com",
+		"userName": "Christi Diddams",
+		"userEmail": "CDiddams@GuptaUni.edu",
 		"userPassword": "pa7xsqgc",
 		"userPhone": "(990) 2883977",
 		"userAddress": "23 Orin Street",
@@ -685,7 +685,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -693,8 +693,8 @@ const graduatePartTime = [
 		"userID": 1032
 	},
 	{
-		"userName": "Paule Fairleigh",
-		"userEmail": "pfairleighx@webmd.com",
+		"userName": "Auguste Laffling",
+		"userEmail": "ALafflin@GuptaUni.edu",
 		"userPassword": "TZMqbT",
 		"userPhone": "(502) 3893227",
 		"userAddress": "568 Dottie Center",
@@ -706,7 +706,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -714,8 +714,8 @@ const graduatePartTime = [
 		"userID": 1033
 	},
 	{
-		"userName": "Etty Stidever",
-		"userEmail": "estidevery@whitehouse.gov",
+		"userName": "Caroline Kevern",
+		"userEmail": "CKevern@GuptaUni.edu",
 		"userPassword": "c2VRmOHtFR",
 		"userPhone": "(952) 4075098",
 		"userAddress": "5784 Blue Bill Park Park",
@@ -727,7 +727,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -735,8 +735,8 @@ const graduatePartTime = [
 		"userID": 1034
 	},
 	{
-		"userName": "Orion Menear",
-		"userEmail": "omenearz@seattletimes.com",
+		"userName": "Lorain People",
+		"userEmail": "LPeople@GuptaUni.edu",
 		"userPassword": "H46zgzq",
 		"userPhone": "(719) 6522430",
 		"userAddress": "03959 Emmet Alley",
@@ -748,7 +748,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -756,8 +756,8 @@ const graduatePartTime = [
 		"userID": 1035
 	},
 	{
-		"userName": "Alex Bernakiewicz",
-		"userEmail": "abernakiewicz10@51.la",
+		"userName": "Lorilyn Woltman",
+		"userEmail": "LWoltman@GuptaUni.edu",
 		"userPassword": "IJvxZssns",
 		"userPhone": "(139) 8185605",
 		"userAddress": "85 Brentwood Avenue",
@@ -769,7 +769,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -777,8 +777,8 @@ const graduatePartTime = [
 		"userID": 1036
 	},
 	{
-		"userName": "Mathilde Gilliver",
-		"userEmail": "mgilliver11@yolasite.com",
+		"userName": "Bunnie Barczynski",
+		"userEmail": "BBarczyn@GuptaUni.edu",
 		"userPassword": "jtngD9E",
 		"userPhone": "(842) 3710457",
 		"userAddress": "78 Thompson Trail",
@@ -790,7 +790,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -798,8 +798,8 @@ const graduatePartTime = [
 		"userID": 1037
 	},
 	{
-		"userName": "Agata Greir",
-		"userEmail": "agreir12@github.io",
+		"userName": "Angel Lowdham",
+		"userEmail": "ALowdham@GuptaUni.edu",
 		"userPassword": "DXQdo1d",
 		"userPhone": "(324) 3134295",
 		"userAddress": "70 Marquette Park",
@@ -811,7 +811,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -819,8 +819,8 @@ const graduatePartTime = [
 		"userID": 1038
 	},
 	{
-		"userName": "Emanuele Flounders",
-		"userEmail": "eflounders13@jiathis.com",
+		"userName": "Diahann Rootes",
+		"userEmail": "DRootes@GuptaUni.edu",
 		"userPassword": "FcVu46Q",
 		"userPhone": "(470) 4362975",
 		"userAddress": "4 Haas Way",
@@ -832,7 +832,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -840,8 +840,8 @@ const graduatePartTime = [
 		"userID": 1039
 	},
 	{
-		"userName": "Rachelle Longthorn",
-		"userEmail": "rlongthorn14@de.vu",
+		"userName": "Tye Bock",
+		"userEmail": "TBock@GuptaUni.edu",
 		"userPassword": "wzNVSLaKJHTA",
 		"userPhone": "(534) 7284335",
 		"userAddress": "4602 Burning Wood Plaza",
@@ -853,7 +853,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -861,8 +861,8 @@ const graduatePartTime = [
 		"userID": 1040
 	},
 	{
-		"userName": "Cobbie Dudbridge",
-		"userEmail": "cdudbridge15@plala.or.jp",
+		"userName": "Pippa Smorthwaite",
+		"userEmail": "PSmorthw@GuptaUni.edu",
 		"userPassword": "03s46pzur5",
 		"userPhone": "(690) 3772667",
 		"userAddress": "785 Dunning Pass",
@@ -874,7 +874,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -882,8 +882,8 @@ const graduatePartTime = [
 		"userID": 1041
 	},
 	{
-		"userName": "Gaby Pecey",
-		"userEmail": "gpecey11@upenn.edu",
+		"userName": "Greggory Quilter",
+		"userEmail": "GQuilter@GuptaUni.edu",
 		"userPassword": "igiuNTi0",
 		"userPhone": "(978) 5398363",
 		"userAddress": "00 7th Plaza",
@@ -895,7 +895,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -903,8 +903,8 @@ const graduatePartTime = [
 		"userID": 1042
 	},
 	{
-		"userName": "Susann Tedridge",
-		"userEmail": "stedridge17@usgs.gov",
+		"userName": "Audry Avraam",
+		"userEmail": "AAvraam@GuptaUni.edu",
 		"userPassword": "kxrI5EE",
 		"userPhone": "(701) 6732987",
 		"userAddress": "21 Myrtle Hill",
@@ -916,7 +916,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -924,8 +924,8 @@ const graduatePartTime = [
 		"userID": 1043
 	},
 	{
-		"userName": "Brander Wozencraft",
-		"userEmail": "bwozencraft18@squidoo.com",
+		"userName": "Arlee Catling",
+		"userEmail": "ACatling@GuptaUni.edu",
 		"userPassword": "JkrWVEkGboLf",
 		"userPhone": "(432) 4246079",
 		"userAddress": "2 Fordem Way",
@@ -937,7 +937,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -945,8 +945,8 @@ const graduatePartTime = [
 		"userID": 1044
 	},
 	{
-		"userName": "Sven Matysik",
-		"userEmail": "smatysik19@furl.net",
+		"userName": "Etan Hardison",
+		"userEmail": "EHardiso@GuptaUni.edu",
 		"userPassword": "dO6ep4uQN",
 		"userPhone": "(497) 4147198",
 		"userAddress": "47435 Continental Circle",
@@ -958,7 +958,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -966,8 +966,8 @@ const graduatePartTime = [
 		"userID": 1045
 	},
 	{
-		"userName": "Lonny Sargeaunt",
-		"userEmail": "lsargeaunt1a@wiley.com",
+		"userName": "Wolf Spores",
+		"userEmail": "WSpores@GuptaUni.edu",
 		"userPassword": "2X2GW5",
 		"userPhone": "(139) 8003533",
 		"userAddress": "81 Rutledge Road",
@@ -979,7 +979,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -987,8 +987,8 @@ const graduatePartTime = [
 		"userID": 1046
 	},
 	{
-		"userName": "Ronni Seabridge",
-		"userEmail": "rseabridge1b@redcross.org",
+		"userName": "Lettie Meeson",
+		"userEmail": "LMeeson@GuptaUni.edu",
 		"userPassword": "isSciNVgn89",
 		"userPhone": "(297) 1814698",
 		"userAddress": "29022 Wayridge Alley",
@@ -1000,7 +1000,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1008,8 +1008,8 @@ const graduatePartTime = [
 		"userID": 1047
 	},
 	{
-		"userName": "Toiboid Lacey",
-		"userEmail": "tlacey1c@mayoclinic.com",
+		"userName": "Ibby Bohden",
+		"userEmail": "IBohden@GuptaUni.edu",
 		"userPassword": "8oeQN5LI6gJ",
 		"userPhone": "(822) 7957323",
 		"userAddress": "6603 Blaine Crossing",
@@ -1021,7 +1021,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1029,8 +1029,8 @@ const graduatePartTime = [
 		"userID": 1048
 	},
 	{
-		"userName": "Gracia Schankelborg",
-		"userEmail": "gschankelborg1d@google.it",
+		"userName": "Garrard Sobczak",
+		"userEmail": "GSobczak@GuptaUni.edu",
 		"userPassword": "zazHxM",
 		"userPhone": "(180) 6953119",
 		"userAddress": "81929 Maywood Lane",
@@ -1042,7 +1042,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1050,8 +1050,8 @@ const graduatePartTime = [
 		"userID": 1049
 	},
 	{
-		"userName": "Reider Praundl",
-		"userEmail": "rpraundl1e@webeden.co.uk",
+		"userName": "Giffy Berthod",
+		"userEmail": "GBerthod@GuptaUni.edu",
 		"userPassword": "21JO7hk4S",
 		"userPhone": "(604) 2581569",
 		"userAddress": "5375 School Center",
@@ -1063,7 +1063,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1071,8 +1071,8 @@ const graduatePartTime = [
 		"userID": 1050
 	},
 	{
-		"userName": "Sloane Surmeyers",
-		"userEmail": "ssurmeyers1f@goo.ne.jp",
+		"userName": "Carree Bennike",
+		"userEmail": "CBennike@GuptaUni.edu",
 		"userPassword": "XSNPA08X",
 		"userPhone": "(314) 4052911",
 		"userAddress": "645 Arizona Junction",
@@ -1084,7 +1084,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1092,8 +1092,8 @@ const graduatePartTime = [
 		"userID": 1051
 	},
 	{
-		"userName": "Meg Greatham",
-		"userEmail": "mgreatham1g@live.com",
+		"userName": "Eyde Twaite",
+		"userEmail": "ETwaite@GuptaUni.edu",
 		"userPassword": "GiyioXMjGsuq",
 		"userPhone": "(178) 1812961",
 		"userAddress": "397 South Way",
@@ -1105,7 +1105,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1113,8 +1113,8 @@ const graduatePartTime = [
 		"userID": 1052
 	},
 	{
-		"userName": "Demetrius Moff",
-		"userEmail": "dmoff1h@who.int",
+		"userName": "Astrid Chasles",
+		"userEmail": "AChasles@GuptaUni.edu",
 		"userPassword": "coFyY0",
 		"userPhone": "(372) 9601110",
 		"userAddress": "7 Crescent Oaks Court",
@@ -1126,7 +1126,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1134,8 +1134,8 @@ const graduatePartTime = [
 		"userID": 1053
 	},
 	{
-		"userName": "Micky Betun",
-		"userEmail": "mbetun1i@google.com.br",
+		"userName": "Cleo Marshall",
+		"userEmail": "CMarshal@GuptaUni.edu",
 		"userPassword": "xgtuZMFnpC",
 		"userPhone": "(226) 5595114",
 		"userAddress": "1 Springs Trail",
@@ -1147,7 +1147,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1155,8 +1155,8 @@ const graduatePartTime = [
 		"userID": 1054
 	},
 	{
-		"userName": "Aloysius Delleschi",
-		"userEmail": "adelleschi1j@spotify.com",
+		"userName": "Andonis Biddle",
+		"userEmail": "ABiddle@GuptaUni.edu",
 		"userPassword": "W49TkY",
 		"userPhone": "(446) 5827172",
 		"userAddress": "417 Barby Point",
@@ -1168,7 +1168,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1176,8 +1176,8 @@ const graduatePartTime = [
 		"userID": 1055
 	},
 	{
-		"userName": "Bianca Keattch",
-		"userEmail": "bkeattch1k@domainmarket.com",
+		"userName": "Darcy Olrenshaw",
+		"userEmail": "DOlrensh@GuptaUni.edu",
 		"userPassword": "i81Hb7fQNJ",
 		"userPhone": "(503) 3074292",
 		"userAddress": "65360 Charing Cross Point",
@@ -1189,7 +1189,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1197,8 +1197,8 @@ const graduatePartTime = [
 		"userID": 1056
 	},
 	{
-		"userName": "Wilburt Stears",
-		"userEmail": "wstears1l@comsenz.com",
+		"userName": "Aron Corrigan",
+		"userEmail": "ACorriga@GuptaUni.edu",
 		"userPassword": "T9sfqyC4VJU",
 		"userPhone": "(349) 9801360",
 		"userAddress": "6 Fairfield Court",
@@ -1210,7 +1210,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1218,8 +1218,8 @@ const graduatePartTime = [
 		"userID": 1057
 	},
 	{
-		"userName": "Garey Frostdick",
-		"userEmail": "gfrostdick1m@tripod.com",
+		"userName": "Halli Withringten",
+		"userEmail": "HWithrin@GuptaUni.edu",
 		"userPassword": "O8poPW5itf",
 		"userPhone": "(461) 3734964",
 		"userAddress": "56 Moland Center",
@@ -1231,7 +1231,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1239,8 +1239,8 @@ const graduatePartTime = [
 		"userID": 1058
 	},
 	{
-		"userName": "Packston Hillock",
-		"userEmail": "phillock1n@fotki.com",
+		"userName": "Gerry Giacomucci",
+		"userEmail": "GGiacomu@GuptaUni.edu",
 		"userPassword": "5fPIFib83",
 		"userPhone": "(583) 3221181",
 		"userAddress": "1 Springview Way",
@@ -1252,7 +1252,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1260,8 +1260,8 @@ const graduatePartTime = [
 		"userID": 1059
 	},
 	{
-		"userName": "Riobard Dundendale",
-		"userEmail": "rdundendale1o@skype.com",
+		"userName": "Cristie Shellum",
+		"userEmail": "CShellum@GuptaUni.edu",
 		"userPassword": "x36jkzrpsd",
 		"userPhone": "(345) 2108433",
 		"userAddress": "09512 Ridge Oak Parkway",
@@ -1273,7 +1273,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1281,8 +1281,8 @@ const graduatePartTime = [
 		"userID": 1060
 	},
 	{
-		"userName": "Bennie Macak",
-		"userEmail": "bmacak1p@reverbnation.com",
+		"userName": "Sigismund Cissell",
+		"userEmail": "SCissell@GuptaUni.edu",
 		"userPassword": "JfnLN2",
 		"userPhone": "(101) 4903317",
 		"userAddress": "6 Kings Street",
@@ -1294,7 +1294,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1302,8 +1302,8 @@ const graduatePartTime = [
 		"userID": 1061
 	},
 	{
-		"userName": "Ulick Pocklington",
-		"userEmail": "upocklington1q@parallels.com",
+		"userName": "Antonella Forton",
+		"userEmail": "AForton@GuptaUni.edu",
 		"userPassword": "BtBLV7",
 		"userPhone": "(549) 3883772",
 		"userAddress": "06051 Bayside Parkway",
@@ -1315,7 +1315,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1323,8 +1323,8 @@ const graduatePartTime = [
 		"userID": 1062
 	},
 	{
-		"userName": "Quentin McKinnell",
-		"userEmail": "qmckinnell1r@cam.ac.uk",
+		"userName": "Nance Domerq",
+		"userEmail": "NDomerq@GuptaUni.edu",
 		"userPassword": "Q2ZaIDC",
 		"userPhone": "(832) 4989709",
 		"userAddress": "98908 Spohn Hill",
@@ -1336,7 +1336,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1344,8 +1344,8 @@ const graduatePartTime = [
 		"userID": 1063
 	},
 	{
-		"userName": "Lucio McFarland",
-		"userEmail": "lmcfarland1s@flavors.me",
+		"userName": "Mary Windeatt",
+		"userEmail": "MWindeat@GuptaUni.edu",
 		"userPassword": "G6LcMV6Qr2Iq",
 		"userPhone": "(124) 9902641",
 		"userAddress": "38550 7th Lane",
@@ -1357,7 +1357,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "M.S",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": true,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1365,8 +1365,8 @@ const graduatePartTime = [
 		"userID": 1064
 	},
 	{
-		"userName": "Smith Rocca",
-		"userEmail": "srocca1t@multiply.com",
+		"userName": "Warren Emmanuele",
+		"userEmail": "WEmmanue@GuptaUni.edu",
 		"userPassword": "088CT517K3my",
 		"userPhone": "(529) 9419461",
 		"userAddress": "58884 Sloan Parkway",
@@ -1378,7 +1378,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1386,8 +1386,8 @@ const graduatePartTime = [
 		"userID": 1065
 	},
 	{
-		"userName": "Demetre Bernardez",
-		"userEmail": "dbernardez1u@wunderground.com",
+		"userName": "Yule Johnes",
+		"userEmail": "YJohnes@GuptaUni.edu",
 		"userPassword": "kdRM05FoJt",
 		"userPhone": "(763) 6455804",
 		"userAddress": "72878 Spaight Place",
@@ -1399,7 +1399,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1407,8 +1407,8 @@ const graduatePartTime = [
 		"userID": 1066
 	},
 	{
-		"userName": "Thorndike Hamer",
-		"userEmail": "thamer1v@hostgator.com",
+		"userName": "Stefa Lorenzo",
+		"userEmail": "SLorenzo@GuptaUni.edu",
 		"userPassword": "veZRvE",
 		"userPhone": "(530) 8532257",
 		"userAddress": "7 Sloan Way",
@@ -1420,7 +1420,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1428,8 +1428,8 @@ const graduatePartTime = [
 		"userID": 1067
 	},
 	{
-		"userName": "Ardys Vawton",
-		"userEmail": "avawton1w@wisc.edu",
+		"userName": "Pierrette Crownshaw",
+		"userEmail": "PCrownsh@GuptaUni.edu",
 		"userPassword": "CXx3PaUZ6Act",
 		"userPhone": "(547) 4777354",
 		"userAddress": "966 8th Crossing",
@@ -1441,7 +1441,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1449,8 +1449,8 @@ const graduatePartTime = [
 		"userID": 1068
 	},
 	{
-		"userName": "Fidela Gimenez",
-		"userEmail": "fgimenez1x@tripod.com",
+		"userName": "Jolie Ivimey",
+		"userEmail": "JIvimey@GuptaUni.edu",
 		"userPassword": "4urOgSh3VKIB",
 		"userPhone": "(806) 5999747",
 		"userAddress": "824 Milwaukee Avenue",
@@ -1462,7 +1462,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1470,8 +1470,8 @@ const graduatePartTime = [
 		"userID": 1069
 	},
 	{
-		"userName": "Isabel Bunch",
-		"userEmail": "ibunch1y@skype.com",
+		"userName": "Mar O'Brogan",
+		"userEmail": "MO'Broga@GuptaUni.edu",
 		"userPassword": "e3DIIpV5E",
 		"userPhone": "(862) 2582783",
 		"userAddress": "433 Farragut Alley",
@@ -1483,7 +1483,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1491,8 +1491,8 @@ const graduatePartTime = [
 		"userID": 1070
 	},
 	{
-		"userName": "Kimberli Brownsea",
-		"userEmail": "kbrownsea1z@go.com",
+		"userName": "Josias Flockhart",
+		"userEmail": "JFlockha@GuptaUni.edu",
 		"userPassword": "PXftBOH",
 		"userPhone": "(104) 7743151",
 		"userAddress": "11 Schlimgen Court",
@@ -1504,7 +1504,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1512,8 +1512,8 @@ const graduatePartTime = [
 		"userID": 1071
 	},
 	{
-		"userName": "Sharlene Arlidge",
-		"userEmail": "sarlidge20@mysql.com",
+		"userName": "Mathias Steketee",
+		"userEmail": "MStekete@GuptaUni.edu",
 		"userPassword": "s5MSI226D",
 		"userPhone": "(652) 8698366",
 		"userAddress": "60 Bluestem Place",
@@ -1525,7 +1525,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1533,8 +1533,8 @@ const graduatePartTime = [
 		"userID": 1072
 	},
 	{
-		"userName": "Estell Helwig",
-		"userEmail": "ehelwig21@ask.com",
+		"userName": "Ignacius Hayter",
+		"userEmail": "IHayter@GuptaUni.edu",
 		"userPassword": "tWQDbkvIWz8",
 		"userPhone": "(492) 6021261",
 		"userAddress": "3 Waxwing Trail",
@@ -1546,7 +1546,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
@@ -1554,8 +1554,8 @@ const graduatePartTime = [
 		"userID": 1073
 	},
 	{
-		"userName": "Marya Minchin",
-		"userEmail": "mminchin22@blinklist.com",
+		"userName": "Sascha Yegorev",
+		"userEmail": "SYegorev@GuptaUni.edu",
 		"userPassword": "jqLSs5",
 		"userPhone": "(289) 7593898",
 		"userAddress": "60455 Hoffman Lane",
@@ -1567,7 +1567,7 @@ const graduatePartTime = [
 		"studentType": "graduate",
 		"isFullTime": false,
 		"mastersOrPHD": "PHD",
-		"tutionCost": "$7,000",
+		"tutionCost": "$7,000 ",
 		"hasMealPlan": false,
 		"maxCreditsAllowed": 11,
 		"minCreditsAllowed": 4,
