@@ -1,9 +1,10 @@
 import { seeds } from './../index';
 import { createConnection } from 'typeorm';
 import { Building } from '../../entity/Locations/Building';
+
 createConnection()
   .then(async (connection) => {
-    //----------------------BUILDING------------------------------------------
+
     const buildingsSeed = seeds.building.default;
     for (let i = 0; i < buildingsSeed.length; i++) {
       try {
