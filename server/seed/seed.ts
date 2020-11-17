@@ -47,39 +47,34 @@ createConnection()
 		let iter = 1;
 
 
-		// try {
-		// 	const facultyOne = await connection.manager.findOne(Faculty, 6000);
-		// 	console.log(facultyOne)
-		// } catch (error) {
-		// 	console.error(error)
-		// }
-		// //----------------------BUILDING------------------------------------------
-		// const buildingsSeed = seeds.building.default;
-		// for (i = 0; i < buildingsSeed.length; i++) {
-		// 	try {
-		// 		const buildings = await connection.manager.create(Building, buildingsSeed[i]);
-		// 		//console.log(buildings);
-		// 		await connection.manager.save(buildings);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+
+		//----------------------BUILDING------------------------------------------
+		const buildingsSeed = seeds.building.default;
+		for (i = 0; i < buildingsSeed.length; i++) {
+			try {
+				const buildings = await connection.manager.create(Building, buildingsSeed[i]);
+				//console.log(buildings);
+				await connection.manager.save(buildings);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 
-		// //-----------------------LAB-------------------------------------
-		// let labsSeed = seeds.lab.default;
-		// for (i = 0; i < labsSeed.length; i++) {
-		// 	try {
-		// 		const building = await connection.manager.findOne(Building, labsSeed[i].buildingID);
-		// 		const lab = await connection.manager.create(Lab, labsSeed[i]);
-		// 		building ? lab.buildings = building : console.log("Building doesn't exist")
+		//-----------------------LAB-------------------------------------
+		let labsSeed = seeds.lab.default;
+		for (i = 0; i < labsSeed.length; i++) {
+			try {
+				const building = await connection.manager.findOne(Building, labsSeed[i].buildingID);
+				const lab = await connection.manager.create(Lab, labsSeed[i]);
+				building ? lab.buildings = building : console.log("Building doesn't exist")
 
-		// 		await connection.manager.save(lab);
-		// 	} catch (error) {
-		// 		//console.error(error);
-		// 	}
-		// }
+				await connection.manager.save(lab);
+			} catch (error) {
+				//console.error(error);
+			}
+		}
 
 
 		// //----------------------------LECTURE--------------------------------------
