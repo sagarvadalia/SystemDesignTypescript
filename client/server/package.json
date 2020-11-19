@@ -1,0 +1,52 @@
+{
+	"name": "systemDesign",
+	"version": "0.0.1",
+	"description": "Awesome project developed with TypeORM.",
+	"scripts": {
+		"start-server": "ts-node index.ts",
+		"lint-fix": "npm run lint -- --fix",
+		"lint": "eslint ./ --ignore-path .gitignore",
+		"seed": "ts-node seed/seed.ts",
+		"seed-ALL": "ts-node seed/seed.ts",
+		"seed-admin": "ts-node seed/seedRuns/administrator.ts",
+		"seed-building": "ts-node seed/seedRuns/building.ts",
+		"seed-course": "ts-node seed/seedRuns/course.ts",
+		"seed-day": "ts-node seed/seedRuns/day.ts",
+		"seed-department": "ts-node seed/seedRuns/department.ts",
+		"seed-facultyALL": "ts-node seed/seedRuns/faculty.ts",
+		"seed-facultyPT": "ts-node seed/seedRuns/partTimeFaculty.ts",
+		"seed-facultyFT": "ts-node seed/seedRuns/fullTimeFaculty.ts",
+		"seed-hold": "ts-node seed/seedRuns/hold.ts",
+		"seed-office": "ts-node seed/seedRuns/office.ts",
+		"seed-lab": "ts-node seed/seedRuns/lab.ts",
+		"seed-lecture": "ts-node seed/seedRuns/lecture.ts",
+		"seed-major": "ts-node seed/seedRuns/major.ts",
+		"seed-minor": "ts-node seed/seedRuns/minor.ts",
+		"seed-period": "ts-node seed/seedRuns/period.ts",
+		"seed-prereq": "ts-node seed/seedRuns/prerequisite.ts",
+		"seed-researcher": "ts-node seed/seedRuns/researcher.ts",
+		"seed-semester": "ts-node seed/seedRuns/semester.ts",
+		"seed-studentsALL": "ts-node seed/seedRuns/students.ts",
+		"seed-studentsUGPT": "ts-node seed/seedRuns/undergraduatePartTime.ts",
+		"seed-studentsUGFT": "ts-node seed/seedRuns/undergraduateFullTime.ts",
+		"seed-studentsGPT": "ts-node seed/seedRuns/graduatePartTime.ts",
+		"seed-studentsGFT": "ts-node seed/seedRuns/graduateFullTime.ts",
+		"seed-timeslot": "ts-node seed/seedRuns/timeslot.ts"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx, ts, tsx}": [
+			"prettier --write",
+			"npm run lint-fix",
+			"git add"
+		],
+		"*.{css,scss,json,md}": [
+			"prettier --write",
+			"git add"
+		]
+	}
+}
