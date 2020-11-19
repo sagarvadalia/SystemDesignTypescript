@@ -1,29 +1,17 @@
 import 'reflect-metadata';
+
 import * as bodyParser from 'body-parser';
-import express, { Request, Response } from 'express';
-import { createConnection } from 'typeorm';
-import { Routes } from './routes';
-import { ResponseError } from './util/ResponseError';
 import compression = require('compression');
+import express, { Request, Response } from 'express';
 import session = require('express-session');
 import morgan = require('morgan');
 import path = require('path');
-createConnection({
-	type: "postgres",
-	host: "localhost",
-	port: 5432,
-	database: "studentregistration",
-	synchronize: true,
-	logging: true,
-	entities: [__dirname + "/entity/**/*.ts"],
-	migrations: [__dirname + "/migration/**/*.ts"],
-	subscribers: [__dirname + "/subscriber/**/*.ts"],
-	"cli": {
-		"entitiesDir": __dirname + "/entity",
-		"migrationsDir": __dirname + "/migration",
-		"subscribersDir": __dirname + "/subscriber"
-	}
-})
+import { createConnection } from 'typeorm';
+
+import { Routes } from './routes';
+import { ResponseError } from './util/ResponseError';
+
+createConnection()
 	.then(async (connection) => {
 		// create express app
 		const app = express();
