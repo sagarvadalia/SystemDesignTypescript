@@ -40,7 +40,22 @@ import { Advisor } from '../entity/JoinTables/Advisor';
 
 
 
-createConnection()
+createConnection({
+	type: "postgres",
+	host: "localhost",
+	port: 5432,
+	database: "studentregistration",
+	synchronize: true,
+	logging: true,
+	entities: [__dirname + "./../entity/**/*.ts"],
+	migrations: [__dirname + "./../migration/**/*.ts"],
+	subscribers: [__dirname + "./../subscriber/**/*.ts"],
+	"cli": {
+		"entitiesDir": __dirname + "./../entity",
+		"migrationsDir": __dirname + "./../migration",
+		"subscribersDir": __dirname + "./../subscriber"
+	}
+})
 	.then(async (connection) => {
 		//----------------------iteration index variables-------------------------
 		let i = 0;
@@ -414,7 +429,7 @@ createConnection()
 
 		// // -----------------------------Join Tables--------------------------------
 
-		
+
 
 
 		// //------------------------------Faculty Department-------------------------
@@ -551,7 +566,7 @@ createConnection()
 		// 			majorNum++;
 		// 			minorNum++;
 		// 			index++;
-					
+
 		// 		}
 
 		// 	}
@@ -571,28 +586,28 @@ createConnection()
 		// 	}
 		// }
 		// Advisors
-			for(i = 0; i < students.length; i++){
-				try{
-					const sID = students[i].userID;
-					const majorIDs = await connection.manager.findOne(StudentMajor, {where: {sID: sID}});
-					if(majorIDs){
-						const major = await connection.manager.findOne(Major, majorIDs.majorID);
-						const department = major? major.department: null;
-						const faculty = department? department.Faculties: null;
-					}
-					 let min = Math.ceil(0);
-					 let max = Math.floor(faculty.length);
-					 let num = Math.floor(Math.random() * (max - min) + min);
-					const advisors = await connection.manager.create(Advisor, {sID: students[i], fID: faculty[num], dateAssigned: new Date('November 12, 2020 04:28:00')})
-					await connection.manager.save(advisors);
+		for (i = 0; i < students.length; i++) {
+			try {
+				const sID = students[i].userID;
+				const majorIDs = await connection.manager.findOne(StudentMajor, { where: { sID: sID } });
+				if (majorIDs) {
+					const major = await connection.manager.findOne(Major, majorIDs.majorID);
+					const department = major ? major.department : null;
+					const faculty = department ? department.Faculties : null;
 				}
-				catch(error){
-					console.error(error);
-				}
+				let min = Math.ceil(0);
+				let max = Math.floor(faculty.length);
+				let num = Math.floor(Math.random() * (max - min) + min);
+				const advisors = await connection.manager.create(Advisor, { sID: students[i], fID: faculty[num], dateAssigned: new Date('November 12, 2020 04:28:00') })
+				await connection.manager.save(advisors);
 			}
+			catch (error) {
+				console.error(error);
+			}
+		}
 
 
-		
+
 		// TODO: Student Holds
 		// TODO: Faculty History
 		// TODO: Minor Requirements
