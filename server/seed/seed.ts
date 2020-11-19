@@ -35,9 +35,9 @@ import { StudentMinor } from '../entity/JoinTables/StudentMinor';
 
 import { DayAndPeriod } from '../entity/JoinTables/DayAndPeriod';
 import { StudentHistory } from '../entity/StudentRelated/StudentHistory';
-import { connect } from 'net';
+
 import { Advisor } from '../entity/JoinTables/Advisor';
-import { max, min } from 'class-validator';
+
 
 
 createConnection()
