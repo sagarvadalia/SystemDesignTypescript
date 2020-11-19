@@ -37,6 +37,7 @@ import { DayAndPeriod } from '../entity/JoinTables/DayAndPeriod';
 import { StudentHistory } from '../entity/StudentRelated/StudentHistory';
 
 import { Advisor } from '../entity/JoinTables/Advisor';
+import { StudentHold } from '../entity/JoinTables/StudentHold';
 
 
 
@@ -586,29 +587,49 @@ createConnection({
 		// 	}
 		// }
 		// Advisors
-		for (i = 0; i < students.length; i++) {
-			try {
-				const sID = students[i].userID;
-				const majorIDs = await connection.manager.findOne(StudentMajor, { where: { sID: sID } });
-				if (majorIDs) {
-					const major = await connection.manager.findOne(Major, majorIDs.majorID);
-					const department = major ? major.department : null;
-					const faculty = department ? department.Faculties : null;
+		// for (i = 0; i < students.length; i++) {
+		// 	try {
+		// 		const sID = students[i].userID;
+		// 		const majorIDs = await connection.manager.findOne(StudentMajor, { where: { sID: sID } });
+		// 		if (majorIDs) {
+		// 			const major = await connection.manager.findOne(Major, majorIDs.majorID);
+		// 			const department = major ? major.department : null;
+		// 			const faculty = department ? department.Faculties : null;
+		// 		}
+		// 		let min = Math.ceil(0);
+		// 		let max = Math.floor(faculty.length);
+		// 		let num = Math.floor(Math.random() * (max - min) + min);
+		// 		const advisors = await connection.manager.create(Advisor, { sID: students[i], fID: faculty[num], dateAssigned: new Date('November 12, 2020 04:28:00') })
+		// 		await connection.manager.save(advisors);
+		// 	}
+		// 	catch (error) {
+		// 		console.error(error);
+		// 	}
+		// }
+
+		// Student Holds
+			iter = 1;
+			for(i = 0; i < students.length; i += 20 ){
+				try{
+					if(iter === 9){
+
+						iter = 1;
+					}
+						const sID = students[i];
+						let holdID = iter;
+						const hold = await connection.manager.findOne(Hold, holdID);
+					
+					const studentHold = await connection.manager.create(StudentHold, {sID, holdID: hold});
+					await connection.manager.save(studentHold);
+				
+					iter++;
 				}
-				let min = Math.ceil(0);
-				let max = Math.floor(faculty.length);
-				let num = Math.floor(Math.random() * (max - min) + min);
-				const advisors = await connection.manager.create(Advisor, { sID: students[i], fID: faculty[num], dateAssigned: new Date('November 12, 2020 04:28:00') })
-				await connection.manager.save(advisors);
+				catch(error){
+					console.log(error);
+				}
 			}
-			catch (error) {
-				console.error(error);
-			}
-		}
 
-
-
-		// TODO: Student Holds
+		
 		// TODO: Faculty History
 		// TODO: Minor Requirements
 		// TODO: Major Requirements
