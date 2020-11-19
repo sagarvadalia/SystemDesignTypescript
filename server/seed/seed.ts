@@ -34,6 +34,10 @@ import { StudentMajor } from '../entity/JoinTables/StudentMajor';
 import { StudentMinor } from '../entity/JoinTables/StudentMinor';
 
 import { DayAndPeriod } from '../entity/JoinTables/DayAndPeriod';
+import { StudentHistory } from '../entity/StudentRelated/StudentHistory';
+
+import { Advisor } from '../entity/JoinTables/Advisor';
+
 
 
 createConnection()
@@ -49,32 +53,32 @@ createConnection()
 
 
 		//----------------------BUILDING------------------------------------------
-		const buildingsSeed = seeds.building.default;
-		for (i = 0; i < buildingsSeed.length; i++) {
-			try {
-				const buildings = await connection.manager.create(Building, buildingsSeed[i]);
-				//console.log(buildings);
-				await connection.manager.save(buildings);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// const buildingsSeed = seeds.building.default;
+		// for (i = 0; i < buildingsSeed.length; i++) {
+		// 	try {
+		// 		const buildings = await connection.manager.create(Building, buildingsSeed[i]);
+		// 		//console.log(buildings);
+		// 		await connection.manager.save(buildings);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
 
 
 		//-----------------------LAB-------------------------------------
-		let labsSeed = seeds.lab.default;
-		for (i = 0; i < labsSeed.length; i++) {
-			try {
-				const building = await connection.manager.findOne(Building, labsSeed[i].buildingID);
-				const lab = await connection.manager.create(Lab, labsSeed[i]);
-				building ? lab.buildings = building : console.log("Building doesn't exist")
+		// let labsSeed = seeds.lab.default;
+		// for (i = 0; i < labsSeed.length; i++) {
+		// 	try {
+		// 		const building = await connection.manager.findOne(Building, labsSeed[i].buildingID);
+		// 		const lab = await connection.manager.create(Lab, labsSeed[i]);
+		// 		building ? lab.buildings = building : console.log("Building doesn't exist")
 
-				await connection.manager.save(lab);
-			} catch (error) {
-				//console.error(error);
-			}
-		}
+		// 		await connection.manager.save(lab);
+		// 	} catch (error) {
+		// 		//console.error(error);
+		// 	}
+		// }
 
 
 		// //----------------------------LECTURE--------------------------------------
@@ -149,49 +153,49 @@ createConnection()
 
 
 		//---------------------------DEPARTMENT------------------------------------
-		const departmentsSeed = seeds.department.default;
-		for (i = 0; i < departmentsSeed.length; i++) {
-			try {
-				const departments = await connection.manager.create(Department, departmentsSeed[i]);
-				try {
-					console.log(departmentsSeed[i].deptHeadIDNum)
-					// const faculty = await connection.manager.findOne(Faculty, department[i].deptHeadIDNum)
-					const faculty2 = await connection.manager.findOne(FacultyFullTime, departmentsSeed[i].deptHeadIDNum)
-					// const faculty3 = await connection.manager.findOne(FacultyPartTime, department[i].deptHeadIDNum)
-					const room = await connection.manager.findOne(Office, departmentsSeed[i].roomIDNum)
-					// console.log(faculty);
-					console.log(faculty2);
-					// console.log(faculty3);
-					// console.log(room)
-					if (room && faculty2) {
-						departments.roomID = room;
-						departments.deptHeadID = faculty2;
-						let dept = await connection.manager.save(departments);
-						console.log(dept)
-					}
-				} catch (error) {
+		// const departmentsSeed = seeds.department.default;
+		// for (i = 0; i < departmentsSeed.length; i++) {
+		// 	try {
+		// 		const departments = await connection.manager.create(Department, departmentsSeed[i]);
+		// 		try {
+		// 			console.log(departmentsSeed[i].deptHeadIDNum)
+		// 			// const faculty = await connection.manager.findOne(Faculty, department[i].deptHeadIDNum)
+		// 			const faculty2 = await connection.manager.findOne(FacultyFullTime, departmentsSeed[i].deptHeadIDNum)
+		// 			// const faculty3 = await connection.manager.findOne(FacultyPartTime, department[i].deptHeadIDNum)
+		// 			const room = await connection.manager.findOne(Office, departmentsSeed[i].roomIDNum)
+		// 			// console.log(faculty);
+		// 			console.log(faculty2);
+		// 			// console.log(faculty3);
+		// 			// console.log(room)
+		// 			if (room && faculty2) {
+		// 				departments.roomID = room;
+		// 				departments.deptHeadID = faculty2;
+		// 				let dept = await connection.manager.save(departments);
+		// 				console.log(dept)
+		// 			}
+		// 		} catch (error) {
 
-				}
+		// 		}
 
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
 		//-----------------------------COURSE--------------------------------------
-		const coursesSeed = seeds.course.default;
-		for (i = 0; i < coursesSeed.length; i++) {
-			try {
+		// const coursesSeed = seeds.course.default;
+		// for (i = 0; i < coursesSeed.length; i++) {
+		// 	try {
 
-				const course = await connection.manager.create(Course, coursesSeed[i]);
-				const department = await connection.manager.findOne(Department, coursesSeed[i].deptIDNum)
-				console.log('-----------------', department);
-				department ? course.deptID = department : console.log(department);
-				await connection.manager.save(course);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// 		const course = await connection.manager.create(Course, coursesSeed[i]);
+		// 		const department = await connection.manager.findOne(Department, coursesSeed[i].deptIDNum)
+		// 		console.log('-----------------', department);
+		// 		department ? course.deptID = department : console.log(department);
+		// 		await connection.manager.save(course);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
 
 		// //--------------------------------MAJOR-----------------------------------
@@ -209,7 +213,7 @@ createConnection()
 
 
 
-		// //------------------------------MINOR--------------------------------------
+		//------------------------------MINOR--------------------------------------
 		// const minorsSeed = seeds.minor.default;
 		// for (i = 0; i < minorsSeed.length; i++) {
 		// 	try {
@@ -384,31 +388,34 @@ createConnection()
 		// }
 
 		// //----------------------RETRIEVING ALL THE DATA----------------------------
-		// const buildings = await connection.manager.find(Building)
-		// const labs = await connection.manager.find(Lab)
-		// const lectures = await connection.manager.find(Lecture)
-		// const offices = await connection.manager.find(Office)
-		// const semesters = await connection.manager.find(Semester)
-		// const researchers = await connection.manager.find(Researcher)
-		// const periods = await connection.manager.find(Period)
-		// const departments = await connection.manager.find(Department)
-		// const majors = await connection.manager.find(Major)
-		// const minors = await connection.manager.find(Minor)
-		// const days = await connection.manager.find(Day)
-		// const administrators = await connection.manager.find(Administrator)
-		// const timeslots = await connection.manager.find(TimeSlot)
-		// const fullTimeFaculty = await connection.manager.find(FacultyFullTime)
-		// const partTimeFaculty = await connection.manager.find(FacultyPartTime)
-		// const fullTimeGrads = await connection.manager.find(GraduateFullTime)
-		// const partTimeGrads = await connection.manager.find(GraduatePartTime)
-		// const fullTimeUndergrads = await connection.manager.find(UnderGraduateFullTime)
-		// const partTimeUndergrads = await connection.manager.find(UnderGraduatePartTime)
-		// const faculty = await connection.manager.find(Faculty)
-		// const users = await connection.manager.find(Users)
-		// const students = await connection.manager.find(Student)
+		const buildings = await connection.manager.find(Building)
+		const labs = await connection.manager.find(Lab)
+		const lectures = await connection.manager.find(Lecture)
+		const offices = await connection.manager.find(Office)
+		const semesters = await connection.manager.find(Semester)
+		const researchers = await connection.manager.find(Researcher)
+		const periods = await connection.manager.find(Period)
+		const departments = await connection.manager.find(Department)
+		const majors = await connection.manager.find(Major)
+		const minors = await connection.manager.find(Minor)
+		const days = await connection.manager.find(Day)
+		const administrators = await connection.manager.find(Administrator)
+		const timeslots = await connection.manager.find(TimeSlot)
+		const fullTimeFaculty = await connection.manager.find(FacultyFullTime)
+		const partTimeFaculty = await connection.manager.find(FacultyPartTime)
+		const fullTimeGrads = await connection.manager.find(GraduateFullTime)
+		const partTimeGrads = await connection.manager.find(GraduatePartTime)
+		const fullTimeUndergrads = await connection.manager.find(UnderGraduateFullTime)
+		const partTimeUndergrads = await connection.manager.find(UnderGraduatePartTime)
+		const faculty = await connection.manager.find(Faculty)
+		const users = await connection.manager.find(Users)
+		const students = await connection.manager.find(Student)
 
 
 		// // -----------------------------Join Tables--------------------------------
+
+		
+
 
 		// //------------------------------Faculty Department-------------------------
 
@@ -461,7 +468,7 @@ createConnection()
 		// 	}
 
 
-		// }
+		//  }
 		// // --------------------------------Student Minor---------------------------
 
 
@@ -481,6 +488,8 @@ createConnection()
 		// 				dateDeclared: new Date("November 12 2020")
 		// 			})
 		// 			await connection.manager.save(studentMajor);
+		// 			// students[i].studentMajors = [studentMajor];
+		// 			// await connection.manager.save(Student, students[i]);
 		// 			majorNum++;
 		// 			index++;
 		// 		}
@@ -495,6 +504,8 @@ createConnection()
 		// 				dateDeclared: new Date("November 12 2020")
 		// 			})
 		// 			await connection.manager.save(studentMajor);
+		// 			// students[i].studentMajors = [studentMajor];
+		// 			// await connection.manager.save(Student, students[i]);
 		// 			majorNum++;
 		// 			index++;
 		// 		}
@@ -507,6 +518,8 @@ createConnection()
 		// 				dateDeclared: new Date("November 12 2020")
 		// 			})
 		// 			await connection.manager.save(studentMinor);
+		// 			// students[i].studentMinors = [studentMinor];
+		// 			// await connection.manager.save(Student, students[i]);
 		// 			majorNum++;
 		// 			minorNum++;
 		// 			index++;
@@ -538,9 +551,11 @@ createConnection()
 		// 			majorNum++;
 		// 			minorNum++;
 		// 			index++;
+					
 		// 		}
 
 		// 	}
+		// 	console.log(students);
 		// }
 		// //----------------------------DayAndPeriod---------------------------------
 
@@ -555,8 +570,29 @@ createConnection()
 		// 		timeslotCnt++;
 		// 	}
 		// }
+		// Advisors
+			for(i = 0; i < students.length; i++){
+				try{
+					const sID = students[i].userID;
+					const majorIDs = await connection.manager.findOne(StudentMajor, {where: {sID: sID}});
+					if(majorIDs){
+						const major = await connection.manager.findOne(Major, majorIDs.majorID);
+						const department = major? major.department: null;
+						const faculty = department? department.Faculties: null;
+					}
+					 let min = Math.ceil(0);
+					 let max = Math.floor(faculty.length);
+					 let num = Math.floor(Math.random() * (max - min) + min);
+					const advisors = await connection.manager.create(Advisor, {sID: students[i], fID: faculty[num], dateAssigned: new Date('November 12, 2020 04:28:00')})
+					await connection.manager.save(advisors);
+				}
+				catch(error){
+					console.error(error);
+				}
+			}
 
-		// TODO: Advisors
+
+		
 		// TODO: Student Holds
 		// TODO: Faculty History
 		// TODO: Minor Requirements

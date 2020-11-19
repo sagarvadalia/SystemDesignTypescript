@@ -5,6 +5,7 @@ import { Enrollment } from '../JoinTables/Enrollment';
 import { StudentMinor } from '../JoinTables/StudentMinor';
 import { Users } from './Users';
 import { StudentHold } from '../JoinTables/StudentHold';
+import { StudentMajor } from '../JoinTables/StudentMajor';
 
 @Entity()
 export class Student extends Users {
@@ -47,5 +48,7 @@ export class Student extends Users {
 
 	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.sID, { cascade: true })
 	public studentHolds!: StudentHold[];
-
+	
+	@OneToMany(() => StudentMajor, (studentMajors) => studentMajors.sID, { cascade: true })
+	public studentMajors!: StudentMajor[];
 }
