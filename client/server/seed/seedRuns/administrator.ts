@@ -1,6 +1,7 @@
 import { seeds } from './../index';
 import { createConnection } from 'typeorm';
 import { Administrator } from '../../entity/Users/Administrator';
+import { Users } from '../../entity/Users/Users';
 
 createConnection({
 	type: "postgres",
@@ -23,7 +24,10 @@ createConnection({
 		const administratorsSeed = seeds.administrator.default;
 		for (let i = 0; i < administratorsSeed.length; i++) {
 			try {
+				const user1 = await connection.manager.create(Users, administratorsSeed[i])
 				const administrators = await connection.manager.create(Administrator, administratorsSeed[i]);
+
+				await connection.manager.save(user1);
 				await connection.manager.save(administrators);
 			} catch (error) {
 				// console.error(error);

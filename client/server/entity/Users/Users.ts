@@ -54,7 +54,7 @@ export abstract class Users extends BaseEntity {
 	async comparePassword(password: string, attemptCount: number): Promise<any> {
 		if (attemptCount < 3) {
 			try {
-				if (await argon2.verify(password, this.userPassword)) {
+				if (await argon2.verify(this.userPassword, password)) {
 					return { isMatch: true, message: 'passwords match!' };
 				} else {
 					return { isMatch: false, message: 'wrong password' };
