@@ -32,22 +32,38 @@ import { LabController } from './controller/Locations/LabController';
 import { LectureController } from './controller/Locations/LectureController';
 import { OfficeController } from './controller/Locations/OfficeController';
 export const Routes = [
+
+	{
+		method: 'get',
+		route: '/api/login',
+		controller: UserController,
+		action: 'login',
+	},
+
+
+
+
+
+
+
+
+
 	// crud Routes for users
 	{
 		method: 'get',
-		route: '/users',
+		route: '/api/users',
 		controller: UserController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/users/:id',
+		route: '/api/users/:id',
 		controller: UserController,
 		action: 'one',
 	},
 	{
 		method: 'delete',
-		route: '/users/:id',
+		route: '/api/users/:id',
 		controller: UserController,
 		action: 'remove',
 	},
@@ -55,25 +71,25 @@ export const Routes = [
 	// crud Routes for days
 	{
 		method: 'get',
-		route: '/days',
+		route: '/api/days',
 		controller: DayController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/days/:id',
+		route: '/api/days/:id',
 		controller: DayController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/days',
+		route: '/api/days',
 		controller: DayController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/days/:id',
+		route: '/api/days/:id',
 		controller: DayController,
 		action: 'remove',
 	},
@@ -81,25 +97,25 @@ export const Routes = [
 	// crud routes for faculties
 	{
 		method: 'get',
-		route: '/faculties',
+		route: '/api/faculties',
 		controller: FacultyController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/faculties/:id',
+		route: '/api/faculties/:id',
 		controller: FacultyController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/faculties',
+		route: '/api/faculties',
 		controller: FacultyController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/faculties/:id',
+		route: '/api/faculties/:id',
 		controller: FacultyController,
 		action: 'remove',
 	},
@@ -107,25 +123,25 @@ export const Routes = [
 	// crud routes for minors
 	{
 		method: 'get',
-		route: '/minors',
+		route: '/api/minors',
 		controller: MinorController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/minors/:id',
+		route: '/api/minors/:id',
 		controller: MinorController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/minors',
+		route: '/api/minors',
 		controller: MinorController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/minors/:id',
+		route: '/api/minors/:id',
 		controller: MinorController,
 		action: 'remove',
 	},
@@ -133,25 +149,25 @@ export const Routes = [
 	// crud routes for prerequisites
 	{
 		method: 'get',
-		route: '/prerequisites',
+		route: '/api/prerequisites',
 		controller: PrerequisiteController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/prerequisites/:id',
+		route: '/api/prerequisites/:id',
 		controller: PrerequisiteController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/prerequisites',
+		route: '/api/prerequisites',
 		controller: PrerequisiteController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/prerequisites/:id',
+		route: '/api/prerequisites/:id',
 		controller: PrerequisiteController,
 		action: 'remove',
 	},
@@ -159,25 +175,25 @@ export const Routes = [
 	// crud routes for Classes
 	{
 		method: 'get',
-		route: '/classes',
+		route: '/api/classes',
 		controller: ClassController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/classes/:id',
+		route: '/api/classes/:id',
 		controller: ClassController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/classes',
+		route: '/api/classes',
 		controller: ClassController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/classes/:id',
+		route: '/api/classes/:id',
 		controller: ClassController,
 		action: 'remove',
 	},
@@ -185,25 +201,25 @@ export const Routes = [
 	// crud routes for Rooms
 	{
 		method: 'get',
-		route: '/rooms',
+		route: '/api/rooms',
 		controller: RoomController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/rooms/:id',
+		route: '/api/rooms/:id',
 		controller: RoomController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/rooms',
+		route: '/api/rooms',
 		controller: RoomController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/rooms/:id',
+		route: '/api/rooms/:id',
 		controller: RoomController,
 		action: 'remove',
 	},
@@ -211,25 +227,25 @@ export const Routes = [
 	// crud routes for semesters
 	{
 		method: 'get',
-		route: '/semesters',
+		route: '/api/semesters',
 		controller: SemesterController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/semesters/:id',
+		route: '/api/semesters/:id',
 		controller: SemesterController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/semesters',
+		route: '/api/semesters',
 		controller: SemesterController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/semesters/:id',
+		route: '/api/semesters/:id',
 		controller: SemesterController,
 		action: 'remove',
 	},
@@ -237,25 +253,25 @@ export const Routes = [
 	// crud Routes for researchers
 	{
 		method: 'get',
-		route: '/researchers',
+		route: '/api/researchers',
 		controller: ResearcherController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/researchers/:id',
+		route: '/api/researchers/:id',
 		controller: ResearcherController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/researchers',
+		route: '/api/researchers',
 		controller: ResearcherController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/researchers/:id',
+		route: '/api/researchers/:id',
 		controller: ResearcherController,
 		action: 'remove',
 	},
@@ -263,25 +279,25 @@ export const Routes = [
 	// crud Routes for buildings
 	{
 		method: 'get',
-		route: '/buildings',
+		route: '/api/buildings',
 		controller: BuildingController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/buildings/:id',
+		route: '/api/buildings/:id',
 		controller: BuildingController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/buildings',
+		route: '/api/buildings',
 		controller: BuildingController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/buildings/:id',
+		route: '/api/buildings/:id',
 		controller: BuildingController,
 		action: 'remove',
 	},
@@ -289,25 +305,25 @@ export const Routes = [
 	// crud Routes for Catalog
 	{
 		method: 'get',
-		route: '/catalogs',
+		route: '/api/catalogs',
 		controller: CatalogController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/catalogs/:id',
+		route: '/api/catalogs/:id',
 		controller: CatalogController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/catalogs',
+		route: '/api/catalogs',
 		controller: CatalogController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/catalogs/:id',
+		route: '/api/catalogs/:id',
 		controller: CatalogController,
 		action: 'remove',
 	},
@@ -315,25 +331,25 @@ export const Routes = [
 	// crud Routes for Period
 	{
 		method: 'get',
-		route: '/periods',
+		route: '/api/periods',
 		controller: PeriodController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/periods/:id',
+		route: '/api/periods/:id',
 		controller: PeriodController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/periods',
+		route: '/api/periods',
 		controller: PeriodController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/periods/:id',
+		route: '/api/periods/:id',
 		controller: PeriodController,
 		action: 'remove',
 	},
@@ -341,25 +357,25 @@ export const Routes = [
 	// crud Routes for Student
 	{
 		method: 'get',
-		route: '/students',
+		route: '/api/students',
 		controller: StudentController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/students/:id',
+		route: '/api/students/:id',
 		controller: StudentController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/students',
+		route: '/api/students',
 		controller: StudentController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/students/:id',
+		route: '/api/students/:id',
 		controller: StudentController,
 		action: 'remove',
 	},
@@ -367,25 +383,25 @@ export const Routes = [
 	// crud Routes for Department
 	{
 		method: 'get',
-		route: '/departments',
+		route: '/api/departments',
 		controller: DepartmentController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/departments/:id',
+		route: '/api/departments/:id',
 		controller: DepartmentController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/departments',
+		route: '/api/departments',
 		controller: DepartmentController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/departments/:id',
+		route: '/api/departments/:id',
 		controller: DepartmentController,
 		action: 'remove',
 	},
@@ -393,25 +409,25 @@ export const Routes = [
 	// crud Routes for Course
 	{
 		method: 'get',
-		route: '/courses',
+		route: '/api/courses',
 		controller: CourseController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/courses/:id',
+		route: '/api/courses/:id',
 		controller: CourseController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/courses',
+		route: '/api/courses',
 		controller: CourseController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/courses/:id',
+		route: '/api/courses/:id',
 		controller: CourseController,
 		action: 'remove',
 	},
@@ -419,25 +435,25 @@ export const Routes = [
 	// crud Routes for Administrator
 	{
 		method: 'get',
-		route: '/administrators',
+		route: '/api/administrators',
 		controller: AdministratorController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/administrators/:id',
+		route: '/api/administrators/:id',
 		controller: AdministratorController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/administrators',
+		route: '/api/administrators',
 		controller: AdministratorController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/administrators/:id',
+		route: '/api/administrators/:id',
 		controller: AdministratorController,
 		action: 'remove',
 	},
@@ -445,25 +461,25 @@ export const Routes = [
 	// crud Routes for TimeSlot
 	{
 		method: 'get',
-		route: '/timeslots',
+		route: '/api/timeslots',
 		controller: TimeSlotController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/timeslots/:id',
+		route: '/api/timeslots/:id',
 		controller: TimeSlotController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/timeslots',
+		route: '/api/timeslots',
 		controller: TimeSlotController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/timeslots/:id',
+		route: '/api/timeslots/:id',
 		controller: TimeSlotController,
 		action: 'remove',
 	},
@@ -471,25 +487,25 @@ export const Routes = [
 	// crud Routes for Major
 	{
 		method: 'get',
-		route: '/majors',
+		route: '/api/majors',
 		controller: MajorController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/majors/:id',
+		route: '/api/majors/:id',
 		controller: MajorController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/majors',
+		route: '/api/majors',
 		controller: MajorController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/majors/:id',
+		route: '/api/majors/:id',
 		controller: MajorController,
 		action: 'remove',
 	},
@@ -497,375 +513,375 @@ export const Routes = [
 	// crud Routes for StudentMinor
 	{
 		method: 'get',
-		route: '/studentminors',
+		route: '/api/studentminors',
 		controller: StudentMinorController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/studentminors/:id',
+		route: '/api/studentminors/:id',
 		controller: StudentMinorController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/studentminors',
+		route: '/api/studentminors',
 		controller: StudentMinorController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/studentminors/:id',
+		route: '/api/studentminors/:id',
 		controller: StudentMinorController,
 		action: 'remove',
 	},
 	// crud Routes for Graduate
 	{
 		method: 'get',
-		route: '/graduates',
+		route: '/api/graduates',
 		controller: GraduateController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/graduates/:id',
+		route: '/api/graduates/:id',
 		controller: GraduateController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/graduates',
+		route: '/api/graduates',
 		controller: GraduateController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/graduates/:id',
+		route: '/api/graduates/:id',
 		controller: GraduateController,
 		action: 'remove',
 	},
 	// crud Routes for UnderGraduate
 	{
 		method: 'get',
-		route: '/undergraduates',
+		route: '/api/undergraduates',
 		controller: UnderGraduateController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/undergraduates/:id',
+		route: '/api/undergraduates/:id',
 		controller: UnderGraduateController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/undergraduates',
+		route: '/api/undergraduates',
 		controller: UnderGraduateController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/undergraduates/:id',
+		route: '/api/undergraduates/:id',
 		controller: UnderGraduateController,
 		action: 'remove',
 	},
 	// crud Routes for FacultyPartTime
 	{
 		method: 'get',
-		route: '/facultyparttime',
+		route: '/api/facultyparttime',
 		controller: FacultyPartTimeController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/facultyparttime/:id',
+		route: '/api/facultyparttime/:id',
 		controller: FacultyPartTimeController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/facultyparttime',
+		route: '/api/facultyparttime',
 		controller: FacultyPartTimeController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/facultyparttime/:id',
+		route: '/api/facultyparttime/:id',
 		controller: FacultyPartTimeController,
 		action: 'remove',
 	},
 	// crud Routes for FacultyFullTime
 	{
 		method: 'get',
-		route: '/facultyfulltime',
+		route: '/api/facultyfulltime',
 		controller: FacultyFullTimeController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/facultyfulltime/:id',
+		route: '/api/facultyfulltime/:id',
 		controller: FacultyFullTimeController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/facultyfulltime',
+		route: '/api/facultyfulltime',
 		controller: FacultyFullTimeController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/facultyfulltime/:id',
+		route: '/api/facultyfulltime/:id',
 		controller: FacultyFullTimeController,
 		action: 'remove',
 	},
 	// crud Routes for studentHistory
 	{
 		method: 'get',
-		route: '/studenthistory',
+		route: '/api/studenthistory',
 		controller: StudentHistoryController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/studenthistory/:id',
+		route: '/api/studenthistory/:id',
 		controller: StudentHistoryController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/studenthistory',
+		route: '/api/studenthistory',
 		controller: StudentHistoryController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/studenthistory/:id',
+		route: '/api/studenthistory/:id',
 		controller: StudentHistoryController,
 		action: 'remove',
 	},
 	// crud Routes for attendance
 	{
 		method: 'get',
-		route: '/attendances',
+		route: '/api/attendances',
 		controller: AttendanceController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/attendances/:id',
+		route: '/api/attendances/:id',
 		controller: AttendanceController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/attendances',
+		route: '/api/attendances',
 		controller: AttendanceController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/attendances/:id',
+		route: '/api/attendances/:id',
 		controller: AttendanceController,
 		action: 'remove',
 	},
 	// crud Routes for facultyHistory
 	{
 		method: 'get',
-		route: '/facultyhistory',
+		route: '/api/facultyhistory',
 		controller: FacultyHistoryController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/facultyhistory/:id',
+		route: '/api/facultyhistory/:id',
 		controller: FacultyHistoryController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/facultyhistory',
+		route: '/api/facultyhistory',
 		controller: FacultyHistoryController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/facultyhistory/:id',
+		route: '/api/facultyhistory/:id',
 		controller: FacultyHistoryController,
 		action: 'remove',
 	},
 	// crud Routes for undergradFullTime
 	{
 		method: 'get',
-		route: '/undergraduatefulltime',
+		route: '/api/undergraduatefulltime',
 		controller: UnderGraduateFullTimeController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/undergraduatefulltime/:id',
+		route: '/api/undergraduatefulltime/:id',
 		controller: UnderGraduateFullTimeController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/undergraduatefulltime',
+		route: '/api/undergraduatefulltime',
 		controller: UnderGraduateFullTimeController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/undergraduatefulltime/:id',
+		route: '/api/undergraduatefulltime/:id',
 		controller: UnderGraduateFullTimeController,
 		action: 'remove',
 	},
 	// crud Routes for undergradPartTime
 	{
 		method: 'get',
-		route: '/undergraduateparttime',
+		route: '/api/undergraduateparttime',
 		controller: UnderGraduatePartTimeController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/undergraduateparttime/:id',
+		route: '/api/undergraduateparttime/:id',
 		controller: UnderGraduatePartTimeController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/undergraduateparttime',
+		route: '/api/undergraduateparttime',
 		controller: UnderGraduatePartTimeController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/undergraduateparttime/:id',
+		route: '/api/undergraduateparttime/:id',
 		controller: UnderGraduatePartTimeController,
 		action: 'remove',
 	},
 	// crud Routes for gradPartTime
 	{
 		method: 'get',
-		route: '/graduateparttime',
+		route: '/api/graduateparttime',
 		controller: GraduatePartTimeController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/graduateparttime/:id',
+		route: '/api/graduateparttime/:id',
 		controller: GraduatePartTimeController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/graduateparttime',
+		route: '/api/graduateparttime',
 		controller: GraduatePartTimeController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/graduateparttime/:id',
+		route: '/api/graduateparttime/:id',
 		controller: GraduatePartTimeController,
 		action: 'remove',
 	},
 	// crud Routes for gradFullTime
 	{
 		method: 'get',
-		route: '/graduatefulltime',
+		route: '/api/graduatefulltime',
 		controller: GraduateFullTimeController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/graduatefulltime/:id',
+		route: '/api/graduatefulltime/:id',
 		controller: GraduateFullTimeController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/graduatefulltime',
+		route: '/api/graduatefulltime',
 		controller: GraduateFullTimeController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/graduatefulltime/:id',
+		route: '/api/graduatefulltime/:id',
 		controller: GraduateFullTimeController,
 		action: 'remove',
 	},
 	// crud Routes for lab
 	{
 		method: 'get',
-		route: '/labs',
+		route: '/api/labs',
 		controller: LabController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/labs/:id',
+		route: '/api/labs/:id',
 		controller: LabController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/labs',
+		route: '/api/labs',
 		controller: LabController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/labs/:id',
+		route: '/api/labs/:id',
 		controller: LabController,
 		action: 'remove',
 	},
 	// crud Routes for lecture
 	{
 		method: 'get',
-		route: '/lectures',
+		route: '/api/lectures',
 		controller: LectureController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/lectures/:id',
+		route: '/api/lectures/:id',
 		controller: LectureController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/lectures',
+		route: '/api/lectures',
 		controller: LectureController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/lectures/:id',
+		route: '/api/lectures/:id',
 		controller: LectureController,
 		action: 'remove',
 	},
 	// crud Routes for office
 	{
 		method: 'get',
-		route: '/offices',
+		route: '/api/offices',
 		controller: OfficeController,
 		action: 'all',
 	},
 	{
 		method: 'get',
-		route: '/offices/:id',
+		route: '/api/offices/:id',
 		controller: OfficeController,
 		action: 'one',
 	},
 	{
 		method: 'post',
-		route: '/offices',
+		route: '/api/offices',
 		controller: OfficeController,
 		action: 'save',
 	},
 	{
 		method: 'delete',
-		route: '/offices/:id',
+		route: '/api/offices/:id',
 		controller: OfficeController,
 		action: 'remove',
 	},
