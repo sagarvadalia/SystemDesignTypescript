@@ -5,6 +5,8 @@ import axios from 'axios';
 import { Users } from '../server/entity/Users/Users';
 import Schedule from './client/components/schedule';
 import Navbar from './client/components/navbar';
+import { Login } from './client/components/login';
+import { Routes } from './client/components/routes';
 function App() {
   const [data, setData] = useState({ users: Array<Users>() });
 
@@ -27,30 +29,25 @@ function App() {
 
   return (
     <div className="App">
+
+
+
+
       <Navbar></Navbar>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+      <Routes></Routes>
 
-          <Schedule></Schedule>
-        </p>
+      {/* <Schedule></Schedule> */}
 
-        <pre>
+      {/* <Login></Login> */}
+
+      {/* <pre>
           <p >
             {JSON.stringify(data)}
           </p>
 
-        </pre>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        </pre> */}
+
+
     </div>
   );
 }
