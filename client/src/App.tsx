@@ -4,6 +4,7 @@ import './App.css';
 import axios from 'axios';
 import { Users } from '../server/entity/Users/Users';
 import Schedule from './client/components/schedule';
+import Navbar from './client/components/navbar';
 function App() {
   const [data, setData] = useState({ users: Array<Users>() });
 
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar></Navbar>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
