@@ -647,6 +647,7 @@ createConnection({
 		// }
 
 
+		// TODO: seed classes and handle faculty associations
 
 
 

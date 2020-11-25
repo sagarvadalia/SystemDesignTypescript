@@ -96,6 +96,7 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
+    // TODO: display relevant user info from contexts
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
@@ -104,6 +105,7 @@ export default function PersistentDrawerLeft() {
           [classes.appBarShift]: open,
         })}
       >
+
         <Toolbar>
           <IconButton
             color="inherit"
@@ -117,6 +119,7 @@ export default function PersistentDrawerLeft() {
           <Typography variant="h6" noWrap>
             Gupta University
           </Typography>
+
           <Typography>
             <Link to="/login">
               <Button>

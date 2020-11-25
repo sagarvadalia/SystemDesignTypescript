@@ -25,7 +25,7 @@ export const ThemeProvider = ({ children }: Props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get('/api/users/');
+        const result = await axios.get('/api/users');
         const data: Array<Users> = result.data
         setData({ users: data });
         setTheme(data[0])
@@ -57,6 +57,7 @@ export const Header = () => {
   const { theme, setTheme } = useTheme()!;
 
   console.log(theme);
+
   return (
 
     <div>

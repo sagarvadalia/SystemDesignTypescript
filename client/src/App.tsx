@@ -35,8 +35,8 @@ function App() {
 
         <Header></Header>
 
-        {/* <Navbar></Navbar>
-        <Routes></Routes> */}
+        <Navbar></Navbar>
+        <Routes></Routes>
 
         {/* <Schedule></Schedule> */}
 
