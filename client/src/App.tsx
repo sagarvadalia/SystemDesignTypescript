@@ -7,40 +7,42 @@ import Schedule from './client/components/schedule';
 import Navbar from './client/components/navbar';
 import { Login } from './client/components/login';
 import { Routes } from './client/components/routes';
+import { Header, ThemeProvider } from './index';
 function App() {
   const [data, setData] = useState({ users: Array<Users>() });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get('/users/');
+        const result = await axios.get('/api/users/');
         const data: Array<Users> = result.data
         setData({ users: data });
-        console.log(data)
       } catch (error) {
         console.error(error);
       }
     };
 
     fetchData();
-    console.log(data);
-    console.log(data?.users[0]?.userID)
+
   }, []);
 
   return (
-    <div className="App">
 
 
+    <ThemeProvider>
+      <div className="App">
 
 
-      <Navbar></Navbar>
-      <Routes></Routes>
+        <Header></Header>
 
-      {/* <Schedule></Schedule> */}
+        <Navbar></Navbar>
+        <Routes></Routes>
 
-      {/* <Login></Login> */}
+        {/* <Schedule></Schedule> */}
 
-      {/* <pre>
+        {/* <Login></Login> */}
+
+        {/* <pre>
           <p >
             {JSON.stringify(data)}
           </p>
@@ -48,7 +50,9 @@ function App() {
         </pre> */}
 
 
-    </div>
+      </div>
+    </ThemeProvider>
+
   );
 }
 
