@@ -1,6 +1,6 @@
-import { BaseEntity, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
-import { DayAndPeriod } from '../JoinTables/DayAndPeriod';
+import { Period } from './Period';
 
 @Entity()
 export class TimeSlot extends BaseEntity {
@@ -13,9 +13,13 @@ export class TimeSlot extends BaseEntity {
 	@OneToMany(() => Class, (classes) => classes.fID, { cascade: true })
 	public classes!: Class[];
 
-	@OneToMany(() => DayAndPeriod, (dayAndPeriod) => dayAndPeriod.slotID, { cascade: true })
-	public dayAndPeriod!: DayAndPeriod[];
+	@ManyToOne(() => Period, (period) => period.timeslots)
+	@JoinColumn({ name: 'periodID' })
+	public periodID!: Period;
 
-	@PrimaryColumn()
+	@PrimaryGeneratedColumn()
 	slotID: number;
+
+	@Column()
+	days: string;
 }

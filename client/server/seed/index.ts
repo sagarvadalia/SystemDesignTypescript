@@ -17,7 +17,7 @@ import day = require('./day');
 import lecture = require('./lecture')
 import lab = require('./lab')
 import office = require('./office');
-import timeslots = require('./timeslot');
+import timeslots = require('./timeslot2');
 import holds = require('./hold');
 
 
