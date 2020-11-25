@@ -142,6 +142,7 @@ createConnection({
 		}
 
 		//--------------------------- DEPARTMENT------------------------------------
+
 		const departmentsSeed = seeds.department.default;
 		for (i = 0; i < departmentsSeed.length; i++) {
 			try {
@@ -179,6 +180,24 @@ createConnection({
 				const course = await connection.manager.create(Course, coursesSeed[i]);
 				const department = await connection.manager.findOne(Department, coursesSeed[i].deptIDNum)
 				// console.log('-----------------', department);
+				department ? course.deptID = department : console.log(department);
+				await connection.manager.save(course);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
+
+	
+
+
+		//-----------------------------COURSE--------------------------------------
+		const coursesSeed = seeds.course.default;
+		for (i = 0; i < coursesSeed.length; i++) {
+			try {
+
+				const course = await connection.manager.create(Course, coursesSeed[i]);
+				const department = await connection.manager.findOne(Department, coursesSeed[i].deptIDNum)
+				//console.log('-----------------', department);
 				department ? course.deptID = department : console.log(department);
 				await connection.manager.save(course);
 			} catch (error) {
@@ -389,31 +408,9 @@ createConnection({
 
 		//------------------------------Faculty Department-------------------------
 
-
-		for (i = 0; i < departments.length; i++) {
-			try {
-				const head = departments[i].deptHeadID
-				const deptHead = await connection.manager.findOne(Faculty, head)
-				if (deptHead) {
-					const facDep = await connection.manager.create(FacultyDepartment, {
-						fID: deptHead,
-						deptID: departments[i],
-						percentOfTime: '100%',
-						dateAppointed: new Date('November 12, 2020 04:28:00')
-
-					})
-					await connection.manager.save(facDep)
-				}
-
-			} catch (error) {
-				console.error(error)
-			}
-
-		}
-
 		for (i = 0; i < faculty.length; i++) {
 			try {
-				if (iter = 16) {
+				if (iter == 16) {
 					iter = 1;
 				}
 
@@ -575,42 +572,43 @@ createConnection({
 		//	by ya boi Ty													TIME RELATED STUFF
 
 		//-------------------------------SEMESTER----------------------------------
-		const semestersSeed = seeds.semester.default;
-		for (i = 0; i < semestersSeed.length; i++) {
-			try {
-				const semester = await connection.manager.create(Semester, semestersSeed[i]);
-				await connection.manager.save(semester);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// const semestersSeed = seeds.semester.default;
+		// for (i = 0; i < semestersSeed.length; i++) {
+		// 	try {
+		// 		const semester = await connection.manager.create(Semester, semestersSeed[i]);
+		// 		await connection.manager.save(semester);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
-		//------------------------------PERIOD-------------------------------------
-		const periodsSeed = seeds.period.default;
-		for (i = 0; i < periodsSeed.length; i++) {
-			try {
-				const period = await connection.manager.create(Period, periodsSeed[i]);
-				await connection.manager.save(period);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// //------------------------------PERIOD-------------------------------------
+		// const periodsSeed = seeds.period.default;
+		// for (i = 0; i < periodsSeed.length; i++) {
+		// 	try {
+		// 		const period = await connection.manager.create(Period, periodsSeed[i]);
+		// 		await connection.manager.save(period);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
-		//----------------------TimeSlot v2-------------------------------------
-		const timeslotsSeed = seeds.timeslots.default
-		for (i = 0; i < timeslotsSeed.length; i++) {
-			try {
-				const period = await connection.manager.findOne(Period, timeslotsSeed[i].periodIDNum);
-				const timeslot = await connection.manager.create(TimeSlot, timeslotsSeed[i])
-				period ? timeslot.periodID = period : console.log('Period not found')
-				await connection.manager.save(timeslot)
-			} catch (error) {
-			}
-		}
+		// //----------------------TimeSlot v2-------------------------------------
+		// const timeslotsSeed = seeds.timeslots.default
+		// for (i = 0; i < timeslotsSeed.length; i++) {
+		// 	try {
+		// 		const period = await connection.manager.findOne(Period, timeslotsSeed[i].periodIDNum);
+		// 		const timeslot = await connection.manager.create(TimeSlot, timeslotsSeed[i])
+		// 		period ? timeslot.periodID = period : console.log('Period not found')
+		// 		await connection.manager.save(timeslot)
+		// 	} catch (error) {
+		// 	}
+		// }
 
-		const timeslots = await connection.manager.find(TimeSlot)
+		// const timeslots = await connection.manager.find(TimeSlot)
 
-		//-----THE 3 CODE BLOCKS BELOW ARE DEPRECATED BECAUSE OF TIMESLOT V2 CREATION
+		//-----THE 3 CODE BLOCKS BELOW ARE DEPRECATED BECAUSE OF TIMESLOT V2 CREATION---------------------
+
 		// //------------------------Timeslots----------------------------------------
 		// const timeslotsSeed = seeds.timeslots.default
 		// for (i = 0; i < timeslotsSeed.length; i++) {
@@ -631,7 +629,6 @@ createConnection({
 		// 		// console.error(error);
 		// 	}
 		// }
-
 
 		// //----------------------------DayAndPeriod---------------------------------
 		// for (i = 0; i < periods.length; i++) {
