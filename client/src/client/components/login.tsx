@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer, useEffect, useContext } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import CardHeader from '@material-ui/core/CardHeader';
 import Button from '@material-ui/core/Button';
+import { LoginContext } from '../../loginContext';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -95,6 +96,7 @@ const reducer = (state: State, action: Action): State => {
 }
 
 export const Login = () => {
+ const [login, setLogin] = useContext(LoginContext);
   const classes = useStyles();
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -112,8 +114,16 @@ export const Login = () => {
     }
   }, [state.username, state.password]);
 
-  const handleLogin = async () => {
-    let user = await axios.get('/api/login', { params: { email: state.username, password: state.password } })
+	const handleLogin = async () => {
+
+		let user = await axios.get('/api/login', { params: { email: state.username, password: state.password } })
+		console.log('here')
+		if (user) {
+			console.log('here?')
+			setLogin((login: any) => ({ ...login, user: user.data }))
+
+		}
+
     //TODO:change the login value here
 
     if (user) {
