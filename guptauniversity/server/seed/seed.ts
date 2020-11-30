@@ -481,8 +481,11 @@ createConnection({
 
 		// --------------------------------Student Minor---------------------------
 		for (i = 0; i < students.length; i++) {
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 			majorNum > majors.length - 1 ? majorNum = 1 : null
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 			minorNum > minors.length - 1 ? minorNum = 1 : null
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 			index > 3 ? index = 1 : null
 
 			if (index === 1) {
