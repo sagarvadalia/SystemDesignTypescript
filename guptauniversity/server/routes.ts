@@ -120,6 +120,19 @@ export const Routes = [
 		controller: FacultyController,
 		action: 'remove',
 	},
+	{
+		method: 'get',
+		route: '/api/faculties/viewClasses/:id',
+		controller: FacultyController,
+		action: 'viewClasses',
+	},
+	{
+		method: 'get',
+		route: '/api/faculties/viewEnrollments',
+		controller: FacultyController,
+		action: 'viewEnrollments',
+	},
+
 
 	// crud routes for minors
 	{
@@ -899,4 +912,5 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'changeGrade',
 	},
+
 ];

@@ -2,9 +2,13 @@ import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
 import { Faculty } from '../../entity/Users/Faculty';
 import { validate, validateOrReject } from 'class-validator';
+import { Class } from '../../entity/ClassRelated/Class';
+import { Enrollment } from '../../entity/JoinTables/Enrollment';
 
 export class FacultyController {
 	private facultyRepository = getRepository(Faculty);
+	private classRepository = getRepository(Class);
+	private enrollmentRepository = getRepository(Enrollment);
 
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.facultyRepository.find();
@@ -29,6 +33,24 @@ export class FacultyController {
 			if (facultyToRemove) {
 				await this.facultyRepository.remove(facultyToRemove);
 			}
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async viewClasses(request: Request, response: Response, next: NextFunction) {
+		try {
+			return await this.classRepository.find({ where: { fID: request.params.id } })
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async viewEnrollments(request: Request, response: Response, next: NextFunction) {
+		//Gimme a classCRN and I'll show you the world
+
+		try {
+			return await this.enrollmentRepository.find({ where: { classCRN: request.query.classCRN } })
 		} catch (error) {
 			console.error(error);
 		}
