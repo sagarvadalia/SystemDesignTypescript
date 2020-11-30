@@ -177,6 +177,50 @@ export default function PersistentDrawerLeft() {
 							</Link>
 						</List>
 					)}
+					{state?.user?.userType === 'Faculty' && (
+						<List>
+							<Link to={`classList`}>
+								<ListItem button key={'classList'}>
+									<ListItemText primary={'class list'}></ListItemText>
+								</ListItem>
+							</Link>
+
+							<Link to={`Your advisees`}>
+								<ListItem button key={'Your advisees'}>
+									<ListItemText primary={'Your advisees'}></ListItemText>
+								</ListItem>
+							</Link>
+						</List>
+					)}
+					{state?.user?.userType === 'Administrator' && (
+						<List>
+							<Link to={`Class Modifications`}>
+								<ListItem button key={'Class Modifications'}>
+									<ListItemText primary={'Class Modifications'}></ListItemText>
+								</ListItem>
+							</Link>
+
+							<Link to={`Student Modifications`}>
+								<ListItem button key={'Student Modifications'}>
+									<ListItemText primary={'Student Modifications'}></ListItemText>
+								</ListItem>
+							</Link>
+							<Link to={`Account Modifications`}>
+								<ListItem button key={'Account Modifications'}>
+									<ListItemText primary={'Account Modifications'}></ListItemText>
+								</ListItem>
+							</Link>
+						</List>
+					)}
+					{state?.user?.userType === 'Researcher' && (
+						<List>
+							<Link to={`Data`}>
+								<ListItem button key={'Data'}>
+									<ListItemText primary={'Data'}></ListItemText>
+								</ListItem>
+							</Link>
+						</List>
+					)}
 				</div>
 			</Drawer>
 			<main
