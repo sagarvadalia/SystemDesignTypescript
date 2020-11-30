@@ -23,7 +23,7 @@ export const Routes: React.FC<routesProps> = ({ }) => {
 	{/* IF FACULTY */}
 
       {/* Displays our Login component as a fallback */}
-      <Route component={Login} />
+      <Route component={Schedule} />
     </Switch>
 
   );

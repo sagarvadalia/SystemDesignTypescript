@@ -166,7 +166,12 @@ createConnection({
 						let dept = await connection.manager.save(departments);
 						// console.log(dept)
 					}
-				} catch (error) {
+				} catch (error) { }
+			}
+			catch (error) {
+
+			}
+		}
 
 
 
@@ -195,7 +200,7 @@ createConnection({
 		// 	}
 		// }
 
-	
+
 
 
 		//-----------------------------COURSE--------------------------------------
@@ -436,9 +441,9 @@ createConnection({
 
 		// -----------------------------Join Tables--------------------------------
 
-		//------------------------------Faculty 
-    
-    -----------------------
+		//------------------------------Faculty
+
+
 
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -20,6 +20,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import { Login } from './login';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom'
+import { LoginContext } from '../../loginContext';
 
 const drawerWidth = 240;
 
@@ -83,6 +84,8 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function PersistentDrawerLeft() {
+	const [state, setState] = useContext(LoginContext);
+	console.log(state);
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -120,19 +123,22 @@ export default function PersistentDrawerLeft() {
             Gupta University
           </Typography>
 
-          <Typography>
-            <Link to="/login">
-              <Button>
+				  {!state?.user && <Typography>
+					  <Link to="/login">
+						  <Button>
 
-                Login
+							  Login
             </Button>
-            </Link>
+					  </Link>
 
 
-          </Typography>
-          <Typography>
-            Sign In
-          </Typography>
+
+
+				  </Typography>}
+
+{state?.user && <Typography>
+						   {state.user.userName} {state.user.userType}
+					  </Typography>}
         </Toolbar>
       </AppBar>
       <Drawer
