@@ -2,7 +2,7 @@ import { getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
 import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { validate, validateOrReject } from 'class-validator';
-import { Class } from 'guptauniversity/server/entity/ClassRelated/Class';
+import { Class } from '../../entity/ClassRelated/Class';
 
 
 export class EnrollmentController {
@@ -56,4 +56,5 @@ export class EnrollmentController {
             console.error(error)
         }
     }
+
 }
