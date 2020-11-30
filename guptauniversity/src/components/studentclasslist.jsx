@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function classlist(props) {
+function StudentClassList(props) {
 	return <div></div>;
 }
 
-classlist.propTypes = {};
-
-export default classlist;
+export default StudentClassList;

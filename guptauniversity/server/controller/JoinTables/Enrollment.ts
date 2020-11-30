@@ -3,11 +3,13 @@ import { NextFunction, Request, Response } from 'express';
 import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { validate, validateOrReject } from 'class-validator';
 import { Class } from '../../entity/ClassRelated/Class';
+import { Course } from '../../entity/ClassRelated/Course';
 
 
 export class EnrollmentController {
     private enrollmentRepository = getRepository(Enrollment);
-    private classRepository = getRepository(Class);
+	private classRepository = getRepository(Class);
+	private courseRepository = getRepository(Course);
 
     async all(request: Request, response: Response, next: NextFunction) {
         return this.enrollmentRepository.find();
@@ -38,7 +40,27 @@ export class EnrollmentController {
     }
 
     async studentHistory(request: Request, response: Response, next: NextFunction) {
-        return this.enrollmentRepository.find({ where: { sID: request.params.id } });
+		try {
+
+
+			let enrollment:any = await this.enrollmentRepository.find({ where: { sID: request.params.id } });
+
+			for (let i = 0; i < enrollment.length; i++){
+				let classCRN = await this.classRepository.findOne(enrollment[i].classCRN);
+				if (classCRN) {
+					enrollment[i].classNumber = classCRN.classCRN
+					enrollment[i].semester = classCRN.semesterID;
+					let course = await this.courseRepository.findOne(classCRN.courseID)
+					enrollment[i].courseName = course
+				}
+
+			}
+			return enrollment;
+
+		} catch (error) {
+			console.error(error);
+		}
+
     }
 
     async changeGrade(request: Request, response: Response, next: NextFunction) {
