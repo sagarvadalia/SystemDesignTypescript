@@ -8,23 +8,24 @@ import Navbar from './client/components/navbar';
 import { Login } from './client/components/login';
 import { Routes } from './client/components/routes';
 import { Header, ThemeProvider } from './index';
+import StudentTranscript from './client/components/studentTranscript';
 function App() {
-  const [data, setData] = useState({ users: Array<Users>() });
+  // const [data, setData] = useState({ users: Array<Users>() });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await axios.get('/api/users/');
-        const data: Array<Users> = result.data
-        setData({ users: data });
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const result = await axios.get('/api/users/');
+  //       const data: Array<Users> = result.data
+  //       setData({ users: data });
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
 
-    fetchData();
+  //   fetchData();
 
-  }, []);
+  // }, []);
 
   return (
 

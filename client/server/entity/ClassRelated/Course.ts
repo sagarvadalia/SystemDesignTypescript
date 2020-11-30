@@ -27,7 +27,7 @@ export class Course extends BaseEntity {
 	numOfCredits: number;
 
 	//relationship to department
-	@ManyToOne(() => Department, (department: Department) => department.courses)
+	@ManyToOne(() => Department, (department: Department) => department.courses, { eager: true })
 	@JoinColumn({ name: 'deptID' })
 	public deptID!: Department;
 

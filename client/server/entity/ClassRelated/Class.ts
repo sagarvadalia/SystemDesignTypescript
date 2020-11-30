@@ -19,7 +19,7 @@ export class Class extends BaseEntity {
 
 	@Column({ type: 'text', nullable: false })
 	@IsNotEmpty({ message: 'section is required' })
-	classSection: string;
+	classSection: number;
 
 	@Column({ type: 'integer', nullable: false })
 	numOfSeats: number;
@@ -33,7 +33,7 @@ export class Class extends BaseEntity {
 	@JoinColumn({ name: 'courseID' })
 	public courseID!: Course;
 
-	//One class has one faculty
+	//Many classes belong to one faculty
 	@ManyToOne(() => Faculty)
 	@JoinColumn({ name: 'fID' })
 	public fID!: Faculty;
