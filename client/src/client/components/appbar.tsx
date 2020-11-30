@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles, useTheme, Theme, createStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -20,6 +20,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import { Login } from './login';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom'
+import { LoginContext } from '../../loginContext';
 
 const drawerWidth = 240;
 
@@ -83,6 +84,8 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function PersistentDrawerLeft() {
+	const [state, setState] = useContext(LoginContext);
+	console.log(state);
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -119,20 +122,16 @@ export default function PersistentDrawerLeft() {
           <Typography variant="h6" noWrap>
             Gupta University
           </Typography>
-
-          <Typography>
-            <Link to="/login">
-              <Button>
-
-                Login
+				  {!state?.user && <Typography>
+					  <Link to="/login">
+						  <Button>
+							  Login
             </Button>
-            </Link>
-
-
-          </Typography>
-          <Typography>
-            Sign In
-          </Typography>
+					  </Link>
+				  </Typography>}
+{state?.user && <Typography>
+						   {state.user.userName} {state.user.userType}
+					  </Typography>}
         </Toolbar>
       </AppBar>
       <Drawer
@@ -149,30 +148,21 @@ export default function PersistentDrawerLeft() {
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
-        <Divider />
-			  <List>
+			  <Divider />
+			  <div>
+
+				  {state?.user?.userType === 'Student' &&
+			  	<List>
 				  <Link to = {`student-transcript`}>
 					  <ListItem button key={'Your transcript'}>
 					  <ListItemText primary = {'Your transcript'}></ListItemText>
 				  </ListItem>
-				  </Link>
+					  </Link>
+					  </List>
+			  }
 
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+			</div>
+
       </Drawer>
       <main
         className={clsx(classes.content, {

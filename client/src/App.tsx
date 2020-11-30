@@ -4,11 +4,11 @@ import './App.css';
 import axios from 'axios';
 import { Users } from '../server/entity/Users/Users';
 import Schedule from './client/components/schedule';
-import Navbar from './client/components/navbar';
+import Navbar from './client/components/navbar.jsx';
 import { Login } from './client/components/login';
 import { Routes } from './client/components/routes';
-import { Header, ThemeProvider } from './index';
 import StudentTranscript from './client/components/studentTranscript';
+import { LoginProvider } from './loginContext.js';
 function App() {
   // const [data, setData] = useState({ users: Array<Users>() });
 
@@ -30,11 +30,11 @@ function App() {
   return (
 
 
-    <ThemeProvider>
-      <div className="App">
+	<LoginProvider>
+		   <div className="App">
 
 
-        <Header></Header>
+
 
         <Navbar></Navbar>
         <Routes></Routes>
@@ -52,7 +52,9 @@ function App() {
 
 
       </div>
-    </ThemeProvider>
+	</LoginProvider>
+
+
 
   );
 }
