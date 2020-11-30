@@ -11,6 +11,7 @@ export class Enrollment extends BaseEntity {
 	}
 	@PrimaryGeneratedColumn()
 	enrollmentID: number;
+	
 	@Column({ type: 'date', nullable: false })
 	@IsNotEmpty({ message: 'enrollDate must be provided ' })
 	enrollDate: Date;
