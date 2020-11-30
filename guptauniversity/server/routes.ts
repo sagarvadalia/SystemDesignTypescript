@@ -31,6 +31,7 @@ import { GraduateFullTimeController } from './controller/Users/GraduateFullTimeC
 import { LabController } from './controller/Locations/LabController';
 import { LectureController } from './controller/Locations/LectureController';
 import { OfficeController } from './controller/Locations/OfficeController';
+import { EnrollmentController } from './controller/JoinTables/Enrollment';
 export const Routes = [
 
 	{
@@ -884,5 +885,18 @@ export const Routes = [
 		route: '/api/offices/:id',
 		controller: OfficeController,
 		action: 'remove',
+	},
+	//Enrollment
+	{
+		method: 'get',
+		route: '/api/enrollment/:id',
+		controller: EnrollmentController,
+		action: 'studentHistory',
+	},
+	{
+		method: 'get',
+		route: '/api/enrollment/changeGrade',
+		controller: EnrollmentController,
+		action: 'changeGrade',
 	},
 ];
