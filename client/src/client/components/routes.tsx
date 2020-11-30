@@ -17,6 +17,7 @@ export const Routes: React.FC<routesProps> = ({ }) => {
     <Switch>
       {/* Routes placed here are available to all visitors */}
 		  <Route path="/login" component={Login} />
+		  {/* we need to change this to match the student id */}
 		  <Route path='/student-transcript' component = {StudentTranscript} />
 
       {/* Displays our Login component as a fallback */}
