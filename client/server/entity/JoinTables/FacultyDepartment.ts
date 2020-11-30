@@ -16,12 +16,12 @@ export class FacultyDepartment extends BaseEntity {
 	dateAppointed: Date;
 
 	//One Faculty belongs to many departments
-	@ManyToOne(() => Faculty, (faculty) => faculty.FacultyDepartment, { primary: true })
+	@ManyToOne(() => Faculty, (faculty) => faculty.FacultyDepartment, { primary: true, eager: true })
 	@JoinColumn({ name: 'fID' })
 	public fID!: Faculty;
 
 	//One Department belongs to many faculty
-	@ManyToOne(() => Department, (department) => department.Faculties, { eager: true ,primary: true })
+	@ManyToOne(() => Department, (department) => department.Faculties, { eager: true, primary: true })
 	@JoinColumn({ name: 'deptID' })
 	public deptID!: Department;
 }

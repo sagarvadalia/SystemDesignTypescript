@@ -150,7 +150,13 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </div>
         <Divider />
-        <List>
+			  <List>
+				  <Link to = {`student-transcript`}>
+					  <ListItem button key={'Your transcript'}>
+					  <ListItemText primary = {'Your transcript'}></ListItemText>
+				  </ListItem>
+				  </Link>
+
           {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
