@@ -20,8 +20,10 @@ export const Routes: React.FC<routesProps> = ({ }) => {
 		  {/* we need to change this to match the student id */}
 		  <Route path='/student-transcript' component = {StudentTranscript} />
 
+	{/* IF FACULTY */}
+
       {/* Displays our Login component as a fallback */}
-      <Route component={Schedule} />
+      <Route component={Login} />
     </Switch>
 
   );

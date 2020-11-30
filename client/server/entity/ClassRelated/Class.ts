@@ -39,7 +39,7 @@ export class Class extends BaseEntity {
 	public fID!: Faculty;
 
 	//Many classes belong to one timeslot
-	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes)
+	@ManyToOne(() => TimeSlot, (timeslot) => timeslot.classes, {eager: true})
 	@JoinColumn({ name: 'slotID' })
 	public slotID!: TimeSlot;
 
@@ -49,7 +49,7 @@ export class Class extends BaseEntity {
 	public roomID!: Lecture;
 
 	//Many Classes belong to one semester
-	@ManyToOne(() => Semester, (semester) => semester.classes)
+	@ManyToOne(() => Semester, (semester) => semester.classes, {eager: true})
 	@JoinColumn({ name: 'semesterID' })
 	public semesterID!: Semester;
 }

@@ -659,7 +659,7 @@ createConnection({
 		// TODO: seed classes and handle faculty associations
 		const classSeed = seeds.classes.default;
 		try {
-			for (i = 0; i < 200; i++) {
+			for (i = 0; i < classSeed.length; i++) {
 				const oneClass = await connection.manager.create(Class, classSeed[i]);
 				// console.log(classSeed[i].courseIDNum);
 				const course = await connection.manager.findOne(Course, classSeed[i].courseIDNum);
@@ -680,51 +680,54 @@ createConnection({
 					for (let j = 0; j < facIDArr.length; j++) {
 
 						let fac = await connection.manager.findOne(Faculty, facIDArr[j].fID);
-						console.log(fac);
+						if (fac) {
+							fac.classes = await connection.manager.find(Class, {where: {fID: fac.userID}});
+						}
+
 						if (fac) {
 							let shouldTeach = true;
-							// console.log(fac);
-							console.log('-------------------')
+
 							if (!fac.classes) {
-								console.log('here i am');
+
 								oneClass.fID = fac;
 								await connection.manager.save(oneClass);
-								fac.classes = [oneClass];
-								await connection.manager.save(faculty);
+
 								j = facIDArr.length;
 							}
 							else {
-								if (fac.classes.length > 10) {
-									shouldTeach = false;
-									console.log('too many claasses');
-								}
-								else {
-									console.log('no i am here');
-									for (let k = 0; k < fac.classes.length; k++) {
+
+
+								let count = 0
+								for (let k = 0; k < fac.classes.length; k++) {
+
 										let slot = fac.classes[k].slotID;
 										let semester = fac.classes[k].semesterID;
+										if (oneClass.semesterID === semester) {
+											count++;
+										}
+										if (count > 4) {
+											shouldTeach = false;
+											console.log('too many this semester');
+											k = fac.classes.length;
+										}
+
+
 
 
 										if (oneClass.slotID === slot && oneClass.semesterID === semester) {
 											shouldTeach = false;
 											console.log('shouldnt teach due to conflict------------');
+											k = fac.classes.length;
 										}
 									}
-								}
+
 
 								if (shouldTeach === true) {
-									console.log('whoops here');
-									// console.log('-----------------------------------------------')
+
 									oneClass.fID = fac;
 									await connection.manager.save(oneClass);
 
-									// console.log(oneClass);
-									console.log(fac.classes);
-									console.log('first one ');
-									let len = fac.classes.push(oneClass);
-									console.log(len);
-									console.log(fac.classes);
-									await connection.manager.save(faculty);
+
 
 
 									j = facIDArr.length;
