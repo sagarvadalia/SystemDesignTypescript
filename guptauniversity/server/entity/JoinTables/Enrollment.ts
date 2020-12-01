@@ -20,11 +20,11 @@ export class Enrollment extends BaseEntity {
 	@IsNotEmpty({ message: 'grade must be provided' })
 	grade: string;
 
-	@ManyToOne(() => Class, (classes: Class) => classes.enrollment)
+	@ManyToOne(() => Class, (classes: Class) => classes.enrollment, { eager: true })
 	@JoinColumn({ name: 'classCRN', referencedColumnName: 'classCRN' })
 	public classCRN!: Class;
 
-	@ManyToOne(() => Student, (student: Student) => student.enrollment)
+	@ManyToOne(() => Student, (student: Student) => student.enrollment, { eager: true })
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
 }

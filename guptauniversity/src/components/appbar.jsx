@@ -153,24 +153,24 @@ export default function PersistentDrawerLeft() {
 				<div>
 					{state?.user?.userType === 'Student' && (
 						<List>
-							<Link to={`student-transcript`}>
+							<Link to={`/student-transcript`}>
 								<ListItem button key={'Your transcript'}>
 									<ListItemText primary={'Your transcript'}></ListItemText>
 								</ListItem>
 							</Link>
 
-							<Link to={`student-advisors`}>
+							<Link to={`/student-advisors`}>
 								<ListItem button key={'Your Advisors'}>
 									<ListItemText primary={'Your Advisors'}></ListItemText>
 								</ListItem>
 							</Link>
 
-							<Link to={`degree-audit`}>
+							<Link to={`/degree-audit`}>
 								<ListItem button key={'Your Degree Audit'}>
 									<ListItemText primary={'Your Degree Audit'}></ListItemText>
 								</ListItem>
 							</Link>
-							<Link to={`registration`}>
+							<Link to={`/registration`}>
 								<ListItem button key={'Registration'}>
 									<ListItemText primary={'Registration'}></ListItemText>
 								</ListItem>
@@ -179,13 +179,13 @@ export default function PersistentDrawerLeft() {
 					)}
 					{state?.user?.userType === 'Faculty' && (
 						<List>
-							<Link to={`classList`}>
+							<Link to={`/classlist`}>
 								<ListItem button key={'classList'}>
-									<ListItemText primary={'class list'}></ListItemText>
+									<ListItemText primary={'Class List'}></ListItemText>
 								</ListItem>
 							</Link>
 
-							<Link to={`Your advisees`}>
+							<Link to={`/Your advisees`}>
 								<ListItem button key={'Your advisees'}>
 									<ListItemText primary={'Your advisees'}></ListItemText>
 								</ListItem>
@@ -194,18 +194,18 @@ export default function PersistentDrawerLeft() {
 					)}
 					{state?.user?.userType === 'Administrator' && (
 						<List>
-							<Link to={`Class Modifications`}>
+							<Link to={`/Class Modifications`}>
 								<ListItem button key={'Class Modifications'}>
 									<ListItemText primary={'Class Modifications'}></ListItemText>
 								</ListItem>
 							</Link>
 
-							<Link to={`Student Modifications`}>
+							<Link to={`/Student Modifications`}>
 								<ListItem button key={'Student Modifications'}>
 									<ListItemText primary={'Student Modifications'}></ListItemText>
 								</ListItem>
 							</Link>
-							<Link to={`Account Modifications`}>
+							<Link to={`/Account Modifications`}>
 								<ListItem button key={'Account Modifications'}>
 									<ListItemText primary={'Account Modifications'}></ListItemText>
 								</ListItem>
@@ -214,7 +214,7 @@ export default function PersistentDrawerLeft() {
 					)}
 					{state?.user?.userType === 'Researcher' && (
 						<List>
-							<Link to={`Data`}>
+							<Link to={`/Data`}>
 								<ListItem button key={'Data'}>
 									<ListItemText primary={'Data'}></ListItemText>
 								</ListItem>

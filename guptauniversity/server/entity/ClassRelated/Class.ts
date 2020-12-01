@@ -25,11 +25,11 @@ export class Class extends BaseEntity {
 	numOfSeats: number;
 
 	// One Class has many enrollments
-	@OneToMany(() => Enrollment, (enrollment) => enrollment.classCRN, { cascade: true, eager: true })
+	@OneToMany(() => Enrollment, (enrollment) => enrollment.classCRN, { cascade: true })
 	public enrollment!: Enrollment[];
 
 	//Many Classes belong to one Course
-	@ManyToOne(() => Course, (course) => course.classes)
+	@ManyToOne(() => Course, (course) => course.classes, {eager: true})
 	@JoinColumn({ name: 'courseID' })
 	public courseID!: Course;
 

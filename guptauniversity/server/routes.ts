@@ -33,21 +33,12 @@ import { LectureController } from './controller/Locations/LectureController';
 import { OfficeController } from './controller/Locations/OfficeController';
 import { EnrollmentController } from './controller/JoinTables/Enrollment';
 export const Routes = [
-
 	{
 		method: 'get',
 		route: '/api/login',
 		controller: UserController,
 		action: 'login',
 	},
-
-
-
-
-
-
-
-
 
 	// crud Routes for users
 	{
@@ -128,11 +119,10 @@ export const Routes = [
 	},
 	{
 		method: 'get',
-		route: '/api/faculties/viewEnrollments',
+		route: '/api/faculties/viewEnrollments/:classCRN',
 		controller: FacultyController,
 		action: 'viewEnrollments',
 	},
-
 
 	// crud routes for minors
 	{
@@ -907,10 +897,9 @@ export const Routes = [
 		action: 'studentHistory',
 	},
 	{
-		method: 'get',
+		method: 'post',
 		route: '/api/enrollment/changeGrade',
 		controller: EnrollmentController,
 		action: 'changeGrade',
 	},
-
 ];

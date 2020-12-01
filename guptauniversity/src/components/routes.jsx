@@ -5,18 +5,27 @@ import { Login } from './login';
 import Schedule from './schedule';
 import StudentTranscript from './studentTranscript';
 import { LoginContext } from './../LoginContext';
-
+import StudentClassList from './studentclasslist';
+import ClassDetails from './classDetails';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
+
 	return (
 		<Switch>
 			{/* Routes placed here are available to all visitors */}
 			<Route path="/login" component={Login} />
+
 			{/* we need to change this to match the student id */}
 
 			{state?.user?.userType === 'Student' && (
 				<Switch>
 					<Route path="/student-transcript" component={StudentTranscript} />
+				</Switch>
+			)}
+			{state?.user?.userType === 'Faculty' && (
+				<Switch>
+					<Route exact path="/classlist" component={StudentClassList} />
+					<Route path="/classlist/studentDetails" component={ClassDetails} />
 				</Switch>
 			)}
 
