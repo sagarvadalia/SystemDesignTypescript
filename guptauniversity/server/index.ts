@@ -1,13 +1,18 @@
-import 'reflect-metadata';
+
 import * as bodyParser from 'body-parser';
 import express, { Request, Response } from 'express';
 import { createConnection } from 'typeorm';
 import { Routes } from './routes';
 import { ResponseError } from './util/ResponseError';
-import compression = require('compression');
-import session = require('express-session');
-import morgan = require('morgan');
-import path = require('path');
+// import compression = require('compression');
+// import session = require('express-session');
+// import morgan = require('morgan');
+// import path = require('path');
+import morgan from 'morgan';
+import session from 'express-session';
+import path from 'path';
+import compression from 'compression';
+
 createConnection({
 	type: "postgres",
 	host: "localhost",

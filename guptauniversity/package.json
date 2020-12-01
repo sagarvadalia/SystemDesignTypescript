@@ -129,7 +129,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"start": "npm run start-client",
-		"start-server": "ts-node guptauniversity/server/index.ts  ",
+		"start-server": "ts-node server/index.ts  ",
 		"seed": "ts-node guptauniversity/server/seed/seed.ts",
 		"seed-ALL": "ts-node guptauniversity/server/seed/seed.ts",
 		"seed-admin": "ts-node guptauniversity/server/seed/seedRuns/administrator.ts",
