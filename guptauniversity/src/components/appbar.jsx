@@ -128,6 +128,7 @@ export default function PersistentDrawerLeft() {
 							</Link>
 						</Typography>
 					)}
+
 					{state?.user && (
 						<div>
 							<div>
@@ -161,6 +162,20 @@ export default function PersistentDrawerLeft() {
 				</div>
 				<Divider />
 				<div>
+					<List>
+						<Link to={'academicCalendar'}>
+							<ListItem button key={'Academic Calendar'}>
+								<ListItemText primary={'Academic Calendar'}></ListItemText>
+							</ListItem>
+						</Link>
+					</List>
+					<List>
+						<Link to={'course-catalog'}>
+							<ListItem button key={'course-catalog'}>
+								<ListItemText primary={'course-catalog'}></ListItemText>
+							</ListItem>
+						</Link>
+					</List>
 					{state?.user?.userType === 'Student' && (
 						<List>
 							<Link to={`/student-transcript`}>

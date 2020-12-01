@@ -32,11 +32,11 @@ export class Course extends BaseEntity {
 	public deptID!: Department;
 
 	//Relationship to MajorRequirement
-	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.courseID)
+	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.courseID, {eager:true})
 	public majorrequirement!: MajorRequirement[];
 
 	//Relationship to MinorRequirement
-	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.courseID)
+	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.courseID, {eager:true})
 	public minorrequirement!: MinorRequirement[];
 
 	//One Course has many Classes
