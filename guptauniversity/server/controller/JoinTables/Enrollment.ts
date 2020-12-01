@@ -43,15 +43,19 @@ export class EnrollmentController {
 		try {
 
 
-			let enrollment:any = await this.enrollmentRepository.find({ where: { sID: request.params.id } });
+			let enrollment: any = await this.enrollmentRepository.find({ where: { sID: request.params.id } });
+			console.log('enrollment----------', enrollment)
 
 			for (let i = 0; i < enrollment.length; i++){
-				let classCRN = await this.classRepository.findOne(enrollment[i].classCRN);
+				let classCRN = enrollment[i].classCRN
+				console.log(classCRN);
 				if (classCRN) {
+
 					enrollment[i].classNumber = classCRN.classCRN
 					enrollment[i].semester = classCRN.semesterID;
-					let course = await this.courseRepository.findOne(classCRN.courseID)
-					enrollment[i].courseName = course
+					let course = enrollment[i].classCRN.courseID
+					enrollment[i].courseName = course.courseName
+
 				}
 
 			}
