@@ -13,7 +13,7 @@ export class TimeSlot extends BaseEntity {
 	@OneToMany(() => Class, (classes) => classes.fID, { cascade: true })
 	public classes!: Class[];
 
-	@ManyToOne(() => Period, (period) => period.timeslots)
+	@ManyToOne(() => Period, (period) => period.timeslots, {eager: true})
 	@JoinColumn({ name: 'periodID' })
 	public periodID!: Period;
 
