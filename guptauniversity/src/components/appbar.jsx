@@ -129,9 +129,19 @@ export default function PersistentDrawerLeft() {
 						</Typography>
 					)}
 					{state?.user && (
-						<Typography>
-							{state.user.userName} {state.user.userType}
-						</Typography>
+						<div>
+							<div>
+								<Typography>{state.user.userName}</Typography>
+								<Typography>{state.user.userType}</Typography>
+							</div>
+							<div>
+								<Link to={'/login'}>
+									<Button color={'secondary'}>
+										<Typography onClick={() => setState({})}>Logout</Typography>
+									</Button>
+								</Link>
+							</div>
+						</div>
 					)}
 				</Toolbar>
 			</AppBar>
