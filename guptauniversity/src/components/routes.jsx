@@ -9,6 +9,7 @@ import StudentClassList from './studentclasslist';
 import ClassDetails from './classDetails';
 import AcademicCalendar from './academicCalendar';
 import NextCalendar from './nextCalendar';
+import CourseCatalog from './courseCatalog';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -18,6 +19,7 @@ export const Routes = ({}) => {
 			<Route path="/login" component={Login} />
 			<Route path="/academicCalendar" component={AcademicCalendar} />
 			<Route path="/nextCalendar" component={NextCalendar} />
+			<Route path="/course-catalog" component={CourseCatalog} />
 			{/* we need to change this to match the student id */}
 
 			{state?.user?.userType === 'Student' && (
