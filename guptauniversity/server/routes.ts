@@ -902,4 +902,10 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'changeGrade',
 	},
+	{
+		method: 'get',
+		route: '/api/enrollment/studentHistoryBySemester/:id/:semesterID',
+		controller: EnrollmentController,
+		action: 'studentHistoryBySemester',
+	},
 ];

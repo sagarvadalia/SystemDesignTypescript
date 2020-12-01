@@ -4,6 +4,7 @@ import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { validate, validateOrReject } from 'class-validator';
 import { Class } from '../../entity/ClassRelated/Class';
 import { Course } from '../../entity/ClassRelated/Course';
+import { Semester } from '../../entity/TimeRelated/Semester';
 
 export class EnrollmentController {
 	private enrollmentRepository = getRepository(Enrollment);
@@ -79,4 +80,31 @@ export class EnrollmentController {
 			console.error(error);
 		}
 	}
+
+	async studentHistoryBySemester(request: Request, response: Response, next: NextFunction) {
+		try {
+			let enrollment: any = await this.enrollmentRepository.find({ where: { sID: request.params.id } });
+			console.log('enrollment----------', enrollment);
+			let filteredEnrollments: any = [];
+			for (let i = 0; i < enrollment.length; i++) {
+				let classCRN = enrollment[i].classCRN;
+				// console.log(classCRN);
+				if (classCRN) {
+					enrollment[i].classNumber = classCRN.classCRN;
+					enrollment[i].semester = classCRN.semesterID;
+					let course = enrollment[i].classCRN.courseID;
+					enrollment[i].courseName = course.courseName;
+					console.log(classCRN.semesterID);
+					console.log(request.params);
+					if(classCRN.semesterID.semesterID === parseInt(request.params.semesterID)){
+						filteredEnrollments.push(enrollment[i]);
+					}
+				}
+			}
+			return filteredEnrollments;
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
 }
