@@ -1,8 +1,48 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useContext, useEffect } from 'react';
+import MaterialTable from 'material-table';
+import axios from 'axios';
+import { LoginContext } from './../LoginContext';
+import { Link } from 'react-router-dom';
+export default function StudentClassList() {
+	const [data, setData] = useState([{ courseID: {}, semesterID: {} }]);
+	const [state, setState] = useContext(LoginContext);
+	useEffect(() => {
+		const fetchData = async () => {
+			const result = await axios(`/api/faculties/viewClasses/${state.user.userID}`);
 
-function StudentClassList(props) {
-	return <div></div>;
+			setData(result.data);
+		};
+
+		fetchData();
+	}, []);
+
+	return (
+		// API IS HERE https://material-table.com/#/
+
+		<div>
+			{/* <pre>{JSON.stringify(data)}</pre>s */}
+
+			<div style={{ maxWidth: '100%' }}>
+				<MaterialTable
+					title="Basic Sorting Preview"
+					columns={[
+						{ title: 'classCRN', field: 'classCRN' },
+						{ title: 'class section', field: 'classSection' },
+						{ title: 'Course ID', field: 'courseID.courseID' },
+						{ title: 'Course Name', field: 'courseID.courseName' },
+						{ title: 'Semester Season', field: 'semesterID.semesterName' },
+						{ title: 'Semester Year', field: 'semesterID.yearNum' },
+						{
+							title: 'Student Details',
+							render: (rowData) => <Link to={'/classlist/studentDetails'}>STUDENT DETAILS</Link>,
+						},
+					]}
+					data={data}
+					options={{
+						sorting: true,
+					}}
+				/>
+			</div>
+		</div>
+	);
 }
-
-export default StudentClassList;

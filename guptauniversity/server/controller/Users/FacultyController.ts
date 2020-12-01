@@ -40,7 +40,7 @@ export class FacultyController {
 
 	async viewClasses(request: Request, response: Response, next: NextFunction) {
 		try {
-			return await this.classRepository.find({ where: { fID: request.params.id } })
+			return await this.classRepository.find({ where: { fID: request.params.id } });
 		} catch (error) {
 			console.error(error);
 		}
@@ -50,7 +50,7 @@ export class FacultyController {
 		//Gimme a classCRN and I'll show you the world
 
 		try {
-			return await this.enrollmentRepository.find({ where: { classCRN: request.query.classCRN } })
+			return await this.enrollmentRepository.find({ where: { classCRN: request.params.classCRN } });
 		} catch (error) {
 			console.error(error);
 		}

@@ -19,7 +19,7 @@ export default function StudentTranscript() {
 		// API IS HERE https://material-table.com/#/
 
 		<div>
-			<pre>{JSON.stringify(data)}</pre>
+			{/* <pre>{JSON.stringify(data)}</pre> */}
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
