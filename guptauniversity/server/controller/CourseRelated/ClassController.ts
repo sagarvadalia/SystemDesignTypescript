@@ -6,6 +6,16 @@ import { validate, validateOrReject } from 'class-validator';
 export class ClassController {
 	private classRepository = getRepository(Class);
 
+
+async inSemester(request: Request, response: Response, next: NextFunction) {
+        try {
+            return await this.classRepository.find({where: {semesterID: request.params.id}});
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.classRepository.find();
 	}

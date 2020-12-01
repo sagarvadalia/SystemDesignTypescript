@@ -201,6 +201,12 @@ export const Routes = [
 		controller: ClassController,
 		action: 'remove',
 	},
+	{
+        method: 'get',
+        route: '/api/classes/semester/:id',
+        controller: ClassController,
+        action: 'inSemester',
+    },
 
 	// crud routes for Rooms
 	{
