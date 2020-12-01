@@ -176,6 +176,13 @@ export default function PersistentDrawerLeft() {
 							</ListItem>
 						</Link>
 					</List>
+					<List>
+						<Link to={'masterSchedule/9'}>
+							<ListItem button key={'masterSchedule'}>
+								<ListItemText primary={'Current Master Schedule'}></ListItemText>
+							</ListItem>
+						</Link>
+					</List>
 					{state?.user?.userType === 'Student' && (
 						<List>
 							<Link to={`/student-transcript`}>

@@ -34,7 +34,7 @@ export class Class extends BaseEntity {
 	public courseID!: Course;
 
 	//Many classes belong to one faculty
-	@ManyToOne(() => Faculty)
+	@ManyToOne(() => Faculty, {eager: true})
 	@JoinColumn({ name: 'fID' })
 	public fID!: Faculty;
 
