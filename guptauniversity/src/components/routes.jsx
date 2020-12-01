@@ -7,6 +7,8 @@ import StudentTranscript from './studentTranscript';
 import { LoginContext } from './../LoginContext';
 import StudentClassList from './studentclasslist';
 import ClassDetails from './classDetails';
+import AcademicCalendar from './academicCalendar';
+import NextCalendar from './nextCalendar';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -14,7 +16,8 @@ export const Routes = ({}) => {
 		<Switch>
 			{/* Routes placed here are available to all visitors */}
 			<Route path="/login" component={Login} />
-
+			<Route path="/academicCalendar" component={AcademicCalendar} />
+			<Route path="/nextCalendar" component={NextCalendar} />
 			{/* we need to change this to match the student id */}
 
 			{state?.user?.userType === 'Student' && (
