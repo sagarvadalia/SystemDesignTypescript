@@ -45,7 +45,14 @@ export class FacultyController {
 			console.error(error);
 		}
 	}
+	async viewClassesBySemester(request: Request, response: Response, next: NextFunction) {
+		try {
 
+			return await this.classRepository.find({ where: { fID: request.params.id, semesterID: request.params.semesterID } });
+		} catch (error) {
+			console.error(error);
+		}
+	}
 	async viewEnrollments(request: Request, response: Response, next: NextFunction) {
 		//Gimme a classCRN and I'll show you the world
 

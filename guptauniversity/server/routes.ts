@@ -35,6 +35,7 @@ import { EnrollmentController } from './controller/JoinTables/Enrollment';
 import { AdvisorController } from './controller/JoinTables/AdvisorController';
 import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
 
+
 export const Routes = [
 	{
 		method: 'get',
@@ -122,10 +123,24 @@ export const Routes = [
 	},
 	{
 		method: 'get',
+		route: '/api/faculties/viewClassesBySemester/:id/:semesterID',
+		controller: FacultyController,
+		action: 'viewClassesBySemester',
+	},
+	{
+		method: 'get',
 		route: '/api/faculties/viewEnrollments/:classCRN',
 		controller: FacultyController,
 		action: 'viewEnrollments',
 	},
+	{
+		method: 'get',
+		route: '/api/faculties/facultyAdvisees/:id',
+		controller: AdvisorController,
+		action: 'facultyAdvisees',
+
+	},
+	
 
 	// crud routes for minors
 	{
@@ -917,6 +932,9 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'studentHistoryBySemester',
 	},
+
+	
+
 	{
 		method: 'get',
 		route: '/api/advisors/:id',
@@ -930,4 +948,5 @@ export const Routes = [
 		controller: StudentHoldController,
 		action: 'viewHolds',
 	},
+
 ];

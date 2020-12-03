@@ -15,7 +15,7 @@ export class Advisor extends BaseEntity {
 	@JoinColumn({ name: 'fID' })
 	public fID!: Faculty;
 
-	@ManyToOne(() => Student, (student) => student.advisors, { primary: true })
+	@ManyToOne(() => Student, (student) => student.advisors, { primary: true, eager: true })
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
 
