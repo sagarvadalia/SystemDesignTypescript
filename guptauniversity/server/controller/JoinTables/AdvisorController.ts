@@ -41,4 +41,13 @@ export class AdvisorController {
 			console.error(error);
 		}
 	}
+	async facultyAdvisees(request: Request, response: Response, next: NextFunction) {
+		//Give me an fID and I'll return an array of their advisees
+		try {
+			return await this.advisorRepository.find({ where: { fID: request.params.id } });
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
 }

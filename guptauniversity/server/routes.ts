@@ -133,6 +133,13 @@ export const Routes = [
 		controller: FacultyController,
 		action: 'viewEnrollments',
 	},
+	{
+		method: 'get',
+		route: '/api/faculties/facultyAdvisees/:id',
+		controller: AdvisorController,
+		action: 'facultyAdvisees',
+
+	},
 	
 
 	// crud routes for minors
