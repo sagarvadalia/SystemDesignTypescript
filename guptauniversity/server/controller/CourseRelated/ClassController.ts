@@ -8,7 +8,8 @@ export class ClassController {
 
 
 async inSemester(request: Request, response: Response, next: NextFunction) {
-        try {
+	try {
+
             return await this.classRepository.find({where: {semesterID: request.params.id}});
 
         } catch (error) {
