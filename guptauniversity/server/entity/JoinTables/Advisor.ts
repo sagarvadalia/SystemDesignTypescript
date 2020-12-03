@@ -11,7 +11,7 @@ export class Advisor extends BaseEntity {
 	}
 	// This is to for setting up the jointable entity between students and faculty
 
-	@ManyToOne(() => Faculty, (faculty) => faculty.advisors, { primary: true })
+	@ManyToOne(() => Faculty, (faculty) => faculty.advisors, { primary: true, eager: true })
 	@JoinColumn({ name: 'fID' })
 	public fID!: Faculty;
 
