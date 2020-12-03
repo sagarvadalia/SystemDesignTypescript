@@ -13,6 +13,7 @@ import CourseCatalog from './courseCatalog';
 import MasterSchedule from './masterSchedule';
 import StudentSchedule from './studentSchedule';
 import Homepage from './homepage';
+import StudentAdvisors from './studentAdvisors';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -31,6 +32,7 @@ export const Routes = ({}) => {
 			{state?.user?.userType === 'Student' && (
 				<Switch>
 					<Route path="/student-transcript" component={StudentTranscript} />
+					<Route path="/student-advisors" component={StudentAdvisors} />
 				</Switch>
 			)}
 			{state?.user?.userType === 'Faculty' && (
