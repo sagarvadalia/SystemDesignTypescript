@@ -5,7 +5,13 @@ import { LoginContext } from './../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 export default function MasterSchedule() {
-	const [semesterState, setSemesterState] = useState(9);
+	async function dataFetch(value) {
+		const result = await axios(`/api/classes/semester/${value}`);
+
+		setData(result.data);
+		console.log(data);
+	}
+	const tableRef = React.createRef();
 	const [data, setData] = useState([{ courseID: { deptID: {} }, fID: {} }]);
 	let { semester } = useParams();
 	semester = parseInt(semester);
@@ -24,14 +30,13 @@ export default function MasterSchedule() {
 	const [state, setState] = useContext(LoginContext);
 	useEffect(() => {
 		const fetchData = async () => {
-			setSemesterState(semester);
-			const result = await axios(`/api/classes/semester/${semesterState}`);
-			console.log(data);
-			setData(result.data);
+			// const result = await axios(`/api/classes/semester/${semester}`);
+			// console.log(data);
+			// setData(result.data);
 		};
-		console.log('rerender');
+		// console.log('rerender');
 		fetchData();
-	}, [semester]);
+	}, []);
 
 	return (
 		// API IS HERE https://material-table.com/#/
@@ -45,15 +50,13 @@ export default function MasterSchedule() {
 						<div>
 							Master Schedule
 							{semester !== 1 && (
-								<Link to={`/masterSchedule/${semesterState - 1}`}>
-									<Button onClick={() => setSemesterState(semesterState - 1)}>
-										Previous Semester
-									</Button>
+								<Link to={`/masterSchedule/${semester - 1}`}>
+									<Button onClick={() => dataFetch(semester - 1)}>Previous Semester</Button>
 								</Link>
 							)}
 							{semester !== 10 && (
-								<Link to={`/masterSchedule/${semesterState + 1}`}>
-									<Button onClick={() => setSemesterState(semesterState + 1)}>Next Semester</Button>
+								<Link to={`/masterSchedule/${semester + 1}`}>
+									<Button onClick={() => dataFetch(semester + 1)}>Next Semester</Button>
 								</Link>
 							)}
 						</div>
@@ -66,12 +69,21 @@ export default function MasterSchedule() {
 						{ title: 'Department', field: 'courseID.deptID.deptName' },
 						{ title: 'Teacher', field: 'fID.userName' },
 					]}
-					data={data}
+					data={async () => await axios(`/api/classes/semester/${semester}`)}
 					options={{
 						sorting: true,
 						searching: true,
 						exportButton: true,
 					}}
+					tableRef={tableRef}
+					actions={[
+						{
+							icon: 'refresh',
+							tooltip: 'Refresh Data',
+							isFreeAction: true,
+							onClick: () => tableRef.current && tableRef.current.onQueryChange(),
+						},
+					]}
 				/>
 			</div>
 		</div>

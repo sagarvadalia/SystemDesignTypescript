@@ -119,14 +119,14 @@ export default function PersistentDrawerLeft() {
 						<MenuIcon />
 					</IconButton>
 					<Typography variant="h6" noWrap>
-						Gupta University
+						<Link to={'/'}>Gupta University</Link>
 					</Typography>
 					{!state?.user && (
-						<Typography>
-							<Link to="/login">
+						<Link to="/login">
+							<Typography>
 								<Button>Login</Button>
-							</Link>
-						</Typography>
+							</Typography>
+						</Link>
 					)}
 
 					{state?.user && (

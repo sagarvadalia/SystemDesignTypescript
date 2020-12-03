@@ -12,6 +12,7 @@ import NextCalendar from './nextCalendar';
 import CourseCatalog from './courseCatalog';
 import MasterSchedule from './masterSchedule';
 import StudentSchedule from './studentSchedule';
+import Homepage from './homepage';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -24,6 +25,7 @@ export const Routes = ({}) => {
 			<Route path="/course-catalog" component={CourseCatalog} />
 			<Route path="/masterSchedule/:semester" component={MasterSchedule} />
 			<Route path="/studentSchedule/:semester" component={StudentSchedule} />
+			<Route exact path="/" component={Homepage} />
 			{/* we need to change this to match the student id */}
 
 			{state?.user?.userType === 'Student' && (

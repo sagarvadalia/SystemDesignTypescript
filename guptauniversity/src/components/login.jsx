@@ -80,7 +80,7 @@ const reducer = (state, action) => {
 	}
 };
 
-export const Login = () => {
+export const Login = ({ history }) => {
 	const [login, setLogin] = useContext(LoginContext);
 	const classes = useStyles();
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -105,6 +105,7 @@ export const Login = () => {
 		if (user) {
 			console.log('here?');
 			setLogin((login) => ({ ...login, user: user.data }));
+			history.push('/');
 		}
 
 		//TODO:change the login value here
