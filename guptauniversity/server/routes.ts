@@ -33,6 +33,8 @@ import { LectureController } from './controller/Locations/LectureController';
 import { OfficeController } from './controller/Locations/OfficeController';
 import { EnrollmentController } from './controller/JoinTables/Enrollment';
 import { AdvisorController } from './controller/JoinTables/AdvisorController';
+import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
+
 export const Routes = [
 	{
 		method: 'get',
@@ -920,5 +922,12 @@ export const Routes = [
 		route: '/api/advisors/:id',
 		controller: AdvisorController,
 		action: 'myAdvisors',
+	},
+	// Holds
+	{
+		method: 'get',
+		route: '/api/holds/:id',
+		controller: StudentHoldController,
+		action: 'viewHolds',
 	},
 ];

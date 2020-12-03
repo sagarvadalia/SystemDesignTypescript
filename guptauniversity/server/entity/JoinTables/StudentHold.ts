@@ -9,11 +9,11 @@ export class StudentHold extends BaseEntity {
 		Object.assign(this, StudentHold);
 	}
 
-	@ManyToOne(() => Student, (student) => student.studentHolds, { primary: true })
+	@ManyToOne(() => Student, (student) => student.studentHolds, { primary: true, eager: true })
 	@JoinColumn({ name: 'sID' })
 	public sID: Student;
 
-	@ManyToOne(() => Hold, (hold) => hold.studentHolds, { primary: true })
+	@ManyToOne(() => Hold, (hold) => hold.studentHolds, { primary: true, eager: true })
 	@JoinColumn({ name: 'holdID' })
 	public holdID: Hold;
 }
