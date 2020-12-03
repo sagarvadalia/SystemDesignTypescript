@@ -32,7 +32,10 @@ import { LabController } from './controller/Locations/LabController';
 import { LectureController } from './controller/Locations/LectureController';
 import { OfficeController } from './controller/Locations/OfficeController';
 import { EnrollmentController } from './controller/JoinTables/Enrollment';
-import {StudentHoldsController} from './controller/Users/StudentHoldsController';
+
+
+import { AdvisorController } from './controller/JoinTables/AdvisorController';
+
 export const Routes = [
 	{
 		method: 'get',
@@ -210,11 +213,11 @@ export const Routes = [
 		action: 'remove',
 	},
 	{
-        method: 'get',
-        route: '/api/classes/semester/:id',
-        controller: ClassController,
-        action: 'inSemester',
-    },
+		method: 'get',
+		route: '/api/classes/semester/:id',
+		controller: ClassController,
+		action: 'inSemester',
+	},
 
 	// crud routes for Rooms
 	{
@@ -922,5 +925,14 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'studentHistoryBySemester',
 	},
+
 	
+
+	{
+		method: 'get',
+		route: '/api/advisors/:id',
+		controller: AdvisorController,
+		action: 'myAdvisors',
+	},
+
 ];

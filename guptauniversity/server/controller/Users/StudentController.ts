@@ -1,10 +1,14 @@
 import { validate } from 'class-validator';
 import { NextFunction, Request, Response } from 'express';
 import { getRepository } from 'typeorm';
+import { StudentMajor } from '../../entity/JoinTables/StudentMajor';
+import { StudentMinor } from '../../entity/JoinTables/StudentMinor';
 import { Student } from '../../entity/Users/Student';
 
 export class StudentController {
 	private studentRepository = getRepository(Student);
+	private stuMajorRepository = getRepository(StudentMajor);
+	private stuMinorRepository = getRepository(StudentMinor);
 
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.studentRepository.find();
@@ -31,4 +35,6 @@ export class StudentController {
 			console.error(error);
 		}
 	}
+
+
 }
