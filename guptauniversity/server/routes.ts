@@ -31,7 +31,7 @@ import { GraduateFullTimeController } from './controller/Users/GraduateFullTimeC
 import { LabController } from './controller/Locations/LabController';
 import { LectureController } from './controller/Locations/LectureController';
 import { OfficeController } from './controller/Locations/OfficeController';
-import { EnrollmentController } from './controller/JoinTables/Enrollment';
+import { EnrollmentController } from './controller/JoinTables/EnrollmentController';
 import { AdvisorController } from './controller/JoinTables/AdvisorController';
 import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
 
@@ -934,12 +934,6 @@ export const Routes = [
 	},
 	{
 		method: 'get',
-		route: '/api/classes/:classCRN/:slotID',
-		controller: ClassController,
-		action: 'changeTime',
-	},
-	{
-		method: 'get',
 		route: '/api/advisors/:id',
 		controller: AdvisorController,
 		action: 'myAdvisors',
@@ -951,6 +945,7 @@ export const Routes = [
 		controller: StudentHoldController,
 		action: 'viewHolds',
 	},
+	//Thursday December 4 12/4
 	{
 		method: 'get',
 		route: '/api/addhold/:sID/:holdID',
@@ -963,5 +958,23 @@ export const Routes = [
 		controller: StudentHoldController,
 		action: 'removeHold',
 	},
-
+	{
+		method: 'get',
+		route: '/api/classes/:classCRN/:slotID',
+		controller: ClassController,
+		action: 'changeTime',
+	},
+	//Friday December 5 12/5
+	{
+		method: 'get',
+		route: '/api/attendance',
+		controller: AttendanceController,
+		action: 'newAttendance',
+	},
+	{
+		method: 'get',
+		route: '/api/enroll/:sID/:classCRN',
+		controller: EnrollmentController,
+		action: 'addClass',
+	},
 ];

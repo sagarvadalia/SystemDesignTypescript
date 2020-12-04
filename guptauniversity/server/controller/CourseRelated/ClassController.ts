@@ -43,7 +43,7 @@ export class ClassController {
 	}
 
 	async changeTime(request: Request, response: Response, next: NextFunction) {
-		//Give me a classCRN and a new timeID
+		//Give me a classCRN and a new slotID
 		let oldClass = await this.classRepository.findOne(request.params.classCRN);
 		let newSlot = await this.timeslotRepository.findOne(request.params.slotID);
 		console.log(oldClass);
@@ -58,4 +58,6 @@ export class ClassController {
 			console.error(error);
 		}
 	}
+
+
 }
