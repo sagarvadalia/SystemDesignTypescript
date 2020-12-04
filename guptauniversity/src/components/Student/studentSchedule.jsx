@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from '../../LoginContext';
 
 export default function StudentSchedule() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, fID: {}, slotID: { days: '', periodID: {} } }]);

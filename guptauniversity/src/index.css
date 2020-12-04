@@ -24,9 +24,16 @@ pre {
 	word-wrap: break-word;
 }
 
-.flex-row {
+.flex-evenly {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-evenly
+}
+
+.flex-between {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between
 }
 
 .flex-column {

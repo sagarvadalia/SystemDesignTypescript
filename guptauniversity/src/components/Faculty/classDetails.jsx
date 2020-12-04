@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from '../../LoginContext';
+import { Link } from 'react-router-dom';
 
 export default function ClassDetails() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, semesterID: {}, sID: {} }]);
@@ -27,7 +28,7 @@ export default function ClassDetails() {
 					title="Basic Sorting Preview"
 					columns={[
 						{ title: 'Student ID', field: 'sID.userID', editable: 'never' },
-						{ title: 'Name', field: 'sID.userName', editable: 'never' },
+						{ title: 'Name', field: 'sID.userName', editable: 'never', render: (rowData) => <Link to={`/classlist/studentDetails/${rowData.sID.userID}`}>{rowData.sID.userName}</Link> },
 						{ title: 'Midterm Grade', field: 'midtermGrade', editable: 'onUpdate' },
 						{ title: 'Final Grade', field: 'finalGrade', editable: 'onUpdate' },
 					]}

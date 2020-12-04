@@ -4,13 +4,15 @@ import axios from 'axios';
 import { LoginContext } from './../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@material-ui/core';
-import Holds from './holds';
+import MajorTable from './Student/MajorTable'
+import StudentSchedule from './Student/studentSchedule'
+import Holds from './Student/holds';
 export default function Homepage() {
 	const [state, setState] = useContext(LoginContext);
 	return (
 		<div>
 			ABC
-			{state?.user?.userType === 'Student' && <Holds></Holds>}
+			{state?.user?.userType === 'Student' && <div><Holds></Holds><MajorTable></MajorTable><StudentSchedule></StudentSchedule></div>}
 		</div>
 	);
 }

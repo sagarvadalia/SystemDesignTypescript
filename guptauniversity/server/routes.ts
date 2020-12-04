@@ -985,6 +985,8 @@ export const Routes = [
 		action: 'changeMidtermGrade',
 	},
 	{
+		method: 'delete',
+	route: '/api/enrollment/delete/:enrollmentID', controller:EnrollmentController, action: 'remove'}, {
 		method: 'get',
 		route: '/api/addmajor/:sID/:majorID',
 		controller: StudentMajorController,
