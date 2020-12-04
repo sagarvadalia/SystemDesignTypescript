@@ -34,6 +34,7 @@ import { OfficeController } from './controller/Locations/OfficeController';
 import { EnrollmentController } from './controller/JoinTables/EnrollmentController';
 import { AdvisorController } from './controller/JoinTables/AdvisorController';
 import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
+import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
 
 
 export const Routes = [
@@ -985,5 +986,16 @@ export const Routes = [
 	},
 	{
 		method: 'delete',
-	route: '/api/enrollment/delete/:enrollmentID', controller:EnrollmentController, action: 'remove'}
+	route: '/api/enrollment/delete/:enrollmentID', controller:EnrollmentController, action: 'remove'}, {
+		method: 'get',
+		route: '/api/addmajor/:sID/:majorID',
+		controller: StudentMajorController,
+		action: 'declareMajor',
+	},
+	{
+		method: 'get',
+		route: '/api/removemajor/:sID/:majorID',
+		controller: StudentMajorController,
+		action: 'dropMajor',
+	},
 ];

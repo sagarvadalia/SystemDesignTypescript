@@ -14,7 +14,7 @@ export class StudentMajor extends BaseEntity {
 	@JoinColumn({ name: 'majorID', referencedColumnName: 'majorID' })
 	public majorID!: Major;
 
-	@ManyToOne(() => Student, (students) => students.userID, { primary: true })
+	@ManyToOne(() => Student, (students) => students.userID, { primary: true, eager: true })
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
 
