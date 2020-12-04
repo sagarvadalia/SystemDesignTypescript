@@ -129,7 +129,7 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"start": "npm run start-client",
-		"start-server": "ts-node server/index.ts  ",
+		"start-server": "nodemon server/index.ts  ",
 		"seed": "ts-node server/seed/seed.ts",
 		"seed-ALL": "ts-node server/seed/seed.ts",
 		"seed-admin": "ts-node server/seed/seedRuns/administrator.ts",

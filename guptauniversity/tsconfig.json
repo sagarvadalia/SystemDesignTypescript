@@ -30,5 +30,6 @@
 		"jsx": "react-jsx",
 		"strictPropertyInitialization": false
 	},
+	"compileOnSave": true,
 	"include": ["src"]
 }
