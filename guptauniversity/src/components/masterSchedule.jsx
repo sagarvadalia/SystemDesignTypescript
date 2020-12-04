@@ -12,7 +12,7 @@ export default function MasterSchedule() {
 		console.log(data);
 	}
 
-	const [data, setData] = useState([{ courseID: { deptID: {} }, fID: {} }]);
+	const [data, setData] = useState([{ courseID: { deptID: {} }, fID: {}, roomID: { buildings: {} } }]);
 	let { semester } = useParams();
 	semester = parseInt(semester);
 	let semesterVal = {
@@ -68,6 +68,8 @@ export default function MasterSchedule() {
 						{ title: 'Credits', field: 'courseID.numOfCredits' },
 						{ title: 'Department', field: 'courseID.deptID.deptName' },
 						{ title: 'Teacher', field: 'fID.userName' },
+						{ title: 'Building Name', field: 'roomID.buildings.buildingName' },
+						{ title: 'Room Number', field: 'roomID.roomNum' },
 					]}
 					data={data}
 					options={{

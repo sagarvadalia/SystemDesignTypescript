@@ -8,9 +8,8 @@ import { Button } from '@material-ui/core';
 export default function Holds() {
 	const [state, setState] = useContext(LoginContext);
 
-	const tableRef = React.createRef();
-	const [data, setData] = useState([]);
-
+	const [majors, setMajors] = useState([]);
+	const [minors, setMinors] = useState([]);
 	return (
 		<div>
 			<div style={{ maxWidth: '100%' }}>
@@ -21,21 +20,12 @@ export default function Holds() {
 						{ title: 'Department name', field: 'deptID.deptName' },
 						{ title: 'Date Declared', field: 'studentMinor.dateDeclared' },
 					]}
-					data={async () => await axios(`/api/classes/semester/${state.user.userID}`)}
+					data={majors}
 					options={{
 						sorting: true,
 						searching: true,
 						exportButton: true,
 					}}
-					tableRef={tableRef}
-					actions={[
-						{
-							icon: 'refresh',
-							tooltip: 'Refresh Data',
-							isFreeAction: true,
-							onClick: () => tableRef.current && tableRef.current.onQueryChange(),
-						},
-					]}
 				/>
 
 				<MaterialTable
@@ -45,21 +35,12 @@ export default function Holds() {
 						{ title: 'Department name', field: 'deptID.deptName' },
 						{ title: 'Date Declared', field: 'studentMinor.dateDeclared' },
 					]}
-					data={async () => await axios(`/api/classes/semester/${state.user.userID}`)}
+					data={minors}
 					options={{
 						sorting: true,
 						searching: true,
 						exportButton: true,
 					}}
-					tableRef={tableRef}
-					actions={[
-						{
-							icon: 'refresh',
-							tooltip: 'Refresh Data',
-							isFreeAction: true,
-							onClick: () => tableRef.current && tableRef.current.onQueryChange(),
-						},
-					]}
 				/>
 			</div>
 		</div>

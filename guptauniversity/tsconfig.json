@@ -1,4 +1,5 @@
 {
+	"compileOnSave": true,
 	"compilerOptions": {
 		"target": "es6",
 		"module": "commonjs",
@@ -30,6 +31,6 @@
 		"jsx": "react-jsx",
 		"strictPropertyInitialization": false
 	},
-	"compileOnSave": true,
+
 	"include": ["src"]
 }

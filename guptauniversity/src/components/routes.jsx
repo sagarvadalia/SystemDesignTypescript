@@ -15,6 +15,7 @@ import StudentSchedule from './studentSchedule';
 import Homepage from './homepage';
 import StudentAdvisors from './studentAdvisors';
 import FacultySchedule from './Faculty/FacultySchedule';
+import FacultyAdvisees from './Faculty/FacultyAdvisees';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -41,6 +42,7 @@ export const Routes = ({}) => {
 					<Route exact path="/classlist" component={StudentClassList} />
 					<Route exact path="/schedule/:semester" component={FacultySchedule} />
 					<Route path="/classlist/studentDetails" component={ClassDetails} />
+					<Route path="/advisees/" component={FacultyAdvisees} />
 				</Switch>
 			)}
 
