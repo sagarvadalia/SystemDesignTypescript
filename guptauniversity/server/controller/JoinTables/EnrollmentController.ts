@@ -1,15 +1,17 @@
-import { getRepository } from 'typeorm';
+import { getManager, getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
 import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { validate, validateOrReject } from 'class-validator';
 import { Class } from '../../entity/ClassRelated/Class';
 import { Course } from '../../entity/ClassRelated/Course';
 import { Semester } from '../../entity/TimeRelated/Semester';
+import { Student } from '../../entity/Users/Student';
 
 export class EnrollmentController {
 	private enrollmentRepository = getRepository(Enrollment);
 	private classRepository = getRepository(Class);
 	private courseRepository = getRepository(Course);
+	private studentRepository = getRepository(Student);
 
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.enrollmentRepository.find();
@@ -84,7 +86,7 @@ export class EnrollmentController {
 	async studentHistoryBySemester(request: Request, response: Response, next: NextFunction) {
 		try {
 			let enrollment: any = await this.enrollmentRepository.find({ where: { sID: request.params.id } });
-			console.log('enrollment----------', enrollment);
+			// console.log('enrollment----------', enrollment);
 			let filteredEnrollments: any = [];
 			for (let i = 0; i < enrollment.length; i++) {
 				let classCRN = enrollment[i].classCRN;
@@ -94,9 +96,9 @@ export class EnrollmentController {
 					enrollment[i].semester = classCRN.semesterID;
 					let course = enrollment[i].classCRN.courseID;
 					enrollment[i].courseName = course.courseName;
-					console.log(classCRN.semesterID);
-					console.log(request.params);
-					if(classCRN.semesterID.semesterID === parseInt(request.params.semesterID)){
+					// console.log(classCRN.semesterID);
+					// console.log(request.params);
+					if (classCRN.semesterID.semesterID === parseInt(request.params.semesterID)) {
 						filteredEnrollments.push(enrollment[i]);
 					}
 				}
@@ -107,4 +109,18 @@ export class EnrollmentController {
 		}
 	}
 
+	async addClass(request: Request, response: Response, next: NextFunction) {
+		//Give me an sID and a classCRN and I'll make an enrollment with today's date and grade of ' '
+		const student = await this.studentRepository.findOne(request.params.sID);
+		const addClass = await this.classRepository.findOne(request.params.classCRN);
+		const entityManager = getManager();
+		try {
+			if (student && addClass) {
+				let newEnroll = await entityManager.create(Enrollment, { sID: student, classCRN: addClass, enrollDate: new Date(), grade: ' ' });
+				await this.enrollmentRepository.save(newEnroll)
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	}
 }

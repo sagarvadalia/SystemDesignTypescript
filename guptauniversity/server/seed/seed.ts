@@ -589,26 +589,26 @@ createConnection({
 		// }
 
 		// // // Student Holds
-		iter = 1;
-		for (i = 0; i < students.length; i += 19) {
-			try {
-				if (iter === 9) {
+		// iter = 1;
+		// for (i = 0; i < students.length; i += 19) {
+		// 	try {
+		// 		if (iter === 9) {
 
-					iter = 1;
-				}
-				const sID = students[i];
-				let holdID = iter;
-				const hold = await connection.manager.findOne(Hold, holdID);
+		// 			iter = 1;
+		// 		}
+		// 		const sID = students[i];
+		// 		let holdID = iter;
+		// 		const hold = await connection.manager.findOne(Hold, holdID);
 
-				const studentHold = await connection.manager.create(StudentHold, { sID, holdID: hold });
-				await connection.manager.save(studentHold);
+		// 		const studentHold = await connection.manager.create(StudentHold, { sID, holdID: hold });
+		// 		await connection.manager.save(studentHold);
 
-				iter++;
-			}
-			catch (error) {
-				console.log(error);
-			}
-		}
+		// 		iter++;
+		// 	}
+		// 	catch (error) {
+		// 		console.log(error);
+		// 	}
+		// }
 
 
 		// //		TIME RELATED STUFF
@@ -785,30 +785,30 @@ createConnection({
 		// 	console.error(error);
 		// }
 
-		// //--------ENROLLMENT----------------ya boi Ty
-		// const stuArr = await connection.manager.find(Student, { where: { sGradYear: 2024 } });
+		//--------ENROLLMENT----------------ya boi Ty
+		const stuArr = await connection.manager.find(Student, { where: { sGradYear: 2024 } });
 
-		// //For each student with gradYear 2024
-		// for (i = 0; i < stuArr.length; i++) {
-		// 	let firstSemester = [121, 1, 136, 99] 	//English1, AmerPeop1, CS1, Chem1
-		// 	const stu = await connection.manager.findOne(Student, stuArr[i].userID);
+		//For each student with gradYear 2024
+		for (i = 0; i < stuArr.length; i++) {
+			let firstSemester = [121, 1, 136, 99] 	//English1, AmerPeop1, CS1, Chem1
+			const stu = await connection.manager.findOne(Student, stuArr[i].userID);
 
-		// 	//For each of the 4 classes
-		// 	for (let j = 0; j < firstSemester.length; j++) {
-		// 		const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-		// 		const sem9 = await connection.manager.findOne(Semester, 9);
+			//For each of the 4 classes
+			for (let j = 0; j < firstSemester.length; j++) {
+				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
+				const sem9 = await connection.manager.findOne(Semester, 9);
 
-		// 		const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem9 } });
-		// 		let newEnroll = connection.manager.create(Enrollment, {
-		// 			sID: stu,
-		// 			classCRN: newClass,
-		// 			enrollDate: "7/30/2020",
-		// 			grade: 'A'
-		// 		})
+				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem9 } });
+				let newEnroll = connection.manager.create(Enrollment, {
+					sID: stu,
+					classCRN: newClass,
+					enrollDate: "7/30/2020",
+					grade: 'A'
+				})
 
-		// 		await connection.manager.save(newEnroll);
-		// 	}
-		// }
+				await connection.manager.save(newEnroll);
+			}
+		}
 
 
 		// TODO: Faculty History
