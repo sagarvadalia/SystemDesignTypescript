@@ -218,7 +218,12 @@ export default function PersistentDrawerLeft() {
 						<List>
 							<Link to={`/classlist`}>
 								<ListItem button key={'classList'}>
-									<ListItemText primary={'Class List'}></ListItemText>
+									<ListItemText primary={'Class History'}></ListItemText>
+								</ListItem>
+							</Link>
+							<Link to={`/schedule/9`}>
+								<ListItem button key={'schedule'}>
+									<ListItemText primary={'Current Schedule'}></ListItemText>
 								</ListItem>
 							</Link>
 

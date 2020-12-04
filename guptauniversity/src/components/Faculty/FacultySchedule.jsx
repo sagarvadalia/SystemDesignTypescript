@@ -1,18 +1,18 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from './../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@material-ui/core';
-export default function MasterSchedule() {
+export default function FacultySchedule() {
+	const [state, setState] = useContext(LoginContext);
+	const [data, setData] = useState([{ courseID: {}, semesterID: {} }]);
 	async function dataFetch(value) {
 		const result = await axios(`/api/classes/semester/${value}`);
 
 		setData(result.data);
 		console.log(data);
 	}
-
-	const [data, setData] = useState([{ courseID: { deptID: {} }, fID: {} }]);
 	let { semester } = useParams();
 	semester = parseInt(semester);
 	let semesterVal = {
@@ -27,14 +27,13 @@ export default function MasterSchedule() {
 		9: { semester: `Fall 2020` },
 		10: { semester: `Spring 2021` },
 	};
-	const [state, setState] = useContext(LoginContext);
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/classes/semester/${semester}`);
-			console.log(data);
+			const result = await axios(`/api/faculties/viewClassesBySemester/${state.user.userID}/${semester}`);
+
 			setData(result.data);
 		};
-		// console.log('rerender');
+
 		fetchData();
 	}, []);
 
@@ -42,38 +41,40 @@ export default function MasterSchedule() {
 		// API IS HERE https://material-table.com/#/
 
 		<div>
-			{/* <pre>{JSON.stringify(data)}</pre> */}
+			{/* <pre>{JSON.stringify(data)}</pre>s */}
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
 						<div>
-							Master Schedule
+							My Schedule for {semesterVal[semester].semester}
 							{semester !== 1 && (
-								<Link to={`/masterSchedule/${semester - 1}`}>
+								<Link to={`/currentSchedule/${semester - 1}`}>
 									<Button onClick={() => dataFetch(semester - 1)}>Previous Semester</Button>
 								</Link>
 							)}
 							{semester !== 10 && (
-								<Link to={`/masterSchedule/${semester + 1}`}>
+								<Link to={`/currentSchedule/${semester + 1}`}>
 									<Button onClick={() => dataFetch(semester + 1)}>Next Semester</Button>
 								</Link>
 							)}
 						</div>
 					}
 					columns={[
-						{ title: 'Class CRN', field: 'classCRN' },
+						{ title: 'classCRN', field: 'classCRN' },
+						{ title: 'class section', field: 'classSection' },
+						{ title: 'Course ID', field: 'courseID.courseID' },
 						{ title: 'Course Name', field: 'courseID.courseName' },
-						{ title: 'Course Description', field: 'courseID.courseDesc' },
-						{ title: 'Credits', field: 'courseID.numOfCredits' },
-						{ title: 'Department', field: 'courseID.deptID.deptName' },
-						{ title: 'Teacher', field: 'fID.userName' },
+						{ title: 'Semester Season', field: 'semesterID.semesterName' },
+						{ title: 'Semester Year', field: 'semesterID.yearNum' },
+						{
+							title: 'Student Details',
+							render: (rowData) => <Link to={'/classlist/studentDetails'}>STUDENT DETAILS</Link>,
+						},
 					]}
 					data={data}
 					options={{
 						sorting: true,
-						searching: true,
-						exportButton: true,
 					}}
 				/>
 			</div>
