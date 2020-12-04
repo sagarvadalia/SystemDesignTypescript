@@ -20,6 +20,7 @@ import office = require('./office');
 import timeslots = require('./timeslot2');
 import holds = require('./hold');
 import classes = require('./class');
+import majorReqs = require('./majorRequirements');
 
 
 export const seeds = {
@@ -44,6 +45,7 @@ export const seeds = {
 	office,
 	holds,
 	timeslots,
-	classes
+	classes,
+	majorReqs
 
 };
