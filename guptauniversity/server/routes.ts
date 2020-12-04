@@ -140,7 +140,7 @@ export const Routes = [
 		action: 'facultyAdvisees',
 
 	},
-	
+
 
 	// crud routes for minors
 	{
@@ -932,9 +932,12 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'studentHistoryBySemester',
 	},
-
-	
-
+	{
+		method: 'get',
+		route: '/api/classes/:classCRN/:slotID',
+		controller: ClassController,
+		action: 'changeTime',
+	},
 	{
 		method: 'get',
 		route: '/api/advisors/:id',
