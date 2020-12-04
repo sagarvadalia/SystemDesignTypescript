@@ -951,5 +951,17 @@ export const Routes = [
 		controller: StudentHoldController,
 		action: 'viewHolds',
 	},
+	{
+		method: 'get',
+		route: '/api/addhold/:sID/:holdID',
+		controller: StudentHoldController,
+		action: 'addHold',
+	},
+	{
+		method: 'get',
+		route: '/api/removehold/:sID/:holdID',
+		controller: StudentHoldController,
+		action: 'removeHold',
+	},
 
 ];
