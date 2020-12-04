@@ -983,4 +983,7 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'changeMidtermGrade',
 	},
+	{
+		method: 'delete',
+	route: '/api/enrollment/delete/:enrollmentID', controller:EnrollmentController, action: 'remove'}
 ];

@@ -1,18 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from '../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@material-ui/core';
-
-export default function Holds() {
+export default function StudentAdvisors() {
 	const [state, setState] = useContext(LoginContext);
-
-	const [data, setData] = useState([]);
-
+	const [data, setData] = useState([{ fID: {} }]);
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/holds/${state.user.userID}`);
+			const result = await axios(`/api/advisors/${state.user.userID}`);
 
 			setData(result.data);
 		};
@@ -24,10 +21,12 @@ export default function Holds() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>Holds</div>}
+					title={<div>Advisors</div>}
 					columns={[
-						{ title: 'Hold Type', field: 'holdType' },
-						{ title: 'Hold Description', field: 'holdDescription' },
+						{ title: 'Name', field: 'fID.userName' },
+						{ title: 'Email', field: 'fID.userEmail' },
+						{ title: 'Phone Number', field: 'fID.userPhone' },
+						{ title: 'Date Assigned', field: 'dateAssigned' },
 					]}
 					data={data}
 					options={{

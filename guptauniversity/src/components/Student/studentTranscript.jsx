@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from '../../LoginContext';
 export default function StudentTranscript() {
-	const [data, setData] = useState([{ semesterID: {}, courseName: 'test' }]);
+	const [data, setData] = useState([{ semesterID: {} }]);
 	const [state, setState] = useContext(LoginContext);
 	useEffect(() => {
 		const fetchData = async () => {
@@ -29,7 +29,7 @@ export default function StudentTranscript() {
 						{ title: 'Semester Season', field: 'semester.semesterName' },
 						{ title: 'Year', field: 'semester.yearNum' },
 						{ title: 'Course Name', field: 'courseName' },
-						{ title: 'Grade', field: 'grade' },
+						{ title: 'Grade', field: 'finalGrade' },
 					]}
 					data={data}
 					options={{

@@ -108,7 +108,7 @@ export default function PersistentDrawerLeft() {
 					[classes.appBarShift]: open,
 				})}
 			>
-				<Toolbar>
+				<Toolbar className={"flex-between"}>
 					<IconButton
 						color="inherit"
 						aria-label="open drawer"
