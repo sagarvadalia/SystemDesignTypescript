@@ -16,9 +16,11 @@ export class Enrollment extends BaseEntity {
 	@IsNotEmpty({ message: 'enrollDate must be provided ' })
 	enrollDate: Date;
 
-	@Column({ type: 'text', nullable: false })
-	@IsNotEmpty({ message: 'grade must be provided' })
-	grade: string;
+	@Column({ type: 'text', nullable: true })
+	midtermGrade: string;
+
+	@Column({ type: 'text', nullable: true })
+	finalGrade: string;
 
 	@ManyToOne(() => Class, (classes: Class) => classes.enrollment, { eager: true })
 	@JoinColumn({ name: 'classCRN', referencedColumnName: 'classCRN' })
@@ -27,4 +29,6 @@ export class Enrollment extends BaseEntity {
 	@ManyToOne(() => Student, (student: Student) => student.enrollment, { eager: true })
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
+
+
 }

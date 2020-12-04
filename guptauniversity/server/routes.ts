@@ -921,12 +921,6 @@ export const Routes = [
 		action: 'studentHistory',
 	},
 	{
-		method: 'post',
-		route: '/api/enrollment/changeGrade',
-		controller: EnrollmentController,
-		action: 'changeGrade',
-	},
-	{
 		method: 'get',
 		route: '/api/enrollment/studentHistoryBySemester/:id/:semesterID',
 		controller: EnrollmentController,
@@ -976,5 +970,17 @@ export const Routes = [
 		route: '/api/enroll/:sID/:classCRN',
 		controller: EnrollmentController,
 		action: 'addClass',
+	},
+	{
+		method: 'post',
+		route: '/api/enrollment/finalgrade',
+		controller: EnrollmentController,
+		action: 'changeFinalGrade',
+	},
+	{
+		method: 'post',
+		route: '/api/enrollment/midtermgrade',
+		controller: EnrollmentController,
+		action: 'changeMidtermGrade',
 	},
 ];

@@ -90,7 +90,7 @@ createConnection({
 
 		app.listen(8080);
 
-		console.log('Express server has started on port 8080. Open http://localhost:8080/users to see results');
+		console.log('Express server has started on port 8080. Open http://localhost:8080/api/users to see results');
 	})
 	.catch((error) => console.log(error));
 // const faculty = await connection.manager.create(Faculty, {

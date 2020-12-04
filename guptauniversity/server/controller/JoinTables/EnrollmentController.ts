@@ -62,7 +62,7 @@ export class EnrollmentController {
 		}
 	}
 
-	async changeGrade(request: Request, response: Response, next: NextFunction) {
+	async changeFinalGrade(request: Request, response: Response, next: NextFunction) {
 		//Request needs to have grade, sID, classCRN
 		try {
 			console.log(request);
@@ -72,7 +72,28 @@ export class EnrollmentController {
 			// console.log(thisEnroll);
 
 			if (thisEnroll && typeof request.body.grade === 'string') {
-				thisEnroll.grade = request.body.grade;
+				thisEnroll.finalGrade = request.body.grade;
+				await this.enrollmentRepository.save(thisEnroll);
+			}
+			return 'HELLO';
+			return thisEnroll;
+			// return 'HELLO';
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async changeMidtermGrade(request: Request, response: Response, next: NextFunction) {
+		//Request needs to have grade, sID, classCRN
+		try {
+			console.log(request);
+			let thisEnroll = await this.enrollmentRepository.findOne({
+				where: { classCRN: request.body.classID, sID: request.body.sID },
+			});
+			// console.log(thisEnroll);
+
+			if (thisEnroll && typeof request.body.grade === 'string') {
+				thisEnroll.midtermGrade = request.body.grade;
 				await this.enrollmentRepository.save(thisEnroll);
 			}
 			return 'HELLO';
@@ -116,7 +137,7 @@ export class EnrollmentController {
 		const entityManager = getManager();
 		try {
 			if (student && addClass) {
-				let newEnroll = await entityManager.create(Enrollment, { sID: student, classCRN: addClass, enrollDate: new Date(), grade: ' ' });
+				let newEnroll = await entityManager.create(Enrollment, { sID: student, classCRN: addClass, enrollDate: new Date() });
 				await this.enrollmentRepository.save(newEnroll)
 			}
 		} catch (error) {

@@ -802,8 +802,7 @@ createConnection({
 				let newEnroll = connection.manager.create(Enrollment, {
 					sID: stu,
 					classCRN: newClass,
-					enrollDate: "7/30/2020",
-					grade: 'A'
+					enrollDate: "7/30/2020"
 				})
 
 				await connection.manager.save(newEnroll);
