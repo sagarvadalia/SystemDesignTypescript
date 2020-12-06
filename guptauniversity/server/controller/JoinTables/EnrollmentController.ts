@@ -153,6 +153,7 @@ export class EnrollmentController {
 		if (checkEnroll) {
 			return { done: false, msg: "An enrollment with those credentials already exists" }
 		}
+		console.log(addClass)
 
 		try {
 			if (student) {
@@ -162,7 +163,7 @@ export class EnrollmentController {
 						let ugStu = await this.undergradStudentRepository.findOne(student.userID)
 						if (ugStu) {
 							if (ugStu.isFullTime) {
-								//Full Time
+								//Full Time Undergraduate
 								let ftUGStu = await this.ftUndergradstudentRepository.findOne(ugStu.userID)
 
 								if (ftUGStu) {
@@ -185,7 +186,7 @@ export class EnrollmentController {
 								}
 
 							} else {
-								//Part Time
+								//Part Time Undergraduate
 								let ptUGStu = await this.ptUndergradstudentRepository.findOne(student.userID)
 
 								if (ptUGStu) {
@@ -232,7 +233,7 @@ export class EnrollmentController {
 						let gStu = await this.gradStudentRepository.findOne(student.userID)
 						if (gStu) {
 							if (gStu.isFullTime) {
-								//Full Time
+								//Full Time Graduate
 								let ftGStu = await this.ftGradstudentRepository.findOne(student.userID)
 
 								if (ftGStu) {
@@ -254,7 +255,7 @@ export class EnrollmentController {
 									return { done: true, msg: ftGStu.userID + ": FTG's new class was saved successfully" }
 								}
 							} else {
-								//Part Time
+								//Part Time Graduate
 								let ptGStu = await this.ptGradstudentRepository.findOne(student.userID)
 
 								if (ptGStu) {
@@ -266,9 +267,8 @@ export class EnrollmentController {
 										ptGStu.isFullTime = true;
 										ptGStu.maxCreditsAllowed = 16;
 										ptGStu.minCreditsAllowed = 12;
-										console.log(ptGStu)
+
 										let ftGStu = entityManager.create(GraduateFullTime, { ...ptGStu, isDorming: false });
-										console.log(ftGStu)
 
 										//Enroll them
 										let newEnroll = await entityManager.create(Enrollment, { sID: ftGStu, classCRN: addClass, enrollDate: new Date() });
@@ -290,7 +290,7 @@ export class EnrollmentController {
 
 									//Update and store the student's currentCredits
 									ptGStu.currentCredits = ptGStu.currentCredits + 4;
-									console.log(ptGStu.currentCredits)
+
 									this.ptGradstudentRepository.save(ptGStu);
 									this.gradStudentRepository.save(ptGStu);
 									this.studentRepository.save(ptGStu);
@@ -309,4 +309,135 @@ export class EnrollmentController {
 			console.error(error);
 		}
 	}
+
+	async dropClass(request: Request, response: Response, next: NextFunction) {
+		//Give me an enrollID and I'll remove it while handling credits and PT/FT constraints. I RETURN AN OBJECT  {done(bool), msg(string)}
+		let thisEnroll = await this.enrollmentRepository.findOne(request.params.enrollID);
+		const entityManager = getManager();
+
+		try {
+			if (thisEnroll) {
+				let student = await this.studentRepository.findOne(thisEnroll.sID);
+				let addClass = await this.classRepository.findOne(thisEnroll.classCRN);
+
+				if (student && addClass) {
+					//Have to get the student child for credit information
+					if (student.studentType == 'undergraduate') {
+						//Undergraduate
+						let ugStu = await this.undergradStudentRepository.findOne(student.userID);
+						if (ugStu) {
+							if (ugStu.isFullTime) {
+								//Undergraduate Full Time
+								let ftUGStu = await this.ftUndergradstudentRepository.findOne(ugStu.userID);
+								if (ftUGStu) {
+									//If 16c, make it 12, drop the enrollment
+									if (ftUGStu.currentCredits == 16) {
+										ftUGStu.currentCredits = 12;
+
+										this.enrollmentRepository.remove(thisEnroll);
+										this.ftUndergradstudentRepository.save(ftUGStu);
+										this.undergradStudentRepository.save(ftUGStu);
+										this.studentRepository.save(ftUGStu);
+
+										return { done: true, msg: ftUGStu.userID + ': Class dropped successfully' }
+									}
+									//If 12c, make it 8, make student ptUG, drop enrollment
+									ftUGStu.currentCredits = 8;
+									ftUGStu.maxCreditsAllowed = 11;
+									ftUGStu.isFullTime = false;
+									const { isDorming, ...rest } = ftUGStu
+									let ptUGStu = { ...rest }
+
+									this.ptUndergradstudentRepository.save(ptUGStu)
+									this.undergradStudentRepository.save(ptUGStu)
+									this.studentRepository.save(ptUGStu)
+									this.ftUndergradstudentRepository.remove(ftUGStu)
+									this.enrollmentRepository.remove(thisEnroll);
+
+									return { done: true, msg: ptUGStu.userID + ': Class dropped successfully. Student is now part-time' }
+								}
+							} else {
+								//Undergraduate Part Time
+								let ptUGStu = await this.ptUndergradstudentRepository.findOne(ugStu.userID);
+								if (ptUGStu) {
+									//currentCredits - 4
+									ptUGStu.currentCredits = ptUGStu.currentCredits - 4;
+
+									this.ptUndergradstudentRepository.save(ptUGStu)
+									this.undergradStudentRepository.save(ptUGStu)
+									this.studentRepository.save(ptUGStu)
+									this.enrollmentRepository.remove(thisEnroll);
+
+									if (ptUGStu.currentCredits == 0) {
+										return { done: true, msg: ptUGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
+									}
+									return { done: true, msg: ptUGStu.userID + ': Class dropped successfully.' }
+								}
+							}
+						}
+					} else {
+						//Graduate
+						let gStu = await this.gradStudentRepository.findOne(student.userID);
+						if (gStu) {
+							if (gStu.isFullTime) {
+								//Graduate Full Time
+								let ftGStu = await this.ftGradstudentRepository.findOne(gStu.userID);
+								if (ftGStu) {
+									//If 16c, make it 12, drop the enrollment
+									if (ftGStu.currentCredits == 16) {
+										ftGStu.currentCredits = 12;
+
+										this.enrollmentRepository.remove(thisEnroll);
+										this.ftGradstudentRepository.save(ftGStu);
+										this.gradStudentRepository.save(ftGStu);
+										this.studentRepository.save(ftGStu);
+
+										return { done: true, msg: ftGStu.userID + ': Class dropped successfully' }
+									}
+									//If 12c, make it 8, make student ptUG, drop enrollment
+									ftGStu.currentCredits = 8;
+									ftGStu.maxCreditsAllowed = 11;
+									ftGStu.isFullTime = false;
+									const { isDorming, ...rest } = ftGStu
+									let ptGStu = { ...rest }
+
+									this.ptGradstudentRepository.save(ptGStu)
+									this.gradStudentRepository.save(ptGStu)
+									this.studentRepository.save(ptGStu)
+									this.ftGradstudentRepository.remove(ftGStu)
+									this.enrollmentRepository.remove(thisEnroll);
+
+									return { done: true, msg: ptGStu.userID + ': Class dropped successfully. Student is now part-time' }
+								}
+							} else {
+								//Graduate Part Time
+								let ptGStu = await this.ptGradstudentRepository.findOne(gStu.userID);
+
+								if (ptGStu) {
+									//currentCredits - 4
+									ptGStu.currentCredits = ptGStu.currentCredits - 4;
+
+									this.ptGradstudentRepository.save(ptGStu)
+									this.gradStudentRepository.save(ptGStu)
+									this.studentRepository.save(ptGStu)
+									this.enrollmentRepository.remove(thisEnroll);
+
+									if (ptGStu.currentCredits == 0) {
+										return { done: true, msg: ptGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
+									}
+									return { done: true, msg: ptGStu.userID + ': Class dropped successfully.' }
+								}
+							}
+						}
+					}
+				}
+				return { done: false, msg: 'This should NEVER happen' };
+			} else {
+				return { done: false, msg: 'No enrollment found with that ID' };
+			}
+		} catch (err) {
+			console.error(err);
+		}
+	}
 }
+

@@ -986,7 +986,11 @@ export const Routes = [
 	},
 	{
 		method: 'delete',
-	route: '/api/enrollment/delete/:enrollmentID', controller:EnrollmentController, action: 'remove'}, {
+		route: '/api/enrollment/delete/:enrollmentID',
+		controller: EnrollmentController,
+		action: 'remove'
+	},
+	{
 		method: 'get',
 		route: '/api/addmajor/:sID/:majorID',
 		controller: StudentMajorController,
@@ -998,4 +1002,11 @@ export const Routes = [
 		controller: StudentMajorController,
 		action: 'dropMajor',
 	},
+	{
+		method: 'get',
+		route: '/api/drop/:enrollID',
+		controller: EnrollmentController,
+		action: 'dropClass',
+	},
+
 ];
