@@ -412,8 +412,7 @@ export class EnrollmentController {
 							} else {
 								//Graduate Part Time
 								let ptGStu = await this.ptGradstudentRepository.findOne(gStu.userID);
-								console.log('here');
-								console.log(ptGStu)
+
 								if (ptGStu) {
 									//currentCredits - 4
 									ptGStu.currentCredits = ptGStu.currentCredits - 4;
