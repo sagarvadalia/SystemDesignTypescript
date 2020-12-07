@@ -9,6 +9,15 @@ export default function MajorTable() {
 	const [state, setState] = useContext(LoginContext);
 
 	const [majors, setMajors] = useState([{ majorID: {}, majorID: { department: {} } }]);
+	async function dropMajor(majorID) {
+		let removed = await axios.get(`/api/removeMajor/${state.user.userID}/${majorID}`);
+
+		let result = await axios.get(`/api/viewMajors/${state.user.userID}`);
+		if (!removed.data.done) {
+			alert(removed.message);
+		}
+		setMajors(result.data);
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/viewMajors/${state.user.userID}`);
@@ -36,6 +45,15 @@ export default function MajorTable() {
 							title: 'Date Declared',
 							field: 'dateDeclared',
 							render: (rowData) => <div>{new Date(rowData.dateDeclared).toDateString()}</div>,
+						},
+						{
+							title: 'Drop Major Link',
+							field: '',
+							render: (rowData) => (
+								<div>
+									<Button onClick={() => dropMajor(rowData.majorID.majorID)}>Drop this Major</Button>
+								</div>
+							),
 						},
 					]}
 					data={majors}
