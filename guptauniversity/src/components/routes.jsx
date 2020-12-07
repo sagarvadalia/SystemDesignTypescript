@@ -21,6 +21,7 @@ import Majors from './Student/Majors';
 import Registration from './Student/Registration';
 import CourseDetails from './Utils/CourseDetails';
 import Minors from './Student/Minors';
+import MajorReqsTable from './Student/MajorReqsTable';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -35,6 +36,7 @@ export const Routes = ({}) => {
 			<Route path="/studentSchedule/:semester" component={StudentSchedule} />
 			<Route exact path="/" component={Homepage} />
 			<Route exact path="/majors" component={Majors} />
+			<Route exact path="/majorRequirements/:majorID" component={MajorReqsTable} />
 			<Route exact path="/minors" component={Minors} />
 			<Route exact path="/courses/:courseID" component={CourseDetails} />
 			{/* we need to change this to match the student id */}

@@ -31,7 +31,13 @@ export default function Majors() {
 				<MaterialTable
 					title={<div>List of All Majors</div>}
 					columns={[
-						{ title: 'Name', field: 'majorName' },
+						{
+							title: 'Name',
+							field: 'majorName',
+							render: (rowData) => (
+								<Link to={`/majorRequirements/${rowData.majorID}`}>{rowData.majorName}</Link>
+							),
+						},
 						{
 							title: 'Add Link',
 							field: 'majorID',

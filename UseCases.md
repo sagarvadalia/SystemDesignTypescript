@@ -283,7 +283,7 @@ Exit Condition
 
 Information is sent to department head for approval
 ## NOT DONE
-
+## MAJOR IS DONE
 Student wants to view major/minor requirements
 
 Entry Condition
