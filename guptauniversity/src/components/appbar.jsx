@@ -108,7 +108,7 @@ export default function PersistentDrawerLeft() {
 					[classes.appBarShift]: open,
 				})}
 			>
-				<Toolbar className={"flex-between"}>
+				<Toolbar className={'flex-between'}>
 					<IconButton
 						color="inherit"
 						aria-label="open drawer"
@@ -163,21 +163,21 @@ export default function PersistentDrawerLeft() {
 				<Divider />
 				<div>
 					<List>
-						<Link to={'academicCalendar'}>
+						<Link to={'/academicCalendar'}>
 							<ListItem button key={'Academic Calendar'}>
 								<ListItemText primary={'Academic Calendar'}></ListItemText>
 							</ListItem>
 						</Link>
 					</List>
 					<List>
-						<Link to={'course-catalog'}>
+						<Link to={'/course-catalog'}>
 							<ListItem button key={'course-catalog'}>
 								<ListItemText primary={'course-catalog'}></ListItemText>
 							</ListItem>
 						</Link>
 					</List>
 					<List>
-						<Link to={'masterSchedule/9'}>
+						<Link to={'/masterSchedule/9'}>
 							<ListItem button key={'masterSchedule'}>
 								<ListItemText primary={'Current Master Schedule'}></ListItemText>
 							</ListItem>

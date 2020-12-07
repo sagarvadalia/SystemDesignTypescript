@@ -10,6 +10,8 @@ import { LoginContext } from '../../LoginContext';
 import axios from 'axios';
 import MaterialTable from 'material-table';
 import { Button } from '@material-ui/core';
+import Majors from './Majors';
+import MajorTable from './MajorTable';
 
 function TabPanel(props) {
 	const [state, setState] = useContext(LoginContext);
@@ -168,10 +170,10 @@ export default function SimpleTabs() {
 				</div>
 			</TabPanel>
 			<TabPanel value={value} index={2}>
-				Item Three
+				<Majors></Majors>
 			</TabPanel>
 			<TabPanel value={value} index={3}>
-				Item One
+				<MajorTable></MajorTable>
 			</TabPanel>
 			<TabPanel value={value} index={4}>
 				Item Two

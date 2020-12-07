@@ -85,9 +85,10 @@ export class StudentMajorController {
         try {
             let currentMajor = await this.studentMajorRepository.find({ where: { sID: student, majorID: major } });
             this.studentMajorRepository.remove(currentMajor);
-
+            return {done: true}
         } catch (error) {
             console.error(error);
+            return {done: false, message: error}
         }
     }
 }
