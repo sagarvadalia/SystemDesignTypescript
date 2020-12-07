@@ -39,7 +39,15 @@ export default function MajorTable() {
 						</div>
 					}
 					columns={[
-						{ title: 'Major Name', field: 'majorID.majorName' },
+						{
+							title: 'Major Name',
+							field: 'majorID.majorName',
+							render: (rowData) => (
+								<Link to={`/majorRequirements/${rowData.majorID.majorID}`}>
+									{rowData.majorID.majorName}
+								</Link>
+							),
+						},
 						{ title: 'Department name', field: 'majorID.department.deptName' },
 						{
 							title: 'Date Declared',
