@@ -40,7 +40,7 @@ import { StudentHistory } from '../entity/StudentRelated/StudentHistory';
 import { Advisor } from '../entity/JoinTables/Advisor';
 import { StudentHold } from '../entity/JoinTables/StudentHold';
 import { Enrollment } from '../entity/JoinTables/Enrollment';
-import {MajorRequirement} from '../entity/ClassRelated/MajorRequirement'
+import { MajorRequirement } from '../entity/ClassRelated/MajorRequirement'
 
 
 
@@ -786,39 +786,39 @@ createConnection({
 		}
 
 		//--------ENROLLMENT----------------ya boi Ty
-		// const stuArr = await connection.manager.find(Student, { where: { sGradYear: 2024 } });
+		const stuArr = await connection.manager.find(Student, { where: { sGradYear: 2024 } });
 
-		// //For each student with gradYear 2024
-		// for (i = 0; i < stuArr.length; i++) {
-		// 	let firstSemester = [121, 1, 136, 99] 	//English1, AmerPeop1, CS1, Chem1
-		// 	const stu = await connection.manager.findOne(Student, stuArr[i].userID);
+		//For each student with gradYear 2024
+		for (i = 0; i < stuArr.length; i++) {
+			let firstSemester = [121, 1, 136, 99] 	//English1, AmerPeop1, CS1, Chem1
+			const stu = await connection.manager.findOne(Student, stuArr[i].userID);
 
-		// 	//For each of the 4 classes
-		// 	for (let j = 0; j < firstSemester.length; j++) {
-		// 		const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-		// 		const sem9 = await connection.manager.findOne(Semester, 9);
+			//For each of the 4 classes
+			for (let j = 0; j < firstSemester.length; j++) {
+				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
+				const sem9 = await connection.manager.findOne(Semester, 9);
 
-		// 		const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem9 } });
-		// 		let newEnroll = connection.manager.create(Enrollment, {
-		// 			sID: stu,
-		// 			classCRN: newClass,
-		// 			enrollDate: "7/30/2020"
-		// 		})
+				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem9 } });
+				let newEnroll = connection.manager.create(Enrollment, {
+					sID: stu,
+					classCRN: newClass,
+					enrollDate: "7/30/2020"
+				})
 
-		// 		await connection.manager.save(newEnroll);
-		// 	}
-		// }
+				await connection.manager.save(newEnroll);
+			}
+		}
 
 		//--------MajorReqs----------------
 		const majorReqSeed = seeds.majorReqs.default
-		for(i = 0; i < majorReqSeed.length; i++){
-			try{
+		for (i = 0; i < majorReqSeed.length; i++) {
+			try {
 				const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
 				const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
-				const majorReqs = await connection.manager.create(MajorRequirement, {gradeRequired: 'C', majorID: major, courseID: course});
+				const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
 				// console.log(majorReqs);
 				await connection.manager.save(majorReqs);
-			}catch(error){
+			} catch (error) {
 				console.error(error);
 			}
 		}
