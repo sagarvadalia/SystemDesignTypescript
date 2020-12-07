@@ -22,7 +22,7 @@ export class Major extends BaseEntity {
 	public majorrequirement!: MajorRequirement[];
 
 	// One Department has many majors
-	@ManyToOne(() => Department, (department) => department.majors, {})
+	@ManyToOne(() => Department, (department) => department.majors, {eager:true})
 	@JoinColumn({ name: 'deptID' })
 	public department!: Department;
 }
