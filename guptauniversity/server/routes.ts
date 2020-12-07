@@ -1014,7 +1014,7 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'dropClass',
 	},
-	//Monday 12/7 
+	//Monday 12/7
 	{
 		method: 'get',
 		route: '/api/changeteacher/:classCRN/:fID',

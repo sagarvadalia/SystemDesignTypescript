@@ -63,7 +63,13 @@ export default function MasterSchedule() {
 					}
 					columns={[
 						{ title: 'Class CRN', field: 'classCRN' },
-						{ title: 'Course Name', field: 'courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
+							),
+						},
 						{ title: 'Course Description', field: 'courseID.courseDesc' },
 						{ title: 'Credits', field: 'courseID.numOfCredits' },
 						{ title: 'Department', field: 'courseID.deptID.deptName' },

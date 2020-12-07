@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany } from 'typeorm';
 import { Course } from './Course';
 
 @Entity()
@@ -20,7 +20,7 @@ export class Prerequisite extends BaseEntity {
 	public courseID!: Course;
 
 	//One Prerequisite has many courses
-	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
+	@OneToMany(() => Course, (course: Course) => course, { primary: true })
 	@JoinColumn({ name: 'prereqID' })
-	public prereqID!: Course;
+	public prereqID!: Course[];
 }

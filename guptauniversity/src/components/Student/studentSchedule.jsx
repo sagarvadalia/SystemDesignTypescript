@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 import axios from 'axios';
 import { LoginContext } from '../../LoginContext';
 import { Button } from '@material-ui/core';
-
+import { Link, useParams } from 'react-router-dom';
 export default function StudentSchedule() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, fID: {}, slotID: { days: '', periodID: {} } }]);
 	const [state, setState] = useContext(LoginContext);
@@ -61,7 +61,15 @@ export default function StudentSchedule() {
 					}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'classCRN.courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData.classCRN.courseID.courseID}`}>
+									{rowData.classCRN.courseID.courseName}
+								</Link>
+							),
+						},
 						{ title: 'Course Description', field: 'classCRN.courseID.courseDescription' },
 						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 						{ title: 'Teacher Name', field: 'classCRN.fID.userName' },

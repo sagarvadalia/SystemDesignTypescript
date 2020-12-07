@@ -17,9 +17,11 @@ import StudentAdvisors from './Student/studentAdvisors';
 import FacultySchedule from './Faculty/FacultySchedule';
 import FacultyAdvisees from './Faculty/FacultyAdvisees';
 import StudentDetails from './Faculty/StudentDetails';
-import Majors from './Student/Majors'
-import Registration from './Student/Registration'
-export const Routes = ({ }) => {
+import Majors from './Student/Majors';
+import Registration from './Student/Registration';
+import CourseDetails from './Utils/CourseDetails';
+import Minors from './Student/Minors';
+export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
 	return (
@@ -33,6 +35,8 @@ export const Routes = ({ }) => {
 			<Route path="/studentSchedule/:semester" component={StudentSchedule} />
 			<Route exact path="/" component={Homepage} />
 			<Route exact path="/majors" component={Majors} />
+			<Route exact path="/minors" component={Minors} />
+			<Route exact path="/courses/:courseID" component={CourseDetails} />
 			{/* we need to change this to match the student id */}
 
 			{state?.user?.userType === 'Student' && (

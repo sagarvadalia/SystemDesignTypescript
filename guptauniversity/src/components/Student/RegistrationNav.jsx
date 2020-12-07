@@ -12,7 +12,9 @@ import MaterialTable from 'material-table';
 import { Button } from '@material-ui/core';
 import Majors from './Majors';
 import MajorTable from './MajorTable';
-
+import { Link, useParams } from 'react-router-dom';
+import Minors from './Minors';
+import MinorTable from './MinorTable';
 function TabPanel(props) {
 	const [state, setState] = useContext(LoginContext);
 	const { children, value, index, ...other } = props;
@@ -116,7 +118,13 @@ export default function SimpleTabs() {
 					title={<div>Class List</div>}
 					columns={[
 						{ title: 'Class CRN', field: 'classCRN' },
-						{ title: 'Course Name', field: 'courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
+							),
+						},
 						{ title: 'Course Description', field: 'courseID.courseDesc' },
 						{ title: 'Credits', field: 'courseID.numOfCredits' },
 						{ title: 'Department', field: 'courseID.deptID.deptName' },
@@ -146,7 +154,15 @@ export default function SimpleTabs() {
 							title="Current Semester Schedule"
 							columns={[
 								{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-								{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+								{
+									title: 'Course Name',
+									field: 'classCRN.courseID.courseName',
+									render: (rowData) => (
+										<Link to={`/courses/${rowData.classCRN.courseID.courseID}`}>
+											{rowData.classCRN.courseID.courseName}
+										</Link>
+									),
+								},
 								{ title: 'Course Description', field: 'classCRN.courseID.courseDescription' },
 								{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 								{ title: 'Teacher Name', field: 'classCRN.fID.userName' },
@@ -176,10 +192,10 @@ export default function SimpleTabs() {
 				<MajorTable></MajorTable>
 			</TabPanel>
 			<TabPanel value={value} index={4}>
-				Item Two
+				<Minors></Minors>
 			</TabPanel>
 			<TabPanel value={value} index={5}>
-				Item Three
+				<MinorTable></MinorTable>
 			</TabPanel>
 		</div>
 	);
