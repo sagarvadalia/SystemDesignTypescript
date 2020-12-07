@@ -1014,5 +1014,35 @@ export const Routes = [
 		controller: EnrollmentController,
 		action: 'dropClass',
 	},
-
+	//Monday 12/7 
+	{
+		method: 'get',
+		route: '/api/changeteacher/:classCRN/:fID',
+		controller: ClassController,
+		action: 'changeTeacher',
+	},
+	{
+		method: 'get',
+		route: '/api/changeroom/:classCRN/:roomID',
+		controller: ClassController,
+		action: 'changeRoom',
+	},
+	{
+		method: 'get',
+		route: '/api/viewMinors/:sID',
+		controller: StudentMinorController,
+		action: 'findAllMinors',
+	},
+	{
+		method: 'get',
+		route: '/api/addminor/:sID/:minorID',
+		controller: StudentMinorController,
+		action: 'declareMinor',
+	},
+	{
+		method: 'get',
+		route: '/api/removeminor/:sID/:minorID',
+		controller: StudentMinorController,
+		action: 'dropMinor',
+	},
 ];
