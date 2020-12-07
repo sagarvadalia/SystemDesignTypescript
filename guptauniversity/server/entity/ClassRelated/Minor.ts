@@ -19,7 +19,7 @@ export class Minor extends BaseEntity {
 	@IsNotEmpty({ message: 'Name must be provided' })
 	minorName: string;
 
-	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.minorID, { cascade: true })
+	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.minorID)
 	public studentMinors!: StudentMinor[];
 
 	//Relationship to MinorRequirement
@@ -27,7 +27,7 @@ export class Minor extends BaseEntity {
 	public minorrequirement!: MinorRequirement[];
 
 	// One Department has many minors
-	@ManyToOne(() => Department, (department) => department.minors, {})
+	@ManyToOne(() => Department, (department) => department.minors, {eager:true})
 	@JoinColumn({ name: 'deptID' })
 	public department!: Department;
 }

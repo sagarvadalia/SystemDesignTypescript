@@ -10,11 +10,11 @@ export class StudentMinor extends BaseEntity {
 		Object.assign(this, StudentMinor);
 	}
 
-	@ManyToOne(() => Minor, (minors) => minors.minorID, { primary: true })
+	@ManyToOne(() => Minor, (minors) => minors.minorID, { primary: true, eager:true })
 	@JoinColumn({ name: 'minorID', referencedColumnName: 'minorID' })
 	public minorID!: Minor;
 
-	@ManyToOne(() => Student, (students) => students.userID, { primary: true })
+	@ManyToOne(() => Student, (students) => students.userID, { primary: true, eager:true })
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
 

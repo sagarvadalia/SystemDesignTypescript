@@ -2,12 +2,14 @@ import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
 import { LoginContext } from '../../LoginContext';
+import { Link, useParams } from 'react-router-dom';
 export default function StudentTranscript() {
 	const [data, setData] = useState([{ semesterID: {} }]);
 	const [state, setState] = useContext(LoginContext);
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/enrollment/${state.user.userID}`);
+			console.log(result.data);
 
 			setData(result.data);
 		};
@@ -28,7 +30,13 @@ export default function StudentTranscript() {
 						{ title: 'Class Number', field: 'classNumber' },
 						{ title: 'Semester Season', field: 'semester.semesterName' },
 						{ title: 'Year', field: 'semester.yearNum' },
-						{ title: 'Course Name', field: 'courseName' },
+						{
+							title: 'Course Name',
+							field: 'courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData.classCRN.courseID.courseID}`}>{rowData.courseName}</Link>
+							),
+						},
 						{ title: 'Grade', field: 'finalGrade' },
 					]}
 					data={data}
