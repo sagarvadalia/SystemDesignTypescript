@@ -35,6 +35,7 @@ import { EnrollmentController } from './controller/JoinTables/EnrollmentControll
 import { AdvisorController } from './controller/JoinTables/AdvisorController';
 import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
 import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
+import { MajorReqController } from './controller/CourseRelated/MajorReqController';
 
 
 export const Routes = [
@@ -1044,5 +1045,11 @@ export const Routes = [
 		route: '/api/removeminor/:sID/:minorID',
 		controller: StudentMinorController,
 		action: 'dropMinor',
+	},
+	{
+		method: 'get',
+		route: '/api/majorreqs/:majorID',
+		controller: MajorReqController,
+		action: 'majReqByMaj',
 	},
 ];
