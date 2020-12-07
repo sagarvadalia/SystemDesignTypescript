@@ -1,4 +1,4 @@
-import { getManager, getRepository } from 'typeorm';
+import { AdvancedConsoleLogger, getManager, getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
 import { StudentMajor } from '../../entity/JoinTables/StudentMajor';
 import { validate, validateOrReject } from 'class-validator';
@@ -38,6 +38,18 @@ export class StudentMajorController {
         } catch (error) {
             console.error(error);
         }
+    }
+    async findAllMajors(request: Request, response: Response, next: NextFunction) {
+        console.log('herehrehre');
+        const student = await this.studentRepository.findOne(request.params.sID);
+
+       try {
+           let currentMajors = await this.studentMajorRepository.find({ where: { sID: student } });
+           console.log(currentMajors);
+           return currentMajors
+       } catch (error) {
+           console.error(error);
+       }
     }
 
     async declareMajor(request: Request, response: Response, next: NextFunction) {

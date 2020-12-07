@@ -57,12 +57,19 @@ export default function SimpleTabs() {
 	async function addClass(classCRN) {
 		let result = await axios(`/api/enroll/${state.user.userID}/${classCRN}`);
 		console.log(result);
+		if (!result.data.done) {
+			alert(result.data.msg);
+		}
 		let currSched = await axios.get(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/9`);
 		setSched(currSched.data);
 	}
 	async function dropClass(enrollmentID) {
 		// console.log(enrollmentID);
-		let result = await axios.delete(`/api/enrollment/delete/${enrollmentID}`);
+		let result = await axios.get(`/api/drop/${enrollmentID}`);
+		if (!result.data.done) {
+			alert(result.data.msg);
+		}
+
 		let currSched = await axios.get(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/9`);
 		setSched(currSched.data);
 	}

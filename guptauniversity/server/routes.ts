@@ -992,6 +992,12 @@ export const Routes = [
 	},
 	{
 		method: 'get',
+		route: '/api/viewMajors/:sID',
+		controller: StudentMajorController,
+		action: 'findAllMajors',
+	},
+	{
+		method: 'get',
 		route: '/api/addmajor/:sID/:majorID',
 		controller: StudentMajorController,
 		action: 'declareMajor',
