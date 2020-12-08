@@ -36,6 +36,7 @@ import { AdvisorController } from './controller/JoinTables/AdvisorController';
 import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
 import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
 import { MajorReqController } from './controller/CourseRelated/MajorReqController';
+import { MinorReqController } from './controller/CourseRelated/MinorReqController';
 
 
 
@@ -1052,5 +1053,12 @@ export const Routes = [
 		route: '/api/majorreqs/:majorID',
 		controller: MajorReqController,
 		action: 'majReqByMaj',
+	},
+	// Tuesday 12/8
+	{
+		method: 'get',
+		route: '/api/minorreqs/:minorID',
+		controller: MinorReqController,
+		action: 'minReqByMin',
 	},
 ];
