@@ -32,7 +32,7 @@ export default function ClassList() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title="Class Modifications"
 					columns={[
 						{ title: 'Course ID', field: 'courseID.courseID' },
 
