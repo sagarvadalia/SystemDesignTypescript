@@ -44,7 +44,7 @@ export class Class extends BaseEntity {
 	public slotID!: TimeSlot;
 
 	//Many Classes belong to one Room
-	@ManyToOne(() => Lecture, (lecture) => lecture.classes)
+	@ManyToOne(() => Lecture, (lecture) => lecture.classes, {eager:true})
 	@JoinColumn({ name: 'roomID' })
 	public roomID!: Lecture;
 

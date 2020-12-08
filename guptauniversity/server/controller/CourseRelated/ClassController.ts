@@ -3,10 +3,14 @@ import { NextFunction, Request, Response } from 'express';
 import { Class } from '../../entity/ClassRelated/Class';
 import { validate, validateOrReject } from 'class-validator';
 import { TimeSlot } from '../../entity/TimeRelated/TimeSlot';
+import { Faculty } from '../../entity/Users/Faculty';
+import { Lecture } from '../../entity/Locations/Lecture';
 
 export class ClassController {
 	private classRepository = getRepository(Class);
 	private timeslotRepository = getRepository(TimeSlot);
+	private facRepository = getRepository(Faculty);
+	private lectureRepository = getRepository(Lecture);
 
 	async inSemester(request: Request, response: Response, next: NextFunction) {
 		try {
@@ -57,6 +61,40 @@ export class ClassController {
 		} catch (error) {
 			console.error(error);
 		}
+	}
+
+	async changeTeacher(request: Request, response: Response, next: NextFunction) {
+		//Give me a classCRN and new fID. I DO NOT check deptIDs
+		let thisClass = await this.classRepository.findOne(request.params.classCRN);
+		let newTeacher = await this.facRepository.findOne(request.params.fID);
+
+		if (newTeacher) {
+			if (thisClass) {
+				thisClass.fID = newTeacher;
+				this.classRepository.save(thisClass);
+
+				return "Teacher of " + thisClass.classCRN + ' has been successfully changed to ' + newTeacher.userID;
+			}
+			return "Class with CRN " + request.params.classCRN + ' not found'
+		}
+		return "No teacher found with id " + request.params.fID
+	}
+
+	async changeRoom(request: Request, response: Response, next: NextFunction) {
+		//Give me a classCRN and new roomID. I DO NOT check for conflicts
+		let thisClass = await this.classRepository.findOne(request.params.classCRN);
+		let newRoom = await this.lectureRepository.findOne(request.params.roomID);
+
+		if (newRoom) {
+			if (thisClass) {
+				thisClass.roomID = newRoom;
+				this.classRepository.save(thisClass);
+
+				return "Room of " + thisClass.classCRN + ' has been successfully changed to ' + newRoom.roomID;
+			}
+			return "Class with CRN " + request.params.classCRN + ' not found'
+		}
+		return "No room found with id " + request.params.newRoom
 	}
 
 

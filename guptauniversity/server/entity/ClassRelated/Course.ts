@@ -4,6 +4,7 @@ import { Department } from '../Locations/Department';
 import { Class } from './Class';
 import { MajorRequirement } from './MajorRequirement';
 import { MinorRequirement } from './MinorRequirement';
+import { Prerequisite } from './Prerequisite';
 
 @Entity()
 export class Course extends BaseEntity {
@@ -32,13 +33,17 @@ export class Course extends BaseEntity {
 	public deptID!: Department;
 
 	//Relationship to MajorRequirement
-	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.courseID, {eager:true})
+	@OneToMany(() => MajorRequirement, (majorrequirement) => majorrequirement.courseID)
 	public majorrequirement!: MajorRequirement[];
 
 	//Relationship to MinorRequirement
-	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.courseID, {eager:true})
+	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.courseID)
 	public minorrequirement!: MinorRequirement[];
 
+
+	// ONE COURSE HAS MANY PREREQS
+	@OneToMany(() => Prerequisite, (prereq: Prerequisite) => prereq.courseID, { primary: true, eager:true })
+	public prereqs!: Prerequisite[];
 	//One Course has many Classes
 	@OneToMany(() => Class, (classes) => classes.courseID)
 	public classes!: Class[];

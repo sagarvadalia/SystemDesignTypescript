@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from '../../LoginContext';
 import { Link } from 'react-router-dom';
 export default function StudentClassList() {
 	const [data, setData] = useState([{ courseID: {}, semesterID: {} }]);
@@ -29,7 +29,13 @@ export default function StudentClassList() {
 						{ title: 'classCRN', field: 'classCRN' },
 						{ title: 'class section', field: 'classSection' },
 						{ title: 'Course ID', field: 'courseID.courseID' },
-						{ title: 'Course Name', field: 'courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
+							),
+						},
 						{ title: 'Semester Season', field: 'semesterID.semesterName' },
 						{ title: 'Semester Year', field: 'semesterID.yearNum' },
 						{

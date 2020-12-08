@@ -64,7 +64,13 @@ export default function FacultySchedule() {
 						{ title: 'classCRN', field: 'classCRN' },
 						{ title: 'class section', field: 'classSection' },
 						{ title: 'Course ID', field: 'courseID.courseID' },
-						{ title: 'Course Name', field: 'courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
+							),
+						},
 						{ title: 'Semester Season', field: 'semesterID.semesterName' },
 						{ title: 'Semester Year', field: 'semesterID.yearNum' },
 						{

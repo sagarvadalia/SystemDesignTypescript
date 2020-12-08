@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from '../../LoginContext';
+import { Link } from 'react-router-dom';
 
 export default function ClassDetails() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, semesterID: {}, sID: {} }]);
@@ -27,8 +28,9 @@ export default function ClassDetails() {
 					title="Basic Sorting Preview"
 					columns={[
 						{ title: 'Student ID', field: 'sID.userID', editable: 'never' },
-						{ title: 'Name', field: 'sID.userName', editable: 'never' },
-						{ title: 'Grade', field: 'grade', editable: 'onUpdate' },
+						{ title: 'Name', field: 'sID.userName', editable: 'never', render: (rowData) => <Link to={`/classlist/studentDetails/${rowData.sID.userID}`}>{rowData.sID.userName}</Link> },
+						{ title: 'Midterm Grade', field: 'midtermGrade', editable: 'onUpdate' },
+						{ title: 'Final Grade', field: 'finalGrade', editable: 'onUpdate' },
 					]}
 					data={data}
 					options={{
@@ -39,22 +41,35 @@ export default function ClassDetails() {
 							const dataUpdate = [...data];
 							const index = oldData.tableData.id;
 							console.log(newData);
-							if (typeof newData.grade === 'string') {
-								newData.grade = newData.grade.toUpperCase();
+							if (typeof newData.finalGrade === 'string') {
+								newData.finalGrade = newData.finalGrade.toUpperCase();
 								let stringToCheck = 'ABCDF';
 
 								dataUpdate[index] = newData;
 								console.log(newData);
-								if (stringToCheck.includes(newData.grade)) {
+								if (stringToCheck.includes(newData.finalGrade)) {
 									await setData([...dataUpdate]);
-									await axios.post('/api/enrollment/changeGrade', {
+									await axios.post('/api/enrollment/finalGrade', {
 										classID: oldData.classCRN.classCRN,
 										sID: oldData.sID.userID,
-										grade: newData.grade,
+										grade: newData.finalGrade,
 									});
 								}
 							} else {
 								console.log('INVALID');
+							}
+							if (typeof newData.midtermGrade === 'string') {
+								newData.midtermGrade = newData.midtermGrade.toUpperCase();
+								let stringToCheck = 'SU';
+								dataUpdate[index] = newData;
+								if (stringToCheck.includes(newData.midtermGrade)) {
+									await setData([...dataUpdate]);
+									await axios.post('/api/enrollment/midtermGrade', {
+										classID: oldData.classCRN.classCRN,
+										sID: oldData.sID.userID,
+										grade: newData.midtermGrade,
+									});
+								}
 							}
 						},
 					}}

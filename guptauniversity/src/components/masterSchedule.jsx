@@ -12,7 +12,7 @@ export default function MasterSchedule() {
 		console.log(data);
 	}
 
-	const [data, setData] = useState([{ courseID: { deptID: {} }, fID: {} }]);
+	const [data, setData] = useState([{ courseID: { deptID: {} }, fID: {}, roomID: { buildings: {} } }]);
 	let { semester } = useParams();
 	semester = parseInt(semester);
 	let semesterVal = {
@@ -63,11 +63,19 @@ export default function MasterSchedule() {
 					}
 					columns={[
 						{ title: 'Class CRN', field: 'classCRN' },
-						{ title: 'Course Name', field: 'courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
+							),
+						},
 						{ title: 'Course Description', field: 'courseID.courseDesc' },
 						{ title: 'Credits', field: 'courseID.numOfCredits' },
 						{ title: 'Department', field: 'courseID.deptID.deptName' },
 						{ title: 'Teacher', field: 'fID.userName' },
+						{ title: 'Building Name', field: 'roomID.buildings.buildingName' },
+						{ title: 'Room Number', field: 'roomID.roomNum' },
 					]}
 					data={data}
 					options={{

@@ -29,11 +29,11 @@ export class UserController {
 			if (email && typeof password === 'string') {
 				let user = await this.userRepository.findOne({ where: { userEmail: email } })
 
-				if (user?.comparePassword(password, 0)) {
+				if ((await user?.comparePassword(password, 0)).isMatch) {
 					console.log("Password Verified")
 
 					//Students
-					if (user.userType === 'Student') {
+					if (user?.userType === 'Student') {
 						let stuUGPT = await this.undergraduatePartTime.findOne({ where: { userEmail: email } })
 						let stuUGFT = await this.undergraduateFullTime.findOne({ where: { userEmail: email } })
 						let stuGPT = await this.graduatePartTime.findOne({ where: { userEmail: email } })
@@ -51,7 +51,7 @@ export class UserController {
 					}
 
 					// Faculty
-					if (user.userType === 'Faculty') {
+					if (user?.userType === 'Faculty') {
 						let facPT = await this.facultyPartTime.findOne({ where: { userEmail: email } })
 						let facFT = await this.facultyFullTime.findOne({ where: { userEmail: email } })
 
@@ -62,13 +62,13 @@ export class UserController {
 					}
 
 					//Admin
-					if (user.userType === 'Administrator') {
+					if (user?.userType === 'Administrator') {
 						let admin = await this.administrator.findOne({ where: { userEmail: email } })
 						return admin
 					}
 
 					//Researcher
-					if (user.userType === 'Researcher') {
+					if (user?.userType === 'Researcher') {
 						let research = await this.researcher.findOne({ where: { userEmail: email } })
 						return research
 					}

@@ -1,10 +1,10 @@
-import { getManager, getRepository } from 'typeorm';
+import { AdvancedConsoleLogger, getManager, getRepository } from 'typeorm';
 import { NextFunction, Request, Response } from 'express';
 import { StudentMajor } from '../../entity/JoinTables/StudentMajor';
 import { validate, validateOrReject } from 'class-validator';
 import { Student } from '../../entity/Users/Student';
 import { Major } from '../../entity/ClassRelated/Major';
-import { Minor } from '../../entity/ClassRelated/Minor';
+
 
 export class StudentMajorController {
     private studentMajorRepository = getRepository(StudentMajor);
@@ -39,6 +39,19 @@ export class StudentMajorController {
         } catch (error) {
             console.error(error);
         }
+    }
+  
+    async findAllMajors(request: Request, response: Response, next: NextFunction) {
+        console.log('herehrehre');
+        const student = await this.studentRepository.findOne(request.params.sID);
+
+       try {
+           let currentMajors = await this.studentMajorRepository.find({ where: { sID: student } });
+           console.log(currentMajors);
+           return currentMajors
+       } catch (error) {
+           console.error(error);
+       }
     }
 
     async declareMajor(request: Request, response: Response, next: NextFunction) {
@@ -75,30 +88,10 @@ export class StudentMajorController {
             let currentMajor = await this.studentMajorRepository.find({ where: { sID: student, majorID: major } });
             this.studentMajorRepository.remove(currentMajor);
 
+            return {done: true}
         } catch (error) {
             console.error(error);
+            return {done: false, message: error}
         }
     }
-
-    // async viewMajor(request: Request, response: Response, next: NextFunction){
-    //   try{
-    //         let studentMajor = await this.studentMajorRepository.find({where: { sID: request.params.id } } );
-    //         let major: Major[] = [];
-
-    //         if(studentMajor){
-    //             for(let i = 0; i < studentMajor.length; i++){
-    //                 let majorOne = await this.majorRepository.findOne({where:{majorID: studentMajor[i].majorID.majorID}});
-    //                 console.log(major);
-    //                 if(majorOne){
-    //                     major.push(majorOne);
-    //                 }
-                   
-    //             }
-    //              return major;
-    //         }
-    //     }catch(error){
-    //         console.error(error);
-    //     }
-
-   // }
 }

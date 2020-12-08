@@ -35,6 +35,8 @@ import { EnrollmentController } from './controller/JoinTables/EnrollmentControll
 import { AdvisorController } from './controller/JoinTables/AdvisorController';
 import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
 import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
+import { MajorReqController } from './controller/CourseRelated/MajorReqController';
+
 
 
 export const Routes = [
@@ -985,27 +987,70 @@ export const Routes = [
 		action: 'changeMidtermGrade',
 	},
 	{
-        method: 'get',
-        route: '/api/addmajor/:sID/:majorID',
-        controller: StudentMajorController,
-        action: 'declareMajor',
-    },
-    {
-        method: 'get',
-        route: '/api/removemajor/:sID/:majorID',
-        controller: StudentMajorController,
-        action: 'dropMajor',
+		method: 'delete',
+		route: '/api/enrollment/delete/:enrollmentID',
+		controller: EnrollmentController,
+		action: 'remove'
 	},
 	{
 		method: 'get',
-		route: '/api/viewmajor/:id',
+		route: '/api/viewMajors/:sID',
 		controller: StudentMajorController,
-		action: 'viewMajor',
+		action: 'findAllMajors',
 	},
 	{
 		method: 'get',
-		route: '/api/viewminor/:id',
+		route: '/api/addmajor/:sID/:majorID',
+		controller: StudentMajorController,
+		action: 'declareMajor',
+	},
+	{
+		method: 'get',
+		route: '/api/removemajor/:sID/:majorID',
+		controller: StudentMajorController,
+		action: 'dropMajor',
+	},
+	{
+		method: 'get',
+		route: '/api/drop/:enrollID',
+		controller: EnrollmentController,
+		action: 'dropClass',
+	},
+	//Monday 12/7
+	{
+		method: 'get',
+		route: '/api/changeteacher/:classCRN/:fID',
+		controller: ClassController,
+		action: 'changeTeacher',
+	},
+	{
+		method: 'get',
+		route: '/api/changeroom/:classCRN/:roomID',
+		controller: ClassController,
+		action: 'changeRoom',
+	},
+	{
+		method: 'get',
+		route: '/api/viewMinors/:sID',
 		controller: StudentMinorController,
-		action: 'viewMinor',
+		action: 'findAllMinors',
+	},
+	{
+		method: 'get',
+		route: '/api/addminor/:sID/:minorID',
+		controller: StudentMinorController,
+		action: 'declareMinor',
+	},
+	{
+		method: 'get',
+		route: '/api/removeminor/:sID/:minorID',
+		controller: StudentMinorController,
+		action: 'dropMinor',
+	},
+	{
+		method: 'get',
+		route: '/api/majorreqs/:majorID',
+		controller: MajorReqController,
+		action: 'majReqByMaj',
 	},
 ];
