@@ -39,7 +39,15 @@ export default function MinorTable() {
 						</div>
 					}
 					columns={[
-						{ title: 'minor Name', field: 'minorID.minorName' },
+						{
+							title: 'minor Name',
+							field: 'minorID.minorName',
+							render: (rowData) => (
+								<Link to={`/minorRequirements/${rowData.minorID.minorID}`}>
+									{rowData.minorID.minorName}
+								</Link>
+							),
+						},
 						{ title: 'Department name', field: 'minorID.department.deptName' },
 						{
 							title: 'Date Declared',
