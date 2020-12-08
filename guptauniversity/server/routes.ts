@@ -34,6 +34,7 @@ import { OfficeController } from './controller/Locations/OfficeController';
 import { EnrollmentController } from './controller/JoinTables/EnrollmentController';
 import { AdvisorController } from './controller/JoinTables/AdvisorController';
 import { StudentHoldController } from './controller/JoinTables/StudentHoldController';
+import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
 
 
 export const Routes = [
@@ -982,5 +983,29 @@ export const Routes = [
 		route: '/api/enrollment/midtermgrade',
 		controller: EnrollmentController,
 		action: 'changeMidtermGrade',
+	},
+	{
+        method: 'get',
+        route: '/api/addmajor/:sID/:majorID',
+        controller: StudentMajorController,
+        action: 'declareMajor',
+    },
+    {
+        method: 'get',
+        route: '/api/removemajor/:sID/:majorID',
+        controller: StudentMajorController,
+        action: 'dropMajor',
+	},
+	{
+		method: 'get',
+		route: '/api/viewmajor/:id',
+		controller: StudentMajorController,
+		action: 'viewMajor',
+	},
+	{
+		method: 'get',
+		route: '/api/viewminor/:id',
+		controller: StudentMinorController,
+		action: 'viewMinor',
 	},
 ];
