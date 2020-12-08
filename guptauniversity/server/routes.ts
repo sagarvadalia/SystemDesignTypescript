@@ -223,6 +223,12 @@ export const Routes = [
 		controller: ClassController,
 		action: 'remove',
 	},
+		{
+		method: 'delete',
+		route: '/api/removeClass/:classCRN',
+		controller: ClassController,
+		action: 'removeClass',
+	},
 	{
 		method: 'get',
 		route: '/api/classes/semester/:id',

@@ -23,6 +23,7 @@ import CourseDetails from './Utils/CourseDetails';
 import Minors from './Student/Minors';
 import MajorReqsTable from './Student/MajorReqsTable';
 import MinorReqsTable from './Student/MinorReqsTable';
+import ClassList from './Administrator/ClassList';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -58,6 +59,11 @@ export const Routes = ({}) => {
 					<Route exact path="/classlist/studentDetails" component={ClassDetails} />
 					<Route path="/advisees/" component={FacultyAdvisees} />
 					<Route path="/classlist/studentDetails/:sID" component={StudentDetails} />
+				</Switch>
+			)}
+			{state?.user?.userType === 'Administrator' && (
+				<Switch>
+					<Route exact path="/classlist" component={ClassList} />
 				</Switch>
 			)}
 
