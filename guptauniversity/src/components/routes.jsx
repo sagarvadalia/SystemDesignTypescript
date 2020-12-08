@@ -22,6 +22,8 @@ import Registration from './Student/Registration';
 import CourseDetails from './Utils/CourseDetails';
 import Minors from './Student/Minors';
 import MajorReqsTable from './Student/MajorReqsTable';
+import MinorReqsTable from './Student/MinorReqsTable';
+import ClassList from './Administrator/ClassList';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -37,6 +39,7 @@ export const Routes = ({}) => {
 			<Route exact path="/" component={Homepage} />
 			<Route exact path="/majors" component={Majors} />
 			<Route exact path="/majorRequirements/:majorID" component={MajorReqsTable} />
+			<Route exact path="/minorRequirements/:minorID" component={MinorReqsTable} />
 			<Route exact path="/minors" component={Minors} />
 			<Route exact path="/courses/:courseID" component={CourseDetails} />
 			{/* we need to change this to match the student id */}
@@ -56,6 +59,11 @@ export const Routes = ({}) => {
 					<Route exact path="/classlist/studentDetails" component={ClassDetails} />
 					<Route path="/advisees/" component={FacultyAdvisees} />
 					<Route path="/classlist/studentDetails/:sID" component={StudentDetails} />
+				</Switch>
+			)}
+			{state?.user?.userType === 'Administrator' && (
+				<Switch>
+					<Route exact path="/classlist" component={ClassList} />
 				</Switch>
 			)}
 

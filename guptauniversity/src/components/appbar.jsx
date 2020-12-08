@@ -236,7 +236,7 @@ export default function PersistentDrawerLeft() {
 					)}
 					{state?.user?.userType === 'Administrator' && (
 						<List>
-							<Link to={`/Class Modifications`}>
+							<Link to={`/classlist`}>
 								<ListItem button key={'Class Modifications'}>
 									<ListItemText primary={'Class Modifications'}></ListItemText>
 								</ListItem>

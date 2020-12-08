@@ -32,7 +32,13 @@ export default function Minors() {
 				<MaterialTable
 					title={<div>List of All Minors</div>}
 					columns={[
-						{ title: 'Name', field: 'minorName' },
+						{
+							title: 'Name',
+							field: 'minorName',
+							render: (rowData) => (
+								<Link to={`/minorRequirements/${rowData.minorID}`}>{rowData.minorName}</Link>
+							),
+						},
 						{
 							title: 'Add Link',
 							field: 'minorID',

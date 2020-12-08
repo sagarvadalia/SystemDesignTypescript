@@ -587,26 +587,26 @@ createConnection({
 		// }
 
 		// // // // Student Holds
-		iter = 1;
-		for (i = 0; i < students.length; i += 19) {
-			try {
-				if (iter === 9) {
+		// iter = 1;
+		// for (i = 0; i < students.length; i += 19) {
+		// 	try {
+		// 		if (iter === 9) {
 
-					iter = 1;
-				}
-				const sID = students[i];
-				let holdID = iter;
-				const hold = await connection.manager.findOne(Hold, holdID);
+		// 			iter = 1;
+		// 		}
+		// 		const sID = students[i];
+		// 		let holdID = iter;
+		// 		const hold = await connection.manager.findOne(Hold, holdID);
 
-				const studentHold = await connection.manager.create(StudentHold, { sID, holdID: hold });
-				await connection.manager.save(studentHold);
+		// 		const studentHold = await connection.manager.create(StudentHold, { sID, holdID: hold });
+		// 		await connection.manager.save(studentHold);
 
-				iter++;
-			}
-			catch (error) {
-				console.log(error);
-			}
-		}
+		// 		iter++;
+		// 	}
+		// 	catch (error) {
+		// 		console.log(error);
+		// 	}
+		// }
 
 
 		// //		TIME RELATED STUFF
@@ -654,43 +654,43 @@ createConnection({
 
 		// const timeslots = await connection.manager.find(TimeSlot)
 
-		// // -----THE 3 CODE BLOCKS BELOW ARE DEPRECATED BECAUSE OF TIMESLOT V2 CREATION---------------------
+		// -----THE 3 CODE BLOCKS BELOW ARE DEPRECATED BECAUSE OF TIMESLOT V2 CREATION---------------------
 
-		// // //------------------------Timeslots----------------------------------------
-		// // const timeslotsSeed = seeds.timeslots.default
-		// // for (i = 0; i < timeslotsSeed.length; i++) {
-		// // 	try {
-		// // 		const timeslot = await connection.manager.create(TimeSlot, timeslotsSeed[i])
-		// // 		await connection.manager.save(timeslot)
-		// // 	} catch (error) {
-		// // 	}
-		// // }
+		// //------------------------Timeslots----------------------------------------
+		// const timeslotsSeed = seeds.timeslots.default
+		// for (i = 0; i < timeslotsSeed.length; i++) {
+		// 	try {
+		// 		const timeslot = await connection.manager.create(TimeSlot, timeslotsSeed[i])
+		// 		await connection.manager.save(timeslot)
+		// 	} catch (error) {
+		// 	}
+		// }
 
-		// // //---------------------------------DAY-------------------------------------
-		// // const daysSeed = seeds.day.default;
-		// // for (i = 0; i < daysSeed.length; i++) {
-		// // 	try {
-		// // 		const days = await connection.manager.create(Day, daysSeed[i]);
-		// // 		await connection.manager.save(days);
-		// // 	} catch (error) {
-		// // 		// console.error(error);
-		// // 	}
-		// // }
+		// //---------------------------------DAY-------------------------------------
+		// const daysSeed = seeds.day.default;
+		// for (i = 0; i < daysSeed.length; i++) {
+		// 	try {
+		// 		const days = await connection.manager.create(Day, daysSeed[i]);
+		// 		await connection.manager.save(days);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
-		// // //----------------------------DayAndPeriod---------------------------------
-		// // for (i = 0; i < periods.length; i++) {
-		// // 	for (let j = 0; j < days.length; j++) {
-		// // 		const dayAndPeriod = await connection.manager.create(DayAndPeriod, {
-		// // 			periodID: periods[i],
-		// // 			dayID: days[j],
-		// // 			slotID: timeslotCnt
-		// // 		})
-		// // 		await connection.manager.save(dayAndPeriod)
-		// // 		timeslotCnt++;
-		// // 	}
-		// // }
+		// //----------------------------DayAndPeriod---------------------------------
+		// for (i = 0; i < periods.length; i++) {
+		// 	for (let j = 0; j < days.length; j++) {
+		// 		const dayAndPeriod = await connection.manager.create(DayAndPeriod, {
+		// 			periodID: periods[i],
+		// 			dayID: days[j],
+		// 			slotID: timeslotCnt
+		// 		})
+		// 		await connection.manager.save(dayAndPeriod)
+		// 		timeslotCnt++;
+		// 	}
+		// }
 
-		// // TODO: seed classes and handle faculty associations
+		// TODO: seed classes and handle faculty associations
 		// const classSeed = seeds.classes.default;
 		// try {
 		// 	for (i = 0; i < classSeed.length; i++) {
@@ -806,32 +806,32 @@ createConnection({
 		// 	}
 		// }
 
-		// //--------MajorReqs----------------
-		// // const majorReqSeed = seeds.majorReqs.default
-		// // for(i = 0; i < majorReqSeed.length; i++){ 
-		// // 	try{
-		// // 		const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
-		// // 		const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
-		// // 		const majorReqs = await connection.manager.create(MajorRequirement, {gradeRequired: 'C', majorID: major, courseID: course});
-		// // 		// console.log(majorReqs);
-		// // 		await connection.manager.save(majorReqs);
-		// // 	}catch(error){
-		// // 		console.error(error);
-		// // 	}
-		// // }
-
-		// //---------MinorReqs-----------------
-		// const minorReqSeed = seeds.minorReqs.default
-		// for(i = 0; i < minorReqSeed.length; i++){
+		//--------MajorReqs----------------
+		// const majorReqSeed = seeds.majorReqs.default
+		// for(i = 0; i < majorReqSeed.length; i++){
 		// 	try{
-		// 		const course  = await connection.manager.findOne(Course, minorReqSeed[i].courseID);
-		// 		const minor = await connection.manager.findOne(Minor, minorReqSeed[i].minorID);
-		// 		const minorReqs = await connection.manager.create(MinorRequirement, {gradeRequired: 'C', minorID: minor, courseID: course});
-		// 		await connection.manager.save(minorReqs);
+		// 		const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
+		// 		const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
+		// 		const majorReqs = await connection.manager.create(MajorRequirement, {gradeRequired: 'C', majorID: major, courseID: course});
+		// 		// console.log(majorReqs);
+		// 		await connection.manager.save(majorReqs);
 		// 	}catch(error){
-		// 		console.log(error);
+		// 		console.error(error);
 		// 	}
 		// }
+
+		//---------MinorReqs-----------------
+		const minorReqSeed = seeds.minorReqs.default
+		for(i = 0; i < minorReqSeed.length; i++){
+			try{
+				const course  = await connection.manager.findOne(Course, minorReqSeed[i].courseID);
+				const minor = await connection.manager.findOne(Minor, minorReqSeed[i].minorID);
+				const minorReqs = await connection.manager.create(MinorRequirement, {gradeRequired: 'C', minorID: minor, courseID: course});
+				await connection.manager.save(minorReqs);
+			}catch(error){
+				console.log(error);
+			}
+		}
 
 
 		// TODO: Faculty History
