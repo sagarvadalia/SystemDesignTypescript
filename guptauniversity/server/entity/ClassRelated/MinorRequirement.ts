@@ -9,12 +9,12 @@ export class MinorRequirement extends BaseEntity {
 		Object.assign(this, MinorRequirement);
 	}
 	//Relationship to Course
-	@ManyToOne(() => Course, (course) => course.minorrequirement, { primary: true })
+	@ManyToOne(() => Course, (course) => course.minorrequirement, { primary: true, eager: true })
 	@JoinColumn({ name: 'courseID' })
 	public courseID!: Course;
 
 	//Relationship to Minor
-	@ManyToOne(() => Minor, (minor) => minor.minorrequirement, { primary: true })
+	@ManyToOne(() => Minor, (minor) => minor.minorrequirement, { primary: true, eager: true })
 	@JoinColumn({ name: 'minorID' })
 	public minorID!: Minor;
 
