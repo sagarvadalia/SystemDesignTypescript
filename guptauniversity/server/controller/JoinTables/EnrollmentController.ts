@@ -12,6 +12,8 @@ import { GraduateFullTime } from '../../entity/Users/GraduateFullTime';
 import { GraduatePartTime } from '../../entity/Users/GraduatePartTime';
 import { UnderGraduateFullTime } from '../../entity/Users/UnderGraduateFullTime';
 import { UnderGraduatePartTime } from '../../entity/Users/UnderGraduatePartTime';
+import { Hold } from '../../entity/StudentRelated/Hold';
+import { StudentHold } from '../../entity/JoinTables/StudentHold';
 
 export class EnrollmentController {
 	private enrollmentRepository = getRepository(Enrollment);
@@ -24,6 +26,8 @@ export class EnrollmentController {
 	private ftUndergradstudentRepository = getRepository(UnderGraduateFullTime);
 	private ptGradstudentRepository = getRepository(GraduatePartTime);
 	private ftGradstudentRepository = getRepository(GraduateFullTime);
+	private studentHoldRepository = getRepository(StudentHold);
+	private holdRepository = getRepository(Hold);
 
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.enrollmentRepository.find();
@@ -146,8 +150,15 @@ export class EnrollmentController {
 		//Give me an sID and a classCRN and I'll make an enrollment with today's date. I RETURN AN OBJECT  {done(bool), msg(string)}
 		let student = await this.studentRepository.findOne(request.params.sID);
 		let addClass = await this.classRepository.findOne(request.params.classCRN);
+		let stuHold = await this.studentHoldRepository.find({where: {sID: request.params.sID}});
 		const entityManager = getManager();
 
+		// console.log(stuHold);
+		//Checks if the student has a hold
+		if(stuHold.length > 0){
+			return {done: false, msg: request.params.sID + ": this student has a hold and therefore cannot enroll in classes at this time. "};
+		}
+		
 		//Ensure the student isn't already enrolled in that class
 		let checkEnroll = await this.enrollmentRepository.findOne({ where: { sID: student, classCRN: addClass } })
 		if (checkEnroll) {

@@ -13,6 +13,7 @@ export class ClassController {
 	private facRepository = getRepository(Faculty);
 	private lectureRepository = getRepository(Lecture);
 	private enrollmentRepository = getRepository(Enrollment);
+
 	async inSemester(request: Request, response: Response, next: NextFunction) {
 		try {
 			return await this.classRepository.find({ where: { semesterID: request.params.id } });
@@ -133,5 +134,5 @@ try {
 		return "No room found with id " + request.params.newRoom
 	}
 
-
+	
 }
