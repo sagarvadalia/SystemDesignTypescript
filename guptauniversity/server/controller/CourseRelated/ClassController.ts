@@ -5,12 +5,14 @@ import { validate, validateOrReject } from 'class-validator';
 import { TimeSlot } from '../../entity/TimeRelated/TimeSlot';
 import { Faculty } from '../../entity/Users/Faculty';
 import { Lecture } from '../../entity/Locations/Lecture';
+import { Enrollment } from '../../entity/JoinTables/Enrollment';
 
 export class ClassController {
 	private classRepository = getRepository(Class);
 	private timeslotRepository = getRepository(TimeSlot);
 	private facRepository = getRepository(Faculty);
 	private lectureRepository = getRepository(Lecture);
+	private enrollmentRepository = getRepository(Enrollment);
 
 	async inSemester(request: Request, response: Response, next: NextFunction) {
 		try {
@@ -97,5 +99,5 @@ export class ClassController {
 		return "No room found with id " + request.params.newRoom
 	}
 
-
+	
 }
