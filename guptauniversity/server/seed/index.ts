@@ -21,6 +21,7 @@ import timeslots = require('./timeslot2');
 import holds = require('./hold');
 import classes = require('./class');
 import majorReqs = require('./majorRequirements');
+import minorReqs = require('./minorRequirements');
 
 
 export const seeds = {
@@ -46,6 +47,7 @@ export const seeds = {
 	holds,
 	timeslots,
 	classes,
-	majorReqs
+	majorReqs,
+	minorReqs
 
 };

@@ -38,6 +38,7 @@ import { StudentMajorController } from './controller/JoinTables/StudentMajorCont
 import { MajorReqController } from './controller/CourseRelated/MajorReqController';
 
 
+
 export const Routes = [
 	{
 		method: 'get',

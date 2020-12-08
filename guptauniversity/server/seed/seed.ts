@@ -29,17 +29,14 @@ import { FacultyDepartment } from '../entity/JoinTables/FacultyDepartment';
 import { Hold } from '../entity/StudentRelated/Hold';
 import { TimeSlot } from '../entity/TimeRelated/TimeSlot';
 import { Class } from '../entity/ClassRelated/Class';
-
-
 import { StudentMajor } from '../entity/JoinTables/StudentMajor';
 import { StudentMinor } from '../entity/JoinTables/StudentMinor';
-
 import { DayAndPeriod } from '../entity/JoinTables/DayAndPeriod';
 import { StudentHistory } from '../entity/StudentRelated/StudentHistory';
-
 import { Advisor } from '../entity/JoinTables/Advisor';
 import { StudentHold } from '../entity/JoinTables/StudentHold';
 import { Enrollment } from '../entity/JoinTables/Enrollment';
+import {MinorRequirement} from '../entity/ClassRelated/MinorRequirement'
 import { MajorRequirement } from '../entity/ClassRelated/MajorRequirement'
 
 
@@ -810,16 +807,29 @@ createConnection({
 		}
 
 		//--------MajorReqs----------------
-		const majorReqSeed = seeds.majorReqs.default
-		for (i = 0; i < majorReqSeed.length; i++) {
-			try {
-				const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
-				const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
-				const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
-				// console.log(majorReqs);
-				await connection.manager.save(majorReqs);
-			} catch (error) {
-				console.error(error);
+		// const majorReqSeed = seeds.majorReqs.default
+		// for(i = 0; i < majorReqSeed.length; i++){ 
+		// 	try{
+		// 		const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
+		// 		const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
+		// 		const majorReqs = await connection.manager.create(MajorRequirement, {gradeRequired: 'C', majorID: major, courseID: course});
+		// 		// console.log(majorReqs);
+		// 		await connection.manager.save(majorReqs);
+		// 	}catch(error){
+		// 		console.error(error);
+		// 	}
+		// }
+
+		//---------MinorReqs-----------------
+		const minorReqSeed = seeds.minorReqs.default
+		for(i = 0; i < minorReqSeed.length; i++){
+			try{
+				const course  = await connection.manager.findOne(Course, minorReqSeed[i].courseID);
+				const minor = await connection.manager.findOne(Minor, minorReqSeed[i].minorID);
+				const minorReqs = await connection.manager.create(MinorRequirement, {gradeRequired: 'C', minorID: minor, courseID: course});
+				await connection.manager.save(minorReqs);
+			}catch(error){
+				console.log(error);
 			}
 		}
 

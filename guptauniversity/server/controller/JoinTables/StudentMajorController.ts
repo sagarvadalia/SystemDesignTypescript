@@ -5,6 +5,7 @@ import { validate, validateOrReject } from 'class-validator';
 import { Student } from '../../entity/Users/Student';
 import { Major } from '../../entity/ClassRelated/Major';
 
+
 export class StudentMajorController {
     private studentMajorRepository = getRepository(StudentMajor);
     private studentRepository = getRepository(Student);
@@ -39,6 +40,7 @@ export class StudentMajorController {
             console.error(error);
         }
     }
+  
     async findAllMajors(request: Request, response: Response, next: NextFunction) {
         console.log('herehrehre');
         const student = await this.studentRepository.findOne(request.params.sID);
@@ -85,6 +87,7 @@ export class StudentMajorController {
         try {
             let currentMajor = await this.studentMajorRepository.find({ where: { sID: student, majorID: major } });
             this.studentMajorRepository.remove(currentMajor);
+
             return {done: true}
         } catch (error) {
             console.error(error);
