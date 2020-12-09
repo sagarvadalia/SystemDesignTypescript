@@ -11,6 +11,7 @@ export default function CourseCatalog() {
 			const result = await axios(`/api/courses`);
 
 			setData(result.data);
+			console.log(result.data);
 		};
 
 		fetchData();

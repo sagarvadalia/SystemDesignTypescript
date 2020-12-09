@@ -37,6 +37,7 @@ import { StudentHoldController } from './controller/JoinTables/StudentHoldContro
 import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
 import { MajorReqController } from './controller/CourseRelated/MajorReqController';
 import { MinorReqController } from './controller/CourseRelated/MinorReqController';
+import { PrerequisiteController } from './controller/JoinTables/PrerequisiteController';
 
 
 
@@ -1066,5 +1067,32 @@ export const Routes = [
 		route: '/api/minorreqs/:minorID',
 		controller: MinorReqController,
 		action: 'minReqByMin',
+	},
+
+
+		// crud routes for Prerequisites
+	{
+		method: 'get',
+		route: '/api/prereqs',
+		controller: PrerequisiteController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/api/prereqs/:id',
+		controller: PrerequisiteController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/api/prereqs',
+		controller: PrerequisiteController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/api/prereqs/:id',
+		controller: PrerequisiteController,
+		action: 'remove',
 	},
 ];

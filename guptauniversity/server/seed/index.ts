@@ -22,7 +22,7 @@ import holds = require('./hold');
 import classes = require('./class');
 import majorReqs = require('./majorRequirements');
 import minorReqs = require('./minorRequirements');
-
+import prerequisites = require('./prerequisite');
 
 export const seeds = {
 	partTimeFaculty,
@@ -48,6 +48,7 @@ export const seeds = {
 	timeslots,
 	classes,
 	majorReqs,
-	minorReqs
+	minorReqs,
+	prerequisites,
 
 };
