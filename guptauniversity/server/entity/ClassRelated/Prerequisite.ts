@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Course } from './Course';
 
 @Entity()
@@ -12,15 +12,18 @@ export class Prerequisite extends BaseEntity {
 	gradeRequired: string;
 
 	@Column()
-	yearCreated: number;
+	yearCreated: string;
+
+	@Column()
+	prereqID: number;
+
+	@PrimaryGeneratedColumn()
+	ID: number;
+
 
 	// One Course has many Prerequisites
-	@ManyToOne(() => Course, (course: Course) => course, { primary: true })
+	@ManyToOne(() => Course, (course: Course) => course.prereqs, { cascade:true})
 	@JoinColumn({ name: 'courseID' })
 	public courseID!: Course;
 
-	//One Prerequisite has many courses
-	@OneToMany(() => Course, (course: Course) => course, { primary: true })
-	@JoinColumn({ name: 'prereqID' })
-	public prereqID!: Course[];
 }

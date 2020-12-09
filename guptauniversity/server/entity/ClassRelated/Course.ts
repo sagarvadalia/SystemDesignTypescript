@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Department } from '../Locations/Department';
 import { Class } from './Class';
 import { MajorRequirement } from './MajorRequirement';
@@ -40,11 +40,20 @@ export class Course extends BaseEntity {
 	@OneToMany(() => MinorRequirement, (minorrequirement) => minorrequirement.courseID)
 	public minorrequirement!: MinorRequirement[];
 
-
 	// ONE COURSE HAS MANY PREREQS
 	@OneToMany(() => Prerequisite, (prereq: Prerequisite) => prereq.courseID, { primary: true, eager:true })
 	public prereqs!: Prerequisite[];
+
+
+
+
 	//One Course has many Classes
+
+
+
+
 	@OneToMany(() => Class, (classes) => classes.courseID)
 	public classes!: Class[];
 }
+
+

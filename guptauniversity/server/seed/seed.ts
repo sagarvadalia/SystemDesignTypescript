@@ -38,6 +38,7 @@ import { StudentHold } from '../entity/JoinTables/StudentHold';
 import { Enrollment } from '../entity/JoinTables/Enrollment';
 import {MinorRequirement} from '../entity/ClassRelated/MinorRequirement'
 import { MajorRequirement } from '../entity/ClassRelated/MajorRequirement'
+import { Prerequisite } from '../entity/ClassRelated/Prerequisite';
 
 
 
@@ -821,22 +822,38 @@ createConnection({
 		// }
 
 		//---------MinorReqs-----------------
-		const minorReqSeed = seeds.minorReqs.default
-		for(i = 0; i < minorReqSeed.length; i++){
-			try{
-				const course  = await connection.manager.findOne(Course, minorReqSeed[i].courseID);
-				const minor = await connection.manager.findOne(Minor, minorReqSeed[i].minorID);
-				const minorReqs = await connection.manager.create(MinorRequirement, {gradeRequired: 'C', minorID: minor, courseID: course});
-				await connection.manager.save(minorReqs);
-			}catch(error){
-				console.log(error);
+		// const minorReqSeed = seeds.minorReqs.default
+		// for(i = 0; i < minorReqSeed.length; i++){
+		// 	try{
+		// 		const course  = await connection.manager.findOne(Course, minorReqSeed[i].courseID);
+		// 		const minor = await connection.manager.findOne(Minor, minorReqSeed[i].minorID);
+		// 		const minorReqs = await connection.manager.create(MinorRequirement, {gradeRequired: 'C', minorID: minor, courseID: course});
+		// 		await connection.manager.save(minorReqs);
+		// 	}catch(error){
+		// 		console.log(error);
+		// 	}
+		// }
+		// -------Prerequisites---------------
+		const prereqSeed = seeds.prerequisites.default
+		for(i = 0; i < prereqSeed.length; i++){
+			try {
+				const prereq = await connection.manager.create(Prerequisite, prereqSeed[i]);
+				const course = await connection.manager.findOne(Course, prereqSeed[i].courseIDNum);
+
+				if (course) {
+					prereq.courseID = course;
+					let bool = await connection.manager.save(prereq);
+					console.log(bool);
+				}
+
+
+			} catch (error) {
+				console.error(error);
 			}
 		}
 
 
-		// TODO: Faculty History
-		// TODO: Minor Requirements
-		// TODO: Student History
+
 		// TODO: Attendance
 
 	})
