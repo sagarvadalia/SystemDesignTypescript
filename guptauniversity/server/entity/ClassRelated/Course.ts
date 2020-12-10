@@ -41,7 +41,7 @@ export class Course extends BaseEntity {
 	public minorrequirement!: MinorRequirement[];
 
 	// ONE COURSE HAS MANY PREREQS
-	@OneToMany(() => Prerequisite, (prereq: Prerequisite) => prereq.courseID, { primary: true, eager:true })
+	@OneToMany(() => Prerequisite, (prereq: Prerequisite) => prereq.courseID, { primary: true, eager: true })
 	public prereqs!: Prerequisite[];
 
 
@@ -55,5 +55,3 @@ export class Course extends BaseEntity {
 	@OneToMany(() => Class, (classes) => classes.courseID)
 	public classes!: Class[];
 }
-
-
