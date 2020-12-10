@@ -4,7 +4,7 @@ const lecture = [
         "roomNum": 1,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 1
     },
     {
@@ -12,7 +12,7 @@ const lecture = [
         "roomNum": 2,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 2
     },
     {
@@ -20,7 +20,7 @@ const lecture = [
         "roomNum": 3,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 3
     },
     {
@@ -28,7 +28,7 @@ const lecture = [
         "roomNum": 4,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 4
     },
     {
@@ -36,7 +36,7 @@ const lecture = [
         "roomNum": 5,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 5
     },
     {
@@ -44,7 +44,7 @@ const lecture = [
         "roomNum": 6,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 6
     },
     {
@@ -52,7 +52,7 @@ const lecture = [
         "roomNum": 7,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 7
     },
     {
@@ -60,7 +60,7 @@ const lecture = [
         "roomNum": 8,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 8
     },
     {
@@ -68,7 +68,7 @@ const lecture = [
         "roomNum": 9,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 9
     },
     {
@@ -76,7 +76,7 @@ const lecture = [
         "roomNum": 10,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 10
     },
     {
@@ -84,7 +84,7 @@ const lecture = [
         "roomNum": 11,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 11
     },
     {
@@ -92,7 +92,7 @@ const lecture = [
         "roomNum": 12,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 12
     },
     {
@@ -100,7 +100,7 @@ const lecture = [
         "roomNum": 13,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 13
     },
     {
@@ -108,7 +108,7 @@ const lecture = [
         "roomNum": 14,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 14
     },
     {
@@ -116,7 +116,7 @@ const lecture = [
         "roomNum": 15,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 15
     },
     {
@@ -124,7 +124,7 @@ const lecture = [
         "roomNum": 16,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 16
     },
     {
@@ -132,7 +132,7 @@ const lecture = [
         "roomNum": 17,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 17
     },
     {
@@ -140,7 +140,7 @@ const lecture = [
         "roomNum": 18,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 18
     },
     {
@@ -148,7 +148,7 @@ const lecture = [
         "roomNum": 19,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 19
     },
     {
@@ -156,7 +156,7 @@ const lecture = [
         "roomNum": 20,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 20
     },
     {
@@ -164,7 +164,7 @@ const lecture = [
         "roomNum": 21,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 21
     },
     {
@@ -172,7 +172,7 @@ const lecture = [
         "roomNum": 22,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 22
     },
     {
@@ -180,7 +180,7 @@ const lecture = [
         "roomNum": 23,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 23
     },
     {
@@ -188,7 +188,7 @@ const lecture = [
         "roomNum": 24,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 24
     },
     {
@@ -196,7 +196,7 @@ const lecture = [
         "roomNum": 25,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 25
     },
     {
@@ -204,7 +204,7 @@ const lecture = [
         "roomNum": 26,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 26
     },
     {
@@ -212,7 +212,7 @@ const lecture = [
         "roomNum": 27,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 27
     },
     {
@@ -220,7 +220,7 @@ const lecture = [
         "roomNum": 28,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 28
     },
     {
@@ -228,7 +228,7 @@ const lecture = [
         "roomNum": 29,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 29
     },
     {
@@ -236,7 +236,7 @@ const lecture = [
         "roomNum": 30,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 30
     },
     {
@@ -244,7 +244,7 @@ const lecture = [
         "roomNum": 31,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 31
     },
     {
@@ -252,7 +252,7 @@ const lecture = [
         "roomNum": 32,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 32
     },
     {
@@ -260,7 +260,7 @@ const lecture = [
         "roomNum": 33,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 33
     },
     {
@@ -268,7 +268,7 @@ const lecture = [
         "roomNum": 34,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 34
     },
     {
@@ -276,7 +276,7 @@ const lecture = [
         "roomNum": 35,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 35
     },
     {
@@ -284,7 +284,7 @@ const lecture = [
         "roomNum": 36,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 36
     },
     {
@@ -292,7 +292,7 @@ const lecture = [
         "roomNum": 37,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 37
     },
     {
@@ -300,7 +300,7 @@ const lecture = [
         "roomNum": 38,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 38
     },
     {
@@ -308,7 +308,7 @@ const lecture = [
         "roomNum": 39,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 39
     },
     {
@@ -316,7 +316,7 @@ const lecture = [
         "roomNum": 40,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 40
     },
     {
@@ -324,7 +324,7 @@ const lecture = [
         "roomNum": 41,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 41
     },
     {
@@ -332,7 +332,7 @@ const lecture = [
         "roomNum": 42,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 42
     },
     {
@@ -340,7 +340,7 @@ const lecture = [
         "roomNum": 43,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 43
     },
     {
@@ -348,7 +348,7 @@ const lecture = [
         "roomNum": 44,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 44
     },
     {
@@ -356,7 +356,7 @@ const lecture = [
         "roomNum": 45,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 45
     },
     {
@@ -364,7 +364,7 @@ const lecture = [
         "roomNum": 46,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 46
     },
     {
@@ -372,7 +372,7 @@ const lecture = [
         "roomNum": 47,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 47
     },
     {
@@ -380,7 +380,7 @@ const lecture = [
         "roomNum": 48,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 48
     },
     {
@@ -388,7 +388,7 @@ const lecture = [
         "roomNum": 49,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 49
     },
     {
@@ -396,7 +396,7 @@ const lecture = [
         "roomNum": 50,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 50
     },
     {
@@ -404,7 +404,7 @@ const lecture = [
         "roomNum": 51,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 51
     },
     {
@@ -412,7 +412,7 @@ const lecture = [
         "roomNum": 52,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 52
     },
     {
@@ -420,7 +420,7 @@ const lecture = [
         "roomNum": 53,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 53
     },
     {
@@ -428,7 +428,7 @@ const lecture = [
         "roomNum": 54,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 54
     },
     {
@@ -436,7 +436,7 @@ const lecture = [
         "roomNum": 55,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 55
     },
     {
@@ -444,7 +444,7 @@ const lecture = [
         "roomNum": 56,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 56
     },
     {
@@ -452,7 +452,7 @@ const lecture = [
         "roomNum": 57,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 57
     },
     {
@@ -460,7 +460,7 @@ const lecture = [
         "roomNum": 58,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 58
     },
     {
@@ -468,7 +468,7 @@ const lecture = [
         "roomNum": 59,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 59
     },
     {
@@ -476,7 +476,7 @@ const lecture = [
         "roomNum": 60,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 60
     },
     {
@@ -484,7 +484,7 @@ const lecture = [
         "roomNum": 61,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 61
     },
     {
@@ -492,7 +492,7 @@ const lecture = [
         "roomNum": 62,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 62
     },
     {
@@ -500,7 +500,7 @@ const lecture = [
         "roomNum": 63,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 63
     },
     {
@@ -508,7 +508,7 @@ const lecture = [
         "roomNum": 64,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 64
     },
     {
@@ -516,7 +516,7 @@ const lecture = [
         "roomNum": 65,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 65
     },
     {
@@ -524,7 +524,7 @@ const lecture = [
         "roomNum": 66,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 66
     },
     {
@@ -532,7 +532,7 @@ const lecture = [
         "roomNum": 67,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 67
     },
     {
@@ -540,7 +540,7 @@ const lecture = [
         "roomNum": 68,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 68
     },
     {
@@ -548,7 +548,7 @@ const lecture = [
         "roomNum": 69,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 69
     },
     {
@@ -556,7 +556,7 @@ const lecture = [
         "roomNum": 70,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 70
     },
     {
@@ -564,7 +564,7 @@ const lecture = [
         "roomNum": 71,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 71
     },
     {
@@ -572,7 +572,7 @@ const lecture = [
         "roomNum": 72,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 72
     },
     {
@@ -580,7 +580,7 @@ const lecture = [
         "roomNum": 73,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 73
     },
     {
@@ -588,7 +588,7 @@ const lecture = [
         "roomNum": 74,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 74
     },
     {
@@ -596,7 +596,7 @@ const lecture = [
         "roomNum": 75,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 75
     },
     {
@@ -604,7 +604,7 @@ const lecture = [
         "roomNum": 76,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 76
     },
     {
@@ -612,7 +612,7 @@ const lecture = [
         "roomNum": 77,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 77
     },
     {
@@ -620,7 +620,7 @@ const lecture = [
         "roomNum": 78,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 78
     },
     {
@@ -628,7 +628,7 @@ const lecture = [
         "roomNum": 79,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 79
     },
     {
@@ -636,7 +636,7 @@ const lecture = [
         "roomNum": 80,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 80
     },
     {
@@ -644,7 +644,7 @@ const lecture = [
         "roomNum": 81,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 81
     },
     {
@@ -652,7 +652,7 @@ const lecture = [
         "roomNum": 82,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 82
     },
     {
@@ -660,7 +660,7 @@ const lecture = [
         "roomNum": 83,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 83
     },
     {
@@ -668,7 +668,7 @@ const lecture = [
         "roomNum": 84,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 84
     },
     {
@@ -676,7 +676,7 @@ const lecture = [
         "roomNum": 85,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 85
     },
     {
@@ -684,7 +684,7 @@ const lecture = [
         "roomNum": 86,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 86
     },
     {
@@ -692,7 +692,7 @@ const lecture = [
         "roomNum": 87,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 87
     },
     {
@@ -700,7 +700,7 @@ const lecture = [
         "roomNum": 88,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 88
     },
     {
@@ -708,7 +708,7 @@ const lecture = [
         "roomNum": 89,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 89
     },
     {
@@ -716,7 +716,7 @@ const lecture = [
         "roomNum": 90,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 90
     },
     {
@@ -724,7 +724,7 @@ const lecture = [
         "roomNum": 91,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 91
     },
     {
@@ -732,7 +732,7 @@ const lecture = [
         "roomNum": 92,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 92
     },
     {
@@ -740,7 +740,7 @@ const lecture = [
         "roomNum": 93,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 93
     },
     {
@@ -748,7 +748,7 @@ const lecture = [
         "roomNum": 94,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 94
     },
     {
@@ -756,7 +756,7 @@ const lecture = [
         "roomNum": 95,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 95
     },
     {
@@ -764,7 +764,7 @@ const lecture = [
         "roomNum": 96,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 96
     },
     {
@@ -772,7 +772,7 @@ const lecture = [
         "roomNum": 97,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 97
     },
     {
@@ -780,7 +780,7 @@ const lecture = [
         "roomNum": 98,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 98
     },
     {
@@ -788,7 +788,7 @@ const lecture = [
         "roomNum": 99,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 99
     },
     {
@@ -796,7 +796,7 @@ const lecture = [
         "roomNum": 100,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 100
     },
     {
@@ -804,7 +804,7 @@ const lecture = [
         "roomNum": 1,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 101
     },
     {
@@ -812,7 +812,7 @@ const lecture = [
         "roomNum": 2,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 102
     },
     {
@@ -820,7 +820,7 @@ const lecture = [
         "roomNum": 3,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 103
     },
     {
@@ -828,7 +828,7 @@ const lecture = [
         "roomNum": 4,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 104
     },
     {
@@ -836,7 +836,7 @@ const lecture = [
         "roomNum": 5,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 105
     },
     {
@@ -844,7 +844,7 @@ const lecture = [
         "roomNum": 6,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 106
     },
     {
@@ -852,7 +852,7 @@ const lecture = [
         "roomNum": 7,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 107
     },
     {
@@ -860,7 +860,7 @@ const lecture = [
         "roomNum": 8,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 108
     },
     {
@@ -868,7 +868,7 @@ const lecture = [
         "roomNum": 9,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 109
     },
     {
@@ -876,7 +876,7 @@ const lecture = [
         "roomNum": 10,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 110
     },
     {
@@ -884,7 +884,7 @@ const lecture = [
         "roomNum": 11,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 111
     },
     {
@@ -892,7 +892,7 @@ const lecture = [
         "roomNum": 12,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 112
     },
     {
@@ -900,7 +900,7 @@ const lecture = [
         "roomNum": 13,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 113
     },
     {
@@ -908,7 +908,7 @@ const lecture = [
         "roomNum": 14,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 114
     },
     {
@@ -916,7 +916,7 @@ const lecture = [
         "roomNum": 15,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 115
     },
     {
@@ -924,7 +924,7 @@ const lecture = [
         "roomNum": 16,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 116
     },
     {
@@ -932,7 +932,7 @@ const lecture = [
         "roomNum": 17,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 117
     },
     {
@@ -940,7 +940,7 @@ const lecture = [
         "roomNum": 18,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 118
     },
     {
@@ -948,7 +948,7 @@ const lecture = [
         "roomNum": 19,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 119
     },
     {
@@ -956,7 +956,7 @@ const lecture = [
         "roomNum": 20,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 120
     },
     {
@@ -964,7 +964,7 @@ const lecture = [
         "roomNum": 21,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 121
     },
     {
@@ -972,7 +972,7 @@ const lecture = [
         "roomNum": 22,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 122
     },
     {
@@ -980,7 +980,7 @@ const lecture = [
         "roomNum": 23,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 123
     },
     {
@@ -988,7 +988,7 @@ const lecture = [
         "roomNum": 24,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 124
     },
     {
@@ -996,7 +996,7 @@ const lecture = [
         "roomNum": 25,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 125
     },
     {
@@ -1004,7 +1004,7 @@ const lecture = [
         "roomNum": 26,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 126
     },
     {
@@ -1012,7 +1012,7 @@ const lecture = [
         "roomNum": 27,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 127
     },
     {
@@ -1020,7 +1020,7 @@ const lecture = [
         "roomNum": 28,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 128
     },
     {
@@ -1028,7 +1028,7 @@ const lecture = [
         "roomNum": 29,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 129
     },
     {
@@ -1036,7 +1036,7 @@ const lecture = [
         "roomNum": 30,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 130
     },
     {
@@ -1044,7 +1044,7 @@ const lecture = [
         "roomNum": 31,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 131
     },
     {
@@ -1052,7 +1052,7 @@ const lecture = [
         "roomNum": 32,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 132
     },
     {
@@ -1060,7 +1060,7 @@ const lecture = [
         "roomNum": 33,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 133
     },
     {
@@ -1068,7 +1068,7 @@ const lecture = [
         "roomNum": 34,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 134
     },
     {
@@ -1076,7 +1076,7 @@ const lecture = [
         "roomNum": 35,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 135
     },
     {
@@ -1084,7 +1084,7 @@ const lecture = [
         "roomNum": 36,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 136
     },
     {
@@ -1092,7 +1092,7 @@ const lecture = [
         "roomNum": 37,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 137
     },
     {
@@ -1100,7 +1100,7 @@ const lecture = [
         "roomNum": 38,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 138
     },
     {
@@ -1108,7 +1108,7 @@ const lecture = [
         "roomNum": 39,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 139
     },
     {
@@ -1116,7 +1116,7 @@ const lecture = [
         "roomNum": 40,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 140
     },
     {
@@ -1124,7 +1124,7 @@ const lecture = [
         "roomNum": 41,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 141
     },
     {
@@ -1132,7 +1132,7 @@ const lecture = [
         "roomNum": 42,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 142
     },
     {
@@ -1140,7 +1140,7 @@ const lecture = [
         "roomNum": 43,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 143
     },
     {
@@ -1148,7 +1148,7 @@ const lecture = [
         "roomNum": 44,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 144
     },
     {
@@ -1156,7 +1156,7 @@ const lecture = [
         "roomNum": 45,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 145
     },
     {
@@ -1164,7 +1164,7 @@ const lecture = [
         "roomNum": 46,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 146
     },
     {
@@ -1172,7 +1172,7 @@ const lecture = [
         "roomNum": 47,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 147
     },
     {
@@ -1180,7 +1180,7 @@ const lecture = [
         "roomNum": 48,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 148
     },
     {
@@ -1188,7 +1188,7 @@ const lecture = [
         "roomNum": 49,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 149
     },
     {
@@ -1196,7 +1196,7 @@ const lecture = [
         "roomNum": 50,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 150
     },
     {
@@ -1204,7 +1204,7 @@ const lecture = [
         "roomNum": 51,
         "roomType": "lecture",
         "capacity": 50,
-        "numSeats": 35,
+        "numSeats": 50,
         "roomID": 151
     }
 ];

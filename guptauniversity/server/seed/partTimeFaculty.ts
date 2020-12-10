@@ -1,7 +1,7 @@
 const partTimeFaculty = [
 	{
 		"userName": "Oby Allsepp",
-		"userEmail": "OAllsepp@GuptaUni.edu",
+		"userEmail": "oallsepp@guptauni.edu",
 		"userPassword": "Mq7I1VR",
 		"userPhone": "+31 (283) 184-7197",
 		"userAddress": "3 Norway Maple Drive",
@@ -14,7 +14,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Catrina Yve",
-		"userEmail": "CYve@GuptaUni.edu",
+		"userEmail": "cyve@guptauni.edu",
 		"userPassword": "85KaUoHH2",
 		"userPhone": "+20 (409) 326-7766",
 		"userAddress": "8232 Monument Place",
@@ -27,7 +27,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Tyrone Hardage",
-		"userEmail": "THardage@GuptaUni.edu",
+		"userEmail": "thardage@guptauni.edu",
 		"userPassword": "TyvqgE",
 		"userPhone": "+1 (820) 515-9347",
 		"userAddress": "104 Badeau Plaza",
@@ -40,7 +40,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Antoni McClymont",
-		"userEmail": "AMcClymo@GuptaUni.edu",
+		"userEmail": "amcclymo@guptauni.edu",
 		"userPassword": "C5WkvpTQ7uxt",
 		"userPhone": "+993 (357) 352-4124",
 		"userAddress": "73512 Summer Ridge Way",
@@ -53,7 +53,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Sela Ricco",
-		"userEmail": "SRicco@GuptaUni.edu",
+		"userEmail": "sricco@guptauni.edu",
 		"userPassword": "0ejN5YJ",
 		"userPhone": "+385 (599) 173-7027",
 		"userAddress": "3 Pleasure Terrace",
@@ -66,7 +66,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Saidee Josefsson",
-		"userEmail": "SJosefss@GuptaUni.edu",
+		"userEmail": "sjosefss@guptauni.edu",
 		"userPassword": "KkYUhd1G",
 		"userPhone": "+504 (123) 469-4771",
 		"userAddress": "08 Del Sol Avenue",
@@ -79,7 +79,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Lynn La Croce",
-		"userEmail": "LLa Croc@GuptaUni.edu",
+		"userEmail": "lla croc@guptauni.edu",
 		"userPassword": "pptNfz8HB",
 		"userPhone": "+234 (840) 632-5917",
 		"userAddress": "48442 Rowland Avenue",
@@ -92,7 +92,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Niki Maffeo",
-		"userEmail": "NMaffeo@GuptaUni.edu",
+		"userEmail": "nmaffeo@guptauni.edu",
 		"userPassword": "UGuA7AF",
 		"userPhone": "+992 (593) 410-6150",
 		"userAddress": "89603 Grayhawk Circle",
@@ -105,7 +105,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Luella Parken",
-		"userEmail": "LParken@GuptaUni.edu",
+		"userEmail": "lparken@guptauni.edu",
 		"userPassword": "FOzaXVUat",
 		"userPhone": "+86 (817) 890-7280",
 		"userAddress": "2567 Annamark Pass",
@@ -118,7 +118,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Ryan Westmore",
-		"userEmail": "RWestmor@GuptaUni.edu",
+		"userEmail": "rwestmor@guptauni.edu",
 		"userPassword": "QYW33a2",
 		"userPhone": "+1 (155) 771-1582",
 		"userAddress": "4602 Reinke Point",
@@ -131,7 +131,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Petey Unworth",
-		"userEmail": "PUnworth@GuptaUni.edu",
+		"userEmail": "punworth@guptauni.edu",
 		"userPassword": "Sthj4YCtJd",
 		"userPhone": "+1 (314) 728-0439",
 		"userAddress": "7014 Stone Corner Lane",
@@ -144,7 +144,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Odie Cabell",
-		"userEmail": "OCabell@GuptaUni.edu",
+		"userEmail": "ocabell@guptauni.edu",
 		"userPassword": "xMeSdEenSy",
 		"userPhone": "+251 (843) 228-8179",
 		"userAddress": "16544 Express Plaza",
@@ -157,7 +157,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Hall Gunthorp",
-		"userEmail": "HGunthor@GuptaUni.edu",
+		"userEmail": "hgunthor@guptauni.edu",
 		"userPassword": "dTjZPjs3tN",
 		"userPhone": "+52 (908) 725-6204",
 		"userAddress": "112 Bluestem Avenue",
@@ -170,7 +170,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Valentin Grigore",
-		"userEmail": "VGrigore@GuptaUni.edu",
+		"userEmail": "vgrigore@guptauni.edu",
 		"userPassword": "qRoI8yhBlNL2",
 		"userPhone": "+7 (494) 474-6495",
 		"userAddress": "0049 Vera Avenue",
@@ -183,7 +183,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Alejoa Gomme",
-		"userEmail": "AGomme@GuptaUni.edu",
+		"userEmail": "agomme@guptauni.edu",
 		"userPassword": "eH0vAP",
 		"userPhone": "+358 (861) 349-2843",
 		"userAddress": "01 Lerdahl Point",
@@ -196,7 +196,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Minor Spincke",
-		"userEmail": "MSpincke@GuptaUni.edu",
+		"userEmail": "mspincke@guptauni.edu",
 		"userPassword": "9QCEf76",
 		"userPhone": "+48 (407) 550-4457",
 		"userAddress": "100 Mosinee Place",
@@ -209,7 +209,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Mada Santoro",
-		"userEmail": "MSantoro@GuptaUni.edu",
+		"userEmail": "msantoro@guptauni.edu",
 		"userPassword": "6UwYlbbxX8Kd",
 		"userPhone": "+7 (992) 592-8826",
 		"userAddress": "764 Drewry Lane",
@@ -222,7 +222,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Clarine Grenter",
-		"userEmail": "CGrenter@GuptaUni.edu",
+		"userEmail": "cgrenter@guptauni.edu",
 		"userPassword": "7z1PjVqu7",
 		"userPhone": "+63 (730) 933-8550",
 		"userAddress": "8702 Service Alley",
@@ -235,7 +235,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Abram Beddall",
-		"userEmail": "ABeddall@GuptaUni.edu",
+		"userEmail": "abeddall@guptauni.edu",
 		"userPassword": "slVOP9A54Rxy",
 		"userPhone": "+235 (618) 826-1962",
 		"userAddress": "102 Fordem Center",
@@ -248,7 +248,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Jobye Knotte",
-		"userEmail": "JKnotte@GuptaUni.edu",
+		"userEmail": "jknotte@guptauni.edu",
 		"userPassword": "ta6QLH",
 		"userPhone": "+7 (798) 501-5000",
 		"userAddress": "856 Westend Hill",
@@ -261,7 +261,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Olav Curton",
-		"userEmail": "OCurton@GuptaUni.edu",
+		"userEmail": "ocurton@guptauni.edu",
 		"userPassword": "Qbnqt3iHcwg1",
 		"userPhone": "+54 (475) 198-5456",
 		"userAddress": "75 Del Sol Terrace",
@@ -274,7 +274,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Jolene Samet",
-		"userEmail": "JSamet@GuptaUni.edu",
+		"userEmail": "jsamet@guptauni.edu",
 		"userPassword": "CxvZcm26VZ6",
 		"userPhone": "+48 (579) 730-8335",
 		"userAddress": "34170 Morningstar Terrace",
@@ -287,7 +287,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Caralie Cammomile",
-		"userEmail": "CCammomi@GuptaUni.edu",
+		"userEmail": "ccammomi@guptauni.edu",
 		"userPassword": "Q2wRcRK",
 		"userPhone": "+7 (755) 260-4736",
 		"userAddress": "4 Debra Street",
@@ -300,7 +300,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Carolynn Pennicott",
-		"userEmail": "CPennico@GuptaUni.edu",
+		"userEmail": "cpennico@guptauni.edu",
 		"userPassword": "72WOTx",
 		"userPhone": "+62 (666) 502-2824",
 		"userAddress": "6 Killdeer Hill",
@@ -313,7 +313,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Cassius Gethings",
-		"userEmail": "CGething@GuptaUni.edu",
+		"userEmail": "cgething@guptauni.edu",
 		"userPassword": "2T4NMZe3g",
 		"userPhone": "+46 (943) 914-6404",
 		"userAddress": "10415 Sloan Drive",
@@ -326,7 +326,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Maurene Manion",
-		"userEmail": "MManion@GuptaUni.edu",
+		"userEmail": "mmanion@guptauni.edu",
 		"userPassword": "VelrAU8UhBy",
 		"userPhone": "+62 (432) 642-0729",
 		"userAddress": "9321 Clemons Pass",
@@ -339,7 +339,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Zackariah Lillecrop",
-		"userEmail": "ZLillecr@GuptaUni.edu",
+		"userEmail": "zlillecr@guptauni.edu",
 		"userPassword": "ZUPOnEK",
 		"userPhone": "+963 (183) 477-8087",
 		"userAddress": "5478 Algoma Trail",
@@ -352,7 +352,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Britte Antunez",
-		"userEmail": "BAntunez@GuptaUni.edu",
+		"userEmail": "bantunez@guptauni.edu",
 		"userPassword": "A9shFf",
 		"userPhone": "+380 (989) 326-5351",
 		"userAddress": "62 Westridge Center",
@@ -365,7 +365,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Hubert Batterbee",
-		"userEmail": "HBatterb@GuptaUni.edu",
+		"userEmail": "hbatterb@guptauni.edu",
 		"userPassword": "5312kmb",
 		"userPhone": "+86 (554) 744-9027",
 		"userAddress": "82 Ludington Park",
@@ -378,7 +378,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Cristian Merryfield",
-		"userEmail": "CMerryfi@GuptaUni.edu",
+		"userEmail": "cmerryfi@guptauni.edu",
 		"userPassword": "fOnqNCAK",
 		"userPhone": "+351 (193) 452-4424",
 		"userAddress": "3 Waywood Trail",
@@ -391,7 +391,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Ramonda Mundell",
-		"userEmail": "RMundell@GuptaUni.edu",
+		"userEmail": "rmundell@guptauni.edu",
 		"userPassword": "9KdzOZ0hKe",
 		"userPhone": "+674 (457) 386-9690",
 		"userAddress": "12 Sunfield Road",
@@ -404,7 +404,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Devy Brabin",
-		"userEmail": "DBrabin@GuptaUni.edu",
+		"userEmail": "dbrabin@guptauni.edu",
 		"userPassword": "1vzWX0E6h",
 		"userPhone": "+86 (689) 166-3785",
 		"userAddress": "323 Oak Circle",
@@ -417,7 +417,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Sinclair Toplis",
-		"userEmail": "SToplis@GuptaUni.edu",
+		"userEmail": "stoplis@guptauni.edu",
 		"userPassword": "90sCADbm5",
 		"userPhone": "+62 (717) 150-2842",
 		"userAddress": "5059 Glacier Hill Pass",
@@ -430,7 +430,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Sophronia Hissett",
-		"userEmail": "SHissett@GuptaUni.edu",
+		"userEmail": "shissett@guptauni.edu",
 		"userPassword": "GO5Bg93E0Y",
 		"userPhone": "+7 (541) 724-1966",
 		"userAddress": "0 Gale Lane",
@@ -443,7 +443,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Leonid Thames",
-		"userEmail": "LThames@GuptaUni.edu",
+		"userEmail": "lthames@guptauni.edu",
 		"userPassword": "aWl9L5yr3WV",
 		"userPhone": "+55 (359) 971-6364",
 		"userAddress": "82940 Cottonwood Terrace",
@@ -456,7 +456,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Vick Grimstead",
-		"userEmail": "VGrimste@GuptaUni.edu",
+		"userEmail": "vgrimste@guptauni.edu",
 		"userPassword": "TycMS6qCRzJ",
 		"userPhone": "+7 (205) 539-0465",
 		"userAddress": "40536 Kingsford Street",
@@ -469,7 +469,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Gale Frazer",
-		"userEmail": "GFrazer@GuptaUni.edu",
+		"userEmail": "gfrazer@guptauni.edu",
 		"userPassword": "6eASaFzm",
 		"userPhone": "+389 (340) 926-1301",
 		"userAddress": "434 Utah Alley",
@@ -482,7 +482,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Shea Dake",
-		"userEmail": "SDake@GuptaUni.edu",
+		"userEmail": "sdake@guptauni.edu",
 		"userPassword": "hXkmxH",
 		"userPhone": "+358 (535) 540-5824",
 		"userAddress": "2095 Stephen Terrace",
@@ -495,7 +495,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Carolus Pesterfield",
-		"userEmail": "CPesterf@GuptaUni.edu",
+		"userEmail": "cpesterf@guptauni.edu",
 		"userPassword": "hRLnYg",
 		"userPhone": "+63 (159) 105-9841",
 		"userAddress": "7074 Comanche Crossing",
@@ -508,7 +508,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Winny Cawkwell",
-		"userEmail": "WCawkwel@GuptaUni.edu",
+		"userEmail": "wcawkwel@guptauni.edu",
 		"userPassword": "GffuAcNIwPmH",
 		"userPhone": "+351 (476) 673-7394",
 		"userAddress": "36 Sachs Parkway",
@@ -521,7 +521,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Eberto Berrill",
-		"userEmail": "EBerrill@GuptaUni.edu",
+		"userEmail": "eberrill@guptauni.edu",
 		"userPassword": "evEACo",
 		"userPhone": "+973 (944) 107-6011",
 		"userAddress": "7 Morningstar Park",
@@ -534,7 +534,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Anthiathia Gabler",
-		"userEmail": "AGabler@GuptaUni.edu",
+		"userEmail": "agabler@guptauni.edu",
 		"userPassword": "HfZHmb",
 		"userPhone": "+86 (762) 378-0199",
 		"userAddress": "13 Prentice Junction",
@@ -547,7 +547,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Lev Morefield",
-		"userEmail": "LMorefie@GuptaUni.edu",
+		"userEmail": "lmorefie@guptauni.edu",
 		"userPassword": "YY1g88Oupr",
 		"userPhone": "+86 (695) 610-4772",
 		"userAddress": "1931 Banding Point",
@@ -560,7 +560,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Glendon Megarrell",
-		"userEmail": "GMegarre@GuptaUni.edu",
+		"userEmail": "gmegarre@guptauni.edu",
 		"userPassword": "uDz9W06V6G",
 		"userPhone": "+86 (465) 275-2011",
 		"userAddress": "4 Alpine Place",
@@ -573,7 +573,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Kessiah Weavers",
-		"userEmail": "KWeavers@GuptaUni.edu",
+		"userEmail": "kweavers@guptauni.edu",
 		"userPassword": "rQoWYp",
 		"userPhone": "+62 (541) 646-6760",
 		"userAddress": "54755 Packers Road",
@@ -586,7 +586,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Werner Twine",
-		"userEmail": "WTwine@GuptaUni.edu",
+		"userEmail": "wtwine@guptauni.edu",
 		"userPassword": "Oe1rs96q",
 		"userPhone": "+375 (143) 599-2269",
 		"userAddress": "70 Oakridge Hill",
@@ -599,7 +599,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Godfry Melloi",
-		"userEmail": "GMelloi@GuptaUni.edu",
+		"userEmail": "gmelloi@guptauni.edu",
 		"userPassword": "3XKz5F9LC",
 		"userPhone": "+60 (397) 332-2841",
 		"userAddress": "58406 Bobwhite Point",
@@ -612,7 +612,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Catlin Waryk",
-		"userEmail": "CWaryk@GuptaUni.edu",
+		"userEmail": "cwaryk@guptauni.edu",
 		"userPassword": "atQBNEUWxQc",
 		"userPhone": "+48 (586) 702-8493",
 		"userAddress": "4 Calypso Road",
@@ -625,7 +625,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Nye Lawrenson",
-		"userEmail": "NLawrens@GuptaUni.edu",
+		"userEmail": "nlawrens@guptauni.edu",
 		"userPassword": "Ftn5DXc",
 		"userPhone": "+33 (383) 953-2024",
 		"userAddress": "7 Garrison Alley",
@@ -638,7 +638,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Consolata Giacopini",
-		"userEmail": "CGiacopi@GuptaUni.edu",
+		"userEmail": "cgiacopi@guptauni.edu",
 		"userPassword": "3bL4lffh",
 		"userPhone": "+591 (704) 259-5162",
 		"userAddress": "31958 Macpherson Court",
@@ -651,7 +651,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Celle Eisikowitch",
-		"userEmail": "CEisikow@GuptaUni.edu",
+		"userEmail": "ceisikow@guptauni.edu",
 		"userPassword": "rZkLbq",
 		"userPhone": "+86 (979) 947-1111",
 		"userAddress": "626 Monterey Drive",
@@ -664,7 +664,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Bobette Greig",
-		"userEmail": "BGreig@GuptaUni.edu",
+		"userEmail": "bgreig@guptauni.edu",
 		"userPassword": "DK0pTPMX",
 		"userPhone": "+86 (238) 241-8335",
 		"userAddress": "12 Stoughton Court",
@@ -677,7 +677,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Kennie Smalls",
-		"userEmail": "KSmalls@GuptaUni.edu",
+		"userEmail": "ksmalls@guptauni.edu",
 		"userPassword": "s34yynGCzN",
 		"userPhone": "+66 (178) 372-6766",
 		"userAddress": "2181 Clyde Gallagher Pass",
@@ -690,7 +690,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Adriane Goodread",
-		"userEmail": "AGoodrea@GuptaUni.edu",
+		"userEmail": "agoodrea@guptauni.edu",
 		"userPassword": "SYpAdVdQkBi",
 		"userPhone": "+62 (854) 663-9787",
 		"userAddress": "92264 Graedel Point",
@@ -703,7 +703,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Morissa Czajka",
-		"userEmail": "MCzajka@GuptaUni.edu",
+		"userEmail": "mczajka@guptauni.edu",
 		"userPassword": "q4Wj09Yba",
 		"userPhone": "+86 (157) 869-2717",
 		"userAddress": "85 Weeping Birch Place",
@@ -716,7 +716,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Blakelee Tomek",
-		"userEmail": "BTomek@GuptaUni.edu",
+		"userEmail": "btomek@guptauni.edu",
 		"userPassword": "DpeBbYK",
 		"userPhone": "+62 (961) 412-3426",
 		"userAddress": "3445 Kim Plaza",
@@ -729,7 +729,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Judas Henniger",
-		"userEmail": "JHennige@GuptaUni.edu",
+		"userEmail": "jhennige@guptauni.edu",
 		"userPassword": "FQPJQ650dUG",
 		"userPhone": "+54 (881) 451-3882",
 		"userAddress": "11 Springview Court",
@@ -742,7 +742,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Erhart Hukins",
-		"userEmail": "EHukins@GuptaUni.edu",
+		"userEmail": "ehukins@guptauni.edu",
 		"userPassword": "7LV7FrP",
 		"userPhone": "+7 (712) 204-5331",
 		"userAddress": "54855 Brentwood Crossing",
@@ -755,7 +755,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Davida McKnockiter",
-		"userEmail": "DMcKnock@GuptaUni.edu",
+		"userEmail": "dmcknock@guptauni.edu",
 		"userPassword": "yt1ztcbpqh2",
 		"userPhone": "+27 (299) 342-3992",
 		"userAddress": "7176 Shoshone Plaza",
@@ -768,7 +768,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Kristy Burnapp",
-		"userEmail": "KBurnapp@GuptaUni.edu",
+		"userEmail": "kburnapp@guptauni.edu",
 		"userPassword": "GENNtwi7d",
 		"userPhone": "+380 (201) 990-0216",
 		"userAddress": "06 Esker Plaza",
@@ -781,7 +781,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Marne Drackford",
-		"userEmail": "MDrackfo@GuptaUni.edu",
+		"userEmail": "mdrackfo@guptauni.edu",
 		"userPassword": "LpOWSa",
 		"userPhone": "+48 (679) 662-9597",
 		"userAddress": "2 Old Shore Place",
@@ -794,7 +794,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Matty Gai",
-		"userEmail": "MGai@GuptaUni.edu",
+		"userEmail": "mgai@guptauni.edu",
 		"userPassword": "ZKlJpIirh4",
 		"userPhone": "+27 (375) 336-8514",
 		"userAddress": "1135 6th Place",
@@ -807,7 +807,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Viki Totterdell",
-		"userEmail": "VTotterd@GuptaUni.edu",
+		"userEmail": "vtotterd@guptauni.edu",
 		"userPassword": "PWuQwttnlg5",
 		"userPhone": "+358 (507) 161-3475",
 		"userAddress": "83567 Spenser Point",
@@ -820,7 +820,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Sander Devonish",
-		"userEmail": "SDevonis@GuptaUni.edu",
+		"userEmail": "sdevonis@guptauni.edu",
 		"userPassword": "6FnTuBwouVW",
 		"userPhone": "+359 (836) 156-6386",
 		"userAddress": "2625 Mosinee Terrace",
@@ -833,7 +833,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Sigismond Kinnett",
-		"userEmail": "SKinnett@GuptaUni.edu",
+		"userEmail": "skinnett@guptauni.edu",
 		"userPassword": "XjF2Xto",
 		"userPhone": "+355 (935) 955-6923",
 		"userAddress": "0097 Schiller Street",
@@ -846,7 +846,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Diane-marie Gillbee",
-		"userEmail": "DGillbee@GuptaUni.edu",
+		"userEmail": "dgillbee@guptauni.edu",
 		"userPassword": "3Y5ydNQp",
 		"userPhone": "+966 (117) 750-6566",
 		"userAddress": "4402 Thompson Circle",
@@ -859,7 +859,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Lucille Barbary",
-		"userEmail": "LBarbary@GuptaUni.edu",
+		"userEmail": "lbarbary@guptauni.edu",
 		"userPassword": "IPQ4BvzcO6x2",
 		"userPhone": "+62 (994) 207-9679",
 		"userAddress": "802 Sunfield Lane",
@@ -872,7 +872,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Uriel McAuslan",
-		"userEmail": "UMcAusla@GuptaUni.edu",
+		"userEmail": "umcausla@guptauni.edu",
 		"userPassword": "s6DHkw7C",
 		"userPhone": "+33 (445) 157-1152",
 		"userAddress": "9728 Walton Pass",
@@ -885,7 +885,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Fletch Fernandez",
-		"userEmail": "FFernand@GuptaUni.edu",
+		"userEmail": "ffernand@guptauni.edu",
 		"userPassword": "vT8MLPUHY",
 		"userPhone": "+352 (100) 719-3098",
 		"userAddress": "5 Southridge Alley",
@@ -898,7 +898,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Margy Worssam",
-		"userEmail": "MWorssam@GuptaUni.edu",
+		"userEmail": "mworssam@guptauni.edu",
 		"userPassword": "iJCxTAblFU",
 		"userPhone": "+1 (864) 763-7118",
 		"userAddress": "31998 Schiller Hill",
@@ -911,7 +911,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Dori Flacknoe",
-		"userEmail": "DFlackno@GuptaUni.edu",
+		"userEmail": "dflackno@guptauni.edu",
 		"userPassword": "DCLcQBPJj9",
 		"userPhone": "+86 (697) 662-5804",
 		"userAddress": "066 Westport Hill",
@@ -924,7 +924,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Rosalynd Punshon",
-		"userEmail": "RPunshon@GuptaUni.edu",
+		"userEmail": "rpunshon@guptauni.edu",
 		"userPassword": "Xn1E7YFOY",
 		"userPhone": "+371 (522) 781-0162",
 		"userAddress": "7299 Crowley Circle",
@@ -937,7 +937,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Rheta Trounce",
-		"userEmail": "RTrounce@GuptaUni.edu",
+		"userEmail": "rtrounce@guptauni.edu",
 		"userPassword": "bZ72kopvjc",
 		"userPhone": "+351 (736) 267-7190",
 		"userAddress": "79921 Red Cloud Trail",
@@ -950,7 +950,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Cletus Liggins",
-		"userEmail": "CLiggins@GuptaUni.edu",
+		"userEmail": "cliggins@guptauni.edu",
 		"userPassword": "Hc3iB5I",
 		"userPhone": "+62 (529) 507-2421",
 		"userAddress": "2 Loftsgordon Trail",
@@ -963,7 +963,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Lola Rennock",
-		"userEmail": "LRennock@GuptaUni.edu",
+		"userEmail": "lrennock@guptauni.edu",
 		"userPassword": "4rmQdbr",
 		"userPhone": "+33 (537) 107-7261",
 		"userAddress": "3755 Red Cloud Alley",
@@ -976,7 +976,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Tomas Sibbson",
-		"userEmail": "TSibbson@GuptaUni.edu",
+		"userEmail": "tsibbson@guptauni.edu",
 		"userPassword": "TT8jWpLokSW",
 		"userPhone": "+86 (931) 397-9181",
 		"userAddress": "17702 Warner Court",
@@ -989,7 +989,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Tildie Clementet",
-		"userEmail": "TClement@GuptaUni.edu",
+		"userEmail": "tclement@guptauni.edu",
 		"userPassword": "ymAsRZ0cJu",
 		"userPhone": "+237 (820) 118-8675",
 		"userAddress": "75483 Roxbury Parkway",
@@ -1002,7 +1002,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Gianni Vedekhin",
-		"userEmail": "GVedekhi@GuptaUni.edu",
+		"userEmail": "gvedekhi@guptauni.edu",
 		"userPassword": "EGbj9G5",
 		"userPhone": "+357 (675) 369-1701",
 		"userAddress": "9333 Tony Road",
@@ -1015,7 +1015,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Leia Gant",
-		"userEmail": "LGant@GuptaUni.edu",
+		"userEmail": "lgant@guptauni.edu",
 		"userPassword": "QEgjhh",
 		"userPhone": "+963 (969) 803-6024",
 		"userAddress": "596 Fisk Plaza",
@@ -1028,7 +1028,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Codie Doberer",
-		"userEmail": "CDoberer@GuptaUni.edu",
+		"userEmail": "cdoberer@guptauni.edu",
 		"userPassword": "H2hH1up1J5QD",
 		"userPhone": "+86 (328) 329-2198",
 		"userAddress": "0 Hollow Ridge Center",
