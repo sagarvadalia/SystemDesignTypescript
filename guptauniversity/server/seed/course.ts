@@ -169,7 +169,7 @@ const course = [
 	},
 	{
 		"courseName": "History of Mass Media",
-		"courseDesc": "Learn the history of the mass media",
+		"courseDesc": "We will examine the parts played by government, private enterprise, social movements, and technology in the development of the major. In addition to the political economy of the media, the course will cover the conflicts over civil liberties, mass culture, advertising, and the rise of consumer culture in America.",
 		"numOfCredits": 4,
 		"deptIDNum": 1,
 		"courseID": 125
@@ -346,14 +346,14 @@ const course = [
 		"courseName": "History of the Family in the U.S",
 		"courseDesc": "Examines the changing structure of American families over the past 300 years: how they have differed according to class, race and ethnicity, and the forces that have continued to influence family life.",
 		"numOfCredits": 4,
-		"deptIDNum": 1,
+		"deptIDNum": 5,
 		"courseID": 150
 	},
 	{
 		"courseName": "History of New York City and State",
 		"courseDesc": "This course examines the social, cultural, economic, political and demographic development of New York City and State from colonial America to the present.",
 		"numOfCredits": 4,
-		"deptIDNum": 1,
+		"deptIDNum": 5,
 		"courseID": 151
 	},
 	{
@@ -379,21 +379,21 @@ const course = [
 	},
 	{
 		"courseName": "Introduction to European History",
-		"courseDesc": "introduction of European history",
+		"courseDesc": "A systematic survey of European political, social, economic, cultural and intellectual history since the Renais-sance.",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 155
 	},
 	{
 		"courseName": "Asian Cultures",
-		"courseDesc": "An introduction to the historical and cultural traditions of India, China and Japan. T",
+		"courseDesc": "An introduction to the historical and cultural traditions of India, China and Japan.",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 156
 	},
 	{
-		"courseName": "Modern China [study abroad]",
-		"courseDesc": "his 4 week summer course will introduce students to all aspects of life in modern China—from its culture to its business community, from its political philosophy to the ideas of the men and women on its streets",
+		"courseName": "Modern China",
+		"courseDesc": "Introduces students to all aspects of life in modern China—from its culture to its business community, from its political philosophy to the ideas of the men and women on its streets",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 157
@@ -504,43 +504,43 @@ const course = [
 		"courseID": 172
 	},
 	{
+		"courseName": "Comparative Anatomy",
+		"courseDesc": "Lecture/laboratory course designed for biology majors and premedical students. Emphasis is on the basic anatomi-cal patterns of vertebrate structure.",
+		"numOfCredits": 4,
+		"deptIDNum": 2,
+		"courseID": 173
+	},
+	{
 		"courseName": "Evolution",
 		"courseDesc": "Lecture/discussion course presenting the history of life on earth from its inception to the emergence and early history of Homo sapiens",
 		"numOfCredits": 4,
 		"deptIDNum": 2,
-		"courseID": 173
+		"courseID": 174
 	},
 	{
 		"courseName": "Ecology",
 		"courseDesc": "The study of populations and communities of organisms and the interactions of organisms within their environ-ment",
 		"numOfCredits": 4,
 		"deptIDNum": 2,
-		"courseID": 174
+		"courseID": 175
 	},
 	{
 		"courseName": "Environmental Science",
 		"courseDesc": "The focus of this lecture course is on the interactions of humans with their environment. Human impact on the world’s ecosystems is emphasized",
 		"numOfCredits": 4,
 		"deptIDNum": 2,
-		"courseID": 175
+		"courseID": 176
 	},
 	{
 		"courseName": "Plant Biology",
 		"courseDesc": "The study of plants as biological organisms. Topics include classification and evolution of the plant kingdom: plant anatomy, physiology and reproduction, with emphasis on the flowering plants.",
 		"numOfCredits": 4,
 		"deptIDNum": 2,
-		"courseID": 176
+		"courseID": 177
 	},
 	{
 		"courseName": "Parasitology",
 		"courseDesc": "Lecture/laboratory course. Major parasites of medical and economic interest are examined, including the causal agents of malaria, trypanosomiasis schistosomiasis, and filaria",
-		"numOfCredits": 4,
-		"deptIDNum": 2,
-		"courseID": 177
-	},
-	{
-		"courseName": "Comparative Anatomy",
-		"courseDesc": "Lecture/laboratory course designed for biology majors and premedical students. Emphasis is on the basic anatomi-cal patterns of vertebrate structure.",
 		"numOfCredits": 4,
 		"deptIDNum": 2,
 		"courseID": 178
@@ -602,7 +602,7 @@ const course = [
 		"courseID": 186
 	},
 	{
-		"courseName": "Freshwater Ecology (Limnology) ",
+		"courseName": "Freshwater Ecology",
 		"courseDesc": "A lecture/discussion and laboratory course dealing with the structure and function of freshwater systems such as lakes, ponds, rivers, and stream",
 		"numOfCredits": 4,
 		"deptIDNum": 2,
@@ -617,7 +617,7 @@ const course = [
 	},
 	{
 		"courseName": "Animal Behavior",
-		"courseDesc": "A lecture/laboratory course introducing the field of animal behavior. L",
+		"courseDesc": "A lecture/laboratory course introducing the field of animal behavior.",
 		"numOfCredits": 4,
 		"deptIDNum": 2,
 		"courseID": 189
@@ -715,7 +715,7 @@ const course = [
 	},
 	{
 		"courseName": "Analytical Chemistry",
-		"courseDesc": "Analysis basics of chemistry",
+		"courseDesc": "Study of chemical stoichiometry, homogeneous and heterogeneous equilibria, principles of volumetric and gravi-metric analysis, chemical separation methods and spectrophotometry.",
 		"numOfCredits": 4,
 		"deptIDNum": 3,
 		"courseID": 203
@@ -771,21 +771,21 @@ const course = [
 	},
 	{
 		"courseName": "Calculus I",
-		"courseDesc": "Basics of calculus",
+		"courseDesc": "Involves a study of limits, continuity, derivatives and integrals; computations of derivatives—sum, product, and quotient formulas, chain rule, implicit differentiation, applications of derivatives to optimization problems and related rate problems; mean-value theorem; definite integrals and fundamental theorem of calculus.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 211
 	},
 	{
 		"courseName": "Calculus II",
-		"courseDesc": "Continuation of calculus I",
+		"courseDesc": "Topics include differentiation and integration of transcendental functions, indeterminate forms, methods of integration, improper integrals, infinite series, parametric equations, and polar coordinates",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 212
 	},
 	{
 		"courseName": "Calculus III",
-		"courseDesc": "Continuation of calculus II",
+		"courseDesc": "Learn to apply the concepts you know learned in Calculus I and II to three dimensions rather than two",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 213
@@ -799,7 +799,7 @@ const course = [
 	},
 	{
 		"courseName": "Differential Equations",
-		"courseDesc": "A study of differential equations and their applications;",
+		"courseDesc": "A study of differential equations and their applications; ordinary differential equations with particular emphasis on linear differential equations, systems of differential equations, boundary value problems and applications to electrical, mechanical and chemical systems.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 215
@@ -841,843 +841,857 @@ const course = [
 	},
 	{
 		"courseName": "English Composition 1",
-		"courseDesc": "Designed to develop and refine students’ ability to read, write and think critically. ",
+		"courseDesc": "Designed to develop and refine students’ ability to read, write and think critically.",
 		"numOfCredits": 4,
 		"deptIDNum": 4,
 		"courseID": 221
 	},
 	{
 		"courseName": "English Composition 2",
-		"courseDesc": "Designed to develop and refine students’ ability to read, write and think critically. ",
+		"courseDesc": "This multiple option course is designed to enable students to formulate and express independent ideas in writing and to develop essay length interpretations based on course readings in literary texts.",
 		"numOfCredits": 4,
 		"deptIDNum": 4,
 		"courseID": 222
 	},
 	{
 		"courseName": "Sin and Sexuality in Literature",
-		"courseDesc": "Study of sin and sexuality in literature",
+		"courseDesc": "Explores the intricacies of topics like sin, lust, and sex in and their progression over time.",
 		"numOfCredits": 4,
 		"deptIDNum": 4,
 		"courseID": 223
 	},
 	{
 		"courseName": "Topics in British/US Literature",
-		"courseDesc": "Study of topics within British and US Literature",
+		"courseDesc": "This course gives in-depth knowledge of particular periods and genres of literature; topics are offered on a rotating basis. They may include nineteenth-century British fiction; periods and genres in U.S literature; seventeenth- and eighteenth-century British literature; women writers 1760-1840, and others",
 		"numOfCredits": 4,
 		"deptIDNum": 4,
 		"courseID": 224
 	},
 	{
 		"courseName": "Modern Drama and Theater",
-		"courseDesc": "Modern day drama and theater techniques",
+		"courseDesc": "This course will involve reading and viewing critically and analytically plays dealing with important themes and political issues from the late nineteenth century to today",
 		"numOfCredits": 4,
 		"deptIDNum": 4,
 		"courseID": 225
 	},
 	{
 		"courseName": "Epic: East and West",
-		"courseDesc": "Study about the differences in eastern and western literature",
+		"courseDesc": "In this course, students read epics from both western and eastern civilizations and explore the causation of the differences.",
 		"numOfCredits": 4,
 		"deptIDNum": 4,
 		"courseID": 226
 	},
 	{
 		"courseName": "Extraordinary Bodies: Disability in Literature",
-		"courseDesc": "The study of disabilities in literature",
+		"courseDesc": "This course will examine how the depiction of bodily difference in literature leads to crucial questions about norma-tive experience, language, and identity.",
 		"numOfCredits": 4,
 		"deptIDNum": 4,
 		"courseID": 227
 	},
 	{
 		"courseName": "Latino Writers in the US",
-		"courseDesc": "Students learn about latino writers in the US",
+		"courseDesc": "Taught in English. This course recognizes the contributions of “Latino” writers who have produced a body of litera-ture in English",
 		"numOfCredits": 4,
-		"deptIDNum": 4,
+		"deptIDNum": 5,
 		"courseID": 228
 	},
 	{
-		"courseName": "Survey of African American Literature",
-		"courseDesc": "An overall study of African American literature",
+		"courseName": "African American Literature",
+		"courseDesc": "Explores the common themes in African American literature by reading a lot of books.",
 		"numOfCredits": 4,
-		"deptIDNum": 4,
+		"deptIDNum": 5,
 		"courseID": 229
 	},
 	{
 		"courseName": "Intro to the Pre-Columbian Culture",
-		"courseDesc": "introduction to precolombian culture",
+		"courseDesc": "An interdisciplinary survey course in the humanities intended to introduce students to the scientific achievements and cultural innovations of the Pre-Columbian civilizations of the Americas from ancient times to the colonial period.",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 230
 	},
 	{
 		"courseName": "Politics of Latin America & Caribbean",
-		"courseDesc": "Study politics of latin America and Caribbean",
+		"courseDesc": "This course analyzes political and economic change in selected countries of the region from the mid-twentieth century to the present",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 231
 	},
 	{
 		"courseName": "Geography, Earth, and People",
-		"courseDesc": "The study of Geography the Earth and People",
+		"courseDesc": "Geography sits at the interface between people and their physical world. This course explores this interface by looking at three key elements of the discipline: Mapping, Physical Geography and Socio-Cultural Geography",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 232
 	},
 	{
 		"courseName": "Global Geography",
-		"courseDesc": "This course is about studying the geography of the world",
+		"courseDesc": "This course develops a human geography approach to a diversity of political economic and cultural topics of global importance from an international, cross-cultural and historical perspective.",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 233
 	},
 	{
 		"courseName": "U.S. Latina/o History",
-		"courseDesc": "The beginning of African American History",
+		"courseDesc": "This course will study the long history of Latina/os in the United States from the colonial era to the present, as well as explore important issues in Latina/o culture and politics",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 234
 	},
 	{
 		"courseName": "Women, Work, and Careers",
-		"courseDesc": "Study of Geography of latin America",
+		"courseDesc": "This course surveys women’s experience from 1620 to the present. The course analyzes women’s connection to key aspects of American history such as the American Revolution",
 		"numOfCredits": 4,
 		"deptIDNum": 5,
 		"courseID": 235
 	},
 	{
 		"courseName": "Computer Programming I",
-		"courseDesc": "A continuation of African American history I",
+		"courseDesc": "An introduction to problem solving through programming. Topics include program design and analysis: algorithmic processes, fundamental techniques of program development, debugging and testing.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 236
 	},
 	{
 		"courseName": "Computer Programming II",
-		"courseDesc": "History of Latino/Latina's in the U.S",
+		"courseDesc": "Discussion of methods, arrays, class and object, inheritance, polymorphism, exceptions, file operations, and GUI (Graphical User Interface) applications.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 237
 	},
 	{
 		"courseName": "Computer Architecture I",
-		"courseDesc": "History about the urban society.",
+		"courseDesc": "Advanced course on the inner workings of computers and their logical math",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 238
 	},
 	{
 		"courseName": "Data Structures and Algorithms",
-		"courseDesc": "The study of women their jobs and how they made their way into Careers",
+		"courseDesc": "Introduces abstract data structures and their implementations, including lists, stacks, queues, trees, hash tables, heaps and linked structures",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 239
 	},
 	{
 		"courseName": "Java and Object-Oriented Programming",
-		"courseDesc": "Introduction to programming concepts",
+		"courseDesc": "Object-oriented programming: classes, interfaces, objects, messaging, composition, inheritance. Language features: exceptions, packages, garbage collection, virtual machine.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 240
 	},
 	{
 		"courseName": "C++ and Object-Oriented Programming",
-		"courseDesc": "Continuation of programming I",
+		"courseDesc": "An object oriented approach to C++ with an emphasis on how to self-learn a new programming language. Will reiterate major concepts such as encapsulation, abstraction, classes, and objects as well as learn about pointers and dynamic memory.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 241
 	},
 	{
 		"courseName": "Technical Communications",
-		"courseDesc": "Advanced course on the inner workings of computers and their logical math",
+		"courseDesc": "Emphasis on technical writing and public speaking skills. Application of report-writing fundamentals to technical correspondence, technical reports, user manuals",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 242
 	},
 	{
 		"courseName": "Software Engineering",
-		"courseDesc": "Introduction to data structures and alogithms",
+		"courseDesc": "Introduces principles and disciplines of software engineering. Semester-long projects allow students to practice on a complete process of the software development.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 243
 	},
 	{
 		"courseName": "Database Management Systems",
-		"courseDesc": "Introduction to object oriented programming through Java",
+		"courseDesc": "Basic concepts: data, information systems, data independence and need for DBMS facilities. The relational model: schema, subschema, relational algebra, relational calculus, SQL, ODBC, JDBC and SQLJ",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 244
 	},
 	{
 		"courseName": "Internet and Web Technologies",
-		"courseDesc": "Introduction to object oriented programming through c++",
+		"courseDesc": "Introduce the Internet, the World Wide Web, the client/server applications, and various web development tech-nologies",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 245
 	},
 	{
 		"courseName": "System Design & Implementation",
-		"courseDesc": "Teaches you how to write technical documents",
+		"courseDesc": "Students, working in groups, design and implement a significant software project.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 246
 	},
 	{
 		"courseName": "Calculus and Analytic Geometry I",
-		"courseDesc": "Learn basic software engineering models and other techniques.",
+		"courseDesc": "Topics include functions and their graphs, limits and continuity, derivatives of polynomials, rational functions, alge-braic functions, exponential & logarithmic functions, and trigonometric functions",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 247
 	},
 	{
 		"courseName": "Calculus and Analytic Geometry II",
-		"courseDesc": "Database Managements and properties",
+		"courseDesc": "Topics include indefinite and definite integral, applications of definite integral, integration techniques, infinite series, and analytic geometry.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 248
 	},
 	{
 		"courseName": "Discrete Mathematics",
-		"courseDesc": "Introduction to internet technologies",
+		"courseDesc": "An introduction to discrete mathematical structures. Topics include propositional and predicate logic, set theory, relations and functions, induction and recursion, methods of proof, number theory, and graphs and trees",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 249
 	},
 	{
 		"courseName": "Intro. To Probability & Statistics",
-		"courseDesc": "Students design and implement a real world project",
+		"courseDesc": "This course provides a foundation in probability and statistical inference.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 250
 	},
 	{
 		"courseName": "Calculus and Analytic Geometry III",
-		"courseDesc": "Topics include functions and their graphs, limits and continuity, derivatives of polynomials, rational functions, alge-braic functions, exponential & logarithmic functions, and trigonometric functions",
+		"courseDesc": "Three main areas will be studied. The first is the Vector algebra and geometry of three-dimensional space including: lines, planes, and curves in space;",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 251
 	},
 	{
 		"courseName": "Transition to Advanced Mathematics",
-		"courseDesc": "Topics include indefinite and definite integral, applications of definite integral, integration techniques, infinite series, and analytic geometry.",
+		"courseDesc": "An introduction to concepts commonly used in advanced mathematics with an emphasis on writing proofs.",
 		"numOfCredits": 4,
 		"deptIDNum": 6,
 		"courseID": 252
 	},
 	{
 		"courseName": "Feminine and Masculine in Film",
-		"courseDesc": "An introduction to discrete mathematical structures",
+		"courseDesc": "Differences between feminine and masculine in films",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 253
 	},
 	{
 		"courseName": "Global Media Film: Ideas and Aesthetics",
-		"courseDesc": "This course provides a foundation in probability and statistical inference.",
+		"courseDesc": "The American media compete in a global market. American media have become a dominant source of informa-tion and entertainment world wide.",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 254
 	},
 	{
 		"courseName": "The Photograph and American Culture",
-		"courseDesc": "Three main areas will be studied. The first is the Vector algebra and geometry of three-dimensional space including: lines, planes, and curves in space;",
+		"courseDesc": "The course treats film in relation to modern theories and aesthetic techniques and offers tools for developing an in-depth analysis of film form and content.",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 255
 	},
 	{
 		"courseName": "Political Film",
-		"courseDesc": "An introduction to concepts commonly used in advanced mathematics with an emphasis on writing proofs.",
+		"courseDesc": "From wars and elections, to civil rights and civil liberties, feature films and documentaries have influenced Ameri-can public opinion and policies. T",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 256
 	},
 	{
 		"courseName": "Digital Revolution",
-		"courseDesc": "Learn the history of the mass media. We will examine the parts played by government, private enterprise, social movements, and technology in the development of the major",
+		"courseDesc": "We are in the midst of a profound technological and historical change: the Digital Revolution. Digital networks of communication permeate nearly every aspect of our life,",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 257
 	},
 	{
 		"courseName": "Sociology of Communications and Media",
-		"courseDesc": "Using a broad definition of politics –not only the world of elections or of governance, but of power relations in everyday life—this course examines how political structures affect the mass media, and how the mass media are a strong influence in politics",
+		"courseDesc": "The sociological perspective is used to study communications media in contemporary society.",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 258
 	},
 	{
 		"courseName": "Intermediate Spanish Conversation I",
-		"courseDesc": "What is reality? Can truth be captured and represented? Learn about documentary film, photography and new media projects from the birth of photography to today.",
+		"courseDesc": "This course is designed for non-native speakers who have learned the basic structures of Spanish and for Hispanic students with some knowledge of spoken Spanish but no prior academic training in the language.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 259
 	},
 	{
 		"courseName": "Intermediate Spanish Conversation II",
-		"courseDesc": "This course examines the movies in terms of social myths and social values. It looks at representative films from the United States, Europe, Latin America and Africa",
+		"courseDesc": "This course offers a comprehensive review of Spanish grammar and intensive work on vocabulary building.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 260
 	},
 	{
 		"courseName": "Spanish Language and Culture",
-		"courseDesc": "Differences between feminine and masculine in films",
+		"courseDesc": "Taught in Spanish. Increases oral proficiency using authentic reading materials and “real life” situations, which focus on themes such as ethnicity, education, art, religion",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 261
 	},
 	{
 		"courseName": "Advanced Spanish Grammar and Composition",
-		"courseDesc": "A history of American popular music: Follow changes in American musical culture from work songs and parlor pianos to auto-tune and streaming media.",
+		"courseDesc": "Designed for both Heritage speakers and second-language learners.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 262
 	},
 	{
 		"courseName": "Advanced Spanish Conversation and Composition",
-		"courseDesc": "The course examines the role of public relations in the media, corporate culture, politics and society. T",
+		"courseDesc": "Designed for both non-native speakers who have had at least two years of Spanish study, and for Hispanic stu-dents who need to activate and expand their ability to think and express themselves in their heritage language.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 263
 	},
 	{
 		"courseName": "Translation Workshop",
-		"courseDesc": "Examines the participation of African-Americans in the development of mass media in the U.S. by looking at newspapers, magazines, books, radio, records, movies",
+		"courseDesc": "This is an introductory course in the theory and practice of English/Spanish translation.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 264
 	},
 	{
 		"courseName": "Spanish Linguistics:  Universals of Grammar",
-		"courseDesc": "This course explores the ways women are depicted by the mass media and how that depiction has changed over time",
+		"courseDesc": "In this course, students will learn linguistic terminology for an exhaustive classification of parts of speech, word formation (morphology) features and marking, and syntactic function.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 265
 	},
 	{
 		"courseName": "Spanish Linguistics",
-		"courseDesc": "This course addresses a special topic in the history, society and/or culture of the U.S. The specific topic will be announced by the Department when offered.",
+		"courseDesc": "This course provides an essential survey of the major areas of Spanish linguistics geared primarily towards the un-dergraduate Spanish Education major",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 266
 	},
 	{
 		"courseName": "Recent Narrative from Spain",
-		"courseDesc": "The American media compete in a global market. American media have become a dominant source of informa-tion and entertainment world wide.",
+		"courseDesc": "Taught in Spanish. This course provides an analytical and historical approach to narratives written in Spain during the last two decades of the 20th century.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 267
 	},
 	{
 		"courseName": "Hispanic Women Writers",
-		"courseDesc": "The course treats film in relation to modern theories and aesthetic techniques and offers tools for developing an in-depth analysis of film form and content.",
+		"courseDesc": "Taught in Spanish. A close reading and analysis of major works of fiction and poetry by Hispanic women.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 268
 	},
 	{
 		"courseName": "Recurrent Themes in Latin American Painting and Literature",
-		"courseDesc": "From wars and elections, to civil rights and civil liberties, feature films and documentaries have influenced Ameri-can public opinion and policies. T",
+		"courseDesc": "Taught in Spanish. This course explores the importance of art and literature in the construction of national, cul-tural and social discourses in Latin America",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 7,
 		"courseID": 269
 	},
 	{
 		"courseName": "Introduction to Law",
-		"courseDesc": "We are in the midst of a profound technological and historical change: the Digital Revolution. Digital networks of communication permeate nearly every aspect of our life,",
+		"courseDesc": "This course is intended to familiarize students with the basic substantive, procedural, and structural components of the legal system of the United States of America",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 270
 	},
 	{
 		"courseName": "Principles of Microeconomics",
-		"courseDesc": "The sociological perspective is used to study communications media in contemporary society.",
+		"courseDesc": "An introduction to neoclassical economic theory. Consumer and producer behaviors, price formation in the mar-ket and the role of the market in allocating resources and coordinating social production are among the topics covered",
 		"numOfCredits": 4,
 		"deptIDNum": 8,
 		"courseID": 271
 	},
 	{
 		"courseName": "Principles of Macroeconomics",
-		"courseDesc": "This course is designed for non-native speakers who have learned the basic structures of Spanish and for Hispanic students with some knowledge of spoken Spanish but no prior academic training in the language.",
+		"courseDesc": "An introduction to conventional macroeconomic theory, including the determination of national income, govern-ment taxing and spending policy, money and banking, unemployment, and inflation.",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 8,
 		"courseID": 272
 	},
 	{
 		"courseName": "Introduction to U.S. Politics",
-		"courseDesc": "This course offers a comprehensive review of Spanish grammar and intensive work on vocabulary building.",
+		"courseDesc": "This introduction to power and politics in the U.S. explores the Declaration of Independence and the Constitution;",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 8,
 		"courseID": 273
 	},
 	{
 		"courseName": "Unions and Management:An Introduction",
-		"courseDesc": "Taught in Spanish. Increases oral proficiency using authentic reading materials and “real life” situations, which focus on themes such as ethnicity, education, art, religion",
+		"courseDesc": "Focusing on the current state of labor-management relations, this course introduces students to collective bargain-ing, labor and employment law, history of labor relations",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 8,
 		"courseID": 274
 	},
 	{
 		"courseName": "Introduction to Urban Issues",
-		"courseDesc": "Designed for both Heritage speakers and second-language learners.",
+		"courseDesc": "An examination of various perspectives on urban areas and of important urban issues, including social problems of minority communities, housing and public services",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 8,
 		"courseID": 275
 	},
 	{
 		"courseName": "Introduction to Political Economy",
-		"courseDesc": "Designed for both non-native speakers who have had at least two years of Spanish study, and for Hispanic stu-dents who need to activate and expand their ability to think and express themselves in their heritage language.",
+		"courseDesc": "This course is an introduction to capitalism, as seen initially through the great works of political economy by Adam Smith, David Ricardo and Kar",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 8,
 		"courseID": 276
 	},
 	{
 		"courseName": "Global Geography: People, Placesand Environments",
-		"courseDesc": "This is an introductory course in the theory and practice of English/Spanish translation.",
+		"courseDesc": "This course develops a human geography approach to a diversity of political economic and cultural topics of global importance from an international, cross-cultural and historical perspective",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 8,
 		"courseID": 277
 	},
 	{
 		"courseName": "International Relations",
-		"courseDesc": "In this course, students will learn linguistic terminology for an exhaustive classification of parts of speech, word formation (morphology) features and marking, and syntactic function.",
+		"courseDesc": "Introduces principles of state-to-state relations, basic modes of resolving international disputes and the evolution of international organizations",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 8,
 		"courseID": 278
 	},
 	{
 		"courseName": "Introduction to Psychology",
-		"courseDesc": "This course provides an essential survey of the major areas of Spanish linguistics geared primarily towards the un-dergraduate Spanish Education major",
+		"courseDesc": "A prerequisite to all other psychology courses. Based on methods and data of psychological science, this course investigates basic principles of behavior.",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 9,
 		"courseID": 279
 	},
 	{
 		"courseName": "Research Design & Analysis I",
-		"courseDesc": "Taught in Spanish. This course provides an analytical and historical approach to narratives written in Spain during the last two decades of the 20th century.",
+		"courseDesc": "Introduces the student to the basic research methodologies and statistical techniques used by psychological sci-entists, with a focus on descriptive and correlational methods.",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 9,
 		"courseID": 280
 	},
 	{
 		"courseName": "Research Design & Analysis II",
-		"courseDesc": "Taught in Spanish. A close reading and analysis of major works of fiction and poetry by Hispanic women.",
+		"courseDesc": "Continuation of Research and Analysis II",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 9,
 		"courseID": 281
 	},
 	{
 		"courseName": "Advanced Perspectivesin Developmental Psychology",
-		"courseDesc": "Taught in Spanish. This course explores the importance of art and literature in the construction of national, cul-tural and social discourses in Latin America",
+		"courseDesc": "This course provides an in-depth evaluation of theory and research about specific periods in the human lifespan, such as childhood, adolescence, and young",
 		"numOfCredits": 4,
-		"deptIDNum": 7,
+		"deptIDNum": 9,
 		"courseID": 282
 	},
 	{
 		"courseName": "Approaches toPsychotherapy",
-		"courseDesc": "This course is intended to familiarize students with the basic substantive, procedural, and structural components of the legal system of the United States of America",
+		"courseDesc": "A critical analysis of approaches to psychotherapy. Theoretical and practical issues are discussed in the seminar covering major applications of psychological theories to the practice of psychotherapy",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 9,
 		"courseID": 283
 	},
 	{
 		"courseName": "Social Problems",
-		"courseDesc": "An introduction to neoclassical economic theory.",
+		"courseDesc": "Examines the historical and contemporary roots of critical social problems such as poverty, unemployment, eco-logical despoliation, delinquency, population growth,",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 284
 	},
 	{
 		"courseName": "Social Deviance",
-		"courseDesc": "An introduction to conventional macroeconomic theory, including the determination of national income, govern-ment taxing and spending policy, money and banking, unemployment, and inflation.",
+		"courseDesc": "Examines the patterns of deviant behavior in American society. Concentrates on the social construction of devi-ance:",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 285
 	},
 	{
 		"courseName": "Sociology of Culture",
-		"courseDesc": "This introduction to power and politics in the U.S. explores the Declaration of Independence and the Constitution;",
+		"courseDesc": "Provides a sociological approach to the study of culture. Material and non-material aspects of culture are explored through the study of language, science and technology, the various arts and media.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 286
 	},
 	{
 		"courseName": "Social Inequality",
-		"courseDesc": "Focusing on the current state of labor-management relations, this course introduces students to collective bargain-ing, labor and employment law, history of labor relations",
+		"courseDesc": "This course analyzes the basic dimensions of structured social inequality, the unequal distribution of wealth, power, goods and services by class, race and gender",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 287
 	},
 	{
 		"courseName": "Political Sociology",
-		"courseDesc": "An examination of various perspectives on urban areas and of important urban issues, including social problems of minority communities, housing and public services",
+		"courseDesc": "Examines the social structures and processes related to participation in the political life of society.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 288
 	},
 	{
 		"courseName": "Family and Society",
-		"courseDesc": "This course is an introduction to capitalism, as seen initially through the great works of political economy by Adam Smith, David Ricardo and Kar",
+		"courseDesc": "Through historical and comparative analysis, studies the connection between courtship and marriage patterns and different economic systems",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 289
 	},
 	{
 		"courseName": "Medical Sociology",
-		"courseDesc": "This course develops a human geography approach to a diversity of political economic and cultural topics of global importance from an international, cross-cultural and historical perspective",
+		"courseDesc": "Explores the social forces defining and influencing health and illness",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 290
 	},
 	{
 		"courseName": "Race and Ethnicity",
-		"courseDesc": "Introduces principles of state-to-state relations, basic modes of resolving international disputes and the evolution of international organizations",
+		"courseDesc": "Emphasizes the history, social structure and culture of racial national, ethnic and religious minorities.",
 		"numOfCredits": 4,
-		"deptIDNum": 8,
+		"deptIDNum": 11,
 		"courseID": 291
 	},
 	{
 		"courseName": "Social Movements",
-		"courseDesc": "A prerequisite to all other psychology courses. Based on methods and data of psychological science, this course investigates basic principles of behavior.",
+		"courseDesc": "Provides an overview of the contemporary sociological models used to analyze the dynamics of protest among disenfranchised constituencies in the U.S",
 		"numOfCredits": 4,
-		"deptIDNum": 9,
+		"deptIDNum": 11,
 		"courseID": 292
 	},
 	{
 		"courseName": "Sociology of Work",
-		"courseDesc": "Introduces the student to the basic research methodologies and statistical techniques used by psychological sci-entists, with a focus on descriptive and correlational methods.",
+		"courseDesc": "This course will introduce students to the sociology of work and industry. We will cover the history of work organi-zation from ancient to modern times, but with particular emphasis on contemporary, ‘post-industrial’ capitalism",
 		"numOfCredits": 4,
-		"deptIDNum": 9,
+		"deptIDNum": 11,
 		"courseID": 293
 	},
 	{
 		"courseName": "Social Work: Theory and Practice",
-		"courseDesc": "Continuation of Research and Analysis II",
+		"courseDesc": "Examines social work practice as a planned change process occurring within systems, i.e., one-to-one relationships, families, community groups",
 		"numOfCredits": 4,
-		"deptIDNum": 9,
+		"deptIDNum": 11,
 		"courseID": 294
 	},
 	{
 		"courseName": "Internship in Social Work, Sociology and Criminology",
-		"courseDesc": "This course provides an in-depth evaluation of theory and research about specific periods in the human lifespan, such as childhood, adolescence, and young",
+		"courseDesc": "The internship program is designed for students who wish to develop practical skills and gain work experience in the fields of Social Work, Sociology and Criminology, integrating theory with professional experience.",
 		"numOfCredits": 4,
-		"deptIDNum": 9,
+		"deptIDNum": 11,
 		"courseID": 295
 	},
 	{
 		"courseName": "Social Psychology",
-		"courseDesc": "A critical analysis of approaches to psychotherapy. Theoretical and practical issues are discussed in the seminar covering major applications of psychological theories to the practice of psychotherapy",
+		"courseDesc": "Introduces the social psychological theories of sociologists and anthropologists to show how culture and society shape and influence behavior.",
 		"numOfCredits": 4,
-		"deptIDNum": 9,
+		"deptIDNum": 11,
 		"courseID": 296
 	},
 	{
 		"courseName": "Ethics in Public Health",
-		"courseDesc": "Examines the historical and contemporary roots of critical social problems such as poverty, unemployment, eco-logical despoliation, delinquency, population growth,",
+		"courseDesc": "This course begins with a brief history and overview of the field of medical ethics, and then focuses on the applica-tion of moral values and principles relevant to public health and medical practice through a variety of case studies.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 297
 	},
 	{
 		"courseName": "Health Law",
-		"courseDesc": "Examines the patterns of deviant behavior in American society. Concentrates on the social construction of devi-ance:",
+		"courseDesc": "Designed to give prospective health professionals an understanding of the terminology and concepts of health law.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 298
 	},
 	{
 		"courseName": "Global Health",
-		"courseDesc": "Provides a sociological approach to the study of culture. Material and non-material aspects of culture are explored through the study of language, science and technology, the various arts and media.",
+		"courseDesc": "Examines health problems, health status, public health policies and programs and the role of global politics and economics in determining the health status of people worldwide.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 299
 	},
 	{
 		"courseName": "Environmental Justice",
-		"courseDesc": "This course analyzes the basic dimensions of structured social inequality, the unequal distribution of wealth, power, goods and services by class, race and gender",
+		"courseDesc": "The health of our environment is central to our ability to lead healthy lives. This course examines the social, political, and economic forces that shape our exposure to environmental benefits and harms depending on our location in society.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 300
 	},
 	{
 		"courseName": "Special Topics in Public Health",
-		"courseDesc": "Examines the social structures and processes related to participation in the political life of society.",
+		"courseDesc": "This course gives students the opportunity to examine in greater depth a topic of special interest in public health.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 301
 	},
 	{
 		"courseName": "Immigrant and Refugee Health",
-		"courseDesc": "Through historical and comparative analysis, studies the connection between courtship and marriage patterns and different economic systems",
+		"courseDesc": "Immigration is central to the history of the United States.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 302
 	},
 	{
 		"courseName": "Health Economics",
-		"courseDesc": "Explores the social forces defining and influencing health and illness",
+		"courseDesc": "Health Economics provides a broad overview of healthcare delivery and finance systems, both in the U.S. and abroad, and explores the role that economic theory plays in the national healthcare reform debate.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 303
 	},
 	{
 		"courseName": "Race, Class, Gender and Sexuality",
-		"courseDesc": "Emphasizes the history, social structure and culture of racial national, ethnic and religious minorities.",
+		"courseDesc": "In this course students will examine the multiple and intersecting ways in which race, class, gender, and sexuality shape and are shaped by institutions, interaction, and individual experience.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 10,
 		"courseID": 304
 	},
 	{
 		"courseName": "Introduction to the Arts",
-		"courseDesc": "Provides an overview of the contemporary sociological models used to analyze the dynamics of protest among disenfranchised constituencies in the U.S",
+		"courseDesc": "Studio course designed to introduce first-year students to exercises that challenge their assumptions of the creative process",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 12,
 		"courseID": 305
 	},
 	{
 		"courseName": "Introduction to Creative Thinking",
-		"courseDesc": "This course will introduce students to the sociology of work and industry. We will cover the history of work organi-zation from ancient to modern times, but with particular emphasis on contemporary, ‘post-industrial’ capitalism",
+		"courseDesc": "A must for students considering careers in advertising, publishing, communications or any other discipline regard-ing creative visual solutions",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 12,
 		"courseID": 306
 	},
 	{
 		"courseName": "Basic Design",
-		"courseDesc": "Examines social work practice as a planned change process occurring within systems, i.e., one-to-one relationships, families, community groups",
+		"courseDesc": "This studio course deals with the fundamental development of visual structures and the relationship among two, three, and four (time) dimensions.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 12,
 		"courseID": 307
 	},
 	{
 		"courseName": "Drawing",
-		"courseDesc": "The internship program is designed for students who wish to develop practical skills and gain work experience in the fields of Social Work, Sociology and Criminology, integrating theory with professional experience.",
+		"courseDesc": "The process of art from idea to final product. The emphasis is on visual notations, especially drawings.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 12,
 		"courseID": 308
 	},
 	{
 		"courseName": "Introduction to Color",
-		"courseDesc": "Introduces the social psychological theories of sociologists and anthropologists to show how culture and society shape and influence behavior.",
+		"courseDesc": "This class is for those who were always afraid of color and mystified on how color combinations work.",
 		"numOfCredits": 4,
-		"deptIDNum": 11,
+		"deptIDNum": 12,
 		"courseID": 309
 	},
 	{
 		"courseName": "Graphic Design I",
-		"courseDesc": "This course begins with a brief history and overview of the field of medical ethics, and then focuses on the applica-tion of moral values and principles relevant to public health and medical practice through a variety of case studies.",
+		"courseDesc": "This course introduces the elements and principles of graphic design as building blocks that lead to effective visual communication.",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 12,
 		"courseID": 310
 	},
 	{
 		"courseName": "Introduction to  Photography",
-		"courseDesc": "Designed to give prospective health professionals an understanding of the terminology and concepts of health law.",
+		"courseDesc": "Beginning course for art-majors and non-art majors in photography. Emphasis is on photography as a system of visual and cultural representation",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 12,
 		"courseID": 311
 	},
 	{
 		"courseName": "Painting I",
-		"courseDesc": "Examines health problems, health status, public health policies and programs and the role of global politics and economics in determining the health status of people worldwide.",
+		"courseDesc": "This is a beginning course, which teaches the student the conventions of pictorial space and the language of color, as well as basic painting techniques.",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 12,
 		"courseID": 312
 	},
 	{
 		"courseName": "Art History",
-		"courseDesc": "The health of our environment is central to our ability to lead healthy lives. This course examines the social, political, and economic forces that shape our exposure to environmental benefits and harms depending on our location in society.",
+		"courseDesc": "This class begins with the history of Modern Art in 1750 in the context of the Enlightenment and the French Revolu-tion",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 12,
 		"courseID": 313
 	},
 	{
 		"courseName": "Principles of Accounting I",
-		"courseDesc": "This course gives students the opportunity to examine in greater depth a topic of special interest in public health.",
+		"courseDesc": "Introduction to financial accounting with focus on how financial statements are structured and used by propri-etorships and corporations",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 14,
 		"courseID": 314
 	},
 	{
 		"courseName": "Principles of Accounting II",
-		"courseDesc": "Immigration is central to the history of the United States.",
+		"courseDesc": "Emphasis shifts from accounting theory (Principles I) to giving students experience in preparation of financial state-ments",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 14,
 		"courseID": 315
 	},
 	{
 		"courseName": "Intermediate Accounting",
-		"courseDesc": "Health Economics provides a broad overview of healthcare delivery and finance systems, both in the U.S. and abroad, and explores the role that economic theory plays in the national healthcare reform debate.",
+		"courseDesc": "An expanded treatment of accounting theory and principles: investigation of accounting for cash and temporary investments, receivables, inventory costing and evaluation, fixed asset acquisitio",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 14,
 		"courseID": 316
 	},
 	{
 		"courseName": "Intermediate Accounting II",
-		"courseDesc": "Examines the historical and contemporary roots of critical social problems such as poverty, unemployment, eco-logical despoliation, delinquency, population growth,",
+		"courseDesc": "An expanded treatment of accounting theory and principles:  investigation of accounting for capital, retained earnings, pensions, leases, cash flows, and earnings per share",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 14,
 		"courseID": 317
 	},
 	{
 		"courseName": "Federal Income Tax",
-		"courseDesc": "Examines the patterns of deviant behavior in American society. Concentrates on the social construction of devi-ance:",
+		"courseDesc": "A comprehensive study of tax principles and concepts that apply to income tax planning.",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 14,
 		"courseID": 318
 	},
 	{
 		"courseName": "Cost Accounting",
-		"courseDesc": "In this course students will examine the multiple and intersecting ways in which race, class, gender, and sexuality shape and are shaped by institutions, interaction, and individual experience.",
+		"courseDesc": "This course provides students with an in-depth understanding of how cost information is gathered, analyzed and reported for purposes of planning, control and decision-making",
 		"numOfCredits": 4,
-		"deptIDNum": 10,
+		"deptIDNum": 14,
 		"courseID": 319
 	},
 	{
 		"courseName": "Essentials Government Non/Profit",
-		"courseDesc": "Studio course designed to introduce first-year students to exercises that challenge their assumptions of the creative process",
+		"courseDesc": "This course is an introduction to government and nonprofit accounting. Fund accounting theory as well as financial statement presentation will be discussed for both government and nonprofit entities.",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 14,
 		"courseID": 320
 	},
 	{
 		"courseName": "International Accounting",
-		"courseDesc": "A must for students considering careers in advertising, publishing, communications or any other discipline regard-ing creative visual solutions",
+		"courseDesc": "A discussion of the evolution of international accounting principles and practices",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 14,
 		"courseID": 321
 	},
 	{
 		"courseName": "Advanced Accounting",
-		"courseDesc": "This studio course deals with the fundamental development of visual structures and the relationship among two, three, and four (time) dimensions.",
+		"courseDesc": "This course covers accounting for partnerships: formation, operation, dissolution, and liquidation.",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 14,
 		"courseID": 322
 	},
 	{
 		"courseName": "Auditing",
-		"courseDesc": "The process of art from idea to final product. The emphasis is on visual notations, especially drawings.",
+		"courseDesc": "Study of the professional ethics and possible legal liability of the auditor",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 14,
 		"courseID": 323
 	},
 	{
 		"courseName": "The Nature and Development of Science",
-		"courseDesc": "This class is for those who were always afraid of color and mystified on how color combinations work.",
+		"courseDesc": "The course involves students in the study and reflection within the historical context of the development of sci-ence as a forum to synthesize their learning of various scientific discipline",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 13,
 		"courseID": 324
 	},
 	{
 		"courseName": "Middle Childhood & Adolescence",
-		"courseDesc": "This course introduces the elements and principles of graphic design as building blocks that lead to effective visual communication.",
+		"courseDesc": "Examines human development from six years through adolescence.",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 13,
 		"courseID": 325
 	},
 	{
 		"courseName": "Foundations of Special Education",
-		"courseDesc": "Beginning course for art-majors and non-art majors in photography. Emphasis is on photography as a system of visual and cultural representation",
+		"courseDesc": "The purpose of this course is to provide an introduction to the field of Special Education to pre-service teachers-non majors",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 13,
 		"courseID": 326
 	},
 	{
 		"courseName": "Creating Schools for a Just Society",
-		"courseDesc": "This is a beginning course, which teaches the student the conventions of pictorial space and the language of color, as well as basic painting techniques.",
+		"courseDesc": "This course will introduce students to the historical, political, social, and legal foundations of education in the United States",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 13,
 		"courseID": 327
 	},
 	{
 		"courseName": "Reading Across the Curriculum",
-		"courseDesc": "This class begins with the history of Modern Art in 1750 in the context of the Enlightenment and the French Revolu-tion",
+		"courseDesc": "This course focuses on current approaches to literacy instruction across the curriculum.",
 		"numOfCredits": 4,
-		"deptIDNum": 12,
+		"deptIDNum": 13,
 		"courseID": 328
 	},
 	{
 		"courseName": "Reading Practicum",
-		"courseDesc": "Introduction to financial accounting with focus on how financial statements are structured and used by propri-etorships and corporations",
+		"courseDesc": "The purpose of this course is to provide adolescence and middle childhood education candidates with an op-portunity to observe literacy strategies in various discipline settings",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 13,
 		"courseID": 329
 	},
 	{
 		"courseName": "Computer Networks",
-		"courseDesc": "Emphasis shifts from accounting theory (Principles I) to giving students experience in preparation of financial state-ments",
+		"courseDesc": "Introduces principles and disciplines of software engineering. Semester-long projects allow students to practice on a complete process of the software development",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 6,
 		"courseID": 330
 	},
 	{
 		"courseName": "Computer Network Security",
-		"courseDesc": "An expanded treatment of accounting theory and principles: investigation of accounting for cash and temporary investments, receivables, inventory costing and evaluation, fixed asset acquisitio",
+		"courseDesc": "Topics include Kerberos, public key infrastructures, electronic mail security, IP security, Web security, intrusion detection and response, password management, viruses and worms, firewalls, denial of service attacks and defenses, wireless security, and privacy. Students will write several small programs including a network application incorporating security",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 6,
 		"courseID": 331
 	},
 	{
 		"courseName": "Opertaing Systems",
-		"courseDesc": "An expanded treatment of accounting theory and principles:  investigation of accounting for capital, retained earnings, pensions, leases, cash flows, and earnings per share",
+		"courseDesc": "Memory management: multiprogramming, relocation, paging, virtual memory, dynamic loading and linking. Process management: job scheduling, process scheduling and synchronization, multiprocessing",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 6,
 		"courseID": 332
 	},
 	{
 		"courseName": "Data Mining",
-		"courseDesc": "A comprehensive study of tax principles and concepts that apply to income tax planning.",
+		"courseDesc": "This course covers the fundamental concepts and techniques useful in discovering knowledge hidden in large data sets",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 6,
 		"courseID": 333
 	},
 	{
 		"courseName": "Artificial intelligence",
-		"courseDesc": "This course provides students with an in-depth understanding of how cost information is gathered, analyzed and reported for purposes of planning, control and decision-making",
+		"courseDesc": "Introduction to the programming language LISP. Additional topics include: search as problem-solving paradigm; depth first, breadth first, best first, min/max and alpha beta",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 6,
 		"courseID": 334
 	},
 	{
 		"courseName": "Number Theory",
-		"courseDesc": "This course is an introduction to government and nonprofit accounting. Fund accounting theory as well as financial statement presentation will be discussed for both government and nonprofit entities.",
+		"courseDesc": "A study of the utilization of concrete examples to introduce concepts of modern algebra; prime numbers, congru-ences, diophantine equations, elementary combinatorial analysis.",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 6,
 		"courseID": 335
 	},
 	{
 		"courseName": "Global Business",
-		"courseDesc": "A discussion of the evolution of international accounting principles and practices",
+		"courseDesc": "The goal of this course is to provide an introduction to international business environment and operations.",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 15,
 		"courseID": 336
 	},
 	{
 		"courseName": "Entrepreneurship",
-		"courseDesc": "This course covers accounting for partnerships: formation, operation, dissolution, and liquidation.",
+		"courseDesc": "The steps leading to the establishment of an independent business involving choice of business, structure, capital, startup, management practices, legal and financial considerations",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 15,
 		"courseID": 337
 	},
 	{
 		"courseName": "Web Systems and Electronic Commerce",
-		"courseDesc": "Study of the professional ethics and possible legal liability of the auditor",
+		"courseDesc": "This course covers the basics of web systems, furthering an understanding of them through the development of e-commerce applications and systems",
 		"numOfCredits": 4,
-		"deptIDNum": 14,
+		"deptIDNum": 15,
 		"courseID": 338
 	},
 	{
 		"courseName": "Organizational behavior and Management",
-		"courseDesc": "The course involves students in the study and reflection within the historical context of the development of sci-ence as a forum to synthesize their learning of various scientific discipline",
+		"courseDesc": "This course examines the evolution of organizations and managerial roles in contemporary organizations. It pro-vides a comprehensive analysis of the functions and processes of management",
 		"numOfCredits": 4,
-		"deptIDNum": 13,
+		"deptIDNum": 15,
 		"courseID": 339
 	},
 	{
 		"courseName": "Financial Management I",
-		"courseDesc": "Examines human development from six years through adolescence.",
+		"courseDesc": "This course provides an introduction to the basic ideas of finance",
 		"numOfCredits": 4,
-		"deptIDNum": 13,
+		"deptIDNum": 15,
 		"courseID": 340
-	}
+	},
+	{
+		"courseName": "The Financial System",
+		"courseDesc": "Financial exchanges play a central role in modern life, and the institutions that conduct these play a dominant role in the modern world.",
+		"numOfCredits": 4,
+		"deptIDNum": 15,
+		"courseID": 341
+	},
+	{
+		"courseName": "Community Psychology",
+		"courseDesc": "This course focuses on the application of community psychology action research practices and community psychology constructs to the development and provision of resources and services necessary to well-functioning communities",
+		"numOfCredits": 4,
+		"deptIDNum": 9,
+		"courseID": 342
+	},
 ];
 export default course;

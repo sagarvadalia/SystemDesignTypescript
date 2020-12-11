@@ -1,231 +1,363 @@
 const minorRequirements = [
-{
-    "courseID": 229,
-    "minorID": 1
+  {
+    "minorID": 1,
+    "courseID": 314
   },
   {
-    "courseID": 230,
-    "minorID": 1
+    "minorID": 1,
+    "courseID": 315
   },
   {
-    "courseID": 231,
-    "minorID": 1
+    "minorID": 1,
+    "courseID": 316
   },
   {
-    "courseID": 232,
-    "minorID": 1
+    "minorID": 1,
+    "courseID": 317
   },
   {
-    "courseID": 233,
-    "minorID": 1
+    "minorID": 1,
+    "courseID": 318
   },
   {
-    "courseID": 234,
-    "minorID": 1
+    "minorID": 1,
+    "courseID": 319
   },
   {
-    "courseID": 116,
-    "minorID": 2
+    "minorID": 2,
+    "courseID": 199
   },
   {
-    "courseID": 117,
-    "minorID": 2
+    "minorID": 2,
+    "courseID": 200
   },
   {
-    "courseID": 118,
-    "minorID": 2
+    "minorID": 2,
+    "courseID": 201
   },
   {
-    "courseID": 119,
-    "minorID": 2
+    "minorID": 2,
+    "courseID": 202
   },
   {
-    "courseID": 120,
-    "minorID": 2
+    "minorID": 2,
+    "courseID": 203
   },
   {
-    "courseID": 136,
-    "minorID": 3
+    "minorID": 2,
+    "courseID": 204
   },
   {
-    "courseID": 137,
-    "minorID": 3
+    "minorID": 3,
+    "courseID": 236
   },
   {
-    "courseID": 139,
-    "minorID": 3
+    "minorID": 3,
+    "courseID": 237
   },
   {
-    "courseID": 145,
-    "minorID": 3
+    "minorID": 3,
+    "courseID": 239
   },
   {
-    "courseID": 143,
-    "minorID": 3
+    "minorID": 3,
+    "courseID": 240
   },
   {
-    "courseID": 183,
-    "minorID": 4
+    "minorID": 3,
+    "courseID": 238
   },
   {
-    "courseID": 184,
-    "minorID": 4
+    "minorID": 3,
+    "courseID": 244
   },
   {
-    "courseID": 185,
-    "minorID": 4
+    "minorID": 4,
+    "courseID": 270
   },
   {
-    "courseID": 186,
-    "minorID": 4
+    "minorID": 4,
+    "courseID": 271
   },
   {
-    "courseID": 187,
-    "minorID": 4
+    "minorID": 4,
+    "courseID": 272
   },
   {
-    "courseID": 188,
-    "minorID": 4
+    "minorID": 4,
+    "courseID": 273
   },
   {
-    "courseID": 73,
-    "minorID": 5
+    "minorID": 4,
+    "courseID": 276
   },
   {
-    "courseID": 74,
-    "minorID": 5
+    "minorID": 4,
+    "courseID": 278
   },
   {
-    "courseID": 75,
-    "minorID": 5
+    "minorID": 5,
+    "courseID": 176
   },
   {
-    "courseID": 77,
-    "minorID": 5
+    "minorID": 5,
+    "courseID": 195
   },
   {
-    "courseID": 76,
-    "minorID": 5
+    "minorID": 5,
+    "courseID": 197
   },
   {
-    "courseID": 78,
-    "minorID": 5
+    "minorID": 5,
+    "courseID": 180
   },
   {
-    "courseID": 156,
-    "minorID": 7
+    "minorID": 5,
+    "courseID": 177
   },
   {
-    "courseID": 157,
-    "minorID": 7
+    "minorID": 5,
+    "courseID": 196
   },
   {
-    "courseID": 158,
-    "minorID": 7
+    "minorID": 6,
+    "courseID": 336
   },
   {
-    "courseID": 159,
-    "minorID": 7
+    "minorID": 6,
+    "courseID": 337
   },
   {
-    "courseID": 160,
-    "minorID": 7
+    "minorID": 6,
+    "courseID": 338
   },
   {
-    "courseID": 151,
-    "minorID": 10
+    "minorID": 6,
+    "courseID": 339
   },
   {
-    "courseID": 152,
-    "minorID": 10
+    "minorID": 6,
+    "courseID": 340
   },
   {
-    "courseID": 148,
-    "minorID": 10
+    "minorID": 6,
+    "courseID": 341
   },
   {
-    "courseID": 150,
-    "minorID": 10
+    "minorID": 7,
+    "courseID": 277
   },
   {
-    "courseID": 149,
-    "minorID": 10
+    "minorID": 7,
+    "courseID": 273
   },
   {
-    "courseID": 147,
-    "minorID": 10
+    "minorID": 7,
+    "courseID": 276
   },
   {
-    "courseID": 27,
-    "minorID": 11
+    "minorID": 7,
+    "courseID": 272
   },
   {
-    "courseID": 28,
-    "minorID": 11
+    "minorID": 7,
+    "courseID": 278
   },
   {
-    "courseID": 29,
-    "minorID": 11
+    "minorID": 7,
+    "courseID": 286
   },
   {
-    "courseID": 30,
-    "minorID": 11
+    "minorID": 8,
+    "courseID": 274
   },
   {
-    "courseID": 31,
-    "minorID": 11
+    "minorID": 8,
+    "courseID": 276
   },
   {
-    "courseID": 23,
-    "minorID": 11
+    "minorID": 8,
+    "courseID": 271
   },
   {
-    "courseID": 109,
-    "minorID": 13
+    "minorID": 8,
+    "courseID": 272
   },
   {
-    "courseID": 110,
-    "minorID": 13
+    "minorID": 8,
+    "courseID": 287
   },
   {
-    "courseID": 111,
-    "minorID": 13
+    "minorID": 8,
+    "courseID": 294
   },
   {
-    "courseID": 112,
-    "minorID": 13
+    "minorID": 9,
+    "courseID": 336
   },
   {
-    "courseID": 113,
-    "minorID": 13
+    "minorID": 9,
+    "courseID": 337
   },
   {
-    "courseID": 115,
-    "minorID": 13
+    "minorID": 9,
+    "courseID": 338
   },
   {
-    "courseID": 179,
-    "minorID": 14
+    "minorID": 9,
+    "courseID": 339
   },
   {
-    "courseID": 180,
-    "minorID": 14
+    "minorID": 9,
+    "courseID": 340
   },
   {
-    "courseID": 181,
-    "minorID": 14
+    "minorID": 9,
+    "courseID": 341
   },
   {
-    "courseID": 184,
-    "minorID": 14
+    "minorID": 10,
+    "courseID": 211
   },
   {
-    "courseID": 183,
-    "minorID": 14
+    "minorID": 10,
+    "courseID": 212
   },
   {
-    "courseID": 185,
-    "minorID": 14
+    "minorID": 10,
+    "courseID": 214
+  },
+  {
+    "minorID": 10,
+    "courseID": 215
+  },
+  {
+    "minorID": 10,
+    "courseID": 250
+  },
+  {
+    "minorID": 10,
+    "courseID": 249
+  },
+  {
+    "minorID": 11,
+    "courseID": 113
+  },
+  {
+    "minorID": 11,
+    "courseID": 116
+  },
+  {
+    "minorID": 11,
+    "courseID": 123
+  },
+  {
+    "minorID": 11,
+    "courseID": 125
+  },
+  {
+    "minorID": 11,
+    "courseID": 257
+  },
+  {
+    "minorID": 11,
+    "courseID": 143
+  },
+  {
+    "minorID": 12,
+    "courseID": 161
+  },
+  {
+    "minorID": 12,
+    "courseID": 162
+  },
+  {
+    "minorID": 12,
+    "courseID": 150
+  },
+  {
+    "minorID": 12,
+    "courseID": 158
+  },
+  {
+    "minorID": 12,
+    "courseID": 160
+  },
+  {
+    "minorID": 12,
+    "courseID": 159
+  },
+  {
+    "minorID": 13,
+    "courseID": 209
+  },
+  {
+    "minorID": 13,
+    "courseID": 210
+  },
+  {
+    "minorID": 13,
+    "courseID": 199
+  },
+  {
+    "minorID": 13,
+    "courseID": 204
+  },
+  {
+    "minorID": 13,
+    "courseID": 205
+  },
+  {
+    "minorID": 13,
+    "courseID": 216
+  },
+  {
+    "minorID": 14,
+    "courseID": 279
+  },
+  {
+    "minorID": 14,
+    "courseID": 283
+  },
+  {
+    "minorID": 14,
+    "courseID": 342
+  },
+  {
+    "minorID": 14,
+    "courseID": 282
+  },
+  {
+    "minorID": 14,
+    "courseID": 280
+  },
+  {
+    "minorID": 14,
+    "courseID": 281
+  },
+  {
+    "minorID": 15,
+    "courseID": 299
+  },
+  {
+    "minorID": 15,
+    "courseID": 300
+  },
+  {
+    "minorID": 15,
+    "courseID": 301
+  },
+  {
+    "minorID": 15,
+    "courseID": 302
+  },
+  {
+    "minorID": 15,
+    "courseID": 303
+  },
+  {
+    "minorID": 15,
+    "courseID": 304
   }
 ];
 export default minorRequirements;
