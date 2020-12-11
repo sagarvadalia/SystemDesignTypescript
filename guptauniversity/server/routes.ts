@@ -172,30 +172,30 @@ export const Routes = [
 	},
 
 	// crud routes for prerequisites
-	{
-		method: 'get',
-		route: '/api/prerequisites',
-		controller: PrerequisiteController,
-		action: 'all',
-	},
-	{
-		method: 'get',
-		route: '/api/prerequisites/:id',
-		controller: PrerequisiteController,
-		action: 'one',
-	},
-	{
-		method: 'post',
-		route: '/api/prerequisites',
-		controller: PrerequisiteController,
-		action: 'save',
-	},
-	{
-		method: 'delete',
-		route: '/api/prerequisites/:id',
-		controller: PrerequisiteController,
-		action: 'remove',
-	},
+	// {
+	// 	method: 'get',
+	// 	route: '/api/prerequisites',
+	// 	controller: PrerequisiteController,
+	// 	action: 'all',
+	// },
+	// {
+	// 	method: 'get',
+	// 	route: '/api/prerequisites/:id',
+	// 	controller: PrerequisiteController,
+	// 	action: 'one',
+	// },
+	// {
+	// 	method: 'post',
+	// 	route: '/api/prerequisites',
+	// 	controller: PrerequisiteController,
+	// 	action: 'save',
+	// },
+	// {
+	// 	method: 'delete',
+	// 	route: '/api/prerequisites/:id',
+	// 	controller: PrerequisiteController,
+	// 	action: 'remove',
+	// },
 
 	// crud routes for Classes
 	{
@@ -1068,29 +1068,29 @@ export const Routes = [
 	},
 
 
-	// crud routes for Prerequisites
-	{
-		method: 'get',
-		route: '/api/prereqs',
-		controller: PrerequisiteController,
-		action: 'all',
-	},
-	{
-		method: 'get',
-		route: '/api/prereqs/:id',
-		controller: PrerequisiteController,
-		action: 'one',
-	},
-	{
-		method: 'post',
-		route: '/api/prereqs',
-		controller: PrerequisiteController,
-		action: 'save',
-	},
-	{
-		method: 'delete',
-		route: '/api/prereqs/:id',
-		controller: PrerequisiteController,
-		action: 'remove',
-	},
+	// // crud routes for Prerequisites
+	// {
+	// 	method: 'get',
+	// 	route: '/api/prereqs',
+	// 	controller: PrerequisiteController,
+	// 	action: 'all',
+	// },
+	// {
+	// 	method: 'get',
+	// 	route: '/api/prereqs/:id',
+	// 	controller: PrerequisiteController,
+	// 	action: 'one',
+	// },
+	// {
+	// 	method: 'post',
+	// 	route: '/api/prereqs',
+	// 	controller: PrerequisiteController,
+	// 	action: 'save',
+	// },
+	// {
+	// 	method: 'delete',
+	// 	route: '/api/prereqs/:id',
+	// 	controller: PrerequisiteController,
+	// 	action: 'remove',
+	// },
 ];
