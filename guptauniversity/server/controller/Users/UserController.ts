@@ -23,10 +23,12 @@ export class UserController {
 
 	async login(request: Request, response: Response, next: NextFunction) {
 		let email = request.query.email
-		let password = request.query.password
 
+		let password = request.query.password
+		console.log(email, password);
 		try {
-			if (email && typeof password === 'string') {
+			if (typeof email === 'string' && typeof password === 'string') {
+				email = email.toLowerCase();
 				let user = await this.userRepository.findOne({ where: { userEmail: email } })
 
 				if ((await user?.comparePassword(password, 0)).isMatch) {

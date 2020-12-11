@@ -3,7 +3,6 @@ import { ClassController } from './controller/CourseRelated/ClassController';
 import { DayController } from './controller/TimeRelated/DayController';
 import { FacultyController } from './controller/Users/FacultyController';
 import { MinorController } from './controller/CourseRelated/MinorController';
-import { PrerequisiteController } from './controller/CourseRelated/PrerequisiteController';
 import { RoomController } from './controller/Locations/RoomController';
 import { UserController } from './controller/Users/UserController';
 import { ResearcherController } from './controller/Users/ResearcherController';
@@ -38,7 +37,7 @@ import { StudentMajorController } from './controller/JoinTables/StudentMajorCont
 import { MajorReqController } from './controller/CourseRelated/MajorReqController';
 import { MinorReqController } from './controller/CourseRelated/MinorReqController';
 import { GradingController } from './controller/CourseRelated/GradingController';
-// import { PrerequisiteController } from './controller/JoinTables/PrerequisiteController';
+import { PrerequisiteController } from './controller/JoinTables/PrerequisiteController';
 
 
 
@@ -175,30 +174,30 @@ export const Routes = [
 	},
 
 	// crud routes for prerequisites
-	{
-		method: 'get',
-		route: '/api/prerequisites',
-		controller: PrerequisiteController,
-		action: 'all',
-	},
-	{
-		method: 'get',
-		route: '/api/prerequisites/:id',
-		controller: PrerequisiteController,
-		action: 'one',
-	},
-	{
-		method: 'post',
-		route: '/api/prerequisites',
-		controller: PrerequisiteController,
-		action: 'save',
-	},
-	{
-		method: 'delete',
-		route: '/api/prerequisites/:id',
-		controller: PrerequisiteController,
-		action: 'remove',
-	},
+	// {
+	// 	method: 'get',
+	// 	route: '/api/prerequisites',
+	// 	controller: PrerequisiteController,
+	// 	action: 'all',
+	// },
+	// {
+	// 	method: 'get',
+	// 	route: '/api/prerequisites/:id',
+	// 	controller: PrerequisiteController,
+	// 	action: 'one',
+	// },
+	// {
+	// 	method: 'post',
+	// 	route: '/api/prerequisites',
+	// 	controller: PrerequisiteController,
+	// 	action: 'save',
+	// },
+	// {
+	// 	method: 'delete',
+	// 	route: '/api/prerequisites/:id',
+	// 	controller: PrerequisiteController,
+	// 	action: 'remove',
+	// },
 
 	// crud routes for Classes
 	{
@@ -225,7 +224,7 @@ export const Routes = [
 		controller: ClassController,
 		action: 'remove',
 	},
-		{
+	{
 		method: 'delete',
 		route: '/api/removeClass/:classCRN',
 		controller: ClassController,
@@ -1071,7 +1070,7 @@ export const Routes = [
 	},
 
 
-		// crud routes for Prerequisites
+	// crud routes for Prerequisites
 	{
 		method: 'get',
 		route: '/api/prereqs',

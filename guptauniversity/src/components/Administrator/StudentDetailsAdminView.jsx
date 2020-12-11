@@ -1,18 +1,18 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../../LoginContext';
+import { LoginContext } from '../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-export default function StudentList() {
-	const [data, setData] = useState([{}]);
+export default function StudentDetailsAdminView() {
+	const [data, setData] = useState([{ semesterID: {} }]);
 	const [state, setState] = useContext(LoginContext);
+	let { sID } = useParams();
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/students`);
+			const result = await axios(`/api/enrollment/${sID}`);
+			console.log(result.data);
 
 			setData(result.data);
-			console.log(result.data);
 		};
 
 		fetchData();
@@ -22,25 +22,25 @@ export default function StudentList() {
 		// API IS HERE https://material-table.com/#/
 
 		<div>
+			{/* <pre>{JSON.stringify(data)}</pre> */}
+
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title="Basic Sorting Preview"
 					columns={[
-						{ title: 'ID', field: 'userID', editable: 'onAdd' },
+						{ title: 'Class Number', field: 'classNumber' },
+						{ title: 'Semester Season', field: 'semester.semesterName' },
+						{ title: 'Year', field: 'semester.yearNum' },
 						{
-							title: 'Name',
-							field: 'userName',
-							render: (rowData) => <Link to={`/studentlist/${rowData.userID}`}>{rowData.userName}</Link>,
+							title: 'Course Name',
+							field: 'courseName',
 						},
-						{ title: 'GPA', field: 'sGPA' },
-						{ title: 'Credits', field: 'totalCredits' },
-						{ title: 'Student Type', field: 'studentType' },
+						{ title: 'Midterm Grade', field: 'midtermGrade' },
+						{ title: 'Grade', field: 'finalGrade' },
 					]}
 					data={data}
 					options={{
 						sorting: true,
-						searching: true,
-						exporting: true,
 					}}
 					editable={{
 						onRowDelete: async (oldData) => {
