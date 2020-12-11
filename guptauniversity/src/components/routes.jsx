@@ -2,14 +2,14 @@ import React, { Component, useContext } from 'react';
 import { withRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Login } from './login';
-import Schedule from './schedule';
+import Schedule from './All Users/schedule';
 import StudentTranscript from './Student/studentTranscript';
 import { LoginContext } from './../LoginContext';
 import StudentClassList from './Faculty/studentclasslist';
 import ClassDetails from './Faculty/classDetails';
-import AcademicCalendar from './academicCalendar';
-import NextCalendar from './nextCalendar';
-import CourseCatalog from './courseCatalog';
+import AcademicCalendar from './All Users/academicCalendar';
+import NextCalendar from './All Users/nextCalendar';
+import CourseCatalog from './All Users/courseCatalog';
 import MasterSchedule from './masterSchedule';
 import StudentSchedule from './Student/studentSchedule';
 import Homepage from './homepage';
@@ -24,6 +24,11 @@ import Minors from './Student/Minors';
 import MajorReqsTable from './Student/MajorReqsTable';
 import MinorReqsTable from './Student/MinorReqsTable';
 import ClassList from './Administrator/ClassList';
+import StudentList from './Administrator/StudentList';
+import StudentDetailsAdminView from './Administrator/StudentDetailsAdminView';
+import SetBools from './Administrator/SetBools';
+import UserList from './Administrator/UserList';
+import EditMasterSchedule from './Administrator/EditMasterSchedule';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -64,6 +69,11 @@ export const Routes = ({}) => {
 			{state?.user?.userType === 'Administrator' && (
 				<Switch>
 					<Route exact path="/classlist" component={ClassList} />
+					<Route exact path="/studentlist" component={StudentList} />
+					<Route exact path="/userlist" component={UserList} />
+					<Route exact path="/studentlist/:sID" component={StudentDetailsAdminView} />
+					<Route exact path="/setTimes" component={SetBools} />
+					<Route exact path="/editMasterSchedule/:semester" component={EditMasterSchedule} />
 				</Switch>
 			)}
 

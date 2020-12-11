@@ -236,13 +236,29 @@ export default function PersistentDrawerLeft() {
 					)}
 					{state?.user?.userType === 'Administrator' && (
 						<List>
+							<Link to={`/editMasterSchedule/9`}>
+								<ListItem button key={'Edit Master Schedule'}>
+									<ListItemText primary={'Edit Master Schedule'}></ListItemText>
+								</ListItem>
+							</Link>
+							<Link to={`/setTimes`}>
+								<ListItem button key={'Set Times'}>
+									<ListItemText
+										primary={'Set Registration Settings and Grading Settings'}
+									></ListItemText>
+								</ListItem>
+							</Link>
 							<Link to={`/classlist`}>
 								<ListItem button key={'Class Modifications'}>
 									<ListItemText primary={'Class Modifications'}></ListItemText>
 								</ListItem>
 							</Link>
-
-							<Link to={`/Student Modifications`}>
+							<Link to={`/userlist`}>
+								<ListItem button key={'User Modifications'}>
+									<ListItemText primary={'User Modifications'}></ListItemText>
+								</ListItem>
+							</Link>
+							<Link to={`/Studentlist`}>
 								<ListItem button key={'Student Modifications'}>
 									<ListItemText primary={'Student Modifications'}></ListItemText>
 								</ListItem>

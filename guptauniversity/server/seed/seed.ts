@@ -142,7 +142,7 @@ createConnection({
 			}
 		}
 
-		// USERS 
+		// USERS
 
 		//----------------------------FACULTY FT-----------------------------------
 		const fullTimeFacultySeed = seeds.fullTimeFaculty.default;
@@ -762,7 +762,7 @@ createConnection({
 			}
 		}
 
-		//-----------------BIG BOi ENROLLMENT----------------ya boi Ty	
+		//-----------------BIG BOi ENROLLMENT----------------ya boi Ty
 		// for (i = 0; i < students.length; i++) {
 		// 	let mtGrades = ['U', 'S']
 		// 	let finalGrades = ['A', 'B', 'C', 'D']

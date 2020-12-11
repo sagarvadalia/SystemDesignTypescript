@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import axios from 'axios';
-import { LoginContext } from './../LoginContext';
+import { LoginContext } from '../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 export default function CourseCatalog() {
 	const [data, setData] = useState([{ semesterID: {}, courseName: 'test', deptID: {} }]);

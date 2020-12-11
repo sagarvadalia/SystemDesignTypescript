@@ -3,7 +3,6 @@ import { ClassController } from './controller/CourseRelated/ClassController';
 import { DayController } from './controller/TimeRelated/DayController';
 import { FacultyController } from './controller/Users/FacultyController';
 import { MinorController } from './controller/CourseRelated/MinorController';
-import { PrerequisiteController } from './controller/CourseRelated/PrerequisiteController';
 import { RoomController } from './controller/Locations/RoomController';
 import { UserController } from './controller/Users/UserController';
 import { ResearcherController } from './controller/Users/ResearcherController';
