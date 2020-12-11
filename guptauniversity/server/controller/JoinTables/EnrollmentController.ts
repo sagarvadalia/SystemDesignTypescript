@@ -372,6 +372,9 @@ export class EnrollmentController {
 								let ptUGStu = await this.ptUndergradstudentRepository.findOne(ugStu.userID);
 								if (ptUGStu) {
 									//currentCredits - 4
+									if(ptUGStu.currentCredits === 4){
+										return {done: false, msg: ptUGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in"}
+									}
 									ptUGStu.currentCredits = ptUGStu.currentCredits - 4;
 
 									this.ptUndergradstudentRepository.save(ptUGStu)
@@ -379,9 +382,9 @@ export class EnrollmentController {
 									this.studentRepository.save(ptUGStu)
 									this.enrollmentRepository.remove(thisEnroll);
 
-									if (ptUGStu.currentCredits == 0) {
-										return { done: true, msg: ptUGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
-									}
+									// if (ptUGStu.currentCredits == 0) {
+									// 	return { done: true, msg: ptUGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
+									// }
 									return { done: true, msg: ptUGStu.userID + ': Class dropped successfully.' }
 								}
 							}
@@ -426,6 +429,9 @@ export class EnrollmentController {
 
 								if (ptGStu) {
 									//currentCredits - 4
+									if(ptGStu.currentCredits === 4){
+										return {done: false, msg: ptGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
+									}
 									ptGStu.currentCredits = ptGStu.currentCredits - 4;
 
 									this.ptGradstudentRepository.save(ptGStu)
@@ -433,9 +439,9 @@ export class EnrollmentController {
 									this.studentRepository.save(ptGStu)
 									this.enrollmentRepository.remove(thisEnroll);
 
-									if (ptGStu.currentCredits == 0) {
-										return { done: true, msg: ptGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
-									}
+									// if (ptGStu.currentCredits == 0) {
+									// 	return { done: true, msg: ptGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
+									// }
 									return { done: true, msg: ptGStu.userID + ': Class dropped successfully.' }
 								}
 							}

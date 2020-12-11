@@ -37,7 +37,8 @@ import { StudentHoldController } from './controller/JoinTables/StudentHoldContro
 import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
 import { MajorReqController } from './controller/CourseRelated/MajorReqController';
 import { MinorReqController } from './controller/CourseRelated/MinorReqController';
-import { PrerequisiteController } from './controller/JoinTables/PrerequisiteController';
+import { GradingController } from './controller/CourseRelated/GradingController';
+// import { PrerequisiteController } from './controller/JoinTables/PrerequisiteController';
 
 
 
@@ -1095,4 +1096,22 @@ export const Routes = [
 		controller: PrerequisiteController,
 		action: 'remove',
 	},
+	// 12/11
+	{
+		method: 'get',
+		route: '/api/grading/AddCourse',
+		controller: GradingController,
+		action: 'canAddCourse',
+	},{
+		method: 'get',
+		route: '/api/grading/MidtermGrade',
+		controller: GradingController,
+		action: 'canAddMidtermGrade',
+	},{
+		method: 'get',
+		route: '/api/grading/FinalGrade',
+		controller: GradingController,
+		action: 'canAddFinalGrade',
+	},
+
 ];

@@ -7,6 +7,8 @@ import morgan from 'morgan';
 import session from 'express-session';
 import path from 'path';
 import compression from 'compression';
+const nodemailer = require('nodemailer');
+
 
 createConnection({
 	type: "postgres",
@@ -56,6 +58,27 @@ const app = express();
 			res.status(err.status || 500).send(err.message || 'Internal server error.');
 		});
 
+		// let testAccount = await nodemailer.createTestAccount();
+
+		// let transporter = nodemailer.createTransport({
+		// 	host: "smtp.ethereal.email",
+		// 	port: 587,
+		// 	secure: false, // true for 465, false for other ports
+		// 	auth: {
+		// 		user: testAccount.user, // generated ethereal user
+		// 		pass: testAccount.pass, // generated ethereal password
+		// 	},
+		// });
+
+		// let info = await transporter.sendMail({
+    	// 	from: '"Sagar " <foo@example.com>', // sender address
+    	// 	to: "erich@guptaUniversity.com", // list of receivers
+    	// 	subject: "Course Deletion", // Subject line
+    	// 	text: "Hello", // plain text body
+    	// 	// html: "<b>Hello world?</b>", // html body
+  		// });
+
+		//   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 		//TODO: Will worry about this when we are working on the client side of things
 		// static file-serving middleware
 		// app.use(express.static(path.join(__dirname, '..', 'public')))

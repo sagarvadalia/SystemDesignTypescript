@@ -6,7 +6,7 @@ import { TimeSlot } from '../../entity/TimeRelated/TimeSlot';
 import { Faculty } from '../../entity/Users/Faculty';
 import { Lecture } from '../../entity/Locations/Lecture';
 import { Enrollment } from '../../entity/JoinTables/Enrollment';
-
+const nodemailer = require('nodemailer');
 export class ClassController {
 	private classRepository = getRepository(Class);
 	private timeslotRepository = getRepository(TimeSlot);
@@ -50,36 +50,65 @@ export class ClassController {
 
 	async removeClass(request: Request, response: Response, next: NextFunction){
         // Give a classCRN and I will delete the enrollments, and the class
-try {
-	let classToRemove = await this.classRepository.findOne(request.params.classCRN);
-		let enrollment = await this.enrollmentRepository.find({where: {classCRN: classToRemove}});
-		console.log(enrollment);
-	console.log('------------------------------------------------------------')
+		try {
+			let classToRemove = await this.classRepository.findOne(request.params.classCRN);
+			let enrollment = await this.enrollmentRepository.find({where: {classCRN: classToRemove}});
+			console.log(enrollment);
+			console.log('------------------------------------------------------------')
+			console.log(classToRemove);
+			console.log(request.params.classCRN);
 
-
-	if (classToRemove) {
-		if (enrollment === []) {
-						let bool = await this.classRepository.delete(classToRemove);
-					console.log('------------------------------------------------------------')
-					console.log(bool);
-		}
-		else {for (let i = 0; i < enrollment.length; i++){
-							console.log('heerrrere')
-							if (enrollment[i]) {
-									console.log('--------here')
-                    await this.enrollmentRepository.delete(enrollment[i]);
-                }
-            }
+			if (classToRemove) {
+				let facEmail = classToRemove.fID.userEmail;
+				let studentEmail = "";
+				if (enrollment === []) {
 					let bool = await this.classRepository.delete(classToRemove);
-					console.log('------------------------------------------------------------')
+					console.log('--------------------------AA---------------------------------')
 					console.log(bool);
+				}else {
+					for (let i = 0; i < enrollment.length; i++){
+						let stuEmail = enrollment[i].sID.userEmail;
+						studentEmail += `${stuEmail},`;
+						console.log('heerrrere')
+						if (enrollment[i]) {
+							console.log('--------here')
+                    		await this.enrollmentRepository.delete(enrollment[i]);
+						}
+           		 }
+			
+				let bool = await this.classRepository.delete(classToRemove);
+				let testAccount = await nodemailer.createTestAccount();
 
-            return "No class found with this CRN" + request.params.classCRN;}
+				let transporter = nodemailer.createTransport({
+					host: "smtp.ethereal.email",
+					port: 587,
+					secure: false, // true for 465, false for other ports
+					auth: {
+						user: testAccount.user, // generated ethereal user
+						pass: testAccount.pass, // generated ethereal password
+					},
+				});
 
-        }
-} catch (error) {
-	console.error(error);
-}
+			
+
+				let info = await transporter.sendMail({
+					from: '"Administration " <Administration@guptaUniversity.com>', // sender address
+					to: studentEmail, // list of receivers
+					subject: "Course Deletion", // Subject line
+					text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses has been removed.", // plain text body
+					// html: "<b>Hello world?</b>", // html body
+				});
+
+		  		console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				console.log('-------------------------A----------------------------------')
+				console.log(bool);
+
+            	return "No class found with this CRN" + request.params.classCRN;}
+
+      	 	 }
+		} catch (error) {
+			console.error(error);
+			}
 
     }
 
