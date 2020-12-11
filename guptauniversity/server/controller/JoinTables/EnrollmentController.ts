@@ -15,6 +15,7 @@ import { UnderGraduatePartTime } from '../../entity/Users/UnderGraduatePartTime'
 import { Hold } from '../../entity/StudentRelated/Hold';
 import { StudentHold } from '../../entity/JoinTables/StudentHold';
 
+
 export class EnrollmentController {
 	private enrollmentRepository = getRepository(Enrollment);
 	private classRepository = getRepository(Class);
@@ -150,25 +151,42 @@ export class EnrollmentController {
 		//Give me an sID and a classCRN and I'll make an enrollment with today's date. I RETURN AN OBJECT  {done(bool), msg(string)}
 		let student = await this.studentRepository.findOne(request.params.sID);
 		let addClass = await this.classRepository.findOne(request.params.classCRN);
-		let stuHold = await this.studentHoldRepository.find({where: {sID: request.params.sID}});
+		let stuHold = await this.studentHoldRepository.find({ where: { sID: request.params.sID } });
 		const entityManager = getManager();
 
-		// console.log(stuHold);
 		//Checks if the student has a hold
-		if(stuHold.length > 0){
-			return {done: false, msg: request.params.sID + ": this student has a hold and therefore cannot enroll in classes at this time. "};
+		if (stuHold.length > 0) {
+			return { done: false, msg: request.params.sID + ": this student has a hold and therefore cannot enroll in classes at this time. " };
 		}
-		
-		//Ensure the student isn't already enrolled in that class
-		let checkEnroll = await this.enrollmentRepository.findOne({ where: { sID: student, classCRN: addClass } })
-		if (checkEnroll) {
-			return { done: false, msg: "An enrollment with those credentials already exists" }
-		}
-		console.log(addClass)
 
 		try {
 			if (student) {
 				if (addClass) {
+					//Check for conflicts
+					let theirEnrolls = await this.enrollmentRepository.find({ where: { sID: student } })
+					for (let i = 0; i < theirEnrolls.length; i++) {
+						console.log('hi')
+						if (theirEnrolls[i].classCRN.semesterID.semesterID === addClass.semesterID.semesterID) {
+							console.log('hey')
+							//Ensure the student isn't already enrolled in that class
+							if (theirEnrolls[i].classCRN.classCRN === addClass.classCRN) {
+								return { done: false, msg: student.userID + ": This student is already enrolled in that class" }
+							}
+
+							//Ensure they are free during that time
+							if (theirEnrolls[i].classCRN.slotID.slotID === addClass.slotID.slotID) {
+								return { done: false, msg: student.userID + ": This student is already enrolled in a class during that timeslot" }
+							}
+							console.log('hi')
+							//TODO CHECK FOR PREREQ FULFILLMENT -ty lemme do this
+						}
+					}
+					//Ensure open seats
+					if (addClass.openSeats === 0) {
+						return { done: false, msg: student.userID + ": That class has no open seats" }
+					}
+
+					//No conflicts, let's process the request
 					if (student.studentType == "undergraduate") {
 						//Undergraduate
 						let ugStu = await this.undergradStudentRepository.findOne(student.userID)
@@ -372,6 +390,9 @@ export class EnrollmentController {
 								let ptUGStu = await this.ptUndergradstudentRepository.findOne(ugStu.userID);
 								if (ptUGStu) {
 									//currentCredits - 4
+									if (ptUGStu.currentCredits === 4) {
+										return { done: false, msg: ptUGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
+									}
 									ptUGStu.currentCredits = ptUGStu.currentCredits - 4;
 
 									this.ptUndergradstudentRepository.save(ptUGStu)
@@ -379,9 +400,9 @@ export class EnrollmentController {
 									this.studentRepository.save(ptUGStu)
 									this.enrollmentRepository.remove(thisEnroll);
 
-									if (ptUGStu.currentCredits == 0) {
-										return { done: true, msg: ptUGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
-									}
+									// if (ptUGStu.currentCredits == 0) {
+									// 	return { done: true, msg: ptUGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
+									// }
 									return { done: true, msg: ptUGStu.userID + ': Class dropped successfully.' }
 								}
 							}
@@ -426,6 +447,9 @@ export class EnrollmentController {
 
 								if (ptGStu) {
 									//currentCredits - 4
+									if (ptGStu.currentCredits === 4) {
+										return { done: false, msg: ptGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
+									}
 									ptGStu.currentCredits = ptGStu.currentCredits - 4;
 
 									this.ptGradstudentRepository.save(ptGStu)
@@ -433,9 +457,9 @@ export class EnrollmentController {
 									this.studentRepository.save(ptGStu)
 									this.enrollmentRepository.remove(thisEnroll);
 
-									if (ptGStu.currentCredits == 0) {
-										return { done: true, msg: ptGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
-									}
+									// if (ptGStu.currentCredits == 0) {
+									// 	return { done: true, msg: ptGStu.userID + ': Class dropped successfully. This student is now taking 0 classes' }
+									// }
 									return { done: true, msg: ptGStu.userID + ': Class dropped successfully.' }
 								}
 							}

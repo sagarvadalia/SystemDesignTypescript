@@ -743,15 +743,15 @@ createConnection({
 
 		//For each student with gradYear 2024
 		for (i = 0; i < stuArr.length; i++) {
-			let firstSemester = [121, 1, 136, 99] 	//English1, AmerPeop1, CS1, Chem1
+			let firstSemester = [221, 101, 236, 199] 	//English1, AmerPeop1, CS1, Chem1
 			const stu = await connection.manager.findOne(Student, stuArr[i].userID);
 
 			//For each of the 4 classes
 			for (let j = 0; j < firstSemester.length; j++) {
 				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-				const sem9 = await connection.manager.findOne(Semester, 9);
+				const sem15 = await connection.manager.findOne(Semester, 15);
 
-				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem9 } });
+				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem15 } });
 				let newEnroll = connection.manager.create(Enrollment, {
 					sID: stu,
 					classCRN: newClass,
@@ -766,8 +766,8 @@ createConnection({
 		// for (i = 0; i < students.length; i++) {
 		// 	let mtGrades = ['U', 'S']
 		// 	let finalGrades = ['A', 'B', 'C', 'D']
-		// 	let firstSemester = [121, 1, 136, 99] 	//English1, AmerPeop1, CS1, Chem1
-		// 	let secondSemester = [122, 2, 137, 100] //English2, AmerPeop2, CS2, Chem2
+		// 	let firstSemester = [221, 101, 236, 199] 	//English1, AmerPeop1, CS1, Chem1
+		// 	let secondSemester = [222, 102, 237, 200] //English2, AmerPeop2, CS2, Chem2
 		// 	let sem1 = await connection.manager.findOne(Semester, 1);	//Fall 16
 		// 	let sem2 = await connection.manager.findOne(Semester, 2);	//Sp 17
 		// 	let sem3 = await connection.manager.findOne(Semester, 3);	//Fall 17
@@ -1013,12 +1013,7 @@ createConnection({
 		// }
 	}
 
-		// TODO: Faculty History
-		// TODO: Minor Requirements
-		// TODO: Student History
-		// TODO: Attendance
-
-
+		//TODO: Attendance
 		//TODO: Check each students numOfCredits. Check each classes open seats.
 	)
 	.catch((error) => console.log(error));

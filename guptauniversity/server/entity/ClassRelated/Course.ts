@@ -1,5 +1,5 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 import { Department } from '../Locations/Department';
 import { Class } from './Class';
 import { MajorRequirement } from './MajorRequirement';
@@ -12,7 +12,7 @@ export class Course extends BaseEntity {
 		super();
 		Object.assign(this, Course);
 	}
-	@PrimaryGeneratedColumn({ type: 'integer' })
+	@PrimaryColumn({ type: 'integer' })
 	courseID: number;
 
 	@Column({ type: 'text', nullable: false, width: 50, unique: true })

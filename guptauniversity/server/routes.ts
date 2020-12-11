@@ -36,7 +36,6 @@ import { StudentHoldController } from './controller/JoinTables/StudentHoldContro
 import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
 import { MajorReqController } from './controller/CourseRelated/MajorReqController';
 import { MinorReqController } from './controller/CourseRelated/MinorReqController';
-import { PrerequisiteController } from './controller/JoinTables/PrerequisiteController';
 
 
 
@@ -223,7 +222,7 @@ export const Routes = [
 		controller: ClassController,
 		action: 'remove',
 	},
-		{
+	{
 		method: 'delete',
 		route: '/api/removeClass/:classCRN',
 		controller: ClassController,
@@ -1069,7 +1068,7 @@ export const Routes = [
 	},
 
 
-		// crud routes for Prerequisites
+	// crud routes for Prerequisites
 	{
 		method: 'get',
 		route: '/api/prereqs',
