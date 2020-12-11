@@ -46,9 +46,9 @@ export class Student extends Users {
 	@OneToMany(() => StudentMinor, (studentMinors) => studentMinors.sID, { cascade: true })
 	public studentMinors!: StudentMinor[];
 
-	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.sID, { cascade: true })
+	@OneToMany(() => StudentHold, (studentHolds) => studentHolds.sID, { cascade: true})
 	public studentHolds!: StudentHold[];
-	
+
 	@OneToMany(() => StudentMajor, (studentMajors) => studentMajors.sID, { cascade: true })
 	public studentMajors!: StudentMajor[];
 }

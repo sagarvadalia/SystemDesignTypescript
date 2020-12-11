@@ -76,10 +76,12 @@ export class StudentHoldController {
                 let newHold = await entityManager.create(StudentHold, { sID: student, holdID: hold });
                 // console.log(newHold);
                 await this.studentHoldRepository.save(newHold);
+                return true;
             }
         } catch (error) {
             console.error(error);
         }
+        return false;
 
     }
 
@@ -95,8 +97,10 @@ export class StudentHoldController {
                 // console.log(oldHold);
                 if (oldHold) {
                     await this.studentHoldRepository.remove(oldHold)
+                    return true;
                 }
             }
+            return false;
         } catch (error) {
             console.error(error);
         }

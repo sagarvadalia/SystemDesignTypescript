@@ -7,18 +7,24 @@ import { Link, useParams } from 'react-router-dom';
 export default function StudentSchedule() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, fID: {}, slotID: { days: '', periodID: {} } }]);
 	const [state, setState] = useContext(LoginContext);
-	const [semester, setSemester] = useState(9);
+	const [semester, setSemester] = useState(15);
 	let semesterVal = {
-		1: { semester: `Fall 2016` },
-		2: { semester: `Spring 2017` },
-		3: { semester: `Fall 2017` },
-		4: { semester: `Spring 2018` },
-		5: { semester: `Fall 2018` },
-		6: { semester: `Spring 2019` },
-		7: { semester: `Fall 2019` },
-		8: { semester: `Spring 2020` },
-		9: { semester: `Fall 2020` },
-		10: { semester: `Spring 2021` },
+		1: { semester: `Fall 2013` },
+		2: { semester: `Spring 2014` },
+		3: { semester: `Fall 2014` },
+		4: { semester: `Spring 2015` },
+		5: { semester: `Fall 2015` },
+		6: { semester: `Spring 2016` },
+		7: { semester: `Fall 2016` },
+		8: { semester: `Spring 2017` },
+		9: { semester: `Fall 2017` },
+		10: { semester: `Spring 2018` },
+		11: { semester: `Fall 2018` },
+		12: { semester: `Spring 2019` },
+		13: { semester: `Fall 2019` },
+		14: { semester: `Spring 2020` },
+		15: { semester: `Fall 2020` },
+		16: { semester: `Spring 2021` },
 	};
 	async function incSemester() {
 		await setSemester(semester + 1);

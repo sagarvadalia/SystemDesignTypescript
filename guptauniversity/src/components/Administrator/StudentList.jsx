@@ -35,6 +35,16 @@ export default function StudentList() {
 						{ title: 'GPA', field: 'sGPA' },
 						{ title: 'Credits', field: 'totalCredits' },
 						{ title: 'Student Type', field: 'studentType' },
+						{
+							title: 'Edit Holds Here',
+							field: '',
+							render: (rowData) => (
+								<div>
+									<Link to={`/studentlist/${rowData.userID}/holds`}>View Holds</Link>
+								</div>
+							),
+							editable: 'never',
+						},
 					]}
 					data={data}
 					options={{

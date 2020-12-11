@@ -94,10 +94,12 @@ try {
 				oldClass.slotID = newSlot;
 				console.log(oldClass);
 				this.classRepository.save(oldClass);
+				return true;
 			}
 		} catch (error) {
 			console.error(error);
 		}
+		return false;
 	}
 
 	async changeTeacher(request: Request, response: Response, next: NextFunction) {
@@ -134,5 +136,5 @@ try {
 		return "No room found with id " + request.params.newRoom
 	}
 
-	
+
 }

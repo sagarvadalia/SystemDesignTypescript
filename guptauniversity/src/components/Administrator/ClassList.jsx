@@ -10,13 +10,13 @@ export default function ClassList() {
 	async function cancelClass(classCRN) {
 		let val = await axios.delete(`/api/removeclass/${classCRN}`);
 		console.log(val);
-		const result = await axios(`/api/classes/semester/9`);
+		const result = await axios(`/api/classes/semester/15`);
 
 		setData(result.data);
 	}
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/classes/semester/9`);
+			const result = await axios(`/api/classes/semester/15`);
 
 			setData(result.data);
 		};
@@ -48,23 +48,28 @@ export default function ClassList() {
 
 						{ title: 'Credits', field: 'courseID.numOfCredits', editable: 'onAdd' },
 						{ title: 'Department', field: 'courseID.deptID.deptName', editable: 'onAdd' },
-						{ title: 'Teacher', field: 'fID.userName' },
+						{ title: 'Faculty ID', field: 'fID.userID' },
+						{ title: 'Teacher', field: 'fID.userName', editable: 'never' },
 						{ title: 'Building Name', field: 'roomID.buildings.buildingName', editable: 'onAdd' },
 						{ title: 'Room Number', field: 'roomID.roomNum', editable: 'onAdd' },
 						{ title: 'Semester Season', field: 'semesterID.semesterName', editable: 'onAdd' },
 						{ title: 'Semester Year', field: 'semesterID.yearNum', editable: 'onAdd' },
-						{ title: 'Days of the Week', field: 'slotID.days', editable: 'onAdd' },
+						{ title: 'Slot ID', field: 'slotID.slotID' },
+						{ title: 'Days of the Week', field: 'slotID.days', editable: 'never' },
+
 						{
 							title: 'Start Time',
 							field: 'slotID.periodID.startTime',
+							editable: 'never',
 						},
 						{
 							title: 'End Time',
 							field: 'slotID.periodID.endTime',
+							editable: 'never',
 						},
 						{
 							title: 'Student Details',
-							render: (rowData) => <Link to={'/classlist/studentDetails'}>Class Roster</Link>,
+							render: (rowData) => <Link to={`/classlist/${rowData.classCRN}`}>Class Roster</Link>,
 							editable: 'onAdd',
 						},
 					]}
@@ -77,7 +82,13 @@ export default function ClassList() {
 							const dataUpdate = [...data];
 							const index = oldData.tableData.id;
 							dataUpdate[index] = newData;
+
+							await axios.get(`/api/changeteacher/${newData.classCRN}/${newData.fID.userID}`);
+							await axios.get(`/api/classes/${newData.classCRN}/${newData.slotID.slotID}`);
+
 							await setData([...dataUpdate]);
+							const result = await axios(`/api/classes/semester/15`);
+							setData(result.data);
 						},
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
 						onRowUpdateCancelled: (rowData) => console.log('Row editing cancelled'),

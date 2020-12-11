@@ -5,7 +5,7 @@ import { Login } from './login';
 import Schedule from './All Users/schedule';
 import StudentTranscript from './Student/studentTranscript';
 import { LoginContext } from './../LoginContext';
-import StudentClassList from './Faculty/studentclasslist';
+import FacultyClassHistory from './Faculty/FacultyClassHistory';
 import ClassDetails from './Faculty/classDetails';
 import AcademicCalendar from './All Users/academicCalendar';
 import NextCalendar from './All Users/nextCalendar';
@@ -29,6 +29,7 @@ import StudentDetailsAdminView from './Administrator/StudentDetailsAdminView';
 import SetBools from './Administrator/SetBools';
 import UserList from './Administrator/UserList';
 import EditMasterSchedule from './Administrator/EditMasterSchedule';
+import EditStudentHolds from './Administrator/EditStudentHolds';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -59,11 +60,11 @@ export const Routes = ({}) => {
 			)}
 			{state?.user?.userType === 'Faculty' && (
 				<Switch>
-					<Route exact path="/classlist" component={StudentClassList} />
+					<Route exact path="/classlist" component={FacultyClassHistory} />
 					<Route exact path="/schedule/:semester" component={FacultySchedule} />
-					<Route exact path="/classlist/studentDetails" component={ClassDetails} />
+					<Route exact path="/classlist/:classCRN" component={ClassDetails} />
 					<Route path="/advisees/" component={FacultyAdvisees} />
-					<Route path="/classlist/studentDetails/:sID" component={StudentDetails} />
+					<Route path="/studentDetails/:sID" component={StudentDetails} />
 				</Switch>
 			)}
 			{state?.user?.userType === 'Administrator' && (
@@ -74,6 +75,7 @@ export const Routes = ({}) => {
 					<Route exact path="/studentlist/:sID" component={StudentDetailsAdminView} />
 					<Route exact path="/setTimes" component={SetBools} />
 					<Route exact path="/editMasterSchedule/:semester" component={EditMasterSchedule} />
+					<Route exact path="/studentlist/:sID/holds" component={EditStudentHolds} />
 				</Switch>
 			)}
 
