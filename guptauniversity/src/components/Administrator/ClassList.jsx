@@ -34,25 +34,26 @@ export default function ClassList() {
 				<MaterialTable
 					title="Class Modifications"
 					columns={[
-						{ title: 'Course ID', field: 'courseID.courseID' },
+						{ title: 'Course ID', field: 'courseID.courseID', editable: 'onAdd' },
 
-						{ title: 'Class CRN', field: 'classCRN' },
+						{ title: 'Class CRN', field: 'classCRN', editable: 'onAdd' },
 						{
 							title: 'Course Name',
 							field: 'courseID.courseName',
 							render: (rowData) => (
 								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
 							),
+							editable: 'onAdd',
 						},
 
-						{ title: 'Credits', field: 'courseID.numOfCredits' },
-						{ title: 'Department', field: 'courseID.deptID.deptName' },
+						{ title: 'Credits', field: 'courseID.numOfCredits', editable: 'onAdd' },
+						{ title: 'Department', field: 'courseID.deptID.deptName', editable: 'onAdd' },
 						{ title: 'Teacher', field: 'fID.userName' },
-						{ title: 'Building Name', field: 'roomID.buildings.buildingName' },
-						{ title: 'Room Number', field: 'roomID.roomNum' },
-						{ title: 'Semester Season', field: 'semesterID.semesterName' },
-						{ title: 'Semester Year', field: 'semesterID.yearNum' },
-						{ title: 'Days of the Week', field: 'slotID.days' },
+						{ title: 'Building Name', field: 'roomID.buildings.buildingName', editable: 'onAdd' },
+						{ title: 'Room Number', field: 'roomID.roomNum', editable: 'onAdd' },
+						{ title: 'Semester Season', field: 'semesterID.semesterName', editable: 'onAdd' },
+						{ title: 'Semester Year', field: 'semesterID.yearNum', editable: 'onAdd' },
+						{ title: 'Days of the Week', field: 'slotID.days', editable: 'onAdd' },
 						{
 							title: 'Start Time',
 							field: 'slotID.periodID.startTime',
@@ -64,12 +65,7 @@ export default function ClassList() {
 						{
 							title: 'Student Details',
 							render: (rowData) => <Link to={'/classlist/studentDetails'}>Class Roster</Link>,
-						},
-						{
-							title: 'Cancel this Class',
-							render: (rowData) => (
-								<Button onClick={() => cancelClass(rowData.classCRN)}>Cancel this Class</Button>
-							),
+							editable: 'onAdd',
 						},
 					]}
 					data={data}
@@ -82,6 +78,27 @@ export default function ClassList() {
 							const index = oldData.tableData.id;
 							dataUpdate[index] = newData;
 							await setData([...dataUpdate]);
+						},
+						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
+						onRowUpdateCancelled: (rowData) => console.log('Row editing cancelled'),
+						onRowAdd: (newData) =>
+							new Promise((resolve, reject) => {
+								setTimeout(() => {
+									/* setData([...data, newData]); */
+									console.log(newData);
+
+									resolve();
+								}, 1000);
+							}),
+
+						onRowDelete: async (oldData) => {
+							const dataDelete = [...data];
+							console.log(dataDelete);
+							const index = oldData.tableData.id;
+
+							dataDelete.splice(index, 1);
+							setData([...dataDelete]);
+							await cancelClass(oldData.classCRN);
 						},
 					}}
 				/>

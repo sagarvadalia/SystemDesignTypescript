@@ -4,12 +4,13 @@ import axios from 'axios';
 import { LoginContext } from './../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-export default function StudentList() {
+export default function UserList() {
 	const [data, setData] = useState([{}]);
 	const [state, setState] = useContext(LoginContext);
+
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/students`);
+			const result = await axios(`/api/users`);
 
 			setData(result.data);
 			console.log(result.data);
@@ -30,11 +31,12 @@ export default function StudentList() {
 						{
 							title: 'Name',
 							field: 'userName',
-							render: (rowData) => <Link to={`/studentlist/${rowData.userID}`}>{rowData.userName}</Link>,
 						},
-						{ title: 'GPA', field: 'sGPA' },
-						{ title: 'Credits', field: 'totalCredits' },
-						{ title: 'Student Type', field: 'studentType' },
+						{ title: 'Email Address', field: 'userEmail' },
+						{ title: 'Phone Number', field: 'userPhone' },
+						{ title: 'Status', field: 'userType' },
+
+						// { title: 'Department', field: 'grade' },
 					]}
 					data={data}
 					options={{
