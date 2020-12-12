@@ -883,7 +883,7 @@ const undergraduateFullTime = [
 	},
 	{
 		"userName": "Colby O' Flaherty",
-		"userEmail": "co' flah@guptauni.edu",
+		"userEmail": "coflah@guptauni.edu",
 		"userPassword": "b7dLorY",
 		"userPhone": "(331) 4903836",
 		"userAddress": "2 Sloan Avenue",
@@ -2647,7 +2647,7 @@ const undergraduateFullTime = [
 	},
 	{
 		"userName": "Tomlin Da Costa",
-		"userEmail": "tda cost@guptauni.edu",
+		"userEmail": "tdacost@guptauni.edu",
 		"userPassword": "MNTbJi8T",
 		"userPhone": "(290) 9526213",
 		"userAddress": "7 Menomonie Drive",

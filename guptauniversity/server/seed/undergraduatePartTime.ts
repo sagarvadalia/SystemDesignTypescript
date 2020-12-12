@@ -1541,7 +1541,7 @@ const undergraduatePartTime = [
 	},
 	{
 		"userName": "Fawn L'Episcopi",
-		"userEmail": "fl'episc@guptauni.edu",
+		"userEmail": "flepisc@guptauni.edu",
 		"userPassword": "6AD5HfTNTdyk",
 		"userPhone": "(343) 7628361",
 		"userAddress": "199 Canary Trail",
@@ -2801,7 +2801,7 @@ const undergraduatePartTime = [
 	},
 	{
 		"userName": "Merola O'Lennane",
-		"userEmail": "mo'lenna@guptauni.edu",
+		"userEmail": "molenna@guptauni.edu",
 		"userPassword": "hFccVSkOIx",
 		"userPhone": "(208) 7659277",
 		"userAddress": "7597 Service Avenue",
