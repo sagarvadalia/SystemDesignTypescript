@@ -70,7 +70,14 @@ export default function ClassList() {
 						{
 							title: 'Student Details',
 							render: (rowData) => <Link to={`/classlist/${rowData.classCRN}`}>Class Roster</Link>,
-							editable: 'onAdd',
+							editable: 'never',
+						},
+						{
+							title: 'Take Todays Attendance',
+							render: (rowData) => (
+								<Link to={`/classlist/${rowData.classCRN}/attendance`}>Today's Attendance</Link>
+							),
+							editable: 'never',
 						},
 					]}
 					data={data}
