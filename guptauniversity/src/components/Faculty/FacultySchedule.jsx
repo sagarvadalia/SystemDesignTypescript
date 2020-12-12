@@ -83,6 +83,12 @@ export default function FacultySchedule() {
 							title: 'Student Details',
 							render: (rowData) => <Link to={`/classlist/${rowData.classCRN}`}>STUDENT DETAILS</Link>,
 						},
+						{
+							title: 'Mark Attendance for Today',
+							render: (rowData) => (
+								<Link to={`/classlist/${rowData.classCRN}/attendance`}>Today's Attendance</Link>
+							),
+						},
 					]}
 					data={data}
 					options={{

@@ -36,6 +36,11 @@ export class AttendanceController {
 			console.error(error);
 		}
 	}
+	async viewAttendanceForClass(request: Request, response: Response, next: NextFunction) {
+		//given a classCRN we need to return a list of attendances
+
+
+	}
 
 	async newAttendance(request: Request, response: Response, next: NextFunction) {
 		//Give me an enrollmentID and isPresent(bool). If no Date object is given, I assume today's date
