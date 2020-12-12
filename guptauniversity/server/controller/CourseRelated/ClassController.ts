@@ -92,10 +92,10 @@ export class ClassController {
 			
 
 				let info = await transporter.sendMail({
-					from: '"Administration " <Administration@guptaUniversity.com>', // sender address
+					from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
 					to: studentEmail, // list of receivers
 					subject: "Course Deletion", // Subject line
-					text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses has been removed.", // plain text body
+					text: "Dear student, " + "\n" + " This is an automated message to alert you that,"+ classToRemove.courseID.courseName +  " has been removed from the " + classToRemove.semesterID.semesterName + classToRemove.semesterID.yearNum + " semester.", // plain text body
 					// html: "<b>Hello world?</b>", // html body
 				});
 
@@ -119,10 +119,42 @@ export class ClassController {
 		console.log(oldClass);
 
 		try {
+			
 			if (newSlot && oldClass) {
+				let facEmail = oldClass.fID.userEmail;
+				let studentEmail = "";
+				let enrollment = await this.enrollmentRepository.find({where: {classCRN: oldClass}});
+				for(let i = 0; i < enrollment.length; i++){
+					let stuEmail = enrollment[i].sID.userEmail;
+					studentEmail += `${stuEmail},`;
+				}
 				oldClass.slotID = newSlot;
 				console.log(oldClass);
 				this.classRepository.save(oldClass);
+
+				// nodemailer
+				let testAccount = await nodemailer.createTestAccount();
+
+				let transporter = nodemailer.createTransport({
+					host: "smtp.ethereal.email",
+					port: 587,
+					secure: false, // true for 465, false for other ports
+					auth: {
+						user: testAccount.user, // generated ethereal user
+						pass: testAccount.pass, // generated ethereal password
+					},
+				});
+
+				let info = await transporter.sendMail({
+					from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
+					to: studentEmail, // list of receivers
+					subject: "Class Time Changed", // Subject line
+					text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses, "+ oldClass.courseID.courseName +  ", has changed timeslots. It is now on these days, " + oldClass.slotID.days + ", And it will now start at: " + oldClass.slotID.periodID.startTime + " and end at: " + oldClass.slotID.periodID.endTime, // plain text body
+					// html: "<b>Hello world?</b>", // html body
+				});
+
+				console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
 				return true;
 			}
 		} catch (error) {
@@ -138,8 +170,40 @@ export class ClassController {
 
 		if (newTeacher) {
 			if (thisClass) {
+				let facEmail = thisClass.fID.userEmail;
+				let studentEmail = "";
+				let enrollment = await this.enrollmentRepository.find({where: {classCRN: thisClass}});
+				for(let i = 0; i < enrollment.length; i++){
+					let stuEmail = enrollment[i].sID.userEmail;
+					studentEmail = `${stuEmail}`;
+				}
 				thisClass.fID = newTeacher;
 				this.classRepository.save(thisClass);
+
+				// nodemailer
+				let testAccount = await nodemailer.createTestAccount();
+
+				let transporter = await nodemailer.createTransport({
+					host: 'smtp.ethereal.email',
+					port: 587,
+					secure: false,
+					auth:{
+						user: testAccount.user,
+						pass: testAccount.pass,
+					},
+
+				});
+
+				let info = await transporter.sendMail({
+					from: '"Administration" <Administration@guptaUniversity.edu',
+					to: studentEmail,
+					subject: "New Teacher",
+					text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught by professor, " + newTeacher.userName,
+					//html: not used
+				});
+
+				console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
 
 				return "Teacher of " + thisClass.classCRN + ' has been successfully changed to ' + newTeacher.userID;
 			}
@@ -155,8 +219,41 @@ export class ClassController {
 
 		if (newRoom) {
 			if (thisClass) {
+				let facEmail = thisClass.fID.userEmail;
+				let studentEmail = "";
+				let enrollment = await this.enrollmentRepository.find({where: {classCRN: thisClass}});
+				for(let i = 0; i < enrollment.length; i++ ){
+					let stuEmail = enrollment[i].sID.userEmail;
+					studentEmail = `${stuEmail}`;
+				}
 				thisClass.roomID = newRoom;
 				this.classRepository.save(thisClass);
+
+				// nodemailer
+				let testAccount = await nodemailer.createTestAccount();
+
+				  let transporter = await nodemailer.createTransport({
+                    host: 'smtp.ethereal.email',
+                    port: 587,
+                    secure: false,
+                    auth:{
+                        user: testAccount.user,
+                        pass: testAccount.pass,
+                    },
+
+				});
+				
+				let info = await transporter.sendMail({
+                    from: '"Administration" <Administration@guptaUniversity.edu',
+                    to: studentEmail,
+                    subject: "Room Change",
+                    text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
+                    //html: not used
+				});
+				
+
+				console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
 
 				return "Room of " + thisClass.classCRN + ' has been successfully changed to ' + newRoom.roomID;
 			}
