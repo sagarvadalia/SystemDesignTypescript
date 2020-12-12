@@ -38,6 +38,7 @@ export default function FacultySchedule() {
 			const result = await axios(`/api/faculties/viewClassesBySemester/${state.user.userID}/${semester}`);
 
 			setData(result.data);
+			console.log(result.data);
 		};
 
 		fetchData();

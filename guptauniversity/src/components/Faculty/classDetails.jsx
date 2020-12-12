@@ -11,7 +11,7 @@ export default function ClassDetails() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/faculties/viewEnrollments/${classCRN}`);
-
+			console.log(result.data);
 			setData(result.data);
 		};
 

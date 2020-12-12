@@ -33,7 +33,7 @@ export class Enrollment extends BaseEntity {
 
 // One enrollment has many attendances
 	// this grabs the classCRN
-	@OneToMany(() => Attendance, (attendance) => attendance.enrollmentID)
+	@OneToMany(() => Attendance, (attendance) => attendance.enrollmentID, {eager:true})
 	public attendances!: Attendance[];
 
 
