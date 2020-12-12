@@ -56,13 +56,13 @@ export default function MasterSchedule() {
 				<MaterialTable
 					title={
 						<div>
-							Master Schedule
+							Master Schedule {semesterVal[semester].semester}
 							{semester !== 1 && (
 								<Link to={`/masterSchedule/${semester - 1}`}>
 									<Button onClick={() => dataFetch(semester - 1)}>Previous Semester</Button>
 								</Link>
 							)}
-							{semester !== 10 && (
+							{semester !== 16 && (
 								<Link to={`/masterSchedule/${semester + 1}`}>
 									<Button onClick={() => dataFetch(semester + 1)}>Next Semester</Button>
 								</Link>

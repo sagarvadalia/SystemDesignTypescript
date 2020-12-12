@@ -54,21 +54,17 @@ export default function MajorTable() {
 							field: 'dateDeclared',
 							render: (rowData) => <div>{new Date(rowData.dateDeclared).toDateString()}</div>,
 						},
-						{
-							title: 'Drop Major Link',
-							field: '',
-							render: (rowData) => (
-								<div>
-									<Button onClick={() => dropMajor(rowData.majorID.majorID)}>Drop this Major</Button>
-								</div>
-							),
-						},
 					]}
 					data={majors}
 					options={{
 						sorting: true,
 						searching: true,
 						exportButton: true,
+					}}
+					editable={{
+						onRowDelete: async (oldData) => {
+							dropMajor(oldData.majorID.majorID);
+						},
 					}}
 				/>
 			</div>

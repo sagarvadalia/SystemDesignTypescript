@@ -172,7 +172,7 @@ export default function PersistentDrawerLeft() {
 					<List>
 						<Link to={'/course-catalog'}>
 							<ListItem button key={'course-catalog'}>
-								<ListItemText primary={'course-catalog'}></ListItemText>
+								<ListItemText primary={'Course Catalog'}></ListItemText>
 							</ListItem>
 						</Link>
 					</List>
