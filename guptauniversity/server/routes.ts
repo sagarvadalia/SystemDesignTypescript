@@ -1101,16 +1101,22 @@ export const Routes = [
 		route: '/api/grading/AddCourse',
 		controller: GradingController,
 		action: 'canAddCourse',
-	},{
+	}, {
 		method: 'get',
 		route: '/api/grading/MidtermGrade',
 		controller: GradingController,
 		action: 'canAddMidtermGrade',
-	},{
+	},
+	{
 		method: 'get',
 		route: '/api/grading/FinalGrade',
 		controller: GradingController,
 		action: 'canAddFinalGrade',
 	},
-
+	{
+		method: 'get',
+		route: '/api/attendances/:id',
+		controller: AttendanceController,
+		action: 'viewAttendanceForClass',
+	},
 ];
