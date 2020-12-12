@@ -4,10 +4,12 @@ import { Attendance } from '../../entity/JoinTables/Attendance';
 import { validate, validateOrReject } from 'class-validator';
 import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { getManager } from "typeorm";
+import { Class } from 'server/entity/ClassRelated/Class';
 
 export class AttendanceController {
 	private attendanceRepository = getRepository(Attendance);
 	private enrollmentRepository = getRepository(Enrollment);
+	private classRepository = getRepository(Class);
 
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.attendanceRepository.find();
@@ -36,15 +38,35 @@ export class AttendanceController {
 			console.error(error);
 		}
 	}
+
 	async viewAttendanceForClass(request: Request, response: Response, next: NextFunction) {
 		//given a classCRN we need to return a list of attendances
-
-
+		let thisClass = await this.classRepository.findOne(request.params.id);
+		let allAttends: Array<Array<Attendance>> = []
+		try {
+			if (thisClass) {
+				let thisEnrolls = await this.enrollmentRepository.find({ where: { classCRN: thisClass } }) //Array of enrollment objs
+				if (thisEnrolls) {
+					for (let i = 0; i < thisEnrolls.length; i++) {
+						let newAtt = await this.attendanceRepository.find({ where: { enrollmentID: thisEnrolls[i] } }) //Array of that student's attendances
+						if (newAtt) {
+							allAttends.push(newAtt);
+						}
+						return { done: false, msg: request.params.id + ": No attendance found with that ClassCRN" }
+					}
+					return allAttends;
+				}
+				return { done: false, msg: request.params.id + ": No enrollments found with that ClassCRN" }
+			}
+			return { done: false, msg: request.params.id + ": No class found with that ClassCRN" }
+		} catch (error) {
+			console.error(error);
+		}
 	}
 
 	async newAttendance(request: Request, response: Response, next: NextFunction) {
 		//Give me an enrollmentID and isPresent(bool). If no Date object is given, I assume today's date
-		//Changed from request.params to request.body so that a date object can be passed in but unable to test now. Post in routes?? -----------------------------
+		//Changed from request.params to request.body so that a date object can be passed in but unable to test now.
 		let enroll = await this.enrollmentRepository.findOne(request.body.enrollID);
 		const entityManager = getManager();
 		var wasPresent = (request.body.isPresent == 'true');
