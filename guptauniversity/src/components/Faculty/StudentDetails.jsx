@@ -14,7 +14,7 @@ export default function StudentDetails() {
 		const fetchData = async () => {
 			console.log(sID);
 			const result = await axios(`/api/enrollment/${sID}`);
-			console.log('result');
+			console.log(result.data);
 			setData(result.data);
 			const result2 = await axios(`/api/users/${sID}`);
 			setUser(result2.data);
@@ -31,7 +31,7 @@ export default function StudentDetails() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>{user.userName} Course History</div>}
+					title={<div>{user?.userName} Course History</div>}
 					columns={[
 						{ title: 'Class Number', field: 'classNumber' },
 						{ title: 'Semester Season', field: 'semester.semesterName' },
@@ -39,7 +39,11 @@ export default function StudentDetails() {
 						{
 							title: 'Course Name',
 							field: 'courseName',
-							render: (rowData) => <Link to={`/courses/${rowData.courseID}`}>{rowData.courseName}</Link>,
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData.courseName}
+								</Link>
+							),
 						},
 						{ title: 'Grade', field: 'finalGrade' },
 					]}

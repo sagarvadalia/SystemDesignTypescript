@@ -4,7 +4,7 @@ import axios from 'axios';
 import { LoginContext } from '../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 export default function StudentTranscript() {
-	const [data, setData] = useState([{ semesterID: {} }]);
+	const [data, setData] = useState([{ semesterID: {}, classCRN: { courseID: {} } }]);
 	const [state, setState] = useContext(LoginContext);
 	useEffect(() => {
 		const fetchData = async () => {
@@ -18,11 +18,7 @@ export default function StudentTranscript() {
 	}, []);
 
 	return (
-		// API IS HERE https://material-table.com/#/
-
 		<div>
-			{/* <pre>{JSON.stringify(data)}</pre> */}
-
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title="Basic Sorting Preview"

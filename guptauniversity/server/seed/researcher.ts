@@ -199,7 +199,7 @@ const researcher = [
 	},
 	{
 		"userName": "Trina De Cruze",
-		"userEmail": "tde cruz@guptauni.edu",
+		"userEmail": "tdecruz@guptauni.edu",
 		"userPassword": "Sb6TiL",
 		"userPhone": "(101) 5322051",
 		"userAddress": "88935 Carberry Avenue",

@@ -1471,7 +1471,7 @@ const graduatePartTime = [
 	},
 	{
 		"userName": "Mar O'Brogan",
-		"userEmail": "mo'broga@guptauni.edu",
+		"userEmail": "mobroga@guptauni.edu",
 		"userPassword": "e3DIIpV5E",
 		"userPhone": "(862) 2582783",
 		"userAddress": "433 Farragut Alley",

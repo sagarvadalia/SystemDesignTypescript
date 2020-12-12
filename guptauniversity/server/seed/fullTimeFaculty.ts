@@ -757,7 +757,7 @@ const fullTimeFaculty = [
 	},
 	{
 		"userName": "Pincus Van der Brugge",
-		"userEmail": "pvan der@guptauni.edu",
+		"userEmail": "pvander@guptauni.edu",
 		"userPassword": "j5SXu6S",
 		"userPhone": "+36 (743) 700-0408",
 		"userAddress": "52438 Vidon Plaza",
@@ -827,7 +827,7 @@ const fullTimeFaculty = [
 	},
 	{
 		"userName": "Jeth O'Crigane",
-		"userEmail": "jo'criga@guptauni.edu",
+		"userEmail": "jocriga@guptauni.edu",
 		"userPassword": "Dh6imWfkJmQo",
 		"userPhone": "+62 (586) 443-6558",
 		"userAddress": "2254 Quincy Lane",
@@ -897,7 +897,7 @@ const fullTimeFaculty = [
 	},
 	{
 		"userName": "Foster L' Anglois",
-		"userEmail": "fl' angl@guptauni.edu",
+		"userEmail": "flangl@guptauni.edu",
 		"userPassword": "H7c3Up",
 		"userPhone": "+7 (692) 928-2260",
 		"userAddress": "2890 Pawling Alley",

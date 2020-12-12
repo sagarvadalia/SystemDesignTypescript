@@ -1,4 +1,4 @@
-import * as bodyParser from 'body-parser';
+// import * as bodyParser from 'body-parser';
 import express, { Request, Response } from 'express';
 import { createConnection } from 'typeorm';
 import { Routes } from './routes';
@@ -30,7 +30,6 @@ createConnection({
 		// create express app
 
 const app = express();
-		app.use(bodyParser.json());
 		app.use(morgan('dev'));
 		app.use(express.json());
 		app.use(express.urlencoded({ extended: true }));

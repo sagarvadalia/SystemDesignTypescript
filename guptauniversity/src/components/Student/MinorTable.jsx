@@ -54,21 +54,17 @@ export default function MinorTable() {
 							field: 'dateDeclared',
 							render: (rowData) => <div>{new Date(rowData.dateDeclared).toDateString()}</div>,
 						},
-						{
-							title: 'Drop Minor Link',
-							field: '',
-							render: (rowData) => (
-								<div>
-									<Button onClick={() => dropminor(rowData.minorID.minorID)}>Drop this Minor</Button>
-								</div>
-							),
-						},
 					]}
 					data={minors}
 					options={{
 						sorting: true,
 						searching: true,
 						exportButton: true,
+					}}
+					editable={{
+						onRowDelete: async (oldData) => {
+							dropminor(oldData.minorID.minorID);
+						},
 					}}
 				/>
 			</div>

@@ -172,12 +172,12 @@ export default function PersistentDrawerLeft() {
 					<List>
 						<Link to={'/course-catalog'}>
 							<ListItem button key={'course-catalog'}>
-								<ListItemText primary={'course-catalog'}></ListItemText>
+								<ListItemText primary={'Course Catalog'}></ListItemText>
 							</ListItem>
 						</Link>
 					</List>
 					<List>
-						<Link to={'/masterSchedule/9'}>
+						<Link to={'/masterSchedule/15'}>
 							<ListItem button key={'masterSchedule'}>
 								<ListItemText primary={'Current Master Schedule'}></ListItemText>
 							</ListItem>
@@ -190,7 +190,7 @@ export default function PersistentDrawerLeft() {
 									<ListItemText primary={'Your transcript'}></ListItemText>
 								</ListItem>
 							</Link>
-							<Link to={`/studentSchedule/9`}>
+							<Link to={`/studentSchedule/15`}>
 								<ListItem button key={'Student Schedule'}>
 									<ListItemText primary={'Your Schedule'}></ListItemText>
 								</ListItem>
@@ -221,7 +221,7 @@ export default function PersistentDrawerLeft() {
 									<ListItemText primary={'Class History'}></ListItemText>
 								</ListItem>
 							</Link>
-							<Link to={`/schedule/9`}>
+							<Link to={`/schedule/15`}>
 								<ListItem button key={'schedule'}>
 									<ListItemText primary={'Current Schedule'}></ListItemText>
 								</ListItem>
@@ -236,7 +236,7 @@ export default function PersistentDrawerLeft() {
 					)}
 					{state?.user?.userType === 'Administrator' && (
 						<List>
-							<Link to={`/editMasterSchedule/9`}>
+							<Link to={`/editMasterSchedule/15`}>
 								<ListItem button key={'Edit Master Schedule'}>
 									<ListItemText primary={'Edit Master Schedule'}></ListItemText>
 								</ListItem>

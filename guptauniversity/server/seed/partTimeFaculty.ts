@@ -79,7 +79,7 @@ const partTimeFaculty = [
 	},
 	{
 		"userName": "Lynn La Croce",
-		"userEmail": "lla croc@guptauni.edu",
+		"userEmail": "llacroc@guptauni.edu",
 		"userPassword": "pptNfz8HB",
 		"userPhone": "+234 (840) 632-5917",
 		"userAddress": "48442 Rowland Avenue",

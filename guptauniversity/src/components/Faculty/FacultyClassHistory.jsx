@@ -3,7 +3,7 @@ import MaterialTable from 'material-table';
 import axios from 'axios';
 import { LoginContext } from '../../LoginContext';
 import { Link } from 'react-router-dom';
-export default function StudentClassList() {
+export default function FacultyClassHistory() {
 	const [data, setData] = useState([{ courseID: {}, semesterID: {} }]);
 	const [state, setState] = useContext(LoginContext);
 	useEffect(() => {
@@ -40,7 +40,7 @@ export default function StudentClassList() {
 						{ title: 'Semester Year', field: 'semesterID.yearNum' },
 						{
 							title: 'Student Details',
-							render: (rowData) => <Link to={'/classlist/studentDetails'}>STUDENT DETAILS</Link>,
+							render: (rowData) => <Link to={`/classlist/${rowData.classCRN}`}>STUDENT DETAILS</Link>,
 						},
 					]}
 					data={data}
