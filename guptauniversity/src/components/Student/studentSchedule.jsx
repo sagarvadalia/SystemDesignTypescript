@@ -44,7 +44,7 @@ export default function StudentSchedule() {
 	}
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/9`);
+			const result = await axios(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/15`);
 
 			setData(result.data);
 		};
@@ -76,7 +76,7 @@ export default function StudentSchedule() {
 								</Link>
 							),
 						},
-						{ title: 'Course Description', field: 'classCRN.courseID.courseDescription' },
+						{ title: 'Course Description', field: 'classCRN.courseID.courseDesc' },
 						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 						{ title: 'Teacher Name', field: 'classCRN.fID.userName' },
 						{ title: 'Days of the Week', field: 'classCRN.slotID.days' },

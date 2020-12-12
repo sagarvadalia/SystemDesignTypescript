@@ -56,21 +56,21 @@ export default function EditMasterSchedule() {
 				<MaterialTable
 					title={
 						<div>
-							Master Schedule
+							Master Schedule {semesterVal[semester].semester}
 							{semester !== 1 && (
-								<Link to={`/masterSchedule/${semester - 1}`}>
+								<Link to={`/editmasterSchedule/${semester - 1}`}>
 									<Button onClick={() => dataFetch(semester - 1)}>Previous Semester</Button>
 								</Link>
 							)}
-							{semester !== 10 && (
-								<Link to={`/masterSchedule/${semester + 1}`}>
+							{semester !== 16 && (
+								<Link to={`/editmasterSchedule/${semester + 1}`}>
 									<Button onClick={() => dataFetch(semester + 1)}>Next Semester</Button>
 								</Link>
 							)}
 						</div>
 					}
 					columns={[
-						{ title: 'Class CRN', field: 'classCRN' },
+						{ title: 'Class CRN', field: 'classCRN', editable: 'onAdd' },
 						{
 							title: 'Course Name',
 							field: 'courseID.courseName',
@@ -78,21 +78,12 @@ export default function EditMasterSchedule() {
 								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
 							),
 						},
-						{ title: 'Course Description', field: 'courseID.courseDesc' },
-						{ title: 'Credits', field: 'courseID.numOfCredits' },
-						{ title: 'Department', field: 'courseID.deptID.deptName' },
-						{ title: 'Teacher', field: 'fID.userName' },
-						{ title: 'Building Name', field: 'roomID.buildings.buildingName' },
-						{ title: 'Room Number', field: 'roomID.roomNum' },
-						{ title: 'Days of the Week', field: 'slotID.days' },
-						{
-							title: 'Start Time',
-							field: 'slotID.periodID.startTime',
-						},
-						{
-							title: 'End Time',
-							field: 'slotID.periodID.endTime',
-						},
+
+						{ title: 'Department ID', field: 'courseID.deptID.deptID' },
+						{ title: 'Faculty ID', field: 'fID.userID' },
+						{ title: 'Building ID', field: 'roomID.buildings.buildingID' },
+						{ title: 'Room ID', field: 'roomID.roomID' },
+						{ title: 'Time Slot', field: 'slotID.slotID' },
 					]}
 					data={data}
 					options={{
