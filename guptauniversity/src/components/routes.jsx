@@ -30,6 +30,7 @@ import SetBools from './Administrator/SetBools';
 import UserList from './Administrator/UserList';
 import EditMasterSchedule from './Administrator/EditMasterSchedule';
 import EditStudentHolds from './Administrator/EditStudentHolds';
+import Attendance from './Faculty/Attendance';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -65,6 +66,7 @@ export const Routes = ({}) => {
 					<Route exact path="/classlist/:classCRN" component={ClassDetails} />
 					<Route path="/advisees/" component={FacultyAdvisees} />
 					<Route path="/studentDetails/:sID" component={StudentDetails} />
+					<Route exact path="/classlist/:classCRN/attendance" component={Attendance} />
 				</Switch>
 			)}
 			{state?.user?.userType === 'Administrator' && (

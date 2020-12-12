@@ -38,6 +38,7 @@ export default function FacultySchedule() {
 			const result = await axios(`/api/faculties/viewClassesBySemester/${state.user.userID}/${semester}`);
 
 			setData(result.data);
+			console.log(result.data);
 		};
 
 		fetchData();
@@ -82,6 +83,12 @@ export default function FacultySchedule() {
 						{
 							title: 'Student Details',
 							render: (rowData) => <Link to={`/classlist/${rowData.classCRN}`}>STUDENT DETAILS</Link>,
+						},
+						{
+							title: 'Mark Attendance for Today',
+							render: (rowData) => (
+								<Link to={`/classlist/${rowData.classCRN}/attendance`}>Today's Attendance</Link>
+							),
 						},
 					]}
 					data={data}

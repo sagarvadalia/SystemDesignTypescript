@@ -1,7 +1,8 @@
 import { IsNotEmpty } from 'class-validator';
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Class } from '../ClassRelated/Class';
 import { Student } from '../Users/Student';
+import { Attendance } from './Attendance';
 
 @Entity()
 export class Enrollment extends BaseEntity {
@@ -29,6 +30,11 @@ export class Enrollment extends BaseEntity {
 	@ManyToOne(() => Student, (student: Student) => student.enrollment, { eager: true })
 	@JoinColumn({ name: 'sID' })
 	public sID!: Student;
+
+// One enrollment has many attendances
+	// this grabs the classCRN
+	@OneToMany(() => Attendance, (attendance) => attendance.enrollmentID, {eager:true})
+	public attendances!: Attendance[];
 
 
 }

@@ -7,10 +7,19 @@ import Button from '@material-ui/core/Button';
 export default function SetBools() {
 	const [data, setData] = useState([{}]);
 	const [state, setState] = useContext(LoginContext);
-	async function setAddTime() {}
-	async function setDropTime() {}
-	async function setMidtermTime() {}
-	async function setFinalTime() {}
+	async function setAddTime() {
+		axios(`/api/grading/AddCourse`);
+	}
+	async function setDropTime() {
+		axios(`/api/grading/AddCourse`);
+	}
+	async function setMidtermTime() {
+		axios(`/api/grading/MidtermGrade`);
+	}
+
+	async function setFinalTime() {
+		axios(`/api/grading/FinalGrade`);
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/users`);

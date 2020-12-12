@@ -4,14 +4,14 @@ import axios from 'axios';
 import { LoginContext } from '../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 
-export default function ClassDetails() {
+export default function Attendance() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, semesterID: {}, sID: {} }]);
 	const [state, setState] = useContext(LoginContext);
 	let { classCRN } = useParams();
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/faculties/viewEnrollments/${classCRN}`);
-
+			console.log(result.data);
 			setData(result.data);
 		};
 
