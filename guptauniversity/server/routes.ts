@@ -36,6 +36,8 @@ import { StudentHoldController } from './controller/JoinTables/StudentHoldContro
 import { StudentMajorController } from './controller/JoinTables/StudentMajorController';
 import { MajorReqController } from './controller/CourseRelated/MajorReqController';
 import { MinorReqController } from './controller/CourseRelated/MinorReqController';
+import { GradingController } from './controller/CourseRelated/GradingController';
+import { PrerequisiteController } from './controller/JoinTables/PrerequisiteController';
 
 
 
@@ -1068,29 +1070,47 @@ export const Routes = [
 	},
 
 
-	// // crud routes for Prerequisites
-	// {
-	// 	method: 'get',
-	// 	route: '/api/prereqs',
-	// 	controller: PrerequisiteController,
-	// 	action: 'all',
-	// },
-	// {
-	// 	method: 'get',
-	// 	route: '/api/prereqs/:id',
-	// 	controller: PrerequisiteController,
-	// 	action: 'one',
-	// },
-	// {
-	// 	method: 'post',
-	// 	route: '/api/prereqs',
-	// 	controller: PrerequisiteController,
-	// 	action: 'save',
-	// },
-	// {
-	// 	method: 'delete',
-	// 	route: '/api/prereqs/:id',
-	// 	controller: PrerequisiteController,
-	// 	action: 'remove',
-	// },
+	// crud routes for Prerequisites
+	{
+		method: 'get',
+		route: '/api/prereqs',
+		controller: PrerequisiteController,
+		action: 'all',
+	},
+	{
+		method: 'get',
+		route: '/api/prereqs/:id',
+		controller: PrerequisiteController,
+		action: 'one',
+	},
+	{
+		method: 'post',
+		route: '/api/prereqs',
+		controller: PrerequisiteController,
+		action: 'save',
+	},
+	{
+		method: 'delete',
+		route: '/api/prereqs/:id',
+		controller: PrerequisiteController,
+		action: 'remove',
+	},
+	// 12/11
+	{
+		method: 'get',
+		route: '/api/grading/AddCourse',
+		controller: GradingController,
+		action: 'canAddCourse',
+	},{
+		method: 'get',
+		route: '/api/grading/MidtermGrade',
+		controller: GradingController,
+		action: 'canAddMidtermGrade',
+	},{
+		method: 'get',
+		route: '/api/grading/FinalGrade',
+		controller: GradingController,
+		action: 'canAddFinalGrade',
+	},
+
 ];

@@ -122,7 +122,7 @@ const administrator = [
 	},
 	{
 		"userName": "Erv Van Bruggen",
-		"userEmail": "evan bru@guptauni.edu",
+		"userEmail": "evanbru@guptauni.edu",
 		"userPassword": "UQb3Dt",
 		"userPhone": "(899) 3744387",
 		"userAddress": "1 Memorial Road",

@@ -390,8 +390,8 @@ export class EnrollmentController {
 								let ptUGStu = await this.ptUndergradstudentRepository.findOne(ugStu.userID);
 								if (ptUGStu) {
 									//currentCredits - 4
-									if (ptUGStu.currentCredits === 4) {
-										return { done: false, msg: ptUGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
+									if(ptUGStu.currentCredits === 4){
+										return {done: false, msg: ptUGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in"}
 									}
 									ptUGStu.currentCredits = ptUGStu.currentCredits - 4;
 
@@ -447,8 +447,8 @@ export class EnrollmentController {
 
 								if (ptGStu) {
 									//currentCredits - 4
-									if (ptGStu.currentCredits === 4) {
-										return { done: false, msg: ptGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
+									if(ptGStu.currentCredits === 4){
+										return {done: false, msg: ptGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
 									}
 									ptGStu.currentCredits = ptGStu.currentCredits - 4;
 
