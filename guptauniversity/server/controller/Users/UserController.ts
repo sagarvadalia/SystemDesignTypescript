@@ -149,10 +149,12 @@ export class UserController {
 						let ugPT = await this.undergraduatePartTime.findOne(undergraduate);
 						if(ugPT){
 						let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugPT } });
-						let advisorToRemove = await this.advisorRepository.findOne(request.params.sID);
+						let advisorToRemove = await this.advisorRepository.find({where: {sID: ugPT}});
 
 						if(advisorToRemove){
-							await this.advisorRepository.delete(advisorToRemove);
+							for(let i = 0; i < advisorToRemove.length; i++){
+								await this.advisorRepository.delete(advisorToRemove[i]);
+							}
 						}
 
 						if(enrollmentToRemove){
@@ -176,10 +178,12 @@ export class UserController {
 						let ugFT = await this.undergraduateFullTime.findOne(undergraduate);
 						if(ugFT){
 							let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugFT } });
-							let advisorToRemove = await this.advisorRepository.findOne(request.params.sID);
+							let advisorToRemove = await this.advisorRepository.find({where: {sID: ugFT}});
 
 							if(advisorToRemove){
-								await this.advisorRepository.delete(advisorToRemove);
+								for(let i = 0; i < advisorToRemove.length; i++){
+									await this.advisorRepository.delete(advisorToRemove[i]);
+								}
 							}
 
 							if(enrollmentToRemove){
