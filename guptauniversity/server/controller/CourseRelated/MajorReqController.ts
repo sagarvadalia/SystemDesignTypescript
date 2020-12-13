@@ -87,7 +87,7 @@ export class MajorReqController {
                                             //Must be a past semester
                                             iter = 2
                                         }
-                                        pushMeBaby = stuEnrolls[j].classCRN
+                                        pushMeBaby = stuEnrolls[j]
                                     } else {
                                         //This majReq course does NOT have an enrollment
                                         iter = 3
