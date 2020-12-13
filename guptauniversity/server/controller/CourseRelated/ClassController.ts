@@ -269,6 +269,7 @@ export class ClassController {
 			thisClass.totalSeats = parseInt(request.params.numSeats);
 			await this.classRepository.save(thisClass);
 		}
+		return {done: true, msg:"Invalid classCRN entered"};
 
 	}
 	async changeOpenSeats(request: Request, response: Response, next: NextFunction){
