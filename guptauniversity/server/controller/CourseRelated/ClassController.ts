@@ -306,5 +306,9 @@ export class ClassController {
 		return{done: false, msg: "Invalid classCRN entered."};
 	}
 
+	// async addClassToMasterSchedule(request: Request, response: Response, next: NextFunction){
+	// 	// Give me a CRN, a Section, a Faculty ID, RoomID, totalSeats, and Timeslot and I will create a new class
+	// 	let CRN = ""
+	// }
 
 }
