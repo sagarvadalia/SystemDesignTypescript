@@ -1101,16 +1101,74 @@ export const Routes = [
 		route: '/api/grading/AddCourse',
 		controller: GradingController,
 		action: 'canAddCourse',
-	},{
+	},
+	{
 		method: 'get',
 		route: '/api/grading/MidtermGrade',
 		controller: GradingController,
 		action: 'canAddMidtermGrade',
-	},{
+	},
+	{
 		method: 'get',
 		route: '/api/grading/FinalGrade',
 		controller: GradingController,
 		action: 'canAddFinalGrade',
 	},
+	{
+		method: 'get',
+		route: '/api/grading/DropCourse',
+		controller: GradingController,
+		action: 'canDropCourse',
+	},
+
+	// 12/12
+	{
+		method: 'get',
+		route: '/api/grading/viewAddCourse',
+		controller: GradingController,
+		action: 'viewAddCourse',
+	},{
+		method: 'get',
+		route: '/api/grading/viewDropCourse',
+		controller: GradingController,
+		action: 'viewDropCourse',
+	},{
+		method: 'get',
+		route: '/api/grading/ViewFinalGrade',
+		controller: GradingController,
+		action: 'viewFinalGrade',
+	},
+	{
+		method: 'get',
+		route: '/api/grading/viewMidtermGrade',
+		controller: GradingController,
+		action: 'viewMidtermGrade',
+	},
+	{
+		method: 'get',
+		route: '/api/changeTotalSeats/:classCRN',
+		controller: ClassController,
+		action: 'changeTotalSeats',
+	},
+	{
+		method: 'get',
+		route: '/api/changeOpenSeats/:classCRN',
+		controller: ClassController,
+		action: 'changeOpenSeats',
+	},
+	{
+		method: 'get',
+		route: '/api/changeClassSection/:classCRN',
+		controller: ClassController,
+		action: 'changeClassSection',
+	},{
+		method: 'get',
+		route: '/api/removeUser/:userID',
+		controller: UserController,
+		action: 'removeUser',
+	},
+
+
+
 
 ];

@@ -21,10 +21,16 @@ export class Grading extends BaseEntity {
 
     @Column({type: 'bool', nullable: false, default: false})
     @IsNotEmpty({message: 'Value is needed'})
+    canDropCourse: boolean;
+    
+    @Column({type: 'bool', nullable: false, default: false})
+    @IsNotEmpty({message: 'Value is needed'})
     canAddMidtermGrade: boolean;
 
     @Column({type: 'bool', nullable: false, default: false})
     @IsNotEmpty({message: 'Value is needed'})
     canAddFinalGrade: boolean;
+
+    
 
 }
