@@ -47,11 +47,7 @@ export default function EditMasterSchedule() {
 	}, []);
 
 	return (
-		// API IS HERE https://material-table.com/#/
-
 		<div>
-			{/* <pre>{JSON.stringify(data)}</pre> */}
-
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
@@ -73,16 +69,21 @@ export default function EditMasterSchedule() {
 						{ title: 'Class CRN', field: 'classCRN', editable: 'onAdd' },
 						{
 							title: 'Course Name',
+							editable: 'never',
 							field: 'courseID.courseName',
 							render: (rowData) => (
 								<Link to={`/courses/${rowData.courseID.courseID}`}>{rowData.courseID.courseName}</Link>
 							),
 						},
 
-						{ title: 'Department ID', field: 'courseID.deptID.deptID' },
+						{ title: 'Department ID', field: 'courseID.deptID.deptID', editable: 'never' },
+						{ title: 'Class Section', field: 'classSection' },
 						{ title: 'Faculty ID', field: 'fID.userID' },
-						{ title: 'Building ID', field: 'roomID.buildings.buildingID' },
+						{ title: 'Building ID', field: 'roomID.buildings.buildingID', editable: 'never' },
 						{ title: 'Room ID', field: 'roomID.roomID' },
+
+						{ title: 'Total Seats', field: 'totalSeats' },
+
 						{ title: 'Time Slot', field: 'slotID.slotID' },
 					]}
 					data={data}
@@ -110,17 +111,18 @@ export default function EditMasterSchedule() {
 									resolve();
 								}, 1000);
 							}),
-						onRowUpdate: (newData, oldData) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									const dataUpdate = [...data];
-									const index = oldData.tableData.id;
-									dataUpdate[index] = newData;
-									setData([...dataUpdate]);
+						onRowUpdate: async (newData, oldData) => {
+							const dataUpdate = [...data];
+							const index = oldData.tableData.id;
+							dataUpdate[index] = newData;
 
-									resolve();
-								}, 1000);
-							}),
+							await axios(`/api/changeteacher/${newData.classCRN}/${newData.fID.userID}`);
+							await axios(`/api/classes/${newData.classCRN}/${newData.slotID.slotID}`);
+							await axios(`/api/changeroom/${newData.classCRN}/${newData.roomID.roomID}`);
+							await setData([...dataUpdate]);
+							const result = await axios(`/api/classes/semester/${semester}`);
+							setData(result.data);
+						},
 						onRowDelete: (oldData) =>
 							new Promise((resolve, reject) => {
 								setTimeout(() => {
