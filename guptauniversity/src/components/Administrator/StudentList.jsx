@@ -17,7 +17,10 @@ export default function StudentList() {
 
 		fetchData();
 	}, []);
-
+	async function deleteUser(userID) {
+		console.log('userID', userID);
+		await axios(`/api/removeUser/${userID}`);
+	}
 	return (
 		// API IS HERE https://material-table.com/#/
 
@@ -60,7 +63,7 @@ export default function StudentList() {
 
 							dataDelete.splice(index, 1);
 							setData([...dataDelete]);
-							// await cancelClass(oldData.classCRN)
+							await deleteUser(oldData.userID);
 						},
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
 						onRowAdd: (newData) =>

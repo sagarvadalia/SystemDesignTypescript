@@ -10,11 +10,11 @@ import { FacultyFullTime } from '../../entity/Users/FacultyFullTime';
 import { Administrator } from '../../entity/Users/Administrator';
 import { Researcher } from '../../entity/Users/Researcher';
 import { Student } from '../../entity/Users/Student';
-import { Enrollment } from 'server/entity/JoinTables/Enrollment';
-import { Class } from 'server/entity/ClassRelated/Class';
-import { Faculty } from 'server/entity/Users/Faculty';
-import { UnderGraduate } from 'server/entity/Users/UnderGraduate';
-import { Graduate } from 'server/entity/Users/Graduate';
+import { Enrollment } from '../../entity/JoinTables/Enrollment';
+import { Class } from '../../entity/ClassRelated/Class';
+import { Faculty } from '../../entity/Users/Faculty';
+import { UnderGraduate } from '../../entity/Users/UnderGraduate';
+import { Graduate } from '../../entity/Users/Graduate';
 
 export class UserController {
 	private userRepository = getRepository(Users);
@@ -140,7 +140,7 @@ export class UserController {
 			if (student) {
 				if (student.studentType == "undergraduate") {
 					let undergraduate = await this.undergraduateRepository.findOne(request.params.sID);
-					
+
 					// finds undergrad partTime
 					if(undergraduate){
 					if (undergraduate.isFullTime == false) {
@@ -152,7 +152,7 @@ export class UserController {
 							for (let i = 0; i < enrollmentToRemove.length; i++) {
 
 								await this.enrollmentRepository.delete(enrollmentToRemove[i]);
-							
+
 							}
 						}
 						await this.undergraduatePartTime.delete(ugPT);
@@ -160,7 +160,7 @@ export class UserController {
 					await this.undergraduateRepository.delete(undergraduate);
 				}
 				await this.studentRepository.delete(student);
-				
+
 
 
 
@@ -189,9 +189,9 @@ export class UserController {
 				if(student){
 				if (student.studentType == "graduate") {
 					let graduate = await this.graduateRepository.findOne(request.params.sID);
-					
+
 					// finds grad parTime
-					if(graduate){	
+					if(graduate){
 						if (graduate.isFullTime == false) {
 							let gPT = await this.graduatePartTime.findOne(graduate);
 							if(gPT){
@@ -222,7 +222,7 @@ export class UserController {
 				}
 			}
 		}
-			
+
 	}
 	await this.userRepository.delete(user);
 	return {done: true, msg: "Student User has been removed"};
@@ -291,6 +291,6 @@ export class UserController {
 		return { done: false, msg: "No user with that ID" };
 	}
 }
-	
+
 
 }

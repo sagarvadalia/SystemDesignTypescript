@@ -7,7 +7,9 @@ import Button from '@material-ui/core/Button';
 export default function UserList() {
 	const [data, setData] = useState([{}]);
 	const [state, setState] = useContext(LoginContext);
-	async function deleteUser() {}
+	async function deleteUser(userID) {
+		await axios(`/api/removeUser/${userID}`);
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/users`);
@@ -52,6 +54,7 @@ export default function UserList() {
 
 							dataDelete.splice(index, 1);
 							setData([...dataDelete]);
+							await deleteUser(oldData.userID);
 							// await cancelClass(oldData.classCRN)
 						},
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
