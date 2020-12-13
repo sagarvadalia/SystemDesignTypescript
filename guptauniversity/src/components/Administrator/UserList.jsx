@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 export default function UserList() {
 	const [data, setData] = useState([{}]);
 	const [state, setState] = useContext(LoginContext);
-
+	async function deleteUser() {}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/users`);

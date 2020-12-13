@@ -75,7 +75,7 @@ export class ClassController {
                     		await this.enrollmentRepository.delete(enrollment[i]);
 						}
            		 }
-			
+
 				let bool = await this.classRepository.delete(classToRemove);
 				let testAccount = await nodemailer.createTestAccount();
 
@@ -89,7 +89,7 @@ export class ClassController {
 					},
 				});
 
-			
+
 
 				let info = await transporter.sendMail({
 					from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
@@ -119,7 +119,7 @@ export class ClassController {
 		console.log(oldClass);
 
 		try {
-			
+
 			if (newSlot && oldClass) {
 				let facEmail = oldClass.fID.userEmail;
 				let studentEmail = "";
@@ -144,8 +144,8 @@ export class ClassController {
 						pass: testAccount.pass, // generated ethereal password
 					},
 				});
-
-				let info = await transporter.sendMail({
+				if (studentEmail !== "") {
+						let info = await transporter.sendMail({
 					from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
 					to: studentEmail, // list of receivers
 					subject: "Class Time Changed", // Subject line
@@ -154,6 +154,8 @@ export class ClassController {
 				});
 
 				console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				}
+
 
 				return true;
 			}
@@ -172,8 +174,8 @@ export class ClassController {
 			if (thisClass) {
 				let facEmail = thisClass.fID.userEmail;
 				let studentEmail = "";
-				let enrollment = await this.enrollmentRepository.find({where: {classCRN: thisClass}});
-				for(let i = 0; i < enrollment.length; i++){
+				let enrollment = await this.enrollmentRepository.find({ where: { classCRN: thisClass } });
+				for (let i = 0; i < enrollment.length; i++) {
 					let stuEmail = enrollment[i].sID.userEmail;
 					studentEmail = `${stuEmail}`;
 				}
@@ -187,22 +189,25 @@ export class ClassController {
 					host: 'smtp.ethereal.email',
 					port: 587,
 					secure: false,
-					auth:{
+					auth: {
 						user: testAccount.user,
 						pass: testAccount.pass,
 					},
 
 				});
-
-				let info = await transporter.sendMail({
+				if (studentEmail !== '') {
+					let info = await transporter.sendMail({
 					from: '"Administration" <Administration@guptaUniversity.edu',
 					to: studentEmail,
 					subject: "New Teacher",
 					text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught by professor, " + newTeacher.userName,
 					//html: not used
-				});
+					});
+					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				}
 
-				console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+
 
 
 				return "Teacher of " + thisClass.classCRN + ' has been successfully changed to ' + newTeacher.userID;
@@ -242,17 +247,20 @@ export class ClassController {
                     },
 
 				});
-				
-				let info = await transporter.sendMail({
+				if (studentEmail !== "") {
+					let info = await transporter.sendMail({
                     from: '"Administration" <Administration@guptaUniversity.edu',
                     to: studentEmail,
                     subject: "Room Change",
                     text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
                     //html: not used
-				});
-				
+					});
+					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				}
 
-				console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+
+
 
 
 				return "Room of " + thisClass.classCRN + ' has been successfully changed to ' + newRoom.roomID;

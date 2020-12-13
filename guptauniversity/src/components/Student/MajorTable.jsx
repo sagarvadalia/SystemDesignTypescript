@@ -54,6 +54,15 @@ export default function MajorTable() {
 							field: 'dateDeclared',
 							render: (rowData) => <div>{new Date(rowData.dateDeclared).toDateString()}</div>,
 						},
+						{
+							title: 'View Degree Evaluation',
+							field: '',
+							render: (rowData) => (
+								<Link to={`/degreeAudit/${rowData.majorID.majorID}`}>
+									View Degree Audit for this major here
+								</Link>
+							),
+						},
 					]}
 					data={majors}
 					options={{
