@@ -17,7 +17,7 @@ export abstract class Users extends BaseEntity {
 	@PrimaryColumn({ type: 'integer' })
 	userID: number;
 
-	@Column({ type: 'text', nullable: false, width: 50, unique: true })
+	@Column({ type: 'text', nullable: false, width: 50 })
 	@IsNotEmpty({ message: 'Username is required' })
 	userName: string;
 
