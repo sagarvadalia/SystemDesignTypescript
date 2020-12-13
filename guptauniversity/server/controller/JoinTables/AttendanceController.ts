@@ -41,6 +41,8 @@ export class AttendanceController {
 
 	async viewAttendanceForClass(request: Request, response: Response, next: NextFunction) {
 		//given a classCRN we need to return a list of attendances
+
+		// We need to switch this to take in a date and return the attendances just for that day
 		let thisClass = await this.classRepository.findOne(request.params.id);
 		let allAttends: Array<Array<Attendance>> = []
 		try {
@@ -49,12 +51,14 @@ export class AttendanceController {
 				if (thisEnrolls) {
 					for (let i = 0; i < thisEnrolls.length; i++) {
 						let newAtt = await this.attendanceRepository.find({ where: { enrollmentID: thisEnrolls[i] } }) //Array of that student's attendances
+
 						if (newAtt) {
-							allAttends.push(newAtt);
+							thisEnrolls[i].attendances = newAtt
 						}
-						return { done: false, msg: request.params.id + ": No attendance found with that ClassCRN" }
+						// return { done: false, msg: request.params.id + ": No attendance found with that ClassCRN" }
 					}
-					return allAttends;
+
+					return { thisEnrolls };
 				}
 				return { done: false, msg: request.params.id + ": No enrollments found with that ClassCRN" }
 			}
@@ -65,11 +69,21 @@ export class AttendanceController {
 	}
 
 	async newAttendance(request: Request, response: Response, next: NextFunction) {
+		//ISSUES HERE: does not check if there is already an attendance on the same date
+		// checks if 2 dates are the same day
+		// const datesAreOnSameDay = (first, second) =>
+		// first.getFullYear() === second.getFullYear() &&
+		// 	first.getMonth() === second.getMonth() &&
+		// 	first.getDate() === second.getDate();
+
 		//Give me an enrollmentID and isPresent(bool). If no Date object is given, I assume today's date
 		//Changed from request.params to request.body so that a date object can be passed in but unable to test now.
-		let enroll = await this.enrollmentRepository.findOne(request.body.enrollID);
+		let enrollID: any = request.query.enrollID
+		let isPresent: any = request.query.isPresent
+
+		let enroll = await this.enrollmentRepository.findOne(enrollID);
 		const entityManager = getManager();
-		var wasPresent = (request.body.isPresent == 'true');
+		var wasPresent = (isPresent == 'true');
 
 		try {
 			if (enroll && request.body.date && wasPresent != null) {

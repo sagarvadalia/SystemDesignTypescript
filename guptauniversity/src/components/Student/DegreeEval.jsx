@@ -10,14 +10,14 @@ export default function DegreeEval() {
 
 	const [data, setData] = useState({
 		needed: [{ deptID: {} }],
-		inProg: [{ deptID: {} }],
-		complete: [{ deptID: {} }],
+		inProg: [{ classCRN: { courseID: { deptID: {} } } }],
+		complete: [{ classCRN: { courseID: { deptID: {} } } }],
 	});
 	let { majorID } = useParams();
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/degreeevel/${state.user.userID}/${majorID}`);
+			const result = await axios(`/api/degreeeval/${state.user.userID}/${majorID}`);
 			console.log(result.data);
 			setData(result.data);
 		};
@@ -47,11 +47,12 @@ export default function DegreeEval() {
 				<MaterialTable
 					title={<div>Classes In Progress for this major</div>}
 					columns={[
-						{ title: 'Course ID', field: 'courseID' },
-						{ title: 'Course Name', field: 'courseName' },
-						{ title: 'Course Desc', field: 'courseDesc' },
-						{ title: 'Credits', field: 'numOfCredits' },
-						{ title: 'Department', field: 'deptID.deptName' },
+						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
+						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+						{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
+						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
+						{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },
+						{ title: 'Final Grade', field: 'finalGrade' },
 					]}
 					data={data.inProg}
 					options={{
@@ -63,11 +64,12 @@ export default function DegreeEval() {
 				<MaterialTable
 					title={<div>Classes Finished for this major</div>}
 					columns={[
-						{ title: 'Course ID', field: 'courseID' },
-						{ title: 'Course Name', field: 'courseName' },
-						{ title: 'Course Desc', field: 'courseDesc' },
-						{ title: 'Credits', field: 'numOfCredits' },
-						{ title: 'Department', field: 'deptID.deptName' },
+						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
+						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+						{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
+						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
+						{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },
+						{ title: 'Final Grade', field: 'finalGrade' },
 					]}
 					data={data.complete}
 					options={{

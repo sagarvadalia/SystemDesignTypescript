@@ -1127,12 +1127,12 @@ export const Routes = [
 		route: '/api/grading/viewAddCourse',
 		controller: GradingController,
 		action: 'viewAddCourse',
-	},{
+	}, {
 		method: 'get',
 		route: '/api/grading/viewDropCourse',
 		controller: GradingController,
 		action: 'viewDropCourse',
-	},{
+	}, {
 		method: 'get',
 		route: '/api/grading/ViewFinalGrade',
 		controller: GradingController,
@@ -1161,13 +1161,24 @@ export const Routes = [
 		route: '/api/changeClassSection/:classCRN',
 		controller: ClassController,
 		action: 'changeClassSection',
-	},{
+	}, {
 		method: 'get',
 		route: '/api/removeUser/:userID',
 		controller: UserController,
 		action: 'removeUser',
 	},
-
+	{
+		method: 'get',
+		route: '/api/degreeeval/:sID/:majorID',
+		controller: MajorReqController,
+		action: 'degreeEvaluate',
+	},
+	{
+		method: 'get',
+		route: '/api/attendance/:id',
+		controller: AttendanceController,
+		action: 'viewAttendanceForClass',
+	},
 
 
 
