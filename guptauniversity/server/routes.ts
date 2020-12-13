@@ -1119,4 +1119,10 @@ export const Routes = [
 		controller: AttendanceController,
 		action: 'viewAttendanceForClass',
 	},
+	{
+		method: 'get',
+		route: '/api/degreeevel/:sID/:majorID',
+		controller: MajorReqController,
+		action: 'degreeEvaluate',
+	}
 ];

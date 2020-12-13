@@ -4,7 +4,7 @@ import { Attendance } from '../../entity/JoinTables/Attendance';
 import { validate, validateOrReject } from 'class-validator';
 import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { getManager } from "typeorm";
-import { Class } from 'server/entity/ClassRelated/Class';
+import { Class } from '../../entity/ClassRelated/Class';
 
 export class AttendanceController {
 	private attendanceRepository = getRepository(Attendance);
