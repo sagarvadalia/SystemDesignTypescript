@@ -15,6 +15,7 @@ import { Class } from '../../entity/ClassRelated/Class';
 import { Faculty } from '../../entity/Users/Faculty';
 import { UnderGraduate } from '../../entity/Users/UnderGraduate';
 import { Graduate } from '../../entity/Users/Graduate';
+import { Advisor } from '../../entity/JoinTables/Advisor';
 
 export class UserController {
 	private userRepository = getRepository(Users);
@@ -32,6 +33,7 @@ export class UserController {
 	private facultyRepository = getRepository(Faculty);
 	private undergraduateRepository = getRepository(UnderGraduate);
 	private graduateRepository = getRepository(Graduate);
+	private advisorRepository = getRepository(Advisor);
 
 	async login(request: Request, response: Response, next: NextFunction) {
 		let email = request.query.email
@@ -147,6 +149,11 @@ export class UserController {
 						let ugPT = await this.undergraduatePartTime.findOne(undergraduate);
 						if(ugPT){
 						let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugPT } });
+						let advisorToRemove = await this.advisorRepository.findOne(request.params.sID);
+
+						if(advisorToRemove){
+							await this.advisorRepository.delete(advisorToRemove);
+						}
 
 						if(enrollmentToRemove){
 							for (let i = 0; i < enrollmentToRemove.length; i++) {
@@ -169,7 +176,14 @@ export class UserController {
 						let ugFT = await this.undergraduateFullTime.findOne(undergraduate);
 						if(ugFT){
 							let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugFT } });
+							let advisorToRemove = await this.advisorRepository.findOne(request.params.sID);
+
+							if(advisorToRemove){
+								await this.advisorRepository.delete(advisorToRemove);
+							}
+
 							if(enrollmentToRemove){
+
 								for (let i = 0; i < enrollmentToRemove.length; i++) {
 
 									await this.enrollmentRepository.delete(enrollmentToRemove[i]);
@@ -196,6 +210,12 @@ export class UserController {
 							let gPT = await this.graduatePartTime.findOne(graduate);
 							if(gPT){
 							let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: gPT } });
+							let advisorToRemove = await this.advisorRepository.findOne(request.params.sID);
+
+							if(advisorToRemove){
+								await this.advisorRepository.delete(advisorToRemove);
+							}
+
 							for (let i = 0; i < enrollmentToRemove.length; i++){
 								await this.enrollmentRepository.delete(enrollmentToRemove[i]);
 							}
@@ -211,6 +231,12 @@ export class UserController {
 							let gFT = await this.graduateFullTime.findOne(graduate);
 							if(gFT){
 								let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: gFT} });
+								let advisorToRemove = await this.advisorRepository.findOne(request.params.sID);
+
+								if(advisorToRemove){
+									await this.advisorRepository.delete(advisorToRemove);
+								}
+
 								for (let i = 0; i < enrollmentToRemove.length; i++) {
 									await this.enrollmentRepository.delete(enrollmentToRemove[i]);
 								}
@@ -237,6 +263,14 @@ export class UserController {
 					let facPT = await this.facultyPartTime.findOne(faculty);
 					if(facPT){
 						let classToRemove = await this.classRepository.find({where: {fID: facPT}});
+						let advisorToRemove = await this.advisorRepository.find({where: {fID: facPT}});
+
+						if(advisorToRemove){
+							for(let i = 0; i <advisorToRemove.length; i++){
+								await this.advisorRepository.delete(advisorToRemove[i]);
+							}
+						}
+
 						for(let i = 0; i < classToRemove.length; i++){
 							await this.classRepository.delete(classToRemove[i]);
 						}
@@ -250,6 +284,14 @@ export class UserController {
 					let facFT = await this.facultyFullTime.findOne(faculty);
 					if(facFT){
 						let classToRemove = await this.classRepository.find({where: { fID: facFT}});
+						let advisorToRemove = await this.advisorRepository.find({where: {fID: facFT}});
+
+						if(advisorToRemove){
+							for(let i = 0; i < advisorToRemove.length; i++){
+								await this.advisorRepository.delete(advisorToRemove[i]);
+							}
+						}
+
 						for(let i = 0; i < classToRemove.length; i++){
 							await this.classRepository.delete(classToRemove[i]);
 						}

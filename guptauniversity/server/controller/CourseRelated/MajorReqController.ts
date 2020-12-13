@@ -5,7 +5,8 @@ import { validate, validateOrReject } from 'class-validator';
 import { Major } from '../../entity/ClassRelated/Major';
 import { Student } from '../..//entity/Users/Student';
 import { Enrollment } from '../..//entity/JoinTables/Enrollment';
-import { Course } from '../..//entity/ClassRelated/Course';
+import { Course } from '../../entity/ClassRelated/Course';
+import { Class } from '../../entity/ClassRelated/Class';
 
 export class MajorReqController {
     private majReqRepository = getRepository(MajorRequirement);
@@ -68,11 +69,12 @@ export class MajorReqController {
                     let majReq = await this.majReqRepository.find({ where: { majorID: major.majorID } })
                     if (majReq) {
                         let stuEnrolls = await this.enrollmentRepository.find({ where: { sID: student } })
-                        if (stuEnrolls) {
-                            let complete: Array<Course> = []
-                            let inProg: Array<Course> = []
-                            let needed: Array<Course> = []
+                        let needed: Array<Course> = []
+                        if (stuEnrolls.length != 0) {
+                            let complete: Array<Class> = []
+                            let inProg: Array<Class> = []
                             let iter = 0
+                            let pushMeBaby
                             for (let i = 0; i < majReq.length; i++) {
                                 for (let j = 0; j < stuEnrolls.length; j++) {
                                     if (majReq[i].courseID.courseID === stuEnrolls[j].classCRN.courseID.courseID) {
@@ -85,15 +87,16 @@ export class MajorReqController {
                                             //Must be a past semester
                                             iter = 2
                                         }
+                                        pushMeBaby = stuEnrolls[j].classCRN
                                     } else {
                                         //This majReq course does NOT have an enrollment
                                         iter = 3
                                     }
                                     if (iter === 1) {
-                                        inProg.push(majReq[i].courseID)
+                                        inProg.push(pushMeBaby)
                                         break
                                     } else if (iter === 2) {
-                                        complete.push(majReq[i].courseID)
+                                        complete.push(pushMeBaby)
                                         break
                                     }
                                 }
@@ -103,7 +106,10 @@ export class MajorReqController {
                             }
                             return { done: true, inProg, complete, needed }
                         }
-                        return { done: false, msg: student.userID + ": No enrollments found for that user" }
+                        for (let i = 0; i < majReq.length; i++) {
+                            needed.push(majReq[i].courseID)
+                        }
+                        return { done: true, needed: needed }
                     }
                     return { done: false, msg: "This should never happen. No majReqs found for that major" }
                 }
