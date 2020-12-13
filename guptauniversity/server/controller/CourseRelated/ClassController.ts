@@ -262,5 +262,49 @@ export class ClassController {
 		return "No room found with id " + request.params.newRoom
 	}
 
+	async changeTotalSeats(request: Request, response: Response, next: NextFunction){
+		// Give me a classCRN and new Number of seats
+		let thisClass = await this.classRepository.findOne(request.params.classCRN);
+		if(thisClass){
+			thisClass.totalSeats = parseInt(request.params.numSeats);
+			await this.classRepository.save(thisClass);
+		}
+		return {done: true, msg:"Invalid classCRN entered"};
+
+	}
+	async changeOpenSeats(request: Request, response: Response, next: NextFunction){
+		// Give me a classCRN and new Number of seats
+		let thisClass = await this.classRepository.findOne(request.params.classCRN);
+		if(thisClass){
+			thisClass.openSeats = parseInt(request.params.numSeats);
+			await this.classRepository.save(thisClass);
+		}
+		return{done:false, msg: "Invalid classCRN entered"};
+	}
+
+	async changeClassSection(request: Request, response: Response, next: NextFunction){
+		// Give me a classCRN and new Number of seats
+		let thisClass = await this.classRepository.findOne(request.params.classCRN);
+		if(thisClass){
+			let str = "";
+			if(parseInt(request.params.section) == 1){
+				str = "001";
+			}
+			else if(parseInt(request.params.section) == 2){
+				str = "002";
+			}
+			else if(parseInt(request.params.section) == 3){
+				str = "003";
+			}
+			else{
+				return{done: false, msg: "Invalid class section entered."};
+			}
+			thisClass.classSection = str;
+			await this.classRepository.save(thisClass);
+			return{done: true, msg: "Class section has been updated."};
+		}
+		return{done: false, msg: "Invalid classCRN entered."};
+	}
+
 
 }
