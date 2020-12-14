@@ -149,7 +149,7 @@ export class UserController {
 								let ugPT = await this.undergraduatePartTime.findOne(undergraduate);
 								if (ugPT) {
 									let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugPT } });
-									let advisorToRemove = await this.advisorRepository.find({ where: { sID: ugPT } });
+									let advisorToRemove = await this.advisorRepository.find({ where: { sID: student } });
 
 									if (advisorToRemove) {
 										for (let i = 0; i < advisorToRemove.length; i++) {
@@ -178,7 +178,7 @@ export class UserController {
 								let ugFT = await this.undergraduateFullTime.findOne(undergraduate);
 								if (ugFT) {
 									let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugFT } });
-									let advisorToRemove = await this.advisorRepository.find({ where: { sID: ugFT } });
+									let advisorToRemove = await this.advisorRepository.find({ where: { sID: student } });
 
 									if (advisorToRemove) {
 										for (let i = 0; i < advisorToRemove.length; i++) {
