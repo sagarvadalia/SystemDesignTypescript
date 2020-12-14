@@ -69,31 +69,37 @@ export class AttendanceController {
 	}
 
 	async newAttendance(request: Request, response: Response, next: NextFunction) {
-		//ISSUES HERE: does not check if there is already an attendance on the same date
-		// checks if 2 dates are the same day
-		// const datesAreOnSameDay = (first, second) =>
-		// first.getFullYear() === second.getFullYear() &&
-		// 	first.getMonth() === second.getMonth() &&
-		// 	first.getDate() === second.getDate();
-
-		//Give me an enrollmentID and isPresent(bool). If no Date object is given, I assume today's date
-		//Changed from request.params to request.body so that a date object can be passed in but unable to test now.
+		//Give me an enrollmentID and isPresent(bool)
 		let enrollID: any = request.query.enrollID
 		let isPresent: any = request.query.isPresent
+		let todaysDate = new Date()
 
 		let enroll = await this.enrollmentRepository.findOne(enrollID);
 		const entityManager = getManager();
 		var wasPresent = (isPresent == 'true');
+		const datesAreOnSameDay = (first, second) =>
+			first.getFullYear() === second.getFullYear() &&
+			first.getMonth() === second.getMonth() &&
+			first.getDate() === second.getDate();
 
 		try {
-			if (enroll && request.body.date && wasPresent != null) {
-				let newAtt = await entityManager.create(Attendance, { enrollmentID: enroll, isPresent: wasPresent, date: request.body.date });
-				await this.attendanceRepository.save(newAtt);
-			}
+			if (enroll) {
+				let pastAtt = await this.attendanceRepository.find({ where: { enrollID: enroll } })
+				if (pastAtt.length != 0) {
+					for (let i = 0; i < pastAtt.length; i++) {
+						let isEqual = datesAreOnSameDay(pastAtt[i].date, todaysDate)
+						if (isEqual) {
+							return { done: false, msg: enroll.sID + "An attendance for that student already exists for today" }
+						}
+					}
+				}
 
-			if (enroll && wasPresent != null) {
-				let newAtt = await entityManager.create(Attendance, { enrollmentID: enroll, isPresent: wasPresent, date: new Date() });
-				await this.attendanceRepository.save(newAtt);
+				if (wasPresent != null) {
+					let newAtt = await entityManager.create(Attendance, { enrollmentID: enroll, isPresent: wasPresent, date: todaysDate });
+					await this.attendanceRepository.save(newAtt);
+
+					return { done: true, msg: enroll.sID + ": Attendance has been saved for " + todaysDate }
+				}
 			}
 		} catch (error) {
 			console.error(error);
