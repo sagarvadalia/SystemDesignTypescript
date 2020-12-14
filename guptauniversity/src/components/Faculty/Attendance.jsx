@@ -3,14 +3,23 @@ import MaterialTable from 'material-table';
 import axios from 'axios';
 import { LoginContext } from '../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 
 export default function Attendance() {
-	const [data, setData] = useState([{ classCRN: { courseID: {} }, semesterID: {}, sID: {} }]);
+	const [data, setData] = useState([{ sID: {} }]);
 	const [state, setState] = useContext(LoginContext);
 	let { classCRN } = useParams();
+	const datesAreOnSameDay = (first, second) =>
+		first.getFullYear() === second.getFullYear() &&
+		first.getMonth() === second.getMonth() &&
+		first.getDate() === second.getDate();
+
+	async function markPresent(enrollID) {
+		let result = await axios(`/api/attendance`, { params: { enrollID, isPresent: true } });
+	}
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await axios(`/api/faculties/viewEnrollments/${classCRN}`);
+			const result = await axios(`/api/attendance/${classCRN}`);
 			console.log(result.data);
 			setData(result.data);
 		};
@@ -37,10 +46,19 @@ export default function Attendance() {
 								<Link to={`/studentDetails/${rowData.sID.userID}`}>{rowData.sID.userName}</Link>
 							),
 						},
-						{ title: 'Midterm Grade', field: 'midtermGrade' },
-						{ title: 'Final Grade', field: 'finalGrade' },
+						{
+							title: 'Is Present Today?',
+							field: '',
+							render: (rowData) => (
+								<div>
+									<Button onClick={() => markPresent(rowData.enrollmentID)}>Mark as Present</Button>}
+								</div>
+							),
+						},
+						// { title: 'Midterm Grade', field: 'midtermGrade' },
+						// { title: 'Final Grade', field: 'finalGrade' },
 					]}
-					data={data}
+					data={data.thisEnrolls}
 					options={{
 						sorting: true,
 					}}
