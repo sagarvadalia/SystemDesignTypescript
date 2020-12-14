@@ -1161,7 +1161,8 @@ export const Routes = [
 		route: '/api/changeClassSection/:classCRN',
 		controller: ClassController,
 		action: 'changeClassSection',
-	}, {
+  },
+  {
 		method: 'get',
 		route: '/api/removeUser/:userID',
 		controller: UserController,
@@ -1169,6 +1170,11 @@ export const Routes = [
 	},
 	{
 		method: 'get',
+		route: '/api/addClassToMasterSchedule/:classCRN/:section/:fID/:roomID/:totalSeats/:openSeats/:slotID/:courseID/:semesterID',
+		controller: ClassController,
+		action: 'addClassToMasterSchedule',
+	},
+  {
 		route: '/api/degreeeval/:sID/:majorID',
 		controller: MajorReqController,
 		action: 'degreeEvaluate',
@@ -1179,6 +1185,7 @@ export const Routes = [
 		controller: AttendanceController,
 		action: 'viewAttendanceForClass',
 	},
+
 
 
 
