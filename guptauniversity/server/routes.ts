@@ -1161,12 +1161,20 @@ export const Routes = [
 		route: '/api/changeClassSection/:classCRN',
 		controller: ClassController,
 		action: 'changeClassSection',
-	},{
+	},
+	{
 		method: 'get',
 		route: '/api/removeUser/:userID',
 		controller: UserController,
 		action: 'removeUser',
 	},
+	{
+		method: 'get',
+		route: '/api/addClassToMasterSchedule/:classCRN/:section/:fID/:roomID/:totalSeats/:openSeats/:slotID/:courseID/:semesterID',
+		controller: ClassController,
+		action: 'addClassToMasterSchedule',
+	},
+
 
 
 

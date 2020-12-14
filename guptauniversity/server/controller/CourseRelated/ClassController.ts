@@ -6,13 +6,21 @@ import { TimeSlot } from '../../entity/TimeRelated/TimeSlot';
 import { Faculty } from '../../entity/Users/Faculty';
 import { Lecture } from '../../entity/Locations/Lecture';
 import { Enrollment } from '../../entity/JoinTables/Enrollment';
+import { Room } from '../../entity/Locations/Room';
+import { Course } from '../../entity/ClassRelated/Course';
+import { Semester } from '../../entity/TimeRelated/Semester';
 const nodemailer = require('nodemailer');
+
+
 export class ClassController {
 	private classRepository = getRepository(Class);
 	private timeslotRepository = getRepository(TimeSlot);
 	private facRepository = getRepository(Faculty);
 	private lectureRepository = getRepository(Lecture);
 	private enrollmentRepository = getRepository(Enrollment);
+	private roomRepository = getRepository(Room);
+	private courseRepository = getRepository(Course);
+	private semesterRepitory = getRepository(Semester);
 
 	async inSemester(request: Request, response: Response, next: NextFunction) {
 		try {
@@ -314,9 +322,89 @@ export class ClassController {
 		return{done: false, msg: "Invalid classCRN entered."};
 	}
 
-	// async addClassToMasterSchedule(request: Request, response: Response, next: NextFunction){
-	// 	// Give me a CRN, a Section, a Faculty ID, RoomID, totalSeats, and Timeslot and I will create a new class
-	// 	let CRN = ""
-	// }
+
+	async addClassToMasterSchedule(request: Request, response: Response, next: NextFunction){
+		// Give me a CRN, a Section, a Faculty ID, RoomID, totalSeats, and Timeslot and I will create a new class
+		let classCRN = await this.classRepository.findOne(request.params.classCRN);
+		let newClass: Class = new Class;
+		let faculty = await this.facRepository.findOne(request.params.fID);
+		let room = await this.lectureRepository.findOne(request.params.roomID);
+		let timeSlot = await this.timeslotRepository.findOne(request.params.slotID);
+		let course = await this.courseRepository.findOne(request.params.courseID);
+		let semester = await this.semesterRepitory.findOne(request.params.semesterID);
+
+		if(classCRN){
+			return {done: false, msg: "A class with this CRN already exists."};
+		}
+			// creates new classCRN
+			newClass.classCRN = parseInt(request.params.classCRN); 
+
+			// console.log(newClass);
+			// checks if classSection exists
+			let str = "";
+			if(parseInt(request.params.section) == 1){
+				str = "001";
+			}
+			else if(parseInt(request.params.section) == 2){
+				str = "002";
+			}
+			else if(parseInt(request.params.section) == 3){
+				str = "003";
+			}
+			else{
+				return {done: false, msg: "Invalid class section entered."};
+			}
+			
+			// sets classSection 
+			newClass.classSection = str;
+			
+			// sets facID
+			if(faculty){
+				newClass.fID = faculty;
+			}
+			else{
+				return {done: false, msg: "FacultyID entered does not exist"};
+			}
+
+			//sets roomID
+			if(room){
+				newClass.roomID = room;
+			}
+			else{
+				return {done: false, msg: "RoomID entered does not exist"};
+			}
+
+			//sets num of totalSeats and openSeats
+			newClass.totalSeats = (parseInt(request.params.totalSeats));
+			newClass.openSeats = (parseInt(request.params.openSeats));
+
+			// sets slotID
+			if(timeSlot){
+				newClass.slotID = timeSlot;
+			}
+			else{
+				return {done: false, msg: "TimeSlot entered does not exist"};
+			}
+			
+			// sets courseID
+			if(course){
+				newClass.courseID = course;
+			}
+			else{
+				return {done: false, msg: "CourseID entered does not exist"};
+			}
+
+			// sets semesterID
+			if(semester){
+				newClass.semesterID = semester;
+			}
+			else{
+				return {done: false, msg: "SemesterID entered does not exist"};
+			}
+
+			// creates the new class in the master schedule
+			await this.classRepository.save(newClass);
+			return {done: true, msg: "Class " + newClass.classCRN + " has been added to the master schedule "};
+	}
 
 }

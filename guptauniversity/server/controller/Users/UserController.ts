@@ -16,6 +16,12 @@ import { Faculty } from '../../entity/Users/Faculty';
 import { UnderGraduate } from '../../entity/Users/UnderGraduate';
 import { Graduate } from '../../entity/Users/Graduate';
 import { Advisor } from '../../entity/JoinTables/Advisor';
+import { StudentMinor } from '../../entity/JoinTables/StudentMinor';
+import { StudentMajor } from '../../entity/JoinTables/StudentMajor';
+import { FacultyDepartment } from '../../entity/JoinTables/FacultyDepartment';
+import { StudentHold } from '../../entity/JoinTables/StudentHold';
+import { Department } from '../../entity/Locations/Department';
+import { Course } from '../../entity/ClassRelated/Course';
 
 export class UserController {
 	private userRepository = getRepository(Users);
@@ -34,6 +40,12 @@ export class UserController {
 	private undergraduateRepository = getRepository(UnderGraduate);
 	private graduateRepository = getRepository(Graduate);
 	private advisorRepository = getRepository(Advisor);
+	private studentMinorRepository = getRepository(StudentMinor);
+	private studentMajorRepository = getRepository(StudentMajor);
+	private facultyDeptRepo = getRepository(FacultyDepartment);
+	private studentHoldRepo = getRepository(StudentHold);
+	private departmentRepository = getRepository(Department);
+	private courseRepository = getRepository(Course);
 
 	async login(request: Request, response: Response, next: NextFunction) {
 		let email = request.query.email
@@ -146,10 +158,29 @@ export class UserController {
 					// finds undergrad partTime
 					if(undergraduate){
 					if (undergraduate.isFullTime == false) {
-						let ugPT = await this.undergraduatePartTime.findOne(undergraduate);
+						let ugPT = await this.undergraduatePartTime.findOne(request.params.sID);
 						if(ugPT){
 						let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugPT } });
 						let advisorToRemove = await this.advisorRepository.find({where: {sID: student}});
+						let studentMinorToRemove = await this.studentMinorRepository.find({where: {sID: student}});
+						let studentMajorToRemove = await this.studentMajorRepository.find({where: {sID: student}});
+						let studetHoldToRemove = await this.studentHoldRepo.findOne({where: {sID: student}});
+
+						if(studetHoldToRemove){
+							await this.studentHoldRepo.delete(studetHoldToRemove);
+						}
+
+						if(studentMinorToRemove){
+							for(let i = 0; i < studentMinorToRemove.length; i++){
+								await this.studentMinorRepository.delete(studentMinorToRemove[i]);
+							}
+						}
+
+						if(studentMajorToRemove){
+							for(let i = 0; i < studentMajorToRemove.length; i++){
+								await this.studentMajorRepository.delete(studentMajorToRemove[i]);
+							}
+						}
 
 						if(advisorToRemove){
 							for(let i = 0; i < advisorToRemove.length; i++){
@@ -175,10 +206,29 @@ export class UserController {
 
 					//finds undergrad fullTime
 					if (undergraduate.isFullTime == true) {
-						let ugFT = await this.undergraduateFullTime.findOne(undergraduate);
+						let ugFT = await this.undergraduateFullTime.findOne(request.params.sID);
 						if(ugFT){
 							let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: ugFT } });
 							let advisorToRemove = await this.advisorRepository.find({where: {sID: student}});
+							let studentMinorToRemove = await this.studentMinorRepository.find({where: {sID: student}});
+							let StudentMajorToRemove = await this.studentMajorRepository.find({where: {sID: student}});
+							let StudentHoldToRemove = await this.studentHoldRepo.findOne({where:{ sID: student}});
+
+							if(StudentHoldToRemove){
+								await this.studentHoldRepo.delete(StudentHoldToRemove);
+							}
+
+							if(studentMinorToRemove){
+								for(let i = 0; i <studentMinorToRemove.length; i++){
+									await this.studentMinorRepository.delete(studentMinorToRemove[i]);
+								}
+							}
+
+							if(StudentMajorToRemove){
+								for(let i = 0; i < StudentMajorToRemove.length; i++){
+									await this.studentMajorRepository.delete(StudentMajorToRemove[i]);
+								}
+							}
 
 							if(advisorToRemove){
 								for(let i = 0; i < advisorToRemove.length; i++){
@@ -211,10 +261,29 @@ export class UserController {
 					// finds grad parTime
 					if(graduate){
 						if (graduate.isFullTime == false) {
-							let gPT = await this.graduatePartTime.findOne(graduate);
+							let gPT = await this.graduatePartTime.findOne(request.params.sID);
 							if(gPT){
 							let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: gPT } });
 							let advisorToRemove = await this.advisorRepository.findOne({ where: { sID: student }});
+							let studentMinorToRemove = await this.studentMinorRepository.find({where: {sID: student}});
+							let studentMajorToRemove = await this.studentMajorRepository.find({where: {sID: student}});
+							let studentHoldToRemove = await this.studentHoldRepo.findOne({where: {sID: student}});
+							
+							if(studentHoldToRemove){
+								await this.studentHoldRepo.delete(studentHoldToRemove);
+							}
+
+							if(studentMinorToRemove){
+								for(let i = 0; i < studentMinorToRemove.length; i++){
+									await this.studentMinorRepository.delete(studentMinorToRemove[i]);
+								}
+							}
+
+							if(studentMajorToRemove){
+								for(let i = 0; i < studentMajorToRemove.length; i++){
+									await this.studentMajorRepository.delete(studentMajorToRemove[i]);
+								}
+							}
 
 							if(advisorToRemove){
 								await this.advisorRepository.delete(advisorToRemove);
@@ -226,7 +295,7 @@ export class UserController {
 							await this.graduatePartTime.delete(gPT);
 						}
 						await this.graduateRepository.delete(graduate);
-						}
+					}
 
 
 						// finds grad fullTime
@@ -237,7 +306,26 @@ export class UserController {
 								console.log('never here');
 								let enrollmentToRemove = await this.enrollmentRepository.find({ where: { sID: gFT} });
 								let advisorToRemove = await this.advisorRepository.findOne({where: {sID: student}});
-								console.log(advisorToRemove);
+								let studentMinorToRemove = await this.studentMinorRepository.find({where: {sID: student}});
+								let studentMajorToRemove = await this.studentMajorRepository.find({where: {sID: student}});
+								let studentHoldToRemove = await this.studentHoldRepo.findOne({where: { sID: student}});
+
+								if(studentHoldToRemove){
+									await this.studentHoldRepo.delete(studentHoldToRemove);
+								}
+								
+								if(studentMinorToRemove){
+									for(let i = 0; i < studentMinorToRemove.length; i++){
+										await this.studentMinorRepository.delete(studentMinorToRemove[i]);
+									}
+								}
+
+								if(studentMajorToRemove){
+									for(let i = 0; i < studentMajorToRemove.length; i++){
+										await this.studentMajorRepository.delete(studentMajorToRemove[i]);
+									}
+								}
+								// console.log(advisorToRemove);
 								if(advisorToRemove){
 									await this.advisorRepository.delete(advisorToRemove);
 								}
@@ -260,54 +348,96 @@ export class UserController {
 }
 
 
-		// finds users of type faculty
-		if( user.userType == "Faculty"){
-			let faculty = await this.facultyRepository.findOne(request.params.fID);
-			if(faculty){
-				if(faculty.isFullTime == false){
-					let facPT = await this.facultyPartTime.findOne(faculty);
-					if(facPT){
-						let classToRemove = await this.classRepository.find({where: {fID: facPT}});
-						let advisorToRemove = await this.advisorRepository.find({where: {fID: faculty}});
+		// // finds users of type faculty
+		// if( user.userType == "Faculty"){
+		// 	let faculty = await this.facultyRepository.findOne(request.params.fID);
+		// 	if(faculty){
+		// 		if(faculty.isFullTime == false){
+		// 			let facPT = await this.facultyPartTime.findOne(request.params.fID);
+		// 			if(facPT){
+		// 				let classToRemove = await this.classRepository.find({where: {fID: faculty}});
+		// 				let advisorToRemove = await this.advisorRepository.find({where: {fID: faculty}});
+		// 				let facultyDep = await this.facultyDeptRepo.find({where: { fID: faculty}});
+		// 				// let deptToRemove = await this.departmentRepository.find({where: {deptHeadID: faculty}});
+		// 				// let courseToRemove = await this.courseRepository.find({where: {deptID: deptToRemove}});
 
-						if(advisorToRemove){
-							for(let i = 0; i <advisorToRemove.length; i++){
-								await this.advisorRepository.delete(advisorToRemove[i]);
-							}
-						}
+		// 				// if(courseToRemove){
+		// 				// 	for(let i = 0; i < courseToRemove.length; i++){
+		// 				// 		await this.courseRepository.delete(courseToRemove[i]);
+		// 				// 	}
+		// 				// }
 
-						for(let i = 0; i < classToRemove.length; i++){
-							await this.classRepository.delete(classToRemove[i]);
-						}
-						await this.facultyPartTime.delete(facPT);
-					}
-				}
+		// 				if(facultyDep){
+		// 					for(let i = 0; i < facultyDep.length; i++){
+		// 						await this.facultyDeptRepo.delete(facultyDep[i]);
+		// 					}
+		// 				}
 
-				await this.facultyRepository.delete(faculty);
+		// 				// if(deptToRemove){
+		// 				// 	for(let i = 0; i < deptToRemove.length; i++){
+		// 				// 		await this.departmentRepository.delete(deptToRemove[i]);
+		// 				// 	}
+		// 				// }
 
-				if(faculty.isFullTime == true){
-					let facFT = await this.facultyFullTime.findOne(faculty);
-					if(facFT){
-						let classToRemove = await this.classRepository.find({where: { fID: facFT}});
-						let advisorToRemove = await this.advisorRepository.find({where: {fID: faculty}});
+		// 				if(advisorToRemove){
+		// 					for(let i = 0; i <advisorToRemove.length; i++){
+		// 						await this.advisorRepository.delete(advisorToRemove[i]);
+		// 					}
+		// 				}
 
-						if(advisorToRemove){
-							for(let i = 0; i < advisorToRemove.length; i++){
-								await this.advisorRepository.delete(advisorToRemove[i]);
-							}
-						}
+		// 				for(let i = 0; i < classToRemove.length; i++){
+		// 					await this.classRepository.delete(classToRemove[i]);
+		// 				}
+		// 				await this.facultyPartTime.delete(facPT);
+		// 			}
+		// 		}
 
-						for(let i = 0; i < classToRemove.length; i++){
-							await this.classRepository.delete(classToRemove[i]);
-						}
-						await this.facultyFullTime.delete(facFT);
-					}
-				}
-				await this.facultyRepository.delete(faculty);
-			}
-			await this.userRepository.delete(user);
-			return {done: true, msg: "Faculty User has been removed"};
-		}
+				// await this.facultyRepository.delete(faculty);
+
+		// 		if(faculty.isFullTime == true){
+		// 			let facFT = await this.facultyFullTime.findOne(request.params.fID);
+		// 			if(facFT){
+		// 				let classToRemove = await this.classRepository.find({where: { fID: faculty}});
+		// 				let advisorToRemove = await this.advisorRepository.find({where: {fID: faculty}});
+		// 				let facultyDep = await this.facultyDeptRepo.find({where: {fID: faculty}});
+		// 				// let deptToRemove = await this.departmentRepository.find({where: {deptHeadID: faculty}});
+		// 				// let courseToRemove = await this.courseRepository.find({where: {deptID: deptToRemove}});
+
+		// 				// if(courseToRemove){
+		// 				// 	for(let i = 0; i < courseToRemove.length; i++){
+		// 				// 		await this.courseRepository.delete(courseToRemove[i]);
+		// 				// 	}
+		// 				// }
+
+		// 				if(facultyDep){
+		// 					for(let i = 0; i < facultyDep.length; i++){
+		// 						await this.facultyDeptRepo.delete(facultyDep[i]);
+		// 					}
+		// 				}
+
+		// 				// if(deptToRemove){
+		// 				// 	for(let i = 0; i < deptToRemove.length; i++){
+		// 				// 		await this.departmentRepository.delete(deptToRemove[i]);
+		// 				// 	}
+		// 				// }
+
+		// 				if(advisorToRemove){
+		// 					for(let i = 0; i < advisorToRemove.length; i++){
+		// 						await this.advisorRepository.delete(advisorToRemove[i]);
+		// 					}
+		// 				}
+
+		// 				for(let i = 0; i < classToRemove.length; i++){
+		// 					await this.classRepository.delete(classToRemove[i]);
+		// 				}
+		// 				await this.facultyFullTime.delete(facFT);
+		// 			}
+		// 		}
+		// 		await this.facultyRepository.delete(faculty);
+		// 	}
+		// 	await this.userRepository.delete(user);
+		// 	return {done: true, msg: "Faculty User has been removed"};
+		// }
 
 		// find users of type admin
 		if (user.userType == "Administrator") {
