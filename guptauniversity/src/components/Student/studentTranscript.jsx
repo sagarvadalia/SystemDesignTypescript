@@ -21,7 +21,7 @@ export default function StudentTranscript() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title="Transcript"
 					columns={[
 						{ title: 'Class Number', field: 'classNumber' },
 						{ title: 'Semester Season', field: 'semester.semesterName' },

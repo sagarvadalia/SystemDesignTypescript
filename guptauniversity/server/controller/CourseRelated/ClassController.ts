@@ -322,7 +322,7 @@ export class ClassController {
 	async addClassToMasterSchedule(request: Request, response: Response, next: NextFunction){
 		// Give me a CRN, a Section, a Faculty ID, RoomID, totalSeats, and Timeslot and I will create a new class
 		let classCRN = await this.classRepository.findOne(request.params.classCRN);
-		let newClass: Class = new Class;
+		let newClass: Class = new Class();
 		let faculty = await this.facRepository.findOne(request.params.fID);
 		let room = await this.lectureRepository.findOne(request.params.roomID);
 		let timeSlot = await this.timeslotRepository.findOne(request.params.slotID);

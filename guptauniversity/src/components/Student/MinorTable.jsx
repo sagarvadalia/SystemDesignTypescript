@@ -40,7 +40,7 @@ export default function MinorTable() {
 					}
 					columns={[
 						{
-							title: 'minor Name',
+							title: 'Minor Name',
 							field: 'minorID.minorName',
 							render: (rowData) => (
 								<Link to={`/minorRequirements/${rowData.minorID.minorID}`}>

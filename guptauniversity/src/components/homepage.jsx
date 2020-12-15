@@ -10,6 +10,7 @@ import Holds from './Student/holds';
 import MinorTable from './Student/MinorTable';
 import FacultyAdvisees from './Faculty/FacultyAdvisees';
 import FacultyClassHistory from './Faculty/FacultyClassHistory';
+import HomepageSchedule from './Faculty/HomepageSchedule';
 export default function Homepage() {
 	const [state, setState] = useContext(LoginContext);
 	return (
@@ -25,6 +26,7 @@ export default function Homepage() {
 			{state?.user?.userType === 'Faculty' && (
 				<div>
 					<FacultyAdvisees></FacultyAdvisees>
+					<HomepageSchedule></HomepageSchedule>
 					<FacultyClassHistory></FacultyClassHistory>
 				</div>
 			)}

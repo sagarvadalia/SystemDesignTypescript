@@ -1,5 +1,12 @@
 ## Use-Cases
 ## TODO: handle multiple password attempts and forgotten passwords
+## TODO:
+Administrators want to create, change, and update accounts for all users.
+## TODO: use admin buttons
+## TODO: Attendance
+
+## TODO:
+Researcher wants to view anonymous data about the college.
 ## DONE
 User wants to view the homepage
 
@@ -655,7 +662,7 @@ System displays email form for administrator to fill out
 Exit condition
 
 Administrator clicks send email
-## TODO:
+## DONE
 
 Administrators want to add/edit the holds on a student’s account.
 

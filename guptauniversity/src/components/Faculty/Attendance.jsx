@@ -35,7 +35,7 @@ export default function Attendance() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Class Details"
+					title="Attendance"
 					columns={[
 						{ title: 'Student ID', field: 'sID.userID', editable: 'never' },
 						{

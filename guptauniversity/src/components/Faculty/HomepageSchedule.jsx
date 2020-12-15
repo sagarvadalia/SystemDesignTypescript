@@ -4,7 +4,7 @@ import axios from 'axios';
 import { LoginContext } from './../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@material-ui/core';
-export default function FacultySchedule() {
+export default function HomepageSchedule() {
 	const [state, setState] = useContext(LoginContext);
 	const [data, setData] = useState([{ courseID: {}, semesterID: {} }]);
 	async function dataFetch(value) {
@@ -13,7 +13,7 @@ export default function FacultySchedule() {
 		setData(result.data);
 		console.log(data);
 	}
-	let { semester } = useParams();
+	let semester = 15;
 	semester = parseInt(semester);
 	let semesterVal = {
 		1: { semester: `Fall 2013` },

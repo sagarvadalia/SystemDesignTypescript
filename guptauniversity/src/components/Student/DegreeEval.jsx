@@ -7,7 +7,7 @@ import { Button } from '@material-ui/core';
 
 export default function DegreeEval() {
 	const [state, setState] = useContext(LoginContext);
-
+	const [major, setMajor] = useState({ majorName: '' });
 	const [data, setData] = useState({
 		needed: [{ deptID: {} }],
 		inProg: [{ classCRN: { courseID: { deptID: {} } } }],
@@ -20,6 +20,9 @@ export default function DegreeEval() {
 			const result = await axios(`/api/degreeeval/${state.user.userID}/${majorID}`);
 			console.log(result.data);
 			setData(result.data);
+			const major = await axios(`/api/majors/${majorID}`);
+			console.log(major);
+			setMajor(major.data);
 		};
 
 		fetchData();
@@ -29,7 +32,7 @@ export default function DegreeEval() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>Classes Yet to be started for this major</div>}
+					title={<div>Classes Yet to be started for {major.majorName}</div>}
 					columns={[
 						{ title: 'Course ID', field: 'courseID' },
 						{ title: 'Course Name', field: 'courseName' },
@@ -45,7 +48,7 @@ export default function DegreeEval() {
 					}}
 				/>
 				<MaterialTable
-					title={<div>Classes In Progress for this major</div>}
+					title={<div>Classes In Progress for {major.majorName}</div>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
 						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
@@ -62,7 +65,7 @@ export default function DegreeEval() {
 					}}
 				/>
 				<MaterialTable
-					title={<div>Classes Finished for this major</div>}
+					title={<div>Classes Finished for {major.majorName}</div>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
 						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },

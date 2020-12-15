@@ -1122,6 +1122,12 @@ export const Routes = [
 	},
 	{
 		method: 'get',
+		route: '/api/allGrading',
+		controller: GradingController,
+		action: 'viewAllGrade',
+	},
+	{
+		method: 'get',
 		route: '/api/changeTotalSeats/:classCRN',
 		controller: ClassController,
 		action: 'changeTotalSeats',
@@ -1162,13 +1168,13 @@ export const Routes = [
 		controller: AttendanceController,
 		action: 'viewAttendanceForClass',
 	},
-	{
-		method: 'get',
-		route: '/api/createUser/:userID/:userPhone/:userName/:userPassword/:userAddress/:userEmail/:userType',
-		controller: UserController,
-		action: 'createUser',
-	},
 
+	{
+		method: 'post',
+		route: '/api/updateUser/:userID/:userName/:userPhone/:userEmail',
+		controller: UserController,
+		action: 'updateInfo'
+	}
 
 
 ];
