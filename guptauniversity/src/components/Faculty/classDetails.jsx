@@ -7,6 +7,7 @@ import { Link, useParams } from 'react-router-dom';
 export default function ClassDetails() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, semesterID: {}, sID: {} }]);
 	const [state, setState] = useContext(LoginContext);
+	const [classVal, setClass] = useState({ courseID: { courseName: '' } });
 	let { classCRN } = useParams();
 	async function dropClass(enrollID) {
 		let val = await axios(`/api/drop/${enrollID}`);
@@ -30,6 +31,9 @@ export default function ClassDetails() {
 			const result = await axios(`/api/faculties/viewEnrollments/${classCRN}`);
 			console.log(result.data);
 			setData(result.data);
+			const val = await axios(`/api/classes/${classCRN}`);
+			setClass(val.data);
+			console.log(val.data);
 		};
 
 		fetchData();
@@ -43,7 +47,7 @@ export default function ClassDetails() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Class Details"
+					title={<div>Class Details for {classVal.courseID.courseName}</div>}
 					columns={[
 						{ title: 'Student ID', field: 'sID.userID', editable: 'onAdd' },
 						{

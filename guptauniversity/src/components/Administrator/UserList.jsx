@@ -10,6 +10,15 @@ export default function UserList() {
 	async function deleteUser(userID) {
 		await axios(`/api/removeUser/${userID}`);
 	}
+	async function editUser(newData, oldData) {
+		await axios.post(
+			`/api/updateUser/${oldData.userID}/${newData.userName}/${newData.userPhone}/${newData.userEmail}`,
+		);
+		const result = await axios(`/api/users`);
+		console.log(oldData);
+		console.log(newData);
+		setData(result.data);
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/users`);
@@ -27,7 +36,7 @@ export default function UserList() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title="User List"
 					columns={[
 						{ title: 'ID', field: 'userID', editable: 'onAdd' },
 						{
@@ -36,7 +45,7 @@ export default function UserList() {
 						},
 						{ title: 'Email Address', field: 'userEmail' },
 						{ title: 'Phone Number', field: 'userPhone' },
-						{ title: 'Status', field: 'userType' },
+						{ title: 'Status', field: 'userType', editable: 'onAdd' },
 
 						// { title: 'Department', field: 'grade' },
 					]}
@@ -67,17 +76,13 @@ export default function UserList() {
 									resolve();
 								}, 1000);
 							}),
-						onRowUpdate: (newData, oldData) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									const dataUpdate = [...data];
-									const index = oldData.tableData.id;
-									dataUpdate[index] = newData;
-									setData([...dataUpdate]);
-
-									resolve();
-								}, 1000);
-							}),
+						onRowUpdate: async (newData, oldData) => {
+							const dataUpdate = [...data];
+							const index = oldData.tableData.id;
+							dataUpdate[index] = newData;
+							editUser(newData, oldData);
+							setData([...dataUpdate]);
+						},
 					}}
 				/>
 			</div>

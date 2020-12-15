@@ -25,7 +25,7 @@ export class GradingController {
 	}
 
 	async remove(request: Request, response: Response, next: NextFunction) {
-		const gradingToRemove: Grading| undefined = await this.gradeRepository.findOne(request.params.id);
+		const gradingToRemove: Grading | undefined = await this.gradeRepository.findOne(request.params.id);
 		try {
 			if (gradingToRemove) {
 				await this.gradeRepository.remove(gradingToRemove);
@@ -33,92 +33,106 @@ export class GradingController {
 		} catch (error) {
 			console.error(error);
 		}
-    }
+	}
 
-    async canAddCourse(request: Request, response: Response, next: NextFunction) {
-		let grading =  await this.gradeRepository.findOne(1);
+	async canAddCourse(request: Request, response: Response, next: NextFunction) {
+		let grading = await this.gradeRepository.findOne(1);
 		try {
-			if(grading){
-                grading.canAddCourse = !grading.canAddCourse;
-            }
+			if (grading) {
+				grading.canAddCourse = !grading.canAddCourse;
+				await this.gradeRepository.save(grading);
+				return true
+			}
 		} catch (error) {
 			console.error(error);
 		}
+		return false
 	}
-	
+
 	async canDropCourse(request: Request, response: Response, next: NextFunction) {
 		let grading = await this.gradeRepository.findOne(1);
-		try{
-			if(grading){
+		try {
+			if (grading) {
 				grading.canDropCourse = !grading.canDropCourse;
+				await this.gradeRepository.save(grading);
+				return true
 			}
-		}catch(error){
+		} catch (error) {
 			console.log(error);
 		}
-
+		return false
 	}
 
-    async canAddMidtermGrade(request: Request, response: Response, next: NextFunction) {
-		let grading =  await this.gradeRepository.findOne(1);
+	async canAddMidtermGrade(request: Request, response: Response, next: NextFunction) {
+		let grading = await this.gradeRepository.findOne(1);
 		try {
-			if(grading){
-                grading.canAddMidtermGrade = !grading.canAddMidtermGrade;
-            }
+			if (grading) {
+				grading.canAddMidtermGrade = !grading.canAddMidtermGrade;
+				await this.gradeRepository.save(grading);
+				return true
+			}
 		} catch (error) {
 			console.error(error);
 		}
-    }
-    async canAddFinalGrade(request: Request, response: Response, next: NextFunction) {
-		let grading =  await this.gradeRepository.findOne(1);
+		return false
+	}
+	async canAddFinalGrade(request: Request, response: Response, next: NextFunction) {
+		let grading = await this.gradeRepository.findOne(1);
 		try {
-			if(grading){
-                grading.canAddFinalGrade = !grading.canAddFinalGrade;
-            }
+			if (grading) {
+				grading.canAddFinalGrade = !grading.canAddFinalGrade;
+				await this.gradeRepository.save(grading);
+				return true
+			}
 		} catch (error) {
 			console.error(error);
 		}
+		return false
 	}
-	
+	async viewAllGrade(request: Request, response: Response, next: NextFunction) {
+		let grading = await this.gradeRepository.findOne(1);
+		return grading
+	}
 	// viewing the data
 	async viewFinalGrade(request: Request, response: Response, next: NextFunction) {
-		let grading =  await this.gradeRepository.findOne(1);
+		let grading = await this.gradeRepository.findOne(1);
 		try {
-			if(grading){
-                return grading.canAddFinalGrade;
-            }
+			if (grading) {
+				return grading.canAddFinalGrade;
+			}
 		} catch (error) {
 			console.error(error);
 		}
 	}
-	
+
 	async viewMidtermGrade(request: Request, response: Response, next: NextFunction) {
-		let grading =  await this.gradeRepository.findOne(1);
+		let grading = await this.gradeRepository.findOne(1);
 		try {
-			if(grading){
-                return grading.canAddMidtermGrade;
-            }
+			if (grading) {
+				return grading.canAddMidtermGrade;
+			}
 		} catch (error) {
 			console.error(error);
 		}
 	}
-	
+
 	async viewDropCourse(request: Request, response: Response, next: NextFunction) {
-		let grading =  await this.gradeRepository.findOne(1);
+		let grading = await this.gradeRepository.findOne(1);
 		try {
-			if(grading){
-                return grading.canDropCourse;
-            }
+			if (grading) {
+				return grading.canDropCourse;
+			}
 		} catch (error) {
 			console.error(error);
 		}
 	}
-	
+
 	async viewAddCourse(request: Request, response: Response, next: NextFunction) {
-		let grading =  await this.gradeRepository.findOne(1);
+		let grading = await this.gradeRepository.findOne(1);
 		try {
-			if(grading){
-                return grading.canAddCourse;
-            }
+			if (grading) {
+				return grading.canAddCourse;
+			}
 		} catch (error) {
 			console.error(error);
 		}

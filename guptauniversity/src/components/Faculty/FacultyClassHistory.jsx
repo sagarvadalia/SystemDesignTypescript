@@ -24,10 +24,10 @@ export default function FacultyClassHistory() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title="Class History"
 					columns={[
-						{ title: 'classCRN', field: 'classCRN' },
-						{ title: 'class section', field: 'classSection' },
+						{ title: 'Class CRN', field: 'classCRN' },
+						{ title: 'Class Section', field: 'classSection' },
 						{ title: 'Course ID', field: 'courseID.courseID' },
 						{
 							title: 'Course Name',
