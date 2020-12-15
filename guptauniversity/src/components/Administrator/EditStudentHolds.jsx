@@ -23,11 +23,12 @@ export default function EditStudentHolds() {
 		// API IS HERE https://material-table.com/#/
 
 		<div>
+			ABC
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title="Holds"
 					columns={[
-						{ title: 'Hold ID', field: 'holdID', editable: 'onAdd' },
+						{ title: 'Hold ID', field: 'holdID' },
 						{ title: 'Type of Hold', field: 'holdType', editable: 'never' },
 						{ title: 'Description of Hold', field: 'holdDescription', editable: 'never' },
 					]}
@@ -38,6 +39,19 @@ export default function EditStudentHolds() {
 						exporting: true,
 					}}
 					editable={{
+						onRowUpdate: async (newData, oldData) => {
+							const dataUpdate = [...data];
+							const index = oldData.tableData.id;
+							dataUpdate[index] = newData;
+
+							await axios.get(`/api/removehold/${sID}/${oldData.holdID}`);
+							await axios.get(`/api/addhold/${sID}/${newData.holdID}`);
+							const result = await axios(`/api/holds/${sID}`);
+							await setData([...dataUpdate]);
+
+							setData(result.data);
+						},
+						onRowUpdateCancelled: (rowData) => console.log('Row editing cancelled'),
 						onRowDelete: async (oldData) => {
 							const dataDelete = [...data];
 							console.log(dataDelete);
@@ -47,6 +61,7 @@ export default function EditStudentHolds() {
 							setData([...dataDelete]);
 							// await cancelClass(oldData.classCRN)
 						},
+
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
 						onRowAdd: async (newData) => {
 							await axios.get(`/api/addhold/${sID}/${newData.holdID}`);

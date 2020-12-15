@@ -173,31 +173,7 @@ export const Routes = [
 		action: 'remove',
 	},
 
-	// crud routes for prerequisites
-	// {
-	// 	method: 'get',
-	// 	route: '/api/prerequisites',
-	// 	controller: PrerequisiteController,
-	// 	action: 'all',
-	// },
-	// {
-	// 	method: 'get',
-	// 	route: '/api/prerequisites/:id',
-	// 	controller: PrerequisiteController,
-	// 	action: 'one',
-	// },
-	// {
-	// 	method: 'post',
-	// 	route: '/api/prerequisites',
-	// 	controller: PrerequisiteController,
-	// 	action: 'save',
-	// },
-	// {
-	// 	method: 'delete',
-	// 	route: '/api/prerequisites/:id',
-	// 	controller: PrerequisiteController,
-	// 	action: 'remove',
-	// },
+
 
 	// crud routes for Classes
 	{
@@ -1161,8 +1137,8 @@ export const Routes = [
 		route: '/api/changeClassSection/:classCRN',
 		controller: ClassController,
 		action: 'changeClassSection',
-  },
-  {
+	},
+	{
 		method: 'get',
 		route: '/api/removeUser/:userID',
 		controller: UserController,
@@ -1174,7 +1150,8 @@ export const Routes = [
 		controller: ClassController,
 		action: 'addClassToMasterSchedule',
 	},
-  {
+	{
+		method: 'get',
 		route: '/api/degreeeval/:sID/:majorID',
 		controller: MajorReqController,
 		action: 'degreeEvaluate',

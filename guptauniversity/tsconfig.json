@@ -11,7 +11,7 @@
 		"removeComments": true,
 		"noImplicitAny": false,
 		"strictNullChecks": true,
-		"strictFunctionTypes": true,
+		"strictFunctionTypes": false,
 		"noImplicitThis": false,
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
