@@ -1,9 +1,6 @@
 ## Use-Cases
 ## TODO: handle multiple password attempts and forgotten passwords
-## TODO:
-Administrators want to create, change, and update accounts for all users.
-## TODO: use admin buttons
-## TODO: Attendance
+
 
 ## TODO:
 Researcher wants to view anonymous data about the college.

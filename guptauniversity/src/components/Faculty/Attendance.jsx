@@ -9,13 +9,12 @@ export default function Attendance() {
 	const [data, setData] = useState([{ sID: {} }]);
 	const [state, setState] = useContext(LoginContext);
 	let { classCRN } = useParams();
-	const datesAreOnSameDay = (first, second) =>
-		first.getFullYear() === second.getFullYear() &&
-		first.getMonth() === second.getMonth() &&
-		first.getDate() === second.getDate();
 
 	async function markPresent(enrollID) {
 		let result = await axios(`/api/attendance`, { params: { enrollID, isPresent: true } });
+		const val = await axios(`/api/attendance/${classCRN}`);
+		// console.log(result.data);
+		setData(val.data);
 	}
 	useEffect(() => {
 		const fetchData = async () => {
@@ -48,13 +47,24 @@ export default function Attendance() {
 						},
 						{
 							title: 'Is Present Today?',
-							field: '',
+							field: 'attendances[0].isPresent',
 							render: (rowData) => (
 								<div>
-									<Button onClick={() => markPresent(rowData.enrollmentID)}>Mark as Present</Button>}
+									{rowData.attendances.length > 0 && <div>Yes</div>}
+
+									{rowData.attendances.length == 0 && (
+										<Button
+											onClick={() => {
+												markPresent(rowData.enrollmentID);
+											}}
+										>
+											Mark Present for Today
+										</Button>
+									)}
 								</div>
 							),
 						},
+
 						// { title: 'Midterm Grade', field: 'midtermGrade' },
 						// { title: 'Final Grade', field: 'finalGrade' },
 					]}
