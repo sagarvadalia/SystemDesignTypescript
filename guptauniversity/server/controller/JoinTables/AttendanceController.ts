@@ -45,16 +45,32 @@ export class AttendanceController {
 		// We need to switch this to take in a date and return the attendances just for that day
 		let thisClass = await this.classRepository.findOne(request.params.id);
 		let allAttends: Array<Array<Attendance>> = []
+		const datesAreOnSameDay = (first: Date, second: Date) =>
+			first.getUTCDate() === second.getUTCDate() &&
+			first.getMonth() === second.getMonth() &&
+			first.getFullYear() === second.getFullYear();
 		try {
 			if (thisClass) {
 				let thisEnrolls = await this.enrollmentRepository.find({ where: { classCRN: thisClass } }) //Array of enrollment objs
 				if (thisEnrolls) {
 					for (let i = 0; i < thisEnrolls.length; i++) {
 						let newAtt = await this.attendanceRepository.find({ where: { enrollmentID: thisEnrolls[i] } }) //Array of that student's attendances
+						let todayAtt: Array<Attendance> = []
+						for (let j = 0; j < newAtt.length; j++) {
 
-						if (newAtt) {
-							thisEnrolls[i].attendances = newAtt
+							let date1 = new Date(newAtt[j].date);
+							let date2 = newAtt[j].date;
+							let date3 = new Date();
+
+
+							if (datesAreOnSameDay(new Date(), new Date(newAtt[j].date))) {
+
+								todayAtt.push(newAtt[j])
+							}
 						}
+						thisEnrolls[i].attendances = todayAtt
+
+
 						// return { done: false, msg: request.params.id + ": No attendance found with that ClassCRN" }
 					}
 
@@ -72,22 +88,23 @@ export class AttendanceController {
 		//Give me an enrollmentID and isPresent(bool)
 		let enrollID: any = request.query.enrollID
 		let isPresent: any = request.query.isPresent
+		console.log(enrollID, isPresent);
 		let todaysDate = new Date()
 
 		let enroll = await this.enrollmentRepository.findOne(enrollID);
 		const entityManager = getManager();
 		var wasPresent = (isPresent == 'true');
-		const datesAreOnSameDay = (first, second) =>
-			first.getFullYear() === second.getFullYear() &&
+		const datesAreOnSameDay = (first: Date, second: Date) =>
+			first.getUTCDate() === second.getUTCDate() &&
 			first.getMonth() === second.getMonth() &&
-			first.getDate() === second.getDate();
+			first.getFullYear() === second.getFullYear();
 
 		try {
 			if (enroll) {
-				let pastAtt = await this.attendanceRepository.find({ where: { enrollID: enroll } })
+				let pastAtt = await this.attendanceRepository.find({ where: { enrollmentID: enroll } })
 				if (pastAtt.length != 0) {
 					for (let i = 0; i < pastAtt.length; i++) {
-						let isEqual = datesAreOnSameDay(pastAtt[i].date, todaysDate)
+						let isEqual = datesAreOnSameDay(new Date(pastAtt[i].date), todaysDate)
 						if (isEqual) {
 							return { done: false, msg: enroll.sID + "An attendance for that student already exists for today" }
 						}

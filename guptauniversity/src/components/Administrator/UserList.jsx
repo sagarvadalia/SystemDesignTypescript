@@ -22,7 +22,7 @@ export default function UserList() {
 	async function createUser(newData) {
 		console.log(newData);
 		await axios(
-			`/api/createUser/${newData.userID}/${newData.userPhone}/${newData.userName}/default/${newData.userAddress}/${newData.userEmail}/${newData.userType}`,
+			`/api/createUser/${newData.userID}/${newData.userPhoned}/${newData.userName}/default/${newData.userAddress}/${newData.userEmail}/${newData.userType}`,
 		);
 		const result = await axios(`/api/users`);
 

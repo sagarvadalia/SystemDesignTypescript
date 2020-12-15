@@ -1,8 +1,8 @@
 ## Use-Cases
 ## TODO: handle multiple password attempts and forgotten passwords
-## TODO:
+## DONE:
 Administrators want to create, change, and update accounts for all users.
-## TODO: use admin buttons
+## DONE: use admin buttons
 ## TODO: Attendance
 
 ## TODO:
