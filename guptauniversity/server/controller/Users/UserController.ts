@@ -612,10 +612,10 @@ export class UserController {
 
 	async createUser(request: Request, response: Response, next: NextFunction){
 		let userID = await this.userRepository.findOne(request.params.userID);
-		let newStudent: Student = new Student;
-		let newFaculty: Faculty = new Faculty;
-		let newAdmin: Administrator = new Administrator;
-		let newResearcher: Researcher = new Researcher;
+		let newStudent: Student = new Student();
+		let newFaculty: Faculty = new Faculty();
+		let newAdmin: Administrator = new Administrator();
+		let newResearcher: Researcher = new Researcher();
 
 		// checks if the userID exists if not then assigns one
 		if(userID){
