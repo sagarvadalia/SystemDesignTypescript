@@ -1,5 +1,5 @@
 ## Use-Cases
-
+## TODO: handle multiple password attempts and forgotten passwords
 ## DONE
 User wants to view the homepage
 
@@ -238,7 +238,7 @@ Exit condition
 
 
 System displays their advisor information
-## NOT DONE
+## DONE
 
 Student wants to view their degree audit
 
@@ -336,7 +336,7 @@ System verifies that student can add the course by checking if it fits in the st
 
 Error Condition
 
-## NOT DONE
+## TODO:
 
 Student does not have prerequisite requirements met
 
@@ -378,7 +378,7 @@ Student clicks a drop button next to the class they want to drop.
 System verifies that student can drop the course by verifying that students can drop courses at the current time period.
 
 Error Condition
-## NOT DONE
+## TODO:
 
 If the student is not allowed to drop the course because it is not the drop time period
 
@@ -495,7 +495,7 @@ Faculty
 Basic Flow
 
 Faculty will navigate the homepage to a link for their gradebook
-## NOT DONE
+## TODO:
 
 If midterm grade submission is allowed (only allowed during certain dates), the system will display a form for the faculty to fill out
 
@@ -523,7 +523,7 @@ Faculty
 Basic Flow
 
 Faculty will navigate the homepage to a link for their gradebook
-## NOT DONE
+## TODO:
 
 If final grade submission is allowed (only allowed during certain dates), the system will display a form for the faculty to fill out
 
@@ -556,7 +556,7 @@ Breadcrumb available to see current or next semester
 Exit condition
 
 Faculty has full view of master schedule
-## NOT DONE
+## TODO:
 Faculty wants to take attendance of a class
 
 Entry Condition
@@ -578,7 +578,7 @@ Exit condition
 Faculty can check off attendance for students present in the class
 
 
-## NOT DONE
+## DONE
 Administrators want to prepare and update the master schedule.
 
 Entry Condition
@@ -602,7 +602,7 @@ System populates the database
 Exit condition
 
 System displays updated master schedule
-## NOT DONE
+##  DONE
 
 Administrators want to cancel or change times of classes
 
@@ -631,7 +631,7 @@ The system will display an alert to the administrator, then it will revert any c
 Exit condition
 
 Administrator successfully cancels or changes a class/classes schedule
-## NOT DONE
+## DONE
 Administrators want to inform students of schedule/class changes
 
 Entry Condition
@@ -655,7 +655,7 @@ System displays email form for administrator to fill out
 Exit condition
 
 Administrator clicks send email
-## NOT DONE
+## TODO:
 
 Administrators want to add/edit the holds on a student’s account.
 
@@ -684,7 +684,7 @@ Administrator fills out a hold change form
 Exit condition
 
 Administrator submits form
-## NOT DONE
+## DONE
 Administrators want to update student’s grades upon faculty request
 
 Entry Condition
@@ -704,7 +704,7 @@ While viewing this page the Administrator can change a student’s grade dependi
 Exit condition
 
 Student’s grades are approved and updated
-## NOT DONE
+## DONE
 
 Administrators want to add/remove students from classes upon faculty request
 
@@ -725,7 +725,7 @@ Once one this page an administrator can add/or a remove a student to a specific 
 Exit condition
 
 Student gets added or dropped from a class
-## NOT DONE
+## TODO:
 Administrators want to create, change, and update accounts for all users.
 
 Entry Condition
@@ -751,7 +751,7 @@ Administrator then fills out a form for the crud operation
 Exit condition
 
 Administrator hits submit on form
-## NOT DONE
+## TODO:
 Researcher wants to view anonymous data about the college.
 
 Entry condition

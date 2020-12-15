@@ -85,6 +85,11 @@ export default function EditMasterSchedule() {
 						{ title: 'Total Seats', field: 'totalSeats' },
 
 						{ title: 'Time Slot', field: 'slotID.slotID' },
+						{
+							title: 'Edit Grades for this class',
+							field: '',
+							render: (rowData) => <Link to={`/classlist/${rowData.classCRN}`}>Edit Grades</Link>,
+						},
 					]}
 					data={data}
 					options={{

@@ -74,6 +74,7 @@ export const Routes = ({}) => {
 			{state?.user?.userType === 'Administrator' && (
 				<Switch>
 					<Route exact path="/classlist" component={ClassList} />
+					<Route exact path="/classlist/:classCRN" component={ClassDetails} />
 					<Route exact path="/studentlist" component={StudentList} />
 					<Route exact path="/userlist" component={UserList} />
 					<Route exact path="/studentlist/:sID" component={StudentDetailsAdminView} />

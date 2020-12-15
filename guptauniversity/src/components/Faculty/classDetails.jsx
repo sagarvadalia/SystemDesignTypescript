@@ -8,6 +8,23 @@ export default function ClassDetails() {
 	const [data, setData] = useState([{ classCRN: { courseID: {} }, semesterID: {}, sID: {} }]);
 	const [state, setState] = useContext(LoginContext);
 	let { classCRN } = useParams();
+	async function dropClass(enrollID) {
+		let val = await axios(`/api/drop/${enrollID}`);
+		console.log(val);
+		const result = await axios(`/api/faculties/viewEnrollments/${classCRN}`);
+		console.log(result.data);
+		setData(result.data);
+	}
+	async function addClass(sID) {
+		let val = await axios(`/api/enroll/${sID}/${classCRN}`);
+		console.log(val);
+		if (!val.data.done) {
+			alert(val.data.msg);
+		}
+		const result = await axios(`/api/faculties/viewEnrollments/${classCRN}`);
+		console.log(result.data);
+		setData(result.data);
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/faculties/viewEnrollments/${classCRN}`);
@@ -28,7 +45,7 @@ export default function ClassDetails() {
 				<MaterialTable
 					title="Class Details"
 					columns={[
-						{ title: 'Student ID', field: 'sID.userID', editable: 'never' },
+						{ title: 'Student ID', field: 'sID.userID', editable: 'onAdd' },
 						{
 							title: 'Name',
 							field: 'sID.userName',
@@ -37,14 +54,29 @@ export default function ClassDetails() {
 								<Link to={`/studentDetails/${rowData.sID.userID}`}>{rowData.sID.userName}</Link>
 							),
 						},
-						{ title: 'Midterm Grade', field: 'midtermGrade' },
-						{ title: 'Final Grade', field: 'finalGrade' },
+						{ title: 'Midterm Grade', field: 'midtermGrade', editable: 'onUpdate' },
+						{ title: 'Final Grade', field: 'finalGrade', editable: 'onUpdate' },
 					]}
 					data={data}
 					options={{
 						sorting: true,
 					}}
 					editable={{
+						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
+						onRowAdd: async (newData) => {
+							await addClass(newData.sID.userID);
+						},
+						onRowDelete: async (oldData) => {
+							const dataDelete = [...data];
+							console.log(dataDelete);
+							const index = oldData.tableData.id;
+
+							dataDelete.splice(index, 1);
+							setData([...dataDelete]);
+							console.log('---', oldData);
+							await dropClass(oldData.enrollmentID);
+						},
+						isDeleteHidden: (rowData) => state.user.userType === 'Faculty',
 						onBulkUpdate: async (changes) => {
 							console.log('here');
 							console.log(changes);

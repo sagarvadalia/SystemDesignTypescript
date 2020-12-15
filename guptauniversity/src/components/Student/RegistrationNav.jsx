@@ -64,7 +64,7 @@ export default function SimpleTabs() {
 		if (!result.data.done) {
 			alert(result.data.msg);
 		}
-		let currSched = await axios.get(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/9`);
+		let currSched = await axios.get(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/15`);
 		setSched(currSched.data);
 	}
 	async function dropClass(enrollmentID) {
@@ -74,7 +74,7 @@ export default function SimpleTabs() {
 			alert(result.data.msg);
 		}
 
-		let currSched = await axios.get(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/9`);
+		let currSched = await axios.get(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/15`);
 		setSched(currSched.data);
 	}
 	const classes = useStyles();
@@ -83,9 +83,9 @@ export default function SimpleTabs() {
 	const [sched, setSched] = useState([{ classCRN: { courseID: {} }, fID: {}, slotID: { days: '', periodID: {} } }]);
 	useEffect(() => {
 		const fetchData = async () => {
-			const classList = await axios(`/api/classes/semester/9`);
+			const classList = await axios(`/api/classes/semester/15`);
 			console.log(classList.data);
-			const currSched = await axios(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/9`);
+			const currSched = await axios(`/api/enrollment/studentHistoryBySemester/${state.user.userID}/15`);
 			// console.log(currSched.data[0]);
 
 			setData(classList.data);
@@ -169,17 +169,22 @@ export default function SimpleTabs() {
 								{ title: 'Days of the Week', field: 'classCRN.slotID.days' },
 								{ title: 'Start Time', field: 'classCRN.slotID.periodID.startTime' },
 								{ title: 'End Time', field: 'classCRN.slotID.periodID.endTime' },
-								{
-									title: 'Drop this Class here',
-									field: '',
-									render: (rowData) => (
-										<Button onClick={() => dropClass(rowData.enrollmentID)}>Drop this Class</Button>
-									),
-								},
 							]}
 							data={sched}
 							options={{
 								sorting: true,
+							}}
+							editable={{
+								onRowDelete: async (oldData) => {
+									const dataDelete = [...data];
+									console.log(dataDelete);
+									const index = oldData.tableData.id;
+
+									dataDelete.splice(index, 1);
+									setData([...dataDelete]);
+									console.log('---', oldData);
+									await dropClass(oldData.enrollmentID);
+								},
 							}}
 						/>
 					</div>
