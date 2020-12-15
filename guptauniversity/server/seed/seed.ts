@@ -39,6 +39,7 @@ import { Enrollment } from '../entity/JoinTables/Enrollment';
 import { MinorRequirement } from '../entity/ClassRelated/MinorRequirement'
 import { MajorRequirement } from '../entity/ClassRelated/MajorRequirement'
 import { Prerequisite } from '../entity/ClassRelated/Prerequisite';
+import { Grading } from '../entity/ClassRelated/Grading';
 
 
 
@@ -302,17 +303,17 @@ createConnection({
 
 
 		//--------------------------------MAJOR-----------------------------------
-		const majorsSeed = seeds.major.default;
-		for (i = 0; i < majorsSeed.length; i++) {
-			try {
-				const majors = await connection.manager.create(Major, majorsSeed[i]);
-				const dept = await connection.manager.findOne(Department, majorsSeed[i].deptID)
-				dept ? majors.department = dept : console.log('no department found')
-				await connection.manager.save(majors);
-			} catch (error) {
-				// console.error(error);
-			}
-		}
+		// const majorsSeed = seeds.major.default;
+		// for (i = 0; i < majorsSeed.length; i++) {
+		// 	try {
+		// 		const majors = await connection.manager.create(Major, majorsSeed[i]);
+		// 		const dept = await connection.manager.findOne(Department, majorsSeed[i].deptID)
+		// 		dept ? majors.department = dept : console.log('no department found')
+		// 		await connection.manager.save(majors);
+		// 	} catch (error) {
+		// 		// console.error(error);
+		// 	}
+		// }
 
 
 
@@ -442,92 +443,92 @@ createConnection({
 		// }
 
 		// --------------------------------Student Minor---------------------------
-		for (i = 0; i < students.length; i++) {
-			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			majorNum > majors.length - 1 ? majorNum = 1 : null
-			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			minorNum > minors.length - 1 ? minorNum = 1 : null
-			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			index > 3 ? index = 1 : null
+		// for (i = 0; i < students.length; i++) {
+		// 	// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+		// 	majorNum > majors.length - 1 ? majorNum = 1 : null
+		// 	// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+		// 	minorNum > minors.length - 1 ? minorNum = 1 : null
+		// 	// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+		// 	index > 3 ? index = 1 : null
 
-			if (index === 1) {
-				let major = await connection.manager.findOne(Major, majorNum)
-				if (major) {
-					const studentMajor = await connection.manager.create(StudentMajor, {
-						majorID: major,
-						sID: students[i],
-						dateDeclared: new Date("November 12 2020")
-					})
-					await connection.manager.save(studentMajor);
-					// students[i].studentMajors = [studentMajor];
-					// await connection.manager.save(Student, students[i]);
-					majorNum++;
-					index++;
-				}
+		// 	if (index === 1) {
+		// 		let major = await connection.manager.findOne(Major, majorNum)
+		// 		if (major) {
+		// 			const studentMajor = await connection.manager.create(StudentMajor, {
+		// 				majorID: major,
+		// 				sID: students[i],
+		// 				dateDeclared: new Date("November 12 2020")
+		// 			})
+		// 			await connection.manager.save(studentMajor);
+		// 			// students[i].studentMajors = [studentMajor];
+		// 			// await connection.manager.save(Student, students[i]);
+		// 			majorNum++;
+		// 			index++;
+		// 		}
 
-			}
-			if (index === 2) {
-				let major = await connection.manager.findOne(Major, majorNum)
-				if (major) {
-					const studentMajor = await connection.manager.create(StudentMajor, {
-						majorID: major,
-						sID: students[i],
-						dateDeclared: new Date("November 12 2020")
-					})
-					await connection.manager.save(studentMajor);
-					// students[i].studentMajors = [studentMajor];
-					// await connection.manager.save(Student, students[i]);
-					majorNum++;
-					index++;
-				}
+		// 	}
+		// 	if (index === 2) {
+		// 		let major = await connection.manager.findOne(Major, majorNum)
+		// 		if (major) {
+		// 			const studentMajor = await connection.manager.create(StudentMajor, {
+		// 				majorID: major,
+		// 				sID: students[i],
+		// 				dateDeclared: new Date("November 12 2020")
+		// 			})
+		// 			await connection.manager.save(studentMajor);
+		// 			// students[i].studentMajors = [studentMajor];
+		// 			// await connection.manager.save(Student, students[i]);
+		// 			majorNum++;
+		// 			index++;
+		// 		}
 
-				let minor = await connection.manager.findOne(Minor, minorNum)
-				if (minor) {
-					const studentMinor = await connection.manager.create(StudentMinor, {
-						minorID: minor,
-						sID: students[i],
-						dateDeclared: new Date("November 12 2020")
-					})
-					await connection.manager.save(studentMinor);
-					// students[i].studentMinors = [studentMinor];
-					// await connection.manager.save(Student, students[i]);
-					majorNum++;
-					minorNum++;
-					index++;
-				}
+		// 		let minor = await connection.manager.findOne(Minor, minorNum)
+		// 		if (minor) {
+		// 			const studentMinor = await connection.manager.create(StudentMinor, {
+		// 				minorID: minor,
+		// 				sID: students[i],
+		// 				dateDeclared: new Date("November 12 2020")
+		// 			})
+		// 			await connection.manager.save(studentMinor);
+		// 			// students[i].studentMinors = [studentMinor];
+		// 			// await connection.manager.save(Student, students[i]);
+		// 			majorNum++;
+		// 			minorNum++;
+		// 			index++;
+		// 		}
 
-			}
+		// 	}
 
-			if (index === 3) {
-				let major = await connection.manager.findOne(Major, majorNum)
-				if (major) {
-					const studentMajor = await connection.manager.create(StudentMajor, {
-						majorID: major,
-						sID: students[i],
-						dateDeclared: new Date("November 12 2020")
-					})
-					await connection.manager.save(studentMajor);
-					majorNum++;
-					index++;
-				}
-				majorNum++;
-				let major2 = await connection.manager.findOne(Major, majorNum)
-				if (major2) {
-					const studentMajor2 = await connection.manager.create(StudentMajor, {
-						majorID: major2,
-						sID: students[i],
-						dateDeclared: new Date("November 12 2020")
-					})
-					await connection.manager.save(studentMajor2);
-					majorNum++;
-					minorNum++;
-					index++;
+		// 	if (index === 3) {
+		// 		let major = await connection.manager.findOne(Major, majorNum)
+		// 		if (major) {
+		// 			const studentMajor = await connection.manager.create(StudentMajor, {
+		// 				majorID: major,
+		// 				sID: students[i],
+		// 				dateDeclared: new Date("November 12 2020")
+		// 			})
+		// 			await connection.manager.save(studentMajor);
+		// 			majorNum++;
+		// 			index++;
+		// 		}
+		// 		majorNum++;
+		// 		let major2 = await connection.manager.findOne(Major, majorNum)
+		// 		if (major2) {
+		// 			const studentMajor2 = await connection.manager.create(StudentMajor, {
+		// 				majorID: major2,
+		// 				sID: students[i],
+		// 				dateDeclared: new Date("November 12 2020")
+		// 			})
+		// 			await connection.manager.save(studentMajor2);
+		// 			majorNum++;
+		// 			minorNum++;
+		// 			index++;
 
-				}
+		// 		}
 
-			}
-			// console.log(students);
-		}
+		// 	}
+		// 	// console.log(students);
+		// }
 
 		// //Advisors
 		// for (i = 0; i < students.length; i++) {
@@ -691,31 +692,31 @@ createConnection({
 
 
 		// --------MajorReqs----------------
-		const majorReqSeed = seeds.majorReqs.default
-		for (i = 0; i < majorReqSeed.length; i++) {
-			try {
-				const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
-				const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
-				const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
-				// console.log(majorReqs);
-				await connection.manager.save(majorReqs);
-			} catch (error) {
-				console.error(error);
-			}
-		}
+		// const majorReqSeed = seeds.majorReqs.default
+		// for (i = 0; i < majorReqSeed.length; i++) {
+		// 	try {
+		// 		const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
+		// 		const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
+		// 		const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
+		// 		// console.log(majorReqs);
+		// 		await connection.manager.save(majorReqs);
+		// 	} catch (error) {
+		// 		console.error(error);
+		// 	}
+		// }
 
 		//---------MinorReqs-----------------
-		const minorReqSeed = seeds.minorReqs.default
-		for (i = 0; i < minorReqSeed.length; i++) {
-			try {
-				const course = await connection.manager.findOne(Course, minorReqSeed[i].courseID);
-				const minor = await connection.manager.findOne(Minor, minorReqSeed[i].minorID);
-				const minorReqs = await connection.manager.create(MinorRequirement, { gradeRequired: 'C', minorID: minor, courseID: course });
-				await connection.manager.save(minorReqs);
-			} catch (error) {
-				console.log(error);
-			}
-		}
+		// const minorReqSeed = seeds.minorReqs.default
+		// for (i = 0; i < minorReqSeed.length; i++) {
+		// 	try {
+		// 		const course = await connection.manager.findOne(Course, minorReqSeed[i].courseID);
+		// 		const minor = await connection.manager.findOne(Minor, minorReqSeed[i].minorID);
+		// 		const minorReqs = await connection.manager.create(MinorRequirement, { gradeRequired: 'C', minorID: minor, courseID: course });
+		// 		await connection.manager.save(minorReqs);
+		// 	} catch (error) {
+		// 		console.log(error);
+		// 	}
+		// }
 
 
 		// // -------Prerequisites---------------
@@ -979,6 +980,13 @@ createConnection({
 		// 				await connection.manager.save(newEnroll);
 		// 			}
 
+		const grading = await connection.manager.create(Grading, {
+			canAddCourse: true,
+			canDropCourse: true,
+			canAddFinalGrade: true,
+			canAddMidtermGrade: true
+		})
+		await connection.manager.save(grading)
 		// 			//For their Fall2020 semester
 		// 			//TODO------------------------------------------------------
 

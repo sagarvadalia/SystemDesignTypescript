@@ -25,7 +25,7 @@ export default function CourseCatalog() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title="Course Catalog"
 					columns={[
 						{ title: 'Course ID', field: 'courseID' },
 						{
