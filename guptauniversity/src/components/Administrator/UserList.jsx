@@ -19,6 +19,16 @@ export default function UserList() {
 		console.log(newData);
 		setData(result.data);
 	}
+	async function createUser(newData) {
+		console.log(newData);
+		await axios(
+			`/api/createUser/${newData.userID}/${newData.userPhone}/${newData.userName}/default/${newData.userAddress}/${newData.userEmail}/${newData.userType}`,
+		);
+		const result = await axios(`/api/users`);
+
+		setData(result.data);
+		console.log(result.data);
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/users`);
@@ -67,15 +77,9 @@ export default function UserList() {
 							// await cancelClass(oldData.classCRN)
 						},
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
-						onRowAdd: (newData) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									/* setData([...data, newData]); */
-									console.log(newData);
-
-									resolve();
-								}, 1000);
-							}),
+						onRowAdd: async (newData) => {
+							await createUser(newData);
+						},
 						onRowUpdate: async (newData, oldData) => {
 							const dataUpdate = [...data];
 							const index = oldData.tableData.id;
