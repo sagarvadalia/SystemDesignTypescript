@@ -1,7 +1,8 @@
 ## Use-Cases
 ## TODO: handle multiple password attempts and forgotten passwords
-
-
+## TODO: open seats
+## TODO: Prerequisites
+## TODO: Enrollment DATA
 ## TODO:
 Researcher wants to view anonymous data about the college.
 ## DONE
@@ -382,7 +383,7 @@ Student clicks a drop button next to the class they want to drop.
 System verifies that student can drop the course by verifying that students can drop courses at the current time period.
 
 Error Condition
-## TODO:
+## DONE:
 
 If the student is not allowed to drop the course because it is not the drop time period
 
@@ -499,7 +500,7 @@ Faculty
 Basic Flow
 
 Faculty will navigate the homepage to a link for their gradebook
-## TODO:
+## DONE:
 
 If midterm grade submission is allowed (only allowed during certain dates), the system will display a form for the faculty to fill out
 
@@ -527,7 +528,7 @@ Faculty
 Basic Flow
 
 Faculty will navigate the homepage to a link for their gradebook
-## TODO:
+## DONE:
 
 If final grade submission is allowed (only allowed during certain dates), the system will display a form for the faculty to fill out
 
@@ -560,7 +561,7 @@ Breadcrumb available to see current or next semester
 Exit condition
 
 Faculty has full view of master schedule
-## TODO:
+## DONE:
 Faculty wants to take attendance of a class
 
 Entry Condition
@@ -729,7 +730,7 @@ Once one this page an administrator can add/or a remove a student to a specific 
 Exit condition
 
 Student gets added or dropped from a class
-## TODO:
+## DONE:
 Administrators want to create, change, and update accounts for all users.
 
 Entry Condition
