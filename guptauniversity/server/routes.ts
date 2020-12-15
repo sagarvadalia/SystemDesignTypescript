@@ -1174,7 +1174,14 @@ export const Routes = [
 		route: '/api/updateUser/:userID/:userName/:userPhone/:userEmail',
 		controller: UserController,
 		action: 'updateInfo'
-	}
+	},
+	
+	{
+		method: 'get',
+		route: '/api/createUser/:userID/:userPhone/:userName/:userPassword/:userAddress/:userEmail/:userType',
+		controller: UserController,
+		action: 'createUser',
+	},
 
 
 ];

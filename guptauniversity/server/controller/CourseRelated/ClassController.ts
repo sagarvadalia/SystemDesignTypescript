@@ -267,10 +267,6 @@ export class ClassController {
 				}
 
 
-
-
-
-
 				return "Room of " + thisClass.classCRN + ' has been successfully changed to ' + newRoom.roomID;
 			}
 			return "Class with CRN " + request.params.classCRN + ' not found'
