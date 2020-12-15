@@ -610,4 +610,71 @@ export class UserController {
 		return { done: false, msg: request.params.userID + ": No user with that ID was found" }
 	}
 
+	async createUser(request: Request, response: Response, next: NextFunction){
+		let userID = await this.userRepository.findOne(request.params.userID);
+		let newStudent: Student = new Student;
+		let newFaculty: Faculty = new Faculty;
+		let newAdmin: Administrator = new Administrator;
+		let newResearcher: Researcher = new Researcher;
+
+		// checks if the userID exists if not then assigns one
+		if(userID){
+			return {done: false, msg: "A user with this ID already exists"};
+		}
+		newStudent.userID = parseInt(request.params.userID);
+
+		
+
+		let userType = request.params.userType;
+		if(userType == "Student"){
+			newStudent.userID = parseInt(request.params.userID);
+			newStudent.userType = userType;
+			newStudent.userName = request.params.userName;
+			newStudent.userPassword = "";
+			newStudent.userEmail = request.params.userEmail;
+			newStudent.userPhone = request.params.userPhone;
+			newStudent.userAddress = request.params.userAddress;
+			let newUser = await this.userRepository.save(newStudent);
+			// newStudent = await this.studentRepository.save(newStudent);
+			return {done: true, msg: "new user created"};
+		}
+		else if(userType == "Faculty"){
+			newFaculty.userID = parseInt(request.params.userID);
+			newFaculty.userType = userType;
+			newFaculty.userName = request.params.userName;
+			newFaculty.userPassword = "";
+			newFaculty.userEmail = request.params.userEmail;
+			newFaculty.userPhone = request.params.userPhone;
+			newFaculty.userAddress = request.params.userAddress;
+			let newUser = await this.userRepository.save(newFaculty);
+			// newFaculty = await this.facultyRepository.save(newFaculty);
+			return {done: true, msg: "new user created"};
+		}
+		else if(userType == "Administrator"){
+			newAdmin.userID = parseInt(request.params.userID);
+			newAdmin.userType = userType;
+			newAdmin.userName = request.params.userName;
+			newAdmin.userPassword = "";
+			newAdmin.userEmail = request.params.userEmail;
+			newAdmin.userPhone = request.params.userPhone;
+			newAdmin.userAddress = request.params.userAddress;
+			let newUser = await this.userRepository.save(newAdmin);
+			// newAdmin = await this.administrator.save(newAdmin);
+			return {done: true, msg: "new user created"};
+		}
+		else if(userType == "Researcher"){
+			newResearcher.userID = parseInt(request.params.userID);
+			newResearcher.userType = userType;
+			newResearcher.userName = request.params.userName;
+			newResearcher.userPassword = "";
+			newResearcher.userEmail = request.params.userEmail;
+			newResearcher.userPhone = request.params.userPhone;
+			newResearcher.userAddress = request.params.userAddress;
+			let newUser = await this.userRepository.save(newResearcher);
+			// newResearcher = await this.researcherRepository.save(newResearcher);
+			return {done: true, msg: "new user created"};
+		}
+		return {done: false, msg: "user creation failed"};
+	}
+
 }

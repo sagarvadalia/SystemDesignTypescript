@@ -1162,7 +1162,12 @@ export const Routes = [
 		controller: AttendanceController,
 		action: 'viewAttendanceForClass',
 	},
-
+	{
+		method: 'get',
+		route: '/api/createUser/:userID/:userPhone/:userName/:userPassword/:userAddress/:userEmail/:userType',
+		controller: UserController,
+		action: 'createUser',
+	},
 
 
 
