@@ -1182,6 +1182,43 @@ export const Routes = [
 		controller: UserController,
 		action: 'createUser',
 	},
-
+	// 12/15
+	{
+		method: 'get',
+		route: '/api/numOfStudents/:classCRN',
+		controller: ResearcherController,
+		action: 'numStudInClass',
+	},
+	{
+		method: 'get',
+		route: '/api/numOfStudents',
+		controller: ResearcherController,
+		action: 'numOfStudents',
+	},
+	{
+		method: 'get',
+		route: '/api/numOfGrads',
+		controller: ResearcherController,
+		action: 'totalGrad',
+	},
+	{
+		method: 'get',
+		route: '/api/numOfUnGrads',
+		controller: ResearcherController,
+		action: 'totalUnGrad',
+	},
+	{
+		method: 'get',
+		route: '/api/totalFullTimeFac',
+		controller: ResearcherController,
+		action: 'totalFullTimeFac',
+	},
+	{
+		method: 'get',
+		route: '/api/totalPartTimeFac',
+		controller: ResearcherController,
+		action: 'totalPartTimeF',
+	},
+	
 
 ];
