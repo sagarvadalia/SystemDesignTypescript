@@ -14,6 +14,7 @@ import { UnderGraduateFullTime } from '../../entity/Users/UnderGraduateFullTime'
 import { UnderGraduatePartTime } from '../../entity/Users/UnderGraduatePartTime';
 import { Hold } from '../../entity/StudentRelated/Hold';
 import { StudentHold } from '../../entity/JoinTables/StudentHold';
+import { Grading } from '../../entity/ClassRelated/Grading';
 
 
 export class EnrollmentController {
@@ -29,6 +30,7 @@ export class EnrollmentController {
 	private ftGradstudentRepository = getRepository(GraduateFullTime);
 	private studentHoldRepository = getRepository(StudentHold);
 	private holdRepository = getRepository(Hold);
+	private gradeRepo = getRepository(Grading)
 
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.enrollmentRepository.find();
@@ -149,6 +151,19 @@ export class EnrollmentController {
 
 	async addClass(request: Request, response: Response, next: NextFunction) {
 		//Give me an sID and a classCRN and I'll make an enrollment with today's date. I RETURN AN OBJECT  {done(bool), msg(string)}
+		//First check two constraints
+		let foo = await this.gradeRepo.findOne(1)
+		if (foo) {
+			if (!foo.canAddCourse) {
+				return { done: false, msg: "The administration has disabled adding classes at this time" }
+			}
+		}
+
+		let date = new Date()
+		if (date.getUTCMonth() == 11) {
+			return { done: false, msg: "The time period for adding classes has passed." }
+		}
+
 		let student = await this.studentRepository.findOne(request.params.sID);
 		let addClass = await this.classRepository.findOne(request.params.classCRN);
 		let stuHold = await this.studentHoldRepository.find({ where: { sID: request.params.sID } });
@@ -341,6 +356,19 @@ export class EnrollmentController {
 
 	async dropClass(request: Request, response: Response, next: NextFunction) {
 		//Give me an enrollID and I'll remove it while handling credits and PT/FT constraints. I RETURN AN OBJECT  {done(bool), msg(string)}
+		//First check two constraints
+		let foo = await this.gradeRepo.findOne(1)
+		if (foo) {
+			if (!foo.canDropCourse) {
+				return { done: false, msg: "The administration has disabled class dropping at this time" }
+			}
+		}
+
+		let date = new Date()
+		if (date.getUTCMonth() == 11) {
+			return { done: false, msg: "The time period for dropping classes has passed." }
+		}
+
 		let thisEnroll = await this.enrollmentRepository.findOne(request.params.enrollID);
 		const entityManager = getManager();
 
@@ -390,8 +418,8 @@ export class EnrollmentController {
 								let ptUGStu = await this.ptUndergradstudentRepository.findOne(ugStu.userID);
 								if (ptUGStu) {
 									//currentCredits - 4
-									if(ptUGStu.currentCredits === 4){
-										return {done: false, msg: ptUGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in"}
+									if (ptUGStu.currentCredits === 4) {
+										return { done: false, msg: ptUGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
 									}
 									ptUGStu.currentCredits = ptUGStu.currentCredits - 4;
 
@@ -447,8 +475,8 @@ export class EnrollmentController {
 
 								if (ptGStu) {
 									//currentCredits - 4
-									if(ptGStu.currentCredits === 4){
-										return {done: false, msg: ptGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
+									if (ptGStu.currentCredits === 4) {
+										return { done: false, msg: ptGStu.userID + ": Class cannot be dropped as it is the only class the student is enrolled in" }
 									}
 									ptGStu.currentCredits = ptGStu.currentCredits - 4;
 
