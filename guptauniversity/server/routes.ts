@@ -1175,7 +1175,7 @@ export const Routes = [
 		controller: UserController,
 		action: 'updateInfo'
 	},
-	
+
 	{
 		method: 'get',
 		route: '/api/createUser/:userID/:userPhone/:userName/:userPassword/:userAddress/:userEmail/:userType',

@@ -22,8 +22,9 @@ export class Prerequisite extends BaseEntity {
 
 
 	// One Course has many Prerequisites
-	@ManyToOne(() => Course, (course: Course) => course.prereqs, { cascade:true})
+	@ManyToOne(() => Course, (course: Course) => course.prereqs, { cascade: true })
 	@JoinColumn({ name: 'courseID' })
 	public courseID!: Course;
+
 
 }
