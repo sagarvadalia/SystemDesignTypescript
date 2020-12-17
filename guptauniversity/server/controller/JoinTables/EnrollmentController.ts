@@ -81,6 +81,20 @@ export class EnrollmentController {
 		}
 	}
 
+	async viewGPA(request: Request, response: Response, next: NextFunction){
+		try{
+			let student = await this.studentRepository.findOne(request.params.id);
+			
+			if(student){
+				let gpa = student.sGPA;
+				return {done: true, msg: "Accumulative GPA: " + gpa};
+			}
+			return{done: false, msg: "A student with that ID does not exist."}
+		}catch(error){
+			console.log(error);
+		}
+	}
+
 	async changeFinalGrade(request: Request, response: Response, next: NextFunction) {
 		//Request needs to have grade, sID, classCRN
 		let foo = await this.gradeRepo.findOne(1);

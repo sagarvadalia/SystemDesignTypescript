@@ -915,6 +915,12 @@ export const Routes = [
 	},
 	{
 		method: 'get',
+		route: '/api/enrollment/viewGPA/:id',
+		controller: EnrollmentController,
+		action: 'viewGPA'
+	},
+	{
+		method: 'get',
 		route: '/api/advisors/:id',
 		controller: AdvisorController,
 		action: 'myAdvisors',
