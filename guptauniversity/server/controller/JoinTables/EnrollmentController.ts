@@ -83,6 +83,17 @@ export class EnrollmentController {
 
 	async changeFinalGrade(request: Request, response: Response, next: NextFunction) {
 		//Request needs to have grade, sID, classCRN
+		let foo = await this.gradeRepo.findOne(1);
+		if(foo){
+			if(!foo.canAddFinalGrade){
+				return {done: false, msg: "The administration has disabled changing final grades at this time"};
+			}
+		}
+
+		let date = new Date()
+		if(date.getUTCMonth()  == 11){
+			return {done: false, msg: "The time period for changing final grades has passed."};
+		}
 		try {
 			console.log(request);
 			let thisEnroll = await this.enrollmentRepository.findOne({
@@ -104,6 +115,18 @@ export class EnrollmentController {
 
 	async changeMidtermGrade(request: Request, response: Response, next: NextFunction) {
 		//Request needs to have grade, sID, classCRN
+		let foo = await this.gradeRepo.findOne(1);
+		if(foo){
+			if(!foo.canAddMidtermGrade){
+				return { done: false, msg: " The administration has disbaled changing midterm grades at this time"}
+			}
+		}
+
+		let date = new Date()
+		if(date.getUTCMonth() == 11){
+			return { done: false, msg: "The time period for changing midterm grades has passed"}
+		}
+
 		try {
 			console.log(request);
 			let thisEnroll = await this.enrollmentRepository.findOne({

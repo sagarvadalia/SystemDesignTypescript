@@ -1219,6 +1219,12 @@ export const Routes = [
 		controller: ResearcherController,
 		action: 'totalPartTimeF',
 	},
+	{
+		method: 'get',
+		route: '/api/numOfClasses',
+		controller: ResearcherController,
+		action: 'numOfClasses',
+	},
 	
 
 ];
