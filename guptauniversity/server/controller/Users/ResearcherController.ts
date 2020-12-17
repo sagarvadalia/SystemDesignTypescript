@@ -71,9 +71,18 @@ export class ResearcherController {
 	}
 
 	// view total num of classes
-	// async numOfClasses(request: Request, response: Response, next: NextFunction){
-	// 	let totalClasses =
-	// }
+	async numOfClasses(request: Request, response: Response, next: NextFunction){
+		let totalClasses = await this.classRepository.find();
+		let numofClasses = 0;
+		try{
+			for(let i = 0; i < totalClasses.length; i++){
+				numofClasses++
+			}
+			return { done: true, msg: "Total number of classes offered by Gupta University: " + numofClasses};
+		}catch(error){
+			console.error(error);
+		}
+	}
 
 	// view how many students in specific class
 	async numStudInClass(request: Request, response: Response, next: NextFunction){
