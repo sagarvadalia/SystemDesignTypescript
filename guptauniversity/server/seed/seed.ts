@@ -794,6 +794,7 @@ createConnection({
 					}
 				}
 
+
 				//myReqs is an array of the required courseIDs at this point
 				let mtGrades = ['U', 'S']
 				let finalGrades = ['A', 'B', 'C', 'D']
@@ -862,8 +863,10 @@ createConnection({
 			}
 		}
 
+ 
 
 
+	
 		// const grading = await connection.manager.create(Grading, {
 		// 	canAddCourse: true,
 		// 	canDropCourse: true,
