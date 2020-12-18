@@ -720,23 +720,27 @@ createConnection({
 
 
 		// // -------Prerequisites---------------
-		// const prereqSeed = seeds.prerequisites.default
-		// for(i = 0; i < prereqSeed.length; i++){
-		// 	try {
-		// 		const prereq = await connection.manager.create(Prerequisite, prereqSeed[i]);
-		// 		const course = await connection.manager.findOne(Course, prereqSeed[i].courseIDNum);
-
-		// 		if (course) {
-		// 			prereq.courseID = course;
-		// 			let bool = await connection.manager.save(prereq);
-		// 			console.log(bool);
-		// 		}
+		const prereqSeed = seeds.prerequisites.default
+		for (i = 0; i < prereqSeed.length; i++) {
+			try {
+				const prereq = await connection.manager.create(Prerequisite, prereqSeed[i]);
+				const course = await connection.manager.findOne(Course, prereqSeed[i].courseIDNum);
+				const course2 = await connection.manager.findOne(Course, prereqSeed[i].prereqID);
 
 
-		// 	} catch (error) {
-		// 		console.error(error);
-		// 	}
-		// }
+				if (course && course2) {
+					prereq.courseID = course;
+
+					console.log(prereq);
+					let bool = await connection.manager.save(prereq);
+					// console.log(bool);
+				}
+
+
+			} catch (error) {
+				console.error(error);
+			}
+		}
 
 
 		// //--------ENROLLMENT v1----------------ya boi Ty------just 2024 kids' first semester
@@ -859,7 +863,7 @@ createConnection({
 		}
 
 
-		// //------GRADING------------------
+	
 		// const grading = await connection.manager.create(Grading, {
 		// 	canAddCourse: true,
 		// 	canDropCourse: true,
@@ -867,6 +871,7 @@ createConnection({
 		// 	canAddMidtermGrade: true
 		// })
 		// await connection.manager.save(grading)
+
 	}
 
 

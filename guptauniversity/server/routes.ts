@@ -915,6 +915,12 @@ export const Routes = [
 	},
 	{
 		method: 'get',
+		route: '/api/enrollment/viewGPA/:id',
+		controller: EnrollmentController,
+		action: 'viewGPA'
+	},
+	{
+		method: 'get',
 		route: '/api/advisors/:id',
 		controller: AdvisorController,
 		action: 'myAdvisors',
@@ -1175,13 +1181,56 @@ export const Routes = [
 		controller: UserController,
 		action: 'updateInfo'
 	},
-	
+
 	{
 		method: 'get',
 		route: '/api/createUser/:userID/:userPhone/:userName/:userPassword/:userAddress/:userEmail/:userType',
 		controller: UserController,
 		action: 'createUser',
 	},
-
+	// 12/15
+	{
+		method: 'get',
+		route: '/api/numOfStudents/:classCRN',
+		controller: ResearcherController,
+		action: 'numStudInClass',
+	},
+	{
+		method: 'get',
+		route: '/api/numOfStudents',
+		controller: ResearcherController,
+		action: 'numOfStudents',
+	},
+	{
+		method: 'get',
+		route: '/api/numOfGrads',
+		controller: ResearcherController,
+		action: 'totalGrad',
+	},
+	{
+		method: 'get',
+		route: '/api/numOfUnGrads',
+		controller: ResearcherController,
+		action: 'totalUnGrad',
+	},
+	{
+		method: 'get',
+		route: '/api/totalFullTimeFac',
+		controller: ResearcherController,
+		action: 'totalFullTimeFac',
+	},
+	{
+		method: 'get',
+		route: '/api/totalPartTimeFac',
+		controller: ResearcherController,
+		action: 'totalPartTimeF',
+	},
+	{
+		method: 'get',
+		route: '/api/numOfClasses',
+		controller: ResearcherController,
+		action: 'numOfClasses',
+	},
+	
 
 ];
