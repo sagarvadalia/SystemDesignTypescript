@@ -5,14 +5,16 @@ import { LoginContext } from '../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 export default function StudentDetailsAdminView() {
 	const [data, setData] = useState([{ semesterID: {} }]);
+	const [student, setStudent] = useState('');
 	const [state, setState] = useContext(LoginContext);
 	let { sID } = useParams();
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/enrollment/${sID}`);
 			console.log(result.data);
-
+			const studentVal = await axios(`/api/students/${sID}`);
 			setData(result.data);
+			setStudent(studentVal.data.userName);
 		};
 
 		fetchData();
@@ -26,7 +28,7 @@ export default function StudentDetailsAdminView() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title={`Details for ${student}`}
 					columns={[
 						{ title: 'Class Number', field: 'classNumber' },
 						{ title: 'Semester Season', field: 'semester.semesterName' },
@@ -34,6 +36,11 @@ export default function StudentDetailsAdminView() {
 						{
 							title: 'Course Name',
 							field: 'courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData.courseName}
+								</Link>
+							),
 						},
 						{ title: 'Midterm Grade', field: 'midtermGrade' },
 						{ title: 'Grade', field: 'finalGrade' },
