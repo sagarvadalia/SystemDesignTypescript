@@ -1,6 +1,6 @@
 import { FacultyFullTime } from './../entity/Users/FacultyFullTime';
 import { FacultyPartTime } from './../entity/Users/FacultyPartTime';
-import { ConnectionOptionsReader, createConnection } from 'typeorm';
+import { ConnectionOptionsReader, createConnection, getRepository } from 'typeorm';
 import { seeds } from './index';
 import { GraduateFullTime } from '../entity/Users/GraduateFullTime';
 import { GraduatePartTime } from '../entity/Users/GraduatePartTime';
@@ -692,18 +692,18 @@ createConnection({
 
 
 		// --------MajorReqs----------------
-		// const majorReqSeed = seeds.majorReqs.default
-		// for (i = 0; i < majorReqSeed.length; i++) {
-		// 	try {
-		// 		const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
-		// 		const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
-		// 		const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
-		// 		// console.log(majorReqs);
-		// 		await connection.manager.save(majorReqs);
-		// 	} catch (error) {
-		// 		console.error(error);
-		// 	}
-		// }
+		const majorReqSeed = seeds.majorReqs.default
+		for (i = 0; i < majorReqSeed.length; i++) {
+			try {
+				const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
+				const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
+				const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
+				// console.log(majorReqs);
+				await connection.manager.save(majorReqs);
+			} catch (error) {
+				console.error(error);
+			}
+		}
 
 		//---------MinorReqs-----------------
 		// const minorReqSeed = seeds.minorReqs.default
@@ -768,222 +768,102 @@ createConnection({
 		// }
 
 		//-----------------BIG BOi ENROLLMENT----------------ya boi Ty
-		// for (i = 0; i < students.length; i++) {
-		// 	let mtGrades = ['U', 'S']
-		// 	let finalGrades = ['A', 'B', 'C', 'D']
-		// 	let firstSemester = [221, 101, 236, 199] 	//English1, AmerPeop1, CS1, Chem1
-		// 	let secondSemester = [222, 102, 237, 200] //English2, AmerPeop2, CS2, Chem2
-		// 	let sem1 = await connection.manager.findOne(Semester, 1);	//Fall 16
-		// 	let sem2 = await connection.manager.findOne(Semester, 2);	//Sp 17
-		// 	let sem3 = await connection.manager.findOne(Semester, 3);	//Fall 17
-		// 	let sem4 = await connection.manager.findOne(Semester, 4);	//Sp 18
-		// 	let sem5 = await connection.manager.findOne(Semester, 5);	//Fall 18
-		// 	let sem6 = await connection.manager.findOne(Semester, 6);	//Sp 19
-		// 	let sem7 = await connection.manager.findOne(Semester, 7);	//Fall 19
-		// 	let sem8 = await connection.manager.findOne(Semester, 8);	//Sp 20
-		// 	let sem9 = await connection.manager.findOne(Semester, 9);	//Fall 20
-		// 	let sem10 = await connection.manager.findOne(Semester, 10);	//Sp 21
-		// 	let sem11 = await connection.manager.findOne(Semester, 11);	//Sp 16
-		// 	let sem12 = await connection.manager.findOne(Semester, 12);	//Fall 15
-		// 	let sem13 = await connection.manager.findOne(Semester, 13);	//Sp 15
-		// 	let sem14 = await connection.manager.findOne(Semester, 14);	//Fall 14
-		// 	let sem15 = await connection.manager.findOne(Semester, 15);	//Sp 14
-		// 	let sem16 = await connection.manager.findOne(Semester, 16);	//Fall 13
+		const stuMaj = await getRepository(StudentMajor)
+		for (i = 0; i < students.length; i++) {
+			let stuRepo = await getRepository(Student)
+			let student = await stuRepo.findOne(students[i].userID);
+			if (student) {
+				let thisStuMaj = await stuMaj.findOne({ where: { sID: student } })
+				let myReqs: Array<Course> = []
+				if (thisStuMaj) {
+					let majRep = await getRepository(Major)
+					let myMajor = await majRep.findOne(thisStuMaj.majorID)
+					let majReqRepo = await getRepository(MajorRequirement)
+					if (myMajor) {
+						let majReq = await majReqRepo.find({ where: { majorID: myMajor }, order: { reqID: "ASC" } })
+						if (majReq) {
+							for (let i = 0; i < majReq.length; i++) {
+								myReqs.push(majReq[i].courseID)
+							}
 
-		// 	switch (students[i].sGradYear) {
-		// 		//Eight semesters attended
-		// 		case 2017: {
-		// 			//For their Fall2013 semester
-		// 			//For their Spring2014 semester
-		// 			//For their Fall2014 semester
-		// 			//For their Spring2015 semester
-		// 			//For their Fall2015 semester
-		// 			//For their Spring2016 semester
-		// 			//For their Fall2016 semester
-		// 			//For their Spring2017 semester
-		// 		} break;
+							//console.log(myMajor.majorName + " " + myMajor.majorID)
+							// for (let i = 0; i < myReqs.length; i++) {
+							// 	console.log(myReqs[i].courseID)
+							// }
+						}
+					}
+				}
 
-		// 		//Eight semesters attended
-		// 		case 2018: {
-		// 			//For their Fall2014 semester
-		// 			//For their Spring2015 semester
-		// 			//For their Fall2015 semester
-		// 			//For their Spring2016 semester
-		// 			//For their Fall2016 semester
-		// 			//For their Spring2017 semester
-		// 			//For their Fall2017 semester
-		// 			//For their Spring2018 semester
-		// 		} break;
+				//myReqs is an array of the required courseIDs at this point
+				let mtGrades = ['U', 'S']
+				let finalGrades = ['A', 'B', 'C', 'D']
+				let startSemester: number = 15
+				switch (student.sGradYear) {
+					case 2017: { startSemester = 1; break }
+					case 2018: { startSemester = 3; break }
+					case 2019: { startSemester = 5; break }
+					case 2020: { startSemester = 7; break }
+					case 2021: { startSemester = 9; break }
+					case 2022: { startSemester = 11; break }
+					case 2023: { startSemester = 13; break }
+				}
+				let foo = 0		//Used to traverse myReqs
+				for (; startSemester < 17; startSemester++) {
+					//For each semester up to including 15
+					let current = await connection.manager.findOne(Semester, startSemester);
+					if (current) {
+						for (let j = 0; j < 4; j++) {
+							//Four classes per semester
+							//Assign variables for enrollDate
+							let month: String
+							let year: number = 0
+							if (current.semesterName == 'Fall') {
+								month = '7'
+								year = current.yearNum
+							} else {
+								month = '11'
+								year = current.yearNum - 1
+							}
 
-		// 		//Eight semesters attended
-		// 		case 2019: {
-		// 			//For their Fall2015 semester
-		// 			//For their Spring2016 semester
-		// 			//For their Fall2016 semester
-		// 			//For their Spring2017 semester
-		// 			//For their Fall2017 semester
-		// 			//For their Spring2018 semester
-		// 			//For their Fall2018 semester
-		// 			//For their Spring2019 semester
-		// 		} break;
+							//Figure midterm and final grades
+							let mtGrade = ''
+							let finalGrade = ''
+							if (current.semesterID == 15) {
+								mtGrade = mtGrades[Math.floor(Math.random() * mtGrades.length)]
+							} else if (current.semesterID == 16) {
 
-		// 		//Eight semesters attended
-		// 		case 2020: {
-		// 			//For their Fall2016 semester
-		// 			for (let j = 0; j < firstSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
+							} else {
+								mtGrade = mtGrades[Math.floor(Math.random() * mtGrades.length)]
+								finalGrade = finalGrades[Math.floor(Math.random() * finalGrades.length)]
+							}
 
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem1 } });
-		// 				let newEnroll = await connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "7/30/2016",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
+							//Find proper class and create enrollment with it
+							let newClass = await connection.manager.findOne(Class, { where: { courseID: myReqs[foo], semesterID: current } })
+							let newEnroll = await connection.manager.create(Enrollment, {
+								sID: student,
+								classCRN: newClass,
+								enrollDate: `${month}/30/${year}`,
+								midtermGrade: mtGrade,
+								finalGrade: finalGrade
+							})
+							await connection.manager.save(newEnroll)
+							foo++
+							if (foo == myReqs.length) {
+								//This ensures no overflow on myReq
+								break;
+							}
+						}
+					}
+					if (foo == myReqs.length) {
+						//This ensures no overflow on myReq
+						break;
+					}
+				}
+			}
+		}
 
-		// 				})
 
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
-		// 			//For their Spring2017 semester
-		// 			for (let j = 0; j < secondSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, secondSemester[j])
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem2 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "12/01/2016",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
-		// 			//For their Fall2017 semester
-		// 			//For their Spring2018 semester
-		// 			//For their Fall2018 semester
-		// 			//For their Spring2019 semester
-		// 			//For their Fall2019 semester
-		// 			//For their Spring2020 semester
-		// 		} break;
-
-		// 		//Seven semesters attended
-		// 		case 2021: {
-		// 			//For their Fall2017 semester
-		// 			for (let j = 0; j < firstSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem3 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "7/30/2017",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
-		// 			//For their Spring2018 semester
-		// 			for (let j = 0; j < secondSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, secondSemester[j])
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem4 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "12/01/2018",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
-		// 			//For their Fall2018 semester
-		// 			//For their Spring2019 semester
-		// 			//For their Fall2019 semester
-		// 			//For their Spring2020 semester
-		// 			//For their Fall2020 semester
-		// 		} break;
-
-		// 		//Five semesters attended
-		// 		case 2022: {
-		// 			//For their Fall2018 semester
-		// 			for (let j = 0; j < firstSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem5 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "7/30/2018",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
-		// 			//For their Spring2019 semester
-		// 			for (let j = 0; j < secondSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, secondSemester[j])
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem6 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "12/01/2018",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
-		// 			//For their Fall2019 semester
-		// 			//For their Spring2020 semester
-		// 			//For their Fall2020 semester
-		// 		} break;
-
-		// 		//Three semesters attended
-		// 		case 2023: {
-		// 			//For their Fall2019 semester
-		// 			for (let j = 0; j < firstSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem7 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "7/30/2019",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
-		// 			//For their Spring2020 semester
-		// 			for (let j = 0; j < secondSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, secondSemester[j])
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem8 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "12/01/2019",
-		// 					midtermGrade: mtGrades[Math.floor(Math.random() * mtGrades.length)],
-		// 					finalGrade: finalGrades[Math.floor(Math.random() * finalGrades.length)]
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-
+	
 		// const grading = await connection.manager.create(Grading, {
 		// 	canAddCourse: true,
 		// 	canDropCourse: true,
@@ -991,39 +871,9 @@ createConnection({
 		// 	canAddMidtermGrade: true
 		// })
 		// await connection.manager.save(grading)
-		// 			//For their Fall2020 semester
-		// 			//TODO------------------------------------------------------
 
-		// 		} break;
-
-		// 		//Only one semester attended
-		// 		case 2024: {
-		// 			//For their Fall2020 semester
-		// 			for (let j = 0; j < firstSemester.length; j++) {
-		// 				const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-		// 				const sem9 = await connection.manager.findOne(Semester, 9);
-
-		// 				const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem9 } });
-		// 				let newEnroll = connection.manager.create(Enrollment, {
-		// 					sID: students[i],
-		// 					classCRN: newClass,
-		// 					enrollDate: "7/30/2020",
-		// 				})
-
-		// 				await connection.manager.save(newEnroll);
-		// 			}
-		// 		} break;
-
-		// 		case 2025: {
-		// 			//I mean realistically they haven't started at the school yet...
-		// 		} break;
-
-		// 		case 2026: {
-		// 			//I mean realistically they haven't started at the school yet...
-		// 		} break;
-		// 	}
-		// }
 	}
+
 
 		//TODO: Attendance
 		//TODO: Check each students numOfCredits. Check each classes open seats.

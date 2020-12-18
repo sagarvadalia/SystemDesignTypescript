@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Course } from './Course';
 import { Major } from './Major';
 
@@ -8,13 +8,16 @@ export class MajorRequirement extends BaseEntity {
 		super();
 		Object.assign(this, MajorRequirement);
 	}
+	@PrimaryGeneratedColumn()
+	public reqID: number
+
 	//Relationship to Course
-	@ManyToOne(() => Course, (course) => course.majorrequirement, { primary: true, eager: true })
+	@ManyToOne(() => Course, (course) => course.majorrequirement, { eager: true })
 	@JoinColumn({ name: 'courseID' })
 	public courseID!: Course;
 
 	//Relationship to Major
-	@ManyToOne(() => Major, (major) => major.majorrequirement, { primary: true, eager: true })
+	@ManyToOne(() => Major, (major) => major.majorrequirement, { eager: true })
 	@JoinColumn({ name: 'majorID' })
 	public majorID!: Major;
 
