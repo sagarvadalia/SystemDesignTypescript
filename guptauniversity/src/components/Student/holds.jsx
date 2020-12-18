@@ -34,6 +34,7 @@ export default function Holds() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

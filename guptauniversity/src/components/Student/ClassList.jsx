@@ -42,7 +42,8 @@ export default function ClassList() {
 					options={{
 						sorting: true,
 						searching: true,
-						exporting: true,
+						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

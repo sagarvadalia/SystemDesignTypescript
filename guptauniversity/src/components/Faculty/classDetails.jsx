@@ -64,6 +64,9 @@ export default function ClassDetails() {
 					data={data}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),

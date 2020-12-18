@@ -144,6 +144,7 @@ export default function SimpleTabs() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</TabPanel>
@@ -173,6 +174,9 @@ export default function SimpleTabs() {
 							data={sched}
 							options={{
 								sorting: true,
+								searching: true,
+								exportButton: true,
+								filtering: true,
 							}}
 							editable={{
 								onRowDelete: async (oldData) => {

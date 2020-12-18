@@ -83,6 +83,9 @@ export default function ClassList() {
 					data={data}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onRowUpdate: async (newData, oldData) => {

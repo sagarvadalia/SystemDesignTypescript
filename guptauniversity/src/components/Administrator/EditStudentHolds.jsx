@@ -36,7 +36,8 @@ export default function EditStudentHolds() {
 					options={{
 						sorting: true,
 						searching: true,
-						exporting: true,
+						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onRowUpdate: async (newData, oldData) => {

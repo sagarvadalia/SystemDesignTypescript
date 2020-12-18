@@ -43,7 +43,8 @@ export default function CourseCatalog() {
 					options={{
 						sorting: true,
 						searching: true,
-						exporting: true,
+						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

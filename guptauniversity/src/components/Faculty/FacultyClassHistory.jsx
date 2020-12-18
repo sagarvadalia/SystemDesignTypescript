@@ -46,6 +46,9 @@ export default function FacultyClassHistory() {
 					data={data}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

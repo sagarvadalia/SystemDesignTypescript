@@ -79,6 +79,7 @@ export default function DegreeEval() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

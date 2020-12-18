@@ -33,6 +33,7 @@ export default function StudentAdvisors() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

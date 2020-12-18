@@ -11,6 +11,10 @@ import MinorTable from './Student/MinorTable';
 import FacultyAdvisees from './Faculty/FacultyAdvisees';
 import FacultyClassHistory from './Faculty/FacultyClassHistory';
 import HomepageSchedule from './Faculty/HomepageSchedule';
+import UserList from './Administrator/UserList';
+import ClassList from './Administrator/ClassList';
+import StudentList from './Administrator/StudentList';
+import SetBools from './Administrator/SetBools';
 export default function Homepage() {
 	const [state, setState] = useContext(LoginContext);
 	return (
@@ -28,6 +32,14 @@ export default function Homepage() {
 					<FacultyAdvisees></FacultyAdvisees>
 					<HomepageSchedule></HomepageSchedule>
 					<FacultyClassHistory></FacultyClassHistory>
+				</div>
+			)}
+			{state?.user?.userType === 'Administrator' && (
+				<div>
+					<SetBools></SetBools>
+					<UserList></UserList>
+					<ClassList></ClassList>
+					<StudentList></StudentList>
 				</div>
 			)}
 		</div>

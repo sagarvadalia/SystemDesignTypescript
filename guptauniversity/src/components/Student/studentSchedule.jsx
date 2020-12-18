@@ -86,6 +86,9 @@ export default function StudentSchedule() {
 					data={data}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

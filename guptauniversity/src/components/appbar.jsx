@@ -263,11 +263,6 @@ export default function PersistentDrawerLeft() {
 									<ListItemText primary={'Student Modifications'}></ListItemText>
 								</ListItem>
 							</Link>
-							<Link to={`/Account Modifications`}>
-								<ListItem button key={'Account Modifications'}>
-									<ListItemText primary={'Account Modifications'}></ListItemText>
-								</ListItem>
-							</Link>
 						</List>
 					)}
 					{state?.user?.userType === 'Researcher' && (

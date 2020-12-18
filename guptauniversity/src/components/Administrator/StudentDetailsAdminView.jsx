@@ -41,6 +41,9 @@ export default function StudentDetailsAdminView() {
 					data={data}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onRowDelete: async (oldData) => {

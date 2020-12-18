@@ -96,6 +96,7 @@ export default function EditMasterSchedule() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onBulkUpdate: (changes) =>

@@ -63,7 +63,8 @@ export default function UserList() {
 					options={{
 						sorting: true,
 						searching: true,
-						exporting: true,
+						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onRowDelete: async (oldData) => {
