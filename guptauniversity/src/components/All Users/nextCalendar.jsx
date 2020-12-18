@@ -137,6 +137,9 @@ export default function NextCalendar() {
 					data={data}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

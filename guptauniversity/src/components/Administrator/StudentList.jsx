@@ -27,7 +27,7 @@ export default function StudentList() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title="Basic Sorting Preview"
+					title="All Student Details"
 					columns={[
 						{ title: 'ID', field: 'userID', editable: 'onAdd' },
 						{
@@ -53,7 +53,8 @@ export default function StudentList() {
 					options={{
 						sorting: true,
 						searching: true,
-						exporting: true,
+						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onRowDelete: async (oldData) => {

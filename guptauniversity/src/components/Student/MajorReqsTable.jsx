@@ -49,6 +49,7 @@ export default function MajorRequirements() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

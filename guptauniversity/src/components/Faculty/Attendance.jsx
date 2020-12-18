@@ -71,6 +71,9 @@ export default function Attendance() {
 					data={data.thisEnrolls}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onBulkUpdate: async (changes) => {

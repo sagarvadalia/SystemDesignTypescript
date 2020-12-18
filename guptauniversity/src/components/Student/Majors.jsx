@@ -51,6 +51,7 @@ export default function Majors() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

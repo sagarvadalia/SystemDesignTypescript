@@ -122,7 +122,8 @@ export default function AcademicCalendar() {
 					options={{
 						sorting: true,
 						searching: true,
-						export: true,
+						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

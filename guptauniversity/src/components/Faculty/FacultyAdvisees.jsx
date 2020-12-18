@@ -23,7 +23,15 @@ export default function FacultyAdvisees() {
 				<MaterialTable
 					title={<div>Advisees</div>}
 					columns={[
-						{ title: 'Name', field: 'sID.userName', render: (rowData) => <Link to={`/classlist/studentDetails/${rowData.sID.userID}`}>{rowData.sID.userName}</Link> },
+						{
+							title: 'Name',
+							field: 'sID.userName',
+							render: (rowData) => (
+								<Link to={`/classlist/studentDetails/${rowData.sID.userID}`}>
+									{rowData.sID.userName}
+								</Link>
+							),
+						},
 						{ title: 'Email', field: 'sID.userEmail' },
 						{ title: 'Phone Number', field: 'sID.userPhone' },
 						{ title: 'Date Assigned', field: 'dateAssigned' },
@@ -33,6 +41,7 @@ export default function FacultyAdvisees() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

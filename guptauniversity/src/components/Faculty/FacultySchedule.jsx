@@ -94,6 +94,9 @@ export default function FacultySchedule() {
 					data={data}
 					options={{
 						sorting: true,
+						searching: true,
+						exportButton: true,
+						filtering: true,
 					}}
 				/>
 			</div>

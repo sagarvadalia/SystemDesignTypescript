@@ -60,6 +60,7 @@ export default function MinorTable() {
 						sorting: true,
 						searching: true,
 						exportButton: true,
+						filtering: true,
 					}}
 					editable={{
 						onRowDelete: async (oldData) => {
