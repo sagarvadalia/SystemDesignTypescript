@@ -50,8 +50,6 @@ export default function MasterSchedule() {
 	}, []);
 
 	return (
-		// API IS HERE https://material-table.com/#/
-
 		<div>
 			{/* <pre>{JSON.stringify(data)}</pre> */}
 

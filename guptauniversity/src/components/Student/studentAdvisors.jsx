@@ -1,9 +1,7 @@
-import React, { useState, useContext, useEffect } from 'react';
-import MaterialTable from 'material-table';
 import axios from 'axios';
+import MaterialTable from 'material-table';
+import React, { useContext, useEffect, useState } from 'react';
 import { LoginContext } from '../../LoginContext';
-import { Link, useParams } from 'react-router-dom';
-import { Button } from '@material-ui/core';
 export default function StudentAdvisors() {
 	const [state, setState] = useContext(LoginContext);
 	const [data, setData] = useState([{ fID: {} }]);
