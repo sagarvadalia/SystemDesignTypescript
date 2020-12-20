@@ -67,16 +67,16 @@ export class ClassController {
 			console.log(request.params.classCRN);
 
 			if (classToRemove) {
-				let facEmail = classToRemove.fID.userEmail;
-				let studentEmail = "";
+				// let facEmail = classToRemove.fID.userEmail;
+				// let studentEmail = "";
 				if (enrollment === []) {
 					let bool = await this.classRepository.delete(classToRemove);
 					console.log('--------------------------AA---------------------------------')
 					console.log(bool);
 				}else {
 					for (let i = 0; i < enrollment.length; i++){
-						let stuEmail = enrollment[i].sID.userEmail;
-						studentEmail += `${stuEmail},`;
+						// let stuEmail = enrollment[i].sID.userEmail;
+						// studentEmail += `${stuEmail},`;
 						console.log('heerrrere')
 						if (enrollment[i]) {
 							console.log('--------here')
@@ -85,29 +85,29 @@ export class ClassController {
            		 }
 
 				let bool = await this.classRepository.delete(classToRemove);
-				let testAccount = await nodemailer.createTestAccount();
+				// let testAccount = await nodemailer.createTestAccount();
 
-				let transporter = nodemailer.createTransport({
-					host: "smtp.ethereal.email",
-					port: 587,
-					secure: false, // true for 465, false for other ports
-					auth: {
-						user: testAccount.user, // generated ethereal user
-						pass: testAccount.pass, // generated ethereal password
-					},
-				});
+				// let transporter = nodemailer.createTransport({
+				// 	host: "smtp.ethereal.email",
+				// 	port: 587,
+				// 	secure: false, // true for 465, false for other ports
+				// 	auth: {
+				// 		user: testAccount.user, // generated ethereal user
+				// 		pass: testAccount.pass, // generated ethereal password
+				// 	},
+				// });
 
 
 
-				let info = await transporter.sendMail({
-					from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
-					to: studentEmail, // list of receivers
-					subject: "Course Deletion", // Subject line
-					text: "Dear student, " + "\n" + " This is an automated message to alert you that,"+ classToRemove.courseID.courseName +  " has been removed from the " + classToRemove.semesterID.semesterName + classToRemove.semesterID.yearNum + " semester.", // plain text body
-					// html: "<b>Hello world?</b>", // html body
-				});
+				// let info = await transporter.sendMail({
+				// 	from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
+				// 	to: studentEmail, // list of receivers
+				// 	subject: "Course Deletion", // Subject line
+				// 	text: "Dear student, " + "\n" + " This is an automated message to alert you that,"+ classToRemove.courseID.courseName +  " has been removed from the " + classToRemove.semesterID.semesterName + classToRemove.semesterID.yearNum + " semester.", // plain text body
+				// 	// html: "<b>Hello world?</b>", // html body
+				// });
 
-		  		console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+		  		// console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 				console.log('-------------------------A----------------------------------')
 				console.log(bool);
 
@@ -124,9 +124,23 @@ export class ClassController {
 		//Give me a classCRN and a new slotID
 		let oldClass = await this.classRepository.findOne(request.params.classCRN);
 		let newSlot = await this.timeslotRepository.findOne(request.params.slotID);
+		
+
+		// ensure the teacher isnt busy at the new time
+		let slotFull = await this.classRepository.findOne({where: {slotID: newSlot, fID: oldClass?.fID, semesterID: oldClass?.semesterID}});
+		if(slotFull){
+				return{done: false, msg: " This teacher is busy during the new time provided"};
+			}
+		// checks if the room at the new time is being used
+		let roomFull = await this.classRepository.findOne({where: {slotID: newSlot, roomID: oldClass?.roomID, semesterID: oldClass?.semesterID}});
+		if(roomFull){
+			return{done: false, msg: "Room is already occupied at that time"};
+		}
+		
 		console.log(oldClass);
 
 		try {
+		
 
 			if (newSlot && oldClass) {
 				let facEmail = oldClass.fID.userEmail;
@@ -140,29 +154,29 @@ export class ClassController {
 				console.log(oldClass);
 				this.classRepository.save(oldClass);
 
-				// nodemailer
-				let testAccount = await nodemailer.createTestAccount();
+				// // nodemailer
+				// let testAccount = await nodemailer.createTestAccount();
 
-				let transporter = nodemailer.createTransport({
-					host: "smtp.ethereal.email",
-					port: 587,
-					secure: false, // true for 465, false for other ports
-					auth: {
-						user: testAccount.user, // generated ethereal user
-						pass: testAccount.pass, // generated ethereal password
-					},
-				});
-				if (studentEmail !== "") {
-						let info = await transporter.sendMail({
-					from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
-					to: studentEmail, // list of receivers
-					subject: "Class Time Changed", // Subject line
-					text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses, "+ oldClass.courseID.courseName +  ", has changed timeslots. It is now on these days, " + oldClass.slotID.days + ", And it will now start at: " + oldClass.slotID.periodID.startTime + " and end at: " + oldClass.slotID.periodID.endTime, // plain text body
-					// html: "<b>Hello world?</b>", // html body
-				});
+				// let transporter = nodemailer.createTransport({
+				// 	host: "smtp.ethereal.email",
+				// 	port: 587,
+				// 	secure: false, // true for 465, false for other ports
+				// 	auth: {
+				// 		user: testAccount.user, // generated ethereal user
+				// 		pass: testAccount.pass, // generated ethereal password
+				// 	},
+				// });
+				// if (studentEmail !== "") {
+				// 		let info = await transporter.sendMail({
+				// 	from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
+				// 	to: studentEmail, // list of receivers
+				// 	subject: "Class Time Changed", // Subject line
+				// 	text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses, "+ oldClass.courseID.courseName +  ", has changed timeslots. It is now on these days, " + oldClass.slotID.days + ", And it will now start at: " + oldClass.slotID.periodID.startTime + " and end at: " + oldClass.slotID.periodID.endTime, // plain text body
+				// 	// html: "<b>Hello world?</b>", // html body
+				// });
 
-				console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-				}
+				// console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				// }
 
 
 				return true;
@@ -177,6 +191,12 @@ export class ClassController {
 		//Give me a classCRN and new fID. I DO NOT check deptIDs
 		let thisClass = await this.classRepository.findOne(request.params.classCRN);
 		let newTeacher = await this.facRepository.findOne(request.params.fID);
+		let slotFull = await this.classRepository.findOne({where: {slotID: thisClass?.slotID, fID: newTeacher?.userID, semesterID: thisClass?.semesterID}})
+		
+		if(slotFull){
+			return{done: false, msg: newTeacher?.userName + " Is already teaching a class from " + thisClass?.slotID.periodID.startTime + thisClass?.slotID.periodID.endTime};
+
+		}
 
 		if (newTeacher) {
 			if (thisClass) {
@@ -190,29 +210,29 @@ export class ClassController {
 				thisClass.fID = newTeacher;
 				this.classRepository.save(thisClass);
 
-				// nodemailer
-				let testAccount = await nodemailer.createTestAccount();
+				// // nodemailer
+				// let testAccount = await nodemailer.createTestAccount();
 
-				let transporter = await nodemailer.createTransport({
-					host: 'smtp.ethereal.email',
-					port: 587,
-					secure: false,
-					auth: {
-						user: testAccount.user,
-						pass: testAccount.pass,
-					},
+				// let transporter = await nodemailer.createTransport({
+				// 	host: 'smtp.ethereal.email',
+				// 	port: 587,
+				// 	secure: false,
+				// 	auth: {
+				// 		user: testAccount.user,
+				// 		pass: testAccount.pass,
+				// 	},
 
-				});
-				if (studentEmail !== '') {
-					let info = await transporter.sendMail({
-					from: '"Administration" <Administration@guptaUniversity.edu',
-					to: studentEmail,
-					subject: "New Teacher",
-					text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught by professor, " + newTeacher.userName,
-					//html: not used
-					});
-					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-				}
+				// });
+				// if (studentEmail !== '') {
+				// 	let info = await transporter.sendMail({
+				// 	from: '"Administration" <Administration@guptaUniversity.edu',
+				// 	to: studentEmail,
+				// 	subject: "New Teacher",
+				// 	text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught by professor, " + newTeacher.userName,
+				// 	//html: not used
+				// 	});
+				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				// }
 
 
 
@@ -229,6 +249,13 @@ export class ClassController {
 		//Give me a classCRN and new roomID. I DO NOT check for conflicts
 		let thisClass = await this.classRepository.findOne(request.params.classCRN);
 		let newRoom = await this.lectureRepository.findOne(request.params.roomID);
+		let roomFull = await this.classRepository.findOne({where: {slotID: thisClass?.slotID, roomID: newRoom, semesterID: thisClass?.semesterID}});
+
+		
+		if(roomFull){
+			return{done: false, msg: "Room is already occupied at that time"};
+		}
+		
 
 		if (newRoom) {
 			if (thisClass) {
@@ -242,29 +269,29 @@ export class ClassController {
 				thisClass.roomID = newRoom;
 				this.classRepository.save(thisClass);
 
-				// nodemailer
-				let testAccount = await nodemailer.createTestAccount();
+				// // nodemailer
+				// let testAccount = await nodemailer.createTestAccount();
 
-				  let transporter = await nodemailer.createTransport({
-                    host: 'smtp.ethereal.email',
-                    port: 587,
-                    secure: false,
-                    auth:{
-                        user: testAccount.user,
-                        pass: testAccount.pass,
-                    },
+				//   let transporter = await nodemailer.createTransport({
+                //     host: 'smtp.ethereal.email',
+                //     port: 587,
+                //     secure: false,
+                //     auth:{
+                //         user: testAccount.user,
+                //         pass: testAccount.pass,
+                //     },
 
-				});
-				if (studentEmail !== "") {
-					let info = await transporter.sendMail({
-                    from: '"Administration" <Administration@guptaUniversity.edu',
-                    to: studentEmail,
-                    subject: "Room Change",
-                    text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
-                    //html: not used
-					});
-					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-				}
+				// });
+				// if (studentEmail !== "") {
+				// 	let info = await transporter.sendMail({
+                //     from: '"Administration" <Administration@guptaUniversity.edu',
+                //     to: studentEmail,
+                //     subject: "Room Change",
+                //     text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
+                //     //html: not used
+				// 	});
+				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				// }
 
 
 				return "Room of " + thisClass.classCRN + ' has been successfully changed to ' + newRoom.roomID;
@@ -328,6 +355,15 @@ export class ClassController {
 		let timeSlot = await this.timeslotRepository.findOne(request.params.slotID);
 		let course = await this.courseRepository.findOne(request.params.courseID);
 		let semester = await this.semesterRepitory.findOne(request.params.semesterID);
+		let slotFull = await this.classRepository.findOne({where: {slotID: timeSlot, fID: faculty, semesterID: semester}});
+		let roomFull = await this.classRepository.findOne({where: {slotID: timeSlot, roomID: room, semesterID: semester}});
+
+		if(slotFull){
+			return{done: false, msg: " Teacher is busy at this time"}
+		}
+		if(roomFull){
+			return{done: false, msg:" This room is occupied during requested time frame"};
+		}
 
 		if(classCRN){
 			return {done: false, msg: "A class with this CRN already exists."};
