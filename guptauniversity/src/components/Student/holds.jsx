@@ -24,7 +24,7 @@ export default function Holds() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>Holds</div>}
+					title={<h2>Holds</h2>}
 					columns={[
 						{ title: 'Hold Type', field: 'holdType' },
 						{ title: 'Hold Description', field: 'holdDescription' },

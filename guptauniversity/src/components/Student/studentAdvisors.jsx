@@ -21,7 +21,7 @@ export default function StudentAdvisors() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>Advisors</div>}
+					title={<h2>Advisors</h2>}
 					columns={[
 						{ title: 'Name', field: 'fID.userName' },
 						{ title: 'Email', field: 'fID.userEmail' },

@@ -51,7 +51,7 @@ export default function EditMasterSchedule() {
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
-						<div>
+						<h2>
 							Master Schedule {semesterVal[semester].semester}
 							{semester !== 1 && (
 								<Link to={`/editmasterSchedule/${semester - 1}`}>
@@ -63,7 +63,7 @@ export default function EditMasterSchedule() {
 									<Button onClick={() => dataFetch(semester + 1)}>Next Semester</Button>
 								</Link>
 							)}
-						</div>
+						</h2>
 					}
 					columns={[
 						{ title: 'Class CRN', field: 'classCRN', editable: 'onAdd' },

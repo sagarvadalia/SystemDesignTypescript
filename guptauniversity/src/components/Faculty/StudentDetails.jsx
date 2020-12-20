@@ -31,7 +31,7 @@ export default function StudentDetails() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>{user?.userName} Course History</div>}
+					title={<h2>{user?.userName} Course History</h2>}
 					columns={[
 						{ title: 'Class Number', field: 'classNumber' },
 						{ title: 'Semester Season', field: 'semester.semesterName' },

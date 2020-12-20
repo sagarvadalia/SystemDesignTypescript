@@ -115,7 +115,7 @@ export default function SimpleTabs() {
 			</AppBar>
 			<TabPanel value={value} index={0}>
 				<MaterialTable
-					title={<div>Class List</div>}
+					title={<h2>Class List</h2>}
 					columns={[
 						{ title: 'Class CRN', field: 'classCRN' },
 						{

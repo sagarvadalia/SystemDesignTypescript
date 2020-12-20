@@ -32,6 +32,7 @@ import EditMasterSchedule from './Administrator/EditMasterSchedule';
 import EditStudentHolds from './Administrator/EditStudentHolds';
 import Attendance from './Faculty/Attendance';
 import DegreeEval from './Student/DegreeEval';
+import DegreeAudit from './Student/DegreeAudit';
 export const Routes = ({}) => {
 	const [state, setState] = useContext(LoginContext);
 
@@ -59,6 +60,7 @@ export const Routes = ({}) => {
 					<Route path="/student-advisors" component={StudentAdvisors} />
 					<Route exact path="/registration" component={Registration} />
 					<Route exact path="/degreeAudit/:majorID" component={DegreeEval} />
+					<Route exact path="/degree-audit" component={DegreeAudit} />
 				</Switch>
 			)}
 			{state?.user?.userType === 'Faculty' && (

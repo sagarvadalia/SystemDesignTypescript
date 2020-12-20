@@ -32,7 +32,7 @@ export default function DegreeEval() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>Classes Yet to be started for {major.majorName}</div>}
+					title={<h2>Classes Yet to be started for {major.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'courseID' },
 						{ title: 'Course Name', field: 'courseName' },
@@ -48,7 +48,7 @@ export default function DegreeEval() {
 					}}
 				/>
 				<MaterialTable
-					title={<div>Classes In Progress for {major.majorName}</div>}
+					title={<h2>Classes In Progress for {major.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
 						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
@@ -65,7 +65,7 @@ export default function DegreeEval() {
 					}}
 				/>
 				<MaterialTable
-					title={<div>Classes Finished for {major.majorName}</div>}
+					title={<h2>Classes Finished for {major.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
 						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },

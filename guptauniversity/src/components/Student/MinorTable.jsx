@@ -33,10 +33,10 @@ export default function MinorTable() {
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
-						<div>
+						<h2>
 							Your Minors
 							<Link to={'/minors'}>Add A Minor</Link>
-						</div>
+						</h2>
 					}
 					columns={[
 						{
