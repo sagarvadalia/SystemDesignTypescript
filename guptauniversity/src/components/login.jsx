@@ -108,8 +108,6 @@ export const Login = ({ history }) => {
 			history.push('/');
 		}
 
-		//TODO:change the login value here
-
 		if (user) {
 			dispatch({
 				type: 'loginSuccess',
