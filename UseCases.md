@@ -1,8 +1,7 @@
 ## Use-Cases
 ## TODO: handle multiple password attempts and forgotten passwords
 ## TODO: open seats
-## TODO: Prerequisites
-## TODO: Enrollment DATA
+## TODO: Attemdamce ny day
 ## TODO:
 Researcher wants to view anonymous data about the college.
 ## DONE

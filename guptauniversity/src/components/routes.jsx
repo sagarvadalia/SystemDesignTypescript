@@ -81,6 +81,7 @@ export const Routes = ({}) => {
 					<Route exact path="/setTimes" component={SetBools} />
 					<Route exact path="/editMasterSchedule/:semester" component={EditMasterSchedule} />
 					<Route exact path="/studentlist/:sID/holds" component={EditStudentHolds} />
+					<Route exact path="/classlist/:classCRN/attendance" component={Attendance} />
 				</Switch>
 			)}
 

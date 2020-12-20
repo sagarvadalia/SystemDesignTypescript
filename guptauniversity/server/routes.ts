@@ -1231,6 +1231,11 @@ export const Routes = [
 		controller: ResearcherController,
 		action: 'numOfClasses',
 	},
-	
+	{
+		method: 'get',
+		route: '/api/data',
+		controller: ResearcherController,
+		action: 'showAllData',
+	},
 
 ];

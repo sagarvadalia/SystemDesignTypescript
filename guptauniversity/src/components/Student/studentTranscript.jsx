@@ -30,7 +30,9 @@ export default function StudentTranscript() {
 							title: 'Course Name',
 							field: 'courseName',
 							render: (rowData) => (
-								<Link to={`/courses/${rowData.classCRN.courseID.courseID}`}>{rowData.courseName}</Link>
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData.courseName}
+								</Link>
 							),
 						},
 						{ title: 'Grade', field: 'finalGrade' },

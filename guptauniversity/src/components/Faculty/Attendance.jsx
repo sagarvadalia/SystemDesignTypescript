@@ -50,7 +50,7 @@ export default function Attendance() {
 							field: 'attendances[0].isPresent',
 							render: (rowData) => (
 								<div>
-									{rowData.attendances.length > 0 && <div>Yes</div>}
+									{rowData.attendances.length > 0 && <div>Present</div>}
 
 									{rowData.attendances.length == 0 && (
 										<Button
