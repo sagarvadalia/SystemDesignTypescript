@@ -35,7 +35,15 @@ export default function DegreeEval() {
 					title={<h2>Classes Yet to be started for {major.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'courseID' },
-						{ title: 'Course Name', field: 'courseName' },
+						{
+							title: 'Course Name',
+							field: 'classCRN.courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData?.classCRN.courseID.courseName}
+								</Link>
+							),
+						},
 						{ title: 'Course Desc', field: 'courseDesc' },
 						{ title: 'Credits', field: 'numOfCredits' },
 						{ title: 'Department', field: 'deptID.deptName' },
@@ -51,7 +59,15 @@ export default function DegreeEval() {
 					title={<h2>Classes In Progress for {major.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'classCRN.courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData?.classCRN.courseID.courseName}
+								</Link>
+							),
+						},
 						{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
 						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 						{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },
@@ -68,7 +84,15 @@ export default function DegreeEval() {
 					title={<h2>Classes Finished for {major.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'classCRN.courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData?.classCRN.courseID.courseName}
+								</Link>
+							),
+						},
 						{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
 						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 						{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },

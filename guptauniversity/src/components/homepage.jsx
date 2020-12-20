@@ -29,9 +29,13 @@ export default function Homepage() {
 					<SetBools></SetBools>
 				</div>
 			)}
-			<AcademicCalendar></AcademicCalendar>
-			<CourseCatalog></CourseCatalog>
-			<MasterSchedule></MasterSchedule>
+			{!state?.user && (
+				<div>
+					<AcademicCalendar></AcademicCalendar>
+					<CourseCatalog></CourseCatalog>
+					<MasterSchedule></MasterSchedule>
+				</div>
+			)}
 			{state?.user?.userType === 'Student' && (
 				<div>
 					<Holds></Holds>
