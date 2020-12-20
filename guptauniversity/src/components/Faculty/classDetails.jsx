@@ -58,8 +58,8 @@ export default function ClassDetails() {
 								<Link to={`/studentDetails/${rowData.sID.userID}`}>{rowData.sID.userName}</Link>
 							),
 						},
-						{ title: 'Midterm Grade', field: 'midtermGrade', editable: 'onUpdate' },
-						{ title: 'Final Grade', field: 'finalGrade', editable: 'onUpdate' },
+						{ title: 'Midterm Grade', field: 'midtermGrade' },
+						{ title: 'Final Grade', field: 'finalGrade' },
 					]}
 					data={data}
 					options={{
