@@ -16,6 +16,9 @@ export default function MasterSchedule() {
 		{ courseID: { deptID: {} }, fID: {}, roomID: { buildings: {} }, slotID: { periodID: {} } },
 	]);
 	let { semester } = useParams();
+	if (!semester) {
+		semester = '15';
+	}
 	semester = parseInt(semester);
 	let semesterVal = {
 		1: { semester: `Fall 2013` },

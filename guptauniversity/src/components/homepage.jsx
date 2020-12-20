@@ -15,10 +15,27 @@ import UserList from './Administrator/UserList';
 import ClassList from './Administrator/ClassList';
 import StudentList from './Administrator/StudentList';
 import SetBools from './Administrator/SetBools';
+import AcademicCalendar from './All Users/academicCalendar';
+import CourseCatalog from './All Users/courseCatalog';
+import MasterSchedule from './masterSchedule';
+import DataView from './Researcher/DataView';
 export default function Homepage() {
 	const [state, setState] = useContext(LoginContext);
 	return (
 		<div>
+			{state?.user?.userType === 'Researcher' && (
+				<div>
+					<DataView></DataView>
+				</div>
+			)}
+			{state?.user?.userType === 'Administrator' && (
+				<div>
+					<SetBools></SetBools>
+				</div>
+			)}
+			<AcademicCalendar></AcademicCalendar>
+			<CourseCatalog></CourseCatalog>
+			<MasterSchedule></MasterSchedule>
 			{state?.user?.userType === 'Student' && (
 				<div>
 					<Holds></Holds>
@@ -36,10 +53,9 @@ export default function Homepage() {
 			)}
 			{state?.user?.userType === 'Administrator' && (
 				<div>
-					<SetBools></SetBools>
 					<UserList></UserList>
-					<ClassList></ClassList>
 					<StudentList></StudentList>
+					<ClassList></ClassList>
 				</div>
 			)}
 		</div>
