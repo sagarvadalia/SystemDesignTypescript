@@ -691,19 +691,19 @@ createConnection({
 		// }
 
 
-		// --------MajorReqs----------------
-		const majorReqSeed = seeds.majorReqs.default
-		for (i = 0; i < majorReqSeed.length; i++) {
-			try {
-				const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
-				const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
-				const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
-				// console.log(majorReqs);
-				await connection.manager.save(majorReqs);
-			} catch (error) {
-				console.error(error);
-			}
-		}
+		// // --------MajorReqs----------------
+		// const majorReqSeed = seeds.majorReqs.default
+		// for (i = 0; i < majorReqSeed.length; i++) {
+		// 	try {
+		// 		const course = await connection.manager.findOne(Course, majorReqSeed[i].courseID);
+		// 		const major = await connection.manager.findOne(Major, majorReqSeed[i].majorID);
+		// 		const majorReqs = await connection.manager.create(MajorRequirement, { gradeRequired: 'C', majorID: major, courseID: course });
+		// 		// console.log(majorReqs);
+		// 		await connection.manager.save(majorReqs);
+		// 	} catch (error) {
+		// 		console.error(error);
+		// 	}
+		// }
 
 		//---------MinorReqs-----------------
 		// const minorReqSeed = seeds.minorReqs.default
@@ -767,106 +767,106 @@ createConnection({
 		// 	}
 		// }
 
-		//-----------------BIG BOi ENROLLMENT----------------ya boi Ty
-		const stuMaj = await getRepository(StudentMajor)
-		for (i = 0; i < students.length; i++) {
-			let stuRepo = await getRepository(Student)
-			let student = await stuRepo.findOne(students[i].userID);
-			if (student) {
-				let thisStuMaj = await stuMaj.findOne({ where: { sID: student } })
-				let myReqs: Array<Course> = []
-				if (thisStuMaj) {
-					let majRep = await getRepository(Major)
-					let myMajor = await majRep.findOne(thisStuMaj.majorID)
-					let majReqRepo = await getRepository(MajorRequirement)
-					if (myMajor) {
-						let majReq = await majReqRepo.find({ where: { majorID: myMajor }, order: { reqID: "ASC" } })
-						if (majReq) {
-							for (let i = 0; i < majReq.length; i++) {
-								myReqs.push(majReq[i].courseID)
-							}
+		// //-----------------BIG BOi ENROLLMENT----------------ya boi Ty
+		// const stuMaj = await getRepository(StudentMajor)
+		// for (i = 0; i < students.length; i++) {
+		// 	let stuRepo = await getRepository(Student)
+		// 	let student = await stuRepo.findOne(students[i].userID);
+		// 	if (student) {
+		// 		let thisStuMaj = await stuMaj.findOne({ where: { sID: student } })
+		// 		let myReqs: Array<Course> = []
+		// 		if (thisStuMaj) {
+		// 			let majRep = await getRepository(Major)
+		// 			let myMajor = await majRep.findOne(thisStuMaj.majorID)
+		// 			let majReqRepo = await getRepository(MajorRequirement)
+		// 			if (myMajor) {
+		// 				let majReq = await majReqRepo.find({ where: { majorID: myMajor }, order: { reqID: "ASC" } })
+		// 				if (majReq) {
+		// 					for (let i = 0; i < majReq.length; i++) {
+		// 						myReqs.push(majReq[i].courseID)
+		// 					}
 
-							//console.log(myMajor.majorName + " " + myMajor.majorID)
-							// for (let i = 0; i < myReqs.length; i++) {
-							// 	console.log(myReqs[i].courseID)
-							// }
-						}
-					}
-				}
-
-
-				//myReqs is an array of the required courseIDs at this point
-				let mtGrades = ['U', 'S']
-				let finalGrades = ['A', 'B', 'C', 'D']
-				let startSemester: number = 15
-				switch (student.sGradYear) {
-					case 2017: { startSemester = 1; break }
-					case 2018: { startSemester = 3; break }
-					case 2019: { startSemester = 5; break }
-					case 2020: { startSemester = 7; break }
-					case 2021: { startSemester = 9; break }
-					case 2022: { startSemester = 11; break }
-					case 2023: { startSemester = 13; break }
-				}
-				let foo = 0		//Used to traverse myReqs
-				for (; startSemester < 17; startSemester++) {
-					//For each semester up to including 15
-					let current = await connection.manager.findOne(Semester, startSemester);
-					if (current) {
-						for (let j = 0; j < 4; j++) {
-							//Four classes per semester
-							//Assign variables for enrollDate
-							let month: String
-							let year: number = 0
-							if (current.semesterName == 'Fall') {
-								month = '7'
-								year = current.yearNum
-							} else {
-								month = '11'
-								year = current.yearNum - 1
-							}
-
-							//Figure midterm and final grades
-							let mtGrade = ''
-							let finalGrade = ''
-							if (current.semesterID == 15) {
-								mtGrade = mtGrades[Math.floor(Math.random() * mtGrades.length)]
-							} else if (current.semesterID == 16) {
-
-							} else {
-								mtGrade = mtGrades[Math.floor(Math.random() * mtGrades.length)]
-								finalGrade = finalGrades[Math.floor(Math.random() * finalGrades.length)]
-							}
-
-							//Find proper class and create enrollment with it
-							let newClass = await connection.manager.findOne(Class, { where: { courseID: myReqs[foo], semesterID: current } })
-							let newEnroll = await connection.manager.create(Enrollment, {
-								sID: student,
-								classCRN: newClass,
-								enrollDate: `${month}/30/${year}`,
-								midtermGrade: mtGrade,
-								finalGrade: finalGrade
-							})
-							await connection.manager.save(newEnroll)
-							foo++
-							if (foo == myReqs.length) {
-								//This ensures no overflow on myReq
-								break;
-							}
-						}
-					}
-					if (foo == myReqs.length) {
-						//This ensures no overflow on myReq
-						break;
-					}
-				}
-			}
-		}
-
- 
+		// 					//console.log(myMajor.majorName + " " + myMajor.majorID)
+		// 					// for (let i = 0; i < myReqs.length; i++) {
+		// 					// 	console.log(myReqs[i].courseID)
+		// 					// }
+		// 				}
+		// 			}
+		// 		}
 
 
-	
+		// 		//myReqs is an array of the required courseIDs at this point
+		// 		let mtGrades = ['U', 'S']
+		// 		let finalGrades = ['A', 'B', 'C', 'D']
+		// 		let startSemester: number = 15
+		// 		switch (student.sGradYear) {
+		// 			case 2017: { startSemester = 1; break }
+		// 			case 2018: { startSemester = 3; break }
+		// 			case 2019: { startSemester = 5; break }
+		// 			case 2020: { startSemester = 7; break }
+		// 			case 2021: { startSemester = 9; break }
+		// 			case 2022: { startSemester = 11; break }
+		// 			case 2023: { startSemester = 13; break }
+		// 		}
+		// 		let foo = 0		//Used to traverse myReqs
+		// 		for (; startSemester < 17; startSemester++) {
+		// 			//For each semester up to including 15
+		// 			let current = await connection.manager.findOne(Semester, startSemester);
+		// 			if (current) {
+		// 				for (let j = 0; j < 4; j++) {
+		// 					//Four classes per semester
+		// 					//Assign variables for enrollDate
+		// 					let month: String
+		// 					let year: number = 0
+		// 					if (current.semesterName == 'Fall') {
+		// 						month = '7'
+		// 						year = current.yearNum
+		// 					} else {
+		// 						month = '11'
+		// 						year = current.yearNum - 1
+		// 					}
+
+		// 					//Figure midterm and final grades
+		// 					let mtGrade = ''
+		// 					let finalGrade = ''
+		// 					if (current.semesterID == 15) {
+		// 						mtGrade = mtGrades[Math.floor(Math.random() * mtGrades.length)]
+		// 					} else if (current.semesterID == 16) {
+
+		// 					} else {
+		// 						mtGrade = mtGrades[Math.floor(Math.random() * mtGrades.length)]
+		// 						finalGrade = finalGrades[Math.floor(Math.random() * finalGrades.length)]
+		// 					}
+
+		// 					//Find proper class and create enrollment with it
+		// 					let newClass = await connection.manager.findOne(Class, { where: { courseID: myReqs[foo], semesterID: current } })
+		// 					let newEnroll = await connection.manager.create(Enrollment, {
+		// 						sID: student,
+		// 						classCRN: newClass,
+		// 						enrollDate: `${month}/30/${year}`,
+		// 						midtermGrade: mtGrade,
+		// 						finalGrade: finalGrade
+		// 					})
+		// 					await connection.manager.save(newEnroll)
+		// 					foo++
+		// 					if (foo == myReqs.length) {
+		// 						//This ensures no overflow on myReq
+		// 						break;
+		// 					}
+		// 				}
+		// 			}
+		// 			if (foo == myReqs.length) {
+		// 				//This ensures no overflow on myReq
+		// 				break;
+		// 			}
+		// 		}
+		// 	}
+		// }
+
+
+
+
+
 		// const grading = await connection.manager.create(Grading, {
 		// 	canAddCourse: true,
 		// 	canDropCourse: true,
