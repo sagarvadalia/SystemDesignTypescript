@@ -21,7 +21,7 @@ export default function DataView() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>Public data for Gupta University</div>}
+					title={<h2>Public data for Gupta University</h2>}
 					columns={[
 						{ title: 'Total Classes', field: 'classCnt' },
 						{ title: 'Total Student', field: 'studentCnt' },

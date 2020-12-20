@@ -33,10 +33,10 @@ export default function MajorTable() {
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
-						<div>
+						<h2>
 							Your Majors
 							<Link to={'/majors'}>Add A Major</Link>
-						</div>
+						</h2>
 					}
 					columns={[
 						{

@@ -33,7 +33,7 @@ export default function MajorRequirements() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>List of All Requirements for {majorName?.majorName}</div>}
+					title={<h2>List of All Requirements for {majorName?.majorName}</h2>}
 					columns={[
 						{ title: 'Course Name', field: 'courseID.courseName' },
 						{

@@ -28,7 +28,7 @@ export default function StudentDetailsAdminView() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={`Details for ${student}`}
+					title={<h2>Details for {student}</h2>}
 					columns={[
 						{ title: 'Class Number', field: 'classNumber' },
 						{ title: 'Semester Season', field: 'semester.semesterName' },

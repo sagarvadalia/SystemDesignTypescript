@@ -59,11 +59,11 @@ export default function StudentSchedule() {
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
-						<div>
+						<h2>
 							My Schedule for {semesterVal[semester].semester}
 							{semester != 1 && <Button onClick={() => decSemester()}>Previous Semester</Button>}
 							{semester != 10 && <Button onClick={() => incSemester()}>Next Semester</Button>}
-						</div>
+						</h2>
 					}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },

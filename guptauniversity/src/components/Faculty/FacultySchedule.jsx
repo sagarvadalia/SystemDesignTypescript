@@ -53,7 +53,7 @@ export default function FacultySchedule() {
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
-						<div>
+						<h2>
 							My Schedule for {semesterVal[semester].semester}
 							{semester !== 1 && (
 								<Link to={`/currentSchedule/${semester - 1}`}>
@@ -65,7 +65,7 @@ export default function FacultySchedule() {
 									<Button onClick={() => dataFetch(semester + 1)}>Next Semester</Button>
 								</Link>
 							)}
-						</div>
+						</h2>
 					}
 					columns={[
 						{ title: 'Class CRN', field: 'classCRN' },

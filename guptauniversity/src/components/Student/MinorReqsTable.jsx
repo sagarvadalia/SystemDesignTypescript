@@ -33,7 +33,7 @@ export default function MinorRequirements() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>List of All Requirements for {minorName?.minorName}</div>}
+					title={<h2>List of All Requirements for {minorName?.minorName}</h2>}
 					columns={[
 						{ title: 'Course Name', field: 'courseID.courseName' },
 						{

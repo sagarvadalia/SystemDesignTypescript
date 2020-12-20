@@ -115,20 +115,16 @@ export default function NextCalendar() {
 	const [state, setState] = useContext(LoginContext);
 
 	return (
-		// API IS HERE https://material-table.com/#/
-
 		<div>
-			{/* <pre>{JSON.stringify(data)}</pre> */}
-
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
-						<div>
+						<h2>
 							Academic Calendar Spring 2021
 							<Link to={'/academicCalendar'}>
 								<button> Previous Semester </button>
 							</Link>
-						</div>
+						</h2>
 					}
 					columns={[
 						{ title: 'Date ', field: 'Date' },

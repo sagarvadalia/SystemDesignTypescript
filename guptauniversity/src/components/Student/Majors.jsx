@@ -29,7 +29,7 @@ export default function Majors() {
 		<div>
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>List of All Majors</div>}
+					title={<h2>List of All Majors</h2>}
 					columns={[
 						{
 							title: 'Name',

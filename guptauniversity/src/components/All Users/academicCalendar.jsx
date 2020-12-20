@@ -107,12 +107,12 @@ export default function AcademicCalendar() {
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={
-						<div>
+						<h2 className="flex-evenly">
 							Academic Calendar Fall 2020
 							<Link to={'/nextCalendar'}>
 								<button> Next Semester </button>
 							</Link>
-						</div>
+						</h2>
 					}
 					columns={[
 						{ title: 'Date', field: 'Date' },

@@ -47,7 +47,7 @@ export default function ClassDetails() {
 
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
-					title={<div>Class Details for {classVal.courseID.courseName}</div>}
+					title={<h2>Class Details for {classVal.courseID.courseName}</h2>}
 					columns={[
 						{ title: 'Student ID', field: 'sID.userID', editable: 'onAdd' },
 						{
