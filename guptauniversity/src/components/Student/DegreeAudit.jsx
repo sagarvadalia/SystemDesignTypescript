@@ -34,7 +34,7 @@ export default function DegreeAudit() {
 					setData(result.data);
 					setMajor1(major.data);
 					console.log(major1, 'major1');
-					console.log(data, 'data1');
+					console.log(result.data, 'data1');
 				}
 				if (i == 1) {
 					setData2(result.data);
@@ -43,6 +43,7 @@ export default function DegreeAudit() {
 					console.log(major2, 'major2');
 				}
 			}
+			console.log(data, 'dataa0----');
 		};
 
 		fetchData();
@@ -55,7 +56,14 @@ export default function DegreeAudit() {
 					title={<h2>Classes Yet to be started for {major1.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'courseID' },
-						{ title: 'Course Name', field: 'courseName' },
+						{
+							title: 'Course Name',
+							field: 'courseName',
+
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.courseID}`}>{rowData?.courseName}</Link>
+							),
+						},
 						{ title: 'Course Desc', field: 'courseDesc' },
 						{ title: 'Credits', field: 'numOfCredits' },
 						{ title: 'Department', field: 'deptID.deptName' },
@@ -72,7 +80,15 @@ export default function DegreeAudit() {
 					title={<h2>Classes In Progress for {major1.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'classCRN.courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData?.classCRN?.courseID?.courseName}
+								</Link>
+							),
+						},
 						{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
 						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 						{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },
@@ -89,7 +105,15 @@ export default function DegreeAudit() {
 					title={<h2>Classes Finished for {major1.majorName}</h2>}
 					columns={[
 						{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-						{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+						{
+							title: 'Course Name',
+							field: 'classCRN.courseID.courseName',
+							render: (rowData) => (
+								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+									{rowData?.classCRN?.courseID?.courseName}
+								</Link>
+							),
+						},
 						{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
 						{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 						{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },
@@ -111,7 +135,13 @@ export default function DegreeAudit() {
 						title={<h2>Classes Yet to be started for {major2.majorName}</h2>}
 						columns={[
 							{ title: 'Course ID', field: 'courseID' },
-							{ title: 'Course Name', field: 'courseName' },
+							{
+								title: 'Course Name',
+								field: 'courseName',
+								render: (rowData) => (
+									<Link to={`/courses/${rowData?.courseID}`}>{rowData?.courseName}</Link>
+								),
+							},
 							{ title: 'Course Desc', field: 'courseDesc' },
 							{ title: 'Credits', field: 'numOfCredits' },
 							{ title: 'Department', field: 'deptID.deptName' },
@@ -128,7 +158,15 @@ export default function DegreeAudit() {
 						title={<h2>Classes In Progress for {major2.majorName}</h2>}
 						columns={[
 							{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-							{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+							{
+								title: 'Course Name',
+								field: 'classCRN.courseID.courseName',
+								render: (rowData) => (
+									<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+										{rowData?.classCRN?.courseID?.courseName}
+									</Link>
+								),
+							},
 							{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
 							{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 							{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },
@@ -145,7 +183,15 @@ export default function DegreeAudit() {
 						title={<h2>Classes Finished for {major2.majorName}</h2>}
 						columns={[
 							{ title: 'Course ID', field: 'classCRN.courseID.courseID' },
-							{ title: 'Course Name', field: 'classCRN.courseID.courseName' },
+							{
+								title: 'Course Name',
+								field: 'classCRN.courseID.courseName',
+								render: (rowData) => (
+									<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
+										{rowData?.classCRN?.courseID?.courseName}
+									</Link>
+								),
+							},
 							{ title: 'Course Desc', field: 'classCRN.courseID.courseDesc' },
 							{ title: 'Credits', field: 'classCRN.courseID.numOfCredits' },
 							{ title: 'Department', field: 'classCRN.courseID.deptID.deptName' },

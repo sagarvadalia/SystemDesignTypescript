@@ -27,9 +27,7 @@ export default function FacultyAdvisees() {
 							title: 'Name',
 							field: 'sID.userName',
 							render: (rowData) => (
-								<Link to={`/classlist/studentDetails/${rowData.sID.userID}`}>
-									{rowData.sID.userName}
-								</Link>
+								<Link to={`/studentDetails/${rowData.sID.userID}`}>{rowData.sID.userName}</Link>
 							),
 						},
 						{ title: 'Email', field: 'sID.userEmail' },
