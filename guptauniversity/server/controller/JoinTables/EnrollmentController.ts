@@ -15,6 +15,8 @@ import { UnderGraduatePartTime } from '../../entity/Users/UnderGraduatePartTime'
 import { Hold } from '../../entity/StudentRelated/Hold';
 import { StudentHold } from '../../entity/JoinTables/StudentHold';
 import { Grading } from '../../entity/ClassRelated/Grading';
+import { Prerequisite } from '../../entity/ClassRelated/Prerequisite';
+import { ActionThumbDown } from 'material-ui/svg-icons';
 
 
 export class EnrollmentController {
@@ -31,6 +33,7 @@ export class EnrollmentController {
 	private studentHoldRepository = getRepository(StudentHold);
 	private holdRepository = getRepository(Hold);
 	private gradeRepo = getRepository(Grading)
+	private preReqRepo = getRepository(Prerequisite)
 
 	async all(request: Request, response: Response, next: NextFunction) {
 		return this.enrollmentRepository.find();
@@ -81,16 +84,16 @@ export class EnrollmentController {
 		}
 	}
 
-	async viewGPA(request: Request, response: Response, next: NextFunction){
-		try{
+	async viewGPA(request: Request, response: Response, next: NextFunction) {
+		try {
 			let student = await this.studentRepository.findOne(request.params.id);
-			
-			if(student){
+
+			if (student) {
 				let gpa = student.sGPA;
-				return {done: true, msg: "Accumulative GPA: " + gpa};
+				return { done: true, msg: "Accumulative GPA: " + gpa };
 			}
-			return{done: false, msg: "A student with that ID does not exist."}
-		}catch(error){
+			return { done: false, msg: "A student with that ID does not exist." }
+		} catch (error) {
 			console.log(error);
 		}
 	}
@@ -98,15 +101,15 @@ export class EnrollmentController {
 	async changeFinalGrade(request: Request, response: Response, next: NextFunction) {
 		//Request needs to have grade, sID, classCRN
 		let foo = await this.gradeRepo.findOne(1);
-		if(foo){
-			if(!foo.canAddFinalGrade){
-				return {done: false, msg: "The administration has disabled changing final grades at this time"};
+		if (foo) {
+			if (!foo.canAddFinalGrade) {
+				return { done: false, msg: "The administration has disabled changing final grades at this time" };
 			}
 		}
 
 		let date = new Date()
-		if(date.getUTCMonth()  == 11){
-			return {done: false, msg: "The time period for changing final grades has passed."};
+		if (date.getUTCMonth() == 11) {
+			return { done: false, msg: "The time period for changing final grades has passed." };
 		}
 		try {
 			console.log(request);
@@ -130,15 +133,15 @@ export class EnrollmentController {
 	async changeMidtermGrade(request: Request, response: Response, next: NextFunction) {
 		//Request needs to have grade, sID, classCRN
 		let foo = await this.gradeRepo.findOne(1);
-		if(foo){
-			if(!foo.canAddMidtermGrade){
-				return { done: false, msg: " The administration has disbaled changing midterm grades at this time"}
+		if (foo) {
+			if (!foo.canAddMidtermGrade) {
+				return { done: false, msg: " The administration has disbaled changing midterm grades at this time" }
 			}
 		}
 
 		let date = new Date()
-		if(date.getUTCMonth() == 11){
-			return { done: false, msg: "The time period for changing midterm grades has passed"}
+		if (date.getUTCMonth() == 11) {
+			return { done: false, msg: "The time period for changing midterm grades has passed" }
 		}
 
 		try {
@@ -209,6 +212,28 @@ export class EnrollmentController {
 		//Checks if the student has a hold
 		if (stuHold.length > 0) {
 			return { done: false, msg: request.params.sID + ": this student has a hold and therefore cannot enroll in classes at this time. " };
+		}
+
+		//Check for the gosh dang prereqs why dontchya
+		if (addClass) {
+			let prereqs = await this.preReqRepo.find({ where: { courseID: addClass.courseID.courseID } })
+			if (prereqs.length != 0) {
+				console.log(prereqs)
+				let theirEnrolls = await this.enrollmentRepository.find({ where: { sID: student } })
+				let preReqsDone = 0
+				if (theirEnrolls.length != 0) {
+					for (let i = 0; i < theirEnrolls.length; i++) {
+						for (let j = 0; j < prereqs.length; j++) {
+							if (theirEnrolls[i].classCRN.courseID.courseID == prereqs[j].prereqID) {
+								preReqsDone++
+							}
+						}
+					}
+				}
+				if (preReqsDone != prereqs.length) {
+					return { done: false, msg: "This student has not satisfied the prereqs for class " + request.params.classCRN }
+				}
+			}
 		}
 
 		try {
