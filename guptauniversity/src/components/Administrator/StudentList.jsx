@@ -67,26 +67,26 @@ export default function StudentList() {
 							await deleteUser(oldData.userID);
 						},
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
-						onRowAdd: (newData) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									/* setData([...data, newData]); */
-									console.log(newData);
+						// onRowAdd: (newData) =>
+						// 	new Promise((resolve, reject) => {
+						// 		setTimeout(() => {
+						// 			/* setData([...data, newData]); */
+						// 			console.log(newData);
 
-									resolve();
-								}, 1000);
-							}),
-						onRowUpdate: (newData, oldData) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									const dataUpdate = [...data];
-									const index = oldData.tableData.id;
-									dataUpdate[index] = newData;
-									setData([...dataUpdate]);
+						// 			resolve();
+						// 		}, 1000);
+						// 	}),
+						// onRowUpdate: (newData, oldData) =>
+						// 	new Promise((resolve, reject) => {
+						// 		setTimeout(() => {
+						// 			const dataUpdate = [...data];
+						// 			const index = oldData.tableData.id;
+						// 			dataUpdate[index] = newData;
+						// 			setData([...dataUpdate]);
 
-									resolve();
-								}, 1000);
-							}),
+						// 			resolve();
+						// 		}, 1000);
+						// 	}),
 					}}
 				/>
 			</div>

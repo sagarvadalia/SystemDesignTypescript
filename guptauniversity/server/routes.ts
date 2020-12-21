@@ -1134,7 +1134,7 @@ export const Routes = [
 	},
 	{
 		method: 'get',
-		route: '/api/changeTotalSeats/:classCRN',
+		route: '/api/changeTotalSeats/:classCRN/:numSeats',
 		controller: ClassController,
 		action: 'changeTotalSeats',
 	},
@@ -1146,7 +1146,7 @@ export const Routes = [
 	},
 	{
 		method: 'get',
-		route: '/api/changeClassSection/:classCRN',
+		route: '/api/changeClassSection/:classCRN/:section',
 		controller: ClassController,
 		action: 'changeClassSection',
 	},
