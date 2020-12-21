@@ -100,17 +100,17 @@ export class EnrollmentController {
 
 	async changeFinalGrade(request: Request, response: Response, next: NextFunction) {
 		//Request needs to have grade, sID, classCRN
-		let foo = await this.gradeRepo.findOne(1);
-		if (foo) {
-			if (!foo.canAddFinalGrade) {
-				return { done: false, msg: "The administration has disabled changing final grades at this time" };
-			}
-		}
+		// let foo = await this.gradeRepo.findOne(1);
+		// if (foo) {
+		// 	if (!foo.canAddFinalGrade) {
+		// 		return { done: false, msg: "The administration has disabled changing final grades at this time" };
+		// 	}
+		// }
 
-		let date = new Date()
-		if (date.getUTCMonth() == 11) {
-			return { done: false, msg: "The time period for changing final grades has passed." };
-		}
+		// let date = new Date()
+		// if (date.getUTCMonth() == 11) {
+		// 	return { done: false, msg: "The time period for changing final grades has passed." };
+		// }
 		try {
 			console.log(request);
 			let thisEnroll = await this.enrollmentRepository.findOne({
@@ -131,18 +131,18 @@ export class EnrollmentController {
 	}
 
 	async changeMidtermGrade(request: Request, response: Response, next: NextFunction) {
-		//Request needs to have grade, sID, classCRN
-		let foo = await this.gradeRepo.findOne(1);
-		if (foo) {
-			if (!foo.canAddMidtermGrade) {
-				return { done: false, msg: " The administration has disbaled changing midterm grades at this time" }
-			}
-		}
+		// //Request needs to have grade, sID, classCRN
+		// let foo = await this.gradeRepo.findOne(1);
+		// if (foo) {
+		// 	if (!foo.canAddMidtermGrade) {
+		// 		return { done: false, msg: " The administration has disbaled changing midterm grades at this time" }
+		// 	}
+		// }
 
-		let date = new Date()
-		if (date.getUTCMonth() == 11) {
-			return { done: false, msg: "The time period for changing midterm grades has passed" }
-		}
+		// let date = new Date()
+		// if (date.getUTCMonth() == 11) {
+		// 	return { done: false, msg: "The time period for changing midterm grades has passed" }
+		// }
 
 		try {
 			console.log(request);
@@ -192,17 +192,17 @@ export class EnrollmentController {
 	async addClass(request: Request, response: Response, next: NextFunction) {
 		//Give me an sID and a classCRN and I'll make an enrollment with today's date. I RETURN AN OBJECT  {done(bool), msg(string)}
 		//First check two constraints
-		let foo = await this.gradeRepo.findOne(1)
-		if (foo) {
-			if (!foo.canAddCourse) {
-				return { done: false, msg: "The administration has disabled adding classes at this time" }
-			}
-		}
+		// let foo = await this.gradeRepo.findOne(1)
+		// if (foo) {
+		// 	if (!foo.canAddCourse) {
+		// 		return { done: false, msg: "The administration has disabled adding classes at this time" }
+		// 	}
+		// }
 
-		let date = new Date()
-		if (date.getUTCMonth() == 11) {
-			return { done: false, msg: "The time period for adding classes has passed." }
-		}
+		// let date = new Date()
+		// if (date.getUTCMonth() == 11) {
+		// 	return { done: false, msg: "The time period for adding classes has passed." }
+		// }
 
 		let student = await this.studentRepository.findOne(request.params.sID);
 		let addClass = await this.classRepository.findOne(request.params.classCRN);
@@ -419,17 +419,17 @@ export class EnrollmentController {
 	async dropClass(request: Request, response: Response, next: NextFunction) {
 		//Give me an enrollID and I'll remove it while handling credits and PT/FT constraints. I RETURN AN OBJECT  {done(bool), msg(string)}
 		//First check two constraints
-		let foo = await this.gradeRepo.findOne(1)
-		if (foo) {
-			if (!foo.canDropCourse) {
-				return { done: false, msg: "The administration has disabled class dropping at this time" }
-			}
-		}
+		// let foo = await this.gradeRepo.findOne(1)
+		// if (foo) {
+		// 	if (!foo.canDropCourse) {
+		// 		return { done: false, msg: "The administration has disabled class dropping at this time" }
+		// 	}
+		// }
 
-		let date = new Date()
-		if (date.getUTCMonth() == 11) {
-			return { done: false, msg: "The time period for dropping classes has passed." }
-		}
+		// let date = new Date()
+		// if (date.getUTCMonth() == 11) {
+		// 	return { done: false, msg: "The time period for dropping classes has passed." }
+		// }
 
 		let thisEnroll = await this.enrollmentRepository.findOne(request.params.enrollID);
 		const entityManager = getManager();

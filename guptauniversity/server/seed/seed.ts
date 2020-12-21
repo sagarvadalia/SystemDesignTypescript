@@ -71,7 +71,7 @@ createConnection({
 
 
 
-		// // ----------------------BUILDING------------------------------------------
+		// // // ----------------------BUILDING------------------------------------------
 		// const buildingsSeed = seeds.building.default;
 		// for (i = 0; i < buildingsSeed.length; i++) {
 		// 	try {
@@ -84,7 +84,7 @@ createConnection({
 		// }
 
 
-		// //-----------------------LAB-------------------------------------
+		// // //-----------------------LAB-------------------------------------
 		// let labsSeed = seeds.lab.default;
 		// for (i = 0; i < labsSeed.length; i++) {
 		// 	try {
@@ -99,7 +99,7 @@ createConnection({
 		// }
 
 
-		// //----------------------------LECTURE--------------------------------------
+		// // //----------------------------LECTURE--------------------------------------
 		// let lecturesSeed = seeds.lecture.default;
 		// for (i = 0; i < lecturesSeed.length; i++) {
 		// 	try {
@@ -114,7 +114,7 @@ createConnection({
 		// }
 
 
-		// //----------------------------------OFFICE---------------------------------
+		// // //----------------------------------OFFICE---------------------------------
 		// const officesSeed = seeds.office.default;
 		// for (i = 0; i < officesSeed.length; i++) {
 		// 	try {
@@ -129,7 +129,7 @@ createConnection({
 		// }
 
 
-		// //------------------------------RESEARCHER---------------------------------
+		// // //------------------------------RESEARCHER---------------------------------
 		// const researchersSeed = seeds.researcher.default;
 		// for (i = 0; i < researchersSeed.length; i++) {
 		// 	try {
@@ -143,9 +143,9 @@ createConnection({
 		// 	}
 		// }
 
-		// // USERS
+		// // // USERS
 
-		// //----------------------------FACULTY FT-----------------------------------
+		// // //----------------------------FACULTY FT-----------------------------------
 		// const fullTimeFacultySeed = seeds.fullTimeFaculty.default;
 		// for (i = 0; i < fullTimeFacultySeed.length; i++) {
 		// 	try {
@@ -168,7 +168,7 @@ createConnection({
 
 
 
-		// //----------------------------FACULTY PT-----------------------------------
+		// // //----------------------------FACULTY PT-----------------------------------
 		// const partTimeFacultySeed = seeds.partTimeFaculty.default;
 		// for (i = 0; i < partTimeFacultySeed.length; i++) {
 		// 	try {
@@ -184,7 +184,7 @@ createConnection({
 		// }
 
 
-		// //-----------------------------STUDENT G FT--------------------------------
+		// // //-----------------------------STUDENT G FT--------------------------------
 		// const graduateFullTimeSeed = seeds.graduateFullTime.default;
 		// for (i = 0; i < graduateFullTimeSeed.length; i++) {
 		// 	try {
@@ -200,7 +200,7 @@ createConnection({
 		// }
 
 
-		// //----------------------------STUDENT G PT---------------------------------
+		// // //----------------------------STUDENT G PT---------------------------------
 		// const graduatePartTimeSeed = seeds.graduatePartTime.default;
 		// for (i = 0; i < graduatePartTimeSeed.length; i++) {
 		// 	try {
@@ -218,7 +218,7 @@ createConnection({
 		// }
 
 
-		// // //-------------------------------STUDENT UG FT-----------------------------
+		// // // //-------------------------------STUDENT UG FT-----------------------------
 		// const undergraduateFullTimeSeed = seeds.undergraduateFullTime.default;
 		// for (i = 0; i < undergraduateFullTimeSeed.length; i++) {
 		// 	try {
@@ -236,7 +236,7 @@ createConnection({
 		// }
 
 
-		// //------------------------------STUDENT UG PT------------------------------
+		// // //------------------------------STUDENT UG PT------------------------------
 		// const undergraduatePartTimeSeed = seeds.undergraduatePartTime.default;
 		// for (i = 0; i < undergraduatePartTimeSeed.length; i++) {
 		// 	try {
@@ -253,7 +253,7 @@ createConnection({
 		// 	}
 		// }
 
-		// // --------------------------- DEPARTMENT------------------------------------
+		// // // --------------------------- DEPARTMENT------------------------------------
 		// let departmentsSeed = seeds.department.default;
 		// for (i = 0; i < departmentsSeed.length; i++) {
 		// 	try {
@@ -282,7 +282,7 @@ createConnection({
 		// 	}
 		// }
 
-		// //-----------------------------COURSE--------------------------------------
+		// // //-----------------------------COURSE--------------------------------------
 		// let coursesSeed = seeds.course.default;
 		// for (i = 0; i < coursesSeed.length; i++) {
 		// 	try {
@@ -302,7 +302,7 @@ createConnection({
 		// }
 
 
-		//--------------------------------MAJOR-----------------------------------
+		// //--------------------------------MAJOR-----------------------------------
 		// const majorsSeed = seeds.major.default;
 		// for (i = 0; i < majorsSeed.length; i++) {
 		// 	try {
@@ -317,7 +317,7 @@ createConnection({
 
 
 
-		// //------------------------------MINOR--------------------------------------
+		// // //------------------------------MINOR--------------------------------------
 		// const minorsSeed = seeds.minor.default;
 		// for (i = 0; i < minorsSeed.length; i++) {
 		// 	try {
@@ -333,19 +333,19 @@ createConnection({
 
 
 
-		// //--------------------------ADMINISTRATOR---------------------------------
-		// const administratorsSeed = seeds.administrator.default;
-		// for (i = 0; i < administratorsSeed.length; i++) {
-		// 	try {
-		// 		const user = await connection.manager.create(Users, administratorsSeed[i])
-		// 		const administrators = await connection.manager.create(Administrator, administratorsSeed[i]);
+		// // //--------------------------ADMINISTRATOR---------------------------------
+		const administratorsSeed = seeds.administrator.default;
+		for (i = 0; i < administratorsSeed.length; i++) {
+			try {
+				const user = await connection.manager.create(Users, administratorsSeed[i])
+				const administrators = await connection.manager.create(Administrator, administratorsSeed[i]);
 
-		// 		await connection.manager.save(user);
-		// 		await connection.manager.save(administrators);
-		// 	} catch (error) {
-		// 		// console.error(error);
-		// 	}
-		// }
+				await connection.manager.save(user);
+				await connection.manager.save(administrators);
+			} catch (error) {
+				// console.error(error);
+			}
+		}
 
 
 		// //----------------------------HOLDS----------------------------------------
@@ -390,7 +390,7 @@ createConnection({
 
 		// // // -----------------------------Join Tables--------------------------------
 
-		// //------------------------------Faculty -----------------------
+		// // //------------------------------Faculty -----------------------
 		// for (i = 0; i < departments.length; i++) {
 		// 	try {
 		// 		const head = departments[i].deptHeadID
@@ -442,7 +442,7 @@ createConnection({
 
 		// }
 
-		// --------------------------------Student Minor---------------------------
+		// // --------------------------------Student Minor---------------------------
 		// for (i = 0; i < students.length; i++) {
 		// 	// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 		// 	majorNum > majors.length - 1 ? majorNum = 1 : null
@@ -530,7 +530,7 @@ createConnection({
 		// 	// console.log(students);
 		// }
 
-		// //Advisors
+		// // //Advisors
 		// for (i = 0; i < students.length; i++) {
 		// 	try {
 		// 		const sID = students[i].userID;
@@ -551,7 +551,7 @@ createConnection({
 		// 	}
 		// }
 
-		// // Student Holds
+		// // // Student Holds
 		// iter = 1;
 		// for (i = 0; i < students.length; i += 19) {
 		// 	try {
@@ -574,12 +574,12 @@ createConnection({
 		// }
 
 
-		//		TIME RELATED STUFF
-		//   						TIME RELATED STUFF
-		//												TIME RELATED STUFF
-		//	by ya boi Ty													TIME RELATED STUFF
+		// //		TIME RELATED STUFF
+		// //   						TIME RELATED STUFF
+		// //												TIME RELATED STUFF
+		// //	by ya boi Ty													TIME RELATED STUFF
 
-		// // -------------------------------SEMESTER----------------------------------
+		// // // -------------------------------SEMESTER----------------------------------
 		// const semestersSeed = seeds.semester.default;
 		// for (i = 0; i < semestersSeed.length; i++) {
 		// 	try {
@@ -591,7 +591,7 @@ createConnection({
 		// }
 
 
-		// // ------------------------------PERIOD-------------------------------------
+		// // // ------------------------------PERIOD-------------------------------------
 
 		// const periodsSeed = seeds.period.default;
 		// for (i = 0; i < periodsSeed.length; i++) {
@@ -604,7 +604,7 @@ createConnection({
 		// }
 
 
-		// // ----------------------TimeSlot v2-------------------------------------
+		// // // ----------------------TimeSlot v2-------------------------------------
 
 		// const timeslotsSeed = seeds.timeslots.default
 		// for (i = 0; i < timeslotsSeed.length; i++) {
@@ -620,7 +620,7 @@ createConnection({
 
 
 
-		// // TODO: seed classes and handle faculty associations
+		// // // TODO: seed classes and handle faculty associations
 		// const classSeed = seeds.classes.default;
 		// try {
 		// 	for (i = 0; i < classSeed.length; i++) {
@@ -691,7 +691,7 @@ createConnection({
 		// }
 
 
-		// // --------MajorReqs----------------
+		// // // --------MajorReqs----------------
 		// const majorReqSeed = seeds.majorReqs.default
 		// for (i = 0; i < majorReqSeed.length; i++) {
 		// 	try {
@@ -705,7 +705,7 @@ createConnection({
 		// 	}
 		// }
 
-		//---------MinorReqs-----------------
+		// //---------MinorReqs-----------------
 		// const minorReqSeed = seeds.minorReqs.default
 		// for (i = 0; i < minorReqSeed.length; i++) {
 		// 	try {
@@ -719,7 +719,7 @@ createConnection({
 		// }
 
 
-		// // -------Prerequisites---------------
+		// // // -------Prerequisites---------------
 		// const prereqSeed = seeds.prerequisites.default
 		// for (i = 0; i < prereqSeed.length; i++) {
 		// 	try {
@@ -743,31 +743,31 @@ createConnection({
 		// }
 
 
-		// //--------ENROLLMENT v1----------------ya boi Ty------just 2024 kids' first semester
-		// const stuArr = await connection.manager.find(Student, { where: { sGradYear: 2024 } });
+		// // //--------ENROLLMENT v1----------------ya boi Ty------just 2024 kids' first semester
+		// // const stuArr = await connection.manager.find(Student, { where: { sGradYear: 2024 } });
 
-		// //For each student with gradYear 2024
-		// for (i = 0; i < stuArr.length; i++) {
-		// 	let firstSemester = [221, 101, 236, 199] 	//English1, AmerPeop1, CS1, Chem1
-		// 	const stu = await connection.manager.findOne(Student, stuArr[i].userID);
+		// // //For each student with gradYear 2024
+		// // for (i = 0; i < stuArr.length; i++) {
+		// // 	let firstSemester = [221, 101, 236, 199] 	//English1, AmerPeop1, CS1, Chem1
+		// // 	const stu = await connection.manager.findOne(Student, stuArr[i].userID);
 
-		// 	//For each of the 4 classes
-		// 	for (let j = 0; j < firstSemester.length; j++) {
-		// 		const currCourse = await connection.manager.findOne(Course, firstSemester[j])
-		// 		const sem15 = await connection.manager.findOne(Semester, 15);
+		// // 	//For each of the 4 classes
+		// // 	for (let j = 0; j < firstSemester.length; j++) {
+		// // 		const currCourse = await connection.manager.findOne(Course, firstSemester[j])
+		// // 		const sem15 = await connection.manager.findOne(Semester, 15);
 
-		// 		const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem15 } });
-		// 		let newEnroll = connection.manager.create(Enrollment, {
-		// 			sID: stu,
-		// 			classCRN: newClass,
-		// 			enrollDate: "7/30/2020"
-		// 		})
+		// // 		const newClass = await connection.manager.findOne(Class, { where: { courseID: currCourse, semesterID: sem15 } });
+		// // 		let newEnroll = connection.manager.create(Enrollment, {
+		// // 			sID: stu,
+		// // 			classCRN: newClass,
+		// // 			enrollDate: "7/30/2020"
+		// // 		})
 
-		// 		await connection.manager.save(newEnroll);
-		// 	}
-		// }
+		// // 		await connection.manager.save(newEnroll);
+		// // 	}
+		// // }
 
-		// //-----------------BIG BOi ENROLLMENT----------------ya boi Ty
+		// // //-----------------BIG BOi ENROLLMENT----------------ya boi Ty
 		// const stuMaj = await getRepository(StudentMajor)
 		// for (i = 0; i < students.length; i++) {
 		// 	let stuRepo = await getRepository(Student)
@@ -795,7 +795,7 @@ createConnection({
 		// 		}
 
 
-		// 		//myReqs is an array of the required courseIDs at this point
+		// // 		//myReqs is an array of the required courseIDs at this point
 		// 		let mtGrades = ['U', 'S']
 		// 		let finalGrades = ['A', 'B', 'C', 'D']
 		// 		let startSemester: number = 15
@@ -867,15 +867,15 @@ createConnection({
 
 
 
-		// const grading = await connection.manager.create(Grading, {
-		// 	canAddCourse: true,
-		// 	canDropCourse: true,
-		// 	canAddFinalGrade: true,
-		// 	canAddMidtermGrade: true
-		// })
-		// await connection.manager.save(grading)
+	// 	const grading = await connection.manager.create(Grading, {
+	// 		canAddCourse: true,
+	// 		canDropCourse: true,
+	// 		canAddFinalGrade: true,
+	// 		canAddMidtermGrade: true
+	// 	})
+	// 	await connection.manager.save(grading)
 
-	}
+	 }
 
 
 		//TODO: Attendance
