@@ -56,11 +56,11 @@ export class ClassController {
 		}
 	}
 
-	async removeClass(request: Request, response: Response, next: NextFunction){
-        // Give a classCRN and I will delete the enrollments, and the class
+	async removeClass(request: Request, response: Response, next: NextFunction) {
+		// Give a classCRN and I will delete the enrollments, and the class
 		try {
 			let classToRemove = await this.classRepository.findOne(request.params.classCRN);
-			let enrollment = await this.enrollmentRepository.find({where: {classCRN: classToRemove}});
+			let enrollment = await this.enrollmentRepository.find({ where: { classCRN: classToRemove } });
 			console.log(enrollment);
 			console.log('------------------------------------------------------------')
 			console.log(classToRemove);
@@ -73,16 +73,24 @@ export class ClassController {
 					let bool = await this.classRepository.delete(classToRemove);
 					console.log('--------------------------AA---------------------------------')
 					console.log(bool);
+
 				}else {
 					for (let i = 0; i < enrollment.length; i++){
 						// let stuEmail = enrollment[i].sID.userEmail;
 						// studentEmail += `${stuEmail},`;
+
+				} else {
+					for (let i = 0; i < enrollment.length; i++) {
+						let stuEmail = enrollment[i].sID.userEmail;
+						studentEmail += `${stuEmail},`;
+
 						console.log('heerrrere')
 						if (enrollment[i]) {
 							console.log('--------here')
-                    		await this.enrollmentRepository.delete(enrollment[i]);
+							await this.enrollmentRepository.delete(enrollment[i]);
 						}
-           		 }
+					}
+
 
 				let bool = await this.classRepository.delete(classToRemove);
 				// let testAccount = await nodemailer.createTestAccount();
@@ -111,14 +119,48 @@ export class ClassController {
 				console.log('-------------------------A----------------------------------')
 				console.log(bool);
 
-            	return "No class found with this CRN" + request.params.classCRN;}
+					let bool = await this.classRepository.delete(classToRemove);
+					let testAccount = await nodemailer.createTestAccount();
 
-      	 	 }
+					let transporter = nodemailer.createTransport({
+						host: "smtp.ethereal.email",
+						port: 587,
+						secure: false, // true for 465, false for other ports
+						auth: {
+							user: testAccount.user, // generated ethereal user
+							pass: testAccount.pass, // generated ethereal password
+						},
+					});
+
+
+
+					try {
+						let info = await transporter.sendMail({
+							from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
+							to: studentEmail, // list of receivers
+							subject: "Course Deletion", // Subject line
+							text: "Dear student, " + "\n" + " This is an automated message to alert you that," + classToRemove.courseID.courseName + " has been removed from the " + classToRemove.semesterID.semesterName + classToRemove.semesterID.yearNum + " semester.", // plain text body
+							// html: "<b>Hello world?</b>", // html body
+						});
+
+						console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+						console.log('-------------------------A----------------------------------')
+						console.log(bool);
+					} catch (error) {
+						console.error(error);
+					}
+
+
+					return { done: true, msg: "Class Removed " }
+				}
+
+			}
+			else { return { done: false, msg: "No class found with this paramater" } }
 		} catch (error) {
 			console.error(error);
-			}
+		}
 
-    }
+	}
 
 	async changeTime(request: Request, response: Response, next: NextFunction) {
 		//Give me a classCRN and a new slotID
@@ -145,14 +187,15 @@ export class ClassController {
 			if (newSlot && oldClass) {
 				let facEmail = oldClass.fID.userEmail;
 				let studentEmail = "";
-				let enrollment = await this.enrollmentRepository.find({where: {classCRN: oldClass}});
-				for(let i = 0; i < enrollment.length; i++){
+				let enrollment = await this.enrollmentRepository.find({ where: { classCRN: oldClass } });
+				for (let i = 0; i < enrollment.length; i++) {
 					let stuEmail = enrollment[i].sID.userEmail;
 					studentEmail += `${stuEmail},`;
 				}
 				oldClass.slotID = newSlot;
 				console.log(oldClass);
 				this.classRepository.save(oldClass);
+
 
 				// // nodemailer
 				// let testAccount = await nodemailer.createTestAccount();
@@ -178,8 +221,36 @@ export class ClassController {
 				// console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 				// }
 
+				// nodemailer
+				let testAccount = await nodemailer.createTestAccount();
 
-				return true;
+				let transporter = nodemailer.createTransport({
+					host: "smtp.ethereal.email",
+					port: 587,
+					secure: false, // true for 465, false for other ports
+					auth: {
+						user: testAccount.user, // generated ethereal user
+						pass: testAccount.pass, // generated ethereal password
+					},
+				});
+				if (studentEmail !== "") {
+					let info = await transporter.sendMail({
+						from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
+						to: studentEmail, // list of receivers
+						subject: "Class Time Changed", // Subject line
+						text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses, " + oldClass.courseID.courseName + ", has changed timeslots. It is now on these days, " + oldClass.slotID.days + ", And it will now start at: " + oldClass.slotID.periodID.startTime + " and end at: " + oldClass.slotID.periodID.endTime, // plain text body
+						// html: "<b>Hello world?</b>", // html body
+					});
+
+					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				}
+
+
+
+				return { done: true, msg: 'changed time' };
+			}
+			else {
+				return { done: false, msg: 'timeslot could not be updated' }
 			}
 		} catch (error) {
 			console.error(error);
@@ -210,6 +281,7 @@ export class ClassController {
 				thisClass.fID = newTeacher;
 				this.classRepository.save(thisClass);
 
+
 				// // nodemailer
 				// let testAccount = await nodemailer.createTestAccount();
 
@@ -234,15 +306,40 @@ export class ClassController {
 				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 				// }
 
+				// nodemailer
+				let testAccount = await nodemailer.createTestAccount();
+
+				let transporter = await nodemailer.createTransport({
+					host: 'smtp.ethereal.email',
+					port: 587,
+					secure: false,
+					auth: {
+						user: testAccount.user,
+						pass: testAccount.pass,
+					},
+
+				});
+				if (studentEmail !== '') {
+					let info = await transporter.sendMail({
+						from: '"Administration" <Administration@guptaUniversity.edu',
+						to: studentEmail,
+						subject: "New Teacher",
+						text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught by professor, " + newTeacher.userName,
+						//html: not used
+					});
+					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				}
 
 
 
 
-				return "Teacher of " + thisClass.classCRN + ' has been successfully changed to ' + newTeacher.userID;
+
+
+				return { done: true, msg: "Teacher of " + thisClass.classCRN + ' has been successfully changed to ' + newTeacher.userID }
 			}
-			return "Class with CRN " + request.params.classCRN + ' not found'
+			return { done: false, msg: "Class with CRN " + request.params.classCRN + ' not found' }
 		}
-		return "No teacher found with id " + request.params.fID
+		return { done: false, msg: "No teacher found with id " + request.params.fID }
 	}
 
 	async changeRoom(request: Request, response: Response, next: NextFunction) {
@@ -261,13 +358,14 @@ export class ClassController {
 			if (thisClass) {
 				let facEmail = thisClass.fID.userEmail;
 				let studentEmail = "";
-				let enrollment = await this.enrollmentRepository.find({where: {classCRN: thisClass}});
-				for(let i = 0; i < enrollment.length; i++ ){
+				let enrollment = await this.enrollmentRepository.find({ where: { classCRN: thisClass } });
+				for (let i = 0; i < enrollment.length; i++) {
 					let stuEmail = enrollment[i].sID.userEmail;
 					studentEmail = `${stuEmail}`;
 				}
 				thisClass.roomID = newRoom;
 				this.classRepository.save(thisClass);
+
 
 				// // nodemailer
 				// let testAccount = await nodemailer.createTestAccount();
@@ -293,60 +391,87 @@ export class ClassController {
 				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 				// }
 
+				// nodemailer
+				let testAccount = await nodemailer.createTestAccount();
 
-				return "Room of " + thisClass.classCRN + ' has been successfully changed to ' + newRoom.roomID;
+				let transporter = await nodemailer.createTransport({
+					host: 'smtp.ethereal.email',
+					port: 587,
+					secure: false,
+					auth: {
+						user: testAccount.user,
+						pass: testAccount.pass,
+					},
+
+				});
+				if (studentEmail !== "") {
+					let info = await transporter.sendMail({
+						from: '"Administration" <Administration@guptaUniversity.edu',
+						to: studentEmail,
+						subject: "Room Change",
+						text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
+						//html: not used
+					});
+					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				}
+
+
+
+				return { done: true, msg: "Room of " + thisClass.classCRN + ' has been successfully changed to ' + newRoom.roomID }
 			}
-			return "Class with CRN " + request.params.classCRN + ' not found'
+			return { done: false, msg: "Class with CRN " + request.params.classCRN + ' not found' }
 		}
-		return "No room found with id " + request.params.newRoom
+		return { done: false, msg: "No room found with id " + request.params.newRoom }
 	}
 
-	async changeTotalSeats(request: Request, response: Response, next: NextFunction){
+	async changeTotalSeats(request: Request, response: Response, next: NextFunction) {
 		// Give me a classCRN and new Number of seats
 		let thisClass = await this.classRepository.findOne(request.params.classCRN);
-		if(thisClass){
+		if (thisClass) {
 			thisClass.totalSeats = parseInt(request.params.numSeats);
 			await this.classRepository.save(thisClass);
+			return { done: true, msg: 'class saved' }
 		}
-		return {done: true, msg:"Invalid classCRN entered"};
+		return { done: false, msg: "Invalid classCRN entered" };
 
 	}
-	async changeOpenSeats(request: Request, response: Response, next: NextFunction){
+	async changeOpenSeats(request: Request, response: Response, next: NextFunction) {
 		// Give me a classCRN and new Number of seats
 		let thisClass = await this.classRepository.findOne(request.params.classCRN);
-		if(thisClass){
+		if (thisClass) {
 			thisClass.openSeats = parseInt(request.params.numSeats);
 			await this.classRepository.save(thisClass);
+			return { done: true, msg: 'saved' }
 		}
-		return{done:false, msg: "Invalid classCRN entered"};
+		return { done: false, msg: "Invalid classCRN entered" };
 	}
 
-	async changeClassSection(request: Request, response: Response, next: NextFunction){
+	async changeClassSection(request: Request, response: Response, next: NextFunction) {
 		// Give me a classCRN and new Number of seats
 		let thisClass = await this.classRepository.findOne(request.params.classCRN);
-		if(thisClass){
+		if (thisClass) {
 			let str = "";
-			if(parseInt(request.params.section) == 1){
+			if (parseInt(request.params.section) == 1) {
 				str = "001";
 			}
-			else if(parseInt(request.params.section) == 2){
+			else if (parseInt(request.params.section) == 2) {
 				str = "002";
 			}
-			else if(parseInt(request.params.section) == 3){
+			else if (parseInt(request.params.section) == 3) {
 				str = "003";
 			}
-			else{
-				return{done: false, msg: "Invalid class section entered."};
+			else {
+				return { done: false, msg: "Invalid class section entered." };
 			}
 			thisClass.classSection = str;
 			await this.classRepository.save(thisClass);
-			return{done: true, msg: "Class section has been updated."};
+			return { done: true, msg: "Class section has been updated." };
 		}
-		return{done: false, msg: "Invalid classCRN entered."};
+		return { done: false, msg: "Invalid classCRN entered." };
 	}
 
 
-	async addClassToMasterSchedule(request: Request, response: Response, next: NextFunction){
+	async addClassToMasterSchedule(request: Request, response: Response, next: NextFunction) {
 		// Give me a CRN, a Section, a Faculty ID, RoomID, totalSeats, and Timeslot and I will create a new class
 		let classCRN = await this.classRepository.findOne(request.params.classCRN);
 		let newClass: Class = new Class();
@@ -355,6 +480,7 @@ export class ClassController {
 		let timeSlot = await this.timeslotRepository.findOne(request.params.slotID);
 		let course = await this.courseRepository.findOne(request.params.courseID);
 		let semester = await this.semesterRepitory.findOne(request.params.semesterID);
+
 		let slotFull = await this.classRepository.findOne({where: {slotID: timeSlot, fID: faculty, semesterID: semester}});
 		let roomFull = await this.classRepository.findOne({where: {slotID: timeSlot, roomID: room, semesterID: semester}});
 
@@ -365,78 +491,89 @@ export class ClassController {
 			return{done: false, msg:" This room is occupied during requested time frame"};
 		}
 
-		if(classCRN){
-			return {done: false, msg: "A class with this CRN already exists."};
+		console.log('-------------')
+		console.log('we are here');
+		console.log(classCRN, 'classCRN')
+		console.log(newClass, 'newClass')
+		console.log(faculty, 'faculty')
+		console.log(room, 'room')
+		console.log(timeSlot, 'timeSlot')
+		console.log(course, 'course')
+		console.log(semester, 'semester')
+		if (classCRN) {
+			return { done: false, msg: "A class with this CRN already exists." };
 		}
-			// creates new classCRN
-			newClass.classCRN = parseInt(request.params.classCRN); 
+		// creates new classCRN
+		newClass.classCRN = parseInt(request.params.classCRN);
 
-			// console.log(newClass);
-			// checks if classSection exists
-			let str = "";
-			if(parseInt(request.params.section) == 1){
-				str = "001";
-			}
-			else if(parseInt(request.params.section) == 2){
-				str = "002";
-			}
-			else if(parseInt(request.params.section) == 3){
-				str = "003";
-			}
-			else{
-				return {done: false, msg: "Invalid class section entered."};
-			}
-			
-			// sets classSection 
-			newClass.classSection = str;
-			
-			// sets facID
-			if(faculty){
-				newClass.fID = faculty;
-			}
-			else{
-				return {done: false, msg: "FacultyID entered does not exist"};
-			}
+		// console.log(newClass);
+		// checks if classSection exists
+		let str = "";
+		if (parseInt(request.params.section) == 1) {
+			str = "001";
+		}
+		else if (parseInt(request.params.section) == 2) {
+			str = "002";
+		}
+		else if (parseInt(request.params.section) == 3) {
+			str = "003";
+		}
+		else {
+			return { done: false, msg: "Invalid class section entered." };
+		}
 
-			//sets roomID
-			if(room){
-				newClass.roomID = room;
-			}
-			else{
-				return {done: false, msg: "RoomID entered does not exist"};
-			}
+		// sets classSection
+		newClass.classSection = str;
 
-			//sets num of totalSeats and openSeats
-			newClass.totalSeats = (parseInt(request.params.totalSeats));
-			newClass.openSeats = (parseInt(request.params.openSeats));
 
-			// sets slotID
-			if(timeSlot){
-				newClass.slotID = timeSlot;
-			}
-			else{
-				return {done: false, msg: "TimeSlot entered does not exist"};
-			}
-			
-			// sets courseID
-			if(course){
-				newClass.courseID = course;
-			}
-			else{
-				return {done: false, msg: "CourseID entered does not exist"};
-			}
+		// sets facID
+		if (faculty) {
+			newClass.fID = faculty;
+		}
+		else {
+			return { done: false, msg: "FacultyID entered does not exist" };
+		}
 
-			// sets semesterID
-			if(semester){
-				newClass.semesterID = semester;
-			}
-			else{
-				return {done: false, msg: "SemesterID entered does not exist"};
-			}
+		//sets roomID
+		if (room) {
+			newClass.roomID = room;
+		}
+		else {
+			return { done: false, msg: "RoomID entered does not exist" };
+		}
 
-			// creates the new class in the master schedule
-			await this.classRepository.save(newClass);
-			return {done: true, msg: "Class " + newClass.classCRN + " has been added to the master schedule "};
+		//sets num of totalSeats and openSeats
+		newClass.totalSeats = (parseInt(request.params.totalSeats));
+		newClass.openSeats = (parseInt(request.params.openSeats));
+
+		// sets slotID
+		if (timeSlot) {
+			newClass.slotID = timeSlot;
+		}
+		else {
+			return { done: false, msg: "TimeSlot entered does not exist" };
+		}
+
+		// sets courseID
+		if (course) {
+			newClass.courseID = course;
+		}
+		else {
+			return { done: false, msg: "CourseID entered does not exist" };
+		}
+
+		// sets semesterID
+		if (semester) {
+			newClass.semesterID = semester;
+		}
+		else {
+			return { done: false, msg: "SemesterID entered does not exist" };
+		}
+
+		// creates the new class in the master schedule
+		await this.classRepository.save(newClass);
+		console.log(newClass, 'saved new class')
+		return { done: true, msg: "Class " + newClass.classCRN + " has been added to the master schedule " };
 	}
 
 }

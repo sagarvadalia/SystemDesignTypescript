@@ -85,7 +85,7 @@ export default function UserList() {
 							const dataUpdate = [...data];
 							const index = oldData.tableData.id;
 							dataUpdate[index] = newData;
-							editUser(newData, oldData);
+							await editUser(newData, oldData);
 							setData([...dataUpdate]);
 						},
 					}}

@@ -5,11 +5,57 @@ import { LoginContext } from './../../LoginContext';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 export default function EditMasterSchedule() {
+	async function dataEdit(newData) {
+		let classCRN = newData.classCRN;
+		let totalSeats = newData.totalSeats;
+		let room = newData.roomID.roomID;
+		let teacher = newData.fID.userID;
+		let time = newData.slotID.slotID;
+		let section = newData.classSection;
+		let result = await axios(`/api/changeClassSection/${classCRN}/${section}`);
+		console.log(result);
+		if (!result.data.done) {
+			alert(result.data.msg);
+			return false;
+		}
+		result = await axios(`/api/changeTotalSeats/${classCRN}/${totalSeats}`);
+		if (!result.data.done) {
+			alert(result.data.msg);
+			return false;
+		}
+		result = await axios(`/api/changeroom/${classCRN}/${room}`);
+		console.log(result);
+		if (!result.data.done) {
+			alert(result.data.msg);
+			return false;
+		}
+		result = await axios(`/api/changeteacher/${classCRN}/${teacher}`);
+		console.log(result);
+		if (!result.data.done) {
+			alert(result.data.msg);
+			return false;
+		}
+		result = await axios(`/api/classes/${classCRN}/${time}`);
+		console.log(result);
+		if (!result.data.done) {
+			alert(result.data.msg);
+			return false;
+		}
+		return true;
+	}
 	async function dataFetch(value) {
 		const result = await axios(`/api/classes/semester/${value}`);
 
 		setData(result.data);
 		console.log(data);
+	}
+	async function deleteClass(classCRN) {
+		const result = await axios.delete(`/api/removeClass/${classCRN}`);
+		if (!result.data.done) {
+			alert(result.data.msg);
+			return false;
+		}
+		return true;
 	}
 
 	const [data, setData] = useState([
@@ -66,7 +112,8 @@ export default function EditMasterSchedule() {
 						</h2>
 					}
 					columns={[
-						{ title: 'Class CRN', field: 'classCRN', editable: 'onAdd' },
+						{ title: 'Class CRN', field: 'classCRN' },
+						{ title: 'Course ID', field: 'courseID.courseID', editable: 'onAdd' },
 						{
 							title: 'Course Name',
 							editable: 'never',
@@ -99,47 +146,60 @@ export default function EditMasterSchedule() {
 						filtering: true,
 					}}
 					editable={{
-						onBulkUpdate: (changes) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									/* setData([...data, newData]); */
+						// onBulkUpdate: (changes) =>
+						// 	new Promise((resolve, reject) => {
+						// 		setTimeout(() => {
+						// 			/* setData([...data, newData]); */
 
-									resolve();
-								}, 1000);
-							}),
+						// 			resolve();
+						// 		}, 1000);
+						// 	}),
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
 						onRowUpdateCancelled: (rowData) => console.log('Row editing cancelled'),
-						onRowAdd: (newData) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									/* setData([...data, newData]); */
-
-									resolve();
-								}, 1000);
-							}),
+						onRowAdd: async (newData) => {
+							//courseID, crn, section, fID, roomID, totalSeats, tim
+							let courseID = newData.courseID.courseID;
+							let classCRN = newData.classCRN;
+							let section = newData.classSection;
+							let fID = newData.fID.userID;
+							let roomID = newData.roomID.roomID;
+							let totalSeats = newData.totalSeats;
+							let timeslot = newData.slotID.slotID;
+							let newCourse = await axios.get(
+								`/api/addClassToMasterSchedule/${classCRN}/${section}/${fID}/${roomID}/${totalSeats}/${totalSeats}/${timeslot}/${courseID}/${semester}`,
+							);
+							if (!newCourse.data.done) {
+								alert(newCourse.data.msg);
+							}
+							console.log('new course, ', newCourse);
+							console.log('adding stuff');
+							const result = await axios(`/api/classes/semester/${semester}`);
+							console.log(data);
+							setData(result.data);
+						},
 						onRowUpdate: async (newData, oldData) => {
 							const dataUpdate = [...data];
 							const index = oldData.tableData.id;
 							dataUpdate[index] = newData;
 
-							await axios(`/api/changeteacher/${newData.classCRN}/${newData.fID.userID}`);
-							await axios(`/api/classes/${newData.classCRN}/${newData.slotID.slotID}`);
-							await axios(`/api/changeroom/${newData.classCRN}/${newData.roomID.roomID}`);
-							await setData([...dataUpdate]);
-							const result = await axios(`/api/classes/semester/${semester}`);
-							setData(result.data);
-						},
-						onRowDelete: (oldData) =>
-							new Promise((resolve, reject) => {
-								setTimeout(() => {
-									const dataDelete = [...data];
-									const index = oldData.tableData.id;
-									dataDelete.splice(index, 1);
-									setData([...dataDelete]);
+							let result = await dataEdit(newData);
 
-									resolve();
-								}, 1000);
-							}),
+							if (result) {
+								await setData([...dataUpdate]);
+								const result = await axios(`/api/classes/semester/${semester}`);
+								setData(result.data);
+							}
+						},
+						onRowDelete: async (oldData) => {
+							const dataDelete = [...data];
+							const index = oldData.tableData.id;
+							const classCRN = oldData.classCRN;
+							let result = await deleteClass(classCRN);
+							if (result) {
+								dataDelete.splice(index, 1);
+								setData([...dataDelete]);
+							}
+						},
 					}}
 				/>
 			</div>
