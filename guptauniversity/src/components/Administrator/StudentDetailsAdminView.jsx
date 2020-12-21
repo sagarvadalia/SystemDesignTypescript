@@ -8,6 +8,13 @@ export default function StudentDetailsAdminView() {
 	const [student, setStudent] = useState('');
 	const [state, setState] = useContext(LoginContext);
 	let { sID } = useParams();
+	async function dropClass(enrollmentID) {
+		// console.log(enrollmentID);
+		let result = await axios.get(`/api/drop/${enrollmentID}`);
+		if (!result.data.done) {
+			alert(result.data.msg);
+		}
+	}
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios(`/api/enrollment/${sID}`);
@@ -21,11 +28,8 @@ export default function StudentDetailsAdminView() {
 	}, []);
 
 	return (
-		// API IS HERE https://material-table.com/#/
-
 		<div>
-			{/* <pre>{JSON.stringify(data)}</pre> */}
-
+			{/* TODO: ALL THE FUNCTIONALITY HERE IS MISSING */}
 			<div style={{ maxWidth: '100%' }}>
 				<MaterialTable
 					title={<h2>Details for {student}</h2>}
@@ -60,6 +64,7 @@ export default function StudentDetailsAdminView() {
 
 							dataDelete.splice(index, 1);
 							setData([...dataDelete]);
+							await dropClass(oldData.enrollmentID);
 							// await cancelClass(oldData.classCRN)
 						},
 						onRowAddCancelled: (rowData) => console.log('Row adding cancelled'),
