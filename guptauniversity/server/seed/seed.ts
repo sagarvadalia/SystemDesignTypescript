@@ -720,27 +720,27 @@ createConnection({
 
 
 		// // -------Prerequisites---------------
-		const prereqSeed = seeds.prerequisites.default
-		for (i = 0; i < prereqSeed.length; i++) {
-			try {
-				const prereq = await connection.manager.create(Prerequisite, prereqSeed[i]);
-				const course = await connection.manager.findOne(Course, prereqSeed[i].courseIDNum);
-				const course2 = await connection.manager.findOne(Course, prereqSeed[i].prereqID);
+		// const prereqSeed = seeds.prerequisites.default
+		// for (i = 0; i < prereqSeed.length; i++) {
+		// 	try {
+		// 		const prereq = await connection.manager.create(Prerequisite, prereqSeed[i]);
+		// 		const course = await connection.manager.findOne(Course, prereqSeed[i].courseIDNum);
+		// 		const course2 = await connection.manager.findOne(Course, prereqSeed[i].prereqID);
 
 
-				if (course && course2) {
-					prereq.courseID = course;
+		// 		if (course && course2) {
+		// 			prereq.courseID = course;
 
-					console.log(prereq);
-					let bool = await connection.manager.save(prereq);
-					// console.log(bool);
-				}
+		// 			console.log(prereq);
+		// 			let bool = await connection.manager.save(prereq);
+		// 			// console.log(bool);
+		// 		}
 
 
-			} catch (error) {
-				console.error(error);
-			}
-		}
+		// 	} catch (error) {
+		// 		console.error(error);
+		// 	}
+		// }
 
 
 		// //--------ENROLLMENT v1----------------ya boi Ty------just 2024 kids' first semester
