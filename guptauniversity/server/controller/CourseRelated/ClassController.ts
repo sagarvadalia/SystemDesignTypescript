@@ -73,17 +73,10 @@ export class ClassController {
 					let bool = await this.classRepository.delete(classToRemove);
 					console.log('--------------------------AA---------------------------------')
 					console.log(bool);
-
-				}else {
-					for (let i = 0; i < enrollment.length; i++){
-						// let stuEmail = enrollment[i].sID.userEmail;
-						// studentEmail += `${stuEmail},`;
-
-				} else {
+					return {done:  true, msg: "Class without enrollments has been removed "};
+				}
+				 else {
 					for (let i = 0; i < enrollment.length; i++) {
-						let stuEmail = enrollment[i].sID.userEmail;
-						studentEmail += `${stuEmail},`;
-
 						console.log('heerrrere')
 						if (enrollment[i]) {
 							console.log('--------here')
@@ -92,72 +85,25 @@ export class ClassController {
 					}
 
 
-				let bool = await this.classRepository.delete(classToRemove);
-				// let testAccount = await nodemailer.createTestAccount();
-
-				// let transporter = nodemailer.createTransport({
-				// 	host: "smtp.ethereal.email",
-				// 	port: 587,
-				// 	secure: false, // true for 465, false for other ports
-				// 	auth: {
-				// 		user: testAccount.user, // generated ethereal user
-				// 		pass: testAccount.pass, // generated ethereal password
-				// 	},
-				// });
-
-
-
-				// let info = await transporter.sendMail({
-				// 	from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
-				// 	to: studentEmail, // list of receivers
-				// 	subject: "Course Deletion", // Subject line
-				// 	text: "Dear student, " + "\n" + " This is an automated message to alert you that,"+ classToRemove.courseID.courseName +  " has been removed from the " + classToRemove.semesterID.semesterName + classToRemove.semesterID.yearNum + " semester.", // plain text body
-				// 	// html: "<b>Hello world?</b>", // html body
-				// });
-
-		  		// console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-				console.log('-------------------------A----------------------------------')
-				console.log(bool);
-
-					let bool = await this.classRepository.delete(classToRemove);
-					let testAccount = await nodemailer.createTestAccount();
-
-					let transporter = nodemailer.createTransport({
-						host: "smtp.ethereal.email",
-						port: 587,
-						secure: false, // true for 465, false for other ports
-						auth: {
-							user: testAccount.user, // generated ethereal user
-							pass: testAccount.pass, // generated ethereal password
-						},
-					});
-
-
-
-					try {
-						let info = await transporter.sendMail({
-							from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
-							to: studentEmail, // list of receivers
-							subject: "Course Deletion", // Subject line
-							text: "Dear student, " + "\n" + " This is an automated message to alert you that," + classToRemove.courseID.courseName + " has been removed from the " + classToRemove.semesterID.semesterName + classToRemove.semesterID.yearNum + " semester.", // plain text body
-							// html: "<b>Hello world?</b>", // html body
-						});
-
-						console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+						let bool = await this.classRepository.delete(classToRemove);
 						console.log('-------------------------A----------------------------------')
 						console.log(bool);
-					} catch (error) {
-						console.error(error);
-					}
 
-
-					return { done: true, msg: "Class Removed " }
 				}
 
-			}
-			else { return { done: false, msg: "No class found with this paramater" } }
+				
+			
+					let bool = await this.classRepository.delete(classToRemove);
+					return { done: true, msg: "Class Removed " }
+				}
+				else { 
+					return { done: false, msg: "No class found with this paramater" } 
+				}
+			
+			
 		} catch (error) {
 			console.error(error);
+			return { done: false, msg: error } 
 		}
 
 	}
@@ -222,28 +168,28 @@ export class ClassController {
 				// }
 
 				// nodemailer
-				let testAccount = await nodemailer.createTestAccount();
+				// let testAccount = await nodemailer.createTestAccount();
 
-				let transporter = nodemailer.createTransport({
-					host: "smtp.ethereal.email",
-					port: 587,
-					secure: false, // true for 465, false for other ports
-					auth: {
-						user: testAccount.user, // generated ethereal user
-						pass: testAccount.pass, // generated ethereal password
-					},
-				});
-				if (studentEmail !== "") {
-					let info = await transporter.sendMail({
-						from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
-						to: studentEmail, // list of receivers
-						subject: "Class Time Changed", // Subject line
-						text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses, " + oldClass.courseID.courseName + ", has changed timeslots. It is now on these days, " + oldClass.slotID.days + ", And it will now start at: " + oldClass.slotID.periodID.startTime + " and end at: " + oldClass.slotID.periodID.endTime, // plain text body
-						// html: "<b>Hello world?</b>", // html body
-					});
+				// let transporter = nodemailer.createTransport({
+				// 	host: "smtp.ethereal.email",
+				// 	port: 587,
+				// 	secure: false, // true for 465, false for other ports
+				// 	auth: {
+				// 		user: testAccount.user, // generated ethereal user
+				// 		pass: testAccount.pass, // generated ethereal password
+				// 	},
+				// });
+				// if (studentEmail !== "") {
+				// 	let info = await transporter.sendMail({
+				// 		from: '"Administration " <Administration@guptaUniversity.edu>', // sender address
+				// 		to: studentEmail, // list of receivers
+				// 		subject: "Class Time Changed", // Subject line
+				// 		text: "Dear student, " + "\n" + " This is an automated message to alert you that one of your currently enrolled courses, " + oldClass.courseID.courseName + ", has changed timeslots. It is now on these days, " + oldClass.slotID.days + ", And it will now start at: " + oldClass.slotID.periodID.startTime + " and end at: " + oldClass.slotID.periodID.endTime, // plain text body
+				// 		// html: "<b>Hello world?</b>", // html body
+				// 	});
 
-					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-				}
+				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				// }
 
 
 
@@ -307,28 +253,28 @@ export class ClassController {
 				// }
 
 				// nodemailer
-				let testAccount = await nodemailer.createTestAccount();
+				// let testAccount = await nodemailer.createTestAccount();
 
-				let transporter = await nodemailer.createTransport({
-					host: 'smtp.ethereal.email',
-					port: 587,
-					secure: false,
-					auth: {
-						user: testAccount.user,
-						pass: testAccount.pass,
-					},
+				// let transporter = await nodemailer.createTransport({
+				// 	host: 'smtp.ethereal.email',
+				// 	port: 587,
+				// 	secure: false,
+				// 	auth: {
+				// 		user: testAccount.user,
+				// 		pass: testAccount.pass,
+				// 	},
 
-				});
-				if (studentEmail !== '') {
-					let info = await transporter.sendMail({
-						from: '"Administration" <Administration@guptaUniversity.edu',
-						to: studentEmail,
-						subject: "New Teacher",
-						text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught by professor, " + newTeacher.userName,
-						//html: not used
-					});
-					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-				}
+				// });
+				// if (studentEmail !== '') {
+				// 	let info = await transporter.sendMail({
+				// 		from: '"Administration" <Administration@guptaUniversity.edu',
+				// 		to: studentEmail,
+				// 		subject: "New Teacher",
+				// 		text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught by professor, " + newTeacher.userName,
+				// 		//html: not used
+				// 	});
+				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				// }
 
 
 
@@ -391,29 +337,29 @@ export class ClassController {
 				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 				// }
 
-				// nodemailer
-				let testAccount = await nodemailer.createTestAccount();
+				// // nodemailer
+				// let testAccount = await nodemailer.createTestAccount();
 
-				let transporter = await nodemailer.createTransport({
-					host: 'smtp.ethereal.email',
-					port: 587,
-					secure: false,
-					auth: {
-						user: testAccount.user,
-						pass: testAccount.pass,
-					},
+				// let transporter = await nodemailer.createTransport({
+				// 	host: 'smtp.ethereal.email',
+				// 	port: 587,
+				// 	secure: false,
+				// 	auth: {
+				// 		user: testAccount.user,
+				// 		pass: testAccount.pass,
+				// 	},
 
-				});
-				if (studentEmail !== "") {
-					let info = await transporter.sendMail({
-						from: '"Administration" <Administration@guptaUniversity.edu',
-						to: studentEmail,
-						subject: "Room Change",
-						text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
-						//html: not used
-					});
-					console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-				}
+				// });
+				// if (studentEmail !== "") {
+				// 	let info = await transporter.sendMail({
+				// 		from: '"Administration" <Administration@guptaUniversity.edu',
+				// 		to: studentEmail,
+				// 		subject: "Room Change",
+				// 		text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
+				// 		//html: not used
+				// 	});
+				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+				// }
 
 
 
