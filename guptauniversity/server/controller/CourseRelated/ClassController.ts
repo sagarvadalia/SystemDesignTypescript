@@ -73,9 +73,9 @@ export class ClassController {
 					let bool = await this.classRepository.delete(classToRemove);
 					console.log('--------------------------AA---------------------------------')
 					console.log(bool);
-					return {done:  true, msg: "Class without enrollments has been removed "};
+					return { done: true, msg: "Class without enrollments has been removed " };
 				}
-				 else {
+				else {
 					for (let i = 0; i < enrollment.length; i++) {
 						console.log('heerrrere')
 						if (enrollment[i]) {
@@ -85,25 +85,25 @@ export class ClassController {
 					}
 
 
-						let bool = await this.classRepository.delete(classToRemove);
-						console.log('-------------------------A----------------------------------')
-						console.log(bool);
-
-				}
-
-				
-			
 					let bool = await this.classRepository.delete(classToRemove);
-					return { done: true, msg: "Class Removed " }
+					console.log('-------------------------A----------------------------------')
+					console.log(bool);
+
 				}
-				else { 
-					return { done: false, msg: "No class found with this paramater" } 
-				}
-			
-			
+
+
+
+				let bool = await this.classRepository.delete(classToRemove);
+				return { done: true, msg: "Class Removed " }
+			}
+			else {
+				return { done: false, msg: "No class found with this paramater" }
+			}
+
+
 		} catch (error) {
 			console.error(error);
-			return { done: false, msg: error } 
+			return { done: false, msg: error }
 		}
 
 	}
@@ -112,23 +112,23 @@ export class ClassController {
 		//Give me a classCRN and a new slotID
 		let oldClass = await this.classRepository.findOne(request.params.classCRN);
 		let newSlot = await this.timeslotRepository.findOne(request.params.slotID);
-		
+
 
 		// ensure the teacher isnt busy at the new time
-		let slotFull = await this.classRepository.findOne({where: {slotID: newSlot, fID: oldClass?.fID, semesterID: oldClass?.semesterID}});
-		if(slotFull){
-				return{done: false, msg: " This teacher is busy during the new time provided"};
-			}
-		// checks if the room at the new time is being used
-		let roomFull = await this.classRepository.findOne({where: {slotID: newSlot, roomID: oldClass?.roomID, semesterID: oldClass?.semesterID}});
-		if(roomFull){
-			return{done: false, msg: "Room is already occupied at that time"};
+		let slotFull = await this.classRepository.findOne({ where: { slotID: newSlot, fID: oldClass?.fID, semesterID: oldClass?.semesterID } });
+		if (slotFull) {
+			return { done: false, msg: " This teacher is busy during the new time provided" };
 		}
-		
+		// checks if the room at the new time is being used
+		let roomFull = await this.classRepository.findOne({ where: { slotID: newSlot, roomID: oldClass?.roomID, semesterID: oldClass?.semesterID } });
+		if (roomFull) {
+			return { done: false, msg: "Room is already occupied at that time" };
+		}
+
 		console.log(oldClass);
 
 		try {
-		
+
 
 			if (newSlot && oldClass) {
 				let facEmail = oldClass.fID.userEmail;
@@ -208,10 +208,10 @@ export class ClassController {
 		//Give me a classCRN and new fID. I DO NOT check deptIDs
 		let thisClass = await this.classRepository.findOne(request.params.classCRN);
 		let newTeacher = await this.facRepository.findOne(request.params.fID);
-		let slotFull = await this.classRepository.findOne({where: {slotID: thisClass?.slotID, fID: newTeacher?.userID, semesterID: thisClass?.semesterID}})
-		
-		if(slotFull){
-			return{done: false, msg: newTeacher?.userName + " Is already teaching a class from " + thisClass?.slotID.periodID.startTime + thisClass?.slotID.periodID.endTime};
+		let slotFull = await this.classRepository.findOne({ where: { slotID: thisClass?.slotID, fID: newTeacher?.userID, semesterID: thisClass?.semesterID } })
+
+		if (slotFull) {
+			return { done: false, msg: newTeacher?.userName + " Is already teaching a class from " + thisClass?.slotID.periodID.startTime + thisClass?.slotID.periodID.endTime };
 
 		}
 
@@ -292,13 +292,13 @@ export class ClassController {
 		//Give me a classCRN and new roomID. I DO NOT check for conflicts
 		let thisClass = await this.classRepository.findOne(request.params.classCRN);
 		let newRoom = await this.lectureRepository.findOne(request.params.roomID);
-		let roomFull = await this.classRepository.findOne({where: {slotID: thisClass?.slotID, roomID: newRoom, semesterID: thisClass?.semesterID}});
+		let roomFull = await this.classRepository.findOne({ where: { slotID: thisClass?.slotID, roomID: newRoom, semesterID: thisClass?.semesterID } });
 
-		
-		if(roomFull){
-			return{done: false, msg: "Room is already occupied at that time"};
+
+		if (roomFull) {
+			return { done: false, msg: "Room is already occupied at that time" };
 		}
-		
+
 
 		if (newRoom) {
 			if (thisClass) {
@@ -317,22 +317,22 @@ export class ClassController {
 				// let testAccount = await nodemailer.createTestAccount();
 
 				//   let transporter = await nodemailer.createTransport({
-                //     host: 'smtp.ethereal.email',
-                //     port: 587,
-                //     secure: false,
-                //     auth:{
-                //         user: testAccount.user,
-                //         pass: testAccount.pass,
-                //     },
+				//     host: 'smtp.ethereal.email',
+				//     port: 587,
+				//     secure: false,
+				//     auth:{
+				//         user: testAccount.user,
+				//         pass: testAccount.pass,
+				//     },
 
 				// });
 				// if (studentEmail !== "") {
 				// 	let info = await transporter.sendMail({
-                //     from: '"Administration" <Administration@guptaUniversity.edu',
-                //     to: studentEmail,
-                //     subject: "Room Change",
-                //     text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
-                //     //html: not used
+				//     from: '"Administration" <Administration@guptaUniversity.edu',
+				//     to: studentEmail,
+				//     subject: "Room Change",
+				//     text: "Dear student, " + "\n" + "This is an automated message to alert you that one of your currently enrolled coureses, " + thisClass.courseID.courseName + " is now being taught in Room, " + newRoom.roomType + newRoom.roomNum,
+				//     //html: not used
 				// 	});
 				// 	console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 				// }
@@ -427,14 +427,14 @@ export class ClassController {
 		let course = await this.courseRepository.findOne(request.params.courseID);
 		let semester = await this.semesterRepitory.findOne(request.params.semesterID);
 
-		let slotFull = await this.classRepository.findOne({where: {slotID: timeSlot, fID: faculty, semesterID: semester}});
-		let roomFull = await this.classRepository.findOne({where: {slotID: timeSlot, roomID: room, semesterID: semester}});
+		let slotFull = await this.classRepository.findOne({ where: { slotID: timeSlot, fID: faculty, semesterID: semester } });
+		let roomFull = await this.classRepository.findOne({ where: { slotID: timeSlot, roomID: room, semesterID: semester } });
 
-		if(slotFull){
-			return{done: false, msg: " Teacher is busy at this time"}
+		if (slotFull) {
+			return { done: false, msg: " Teacher is busy at this time" }
 		}
-		if(roomFull){
-			return{done: false, msg:" This room is occupied during requested time frame"};
+		if (roomFull) {
+			return { done: false, msg: " This room is occupied during requested time frame" };
 		}
 
 		console.log('-------------')
