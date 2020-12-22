@@ -61,61 +61,34 @@ export class ClassController {
 	async removeClass(request: Request, response: Response, next: NextFunction) {
 		// Give a classCRN and I will delete the enrollments, and the class
 		try {
-			let classToRemove = await this.classRepository.findOne( request.params.classCRN);
+			let classToRemove = await this.classRepository.findOne(request.params.classCRN);
 			let enrollmentToRemove = await this.enrollmentRepository.find({ where: { classCRN: classToRemove } });
-			// let attEnrollemt = await this.enrollmentRepository.find({where: {enrollmentID: request.params.id, classCRN: classToRemove}});
-			
 			console.log(enrollmentToRemove);
-			console.log('------------------------------------------------------------')
-			console.log(classToRemove);
-			console.log(request.params.classCRN);
-			
-			try{
+			for (let i = 0; i < enrollmentToRemove.length; i++) {
+				let attendances = await this.attendanceRepo.find({ where: { enrollmentID: enrollmentToRemove[i] } })
+				let bool = await this.attendanceRepo.remove(attendances);
+				console.log(bool, 'attendance remove')
 
+			}
+
+
+			let bool2 = await this.enrollmentRepository.remove(enrollmentToRemove)
+			console.log(bool2, 'enrollmentRemove')
 			if (classToRemove) {
-				// let facEmail = classToRemove.fID.userEmail;
-				// let studentEmail = "";
-				if (enrollment === []) {
-					let bool = await this.classRepository.delete(classToRemove);
-					console.log('--------------------------AA---------------------------------')
-					console.log(bool);
-					return { done: true, msg: "Class without enrollments has been removed " };
-				}
-				else {
-					for (let i = 0; i < enrollment.length; i++) {
-						console.log('heerrrere')
-						if (enrollment[i]) {
-							console.log('--------here')
-							await this.enrollmentRepository.delete(enrollment[i]);
-						}
-					}
-
-
-					let bool = await this.classRepository.delete(classToRemove);
-					console.log('-------------------------A----------------------------------')
-					console.log(bool);
-
-
-				}
-			}catch(error){
-				console.error(error)
-
-
-
-
-				let bool = await this.classRepository.delete(classToRemove);
-				return { done: true, msg: "Class Removed " }
+				let bool3 = await this.classRepository.delete(classToRemove)
+				console.log(bool3, 'classRemove')
+				return { done: true, msg: 'class removed' }
 			}
-			else {
-				return { done: false, msg: "No class found with this paramater" }
-			}
-
 
 
 		} catch (error) {
-			console.error(error);
-			return { done: false, msg: error }
+			console.log(error);
+			return { done: false, msg: error.msg }
+
+
+
 		}
+
 
 	}
 
