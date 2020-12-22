@@ -9,6 +9,7 @@ import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { Room } from '../../entity/Locations/Room';
 import { Course } from '../../entity/ClassRelated/Course';
 import { Semester } from '../../entity/TimeRelated/Semester';
+import { Attendance } from '../../entity/JoinTables/Attendance';
 const nodemailer = require('nodemailer');
 
 
@@ -21,6 +22,7 @@ export class ClassController {
 	private roomRepository = getRepository(Room);
 	private courseRepository = getRepository(Course);
 	private semesterRepitory = getRepository(Semester);
+	private attendanceRepo = getRepository(Attendance);
 
 	async inSemester(request: Request, response: Response, next: NextFunction) {
 		try {
@@ -59,12 +61,16 @@ export class ClassController {
 	async removeClass(request: Request, response: Response, next: NextFunction) {
 		// Give a classCRN and I will delete the enrollments, and the class
 		try {
-			let classToRemove = await this.classRepository.findOne(request.params.classCRN);
-			let enrollment = await this.enrollmentRepository.find({ where: { classCRN: classToRemove } });
-			console.log(enrollment);
+			let classToRemove = await this.classRepository.findOne( request.params.classCRN);
+			let enrollmentToRemove = await this.enrollmentRepository.find({ where: { classCRN: classToRemove } });
+			// let attEnrollemt = await this.enrollmentRepository.find({where: {enrollmentID: request.params.id, classCRN: classToRemove}});
+			
+			console.log(enrollmentToRemove);
 			console.log('------------------------------------------------------------')
 			console.log(classToRemove);
 			console.log(request.params.classCRN);
+			
+			try{
 
 			if (classToRemove) {
 				// let facEmail = classToRemove.fID.userEmail;
@@ -89,7 +95,11 @@ export class ClassController {
 					console.log('-------------------------A----------------------------------')
 					console.log(bool);
 
+
 				}
+			}catch(error){
+				console.error(error)
+
 
 
 
@@ -99,6 +109,7 @@ export class ClassController {
 			else {
 				return { done: false, msg: "No class found with this paramater" }
 			}
+
 
 
 		} catch (error) {
