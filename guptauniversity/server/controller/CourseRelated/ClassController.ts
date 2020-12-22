@@ -9,6 +9,7 @@ import { Enrollment } from '../../entity/JoinTables/Enrollment';
 import { Room } from '../../entity/Locations/Room';
 import { Course } from '../../entity/ClassRelated/Course';
 import { Semester } from '../../entity/TimeRelated/Semester';
+import { Attendance } from '../../entity/JoinTables/Attendance';
 const nodemailer = require('nodemailer');
 
 
@@ -21,6 +22,7 @@ export class ClassController {
 	private roomRepository = getRepository(Room);
 	private courseRepository = getRepository(Course);
 	private semesterRepitory = getRepository(Semester);
+	private attendanceRepo = getRepository(Attendance);
 
 	async inSemester(request: Request, response: Response, next: NextFunction) {
 		try {
@@ -59,47 +61,33 @@ export class ClassController {
 	async removeClass(request: Request, response: Response, next: NextFunction) {
 		// Give a classCRN and I will delete the enrollments, and the class
 		try {
-			let classToRemove = await this.classRepository.findOne(request.params.classCRN);
-			let enrollment = await this.enrollmentRepository.find({ where: { classCRN: classToRemove } });
-			console.log(enrollment);
+			let classToRemove = await this.classRepository.findOne( request.params.classCRN);
+			let enrollmentToRemove = await this.enrollmentRepository.find({ where: { classCRN: classToRemove } });
+			// let attEnrollemt = await this.enrollmentRepository.find({where: {enrollmentID: request.params.id, classCRN: classToRemove}});
+			
+			console.log(enrollmentToRemove);
 			console.log('------------------------------------------------------------')
 			console.log(classToRemove);
 			console.log(request.params.classCRN);
+			
+			try{
 
-			if (classToRemove) {
-				// let facEmail = classToRemove.fID.userEmail;
-				// let studentEmail = "";
-				if (enrollment === []) {
-					let bool = await this.classRepository.delete(classToRemove);
-					console.log('--------------------------AA---------------------------------')
-					console.log(bool);
-					return {done:  true, msg: "Class without enrollments has been removed "};
+				if(classToRemove){
+					classToRemove.enrollment = []
+					await this.classRepository.save(classToRemove);
+					await this.classRepository.delete(classToRemove);
+					return{done: true};
 				}
-				 else {
-					for (let i = 0; i < enrollment.length; i++) {
-						console.log('heerrrere')
-						if (enrollment[i]) {
-							console.log('--------here')
-							await this.enrollmentRepository.delete(enrollment[i]);
-						}
-					}
-
-
-						let bool = await this.classRepository.delete(classToRemove);
-						console.log('-------------------------A----------------------------------')
-						console.log(bool);
-
-				}
+			}catch(error){
+				console.error(error)
 
 				
+			}
 			
-					let bool = await this.classRepository.delete(classToRemove);
-					return { done: true, msg: "Class Removed " }
-				}
-				else { 
-					return { done: false, msg: "No class found with this paramater" } 
-				}
 			
+			
+		
+
 			
 		} catch (error) {
 			console.error(error);
