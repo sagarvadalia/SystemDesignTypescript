@@ -37,11 +37,9 @@ export default function DegreeEval() {
 						{ title: 'Course ID', field: 'courseID' },
 						{
 							title: 'Course Name',
-							field: 'classCRN.courseID.courseName',
+							field: 'courseName',
 							render: (rowData) => (
-								<Link to={`/courses/${rowData?.classCRN?.courseID?.courseID}`}>
-									{rowData?.classCRN.courseID.courseName}
-								</Link>
+								<Link to={`/courses/${rowData?.courseID}`}>{rowData?.courseName}</Link>
 							),
 						},
 						{ title: 'Course Desc', field: 'courseDesc' },
