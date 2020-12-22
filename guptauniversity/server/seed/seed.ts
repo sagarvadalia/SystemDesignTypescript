@@ -451,22 +451,22 @@ createConnection({
 			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 			index > 3 ? index = 1 : null
 
-			if (index === 1) {
-				let major = await connection.manager.findOne(Major, majorNum)
-				if (major) {
-					const studentMajor = await connection.manager.create(StudentMajor, {
-						majorID: major,
-						sID: students[i],
-						dateDeclared: new Date("November 12 2020")
-					})
-					await connection.manager.save(studentMajor);
-					// students[i].studentMajors = [studentMajor];
-					// await connection.manager.save(Student, students[i]);
-					majorNum++;
-					index++;
-				}
+			// if (index === 1) {
+			// 	let major = await connection.manager.findOne(Major, majorNum)
+			// 	if (major) {
+			// 		const studentMajor = await connection.manager.create(StudentMajor, {
+			// 			majorID: major,
+			// 			sID: students[i],
+			// 			dateDeclared: new Date("November 12 2020")
+			// 		})
+			// 		await connection.manager.save(studentMajor);
+			// 		// students[i].studentMajors = [studentMajor];
+			// 		// await connection.manager.save(Student, students[i]);
+			// 		majorNum++;
+			// 		index++;
+			// 	}
 
-			}
+			// }
 			if (index === 2) {
 				let major = await connection.manager.findOne(Major, majorNum)
 				if (major) {
@@ -499,7 +499,7 @@ createConnection({
 
 			}
 
-			if (index === 3) {
+			if (index === 3 || index === 1) {
 				let major = await connection.manager.findOne(Major, majorNum)
 				if (major) {
 					const studentMajor = await connection.manager.create(StudentMajor, {
@@ -769,33 +769,40 @@ createConnection({
 
 		// // //-----------------BIG BOi ENROLLMENT----------------ya boi Ty
 		const stuMaj = await getRepository(StudentMajor)
+		const stuMin2 = await getRepository(StudentMinor)
 		for (i = 0; i < students.length; i++) {
 			let stuRepo = await getRepository(Student)
 			let student = await stuRepo.findOne(students[i].userID);
 			if (student) {
-				let thisStuMaj = await stuMaj.findOne({ where: { sID: student } })
+				let stuMajors = await stuMaj.find({ where: { sID: student } })
 				let myReqs: Array<Course> = []
-				if (thisStuMaj) {
-					let majRep = await getRepository(Major)
-					let myMajor = await majRep.findOne(thisStuMaj.majorID)
-					let majReqRepo = await getRepository(MajorRequirement)
-					if (myMajor) {
-						let majReq = await majReqRepo.find({ where: { majorID: myMajor }, order: { reqID: "ASC" } })
-						if (majReq) {
-							for (let i = 0; i < majReq.length; i++) {
-								myReqs.push(majReq[i].courseID)
-							}
+				for (let i = 0; i < stuMajors.length; i++) {
+					let thisStuMaj = stuMajors[i]
 
-							//console.log(myMajor.majorName + " " + myMajor.majorID)
-							// for (let i = 0; i < myReqs.length; i++) {
-							// 	console.log(myReqs[i].courseID)
-							// }
+					if (thisStuMaj) {
+						let majRep = await getRepository(Major)
+						let myMajor = await majRep.findOne(thisStuMaj.majorID)
+						let majReqRepo = await getRepository(MajorRequirement)
+						if (myMajor) {
+							let majReq = await majReqRepo.find({ where: { majorID: myMajor }, order: { reqID: "ASC" } })
+							if (majReq) {
+								for (let i = 0; i < majReq.length; i++) {
+									myReqs.push(majReq[i].courseID)
+								}
+
+								//console.log(myMajor.majorName + " " + myMajor.majorID)
+								// for (let i = 0; i < myReqs.length; i++) {
+								// 	console.log(myReqs[i].courseID)
+								// }
+							}
 						}
 					}
 				}
 
 
-		// 		//myReqs is an array of the required courseIDs at this point
+				myReqs = myReqs.filter((v, i, a) => a.indexOf(v) === i);
+
+				// 		//myReqs is an array of the required courseIDs at this point
 				let mtGrades = ['U', 'S']
 				let finalGrades = ['A', 'B', 'C', 'D']
 				let startSemester: number = 15
@@ -875,7 +882,7 @@ createConnection({
 		})
 		await connection.manager.save(grading)
 
-	 }
+	}
 
 
 		//TODO: Attendance
