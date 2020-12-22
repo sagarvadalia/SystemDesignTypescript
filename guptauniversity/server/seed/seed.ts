@@ -451,22 +451,22 @@ createConnection({
 			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 			index > 3 ? index = 1 : null
 
-			if (index === 1) {
-				let major = await connection.manager.findOne(Major, majorNum)
-				if (major) {
-					const studentMajor = await connection.manager.create(StudentMajor, {
-						majorID: major,
-						sID: students[i],
-						dateDeclared: new Date("November 12 2020")
-					})
-					await connection.manager.save(studentMajor);
-					// students[i].studentMajors = [studentMajor];
-					// await connection.manager.save(Student, students[i]);
-					majorNum++;
-					index++;
-				}
+			// if (index === 1) {
+			// 	let major = await connection.manager.findOne(Major, majorNum)
+			// 	if (major) {
+			// 		const studentMajor = await connection.manager.create(StudentMajor, {
+			// 			majorID: major,
+			// 			sID: students[i],
+			// 			dateDeclared: new Date("November 12 2020")
+			// 		})
+			// 		await connection.manager.save(studentMajor);
+			// 		// students[i].studentMajors = [studentMajor];
+			// 		// await connection.manager.save(Student, students[i]);
+			// 		majorNum++;
+			// 		index++;
+			// 	}
 
-			}
+			// }
 			if (index === 2) {
 				let major = await connection.manager.findOne(Major, majorNum)
 				if (major) {
@@ -499,7 +499,7 @@ createConnection({
 
 			}
 
-			if (index === 3) {
+			if (index === 3 || index === 1) {
 				let major = await connection.manager.findOne(Major, majorNum)
 				if (major) {
 					const studentMajor = await connection.manager.create(StudentMajor, {
