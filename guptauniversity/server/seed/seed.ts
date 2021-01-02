@@ -799,7 +799,7 @@ createConnection({
 					}
 				}
 
-
+				// need to change this to handle courses rather than just numbers
 				myReqs = myReqs.filter((v, i, a) => a.indexOf(v) === i);
 
 				// 		//myReqs is an array of the required courseIDs at this point
